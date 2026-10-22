@@ -1,0 +1,1 @@
+AlCu-02Mie 10.5s 22 fields 7 inv [('eutectic', 1309.9, 'L → β + (Cu)'), ('peritectic', 1293.8, 'L + β → γ'), ('peritectic', 1266.7, 'L + γ → β'), ('peritectic', 1015.2, 'L + β → ζ'), ('eutectic', 881.1, 'L → (Al) + ζ'), ('eutectoid', 840.0, 'β → γ + (Cu)'), ('eutectoid', 747.0, 'ζ → (Al) + β')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

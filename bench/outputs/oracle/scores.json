@@ -1,0 +1,8891 @@
+{
+ "aggregate": {
+  "clean_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.00024089605576540276,
+    "boundary_mean_dist": 3.9566001727914693e-05,
+    "boundary_median_dT_K": 0.0,
+    "boundary_median_dx": 0.0,
+    "boundary_precision@0.01": 1.0,
+    "boundary_recall@0.01": 1.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 1.0,
+    "field_pred": 217,
+    "field_recall": 1.0,
+    "field_true_scorable": 179,
+    "invariant_T_err_K": 0.0,
+    "invariant_precision": 1.0,
+    "invariant_recall": 1.0,
+    "invariant_type_accuracy": 1.0,
+    "invariant_x_err": 0.0
+   },
+   "tables": {
+    "cell_exact": 1.0,
+    "cell_exact_normalised": 1.0,
+    "cells": 746,
+    "numeric_exact": 1.0,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 40,
+    "tables_true": 40
+   },
+   "text": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "value_only_recall": 1.0,
+    "values_pred": 404,
+    "values_true": 404
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 1.0,
+    "panels_found": 48,
+    "panels_true": 48,
+    "point_err_mean": 0.0,
+    "point_err_median": 0.0,
+    "point_recall@0.01": 1.0,
+    "points": 3639,
+    "series_precision": 1.0,
+    "series_pred": 95,
+    "series_recall": 1.0
+   }
+  },
+  "degraded_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.00024089605576540276,
+    "boundary_mean_dist": 3.9566001727914693e-05,
+    "boundary_median_dT_K": 0.0,
+    "boundary_median_dx": 0.0,
+    "boundary_precision@0.01": 1.0,
+    "boundary_recall@0.01": 1.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 1.0,
+    "field_pred": 217,
+    "field_recall": 1.0,
+    "field_true_scorable": 179,
+    "invariant_T_err_K": 0.0,
+    "invariant_precision": 1.0,
+    "invariant_recall": 1.0,
+    "invariant_type_accuracy": 1.0,
+    "invariant_x_err": 0.0
+   },
+   "tables": {
+    "cell_exact": 1.0,
+    "cell_exact_normalised": 1.0,
+    "cells": 746,
+    "numeric_exact": 1.0,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 40,
+    "tables_true": 40
+   },
+   "text": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "value_only_recall": 1.0,
+    "values_pred": 404,
+    "values_true": 404
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 1.0,
+    "panels_found": 48,
+    "panels_true": 48,
+    "point_err_mean": 0.0,
+    "point_err_median": 0.0,
+    "point_recall@0.01": 1.0,
+    "points": 3639,
+    "series_precision": 1.0,
+    "series_pred": 95,
+    "series_recall": 1.0
+   }
+  },
+  "image_only_pdf": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.00024089605576540276,
+    "boundary_mean_dist": 3.9566001727914693e-05,
+    "boundary_median_dT_K": 0.0,
+    "boundary_median_dx": 0.0,
+    "boundary_precision@0.01": 1.0,
+    "boundary_recall@0.01": 1.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 1.0,
+    "field_pred": 217,
+    "field_recall": 1.0,
+    "field_true_scorable": 179,
+    "invariant_T_err_K": 0.0,
+    "invariant_precision": 1.0,
+    "invariant_recall": 1.0,
+    "invariant_type_accuracy": 1.0,
+    "invariant_x_err": 0.0
+   },
+   "tables": {
+    "cell_exact": 1.0,
+    "cell_exact_normalised": 1.0,
+    "cells": 746,
+    "numeric_exact": 1.0,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 40,
+    "tables_true": 40
+   },
+   "text": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "value_only_recall": 1.0,
+    "values_pred": 404,
+    "values_true": 404
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 1.0,
+    "panels_found": 48,
+    "panels_true": 48,
+    "point_err_mean": 0.0,
+    "point_err_median": 0.0,
+    "point_recall@0.01": 1.0,
+    "points": 3639,
+    "series_precision": 1.0,
+    "series_pred": 95,
+    "series_recall": 1.0
+   }
+  },
+  "vector": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.00024089605576540276,
+    "boundary_mean_dist": 3.9566001727914693e-05,
+    "boundary_median_dT_K": 0.0,
+    "boundary_median_dx": 0.0,
+    "boundary_precision@0.01": 1.0,
+    "boundary_recall@0.01": 1.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 1.0,
+    "field_pred": 217,
+    "field_recall": 1.0,
+    "field_true_scorable": 179,
+    "invariant_T_err_K": 0.0,
+    "invariant_precision": 1.0,
+    "invariant_recall": 1.0,
+    "invariant_type_accuracy": 1.0,
+    "invariant_x_err": 0.0
+   },
+   "tables": {
+    "cell_exact": 1.0,
+    "cell_exact_normalised": 1.0,
+    "cells": 746,
+    "numeric_exact": 1.0,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 40,
+    "tables_true": 40
+   },
+   "text": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "value_only_recall": 1.0,
+    "values_pred": 404,
+    "values_true": 404
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 1.0,
+    "panels_found": 48,
+    "panels_true": 48,
+    "point_err_mean": 0.0,
+    "point_err_median": 0.0,
+    "point_recall@0.01": 1.0,
+    "points": 3639,
+    "series_precision": 1.0,
+    "series_pred": 95,
+    "series_recall": 1.0
+   }
+  }
+ },
+ "extractor": "oracle",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 4.191454798347267e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2341,
+      "recall@0.01": 1.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 13,
+     "n_true": 13,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 407,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 407
+     },
+     "points": 407,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 4.191454798347267e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2341,
+      "recall@0.01": 1.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 13,
+     "n_true": 13,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 407,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 407
+     },
+     "points": 407,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 4.191454798347267e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2341,
+      "recall@0.01": 1.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 13,
+     "n_true": 13,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 407,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 407
+     },
+     "points": 407,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 4.191454798347267e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2341,
+      "recall@0.01": 1.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 13,
+     "n_true": 13,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 407,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 407
+     },
+     "points": 407,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.00017959183673469173,
+      "mean_pred_to_true": 1.7268801145505145e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2651,
+      "recall@0.01": 1.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.00017959183673469173,
+      "mean_pred_to_true": 1.7268801145505145e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2651,
+      "recall@0.01": 1.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.00017959183673469173,
+      "mean_pred_to_true": 1.7268801145505145e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2651,
+      "recall@0.01": 1.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.00017959183673469173,
+      "mean_pred_to_true": 1.7268801145505145e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2651,
+      "recall@0.01": 1.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.755577732379226e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2500,
+      "recall@0.01": 1.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      },
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 9
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 25,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.755577732379226e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2500,
+      "recall@0.01": 1.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      },
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 9
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 25,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.755577732379226e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2500,
+      "recall@0.01": 1.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      },
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 9
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 25,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.755577732379226e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2500,
+      "recall@0.01": 1.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 8,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      },
+      "f1": 1.0,
+      "n_pred": 3,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 9
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 25,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008241194762538602,
+      "mean_pred_to_true": 0.00014141057698817655,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3290,
+      "recall@0.01": 1.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 294,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 294
+     },
+     "points": 294,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008241194762538602,
+      "mean_pred_to_true": 0.00014141057698817655,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3290,
+      "recall@0.01": 1.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 294,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 294
+     },
+     "points": 294,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008241194762538602,
+      "mean_pred_to_true": 0.00014141057698817655,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3290,
+      "recall@0.01": 1.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 294,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 294
+     },
+     "points": 294,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008241194762538602,
+      "mean_pred_to_true": 0.00014141057698817655,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3290,
+      "recall@0.01": 1.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 294,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 294
+     },
+     "points": 294,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3940,
+      "recall@0.01": 1.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 21,
+      "n_true": 18,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      },
+      "f1": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 18
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 37
+     },
+     "per_table": [
+      {
+       "cells": 48,
+       "exact": 48,
+       "exact_norm": 48,
+       "id": "invariants",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 30,
+     "n_true": 30,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 41,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 41
+     },
+     "points": 41,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3940,
+      "recall@0.01": 1.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 21,
+      "n_true": 18,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      },
+      "f1": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 18
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 37
+     },
+     "per_table": [
+      {
+       "cells": 48,
+       "exact": 48,
+       "exact_norm": 48,
+       "id": "invariants",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 30,
+     "n_true": 30,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 41,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 41
+     },
+     "points": 41,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3940,
+      "recall@0.01": 1.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 21,
+      "n_true": 18,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      },
+      "f1": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 18
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 37
+     },
+     "per_table": [
+      {
+       "cells": 48,
+       "exact": 48,
+       "exact_norm": 48,
+       "id": "invariants",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 30,
+     "n_true": 30,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 41,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 41
+     },
+     "points": 41,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3940,
+      "recall@0.01": 1.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 21,
+      "n_true": 18,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      },
+      "f1": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 18
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 37
+     },
+     "per_table": [
+      {
+       "cells": 48,
+       "exact": 48,
+       "exact_norm": 48,
+       "id": "invariants",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 30,
+     "n_true": 30,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 41,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 41
+     },
+     "points": 41,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4091,
+      "recall@0.01": 1.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 12,
+      "n_true": 11,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 36,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 20,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "points": 20,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4091,
+      "recall@0.01": 1.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 12,
+      "n_true": 11,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 36,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 20,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "points": 20,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4091,
+      "recall@0.01": 1.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 12,
+      "n_true": 11,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 36,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 20,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "points": 20,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4091,
+      "recall@0.01": 1.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 12,
+      "n_true": 11,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 36,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 20,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "points": 20,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0004864864864864704,
+      "mean_pred_to_true": 4.864597818040927e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3925,
+      "recall@0.01": 1.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 33,
+      "n_true": 25,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 4
+      },
+      "f1": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 12
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 39
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 44,
+     "marker_hits": 44,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 44
+     },
+     "points": 44,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0004864864864864704,
+      "mean_pred_to_true": 4.864597818040927e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3925,
+      "recall@0.01": 1.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 33,
+      "n_true": 25,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 4
+      },
+      "f1": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 12
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 39
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 44,
+     "marker_hits": 44,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 44
+     },
+     "points": 44,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0004864864864864704,
+      "mean_pred_to_true": 4.864597818040927e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3925,
+      "recall@0.01": 1.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 33,
+      "n_true": 25,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 4
+      },
+      "f1": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 12
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 39
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 44,
+     "marker_hits": 44,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 44
+     },
+     "points": 44,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0004864864864864704,
+      "mean_pred_to_true": 4.864597818040927e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3925,
+      "recall@0.01": 1.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 33,
+      "n_true": 25,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 4
+      },
+      "f1": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 12
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 39
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 32,
+     "n_true": 32,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 44,
+     "marker_hits": 44,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 44
+     },
+     "points": 44,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008822222222222287,
+      "mean_pred_to_true": 0.00018834616658387215,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2684,
+      "recall@0.01": 1.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 298,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 298
+     },
+     "points": 298,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008822222222222287,
+      "mean_pred_to_true": 0.00018834616658387215,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2684,
+      "recall@0.01": 1.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 298,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 298
+     },
+     "points": 298,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008822222222222287,
+      "mean_pred_to_true": 0.00018834616658387215,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2684,
+      "recall@0.01": 1.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 298,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 298
+     },
+     "points": 298,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008822222222222287,
+      "mean_pred_to_true": 0.00018834616658387215,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2684,
+      "recall@0.01": 1.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 298,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 298
+     },
+     "points": 298,
+     "series_pred": 5,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2504,
+      "recall@0.01": 1.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 16,
+     "n_true": 16,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2504,
+      "recall@0.01": 1.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 16,
+     "n_true": 16,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2504,
+      "recall@0.01": 1.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 16,
+     "n_true": 16,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2504,
+      "recall@0.01": 1.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 16,
+     "n_true": 16,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1471,
+      "recall@0.01": 1.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 14,
+     "n_true": 14,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1471,
+      "recall@0.01": 1.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 14,
+     "n_true": 14,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1471,
+      "recall@0.01": 1.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 14,
+     "n_true": 14,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1471,
+      "recall@0.01": 1.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 14,
+     "n_true": 14,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2717,
+      "recall@0.01": 1.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 304,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 304
+     },
+     "points": 304,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2717,
+      "recall@0.01": 1.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 304,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 304
+     },
+     "points": 304,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2717,
+      "recall@0.01": 1.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 304,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 304
+     },
+     "points": 304,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2717,
+      "recall@0.01": 1.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 304,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 304
+     },
+     "points": 304,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0007416666666666544,
+      "mean_pred_to_true": 9.078129438451444e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2554,
+      "recall@0.01": 1.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 9,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 26
+     },
+     "points": 26,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0007416666666666544,
+      "mean_pred_to_true": 9.078129438451444e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2554,
+      "recall@0.01": 1.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 9,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 26
+     },
+     "points": 26,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0007416666666666544,
+      "mean_pred_to_true": 9.078129438451444e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2554,
+      "recall@0.01": 1.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 9,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 26
+     },
+     "points": 26,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0007416666666666544,
+      "mean_pred_to_true": 9.078129438451444e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2554,
+      "recall@0.01": 1.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 9,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 12,
+       "exact_norm": 12,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 26
+     },
+     "points": 26,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3041,
+      "recall@0.01": 1.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 15,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3041,
+      "recall@0.01": 1.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 15,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3041,
+      "recall@0.01": 1.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 15,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3041,
+      "recall@0.01": 1.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 15,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 12,
+     "n_true": 12,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 52,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008586731366215951,
+      "mean_pred_to_true": 0.00010447388801375705,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3173,
+      "recall@0.01": 1.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 20,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008586731366215951,
+      "mean_pred_to_true": 0.00010447388801375705,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3173,
+      "recall@0.01": 1.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 20,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008586731366215951,
+      "mean_pred_to_true": 0.00010447388801375705,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3173,
+      "recall@0.01": 1.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 20,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008586731366215951,
+      "mean_pred_to_true": 0.00010447388801375705,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3173,
+      "recall@0.01": 1.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 20,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 19,
+     "n_true": 19,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 204,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2526,
+      "recall@0.01": 1.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 19,
+      "n_true": 15,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 7
+      },
+      "f1": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 21
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 47
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 54,
+       "exact_norm": 54,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 37,
+     "n_true": 37,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 303,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 303
+     },
+     "points": 303,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2526,
+      "recall@0.01": 1.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 19,
+      "n_true": 15,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 7
+      },
+      "f1": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 21
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 47
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 54,
+       "exact_norm": 54,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 37,
+     "n_true": 37,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 303,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 303
+     },
+     "points": 303,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2526,
+      "recall@0.01": 1.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 19,
+      "n_true": 15,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 7
+      },
+      "f1": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 21
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 47
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 54,
+       "exact_norm": 54,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 37,
+     "n_true": 37,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 303,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 303
+     },
+     "points": 303,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2526,
+      "recall@0.01": 1.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 19,
+      "n_true": 15,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 7
+      },
+      "f1": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 21
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 47
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 54,
+       "exact_norm": 54,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 37,
+     "n_true": 37,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 303,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 303
+     },
+     "points": 303,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008451612903225547,
+      "mean_pred_to_true": 0.00015875376482431518,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4261,
+      "recall@0.01": 1.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 8,
+       "exact": 8,
+       "exact_norm": 8,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 104,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 104
+     },
+     "points": 104,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008451612903225547,
+      "mean_pred_to_true": 0.00015875376482431518,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4261,
+      "recall@0.01": 1.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 8,
+       "exact": 8,
+       "exact_norm": 8,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 104,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 104
+     },
+     "points": 104,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008451612903225547,
+      "mean_pred_to_true": 0.00015875376482431518,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4261,
+      "recall@0.01": 1.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 8,
+       "exact": 8,
+       "exact_norm": 8,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 104,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 104
+     },
+     "points": 104,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0008451612903225547,
+      "mean_pred_to_true": 0.00015875376482431518,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 4261,
+      "recall@0.01": 1.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 8,
+       "exact": 8,
+       "exact_norm": 8,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 104,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 104
+     },
+     "points": 104,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.888595649392192e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3126,
+      "recall@0.01": 1.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 32,
+     "marker_hits": 32,
+     "marker_points": 32,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 32
+     },
+     "points": 32,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.888595649392192e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3126,
+      "recall@0.01": 1.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 32,
+     "marker_hits": 32,
+     "marker_points": 32,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 32
+     },
+     "points": 32,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.888595649392192e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3126,
+      "recall@0.01": 1.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 32,
+     "marker_hits": 32,
+     "marker_points": 32,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 32
+     },
+     "points": 32,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.888595649392192e-05,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 3126,
+      "recall@0.01": 1.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 7,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 21,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 32,
+     "marker_hits": 32,
+     "marker_points": 32,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 32
+     },
+     "points": 32,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 3,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.0063758216826055e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 5163,
+      "recall@0.01": 1.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 17,
+      "n_true": 16,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 37,
+       "exact": 37,
+       "exact_norm": 37,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 17,
+       "exact": 17,
+       "exact_norm": 17,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 28,
+     "n_true": 28,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.0063758216826055e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 5163,
+      "recall@0.01": 1.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 17,
+      "n_true": 16,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 37,
+       "exact": 37,
+       "exact_norm": 37,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 17,
+       "exact": 17,
+       "exact_norm": 17,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 28,
+     "n_true": 28,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.0063758216826055e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 5163,
+      "recall@0.01": 1.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 17,
+      "n_true": 16,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 37,
+       "exact": 37,
+       "exact_norm": 37,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 17,
+       "exact": 17,
+       "exact_norm": 17,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 28,
+     "n_true": 28,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 1.0063758216826055e-06,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 5163,
+      "recall@0.01": 1.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 17,
+      "n_true": 16,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 5
+      },
+      "f1": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 15
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 37,
+       "exact": 37,
+       "exact_norm": 37,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 17,
+       "exact": 17,
+       "exact_norm": 17,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 28,
+     "n_true": 28,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 4,
+     "series_pred_matched": 4,
+     "series_true": 4,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1221,
+      "recall@0.01": 1.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1221,
+      "recall@0.01": 1.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1221,
+      "recall@0.01": 1.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 1221,
+      "recall@0.01": 1.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 3
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 15,
+     "n_true": 15,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2267,
+      "recall@0.01": 1.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 17
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2267,
+      "recall@0.01": 1.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 17
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2267,
+      "recall@0.01": 1.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 17
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0,
+      "mean_pred_to_true": 0.0,
+      "mean_true_to_pred": 0.0,
+      "median_abs_dT_K": 0.0,
+      "median_abs_dx": 0.0,
+      "precision@0.01": 1.0,
+      "pred_points": 2267,
+      "recall@0.01": 1.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": 0.0,
+       "median": 0.0,
+       "n": 6
+      }
+     }
+    },
+    "status": {},
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 17
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 18,
+       "exact_norm": 18,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    },
+    "text": {
+     "f1": 1.0,
+     "n_pred": 17,
+     "n_true": 17,
+     "precision": 1.0,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 6,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,1 @@
+NiTi-04Tok 23.8s 20 fields 5 inv [('eutectic', 1575.6, 'L → (Ni) + Ni3Ti'), ('eutectic', 1393.0, 'L → Ni3Ti + NiTi'), ('peritectic', 1259.5, 'NiTi + L → NiTi2'), ('eutectic', 1216.3, 'L → NiTi2 + (βTi)'), ('eutectoid', 1040.8, '(βTi) → NiTi2 + (αTi)')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

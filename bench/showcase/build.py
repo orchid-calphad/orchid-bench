@@ -1,0 +1,201 @@
+#!/usr/bin/env python3
+"""Self-contained showcase: three example documents with page image, phase-diagram overlay (truth vs extracted, SVG)
+and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs."""
+import base64
+import io
+import json
+import sys
+from pathlib import Path
+
+B = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(B))
+from common import DOCS, TRUTH, load_json  # noqa: E402
+from score import aabb  # noqa: E402
+
+EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
+R = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
+
+
+def img_uri(im, fmt="JPEG", q=80):
+    buf = io.BytesIO()
+    im.convert("RGB").save(buf, format=fmt, quality=q)
+    return f"data:image/jpeg;base64,{base64.b64encode(buf.getvalue()).decode()}"
+
+
+def doc_payload(doc):
+    from PIL import Image
+    t = load_json(TRUTH / f"{doc}.json")
+    fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")
+    main = next(a for a in fig["axes"] if a["role"] == "main")
+    page = fig["page"]
+    full = Image.open(DOCS / doc / "clean" / f"page-{page + 1}.png")
+    fb = aabb(fig["corners"]["clean_raster"])
+    crop = full.crop(tuple(int(v) for v in fb))
+    scale = 900 / crop.width
+    crop = crop.resize((900, int(crop.height * scale)))
+    thumb = full.copy()
+    thumb.thumbnail((620, 800))
+    deg = Image.open(DOCS / doc / "degraded" / f"page-{page + 1}.jpg")
+    deg.thumbnail((620, 800))
+    ab = aabb(main["corners"]["clean_raster"])
+    X0, Y0, X1, Y1 = [(ab[0] - fb[0]) * scale, (ab[1] - fb[1]) * scale, (ab[2] - fb[0]) * scale, (ab[3] - fb[1]) * scale]
+    xs_ = fig["units"]["x_scale_factor"]
+    off = 273.15 if main["y"]["unit"] == "°C" else 0.0
+
+    def to_px(x, T_K):
+        u = (x * xs_ - main["x"]["min"]) / (main["x"]["max"] - main["x"]["min"])
+        v = (T_K - off - main["y"]["min"]) / (main["y"]["max"] - main["y"]["min"])
+        return [round(X0 + u * (X1 - X0), 1), round(Y1 - v * (Y1 - Y0), 1)]
+
+    def clip(pts):
+        return [p for p in pts if X0 - 2 <= p[0] <= X1 + 2 and Y0 - 2 <= p[1] <= Y1 + 2]
+    truth_lines = [clip([to_px(x, T) for x, T in zip(b["x"], b["T_K"])]) for b in fig["boundaries"] if not b["on_frame"]]
+    truth_lines += [clip([to_px(il["x_min"], il["T_K"]), to_px(il["x_max"], il["T_K"])]) for il in fig["invariant_lines"]]
+    truth_fields = [{"p": to_px(*f["point"]), "label": " + ".join(f["labels"])} for f in t["phase_diagram"]["fields"]
+                    if f["n_cells"] >= 6]
+    ext = {}
+    for name, rend in (("assessed_pd · clean raster", ("assessed_pd", "clean_raster")),
+                       ("assessed_pd · degraded raster", ("assessed_pd", "degraded_raster")),
+                       ("vector route · vector PDF", ("vector_route", "vector"))):
+        p = B / "outputs" / rend[0] / rend[1] / f"{doc}.json"
+        if not p.exists():
+            continue
+        o = load_json(p)
+        pds = o.get("phase_diagrams") or []
+        if not pds:
+            continue
+        pd = pds[0]
+        cx = (lambda v: v / 100) if pd["x_unit"] in ("at.%",) else (lambda v: v)
+        cT = (lambda v: v + 273.15) if pd["T_unit"] == "°C" else (lambda v: v)
+        pts = []
+        for b in pd["boundaries"]:
+            q = [to_px(cx(x), cT(T)) for x, T in b["points"]]
+            pts.append(clip(q) if b.get("polyline") else clip(q))
+        ext[name] = {"polyline": any(b.get("polyline") for b in pd["boundaries"]),
+                     "boundaries": pts,
+                     "fields": [{"p": to_px(cx(f["point"][0]), cT(f["point"][1])), "label": " + ".join(f["phases"])}
+                                for f in pd["fields"] if f.get("phases")],
+                     "status": o.get("status", {}).get("phase_diagram")}
+    metrics = {}
+    for e in ("assessed_pd", "vector_route", "text_regex", "tables_pdfplumber"):
+        sp = B / "outputs" / e / "scores.json"
+        if not sp.exists():
+            continue
+        per = load_json(sp)["per_document"].get(doc, {})
+        for r in R:
+            m = per.get(r)
+            if not m:
+                continue
+            row = metrics.setdefault(r, {})
+            if "phase_diagram" in m and m["phase_diagram"].get("found"):
+                pdm = m["phase_diagram"]
+                row[f"{e}: boundary recall@0.01"] = (pdm.get("boundary") or {}).get("recall@0.01")
+                row[f"{e}: boundary precision@0.01"] = (pdm.get("boundary") or {}).get("precision@0.01")
+                row[f"{e}: field precision"] = (pdm.get("fields") or {}).get("precision")
+                row[f"{e}: invariant recall"] = (pdm.get("invariants") or {}).get("recall")
+            if "text" in m:
+                row[f"{e}: text value recall"] = m["text"]["recall"]
+                row[f"{e}: text value precision"] = m["text"]["precision"]
+            if "tables" in m:
+                row[f"{e}: table cell exact"] = m["tables"].get("cell_exact")
+            if "xy" in m:
+                row[f"{e}: xy panels found"] = f"{m['xy']['panels_found']}/{m['xy']['panels_true']}"
+    st = t["style"]["phase_diagram"]
+    return {"doc": doc, "system": t["system"], "tdb": t["source_tdb"]["file"], "tdb_sha256": t["source_tdb"]["sha256"],
+            "types": t["diagram_types"], "pages": t["renderings"]["vector"]["pages"],
+            "style": {k: st[k] for k in ("T_unit", "x_unit", "color", "field_labels", "markers", "overlay", "inset", "linewidth")},
+            "page_img": img_uri(thumb), "deg_img": img_uri(deg, q=70), "fig_img": img_uri(crop, q=85),
+            "fig_size": [crop.width, crop.height], "truth": {"lines": truth_lines, "fields": truth_fields},
+            "extracted": ext, "metrics": metrics,
+            "invariants": [{"T": i["T"], "type": i["type"], "reaction": i["reaction"]} for i in t["phase_diagram"]["invariants"]]}
+
+
+HTML = r"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Synthetic Papers Showcase</title>
+<style>
+:root{--bg:#f7f7f5;--panel:#ffffff;--ink:#1d1f23;--muted:#5d636b;--line:#d9dbde;--truth:#1f6feb;--ext:#d1242f;--ext2:#8250df;--ext3:#1a7f37;--chip:#eef1f4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15171a;--panel:#1d2024;--ink:#e6e8eb;--muted:#9aa1a9;--line:#33383e;--truth:#58a6ff;--ext:#ff7b72;--ext2:#d2a8ff;--ext3:#56d364;--chip:#262a30}}
+:root[data-theme="dark"]{--bg:#15171a;--panel:#1d2024;--ink:#e6e8eb;--muted:#9aa1a9;--line:#33383e;--truth:#58a6ff;--ext:#ff7b72;--ext2:#d2a8ff;--ext3:#56d364;--chip:#262a30}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:24px 16px 64px}h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.25rem;margin:0 0 6px}
+p.lead{color:var(--muted);margin:0 0 20px;max-width:75ch}.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin:0 0 24px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}.chip{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.8rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px}@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}}
+img.page{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
+.figwrap{position:relative;width:100%}.figwrap svg{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:6px;background:#fff}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.85rem;margin:8px 0}.legend label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.sw{display:inline-block;width:18px;height:3px;border-radius:2px}
+table{border-collapse:collapse;width:100%;font-size:.82rem}th,td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left}td.n{text-align:right;font-variant-numeric:tabular-nums}
+.scroll{overflow-x:auto}details{margin-top:8px}summary{cursor:pointer;color:var(--muted)}small{color:var(--muted)}
+.tabs{display:flex;gap:6px;margin:8px 0}.tabs button{background:var(--chip);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit;font-size:.85rem}
+.tabs button[aria-pressed="true"]{border-color:var(--truth)}
+</style></head><body><main>
+<h1>ORCHID synthetic-papers benchmark</h1>
+<p class="lead">Three of the twenty generated documents. Each document is a short synthetic paper calculated with pycalphad from a CC BY 4.0 SGTE dataset (Hallstedt 2025). The overlay draws the truth phase boundaries (blue) over the figure, with what each deterministic baseline extracted. Not real publications; generated documents are CC BY 4.0.</p>
+<div id="app"></div>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const data=JSON.parse(document.getElementById('data').textContent);
+const app=document.getElementById('app');const NS='http://www.w3.org/2000/svg';
+function el(t,a,txt){const e=document.createElement(t);if(a)for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e}
+function sv(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e}
+const colors=['var(--ext)','var(--ext2)','var(--ext3)'];
+function fmt(v){if(v==null)return '–';if(typeof v==='number')return v.toFixed(3);return String(v)}
+for(const d of data){
+  const card=el('section',{class:'card'});app.appendChild(card);
+  card.appendChild(el('h2',null,d.system+' — '+d.doc));
+  const chips=el('div',{class:'chips'});card.appendChild(chips);
+  [d.tdb, ...d.types.map(s=>s.replace(/_/g,' ')), d.pages+' pages', 'T in '+d.style.T_unit, 'x in '+d.style.x_unit,
+   d.style.field_labels?'field labels':'no field labels', d.style.markers?'markers':null, d.style.overlay?'shifted overlay':null,
+   d.style.inset?'inset':null].filter(Boolean).forEach(s=>chips.appendChild(el('span',{class:'chip'},s)));
+  const grid=el('div',{class:'grid'});card.appendChild(grid);
+  const left=el('div');grid.appendChild(left);
+  const tabs=el('div',{class:'tabs'});left.appendChild(tabs);
+  const img=el('img',{class:'page',alt:'Page with the phase diagram, '+d.doc,src:d.page_img});
+  [['clean page',d.page_img],['degraded scan',d.deg_img]].forEach(([n,src],i)=>{const b=el('button',{type:'button','aria-pressed':i===0?'true':'false'},n);
+    b.addEventListener('click',()=>{img.src=src;tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true')});tabs.appendChild(b)});
+  left.appendChild(img);
+  const right=el('div');grid.appendChild(right);
+  const W=d.fig_size[0],H=d.fig_size[1];
+  const svg=sv('svg',{viewBox:'0 0 '+W+' '+H,role:'img','aria-label':'Phase diagram with truth and extracted boundaries'});
+  const im=sv('image',{href:d.fig_img,x:0,y:0,width:W,height:H,opacity:'0.45'});svg.appendChild(im);
+  const layers={};
+  function layer(name){const g=sv('g',{});svg.appendChild(g);layers[name]=g;return g}
+  const gt=layer('truth');
+  for(const l of d.truth.lines){if(l.length<2)continue;gt.appendChild(sv('polyline',{points:l.map(p=>p.join(',')).join(' '),fill:'none',stroke:'var(--truth)','stroke-width':2.2,opacity:.85}))}
+  for(const f of d.truth.fields){gt.appendChild(sv('circle',{cx:f.p[0],cy:f.p[1],r:4,fill:'var(--truth)'}));const tt=sv('title',{});tt.textContent='truth: '+f.label;gt.lastChild.appendChild(tt)}
+  Object.keys(d.extracted).forEach((name,i)=>{const e=d.extracted[name];const g=layer(name);const c=colors[i%3];
+    for(const l of e.boundaries){if(e.polyline&&l.length>1){g.appendChild(sv('polyline',{points:l.map(p=>p.join(',')).join(' '),fill:'none',stroke:c,'stroke-width':1.4,'stroke-dasharray':'5 3'}))}
+      else{for(const p of l){g.appendChild(sv('rect',{x:p[0]-1,y:p[1]-1,width:2,height:2,fill:c}))}}}
+    for(const f of e.fields){const s=sv('path',{d:'M'+(f.p[0]-5)+' '+(f.p[1]-5)+'l10 10m0 -10l-10 10',stroke:c,'stroke-width':2});const tt=sv('title',{});tt.textContent=name+': '+f.label;s.appendChild(tt);g.appendChild(s)}
+    if(i>0)g.setAttribute('display','none')});
+  const wrap=el('div',{class:'figwrap'});wrap.appendChild(svg);right.appendChild(wrap);
+  const lg=el('div',{class:'legend'});right.insertBefore(lg,wrap);
+  Object.keys(layers).forEach((name,i)=>{const lab=el('label');const cb=el('input',{type:'checkbox'});cb.checked=layers[name].getAttribute('display')!=='none';
+    cb.addEventListener('change',()=>layers[name].setAttribute('display',cb.checked?'inline':'none'));
+    const sw=el('span',{class:'sw'});sw.style.background=name==='truth'?'var(--truth)':colors[(i-1)%3];lab.append(cb,sw,document.createTextNode(name==='truth'?'truth (lines, field points)':name));lg.appendChild(lab)});
+  right.appendChild(el('small',null,'Dots: truth field label points; crosses: named fields from the extractor (hover for names). Point samples are drawn as dots, polylines dashed.'));
+  const rends=['vector','clean_raster','degraded_raster','image_only_pdf'];
+  const keys=[...new Set(rends.flatMap(r=>Object.keys(d.metrics[r]||{})))].sort();
+  const sc=el('div',{class:'scroll'});const tb=el('table');sc.appendChild(tb);card.appendChild(el('h3',null,'Metrics for this document'));card.appendChild(sc);
+  const hr=el('tr');hr.appendChild(el('th',null,'metric'));rends.forEach(r=>hr.appendChild(el('th',null,r.replace(/_/g,' '))));tb.appendChild(hr);
+  for(const k of keys){const tr=el('tr');tr.appendChild(el('td',null,k));rends.forEach(r=>tr.appendChild(el('td',{class:'n'},fmt((d.metrics[r]||{})[k]))));tb.appendChild(tr)}
+  const det=el('details');det.appendChild(el('summary',null,'Invariant reactions in the truth key ('+d.invariants.length+')'));
+  const ul=el('ul');d.invariants.forEach(i=>ul.appendChild(el('li',null,i.type+': '+i.reaction+' at '+i.T.toFixed(2)+' K')));det.appendChild(ul);card.appendChild(det);
+}
+})();
+</script></main></body></html>"""
+
+
+def main():
+    data = [doc_payload(d) for d in EXAMPLES]
+    js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    out = B / "showcase" / "index.html"
+    out.write_text(HTML.replace("__DATA__", js), encoding="utf-8")
+    print(out, out.stat().st_size // 1024, "KB")
+
+
+if __name__ == "__main__":
+    main()
