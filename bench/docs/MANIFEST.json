@@ -1,0 +1,145 @@
+{
+ "documents": [
+  {
+   "doc_id": "syn-AgCu-06He-v0",
+   "pages": 3,
+   "system": "Ag-Cu",
+   "truth": "truth/syn-AgCu-06He-v0.json",
+   "truth_sha256": "4e899d361efaa2d31cc8e5d2abad28e70e82a0a3d3f347f895fb38f3facfedb1"
+  },
+  {
+   "doc_id": "syn-AgNi-04Din-v0",
+   "pages": 3,
+   "system": "Ag-Ni",
+   "truth": "truth/syn-AgNi-04Din-v0.json",
+   "truth_sha256": "bdde589ef7dfc0962284516cbd3177fb11b04a21142dc3ce98a5f2ebf0ae9d96"
+  },
+  {
+   "doc_id": "syn-AgSn-12Gie-v0",
+   "pages": 3,
+   "system": "Ag-Sn",
+   "truth": "truth/syn-AgSn-12Gie-v0.json",
+   "truth_sha256": "74daa35989006249b79b76b493c7c2a8736e3b77452f5b2c8f04c7cdacd83f1e"
+  },
+  {
+   "doc_id": "syn-AlBi-06Kim-v0",
+   "pages": 3,
+   "system": "Al-Bi",
+   "truth": "truth/syn-AlBi-06Kim-v0.json",
+   "truth_sha256": "a75cf40cbc02bd89294d7eec764c99bb14859925ed42e85d888a5bada52597f7"
+  },
+  {
+   "doc_id": "syn-AlCu-02Mie-v0",
+   "pages": 3,
+   "system": "Al-Cu",
+   "truth": "truth/syn-AlCu-02Mie-v0.json",
+   "truth_sha256": "4c3b8e1ce26cb438ff5a58ec5cd84b42ad9cdb94fd4bea964c8e67f50e93acd2"
+  },
+  {
+   "doc_id": "syn-AlMg-12Tan-v0",
+   "pages": 3,
+   "system": "Al-Mg",
+   "truth": "truth/syn-AlMg-12Tan-v0.json",
+   "truth_sha256": "289359cbc991302e77abc9b532510ce71e6bbe0ebed71dedbc1365a52c6e7619"
+  },
+  {
+   "doc_id": "syn-AlNi-14Zhu-v0",
+   "pages": 3,
+   "system": "Al-Ni",
+   "truth": "truth/syn-AlNi-14Zhu-v0.json",
+   "truth_sha256": "99e86b9268128c57cd1be9174272b7810e92f3527dd8753f55c57cde16b77b32"
+  },
+  {
+   "doc_id": "syn-AlSi-12Tan-v0",
+   "pages": 3,
+   "system": "Al-Si",
+   "truth": "truth/syn-AlSi-12Tan-v0.json",
+   "truth_sha256": "9becf7b40379256094940edea7e544c203e30effdcf6c8fbf552775a5fe5aad4"
+  },
+  {
+   "doc_id": "syn-AlZn-93Mey-LB-v0",
+   "pages": 3,
+   "system": "Al-Zn",
+   "truth": "truth/syn-AlZn-93Mey-LB-v0.json",
+   "truth_sha256": "955f143203103b284b907ca013c99205539f4f5044096ec67a8be3181242aa5c"
+  },
+  {
+   "doc_id": "syn-BiSn-08Li-v0",
+   "pages": 3,
+   "system": "Bi-Sn",
+   "truth": "truth/syn-BiSn-08Li-v0.json",
+   "truth_sha256": "5cfc9f8da49ea55f74846ffe66c164efaa6b57e41b17fcb44ee406fa1be188e7"
+  },
+  {
+   "doc_id": "syn-CrFe-11Xio-v0",
+   "pages": 3,
+   "system": "Cr-Fe",
+   "truth": "truth/syn-CrFe-11Xio-v0.json",
+   "truth_sha256": "cba638d9fa6701eab9687b6376a8713e57cec153481aa29216c2efff762798f2"
+  },
+  {
+   "doc_id": "syn-CuMg-16Hal-v0",
+   "pages": 3,
+   "system": "Cu-Mg",
+   "truth": "truth/syn-CuMg-16Hal-v0.json",
+   "truth_sha256": "c11ecc3a25f3b1de655c944592b832a2478820b473d902eac16363bcf0c095c2"
+  },
+  {
+   "doc_id": "syn-CuNi-87Jan-v0",
+   "pages": 3,
+   "system": "Cu-Ni",
+   "truth": "truth/syn-CuNi-87Jan-v0.json",
+   "truth_sha256": "74138c0d3d6f265d75a65fb5bd26bbd7b72d66a015daceb29b9033e94e295f95"
+  },
+  {
+   "doc_id": "syn-CuPb-86Hay-LB-v0",
+   "pages": 3,
+   "system": "Cu-Pb",
+   "truth": "truth/syn-CuPb-86Hay-LB-v0.json",
+   "truth_sha256": "2042ef28a10c0ebfdce2c6e8f2f1d8fea9cdd14b89ed131352526f2cdc7c9802"
+  },
+  {
+   "doc_id": "syn-CuZn-08Gie-v0",
+   "pages": 3,
+   "system": "Cu-Zn",
+   "truth": "truth/syn-CuZn-08Gie-v0.json",
+   "truth_sha256": "55ef4aaa9a0260d105376521ddab6a237cac1d087c7fdea400e28eebe7f81b8d"
+  },
+  {
+   "doc_id": "syn-MgSi-12Sch-v0",
+   "pages": 3,
+   "system": "Mg-Si",
+   "truth": "truth/syn-MgSi-12Sch-v0.json",
+   "truth_sha256": "71471cb082c710f2c2358271f864ae1cee9061ae7bfbb64231849bd959784285"
+  },
+  {
+   "doc_id": "syn-MgSn-04Fri-v0",
+   "pages": 3,
+   "system": "Mg-Sn",
+   "truth": "truth/syn-MgSn-04Fri-v0.json",
+   "truth_sha256": "e9ca59387103c294ea1c7b554735c1176643de1c2caf7bfdfc2d126584cf9c18"
+  },
+  {
+   "doc_id": "syn-NiTi-04Tok-v0",
+   "pages": 3,
+   "system": "Ni-Ti",
+   "truth": "truth/syn-NiTi-04Tok-v0.json",
+   "truth_sha256": "7e8a6142cbc01558aadbd84debeaae941552e1730e7ce6b60fe9db0854013e65"
+  },
+  {
+   "doc_id": "syn-PbSn-17Gie-v0",
+   "pages": 3,
+   "system": "Pb-Sn",
+   "truth": "truth/syn-PbSn-17Gie-v0.json",
+   "truth_sha256": "6c65bc762ca3648ab32eb46b9a0f906de4047e8636514fa32c9ef81a5004bbd4"
+  },
+  {
+   "doc_id": "syn-PbZn-98Jan-v0",
+   "pages": 3,
+   "system": "Pb-Zn",
+   "truth": "truth/syn-PbZn-98Jan-v0.json",
+   "truth_sha256": "1e3307f6c506d4d27e06d0b19fbcac7f58b927b94dbdd32429ee11f771e31622"
+  }
+ ],
+ "seed": 20261022
+}

@@ -1,0 +1,1 @@
+CuMg-16Hal 8.9s 12 fields 3 inv [('eutectic', 998.4, 'L → (Cu) + Cu2Mg'), ('eutectic', 825.2, 'L → Cu2Mg + CuMg2'), ('eutectic', 758.1, 'L → CuMg2 + (Mg)')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

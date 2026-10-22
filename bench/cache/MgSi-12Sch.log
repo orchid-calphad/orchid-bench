@@ -1,0 +1,1 @@
+MgSi-12Sch 8.6s 6 fields 2 inv [('eutectic', 1212.5, 'L → Mg2Si + (Si)'), ('eutectic', 910.2, 'L → (Mg) + Mg2Si')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

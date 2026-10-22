@@ -1,0 +1,1 @@
+AlNi-14Zhu 17.5s 60 fields 6 inv [('peritectic', 1643.1, 'L + (Ni) → Ni3Al'), ('eutectic', 1642.3, 'L → NiAl + Ni3Al'), ('peritectic', 1412.2, 'L + NiAl → Al3Ni2'), ('peritectic', 1127.0, 'L + Al3Ni2 → Al3Ni'), ('peritectoid', 973.4, 'NiAl + Ni3Al → Al3Ni5'), ('eutectic', 924.4, 'L → (Al) + Al3Ni')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

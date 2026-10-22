@@ -1,0 +1,1 @@
+AlMg-12Tan 9.1s 14 fields 5 inv [('eutectic', 723.9, 'L → (Al) + β'), ('eutectic', 723.5, 'L → β + Al12Mg17'), ('eutectic', 711.2, 'L → Al12Mg17 + (Mg)'), ('peritectoid', 699.5, 'β + Al12Mg17 → ε'), ('eutectoid', 523.9, 'ε → β + Al12Mg17')] ['T_liquid', 'activity', 'cp', 'formation', 'gibbs', 'mixing', 'rk_liquid']

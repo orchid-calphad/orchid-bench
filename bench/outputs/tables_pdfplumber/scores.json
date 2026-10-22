@@ -1,0 +1,959 @@
+{
+ "aggregate": {
+  "vector": {
+   "documents": 20,
+   "tables": {
+    "cell_exact": 0.36595174262734587,
+    "cell_exact_normalised": 0.36595174262734587,
+    "cells": 746,
+    "numeric_exact": 0.40431266846361186,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 70,
+    "tables_true": 40
+   }
+  }
+ },
+ "extractor": "tables_pdfplumber",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.125,
+     "cell_exact_normalised": 0.125,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": 172460470.45753345,
+      "median": 62.937639198218264,
+      "n": 5
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 3,
+       "exact_norm": 3,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 3962.0032720000004,
+        "median": 929.7211,
+        "n": 5
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.0625,
+     "cell_exact_normalised": 0.0625,
+     "numeric_exact": 0.21428571428571427,
+     "numeric_rel_err": {
+      "mean": 3350504211.9409604,
+      "median": 0.0,
+      "n": 5
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 0.004113333333331563,
+        "median": 0.0,
+        "n": 3
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 59632818421.05963,
+        "median": 59632818421.05963,
+        "n": 2
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 18
+     },
+     "per_table": [
+      {
+       "cells": 25,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.015625,
+     "cell_exact_normalised": 0.015625,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "per_table": [
+      {
+       "cells": 48,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 28,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 36,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 16,
+       "exact_norm": 16,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 9,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 39
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 24,
+       "exact_norm": 24,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 15
+       }
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.07692307692307693,
+     "cell_exact_normalised": 0.07692307692307693,
+     "numeric_exact": 0.1,
+     "numeric_rel_err": {
+      "mean": 1.00000002589924,
+      "median": 1.00000002589924,
+      "n": 2
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 13842.1053585,
+        "median": 13842.1053585,
+        "n": 2
+       }
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 1.0,
+     "cell_exact_normalised": 1.0,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 3,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.0,
+     "cell_exact_normalised": 0.0,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.13636363636363635,
+     "cell_exact_normalised": 0.13636363636363635,
+     "numeric_exact": 0.5714285714285714,
+     "numeric_rel_err": {
+      "mean": 0.2,
+      "median": 0.0,
+      "n": 5
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 2
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 11.520000000000001,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.3333333333333333,
+     "cell_exact_normalised": 0.3333333333333333,
+     "numeric_exact": 0.3333333333333333,
+     "numeric_rel_err": {
+      "mean": 0.2769487073205479,
+      "median": 0.0,
+      "n": 10
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 10,
+       "exact_norm": 10,
+       "id": "invariants",
+       "num_cells": 12,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 9.833333333333334,
+        "median": 0.0,
+        "n": 9
+       }
+      },
+      {
+       "cells": 12,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "formation",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 12.2,
+        "median": 12.2,
+        "n": 1
+       }
+      }
+     ],
+     "tables_pred": 6,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.0,
+     "cell_exact_normalised": 0.0,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "per_table": [
+      {
+       "cells": 15,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      }
+     ],
+     "tables_pred": 1,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.07142857142857142,
+     "cell_exact_normalised": 0.07142857142857142,
+     "numeric_exact": 0.2727272727272727,
+     "numeric_rel_err": {
+      "mean": 500000000.0000321,
+      "median": 1.7035953177258665e-05,
+      "n": 6
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 0.6065400000000004,
+        "median": 9.999999999998899e-05,
+        "n": 5
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 1
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.01282051282051282,
+     "cell_exact_normalised": 0.01282051282051282,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": 732.7175619732012,
+      "median": 1069.7850707850707,
+      "n": 3
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 851.7249999999999,
+        "median": 851.7249999999999,
+        "n": 2
+       }
+      },
+      {
+       "cells": 24,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 15,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 0.07499999999999574,
+        "median": 0.07499999999999574,
+        "n": 1
+       }
+      }
+     ],
+     "tables_pred": 2,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.038461538461538464,
+     "cell_exact_normalised": 0.038461538461538464,
+     "numeric_exact": 0.09090909090909091,
+     "numeric_rel_err": {
+      "mean": 0.45495495495495497,
+      "median": 0.45495495495495497,
+      "n": 2
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 8,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 15.149999999999999,
+        "median": 15.149999999999999,
+        "n": 2
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.21428571428571427,
+     "cell_exact_normalised": 0.21428571428571427,
+     "numeric_exact": 0.18181818181818182,
+     "numeric_rel_err": {
+      "mean": 0.4748493027668319,
+      "median": 0.00827272727272721,
+      "n": 9
+     },
+     "per_table": [
+      {
+       "cells": 19,
+       "exact": 3,
+       "exact_norm": 3,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 113.72194999999999,
+        "median": 0.06934999999998137,
+        "n": 6
+       }
+      },
+      {
+       "cells": 9,
+       "exact": 3,
+       "exact_norm": 3,
+       "id": "formation",
+       "num_cells": 3,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 11.556666666666667,
+        "median": 0.0,
+        "n": 3
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.4074074074074074,
+     "cell_exact_normalised": 0.4074074074074074,
+     "numeric_exact": 0.6551724137931034,
+     "numeric_rel_err": {
+      "mean": 0.26500574121330006,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 37,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "invariants",
+       "num_cells": 20,
+       "num_exact": 15,
+       "numeric_abs_err": {
+        "mean": 254.5,
+        "median": 0.0,
+        "n": 20
+       }
+      },
+      {
+       "cells": 17,
+       "exact": 7,
+       "exact_norm": 7,
+       "id": "formation",
+       "num_cells": 9,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 8.586666666666666,
+        "median": 0.03999999999999915,
+        "n": 9
+       }
+      }
+     ],
+     "tables_pred": 3,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.0,
+     "cell_exact_normalised": 0.0,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "per_table": [
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      },
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 2
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "vector": {
+    "status": {
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.058823529411764705,
+     "cell_exact_normalised": 0.058823529411764705,
+     "numeric_exact": 0.0,
+     "numeric_rel_err": {
+      "mean": 0.31694291333265434,
+      "median": 0.0010040160642571137,
+      "n": 3
+     },
+     "per_table": [
+      {
+       "cells": 18,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 31.607233333333337,
+        "median": 0.10000000000000853,
+        "n": 3
+       }
+      },
+      {
+       "cells": 16,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       }
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 2
+    }
+   }
+  }
+ }
+}

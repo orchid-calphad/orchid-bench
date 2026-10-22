@@ -1,0 +1,2223 @@
+{
+ "aggregate": {
+  "vector": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.09986659355999514,
+    "boundary_mean_dist": 0.009638337142433269,
+    "boundary_median_dT_K": 0.2957116456041283,
+    "boundary_median_dx": 7.171793364065069e-05,
+    "boundary_precision@0.01": 0.881495560364376,
+    "boundary_recall@0.01": 0.8856183229706277,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.75,
+    "field_pred": 32,
+    "field_recall": 0.1340782122905028,
+    "field_true_scorable": 179,
+    "invariant_T_err_K": 0.7219211678910472,
+    "invariant_precision": 0.44776119402985076,
+    "invariant_recall": 0.5882352941176471,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 0.5876010781671159,
+    "panels_found": 30,
+    "panels_true": 48,
+    "point_err_mean": 0.009214985653859887,
+    "point_err_median": 1.3459685417616972e-07,
+    "point_recall@0.01": 0.7848309975267931,
+    "points": 3639,
+    "series_precision": 0.44666666666666666,
+    "series_pred": 150,
+    "series_recall": 0.631578947368421
+   }
+  }
+ },
+ "extractor": "vector_route",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.018897697710261254,
+      "mean_pred_to_true": 0.0048519300185534825,
+      "mean_true_to_pred": 0.0001756172788141965,
+      "median_abs_dT_K": 7.512201087855885e-05,
+      "median_abs_dx": 1.904664739260653e-07,
+      "precision@0.01": 0.7762655205348615,
+      "pred_points": 4188,
+      "recall@0.01": 0.9909130246646474,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 7.41017338441452e-05,
+       "median": 7.41017338441452e-05,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 3,
+      "n_true": 1,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 17,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        390.344,
+        463.136,
+        624.5840000000001
+       ],
+       "lines": 3,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        449.095,
+        442.151,
+        637.354
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 305,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 1.3185025685762441e-07,
+      "median": 1.3135230191364172e-07,
+      "n": 305
+     },
+     "points": 407,
+     "series_pred": 9,
+     "series_pred_matched": 4,
+     "series_true": 6,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.016761194648566204,
+      "mean_pred_to_true": 1.339964445658972e-07,
+      "mean_true_to_pred": 0.00303159648550695,
+      "median_abs_dT_K": 5.394276365727757e-05,
+      "median_abs_dx": 9.458279454088725e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 2036,
+      "recall@0.01": 0.9418181818181818,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.7692307692307693,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.625
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.0291020695804036e-05,
+       "median": 4.0291020695804036e-05,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 9,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        161.629,
+        413.6950146484375,
+        466.736,
+        643.8430146484375
+       ],
+       "lines": 2,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig3"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig3"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 0,
+     "panels_true": 3,
+     "point_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "points": 200,
+     "series_pred": 0,
+     "series_pred_matched": 0,
+     "series_true": 4,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.16664240878128575,
+      "mean_pred_to_true": 0.01660946657045844,
+      "mean_true_to_pred": 0.03965055370268258,
+      "median_abs_dT_K": 3.0717480051234425e-05,
+      "median_abs_dx": 3.443873995701008e-08,
+      "precision@0.01": 0.8703363914373089,
+      "pred_points": 1635,
+      "recall@0.01": 0.6465979381443299,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.302331882082399e-05,
+       "median": 3.302331882082399e-05,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 3,
+      "n_true": 3,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 8,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        161.629,
+        385.3090146484375,
+        466.736,
+        608.8100146484375
+       ],
+       "lines": 3,
+       "markers": 7
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        201.216,
+        246.06401464843748,
+        429.127,
+        421.3800146484375
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        201.216,
+        490.4290146484375,
+        429.127,
+        665.7450146484375
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (13 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 198,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0005308334467489396,
+      "median": 7.349762776979805e-08,
+      "n": 200
+     },
+     "points": 200,
+     "series_pred": 10,
+     "series_pred_matched": 4,
+     "series_true": 5,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 2.386022668586927e-07,
+      "mean_pred_to_true": 1.4856696810704466e-07,
+      "mean_true_to_pred": 4.4647320731715046e-07,
+      "median_abs_dT_K": 2.1146148365680517e-05,
+      "median_abs_dx": 1.4665915271105945e-07,
+      "precision@0.01": 1.0,
+      "pred_points": 2381,
+      "recall@0.01": 1.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.7499999999999999,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.6
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.415504926351787e-05,
+       "median": 3.415504926351787e-05,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        376.484,
+        463.136,
+        610.7239999999999
+       ],
+       "lines": 2,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        73.61400000000003,
+        442.153,
+        255.15099999999995
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (0 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 192,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 3.1110711328438584e-08,
+      "median": 3.057066300765556e-08,
+      "n": 192
+     },
+     "points": 294,
+     "series_pred": 9,
+     "series_pred_matched": 4,
+     "series_true": 6,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.004484321584081719,
+      "mean_pred_to_true": 7.521046961623951e-08,
+      "mean_true_to_pred": 0.0010083944831265428,
+      "median_abs_dT_K": 7.317547507934563e-05,
+      "median_abs_dx": 3.030497037689872e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 3656,
+      "recall@0.01": 0.9642131979695432,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.5925925925925926,
+      "loose_precision": 0.8888888888888888,
+      "n_pred": 9,
+      "n_true": 18,
+      "precision": 0.8888888888888888,
+      "recall": 0.4444444444444444
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.941168947425467e-05,
+       "median": 4.941168947425467e-05,
+       "n": 1
+      },
+      "f1": 0.25,
+      "n_pred": 2,
+      "n_true": 6,
+      "precision": 0.5,
+      "recall": 0.16666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 26,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        365.264,
+        463.136,
+        599.504
+       ],
+       "lines": 2,
+       "markers": 8
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        206.155,
+        323.534,
+        442.153,
+        505.071
+       ],
+       "lines": 2,
+       "manifest": "ok (2 legend entries)",
+       "markers": 13,
+       "vector_markers": "ok (26 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        73.61400000000003,
+        442.153,
+        255.15099999999995
+       ],
+       "lines": 1,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (11 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 37,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0024355143007229437,
+      "median": 1.5615242527100109e-07,
+      "n": 41
+     },
+     "points": 41,
+     "series_pred": 10,
+     "series_pred_matched": 5,
+     "series_true": 5,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.24228716945495576,
+      "mean_pred_to_true": 0.012278699513703315,
+      "mean_true_to_pred": 0.04169092506332652,
+      "median_abs_dT_K": 7.800409160263479e-05,
+      "median_abs_dx": 0.0007906812663887042,
+      "precision@0.01": 0.6402027027027027,
+      "pred_points": 4736,
+      "recall@0.01": 0.6685406990955757,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 4,
+      "n_true": 11,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 12.993370258410513,
+       "median": 12.650035711210876,
+       "n": 3
+      },
+      "f1": 0.4615384615384615,
+      "n_pred": 8,
+      "n_true": 5,
+      "precision": 0.375,
+      "recall": 0.6,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 30,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        167.401,
+        411.4570146484375,
+        459.56,
+        631.8400146484375
+       ],
+       "lines": 20,
+       "markers": 8
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        205.308,
+        315.0670146484375,
+        423.547,
+        489.1610146484375
+       ],
+       "lines": 1,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (12 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        79.05701464843753,
+        423.547,
+        253.15101464843747
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (9 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 2,
+     "marker_hits": 2,
+     "marker_points": 20,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.4790064988756055,
+      "median": 0.4830243850467027,
+      "n": 20
+     },
+     "points": 20,
+     "series_pred": 3,
+     "series_pred_matched": 1,
+     "series_true": 2,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.1652180463331341,
+      "mean_pred_to_true": 0.004325755371525481,
+      "mean_true_to_pred": 0.046573785288481176,
+      "median_abs_dT_K": 8.772585111116449e-05,
+      "median_abs_dx": 9.199645503721321e-09,
+      "precision@0.01": 0.8640606767794633,
+      "pred_points": 1714,
+      "recall@0.01": 0.5174943566591422,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 25,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.039200694525789e-05,
+       "median": 2.039200694525789e-05,
+       "n": 1
+      },
+      "f1": 0.2,
+      "n_pred": 6,
+      "n_true": 4,
+      "precision": 0.16666666666666666,
+      "recall": 0.25,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 17,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        180.759,
+        418.3410146484375,
+        442.952,
+        634.9560146484375
+       ],
+       "lines": 12,
+       "markers": 20
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        205.308,
+        360.9620146484375,
+        423.547,
+        535.0560146484374
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (18 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig3"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 1,
+     "marker_hits": 1,
+     "marker_points": 44,
+     "panels_found": 1,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.44457212642346516,
+      "median": 0.3118603932942534,
+      "n": 18
+     },
+     "points": 44,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 3,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.02837628876891674,
+      "mean_pred_to_true": 0.002598866715018437,
+      "mean_true_to_pred": 0.0008596199670500703,
+      "median_abs_dT_K": 9.144550508488614e-05,
+      "median_abs_dx": 3.8200593965864726e-08,
+      "precision@0.01": 0.90625,
+      "pred_points": 1824,
+      "recall@0.01": 0.9723225030084236,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 9.144550506334781e-05,
+       "median": 9.144550506334781e-05,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 11,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        167.4,
+        404.2220146484375,
+        459.558,
+        618.2370146484375
+       ],
+       "lines": 4,
+       "markers": 15
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        205.308,
+        228.16201464843755,
+        423.547,
+        402.2560146484375
+       ],
+       "lines": 1,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (12 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        470.9990146484375,
+        423.547,
+        645.0930146484375
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 298,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 1.1942511145550248e-07,
+      "median": 1.2346200792099208e-07,
+      "n": 298
+     },
+     "points": 298,
+     "series_pred": 12,
+     "series_pred_matched": 6,
+     "series_true": 5,
+     "series_true_matched": 5
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 8.949609135119026e-08,
+      "mean_pred_to_true": 5.06770531146592e-08,
+      "mean_true_to_pred": 5.06770531146592e-08,
+      "median_abs_dT_K": 1.6096422081335326e-05,
+      "median_abs_dx": 3.953117239108295e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 2504,
+      "recall@0.01": 1.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.7588140792668128e-05,
+       "median": 1.7588140792668128e-05,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 10,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        167.401,
+        418.7170146484375,
+        459.56,
+        639.1000146484375
+       ],
+       "lines": 2,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        205.308,
+        242.57001464843745,
+        423.548,
+        410.4470146484375
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (0 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        477.6350146484375,
+        423.548,
+        645.5120146484376
+       ],
+       "lines": 3,
+       "manifest": "ok (2 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (0 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 200,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0007605091109129091,
+      "median": 2.3863220864933353e-07,
+      "n": 204
+     },
+     "points": 204,
+     "series_pred": 9,
+     "series_pred_matched": 5,
+     "series_true": 6,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2017347573742493,
+      "mean_pred_to_true": 0.020811762779695497,
+      "mean_true_to_pred": 0.02560025427606091,
+      "median_abs_dT_K": 2.3829596035307432e-05,
+      "median_abs_dx": 1.2546815869596273e-07,
+      "precision@0.01": 0.7547169811320755,
+      "pred_points": 1643,
+      "recall@0.01": 0.822569680489463,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.382959604574353e-05,
+       "median": 2.382959604574353e-05,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 3,
+      "n_true": 1,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        170.935,
+        418.874,
+        473.918,
+        640.819
+       ],
+       "lines": 3,
+       "markers": 8
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        210.247,
+        231.14700000000005,
+        436.572,
+        405.243
+       ],
+       "lines": 1,
+       "manifest": "ok (4 legend entries)",
+       "markers": 10,
+       "vector_markers": "ok (20 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        473.987,
+        436.572,
+        648.083
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 14,
+       "vector_markers": "ok (27 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 35,
+     "marker_hits": 35,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.08635712613289792,
+      "median": 1.8516736828291588e-07,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 7,
+     "series_pred_matched": 3,
+     "series_true": 6,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 2.0173842873760452e-07,
+      "mean_pred_to_true": 1.207289036323841e-07,
+      "mean_true_to_pred": 1.6115304662792508e-06,
+      "median_abs_dT_K": 9.112580667824943e-05,
+      "median_abs_dx": 7.6714773422637e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 2715,
+      "recall@0.01": 1.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0003103381640130465,
+       "median": 0.0003103381640130465,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 10,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        180.759,
+        411.0810146484375,
+        442.952,
+        627.6960146484375
+       ],
+       "lines": 1,
+       "markers": 1
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        474.6400146484375,
+        423.548,
+        642.5170146484375
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 282,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 3.398468542731003e-07,
+      "median": 3.3762651500601605e-07,
+      "n": 282
+     },
+     "points": 304,
+     "series_pred": 9,
+     "series_pred_matched": 4,
+     "series_true": 6,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.10110205863439725,
+      "mean_pred_to_true": 0.014845331726022044,
+      "mean_true_to_pred": 2.8472614215594296e-06,
+      "median_abs_dT_K": 6.319865114567946e-05,
+      "median_abs_dx": 4.321811619689697e-08,
+      "precision@0.01": 0.857707509881423,
+      "pred_points": 2530,
+      "recall@0.01": 1.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.451989332845187e-05,
+       "median": 6.451989332845187e-05,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 12,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        370.544,
+        463.136,
+        604.784
+       ],
+       "lines": 12,
+       "markers": 8
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        206.155,
+        249.47400000000005,
+        442.153,
+        431.011
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (14 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        73.61400000000003,
+        442.153,
+        255.15099999999995
+       ],
+       "lines": 1,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (11 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 9.202930910237591e-08,
+      "median": 8.360933586337527e-08,
+      "n": 26
+     },
+     "points": 26,
+     "series_pred": 5,
+     "series_pred_matched": 3,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 7.918002548074003e-08,
+      "mean_pred_to_true": 4.616671588572643e-08,
+      "mean_true_to_pred": 2.7993131220077868e-06,
+      "median_abs_dT_K": 3.6743133868810673e-05,
+      "median_abs_dx": 3.066668807782946e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 3035,
+      "recall@0.01": 1.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 6,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        352.724,
+        463.136,
+        586.9639999999999
+       ],
+       "lines": 0,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        206.155,
+        217.995,
+        442.151,
+        406.254
+       ],
+       "lines": 1,
+       "manifest": "ok (4 legend entries)",
+       "markers": 10,
+       "vector_markers": "ok (11 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        74.12,
+        442.151,
+        262.379
+       ],
+       "lines": 2,
+       "manifest": "ok (2 legend entries)",
+       "markers": 14,
+       "vector_markers": "ok (26 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 35,
+     "marker_hits": 35,
+     "marker_points": 48,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 0.0834030221644051,
+      "median": 1.195024218586701e-07,
+      "n": 52
+     },
+     "points": 52,
+     "series_pred": 9,
+     "series_pred_matched": 3,
+     "series_true": 6,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 1.2091497184594122e-07,
+      "mean_pred_to_true": 5.98361732563298e-07,
+      "mean_true_to_pred": 2.1235231286697317e-06,
+      "median_abs_dT_K": 7.654450295824233e-05,
+      "median_abs_dx": 4.898447941714679e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 2556,
+      "recall@0.01": 1.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 9.72481904000233e-05,
+       "median": 9.72481904000233e-05,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 8,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        167.4,
+        404.2220146484375,
+        459.558,
+        618.2370146484375
+       ],
+       "lines": 2,
+       "markers": 1
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        479.9340146484375,
+        423.547,
+        654.0280146484375
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 98,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0030527291507777333,
+      "median": 8.027647696471099e-08,
+      "n": 102
+     },
+     "points": 204,
+     "series_pred": 7,
+     "series_pred_matched": 2,
+     "series_true": 6,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.02787783475617761,
+      "mean_pred_to_true": 0.005096616834134496,
+      "mean_true_to_pred": 0.0016051532411505269,
+      "median_abs_dT_K": 5.574504065020136e-05,
+      "median_abs_dx": 1.2380665856404072e-07,
+      "precision@0.01": 0.8374200426439232,
+      "pred_points": 3752,
+      "recall@0.01": 0.9323040380047506,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.36363636363636365,
+      "loose_precision": 0.5714285714285714,
+      "n_pred": 7,
+      "n_true": 15,
+      "precision": 0.5714285714285714,
+      "recall": 0.26666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 6,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 46,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        170.935,
+        392.474,
+        473.918,
+        614.419
+       ],
+       "lines": 8,
+       "markers": 29
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        210.247,
+        381.472,
+        436.572,
+        555.568
+       ],
+       "lines": 0,
+       "manifest": "ok (2 legend entries)",
+       "markers": 13,
+       "vector_markers": "ok (26 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        79.05700000000002,
+        436.572,
+        253.15300000000002
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 303,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 1.3428168360768708e-07,
+      "median": 1.332080352147582e-07,
+      "n": 303
+     },
+     "points": 303,
+     "series_pred": 14,
+     "series_pred_matched": 7,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.20406364749696054,
+      "mean_pred_to_true": 5.8245568449115165e-08,
+      "mean_true_to_pred": 0.028630586157356485,
+      "median_abs_dT_K": 6.355425867243802e-05,
+      "median_abs_dx": 3.401299608629671e-08,
+      "precision@0.01": 1.0,
+      "pred_points": 1867,
+      "recall@0.01": 0.7944118661607451,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.255645009403452e-05,
+       "median": 3.255645009403452e-05,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        161.629,
+        413.0290146484375,
+        466.736,
+        636.5300146484375
+       ],
+       "lines": 5,
+       "markers": 2
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        201.216,
+        236.11401464843755,
+        429.127,
+        411.4300146484375
+       ],
+       "lines": 2,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (0 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        201.216,
+        480.4790146484375,
+        429.127,
+        655.7950146484375
+       ],
+       "lines": 1,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 104,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 7.907512175606402e-08,
+      "median": 7.478681612706924e-08,
+      "n": 104
+     },
+     "points": 104,
+     "series_pred": 7,
+     "series_pred_matched": 3,
+     "series_true": 2,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.0676550735340083,
+      "mean_pred_to_true": 0.013135191422264101,
+      "mean_true_to_pred": 4.1402825939689784e-06,
+      "median_abs_dT_K": 3.3990451608900685e-05,
+      "median_abs_dx": 3.684683114180132e-08,
+      "precision@0.01": 0.7356435643564356,
+      "pred_points": 5050,
+      "recall@0.01": 1.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.9126085589959985e-05,
+       "median": 1.9126085589959985e-05,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 12,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        170.935,
+        368.056,
+        473.917,
+        596.602
+       ],
+       "lines": 10,
+       "markers": 0
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        79.05700000000002,
+        436.572,
+        253.15300000000002
+       ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (10 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 10,
+     "marker_hits": 10,
+     "marker_points": 32,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 1.1956661620638975e-07,
+      "median": 1.2105725577345643e-07,
+      "n": 10
+     },
+     "points": 32,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 3,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.32036844950047233,
+      "mean_pred_to_true": 1.4666920439603616e-07,
+      "mean_true_to_pred": 0.06758713249310166,
+      "median_abs_dT_K": 0.00017954332593161926,
+      "median_abs_dx": 1.2002705218616683e-07,
+      "precision@0.01": 1.0,
+      "pred_points": 2087,
+      "recall@0.01": 0.5238188207731355,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 16,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.00025991660834279173,
+       "median": 0.00025991660834279173,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 3,
+      "n_true": 5,
+      "precision": 0.6666666666666666,
+      "recall": 0.4,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 20,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        170.935,
+        418.874,
+        473.918,
+        640.819
+       ],
+       "lines": 6,
+       "markers": 7
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        79.05700000000002,
+        436.572,
+        253.15300000000002
+       ],
+       "lines": 2,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 98,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 2.5456435546341617e-07,
+      "median": 2.5074292131652016e-07,
+      "n": 98
+     },
+     "points": 200,
+     "series_pred": 5,
+     "series_pred_matched": 2,
+     "series_true": 4,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.35928829176681665,
+      "mean_pred_to_true": 0.09618964283775529,
+      "mean_true_to_pred": 6.504452964829837e-06,
+      "median_abs_dT_K": 5.913059979497848,
+      "median_abs_dx": 0.0006424211161941695,
+      "precision@0.01": 0.44064693317058284,
+      "pred_points": 3277,
+      "recall@0.01": 1.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.0616583071841887e-05,
+       "median": 2.0616583071841887e-05,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 15,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        179.608,
+        352.724,
+        463.136,
+        586.9639999999999
+       ],
+       "lines": 7,
+       "markers": 15
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        206.155,
+        208.04499999999996,
+        442.151,
+        396.304
+       ],
+       "lines": 1,
+       "manifest": "ok (4 legend entries)",
+       "markers": 10,
+       "vector_markers": "ok (11 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        74.12,
+        442.151,
+        262.379
+       ],
+       "lines": 4,
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
+       "markers": 0
+      }
+     ]
+    },
+    "xy": {
+     "hits": 327,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 2,
+     "point_err": {
+      "mean": 1.5885509571860878e-07,
+      "median": 1.5958745859993957e-07,
+      "n": 327
+     },
+     "points": 327,
+     "series_pred": 13,
+     "series_pred_matched": 6,
+     "series_true": 6,
+     "series_true_matched": 6
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.07257390092383459,
+      "mean_pred_to_true": 0.002022100436474475,
+      "mean_true_to_pred": 0.010533505187456452,
+      "median_abs_dT_K": 2.1282069256889358e-05,
+      "median_abs_dx": 3.3160932978726354e-08,
+      "precision@0.01": 0.9466608846487424,
+      "pred_points": 2306,
+      "recall@0.01": 0.937362152624614,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.5714285714285715,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.4
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.2203592550340545e-05,
+       "median": 2.2203592550340545e-05,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": [
+      {
+       "axes": "main",
+       "calibration": "ok",
+       "curves": 8,
+       "figure": "fig1",
+       "frame_bbox_pt": [
+        180.759,
+        411.0810146484375,
+        442.952,
+        627.6960146484375
+       ],
+       "lines": 4,
+       "markers": 9
+      }
+     ],
+     "xy": [
+      {
+       "axes": "a",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig2"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        449.8790146484375,
+        423.547,
+        623.9730146484375
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (0 points)"
+      }
+     ]
+    },
+    "xy": {
+     "hits": 305,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 1,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 1.142912124835423e-07,
+      "median": 1.2516301458362695e-07,
+      "n": 305
+     },
+     "points": 327,
+     "series_pred": 9,
+     "series_pred_matched": 4,
+     "series_true": 6,
+     "series_true_matched": 4
+    }
+   }
+  }
+ }
+}

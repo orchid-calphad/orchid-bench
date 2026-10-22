@@ -1,0 +1,1 @@
+{"doc_id":"syn-CuNi-87Jan-v0","extractor":"tables_pdfplumber","rendering":"vector","status":{"tables":"ran: pdfplumber 0.11.9"},"tables":[{"bbox":[206.15502592,217.99522088000003,441.5187505333334,406.25413928000006],"cells":[{"col":0,"row":0,"text":"T = 1800 K T = 2000 K"},{"col":0,"row":1,"text":""}],"page":1,"route":"lines/lines"}]}
