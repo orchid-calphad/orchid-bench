@@ -25,6 +25,7 @@ for tf in sorted(TRUTH.glob("*.json")):
                "boundaries": [{"polyline": True, "points": [[x, T] for x, T in zip(b["x"], b["T_K"])]} for b in pdf_["boundaries"]]
                + [{"polyline": True, "points": [[il["x_min"], il["T_K"]], [il["x_max"], il["T_K"]]]} for il in pdf_["invariant_lines"]],
                "invariants": [{"T": i["T"], "type": i["type"], "points": i["points"]} for i in pd["invariants"]]}
+        sem = t.get("semantic") or {}
         tv = [{"value": v["value"], "unit": v["unit"]} for v in t["text"]["values"]]
         tv += [{"value": x["value"], "unit": x["unit"]} for f in t["figures"] for x in f.get("text_in_figure", [])]
         import re
@@ -38,6 +39,24 @@ for tf in sorted(TRUTH.glob("*.json")):
                     tv += [{"value": float(m.group(1)), "unit": "K"} for m in re.finditer(r"(\d+(?:\.\d+)?) K\b", c["text"])]
         write_json(OUT / r / f"{t['doc_id']}.json", {
             "doc_id": t["doc_id"], "rendering": r, "extractor": "oracle",
-            "tables": [{"page": tb["page"], "cells": [{"row": c["row"], "col": c["col"], "text": c["text"]} for c in tb["cells"]]}
-                       for tb in t["tables"]],
-            "xy_figures": xy, "phase_diagrams": [pdo], "text_values": tv})
+            "tables": [{"page": sg["page"], "cells": [{"row": c.get("seg_row", c["row"]), "col": c["col"], "text": c["text"]}
+                                                      for c in tb["cells"] if c.get("segment", 0) == si]}
+                       for tb in t["tables"] for si, sg in enumerate(tb.get("segments") or [{"page": tb["page"]}])],
+            "xy_figures": xy, "phase_diagrams": [pdo], "text_values": tv,
+            "invariant_rows": [{"reaction": r["reaction"], "type": r["type"], "T": r["T_value"], "T_unit": r["T_unit"],
+                                "x_unit": r["x_unit"], "compositions": [{"phase": p["label"], "x": p["value"]} for p in r["phases"]],
+                                "evidence": [{"class": "experimental", "T": e["value"], "citation": e["citation"]}
+                                             for e in r["evidence"] if e["class"] == "experimental_cited"]}
+                               for r in sem.get("invariant_rows", [])],
+            "phase_rows": [{"phase": r["phase"], "pearson": r["pearson"], "strukturbericht": r["strukturbericht_printed"],
+                            "prototype": r["prototype"], "T_low": None if r["T_low_K"] is None else float(r["T_low_printed"]),
+                            "T_high": float(r["T_high_printed"].rstrip("ᵃᵇᶜ")) if r["T_high_K"] is not None else None,
+                            "T_unit": r["T_unit"],
+                            "homogeneity": {"x_min": float(r["homogeneity"]["printed"].split("–")[0]),
+                                            "x_max": float(r["homogeneity"]["printed"].split("–")[-1]),
+                                            "x_unit": r["homogeneity"]["x_unit"], "T": float(r["homogeneity"]["T_printed"]),
+                                            "T_unit": r["T_unit"]}} for r in sem.get("phase_rows", [])],
+            "property_records": [{"table": r["table"], "phase": r.get("phase"),
+                                  "x": (float(r["x_printed"]) if r["table"] == "mixing" else None),
+                                  "x_unit": r.get("x_unit"), "quantity": r["quantity"], "value": r["value"], "unit": r["unit"],
+                                  "basis": r["basis"]} for r in sem.get("property_records", [])]})

@@ -356,3 +356,65 @@ def property_figure(data, kind, style, path):
         raise ValueError(kind)
     _save(fig, path)
     return {"kind": f"property_{kind}", "fig_size_in": [W, H], "axes": panels, "style": style, "title": title}
+
+
+# --------------------------------------------------------------------------------------------- phase fractions
+def phase_fraction_figure(data, alloys, style, path):
+    """Equilibrium phase fractions vs temperature for one or two alloys (one panel each, stacked).
+    Each phase is drawn only where it is present (NP > 0); segments are recorded in the truth."""
+    A, B = data["elements"]
+    tunit = style["T_unit"]
+    tof = (lambda T: T - 273.15) if tunit == "°C" else (lambda T: T)
+    W = style["fig_size"][0]
+    H = 2.6 if len(alloys) == 1 else 4.4
+    fig = plt.figure(figsize=(W, H))
+    n = len(alloys)
+    panels = []
+    xlab = "Temperature / °C" if tunit == "°C" else "Temperature / K"
+    for k, al in enumerate(alloys):
+        if n == 1:
+            rect = [0.15, 0.17, 0.80, 0.76]
+        else:
+            rect = [0.15, 0.585 if k == 0 else 0.105, 0.80, 0.37]
+        ax = fig.add_axes(rect)
+        T = np.asarray(al["T"], float)
+        Tp = np.array([tof(t) for t in T])
+        recs = []
+        for i, (lab, s) in enumerate(al["series"].items()):
+            y = np.asarray(s["NP"], float)
+            on = y > 0
+            col = COLORS[i % len(COLORS)] if style["color"] else "black"
+            ls = "-" if style["color"] else ["-", "--", "-.", ":", (0, (5, 1)), (0, (3, 1, 1, 1, 1, 1))][i % 6]
+            segs, line = [], []
+            j = 0
+            while j < len(y):
+                if on[j]:
+                    j0 = j
+                    while j < len(y) and on[j]:
+                        j += 1
+                    xs_, ys_ = Tp[j0:j], y[j0:j]
+                    ax.plot(xs_, ys_, color=col, ls=ls, lw=style["linewidth"], label=lab if not segs else None)
+                    segs.append([len(line), len(line) + (j - j0)])
+                    line += [[float(a), float(b)] for a, b in zip(xs_, ys_)]
+                else:
+                    j += 1
+            recs.append({"name": lab, "tdb_phase": s["tdb"], "unit_x": tunit, "unit_y": "1", "color": col,
+                         "linestyle": ls if isinstance(ls, str) else "custom", "representation": "line",
+                         "line": line, "segments": segs})
+        xlim = (float(tof(T[0])), float(tof(T[-1])))
+        ylim = (0.0, 1.05)
+        ax.set(xlim=xlim, ylim=ylim, ylabel="Phase fraction")
+        if k == n - 1:
+            ax.set_xlabel(xlab)
+        else:
+            ax.tick_params(labelbottom=False)
+        xl = f"{100 * al['x']:.0f} at.% {B}" if style["x_unit"] == "at.%" else f"x({B}) = {al['x']:.2f}"
+        ax.text(0.02, 0.92, ("(a) " if n > 1 and k == 0 else "(b) " if n > 1 else "") + f"{A}–{xl}", transform=ax.transAxes,
+                fontsize=7, va="top")
+        ax.legend(fontsize=6, loc="center right", ncol=1)
+        panels.append({**_axes_record(ax, fig, "ab"[k], xlim, ylim, tunit, "1", xlab if k == n - 1 else "", "Phase fraction"),
+                       "quantity": "NP", "x_B": al["x"], "basis": "mole fraction of atoms in each phase", "series": recs})
+    _save(fig, path)
+    comp = " and ".join((f"{100 * a['x']:.0f} at.% {B}" if style["x_unit"] == "at.%" else f"x({B}) = {a['x']:.2f}") for a in alloys)
+    return {"kind": "property_phase_fraction", "fig_size_in": [W, H], "axes": panels, "style": style,
+            "title": f"equilibrium phase fractions versus temperature for {A}–{comp}"}

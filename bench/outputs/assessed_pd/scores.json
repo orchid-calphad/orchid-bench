@@ -3,21 +3,21 @@
   "clean_raster": {
    "documents": 20,
    "phase_diagram": {
-    "boundary_hausdorff95": 0.3222940787226573,
-    "boundary_mean_dist": 0.025876339755809167,
-    "boundary_median_dT_K": 6.9350023923444635,
-    "boundary_median_dx": 0.011182971445350723,
-    "boundary_precision@0.01": 0.8755191943593562,
-    "boundary_recall@0.01": 0.5181542774600771,
+    "boundary_hausdorff95": 0.3245475831041553,
+    "boundary_mean_dist": 0.021970863996231948,
+    "boundary_median_dT_K": 7.323181704260632,
+    "boundary_median_dx": 0.010825445911576463,
+    "boundary_precision@0.01": 0.8623517103030834,
+    "boundary_recall@0.01": 0.5409636570573655,
     "diagrams": 20,
     "diagrams_with_output": 20,
-    "field_precision": 0.6739130434782609,
-    "field_pred": 46,
-    "field_recall": 0.1564245810055866,
-    "field_true_scorable": 179,
-    "invariant_T_err_K": 1.376249999999971,
-    "invariant_precision": 0.32710280373831774,
-    "invariant_recall": 0.6862745098039216,
+    "field_precision": 0.5471698113207547,
+    "field_pred": 53,
+    "field_recall": 0.1656441717791411,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 1.4456444444444052,
+    "invariant_precision": 0.33636363636363636,
+    "invariant_recall": 0.7254901960784313,
     "invariant_type_accuracy": 0.0,
     "invariant_x_err": null
    }
@@ -25,21 +25,21 @@
   "degraded_raster": {
    "documents": 20,
    "phase_diagram": {
-    "boundary_hausdorff95": 0.2992931326972899,
-    "boundary_mean_dist": 0.039976661423620184,
-    "boundary_median_dT_K": 7.08401250000001,
-    "boundary_median_dx": 0.011027237358709975,
-    "boundary_precision@0.01": 0.7631459712657513,
-    "boundary_recall@0.01": 0.7130032820620705,
+    "boundary_hausdorff95": 0.22941510677587312,
+    "boundary_mean_dist": 0.02524289428799948,
+    "boundary_median_dT_K": 4.155791883116877,
+    "boundary_median_dx": 0.0020399063619797484,
+    "boundary_precision@0.01": 0.8243958625369313,
+    "boundary_recall@0.01": 0.7530025406771239,
     "diagrams": 20,
     "diagrams_with_output": 20,
-    "field_precision": 0.5,
-    "field_pred": 30,
-    "field_recall": 0.0782122905027933,
-    "field_true_scorable": 179,
-    "invariant_T_err_K": 2.701784313725514,
-    "invariant_precision": 0.21025641025641026,
-    "invariant_recall": 0.803921568627451,
+    "field_precision": 0.36363636363636365,
+    "field_pred": 33,
+    "field_recall": 0.06748466257668712,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 2.8353859649122617,
+    "invariant_precision": 0.2186046511627907,
+    "invariant_recall": 0.9215686274509803,
     "invariant_type_accuracy": 0.0,
     "invariant_x_err": null
    }
@@ -47,21 +47,21 @@
   "image_only_pdf": {
    "documents": 20,
    "phase_diagram": {
-    "boundary_hausdorff95": 0.2992931326972899,
-    "boundary_mean_dist": 0.039976661423620184,
-    "boundary_median_dT_K": 7.08401250000001,
-    "boundary_median_dx": 0.011027237358709975,
-    "boundary_precision@0.01": 0.7631459712657513,
-    "boundary_recall@0.01": 0.7130032820620705,
+    "boundary_hausdorff95": 0.22941510677587312,
+    "boundary_mean_dist": 0.02524289428799948,
+    "boundary_median_dT_K": 4.155791883116877,
+    "boundary_median_dx": 0.0020399063619797484,
+    "boundary_precision@0.01": 0.8243958625369313,
+    "boundary_recall@0.01": 0.7530025406771239,
     "diagrams": 20,
     "diagrams_with_output": 20,
-    "field_precision": 0.5,
-    "field_pred": 30,
-    "field_recall": 0.0782122905027933,
-    "field_true_scorable": 179,
-    "invariant_T_err_K": 2.701784313725514,
-    "invariant_precision": 0.21025641025641026,
-    "invariant_recall": 0.803921568627451,
+    "field_precision": 0.36363636363636365,
+    "field_pred": 33,
+    "field_recall": 0.06748466257668712,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 2.8353859649122617,
+    "invariant_precision": 0.2186046511627907,
+    "invariant_recall": 0.9215686274509803,
     "invariant_type_accuracy": 0.0,
     "invariant_x_err": null
    }
@@ -69,22 +69,22 @@
   "vector": {
    "documents": 20,
    "phase_diagram": {
-    "boundary_hausdorff95": 0.2628813280541282,
-    "boundary_mean_dist": 0.02130438376872883,
-    "boundary_median_dT_K": 6.895520050125314,
-    "boundary_median_dx": 0.010835085801220523,
-    "boundary_precision@0.01": 0.871575217756025,
-    "boundary_recall@0.01": 0.5686060588498613,
+    "boundary_hausdorff95": 0.26533223475191253,
+    "boundary_mean_dist": 0.021430827216325415,
+    "boundary_median_dT_K": 7.071160401002529,
+    "boundary_median_dx": 0.010772780633847514,
+    "boundary_precision@0.01": 0.8587157643322684,
+    "boundary_recall@0.01": 0.5765442148067438,
     "diagrams": 20,
     "diagrams_with_output": 20,
-    "field_precision": 0.8135593220338984,
-    "field_pred": 59,
-    "field_recall": 0.24581005586592178,
-    "field_true_scorable": 179,
-    "invariant_T_err_K": 0.546766666666656,
-    "invariant_precision": 0.3185840707964602,
-    "invariant_recall": 0.7058823529411765,
-    "invariant_type_accuracy": 0.12000000000000001,
+    "field_precision": 0.7377049180327869,
+    "field_pred": 61,
+    "field_recall": 0.25766871165644173,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 0.6889479166666539,
+    "invariant_precision": 0.33043478260869563,
+    "invariant_recall": 0.7450980392156863,
+    "invariant_type_accuracy": 0.1125,
     "invariant_x_err": null
    }
   }
@@ -95,14 +95,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2579264151495046,
-      "mean_pred_to_true": 0.0007535487805080235,
-      "mean_true_to_pred": 0.05353161545013221,
-      "median_abs_dT_K": 0.5299999999999416,
-      "median_abs_dx": 0.00047199999999991693,
+      "hausdorff95": 0.49979452307690375,
+      "mean_pred_to_true": 0.0007505882153965792,
+      "mean_true_to_pred": 0.09120578468038153,
+      "median_abs_dT_K": 0.5799999999999361,
+      "median_abs_dx": 0.0004908395061728327,
       "precision@0.01": 1.0,
-      "pred_points": 963,
-      "recall@0.01": 0.45867589787970575,
+      "pred_points": 1788,
+      "recall@0.01": 0.5573344872349633,
       "true_samples": 2311
      },
      "fields": {
@@ -116,16 +116,16 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 0.5799999999999272,
+       "median": 0.5799999999999272,
+       "n": 1
       },
-      "f1": null,
-      "n_pred": 0,
+      "f1": 1.0,
+      "n_pred": 1,
       "n_true": 1,
-      "precision": null,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -137,8 +137,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 5, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "6 traced, 0 named",
-      "labels": "25 from tesseract word boxes",
+      "fields": "5 traced, 0 named",
+      "labels": "21 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -147,14 +147,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.3417277019899724,
-      "mean_pred_to_true": 0.0593342189257935,
-      "mean_true_to_pred": 0.0066755852079979925,
-      "median_abs_dT_K": 4.300000000000011,
-      "median_abs_dx": 0.007735000000000047,
-      "precision@0.01": 0.558477129553547,
-      "pred_points": 3651,
-      "recall@0.01": 0.7840761575075724,
+      "hausdorff95": 0.35452107355832124,
+      "mean_pred_to_true": 0.04216737652331763,
+      "mean_true_to_pred": 0.006794392458219098,
+      "median_abs_dT_K": 3.414999999999957,
+      "median_abs_dx": 0.0066587500000000015,
+      "precision@0.01": 0.6178247734138973,
+      "pred_points": 3310,
+      "recall@0.01": 0.7793163132842925,
       "true_samples": 2311
      },
      "fields": {
@@ -168,14 +168,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.8700000000001182,
-       "median": 0.8700000000001182,
+       "mean": 0.32999999999992724,
+       "median": 0.32999999999992724,
        "n": 1
       },
-      "f1": 0.25,
-      "n_pred": 7,
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
       "n_true": 1,
-      "precision": 0.14285714285714285,
+      "precision": 0.2,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -189,8 +189,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "29 traced, 0 named",
-      "labels": "19 from tesseract word boxes",
+      "fields": "26 traced, 0 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -199,14 +199,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.3417277019899724,
-      "mean_pred_to_true": 0.0593342189257935,
-      "mean_true_to_pred": 0.0066755852079979925,
-      "median_abs_dT_K": 4.300000000000011,
-      "median_abs_dx": 0.007735000000000047,
-      "precision@0.01": 0.558477129553547,
-      "pred_points": 3651,
-      "recall@0.01": 0.7840761575075724,
+      "hausdorff95": 0.35452107355832124,
+      "mean_pred_to_true": 0.04216737652331763,
+      "mean_true_to_pred": 0.006794392458219098,
+      "median_abs_dT_K": 3.414999999999957,
+      "median_abs_dx": 0.0066587500000000015,
+      "precision@0.01": 0.6178247734138973,
+      "pred_points": 3310,
+      "recall@0.01": 0.7793163132842925,
       "true_samples": 2311
      },
      "fields": {
@@ -220,14 +220,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.8700000000001182,
-       "median": 0.8700000000001182,
+       "mean": 0.32999999999992724,
+       "median": 0.32999999999992724,
        "n": 1
       },
-      "f1": 0.25,
-      "n_pred": 7,
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
       "n_true": 1,
-      "precision": 0.14285714285714285,
+      "precision": 0.2,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -241,24 +241,24 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "29 traced, 0 named",
-      "labels": "19 from tesseract word boxes",
+      "fields": "26 traced, 0 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.3
+      "seconds": 0.2
      }
     }
    },
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.25727541186109426,
-      "mean_pred_to_true": 0.000588708148656866,
-      "mean_true_to_pred": 0.053359448177050114,
-      "median_abs_dT_K": 0.32000000000003137,
-      "median_abs_dx": 0.0004266666666666863,
+      "hausdorff95": 0.25761697851093435,
+      "mean_pred_to_true": 0.0005524930520163663,
+      "mean_true_to_pred": 0.04089012637005981,
+      "median_abs_dT_K": 0.02799999999991698,
+      "median_abs_dx": 0.00046000000000001595,
       "precision@0.01": 1.0,
-      "pred_points": 938,
-      "recall@0.01": 0.4573777585460839,
+      "pred_points": 1857,
+      "recall@0.01": 0.6473388143660753,
       "true_samples": 2311
      },
      "fields": {
@@ -272,16 +272,16 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 0.01999999999998181,
+       "median": 0.01999999999998181,
+       "n": 1
       },
-      "f1": null,
-      "n_pred": 0,
+      "f1": 1.0,
+      "n_pred": 1,
       "n_true": 1,
-      "precision": null,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -305,14 +305,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.29204844693104737,
-      "mean_pred_to_true": 0.0008309844198692037,
-      "mean_true_to_pred": 0.08533072818104702,
-      "median_abs_dT_K": 1.6699999999999493,
-      "median_abs_dx": 0.0005302816901408547,
+      "hausdorff95": 0.29164103000540903,
+      "mean_pred_to_true": 0.0010152015859779802,
+      "mean_true_to_pred": 0.08534476660265258,
+      "median_abs_dT_K": 1.6900000000000692,
+      "median_abs_dx": 0.0005300000000000027,
       "precision@0.01": 1.0,
-      "pred_points": 2691,
-      "recall@0.01": 0.4808080808080808,
+      "pred_points": 2694,
+      "recall@0.01": 0.482020202020202,
       "true_samples": 2475
      },
      "fields": {
@@ -326,8 +326,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.4849999999999,
-       "median": 1.4849999999999,
+       "mean": 2.119999999999891,
+       "median": 2.119999999999891,
        "n": 2
       },
       "f1": 1.0,
@@ -348,7 +348,7 @@
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
       "crop": "truth figure bbox (oracle)",
       "fields": "4 traced, 3 named",
-      "labels": "19 from tesseract word boxes",
+      "labels": "17 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -357,14 +357,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.29183661857997023,
-      "mean_pred_to_true": 0.0016125511813691357,
-      "mean_true_to_pred": 0.08727988924482812,
-      "median_abs_dT_K": 2.7300000000000493,
-      "median_abs_dx": 0.0004774897916913212,
-      "precision@0.01": 1.0,
-      "pred_points": 1304,
-      "recall@0.01": 0.458989898989899,
+      "hausdorff95": 0.27488676063911066,
+      "mean_pred_to_true": 0.002416233339365758,
+      "mean_true_to_pred": 0.075672730780765,
+      "median_abs_dT_K": 3.8899999999996604,
+      "median_abs_dx": 0.000493176263463152,
+      "precision@0.01": 0.976083707025411,
+      "pred_points": 1338,
+      "recall@0.01": 0.46060606060606063,
       "true_samples": 2475
      },
      "fields": {
@@ -378,14 +378,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.634999999999991,
-       "median": 2.634999999999991,
+       "mean": 2.244999999999891,
+       "median": 2.244999999999891,
        "n": 2
       },
-      "f1": 0.8,
-      "n_pred": 3,
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
       "n_true": 2,
-      "precision": 0.6666666666666666,
+      "precision": 0.5,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -399,8 +399,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "3 traced, 2 named",
-      "labels": "26 from tesseract word boxes",
+      "fields": "4 traced, 2 named",
+      "labels": "17 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -409,14 +409,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.29183661857997023,
-      "mean_pred_to_true": 0.0016125511813691357,
-      "mean_true_to_pred": 0.08727988924482812,
-      "median_abs_dT_K": 2.7300000000000493,
-      "median_abs_dx": 0.0004774897916913212,
-      "precision@0.01": 1.0,
-      "pred_points": 1304,
-      "recall@0.01": 0.458989898989899,
+      "hausdorff95": 0.27488676063911066,
+      "mean_pred_to_true": 0.002416233339365758,
+      "mean_true_to_pred": 0.075672730780765,
+      "median_abs_dT_K": 3.8899999999996604,
+      "median_abs_dx": 0.000493176263463152,
+      "precision@0.01": 0.976083707025411,
+      "pred_points": 1338,
+      "recall@0.01": 0.46060606060606063,
       "true_samples": 2475
      },
      "fields": {
@@ -430,14 +430,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.634999999999991,
-       "median": 2.634999999999991,
+       "mean": 2.244999999999891,
+       "median": 2.244999999999891,
        "n": 2
       },
-      "f1": 0.8,
-      "n_pred": 3,
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
       "n_true": 2,
-      "precision": 0.6666666666666666,
+      "precision": 0.5,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -451,8 +451,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "3 traced, 2 named",
-      "labels": "26 from tesseract word boxes",
+      "fields": "4 traced, 2 named",
+      "labels": "17 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -461,14 +461,14 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.29204844693104737,
-      "mean_pred_to_true": 0.0008309844198692037,
-      "mean_true_to_pred": 0.08533072818104702,
-      "median_abs_dT_K": 1.6699999999999493,
-      "median_abs_dx": 0.0005302816901408547,
+      "hausdorff95": 0.29164103000540903,
+      "mean_pred_to_true": 0.0010152015859779802,
+      "mean_true_to_pred": 0.08534476660265258,
+      "median_abs_dT_K": 1.6900000000000692,
+      "median_abs_dx": 0.0005300000000000027,
       "precision@0.01": 1.0,
-      "pred_points": 2691,
-      "recall@0.01": 0.4808080808080808,
+      "pred_points": 2694,
+      "recall@0.01": 0.482020202020202,
       "true_samples": 2475
      },
      "fields": {
@@ -482,8 +482,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.4849999999999,
-       "median": 1.4849999999999,
+       "mean": 2.119999999999891,
+       "median": 2.119999999999891,
        "n": 2
       },
       "f1": 1.0,
@@ -515,14 +515,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.5057371692172052,
-      "mean_pred_to_true": 0.011185148762619807,
-      "mean_true_to_pred": 0.2790476397353479,
-      "median_abs_dT_K": 7.359999999999945,
-      "median_abs_dx": 0.0077825000000000255,
-      "precision@0.01": 0.3958333333333333,
-      "pred_points": 48,
-      "recall@0.01": 0.01154639175257732,
+      "hausdorff95": 0.5555955193437423,
+      "mean_pred_to_true": 0.01149320831649434,
+      "mean_true_to_pred": 0.33590104741660776,
+      "median_abs_dT_K": 10.399999999999954,
+      "median_abs_dx": 0.007110000000000005,
+      "precision@0.01": 0.2608695652173913,
+      "pred_points": 23,
+      "recall@0.01": 0.00577319587628866,
       "true_samples": 2425
      },
      "fields": {
@@ -557,8 +557,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "11 traced, 0 named",
-      "labels": "30 from tesseract word boxes",
+      "fields": "10 traced, 0 named",
+      "labels": "31 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -567,14 +567,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.35465951151545005,
-      "mean_pred_to_true": 0.053353038975580205,
-      "mean_true_to_pred": 0.008351698431681126,
-      "median_abs_dT_K": 4.199999999999974,
-      "median_abs_dx": 0.002564999999999998,
-      "precision@0.01": 0.6835106382978723,
-      "pred_points": 3384,
-      "recall@0.01": 0.797938144329897,
+      "hausdorff95": 0.04592898465998248,
+      "mean_pred_to_true": 0.0012416369560101746,
+      "mean_true_to_pred": 0.007285687319829462,
+      "median_abs_dT_K": 0.8300000000000418,
+      "median_abs_dx": 0.0008300000000000043,
+      "precision@0.01": 1.0,
+      "pred_points": 2090,
+      "recall@0.01": 0.8362886597938144,
       "true_samples": 2425
      },
      "fields": {
@@ -588,14 +588,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.1666666666666856,
-       "median": 1.3900000000000432,
+       "mean": 1.043333333333294,
+       "median": 0.9899999999998954,
        "n": 3
       },
-      "f1": 0.2608695652173913,
-      "n_pred": 20,
+      "f1": 0.4,
+      "n_pred": 12,
       "n_true": 3,
-      "precision": 0.15,
+      "precision": 0.25,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -609,8 +609,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "18 traced, 0 named",
-      "labels": "17 from tesseract word boxes",
+      "fields": "9 traced, 0 named",
+      "labels": "28 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -619,14 +619,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.35465951151545005,
-      "mean_pred_to_true": 0.053353038975580205,
-      "mean_true_to_pred": 0.008351698431681126,
-      "median_abs_dT_K": 4.199999999999974,
-      "median_abs_dx": 0.002564999999999998,
-      "precision@0.01": 0.6835106382978723,
-      "pred_points": 3384,
-      "recall@0.01": 0.797938144329897,
+      "hausdorff95": 0.04592898465998248,
+      "mean_pred_to_true": 0.0012416369560101746,
+      "mean_true_to_pred": 0.007285687319829462,
+      "median_abs_dT_K": 0.8300000000000418,
+      "median_abs_dx": 0.0008300000000000043,
+      "precision@0.01": 1.0,
+      "pred_points": 2090,
+      "recall@0.01": 0.8362886597938144,
       "true_samples": 2425
      },
      "fields": {
@@ -640,14 +640,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.1666666666666856,
-       "median": 1.3900000000000432,
+       "mean": 1.043333333333294,
+       "median": 0.9899999999998954,
        "n": 3
       },
-      "f1": 0.2608695652173913,
-      "n_pred": 20,
+      "f1": 0.4,
+      "n_pred": 12,
       "n_true": 3,
-      "precision": 0.15,
+      "precision": 0.25,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -661,8 +661,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "18 traced, 0 named",
-      "labels": "17 from tesseract word boxes",
+      "fields": "9 traced, 0 named",
+      "labels": "28 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -671,14 +671,14 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.5058583158734894,
-      "mean_pred_to_true": 0.010896958315256158,
-      "mean_true_to_pred": 0.2791992971468182,
-      "median_abs_dT_K": 7.214999999999911,
-      "median_abs_dx": 0.007749999999999924,
-      "precision@0.01": 0.4166666666666667,
-      "pred_points": 48,
-      "recall@0.01": 0.01154639175257732,
+      "hausdorff95": 0.5550341414775932,
+      "mean_pred_to_true": 0.011334666358212625,
+      "mean_true_to_pred": 0.33596801098017043,
+      "median_abs_dT_K": 10.420000000000092,
+      "median_abs_dx": 0.0069049999999999945,
+      "precision@0.01": 0.30434782608695654,
+      "pred_points": 23,
+      "recall@0.01": 0.006185567010309278,
       "true_samples": 2425
      },
      "fields": {
@@ -739,7 +739,7 @@
       "f1": null,
       "loose_precision": null,
       "n_pred": 0,
-      "n_true": 5,
+      "n_true": 6,
       "precision": null,
       "recall": 0.0
      },
@@ -777,35 +777,35 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.01178438078474616,
-      "mean_pred_to_true": 0.0031760473576803463,
-      "mean_true_to_pred": 0.0027514854686437793,
-      "median_abs_dT_K": 0.889999999999988,
-      "median_abs_dx": 0.0005000596658711332,
-      "precision@0.01": 0.9884937238493724,
-      "pred_points": 1912,
-      "recall@0.01": 0.9466834592779177,
+      "hausdorff95": 0.21371019879012845,
+      "mean_pred_to_true": 0.04373299337554691,
+      "mean_true_to_pred": 0.004704129605654862,
+      "median_abs_dT_K": 5.484999999999953,
+      "median_abs_dx": 0.0008583479608381614,
+      "precision@0.01": 0.6916398713826366,
+      "pred_points": 3110,
+      "recall@0.01": 0.9399664147774979,
       "true_samples": 2382
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
-      "n_true": 5,
-      "precision": null,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
       "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.3500000000000227,
-       "median": 1.3500000000000227,
+       "mean": 1.5699999999999932,
+       "median": 1.5699999999999932,
        "n": 2
       },
-      "f1": 0.5714285714285715,
-      "n_pred": 5,
+      "f1": 0.2857142857142857,
+      "n_pred": 12,
       "n_true": 2,
-      "precision": 0.4,
+      "precision": 0.16666666666666666,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -817,10 +817,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "automatic (ticks + printed labels)",
+      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "6 traced, 0 named",
-      "labels": "25 from tesseract word boxes",
+      "fields": "14 traced, 1 named",
+      "labels": "30 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -829,35 +829,35 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.01178438078474616,
-      "mean_pred_to_true": 0.0031760473576803463,
-      "mean_true_to_pred": 0.0027514854686437793,
-      "median_abs_dT_K": 0.889999999999988,
-      "median_abs_dx": 0.0005000596658711332,
-      "precision@0.01": 0.9884937238493724,
-      "pred_points": 1912,
-      "recall@0.01": 0.9466834592779177,
+      "hausdorff95": 0.21371019879012845,
+      "mean_pred_to_true": 0.04373299337554691,
+      "mean_true_to_pred": 0.004704129605654862,
+      "median_abs_dT_K": 5.484999999999953,
+      "median_abs_dx": 0.0008583479608381614,
+      "precision@0.01": 0.6916398713826366,
+      "pred_points": 3110,
+      "recall@0.01": 0.9399664147774979,
       "true_samples": 2382
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
-      "n_true": 5,
-      "precision": null,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
       "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.3500000000000227,
-       "median": 1.3500000000000227,
+       "mean": 1.5699999999999932,
+       "median": 1.5699999999999932,
        "n": 2
       },
-      "f1": 0.5714285714285715,
-      "n_pred": 5,
+      "f1": 0.2857142857142857,
+      "n_pred": 12,
       "n_true": 2,
-      "precision": 0.4,
+      "precision": 0.16666666666666666,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -869,10 +869,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "automatic (ticks + printed labels)",
+      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "6 traced, 0 named",
-      "labels": "25 from tesseract word boxes",
+      "fields": "14 traced, 1 named",
+      "labels": "30 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -895,7 +895,7 @@
       "f1": null,
       "loose_precision": null,
       "n_pred": 0,
-      "n_true": 5,
+      "n_true": 6,
       "precision": null,
       "recall": 0.0
      },
@@ -935,29 +935,29 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.013600616201579962,
-      "mean_pred_to_true": 0.0007807464710721411,
-      "mean_true_to_pred": 0.0028026820789628887,
-      "median_abs_dT_K": 0.5699999999999872,
-      "median_abs_dx": 0.00045000000000000595,
-      "precision@0.01": 0.9982022471910112,
-      "pred_points": 6675,
-      "recall@0.01": 0.9284263959390863,
+      "hausdorff95": 0.010986218826831038,
+      "mean_pred_to_true": 0.0009001944440674868,
+      "mean_true_to_pred": 0.0025029067791067323,
+      "median_abs_dT_K": 0.5587857142857588,
+      "median_abs_dx": 0.00045706199460916405,
+      "precision@0.01": 0.9921805842431396,
+      "pred_points": 6778,
+      "recall@0.01": 0.9401015228426396,
       "true_samples": 3940
      },
      "fields": {
-      "f1": 0.6376811594202899,
-      "loose_precision": 0.6666666666666666,
+      "f1": 0.6111111111111112,
+      "loose_precision": 0.6111111111111112,
       "n_pred": 18,
       "n_true": 18,
-      "precision": 0.6666666666666666,
+      "precision": 0.6111111111111112,
       "recall": 0.6111111111111112
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.8259999999999765,
-       "median": 0.41000000000008185,
+       "mean": 2.755999999999972,
+       "median": 0.5500000000000682,
        "n": 5
       },
       "f1": 0.5882352941176471,
@@ -977,7 +977,7 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "21 traced, 18 named",
+      "fields": "22 traced, 18 named",
       "labels": "39 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.7
@@ -987,14 +987,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1854503435692305,
-      "mean_pred_to_true": 0.020745146681409903,
-      "mean_true_to_pred": 0.0046240424697087425,
-      "median_abs_dT_K": 1.178750000000095,
-      "median_abs_dx": 0.003010000000000068,
-      "precision@0.01": 0.8428415300546448,
-      "pred_points": 4575,
-      "recall@0.01": 0.916751269035533,
+      "hausdorff95": 0.05046915264315564,
+      "mean_pred_to_true": 0.010773088455286453,
+      "mean_true_to_pred": 0.0034008718324063407,
+      "median_abs_dT_K": 0.9000000000000341,
+      "median_abs_dx": 0.0016487500000000113,
+      "precision@0.01": 0.9053537284894837,
+      "pred_points": 4184,
+      "recall@0.01": 0.9406091370558376,
       "true_samples": 3940
      },
      "fields": {
@@ -1008,14 +1008,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.40600000000004,
-       "median": 3.9200000000000728,
+       "mean": 4.009999999999968,
+       "median": 2.519999999999982,
        "n": 5
       },
-      "f1": 0.5,
-      "n_pred": 14,
+      "f1": 0.625,
+      "n_pred": 10,
       "n_true": 6,
-      "precision": 0.35714285714285715,
+      "precision": 0.5,
       "recall": 0.8333333333333334,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1029,24 +1029,24 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "30 traced, 0 named",
-      "labels": "28 from tesseract word boxes",
+      "fields": "29 traced, 0 named",
+      "labels": "17 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.3
+      "seconds": 0.2
      }
     }
    },
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1854503435692305,
-      "mean_pred_to_true": 0.020745146681409903,
-      "mean_true_to_pred": 0.0046240424697087425,
-      "median_abs_dT_K": 1.178750000000095,
-      "median_abs_dx": 0.003010000000000068,
-      "precision@0.01": 0.8428415300546448,
-      "pred_points": 4575,
-      "recall@0.01": 0.916751269035533,
+      "hausdorff95": 0.05046915264315564,
+      "mean_pred_to_true": 0.010773088455286453,
+      "mean_true_to_pred": 0.0034008718324063407,
+      "median_abs_dT_K": 0.9000000000000341,
+      "median_abs_dx": 0.0016487500000000113,
+      "precision@0.01": 0.9053537284894837,
+      "pred_points": 4184,
+      "recall@0.01": 0.9406091370558376,
       "true_samples": 3940
      },
      "fields": {
@@ -1060,14 +1060,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.40600000000004,
-       "median": 3.9200000000000728,
+       "mean": 4.009999999999968,
+       "median": 2.519999999999982,
        "n": 5
       },
-      "f1": 0.5,
-      "n_pred": 14,
+      "f1": 0.625,
+      "n_pred": 10,
       "n_true": 6,
-      "precision": 0.35714285714285715,
+      "precision": 0.5,
       "recall": 0.8333333333333334,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1081,8 +1081,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "30 traced, 0 named",
-      "labels": "28 from tesseract word boxes",
+      "fields": "29 traced, 0 named",
+      "labels": "17 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.3
      }
@@ -1091,29 +1091,29 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.013394826587431493,
-      "mean_pred_to_true": 0.0006919155457030246,
-      "mean_true_to_pred": 0.002690273835813656,
-      "median_abs_dT_K": 0.49999999999994493,
-      "median_abs_dx": 0.00037000000000003697,
-      "precision@0.01": 0.9988022159005839,
-      "pred_points": 6679,
-      "recall@0.01": 0.9291878172588832,
+      "hausdorff95": 0.010706128026732542,
+      "mean_pred_to_true": 0.0008493303916616024,
+      "mean_true_to_pred": 0.0024411292652526378,
+      "median_abs_dT_K": 0.6300000000000971,
+      "median_abs_dx": 0.00034999999999996145,
+      "precision@0.01": 0.9917477158856469,
+      "pred_points": 6786,
+      "recall@0.01": 0.9444162436548224,
       "true_samples": 3940
      },
      "fields": {
-      "f1": 1.0,
-      "loose_precision": 1.0,
-      "n_pred": 19,
+      "f1": 0.9473684210526316,
+      "loose_precision": 0.9,
+      "n_pred": 20,
       "n_true": 18,
-      "precision": 1.0,
+      "precision": 0.9,
       "recall": 1.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.4600000000000137,
-       "median": 0.2800000000000864,
+       "mean": 2.695999999999958,
+       "median": 1.0399999999999636,
        "n": 5
       },
       "f1": 0.5882352941176471,
@@ -1133,7 +1133,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "22 traced, 19 named",
+      "fields": "23 traced, 20 named",
       "labels": "41 from pdf text layer",
       "phase_table": "truth (oracle)",
       "seconds": 0.7
@@ -1145,14 +1145,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.28772198518037684,
-      "mean_pred_to_true": 0.0020672929040547587,
-      "mean_true_to_pred": 0.06957580873217889,
+      "hausdorff95": 0.5135218932327308,
+      "mean_pred_to_true": 0.0020682921787024727,
+      "mean_true_to_pred": 0.09538531107010577,
       "median_abs_dT_K": 0.2800000000000025,
-      "median_abs_dx": 0.0005485714285714295,
-      "precision@0.01": 0.9472990777338604,
-      "pred_points": 2277,
-      "recall@0.01": 0.5118552921046199,
+      "median_abs_dx": 0.0005479999999999929,
+      "precision@0.01": 0.9472063352397713,
+      "pred_points": 2273,
+      "recall@0.01": 0.5086775849425569,
       "true_samples": 4091
      },
      "fields": {
@@ -1187,47 +1187,47 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "12 traced, 0 named",
-      "labels": "59 from tesseract word boxes",
+      "fields": "11 traced, 0 named",
+      "labels": "57 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.7
+      "seconds": 0.6
      }
     }
    },
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.9026661942893804,
-      "mean_pred_to_true": 0.06053687803655208,
-      "mean_true_to_pred": 0.4828505115461234,
-      "median_abs_dT_K": 5.786666666666672,
-      "median_abs_dx": 0.04192299999999993,
-      "precision@0.01": 0.46568627450980393,
-      "pred_points": 408,
-      "recall@0.01": 0.010755316548521144,
+      "hausdorff95": 0.1570023613761919,
+      "mean_pred_to_true": 0.016011897766318076,
+      "mean_true_to_pred": 0.026622046788058056,
+      "median_abs_dT_K": 1.07714285714286,
+      "median_abs_dx": 0.002463181818181809,
+      "precision@0.01": 0.8880627839735646,
+      "pred_points": 2421,
+      "recall@0.01": 0.7391835736983623,
       "true_samples": 4091
      },
      "fields": {
-      "f1": 0.15384615384615385,
-      "loose_precision": 0.5,
-      "n_pred": 2,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 4,
       "n_true": 11,
-      "precision": 0.5,
-      "recall": 0.09090909090909091
+      "precision": 0.0,
+      "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 2.9579999999999926,
+       "median": 2.3700000000000045,
+       "n": 5
       },
-      "f1": 0.0,
-      "n_pred": 4,
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
       "n_true": 5,
-      "precision": 0.0,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -1239,47 +1239,47 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "11 traced, 2 named",
-      "labels": "39 from tesseract word boxes",
+      "fields": "24 traced, 4 named",
+      "labels": "26 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.2
+      "seconds": 0.3
      }
     }
    },
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.9026661942893804,
-      "mean_pred_to_true": 0.06053687803655208,
-      "mean_true_to_pred": 0.4828505115461234,
-      "median_abs_dT_K": 5.786666666666672,
-      "median_abs_dx": 0.04192299999999993,
-      "precision@0.01": 0.46568627450980393,
-      "pred_points": 408,
-      "recall@0.01": 0.010755316548521144,
+      "hausdorff95": 0.1570023613761919,
+      "mean_pred_to_true": 0.016011897766318076,
+      "mean_true_to_pred": 0.026622046788058056,
+      "median_abs_dT_K": 1.07714285714286,
+      "median_abs_dx": 0.002463181818181809,
+      "precision@0.01": 0.8880627839735646,
+      "pred_points": 2421,
+      "recall@0.01": 0.7391835736983623,
       "true_samples": 4091
      },
      "fields": {
-      "f1": 0.15384615384615385,
-      "loose_precision": 0.5,
-      "n_pred": 2,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 4,
       "n_true": 11,
-      "precision": 0.5,
-      "recall": 0.09090909090909091
+      "precision": 0.0,
+      "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 2.9579999999999926,
+       "median": 2.3700000000000045,
+       "n": 5
       },
-      "f1": 0.0,
-      "n_pred": 4,
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
       "n_true": 5,
-      "precision": 0.0,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -1291,10 +1291,10 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "11 traced, 2 named",
-      "labels": "39 from tesseract word boxes",
+      "fields": "24 traced, 4 named",
+      "labels": "26 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.2
+      "seconds": 0.3
      }
     }
    },
@@ -1302,10 +1302,10 @@
     "phase_diagram": {
      "boundary": {
       "hausdorff95": 0.09457961542815947,
-      "mean_pred_to_true": 0.005224707701329977,
-      "mean_true_to_pred": 0.01541321829280937,
+      "mean_pred_to_true": 0.005224637532000271,
+      "mean_true_to_pred": 0.015413110567623156,
       "median_abs_dT_K": 0.3057142857142426,
-      "median_abs_dx": 0.0006549370078738903,
+      "median_abs_dx": 0.0006539370078739656,
       "precision@0.01": 0.8070758405003909,
       "pred_points": 5116,
       "recall@0.01": 0.7633830359325349,
@@ -1355,35 +1355,35 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.26262509232346276,
-      "mean_pred_to_true": 0.001085391153028195,
-      "mean_true_to_pred": 0.05841331977620687,
-      "median_abs_dT_K": 1.0499999999999483,
-      "median_abs_dx": 0.0007439247311827879,
-      "precision@0.01": 0.9950350467289719,
-      "pred_points": 3424,
-      "recall@0.01": 0.5555869074492099,
+      "hausdorff95": 0.15482365919445762,
+      "mean_pred_to_true": 0.0012889259332568236,
+      "mean_true_to_pred": 0.02752781810036466,
+      "median_abs_dT_K": 1.0200000000000347,
+      "median_abs_dx": 0.0007199999999999984,
+      "precision@0.01": 0.9818659658344284,
+      "pred_points": 3805,
+      "recall@0.01": 0.7624153498871332,
       "true_samples": 3544
      },
      "fields": {
-      "f1": 0.14457831325301204,
-      "loose_precision": 0.75,
-      "n_pred": 4,
-      "n_true": 25,
-      "precision": 0.75,
-      "recall": 0.08
+      "f1": 0.1739130434782609,
+      "loose_precision": 0.4,
+      "n_pred": 5,
+      "n_true": 9,
+      "precision": 0.4,
+      "recall": 0.1111111111111111
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.9724999999999682,
-       "median": 0.9950000000000045,
+       "mean": 0.950000000000017,
+       "median": 0.9350000000000591,
        "n": 4
       },
-      "f1": 0.6153846153846153,
-      "n_pred": 9,
+      "f1": 0.6666666666666666,
+      "n_pred": 8,
       "n_true": 4,
-      "precision": 0.4444444444444444,
+      "precision": 0.5,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1397,8 +1397,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "16 traced, 4 named",
-      "labels": "49 from tesseract word boxes",
+      "fields": "23 traced, 5 named",
+      "labels": "40 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -1407,29 +1407,29 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.470981951813346,
-      "mean_pred_to_true": 0.00834777334167107,
-      "mean_true_to_pred": 0.12436514014213974,
-      "median_abs_dT_K": 2.080000000000262,
-      "median_abs_dx": 0.0008777822580645148,
-      "precision@0.01": 0.8344988344988346,
-      "pred_points": 858,
-      "recall@0.01": 0.45767494356659144,
+      "hausdorff95": 0.5857921109244035,
+      "mean_pred_to_true": 0.0028596515198978886,
+      "mean_true_to_pred": 0.19028753328351772,
+      "median_abs_dT_K": 4.410000000000008,
+      "median_abs_dx": 0.00092680412371135,
+      "precision@0.01": 1.0,
+      "pred_points": 546,
+      "recall@0.01": 0.28978555304740405,
       "true_samples": 3544
      },
      "fields": {
-      "f1": 0.07407407407407407,
-      "loose_precision": 0.5,
+      "f1": 0.0,
+      "loose_precision": 0.0,
       "n_pred": 2,
-      "n_true": 25,
-      "precision": 0.5,
-      "recall": 0.04
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.3566666666666833,
-       "median": 2.17999999999995,
+       "mean": 5.30000000000003,
+       "median": 5.269999999999982,
        "n": 3
       },
       "f1": 0.5454545454545454,
@@ -1447,10 +1447,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "automatic (ticks + printed labels)",
+      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 4, y pairs 1",
       "crop": "truth figure bbox (oracle)",
-      "fields": "8 traced, 3 named",
-      "labels": "21 from tesseract word boxes",
+      "fields": "8 traced, 2 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1459,29 +1459,29 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.470981951813346,
-      "mean_pred_to_true": 0.00834777334167107,
-      "mean_true_to_pred": 0.12436514014213974,
-      "median_abs_dT_K": 2.080000000000262,
-      "median_abs_dx": 0.0008777822580645148,
-      "precision@0.01": 0.8344988344988346,
-      "pred_points": 858,
-      "recall@0.01": 0.45767494356659144,
+      "hausdorff95": 0.5857921109244035,
+      "mean_pred_to_true": 0.0028596515198978886,
+      "mean_true_to_pred": 0.19028753328351772,
+      "median_abs_dT_K": 4.410000000000008,
+      "median_abs_dx": 0.00092680412371135,
+      "precision@0.01": 1.0,
+      "pred_points": 546,
+      "recall@0.01": 0.28978555304740405,
       "true_samples": 3544
      },
      "fields": {
-      "f1": 0.07407407407407407,
-      "loose_precision": 0.5,
+      "f1": 0.0,
+      "loose_precision": 0.0,
       "n_pred": 2,
-      "n_true": 25,
-      "precision": 0.5,
-      "recall": 0.04
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.3566666666666833,
-       "median": 2.17999999999995,
+       "mean": 5.30000000000003,
+       "median": 5.269999999999982,
        "n": 3
       },
       "f1": 0.5454545454545454,
@@ -1499,10 +1499,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "automatic (ticks + printed labels)",
+      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 4, y pairs 1",
       "crop": "truth figure bbox (oracle)",
-      "fields": "8 traced, 3 named",
-      "labels": "21 from tesseract word boxes",
+      "fields": "8 traced, 2 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1512,27 +1512,27 @@
     "phase_diagram": {
      "boundary": {
       "hausdorff95": 0.49933866794124987,
-      "mean_pred_to_true": 0.0008723551827306029,
-      "mean_true_to_pred": 0.13810178278218696,
+      "mean_pred_to_true": 0.000998609251067793,
+      "mean_true_to_pred": 0.1379983995413993,
       "median_abs_dT_K": 0.6400000000000017,
-      "median_abs_dx": 0.0005733333333333146,
-      "precision@0.01": 0.9923954372623575,
-      "pred_points": 2104,
-      "recall@0.01": 0.539785553047404,
+      "median_abs_dx": 0.0005799999999999972,
+      "precision@0.01": 0.9839167455061495,
+      "pred_points": 2114,
+      "recall@0.01": 0.5454288939051919,
       "true_samples": 3544
      },
      "fields": {
-      "f1": 0.20689655172413793,
-      "loose_precision": 0.75,
-      "n_pred": 4,
-      "n_true": 25,
-      "precision": 0.75,
-      "recall": 0.12
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.6000000000000227,
+       "mean": 0.5966666666666166,
        "median": 0.6399999999999864,
        "n": 3
       },
@@ -1553,7 +1553,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "11 traced, 5 named",
+      "fields": "12 traced, 4 named",
       "labels": "43 from pdf text layer",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
@@ -1565,14 +1565,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.23251231722272012,
-      "mean_pred_to_true": 0.0020017248527977503,
-      "mean_true_to_pred": 0.05171199868090137,
-      "median_abs_dT_K": 0.04999999999991123,
-      "median_abs_dx": 0.0005478615071282666,
-      "precision@0.01": 0.9187208527648234,
-      "pred_points": 1501,
-      "recall@0.01": 0.5276774969915764,
+      "hausdorff95": 0.23237236387207433,
+      "mean_pred_to_true": 0.0019161077198464357,
+      "mean_true_to_pred": 0.05377217698233154,
+      "median_abs_dT_K": 0.2199999999998592,
+      "median_abs_dx": 0.0005506109979633578,
+      "precision@0.01": 0.9257425742574258,
+      "pred_points": 1414,
+      "recall@0.01": 0.46991576413959085,
       "true_samples": 1662
      },
      "fields": {
@@ -1586,8 +1586,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.049999999999954525,
-       "median": 0.049999999999954525,
+       "mean": 0.2199999999999136,
+       "median": 0.2199999999999136,
        "n": 1
       },
       "f1": 0.33333333333333337,
@@ -1607,7 +1607,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "12 traced, 2 named",
+      "fields": "11 traced, 2 named",
       "labels": "45 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
@@ -1617,35 +1617,35 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.32235323751262324,
-      "mean_pred_to_true": 0.06524851562480728,
-      "mean_true_to_pred": 0.006393827225160731,
-      "median_abs_dT_K": 12.170000000000126,
-      "median_abs_dx": 0.001665999999999973,
-      "precision@0.01": 0.5924887892376681,
-      "pred_points": 1784,
-      "recall@0.01": 0.8176895306859205,
+      "hausdorff95": 0.30695321706838835,
+      "mean_pred_to_true": 0.02227625780472807,
+      "mean_true_to_pred": 0.059633042760470614,
+      "median_abs_dT_K": 6.550000000000111,
+      "median_abs_dx": 0.0007864562118126972,
+      "precision@0.01": 0.8667192429022083,
+      "pred_points": 1268,
+      "recall@0.01": 0.618531889290012,
       "true_samples": 1662
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 1,
       "n_true": 4,
-      "precision": null,
-      "recall": 0.0
+      "precision": 1.0,
+      "recall": 0.25
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.1499999999999773,
-       "median": 2.1499999999999773,
+       "mean": 0.05999999999994543,
+       "median": 0.05999999999994543,
        "n": 1
       },
-      "f1": 0.18181818181818182,
-      "n_pred": 10,
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
       "n_true": 1,
-      "precision": 0.1,
+      "precision": 0.16666666666666666,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1659,8 +1659,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "19 traced, 0 named",
-      "labels": "29 from tesseract word boxes",
+      "fields": "11 traced, 1 named",
+      "labels": "30 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1669,35 +1669,35 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.32235323751262324,
-      "mean_pred_to_true": 0.06524851562480728,
-      "mean_true_to_pred": 0.006393827225160731,
-      "median_abs_dT_K": 12.170000000000126,
-      "median_abs_dx": 0.001665999999999973,
-      "precision@0.01": 0.5924887892376681,
-      "pred_points": 1784,
-      "recall@0.01": 0.8176895306859205,
+      "hausdorff95": 0.30695321706838835,
+      "mean_pred_to_true": 0.02227625780472807,
+      "mean_true_to_pred": 0.059633042760470614,
+      "median_abs_dT_K": 6.550000000000111,
+      "median_abs_dx": 0.0007864562118126972,
+      "precision@0.01": 0.8667192429022083,
+      "pred_points": 1268,
+      "recall@0.01": 0.618531889290012,
       "true_samples": 1662
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 1,
       "n_true": 4,
-      "precision": null,
-      "recall": 0.0
+      "precision": 1.0,
+      "recall": 0.25
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.1499999999999773,
-       "median": 2.1499999999999773,
+       "mean": 0.05999999999994543,
+       "median": 0.05999999999994543,
        "n": 1
       },
-      "f1": 0.18181818181818182,
-      "n_pred": 10,
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
       "n_true": 1,
-      "precision": 0.1,
+      "precision": 0.16666666666666666,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1711,8 +1711,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "19 traced, 0 named",
-      "labels": "29 from tesseract word boxes",
+      "fields": "11 traced, 1 named",
+      "labels": "30 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1721,29 +1721,29 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.21074892022418992,
-      "mean_pred_to_true": 0.0016785108537652796,
-      "mean_true_to_pred": 0.031555824208313946,
-      "median_abs_dT_K": 0.20999999999987695,
-      "median_abs_dx": 0.0004523747454175109,
-      "precision@0.01": 0.935856992639327,
-      "pred_points": 1902,
-      "recall@0.01": 0.7521058965102286,
+      "hausdorff95": 0.21066228858522554,
+      "mean_pred_to_true": 0.0016013258129779805,
+      "mean_true_to_pred": 0.03231779612417978,
+      "median_abs_dT_K": 0.31999999999993145,
+      "median_abs_dx": 0.0004554989816700772,
+      "precision@0.01": 0.9430309734513275,
+      "pred_points": 1808,
+      "recall@0.01": 0.7099879663056559,
       "true_samples": 1662
      },
      "fields": {
-      "f1": 0.923076923076923,
-      "loose_precision": 0.8571428571428571,
-      "n_pred": 7,
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
       "n_true": 4,
-      "precision": 0.8571428571428571,
+      "precision": 1.0,
       "recall": 1.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.2099999999999227,
-       "median": 0.2099999999999227,
+       "mean": 0.31999999999993634,
+       "median": 0.31999999999993634,
        "n": 1
       },
       "f1": 0.4,
@@ -1763,7 +1763,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "13 traced, 8 named",
+      "fields": "12 traced, 7 named",
       "labels": "45 from pdf text layer",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
@@ -1827,14 +1827,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1577873489583111,
-      "mean_pred_to_true": 0.019338094495210612,
-      "mean_true_to_pred": 0.0034821139562118456,
-      "median_abs_dT_K": 1.560000000000028,
-      "median_abs_dx": 0.0013519999999999643,
-      "precision@0.01": 0.9193170405088718,
-      "pred_points": 2987,
-      "recall@0.01": 0.9864217252396166,
+      "hausdorff95": 0.290529794946551,
+      "mean_pred_to_true": 0.039416341618575636,
+      "mean_true_to_pred": 0.004906506124139444,
+      "median_abs_dT_K": 2.847999999999976,
+      "median_abs_dx": 0.0028457142857142292,
+      "precision@0.01": 0.819325328759291,
+      "pred_points": 3498,
+      "recall@0.01": 0.9464856230031949,
       "true_samples": 2504
      },
      "fields": {
@@ -1848,14 +1848,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.650000000000034,
-       "median": 1.650000000000034,
+       "mean": 0.8650000000000091,
+       "median": 0.8650000000000091,
        "n": 2
       },
-      "f1": 0.4444444444444445,
-      "n_pred": 7,
+      "f1": 0.3076923076923077,
+      "n_pred": 11,
       "n_true": 2,
-      "precision": 0.2857142857142857,
+      "precision": 0.18181818181818182,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1869,8 +1869,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "14 traced, 0 named",
-      "labels": "23 from tesseract word boxes",
+      "fields": "16 traced, 0 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1879,14 +1879,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1577873489583111,
-      "mean_pred_to_true": 0.019338094495210612,
-      "mean_true_to_pred": 0.0034821139562118456,
-      "median_abs_dT_K": 1.560000000000028,
-      "median_abs_dx": 0.0013519999999999643,
-      "precision@0.01": 0.9193170405088718,
-      "pred_points": 2987,
-      "recall@0.01": 0.9864217252396166,
+      "hausdorff95": 0.290529794946551,
+      "mean_pred_to_true": 0.039416341618575636,
+      "mean_true_to_pred": 0.004906506124139444,
+      "median_abs_dT_K": 2.847999999999976,
+      "median_abs_dx": 0.0028457142857142292,
+      "precision@0.01": 0.819325328759291,
+      "pred_points": 3498,
+      "recall@0.01": 0.9464856230031949,
       "true_samples": 2504
      },
      "fields": {
@@ -1900,14 +1900,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.650000000000034,
-       "median": 1.650000000000034,
+       "mean": 0.8650000000000091,
+       "median": 0.8650000000000091,
        "n": 2
       },
-      "f1": 0.4444444444444445,
-      "n_pred": 7,
+      "f1": 0.3076923076923077,
+      "n_pred": 11,
       "n_true": 2,
-      "precision": 0.2857142857142857,
+      "precision": 0.18181818181818182,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -1921,8 +1921,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "14 traced, 0 named",
-      "labels": "23 from tesseract word boxes",
+      "fields": "16 traced, 0 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -1985,13 +1985,13 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.8426903168083868,
-      "mean_pred_to_true": 0.3736179495506117,
-      "mean_true_to_pred": 0.5799057167413385,
-      "median_abs_dT_K": 111.30000000000001,
-      "median_abs_dx": 0.1961,
+      "hausdorff95": 0.7010329099717206,
+      "mean_pred_to_true": 0.29685436575097807,
+      "mean_true_to_pred": 0.4468717143649846,
+      "median_abs_dT_K": 116.20333333333328,
+      "median_abs_dx": 0.19003333333333333,
       "precision@0.01": 0.0,
-      "pred_points": 42,
+      "pred_points": 751,
       "recall@0.01": 0.0,
       "true_samples": 1471
      },
@@ -2010,10 +2010,10 @@
        "median": null,
        "n": 0
       },
-      "f1": null,
-      "n_pred": 0,
+      "f1": 0.0,
+      "n_pred": 2,
       "n_true": 1,
-      "precision": null,
+      "precision": 0.0,
       "recall": 0.0,
       "type_accuracy": null,
       "x_abs_err": {
@@ -2027,24 +2027,24 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "11 traced, 0 named",
-      "labels": "26 from tesseract word boxes",
+      "fields": "18 traced, 0 named",
+      "labels": "22 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.5
+      "seconds": 0.6
      }
     }
    },
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.42563005901247725,
-      "mean_pred_to_true": 0.06938030931741795,
-      "mean_true_to_pred": 0.004765720617881641,
-      "median_abs_dT_K": 1.7699999999999854,
-      "median_abs_dx": 0.0036699999999999997,
-      "precision@0.01": 0.7012076353720296,
-      "pred_points": 2567,
-      "recall@0.01": 0.9041468388851122,
+      "hausdorff95": 0.2582857613499621,
+      "mean_pred_to_true": 0.04612440729754412,
+      "mean_true_to_pred": 0.004295529361606078,
+      "median_abs_dT_K": 1.2599999999999778,
+      "median_abs_dx": 0.0025814285714285123,
+      "precision@0.01": 0.7599109131403118,
+      "pred_points": 2245,
+      "recall@0.01": 0.9578518014955812,
       "true_samples": 1471
      },
      "fields": {
@@ -2058,14 +2058,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.8199999999999932,
-       "median": 0.8199999999999932,
+       "mean": 0.6200000000000045,
+       "median": 0.6200000000000045,
        "n": 1
       },
-      "f1": 0.11764705882352941,
-      "n_pred": 16,
+      "f1": 0.15384615384615385,
+      "n_pred": 12,
       "n_true": 1,
-      "precision": 0.0625,
+      "precision": 0.08333333333333333,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2079,8 +2079,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "19 traced, 0 named",
-      "labels": "24 from tesseract word boxes",
+      "fields": "18 traced, 0 named",
+      "labels": "12 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2089,14 +2089,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.42563005901247725,
-      "mean_pred_to_true": 0.06938030931741795,
-      "mean_true_to_pred": 0.004765720617881641,
-      "median_abs_dT_K": 1.7699999999999854,
-      "median_abs_dx": 0.0036699999999999997,
-      "precision@0.01": 0.7012076353720296,
-      "pred_points": 2567,
-      "recall@0.01": 0.9041468388851122,
+      "hausdorff95": 0.2582857613499621,
+      "mean_pred_to_true": 0.04612440729754412,
+      "mean_true_to_pred": 0.004295529361606078,
+      "median_abs_dT_K": 1.2599999999999778,
+      "median_abs_dx": 0.0025814285714285123,
+      "precision@0.01": 0.7599109131403118,
+      "pred_points": 2245,
+      "recall@0.01": 0.9578518014955812,
       "true_samples": 1471
      },
      "fields": {
@@ -2110,14 +2110,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.8199999999999932,
-       "median": 0.8199999999999932,
+       "mean": 0.6200000000000045,
+       "median": 0.6200000000000045,
        "n": 1
       },
-      "f1": 0.11764705882352941,
-      "n_pred": 16,
+      "f1": 0.15384615384615385,
+      "n_pred": 12,
       "n_true": 1,
-      "precision": 0.0625,
+      "precision": 0.08333333333333333,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2131,8 +2131,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "19 traced, 0 named",
-      "labels": "24 from tesseract word boxes",
+      "fields": "18 traced, 0 named",
+      "labels": "12 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2141,11 +2141,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.7010329099717206,
-      "mean_pred_to_true": 0.29686059595694375,
-      "mean_true_to_pred": 0.44684414708581083,
-      "median_abs_dT_K": 115.98333333333339,
-      "median_abs_dx": 0.18989090909090908,
+      "hausdorff95": 0.7004295649410371,
+      "mean_pred_to_true": 0.29663336466755663,
+      "mean_true_to_pred": 0.4463173759264593,
+      "median_abs_dT_K": 115.94333333333331,
+      "median_abs_dx": 0.18923333333333334,
       "precision@0.01": 0.0,
       "pred_points": 751,
       "recall@0.01": 0.0,
@@ -2195,11 +2195,11 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.6417647738897433,
-      "mean_pred_to_true": 0.0006953357592510831,
-      "mean_true_to_pred": 0.24089596465930943,
-      "median_abs_dT_K": 0.8604999999998197,
-      "median_abs_dx": 0.0004100000000000024,
+      "hausdorff95": 0.6417599183168454,
+      "mean_pred_to_true": 0.000694233070717752,
+      "mean_true_to_pred": 0.24089410917078807,
+      "median_abs_dT_K": 0.8599999999997499,
+      "median_abs_dx": 0.0004100000000000145,
       "precision@0.01": 1.0,
       "pred_points": 1292,
       "recall@0.01": 0.4423997055576003,
@@ -2247,14 +2247,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.12176624455422988,
-      "mean_pred_to_true": 0.0016503059710144816,
-      "mean_true_to_pred": 0.014891260961424783,
-      "median_abs_dT_K": 2.7200000000000557,
-      "median_abs_dx": 0.000532093023255964,
+      "hausdorff95": 0.1177628563985685,
+      "mean_pred_to_true": 0.0019743428598493545,
+      "mean_true_to_pred": 0.014864507068354843,
+      "median_abs_dT_K": 3.731909090909147,
+      "median_abs_dx": 0.0005759302325581139,
       "precision@0.01": 1.0,
-      "pred_points": 1553,
-      "recall@0.01": 0.889216047110784,
+      "pred_points": 1550,
+      "recall@0.01": 0.8910563121089436,
       "true_samples": 2717
      },
      "fields": {
@@ -2268,14 +2268,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.25,
-       "median": 4.25,
+       "mean": 5.559999999999945,
+       "median": 5.559999999999945,
        "n": 1
       },
-      "f1": 0.14285714285714288,
-      "n_pred": 13,
+      "f1": 0.125,
+      "n_pred": 15,
       "n_true": 1,
-      "precision": 0.07692307692307693,
+      "precision": 0.06666666666666667,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2287,10 +2287,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 1",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
       "fields": "6 traced, 0 named",
-      "labels": "21 from tesseract word boxes",
+      "labels": "18 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2299,14 +2299,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.12176624455422988,
-      "mean_pred_to_true": 0.0016503059710144816,
-      "mean_true_to_pred": 0.014891260961424783,
-      "median_abs_dT_K": 2.7200000000000557,
-      "median_abs_dx": 0.000532093023255964,
+      "hausdorff95": 0.1177628563985685,
+      "mean_pred_to_true": 0.0019743428598493545,
+      "mean_true_to_pred": 0.014864507068354843,
+      "median_abs_dT_K": 3.731909090909147,
+      "median_abs_dx": 0.0005759302325581139,
       "precision@0.01": 1.0,
-      "pred_points": 1553,
-      "recall@0.01": 0.889216047110784,
+      "pred_points": 1550,
+      "recall@0.01": 0.8910563121089436,
       "true_samples": 2717
      },
      "fields": {
@@ -2320,14 +2320,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.25,
-       "median": 4.25,
+       "mean": 5.559999999999945,
+       "median": 5.559999999999945,
        "n": 1
       },
-      "f1": 0.14285714285714288,
-      "n_pred": 13,
+      "f1": 0.125,
+      "n_pred": 15,
       "n_true": 1,
-      "precision": 0.07692307692307693,
+      "precision": 0.06666666666666667,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2339,10 +2339,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 1",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
       "fields": "6 traced, 0 named",
-      "labels": "21 from tesseract word boxes",
+      "labels": "18 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2351,11 +2351,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.11733506207529237,
-      "mean_pred_to_true": 0.0005495335808502531,
-      "mean_true_to_pred": 0.016484000617041406,
-      "median_abs_dT_K": 0.2700000000001035,
-      "median_abs_dx": 0.0003986046511627872,
+      "hausdorff95": 0.11736928227785126,
+      "mean_pred_to_true": 0.0005497771353817653,
+      "mean_true_to_pred": 0.016486871146340183,
+      "median_abs_dT_K": 0.2800000000001135,
+      "median_abs_dx": 0.00039799999999995395,
       "precision@0.01": 1.0,
       "pred_points": 2959,
       "recall@0.01": 0.8384247331615753,
@@ -2372,8 +2372,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.18000000000006366,
-       "median": 0.18000000000006366,
+       "mean": 0.2800000000000864,
+       "median": 0.2800000000000864,
        "n": 1
       },
       "f1": 0.19999999999999998,
@@ -2457,35 +2457,35 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.33297927054542154,
-      "mean_pred_to_true": 0.046470939317399367,
-      "mean_true_to_pred": 0.004699491347627311,
-      "median_abs_dT_K": 1.584999999999992,
-      "median_abs_dx": 0.007119607142857122,
-      "precision@0.01": 0.6113387978142076,
-      "pred_points": 2928,
-      "recall@0.01": 0.8984891406987724,
+      "hausdorff95": 0.28468211791357817,
+      "mean_pred_to_true": 0.032458869935061564,
+      "mean_true_to_pred": 0.015586032329702975,
+      "median_abs_dT_K": 1.3500000000000512,
+      "median_abs_dx": 0.0019699999999999995,
+      "precision@0.01": 0.8767942583732058,
+      "pred_points": 1672,
+      "recall@0.01": 0.8541076487252125,
       "true_samples": 2118
      },
      "fields": {
-      "f1": 0.4,
-      "loose_precision": 0.5,
-      "n_pred": 6,
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
       "n_true": 9,
-      "precision": 0.5,
-      "recall": 0.3333333333333333
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 7.160000000000082,
-       "median": 7.160000000000082,
+       "mean": 5.6200000000000045,
+       "median": 5.6200000000000045,
        "n": 2
       },
-      "f1": 0.25,
-      "n_pred": 14,
+      "f1": 0.4444444444444445,
+      "n_pred": 7,
       "n_true": 2,
-      "precision": 0.14285714285714285,
+      "precision": 0.2857142857142857,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2497,10 +2497,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "29 traced, 7 named",
-      "labels": "8 from tesseract word boxes",
+      "fields": "17 traced, 3 named",
+      "labels": "16 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2509,35 +2509,35 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.33297927054542154,
-      "mean_pred_to_true": 0.046470939317399367,
-      "mean_true_to_pred": 0.004699491347627311,
-      "median_abs_dT_K": 1.584999999999992,
-      "median_abs_dx": 0.007119607142857122,
-      "precision@0.01": 0.6113387978142076,
-      "pred_points": 2928,
-      "recall@0.01": 0.8984891406987724,
+      "hausdorff95": 0.28468211791357817,
+      "mean_pred_to_true": 0.032458869935061564,
+      "mean_true_to_pred": 0.015586032329702975,
+      "median_abs_dT_K": 1.3500000000000512,
+      "median_abs_dx": 0.0019699999999999995,
+      "precision@0.01": 0.8767942583732058,
+      "pred_points": 1672,
+      "recall@0.01": 0.8541076487252125,
       "true_samples": 2118
      },
      "fields": {
-      "f1": 0.4,
-      "loose_precision": 0.5,
-      "n_pred": 6,
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
       "n_true": 9,
-      "precision": 0.5,
-      "recall": 0.3333333333333333
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 7.160000000000082,
-       "median": 7.160000000000082,
+       "mean": 5.6200000000000045,
+       "median": 5.6200000000000045,
        "n": 2
       },
-      "f1": 0.25,
-      "n_pred": 14,
+      "f1": 0.4444444444444445,
+      "n_pred": 7,
       "n_true": 2,
-      "precision": 0.14285714285714285,
+      "precision": 0.2857142857142857,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2549,12 +2549,12 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "29 traced, 7 named",
-      "labels": "8 from tesseract word boxes",
+      "fields": "17 traced, 3 named",
+      "labels": "16 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.3
+      "seconds": 0.2
      }
     }
    },
@@ -2667,22 +2667,22 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.005352470260601587,
-      "mean_pred_to_true": 0.0022626331464738656,
-      "mean_true_to_pred": 0.0022486040231480767,
-      "median_abs_dT_K": 1.8440000000000012,
-      "median_abs_dx": 0.0005359999999999948,
-      "precision@0.01": 0.981275599765945,
-      "pred_points": 1709,
-      "recall@0.01": 0.9812561657349556,
+      "hausdorff95": 0.18480789033578543,
+      "mean_pred_to_true": 0.031392889877791125,
+      "mean_true_to_pred": 0.005924429349470111,
+      "median_abs_dT_K": 12.954285714285717,
+      "median_abs_dx": 0.0032334285714286093,
+      "precision@0.01": 0.6661676646706587,
+      "pred_points": 2672,
+      "recall@0.01": 0.8046695166063795,
       "true_samples": 3041
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
       "n_true": 5,
-      "precision": null,
+      "precision": 0.0,
       "recall": 0.0
      },
      "found": true,
@@ -2693,7 +2693,7 @@
        "n": 0
       },
       "f1": null,
-      "n_pred": 19,
+      "n_pred": 39,
       "n_true": 0,
       "precision": 0.0,
       "recall": null,
@@ -2709,8 +2709,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "5 traced, 0 named",
-      "labels": "17 from tesseract word boxes",
+      "fields": "13 traced, 1 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2719,22 +2719,22 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.005352470260601587,
-      "mean_pred_to_true": 0.0022626331464738656,
-      "mean_true_to_pred": 0.0022486040231480767,
-      "median_abs_dT_K": 1.8440000000000012,
-      "median_abs_dx": 0.0005359999999999948,
-      "precision@0.01": 0.981275599765945,
-      "pred_points": 1709,
-      "recall@0.01": 0.9812561657349556,
+      "hausdorff95": 0.18480789033578543,
+      "mean_pred_to_true": 0.031392889877791125,
+      "mean_true_to_pred": 0.005924429349470111,
+      "median_abs_dT_K": 12.954285714285717,
+      "median_abs_dx": 0.0032334285714286093,
+      "precision@0.01": 0.6661676646706587,
+      "pred_points": 2672,
+      "recall@0.01": 0.8046695166063795,
       "true_samples": 3041
      },
      "fields": {
-      "f1": null,
-      "loose_precision": null,
-      "n_pred": 0,
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
       "n_true": 5,
-      "precision": null,
+      "precision": 0.0,
       "recall": 0.0
      },
      "found": true,
@@ -2745,7 +2745,7 @@
        "n": 0
       },
       "f1": null,
-      "n_pred": 19,
+      "n_pred": 39,
       "n_true": 0,
       "precision": 0.0,
       "recall": null,
@@ -2761,8 +2761,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "5 traced, 0 named",
-      "labels": "17 from tesseract word boxes",
+      "fields": "13 traced, 1 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2877,14 +2877,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2134335037363664,
-      "mean_pred_to_true": 0.04588963513400768,
-      "mean_true_to_pred": 0.04939414155143303,
-      "median_abs_dT_K": 8.069999999999883,
-      "median_abs_dx": 0.0007219999999999449,
-      "precision@0.01": 0.7319535588086825,
-      "pred_points": 1981,
-      "recall@0.01": 0.47084148727984343,
+      "hausdorff95": 0.2368247884891708,
+      "mean_pred_to_true": 0.06484123672880514,
+      "mean_true_to_pred": 0.03731232228523048,
+      "median_abs_dT_K": 14.899999999999983,
+      "median_abs_dx": 0.0007528456913827725,
+      "precision@0.01": 0.5668711656441717,
+      "pred_points": 2445,
+      "recall@0.01": 0.5193737769080234,
       "true_samples": 2555
      },
      "fields": {
@@ -2898,14 +2898,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 3.170000000000016,
-       "median": 3.170000000000016,
+       "mean": 0.3999999999999204,
+       "median": 0.3999999999999204,
        "n": 2
       },
-      "f1": 0.3636363636363636,
-      "n_pred": 9,
+      "f1": 0.2666666666666667,
+      "n_pred": 13,
       "n_true": 2,
-      "precision": 0.2222222222222222,
+      "precision": 0.15384615384615385,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2919,8 +2919,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "9 traced, 0 named",
-      "labels": "19 from tesseract word boxes",
+      "fields": "14 traced, 0 named",
+      "labels": "24 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -2929,14 +2929,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2134335037363664,
-      "mean_pred_to_true": 0.04588963513400768,
-      "mean_true_to_pred": 0.04939414155143303,
-      "median_abs_dT_K": 8.069999999999883,
-      "median_abs_dx": 0.0007219999999999449,
-      "precision@0.01": 0.7319535588086825,
-      "pred_points": 1981,
-      "recall@0.01": 0.47084148727984343,
+      "hausdorff95": 0.2368247884891708,
+      "mean_pred_to_true": 0.06484123672880514,
+      "mean_true_to_pred": 0.03731232228523048,
+      "median_abs_dT_K": 14.899999999999983,
+      "median_abs_dx": 0.0007528456913827725,
+      "precision@0.01": 0.5668711656441717,
+      "pred_points": 2445,
+      "recall@0.01": 0.5193737769080234,
       "true_samples": 2555
      },
      "fields": {
@@ -2950,14 +2950,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 3.170000000000016,
-       "median": 3.170000000000016,
+       "mean": 0.3999999999999204,
+       "median": 0.3999999999999204,
        "n": 2
       },
-      "f1": 0.3636363636363636,
-      "n_pred": 9,
+      "f1": 0.2666666666666667,
+      "n_pred": 13,
       "n_true": 2,
-      "precision": 0.2222222222222222,
+      "precision": 0.15384615384615385,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -2971,8 +2971,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "9 traced, 0 named",
-      "labels": "19 from tesseract word boxes",
+      "fields": "14 traced, 0 named",
+      "labels": "24 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3035,36 +3035,36 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1397047717482987,
-      "mean_pred_to_true": 0.0016316080295904825,
-      "mean_true_to_pred": 0.04689622743091226,
-      "median_abs_dT_K": 0.6599999999999273,
-      "median_abs_dx": 0.00041000000000002146,
-      "precision@0.01": 0.9519625073227885,
-      "pred_points": 1707,
-      "recall@0.01": 0.4010292953285827,
+      "hausdorff95": 0.1468630251548949,
+      "mean_pred_to_true": 0.004780484091477391,
+      "mean_true_to_pred": 0.05141211397074067,
+      "median_abs_dT_K": 0.6900000000000572,
+      "median_abs_dx": 0.00043999999999999595,
+      "precision@0.01": 0.8503503503503503,
+      "pred_points": 1998,
+      "recall@0.01": 0.3974663499604117,
       "true_samples": 2526
      },
      "fields": {
-      "f1": 0.1,
-      "loose_precision": 0.2,
-      "n_pred": 5,
+      "f1": 0.08,
+      "loose_precision": 0.1,
+      "n_pred": 10,
       "n_true": 15,
-      "precision": 0.2,
+      "precision": 0.1,
       "recall": 0.06666666666666667
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.6599999999999682,
-       "median": 0.6000000000000227,
-       "n": 5
+       "mean": 1.6316666666666795,
+       "median": 0.5600000000000023,
+       "n": 6
       },
-      "f1": 0.6666666666666666,
-      "n_pred": 8,
+      "f1": 0.7058823529411764,
+      "n_pred": 10,
       "n_true": 7,
-      "precision": 0.625,
-      "recall": 0.7142857142857143,
+      "precision": 0.6,
+      "recall": 0.8571428571428571,
       "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
@@ -3075,10 +3075,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 4, y pairs 0",
+      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "16 traced, 7 named",
-      "labels": "45 from tesseract word boxes",
+      "fields": "21 traced, 12 named",
+      "labels": "68 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -3087,14 +3087,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.17772671122750766,
-      "mean_pred_to_true": 0.009413425278654849,
-      "mean_true_to_pred": 0.05795853631349706,
-      "median_abs_dT_K": 0.9849999999999581,
-      "median_abs_dx": 0.0030275000000000163,
-      "precision@0.01": 0.9181654676258992,
-      "pred_points": 1112,
-      "recall@0.01": 0.45724465558194777,
+      "hausdorff95": 0.29493475574827355,
+      "mean_pred_to_true": 0.04928013949011182,
+      "mean_true_to_pred": 0.04991353894351444,
+      "median_abs_dT_K": 3.375000000000028,
+      "median_abs_dx": 0.0074,
+      "precision@0.01": 0.6817325800376648,
+      "pred_points": 2124,
+      "recall@0.01": 0.47149643705463185,
       "true_samples": 2526
      },
      "fields": {
@@ -3108,14 +3108,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.9660000000000308,
-       "median": 1.6000000000000227,
+       "mean": 4.390000000000032,
+       "median": 4.509999999999991,
        "n": 5
       },
-      "f1": 0.5555555555555556,
-      "n_pred": 11,
+      "f1": 0.4761904761904762,
+      "n_pred": 14,
       "n_true": 7,
-      "precision": 0.45454545454545453,
+      "precision": 0.35714285714285715,
       "recall": 0.7142857142857143,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3129,8 +3129,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "17 traced, 0 named",
-      "labels": "27 from tesseract word boxes",
+      "fields": "23 traced, 0 named",
+      "labels": "21 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3139,14 +3139,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.17772671122750766,
-      "mean_pred_to_true": 0.009413425278654849,
-      "mean_true_to_pred": 0.05795853631349706,
-      "median_abs_dT_K": 0.9849999999999581,
-      "median_abs_dx": 0.0030275000000000163,
-      "precision@0.01": 0.9181654676258992,
-      "pred_points": 1112,
-      "recall@0.01": 0.45724465558194777,
+      "hausdorff95": 0.29493475574827355,
+      "mean_pred_to_true": 0.04928013949011182,
+      "mean_true_to_pred": 0.04991353894351444,
+      "median_abs_dT_K": 3.375000000000028,
+      "median_abs_dx": 0.0074,
+      "precision@0.01": 0.6817325800376648,
+      "pred_points": 2124,
+      "recall@0.01": 0.47149643705463185,
       "true_samples": 2526
      },
      "fields": {
@@ -3160,14 +3160,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.9660000000000308,
-       "median": 1.6000000000000227,
+       "mean": 4.390000000000032,
+       "median": 4.509999999999991,
        "n": 5
       },
-      "f1": 0.5555555555555556,
-      "n_pred": 11,
+      "f1": 0.4761904761904762,
+      "n_pred": 14,
       "n_true": 7,
-      "precision": 0.45454545454545453,
+      "precision": 0.35714285714285715,
       "recall": 0.7142857142857143,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3181,8 +3181,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "17 traced, 0 named",
-      "labels": "27 from tesseract word boxes",
+      "fields": "23 traced, 0 named",
+      "labels": "21 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3191,36 +3191,36 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.32144209694116765,
-      "mean_pred_to_true": 0.0006248638786152446,
-      "mean_true_to_pred": 0.11712410821984733,
-      "median_abs_dT_K": 0.4149999999999876,
-      "median_abs_dx": 0.00031250000000004885,
-      "precision@0.01": 1.0,
-      "pred_points": 1214,
-      "recall@0.01": 0.3008709422011085,
+      "hausdorff95": 0.321265809535104,
+      "mean_pred_to_true": 0.00357006379097494,
+      "mean_true_to_pred": 0.11709761978166393,
+      "median_abs_dT_K": 0.519999999999976,
+      "median_abs_dx": 0.0003449999999999842,
+      "precision@0.01": 0.8992857142857142,
+      "pred_points": 1400,
+      "recall@0.01": 0.2988915281076801,
       "true_samples": 2526
      },
      "fields": {
-      "f1": 0.3,
-      "loose_precision": 0.6,
-      "n_pred": 5,
+      "f1": 0.27272727272727276,
+      "loose_precision": 0.42857142857142855,
+      "n_pred": 7,
       "n_true": 15,
-      "precision": 0.6,
+      "precision": 0.42857142857142855,
       "recall": 0.2
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.21000000000000796,
-       "median": 0.2300000000000182,
-       "n": 4
+       "mean": 1.9760000000000446,
+       "median": 0.16000000000008185,
+       "n": 5
       },
-      "f1": 0.5714285714285714,
-      "n_pred": 7,
+      "f1": 0.6250000000000001,
+      "n_pred": 9,
       "n_true": 7,
-      "precision": 0.5714285714285714,
-      "recall": 0.5714285714285714,
+      "precision": 0.5555555555555556,
+      "recall": 0.7142857142857143,
       "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
@@ -3233,7 +3233,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "9 traced, 6 named",
+      "fields": "13 traced, 8 named",
       "labels": "64 from pdf text layer",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
@@ -3254,11 +3254,11 @@
       "true_samples": 2899
      },
      "fields": {
-      "f1": 0.5,
-      "loose_precision": 1.0,
-      "n_pred": 2,
+      "f1": 0.4444444444444444,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
       "n_true": 6,
-      "precision": 1.0,
+      "precision": 0.6666666666666666,
       "recall": 0.3333333333333333
      },
      "found": true,
@@ -3285,8 +3285,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 1",
       "crop": "truth figure bbox (oracle)",
-      "fields": "6 traced, 2 named",
-      "labels": "21 from tesseract word boxes",
+      "fields": "6 traced, 3 named",
+      "labels": "23 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -3295,35 +3295,35 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2269770356429341,
-      "mean_pred_to_true": 0.03041677407663776,
-      "mean_true_to_pred": 0.0021672955256037676,
-      "median_abs_dT_K": 2.9299999999997994,
-      "median_abs_dx": 0.0009233333333333316,
-      "precision@0.01": 0.8285582255083179,
-      "pred_points": 2164,
-      "recall@0.01": 0.9862021386685064,
+      "hausdorff95": 0.22257066093820438,
+      "mean_pred_to_true": 0.03131684784161639,
+      "mean_true_to_pred": 0.003770330573852109,
+      "median_abs_dT_K": 10.193333333333465,
+      "median_abs_dx": 0.0010000000000000009,
+      "precision@0.01": 0.7456242707117853,
+      "pred_points": 2571,
+      "recall@0.01": 0.9203173508106244,
       "true_samples": 2899
      },
      "fields": {
-      "f1": 0.4444444444444444,
-      "loose_precision": 0.6666666666666666,
-      "n_pred": 3,
+      "f1": 0.25,
+      "loose_precision": 0.5,
+      "n_pred": 2,
       "n_true": 6,
-      "precision": 0.6666666666666666,
-      "recall": 0.3333333333333333
+      "precision": 0.5,
+      "recall": 0.16666666666666666
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.355000000000018,
-       "median": 2.355000000000018,
+       "mean": 5.880000000000052,
+       "median": 5.880000000000052,
        "n": 2
       },
-      "f1": 0.33333333333333337,
-      "n_pred": 10,
+      "f1": 0.25,
+      "n_pred": 14,
       "n_true": 2,
-      "precision": 0.2,
+      "precision": 0.14285714285714285,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3337,8 +3337,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "12 traced, 3 named",
-      "labels": "22 from tesseract word boxes",
+      "fields": "13 traced, 2 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3347,35 +3347,35 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2269770356429341,
-      "mean_pred_to_true": 0.03041677407663776,
-      "mean_true_to_pred": 0.0021672955256037676,
-      "median_abs_dT_K": 2.9299999999997994,
-      "median_abs_dx": 0.0009233333333333316,
-      "precision@0.01": 0.8285582255083179,
-      "pred_points": 2164,
-      "recall@0.01": 0.9862021386685064,
+      "hausdorff95": 0.22257066093820438,
+      "mean_pred_to_true": 0.03131684784161639,
+      "mean_true_to_pred": 0.003770330573852109,
+      "median_abs_dT_K": 10.193333333333465,
+      "median_abs_dx": 0.0010000000000000009,
+      "precision@0.01": 0.7456242707117853,
+      "pred_points": 2571,
+      "recall@0.01": 0.9203173508106244,
       "true_samples": 2899
      },
      "fields": {
-      "f1": 0.4444444444444444,
-      "loose_precision": 0.6666666666666666,
-      "n_pred": 3,
+      "f1": 0.25,
+      "loose_precision": 0.5,
+      "n_pred": 2,
       "n_true": 6,
-      "precision": 0.6666666666666666,
-      "recall": 0.3333333333333333
+      "precision": 0.5,
+      "recall": 0.16666666666666666
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.355000000000018,
-       "median": 2.355000000000018,
+       "mean": 5.880000000000052,
+       "median": 5.880000000000052,
        "n": 2
       },
-      "f1": 0.33333333333333337,
-      "n_pred": 10,
+      "f1": 0.25,
+      "n_pred": 14,
       "n_true": 2,
-      "precision": 0.2,
+      "precision": 0.14285714285714285,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3389,10 +3389,10 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
-      "fields": "12 traced, 3 named",
-      "labels": "22 from tesseract word boxes",
+      "fields": "13 traced, 2 named",
+      "labels": "19 from tesseract word boxes",
       "phase_table": "truth (oracle)",
-      "seconds": 0.3
+      "seconds": 0.2
      }
     }
    },
@@ -3408,11 +3408,11 @@
       "true_samples": 2899
      },
      "fields": {
-      "f1": 0.5,
-      "loose_precision": 1.0,
-      "n_pred": 2,
+      "f1": 0.4444444444444444,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
       "n_true": 6,
-      "precision": 1.0,
+      "precision": 0.6666666666666666,
       "recall": 0.3333333333333333
      },
      "found": true,
@@ -3439,7 +3439,7 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "6 traced, 2 named",
+      "fields": "6 traced, 3 named",
       "labels": "32 from pdf text layer",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
@@ -3451,29 +3451,29 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.5703035665227841,
-      "mean_pred_to_true": 0.0010330594643049753,
-      "mean_true_to_pred": 0.18415234732043642,
-      "median_abs_dT_K": 0.8899999999999908,
-      "median_abs_dx": 0.00024799999999997047,
+      "hausdorff95": 0.2908921730364874,
+      "mean_pred_to_true": 0.0009383097358954352,
+      "mean_true_to_pred": 0.06789325302638805,
+      "median_abs_dT_K": 0.41833333333332057,
+      "median_abs_dx": 0.00014700000000000824,
       "precision@0.01": 1.0,
-      "pred_points": 618,
-      "recall@0.01": 0.25,
+      "pred_points": 1676,
+      "recall@0.01": 0.5559254327563249,
       "true_samples": 3004
      },
      "fields": {
-      "f1": 0.0,
-      "loose_precision": 0.0,
-      "n_pred": 1,
+      "f1": 0.4,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
       "n_true": 7,
-      "precision": 0.0,
-      "recall": 0.0
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.0249999999999773,
-       "median": 1.0249999999999773,
+       "mean": 1.400000000000034,
+       "median": 1.400000000000034,
        "n": 2
       },
       "f1": 0.6666666666666666,
@@ -3493,8 +3493,8 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "3 traced, 1 named",
-      "labels": "66 from tesseract word boxes",
+      "fields": "7 traced, 3 named",
+      "labels": "31 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -3503,14 +3503,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2021788625939248,
-      "mean_pred_to_true": 0.02960531551308629,
-      "mean_true_to_pred": 0.003925808734576145,
-      "median_abs_dT_K": 1.1975000000000513,
-      "median_abs_dx": 0.0036500000000000005,
-      "precision@0.01": 0.6051061799093295,
-      "pred_points": 4191,
-      "recall@0.01": 0.9077896138482024,
+      "hausdorff95": 0.10382450150121761,
+      "mean_pred_to_true": 0.017782331233653557,
+      "mean_true_to_pred": 0.004431958539916344,
+      "median_abs_dT_K": 0.9233333333333427,
+      "median_abs_dx": 0.003605999999999998,
+      "precision@0.01": 0.6424100156494522,
+      "pred_points": 3834,
+      "recall@0.01": 0.8918109187749668,
       "true_samples": 3004
      },
      "fields": {
@@ -3524,14 +3524,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.835000000000008,
-       "median": 1.835000000000008,
+       "mean": 1.5900000000000318,
+       "median": 1.5900000000000318,
        "n": 2
       },
-      "f1": 0.4444444444444445,
-      "n_pred": 7,
+      "f1": 0.5,
+      "n_pred": 6,
       "n_true": 2,
-      "precision": 0.2857142857142857,
+      "precision": 0.3333333333333333,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3546,7 +3546,7 @@
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
       "fields": "24 traced, 9 named",
-      "labels": "22 from tesseract word boxes",
+      "labels": "23 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.3
      }
@@ -3555,14 +3555,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2021788625939248,
-      "mean_pred_to_true": 0.02960531551308629,
-      "mean_true_to_pred": 0.003925808734576145,
-      "median_abs_dT_K": 1.1975000000000513,
-      "median_abs_dx": 0.0036500000000000005,
-      "precision@0.01": 0.6051061799093295,
-      "pred_points": 4191,
-      "recall@0.01": 0.9077896138482024,
+      "hausdorff95": 0.10382450150121761,
+      "mean_pred_to_true": 0.017782331233653557,
+      "mean_true_to_pred": 0.004431958539916344,
+      "median_abs_dT_K": 0.9233333333333427,
+      "median_abs_dx": 0.003605999999999998,
+      "precision@0.01": 0.6424100156494522,
+      "pred_points": 3834,
+      "recall@0.01": 0.8918109187749668,
       "true_samples": 3004
      },
      "fields": {
@@ -3576,14 +3576,14 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.835000000000008,
-       "median": 1.835000000000008,
+       "mean": 1.5900000000000318,
+       "median": 1.5900000000000318,
        "n": 2
       },
-      "f1": 0.4444444444444445,
-      "n_pred": 7,
+      "f1": 0.5,
+      "n_pred": 6,
       "n_true": 2,
-      "precision": 0.2857142857142857,
+      "precision": 0.3333333333333333,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3598,7 +3598,7 @@
       "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
       "crop": "truth figure bbox (oracle)",
       "fields": "24 traced, 9 named",
-      "labels": "22 from tesseract word boxes",
+      "labels": "23 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.3
      }
@@ -3661,35 +3661,35 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.1743117929959996,
-      "mean_pred_to_true": 0.0009335009117775228,
-      "mean_true_to_pred": 0.04052456355097501,
-      "median_abs_dT_K": 1.4045454545454195,
-      "median_abs_dx": 0.00042499999999998095,
-      "precision@0.01": 0.9880059970014993,
-      "pred_points": 2668,
-      "recall@0.01": 0.49531433033971106,
+      "hausdorff95": 0.22708424512317427,
+      "mean_pred_to_true": 0.0008047100623317941,
+      "mean_true_to_pred": 0.0560359700239287,
+      "median_abs_dT_K": 1.210000000000047,
+      "median_abs_dx": 0.00043999999999999595,
+      "precision@0.01": 0.9949345715491769,
+      "pred_points": 2369,
+      "recall@0.01": 0.41058180398281924,
       "true_samples": 5122
      },
      "fields": {
-      "f1": 0.2,
-      "loose_precision": 0.5,
-      "n_pred": 4,
-      "n_true": 16,
-      "precision": 0.5,
-      "recall": 0.125
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 15,
+      "precision": 0.0,
+      "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.7840000000001055,
-       "median": 1.8800000000001091,
+       "mean": 1.481999999999971,
+       "median": 1.2999999999999545,
        "n": 5
       },
-      "f1": 0.6666666666666666,
-      "n_pred": 10,
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
       "n_true": 5,
-      "precision": 0.5,
+      "precision": 0.5555555555555556,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3703,8 +3703,8 @@
      "phase_diagram": {
       "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 1",
       "crop": "truth figure bbox (oracle)",
-      "fields": "17 traced, 4 named",
-      "labels": "33 from tesseract word boxes",
+      "fields": "14 traced, 2 named",
+      "labels": "36 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.6
      }
@@ -3713,29 +3713,29 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.15755783226368433,
-      "mean_pred_to_true": 0.001972447169753794,
-      "mean_true_to_pred": 0.021831526192072483,
-      "median_abs_dT_K": 2.3899999999999144,
-      "median_abs_dx": 0.0005800000000000249,
+      "hausdorff95": 0.15749736583838084,
+      "mean_pred_to_true": 0.0020315238982135425,
+      "mean_true_to_pred": 0.021669446399344875,
+      "median_abs_dT_K": 2.4849999999998635,
+      "median_abs_dx": 0.0007072727272727231,
       "precision@0.01": 1.0,
-      "pred_points": 2224,
-      "recall@0.01": 0.7422881686841077,
+      "pred_points": 2282,
+      "recall@0.01": 0.7532213978914487,
       "true_samples": 5122
      },
      "fields": {
-      "f1": 0.18181818181818182,
+      "f1": 0.19047619047619044,
       "loose_precision": 0.5,
       "n_pred": 6,
-      "n_true": 16,
+      "n_true": 15,
       "precision": 0.3333333333333333,
-      "recall": 0.125
+      "recall": 0.13333333333333333
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 6.620000000000073,
-       "median": 7.330000000000155,
+       "mean": 8.075999999999976,
+       "median": 8.569999999999936,
        "n": 5
       },
       "f1": 0.6666666666666666,
@@ -3755,8 +3755,8 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "15 traced, 7 named",
-      "labels": "29 from tesseract word boxes",
+      "fields": "17 traced, 7 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3765,29 +3765,29 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.15755783226368433,
-      "mean_pred_to_true": 0.001972447169753794,
-      "mean_true_to_pred": 0.021831526192072483,
-      "median_abs_dT_K": 2.3899999999999144,
-      "median_abs_dx": 0.0005800000000000249,
+      "hausdorff95": 0.15749736583838084,
+      "mean_pred_to_true": 0.0020315238982135425,
+      "mean_true_to_pred": 0.021669446399344875,
+      "median_abs_dT_K": 2.4849999999998635,
+      "median_abs_dx": 0.0007072727272727231,
       "precision@0.01": 1.0,
-      "pred_points": 2224,
-      "recall@0.01": 0.7422881686841077,
+      "pred_points": 2282,
+      "recall@0.01": 0.7532213978914487,
       "true_samples": 5122
      },
      "fields": {
-      "f1": 0.18181818181818182,
+      "f1": 0.19047619047619044,
       "loose_precision": 0.5,
       "n_pred": 6,
-      "n_true": 16,
+      "n_true": 15,
       "precision": 0.3333333333333333,
-      "recall": 0.125
+      "recall": 0.13333333333333333
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 6.620000000000073,
-       "median": 7.330000000000155,
+       "mean": 8.075999999999976,
+       "median": 8.569999999999936,
        "n": 5
       },
       "f1": 0.6666666666666666,
@@ -3807,8 +3807,8 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "15 traced, 7 named",
-      "labels": "29 from tesseract word boxes",
+      "fields": "17 traced, 7 named",
+      "labels": "25 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3817,35 +3817,35 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.17453684497730576,
-      "mean_pred_to_true": 0.0008534514648303592,
-      "mean_true_to_pred": 0.04053784875215123,
-      "median_abs_dT_K": 0.5400000000001098,
-      "median_abs_dx": 0.0005999999999999894,
-      "precision@0.01": 0.9887556221889056,
-      "pred_points": 2668,
-      "recall@0.01": 0.4931667317454119,
+      "hausdorff95": 0.17453626199979005,
+      "mean_pred_to_true": 0.0009804784691517755,
+      "mean_true_to_pred": 0.03930269990508913,
+      "median_abs_dT_K": 0.5816666666670036,
+      "median_abs_dx": 0.0006000000000000172,
+      "precision@0.01": 0.9838345864661654,
+      "pred_points": 2660,
+      "recall@0.01": 0.49180007809449433,
       "true_samples": 5122
      },
      "fields": {
-      "f1": 0.2,
+      "f1": 0.2105263157894737,
       "loose_precision": 0.5,
       "n_pred": 4,
-      "n_true": 16,
+      "n_true": 15,
       "precision": 0.5,
-      "recall": 0.125
+      "recall": 0.13333333333333333
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.5340000000000146,
-       "median": 0.33999999999991815,
+       "mean": 0.49200000000005273,
+       "median": 0.41000000000008185,
        "n": 5
       },
-      "f1": 0.6666666666666666,
-      "n_pred": 10,
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
       "n_true": 5,
-      "precision": 0.5,
+      "precision": 0.5555555555555556,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -3871,14 +3871,14 @@
    "clean_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.3229376070730249,
-      "mean_pred_to_true": 0.04895398671173024,
-      "mean_true_to_pred": 0.00451111854873903,
-      "median_abs_dT_K": 0.6400000000000405,
-      "median_abs_dx": 0.0009071856287424795,
-      "precision@0.01": 0.6353262217811957,
-      "pred_points": 4031,
-      "recall@0.01": 0.9574119574119574,
+      "hausdorff95": 0.3203339753573271,
+      "mean_pred_to_true": 0.04786161723410624,
+      "mean_true_to_pred": 0.004597165398443447,
+      "median_abs_dT_K": 0.5100000000000549,
+      "median_abs_dx": 0.0009054940119760657,
+      "precision@0.01": 0.6270531400966184,
+      "pred_points": 4140,
+      "recall@0.01": 0.9443079443079443,
       "true_samples": 1221
      },
      "fields": {
@@ -3892,8 +3892,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.020000000000038654,
-       "median": 0.020000000000038654,
+       "mean": 0.0999999999999659,
+       "median": 0.0999999999999659,
        "n": 1
       },
       "f1": 0.33333333333333337,
@@ -3913,8 +3913,8 @@
      "phase_diagram": {
       "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "28 traced, 0 named",
-      "labels": "42 from tesseract word boxes",
+      "fields": "33 traced, 0 named",
+      "labels": "35 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.7
      }
@@ -3923,14 +3923,14 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.8814660018968401,
-      "mean_pred_to_true": 0.26843373522979186,
-      "mean_true_to_pred": 0.5599740890725503,
-      "median_abs_dT_K": 82.19333333333334,
-      "median_abs_dx": 0.13907333333333333,
-      "precision@0.01": 0.0,
-      "pred_points": 238,
-      "recall@0.01": 0.0,
+      "hausdorff95": 0.37146918593606126,
+      "mean_pred_to_true": 0.044766969192054744,
+      "mean_true_to_pred": 0.08226476648931734,
+      "median_abs_dT_K": 1.5999999999999792,
+      "median_abs_dx": 0.000826811740890665,
+      "precision@0.01": 0.7833969465648855,
+      "pred_points": 1048,
+      "recall@0.01": 0.5962325962325963,
       "true_samples": 1221
      },
      "fields": {
@@ -3944,16 +3944,16 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 1.7799999999999727,
+       "median": 1.7799999999999727,
+       "n": 1
       },
-      "f1": 0.0,
-      "n_pred": 3,
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
       "n_true": 1,
-      "precision": 0.0,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -3963,10 +3963,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 6",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "7 traced, 0 named",
-      "labels": "30 from tesseract word boxes",
+      "fields": "18 traced, 0 named",
+      "labels": "29 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -3975,14 +3975,14 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.8814660018968401,
-      "mean_pred_to_true": 0.26843373522979186,
-      "mean_true_to_pred": 0.5599740890725503,
-      "median_abs_dT_K": 82.19333333333334,
-      "median_abs_dx": 0.13907333333333333,
-      "precision@0.01": 0.0,
-      "pred_points": 238,
-      "recall@0.01": 0.0,
+      "hausdorff95": 0.37146918593606126,
+      "mean_pred_to_true": 0.044766969192054744,
+      "mean_true_to_pred": 0.08226476648931734,
+      "median_abs_dT_K": 1.5999999999999792,
+      "median_abs_dx": 0.000826811740890665,
+      "precision@0.01": 0.7833969465648855,
+      "pred_points": 1048,
+      "recall@0.01": 0.5962325962325963,
       "true_samples": 1221
      },
      "fields": {
@@ -3996,16 +3996,16 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": null,
-       "median": null,
-       "n": 0
+       "mean": 1.7799999999999727,
+       "median": 1.7799999999999727,
+       "n": 1
       },
-      "f1": 0.0,
-      "n_pred": 3,
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
       "n_true": 1,
-      "precision": 0.0,
-      "recall": 0.0,
-      "type_accuracy": null,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
        "median": null,
@@ -4015,10 +4015,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 6",
+      "calibration": "automatic (ticks + printed labels)",
       "crop": "truth figure bbox (oracle)",
-      "fields": "7 traced, 0 named",
-      "labels": "30 from tesseract word boxes",
+      "fields": "18 traced, 0 named",
+      "labels": "29 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -4027,14 +4027,14 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.3603902932981829,
-      "mean_pred_to_true": 0.05604121123757241,
-      "mean_true_to_pred": 0.051220013897290896,
-      "median_abs_dT_K": 0.36250000000008775,
-      "median_abs_dx": 0.0007097222222222643,
-      "precision@0.01": 0.5896036760482481,
-      "pred_points": 3482,
-      "recall@0.01": 0.7723177723177723,
+      "hausdorff95": 0.36136887063914597,
+      "mean_pred_to_true": 0.054806273743478594,
+      "mean_true_to_pred": 0.05174345386985772,
+      "median_abs_dT_K": 0.41000000000002146,
+      "median_abs_dx": 0.0009747619047618672,
+      "precision@0.01": 0.571587433972755,
+      "pred_points": 3597,
+      "recall@0.01": 0.7698607698607699,
       "true_samples": 1221
      },
      "fields": {
@@ -4133,35 +4133,35 @@
    "degraded_raster": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.20154737319877972,
-      "mean_pred_to_true": 0.002345443698091702,
-      "mean_true_to_pred": 0.024201409461247925,
-      "median_abs_dT_K": 1.100000000000012,
-      "median_abs_dx": 0.0006045486257928168,
+      "hausdorff95": 0.07584859646202571,
+      "mean_pred_to_true": 0.0019928500462416286,
+      "mean_true_to_pred": 0.013545354192959866,
+      "median_abs_dT_K": 0.9378333333333821,
+      "median_abs_dx": 0.0006332290409121616,
       "precision@0.01": 1.0,
-      "pred_points": 1614,
-      "recall@0.01": 0.8456109395677106,
+      "pred_points": 1652,
+      "recall@0.01": 0.8491398323775915,
       "true_samples": 2267
      },
      "fields": {
-      "f1": 0.33333333333333337,
-      "loose_precision": 1.0,
-      "n_pred": 1,
+      "f1": 0.5,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
       "n_true": 5,
-      "precision": 1.0,
-      "recall": 0.2
+      "precision": 0.6666666666666666,
+      "recall": 0.4
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.169999999999959,
-       "median": 1.169999999999959,
+       "mean": 1.5749999999999886,
+       "median": 1.5749999999999886,
        "n": 2
       },
-      "f1": 0.5,
-      "n_pred": 6,
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
       "n_true": 2,
-      "precision": 0.3333333333333333,
+      "precision": 0.5,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -4173,10 +4173,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
+      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "5 traced, 1 named",
-      "labels": "21 from tesseract word boxes",
+      "fields": "8 traced, 3 named",
+      "labels": "15 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }
@@ -4185,35 +4185,35 @@
    "image_only_pdf": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.20154737319877972,
-      "mean_pred_to_true": 0.002345443698091702,
-      "mean_true_to_pred": 0.024201409461247925,
-      "median_abs_dT_K": 1.100000000000012,
-      "median_abs_dx": 0.0006045486257928168,
+      "hausdorff95": 0.07584859646202571,
+      "mean_pred_to_true": 0.0019928500462416286,
+      "mean_true_to_pred": 0.013545354192959866,
+      "median_abs_dT_K": 0.9378333333333821,
+      "median_abs_dx": 0.0006332290409121616,
       "precision@0.01": 1.0,
-      "pred_points": 1614,
-      "recall@0.01": 0.8456109395677106,
+      "pred_points": 1652,
+      "recall@0.01": 0.8491398323775915,
       "true_samples": 2267
      },
      "fields": {
-      "f1": 0.33333333333333337,
-      "loose_precision": 1.0,
-      "n_pred": 1,
+      "f1": 0.5,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
       "n_true": 5,
-      "precision": 1.0,
-      "recall": 0.2
+      "precision": 0.6666666666666666,
+      "recall": 0.4
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 1.169999999999959,
-       "median": 1.169999999999959,
+       "mean": 1.5749999999999886,
+       "median": 1.5749999999999886,
        "n": 2
       },
-      "f1": 0.5,
-      "n_pred": 6,
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
       "n_true": 2,
-      "precision": 0.3333333333333333,
+      "precision": 0.5,
       "recall": 1.0,
       "type_accuracy": 0.0,
       "x_abs_err": {
@@ -4225,10 +4225,10 @@
     },
     "status": {
      "phase_diagram": {
-      "calibration": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
+      "calibration": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
       "crop": "truth figure bbox (oracle)",
-      "fields": "5 traced, 1 named",
-      "labels": "21 from tesseract word boxes",
+      "fields": "8 traced, 3 named",
+      "labels": "15 from tesseract word boxes",
       "phase_table": "truth (oracle)",
       "seconds": 0.2
      }

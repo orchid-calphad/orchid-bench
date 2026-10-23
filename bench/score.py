@@ -34,7 +34,7 @@ def norm_text(s):
 
 
 def num_of(s):
-    m = re.search(r"[-+]?\d+(?:\.\d+)?", norm_text(s).replace(" ", ""))
+    m = re.search(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", norm_text(s).replace(" ", ""))
     return float(m.group(0)) if m else None
 
 
@@ -87,40 +87,63 @@ def prf(tp_pred, n_pred, tp_true, n_true):
 
 
 # ------------------------------------------------------------------------------------------------ tables
+def _segments(t):
+    """Truth table -> list of segments {(seg_row, col): cell}; v1 truth keys have one segment keyed by row."""
+    segs = {}
+    for c in t["cells"]:
+        if not c["text"]:
+            continue
+        si = c.get("segment", 0)
+        segs.setdefault(si, {})[(c.get("seg_row", c["row"]), c["col"])] = c
+    return [segs[k] for k in sorted(segs)]
+
+
+def align_segment(tc, pred):
+    """Best predicted table and (row, col) offset for one truth segment: returns (hits, pred_cells, dr, dc, index)."""
+    best = None
+    for pi, p in enumerate(pred):
+        pc = {(c["row"], c["col"]): c.get("text", "") for c in p.get("cells", [])}
+        for dr in range(-4, 5):
+            for dc in range(-3, 4):
+                hits = sum(1 for (r_, c_), c in tc.items() if norm_text(pc.get((r_ + dr, c_ + dc))) == norm_text(c["text"]))
+                if best is None or hits > best[0]:
+                    best = (hits, pc, dr, dc, pi)
+    return best
+
+
 def score_tables(truth, pred):
     out = {"tables_true": len(truth["tables"]), "tables_pred": len(pred), "per_table": []}
     tot = {"cells": 0, "exact": 0, "exact_norm": 0, "num_cells": 0, "num_exact": 0, "num_abs_err": [], "num_rel_err": []}
+    by_id = {}
     for t in truth["tables"]:
-        tc = {(c["row"], c["col"]): c for c in t["cells"] if c["text"]}
-        best = None
-        for p in pred:
-            pc = {(c["row"], c["col"]): c.get("text", "") for c in p.get("cells", [])}
-            for dr in range(-4, 5):
-                for dc in range(-3, 4):
-                    hits = sum(1 for (r_, c_), c in tc.items() if norm_text(pc.get((r_ + dr, c_ + dc))) == norm_text(c["text"]))
-                    if best is None or hits > best[0]:
-                        best = (hits, pc, dr, dc)
-        rec = {"id": t["id"], "cells": len(tc), "exact": 0, "exact_norm": 0, "num_cells": 0, "num_exact": 0}
+        rec = {"id": t["id"], "segments": 0, "cells": 0, "exact": 0, "exact_norm": 0, "num_cells": 0, "num_exact": 0}
         nae, nre = [], []
-        for (r_, c_), c in tc.items():
-            got = best[1].get((r_ + best[2], c_ + best[3])) if best else None
-            if got is not None and got.strip() == c["text"].strip():
-                rec["exact"] += 1
-            if got is not None and norm_text(got) == norm_text(c["text"]):
-                rec["exact_norm"] += 1
-            if c.get("value") is not None:
-                rec["num_cells"] += 1
-                v = num_of(got) if got else None
-                if v is not None:
-                    err = abs(v - c["value"])
-                    nae.append(err)
-                    nre.append(err / max(abs(c["value"]), 1e-9))
-                    if err < 1e-9:
-                        rec["num_exact"] += 1
+        for tc in _segments(t):
+            rec["segments"] += 1
+            rec["cells"] += len(tc)
+            best = align_segment(tc, pred)
+            for (r_, c_), c in tc.items():
+                got = best[1].get((r_ + best[2], c_ + best[3])) if best else None
+                if got is not None and got.strip() == c["text"].strip():
+                    rec["exact"] += 1
+                if got is not None and norm_text(got) == norm_text(c["text"]):
+                    rec["exact_norm"] += 1
+                if c.get("value") is not None:
+                    rec["num_cells"] += 1
+                    v = num_of(got) if got else None
+                    if v is not None:
+                        err = abs(v - c["value"])
+                        nae.append(err)
+                        nre.append(err / max(abs(c["value"]), 1e-9))
+                        if err < 1e-9:
+                            rec["num_exact"] += 1
         rec["numeric_abs_err"] = stats(nae)
         out["per_table"].append(rec)
+        bi = by_id.setdefault(t["id"], {"cells": 0, "exact": 0, "exact_norm": 0, "num_cells": 0, "num_exact": 0, "num_rel_err": []})
         for k in ("cells", "exact", "exact_norm", "num_cells", "num_exact"):
             tot[k] += rec[k]
+            bi[k] += rec[k]
+        bi["num_rel_err"] += nre
         tot["num_abs_err"] += nae
         tot["num_rel_err"] += nre
     out["cell_exact"] = tot["exact"] / tot["cells"] if tot["cells"] else None
@@ -128,6 +151,7 @@ def score_tables(truth, pred):
     out["numeric_exact"] = tot["num_exact"] / tot["num_cells"] if tot["num_cells"] else None
     out["numeric_rel_err"] = stats(tot["num_rel_err"])
     out["_tot"] = {k: v for k, v in tot.items()}
+    out["_by_id"] = by_id
     return out
 
 
@@ -165,7 +189,7 @@ def score_xy(truth, rendering, pred_figs):
             p.setdefault("page", f.get("page"))
             p.setdefault("figure_id", f.get("figure_id"))
     res = {"panels_true": 0, "panels_found": 0, "point_err": [], "hits": 0, "points": 0, "marker_points": 0, "marker_hits": 0,
-           "series_true": 0, "series_true_matched": 0, "series_pred": 0, "series_pred_matched": 0}
+           "series_true": 0, "series_true_matched": 0, "series_pred": 0, "series_pred_matched": 0, "by_quantity": {}}
     for f in truth["figures"]:
         if not f["kind"].startswith("property"):
             continue
@@ -174,22 +198,34 @@ def score_xy(truth, rendering, pred_figs):
             res["panels_true"] += 1
             p = match_panel(ax, rendering, panels)
             tser = []
+            q = ax.get("quantity", "?")
+            bq = res["by_quantity"].setdefault(q, {"panels": 0, "found": 0, "points": 0, "hits": 0, "err": []})
+            bq["panels"] += 1
             for s in ax["series"]:
                 pts = s.get("markers") or s.get("line") or []
                 line = s.get("line") or s.get("markers") or []
-                tser.append((_norm(ax, pts), densify([tuple(q) for q in _norm(ax, line)]), bool(s.get("markers"))))
+                nl = _norm(ax, line)
+                if s.get("segments") and not s.get("markers"):
+                    dl = np.concatenate([densify([tuple(q_) for q_ in nl[a_:b_]]) for a_, b_ in s["segments"]]) if s["segments"] else np.zeros((0, 2))
+                else:
+                    dl = densify([tuple(q_) for q_ in nl])
+                tser.append((_norm(ax, pts), dl, bool(s.get("markers"))))
+                bq["points"] += len(pts)
                 res["series_true"] += 1
                 res["points"] += len(pts)
                 res["marker_points"] += len(pts) if s.get("markers") else 0
             if p is None:
                 continue
             res["panels_found"] += 1
+            bq["found"] += 1
             pser = [_norm(ax, s["points"]) for s in p.get("series", []) if s.get("points")]
             allp = np.concatenate(pser) if pser else np.zeros((0, 2))
             for tp, _, ism in tser:
                 d = nn_dist(tp, allp)
                 res["point_err"] += [float(x) for x in d if np.isfinite(x)]
                 res["hits"] += int((d <= TOL).sum())
+                bq["hits"] += int((d <= TOL).sum())
+                bq["err"] += [float(x) for x in d if np.isfinite(x)]
                 if ism:
                     res["marker_hits"] += int((d <= TOL).sum())
             matched_t = set()
@@ -346,7 +382,8 @@ def score_pd(truth, rendering, pred_pds):
 
 # ------------------------------------------------------------------------------------------------ text values
 UNIT_ALIASES = {"k": "K", "°c": "°C", "c": "°C", "degc": "°C", "at.%": "at.%", "at%": "at.%", "mole_fraction": "mole_fraction",
-                "x": "mole_fraction", "kj/mol": "kJ/mol", "j/mol": "J/mol", "atm": "atm"}
+                "x": "mole_fraction", "kj/mol": "kJ/mol", "j/mol": "J/mol", "atm": "atm", "cal/mol": "cal/mol",
+                "j/(mol k)": "J/(mol K)", "j/mol/k": "J/(mol K)", "j": "J"}
 
 
 def score_text(truth, pred_vals):
@@ -380,6 +417,174 @@ def score_text(truth, pred_vals):
     return {**prf(h, len(pv), h, len(tv)), "value_only_recall": hv / len(tv) if tv else None}
 
 
+
+# ------------------------------------------------------------------------------------------------ semantic tables (v2)
+INV_T_ROW_TOL = 15.0
+E_FACTOR = {"J/mol": 1.0, "kJ/mol": 1000.0, "cal/mol": 4.184, "kcal/mol": 4184.0, "J/(mol K)": 1.0, "cal/(mol K)": 4.184, "1": 1.0}
+UNIT_NORM = {"j/mol": "J/mol", "kj/mol": "kJ/mol", "cal/mol": "cal/mol", "kcal/mol": "kcal/mol", "j/(mol k)": "J/(mol K)",
+             "j/mol/k": "J/(mol K)", "cal/(mol k)": "cal/(mol K)", "1": "1", "": "1", "none": "1"}
+BASIS_NORM = {"mol_atoms": "mol_atoms", "atom": "mol_atoms", "mol-atom": "mol_atoms", "per mole of atoms": "mol_atoms",
+              "formula_unit": "formula_unit", "f.u.": "formula_unit", "per formula unit": "formula_unit"}
+
+
+def _loose(lbl):
+    c = _canon(lbl)
+    c = re.sub(r"^L\d$", "L", c)
+    return re.sub(r"\)\d$", ")", c)
+
+
+def _toK(v, unit):
+    return None if v is None else (float(v) + 273.15 if unit in ("°C", "degC", "C") else float(v))
+
+
+def _tox(v, unit):
+    return None if v is None else (float(v) / 100.0 if unit in ("at.%", "atomic_percent") else float(v))
+
+
+def _close(a, b, tol=1e-6):
+    return a is not None and b is not None and abs(float(a) - float(b)) <= tol * max(1.0, abs(float(b)))
+
+
+def score_invariant_rows(truth, pred):
+    rows = (truth.get("semantic") or {}).get("invariant_rows", [])
+    P = []
+    for r in pred:
+        TK = _toK(r.get("T"), r.get("T_unit", "K"))
+        if TK is None:
+            continue
+        comps = r.get("compositions") or []
+        P.append({**r, "_TK": TK, "_set": sorted(_loose(c.get("phase", "")) for c in comps) or sorted(_loose(x) for x in r.get("phases", []))})
+    used, res = set(), {"rows_true": len(rows), "rows_pred": len(P), "matched": 0, "T_err": [], "T_printed_exact": 0,
+                        "x_err": [], "x_printed_exact": 0, "x_n": 0, "type_ok": 0, "ev_n": 0, "ev_ok": 0, "cite_n": 0, "cite_ok": 0}
+    for t in sorted(rows, key=lambda q: q["T_K"]):
+        tset = sorted(_loose(p["label"]) for p in t["phases"])
+        tset2 = sorted(_loose(p["tdb_phase"] or "") for p in t["phases"])
+        cands = [(abs(p["_TK"] - t["T_K"]), k) for k, p in enumerate(P) if k not in used and p["_set"] in (tset, tset2)
+                 and abs(p["_TK"] - t["T_K"]) <= INV_T_ROW_TOL]
+        if not cands:
+            continue
+        _, k = min(cands)
+        used.add(k)
+        p = P[k]
+        res["matched"] += 1
+        res["T_err"].append(abs(p["_TK"] - _toK(t["T_value"], t["T_unit"])))
+        if p.get("T_unit", "K") == t["T_unit"] and _close(p.get("T"), t["T_value"]):
+            res["T_printed_exact"] += 1
+        pc = {}
+        for c in p.get("compositions") or []:
+            pc.setdefault(_loose(c.get("phase", "")), []).append(c)
+        for tp in t["phases"]:
+            res["x_n"] += 1
+            lst = pc.get(_loose(tp["label"])) or pc.get(_loose(tp["tdb_phase"] or "")) or []
+            if not lst:
+                continue
+            xu = p.get("x_unit", "mole_fraction")
+            c = min(lst, key=lambda c_: abs(_tox(c_.get("x"), xu) - tp["x"]) if c_.get("x") is not None else 9)
+            if c.get("x") is None:
+                continue
+            res["x_err"].append(abs(_tox(c["x"], xu) - _tox(tp["value"], tp["x_unit"])))
+            if xu == tp["x_unit"] and _close(c["x"], tp["value"]):
+                res["x_printed_exact"] += 1
+        if (p.get("type") or "").strip().lower() == t["type"]:
+            res["type_ok"] += 1
+        if t.get("has_exp_column"):
+            res["ev_n"] += 1
+            te = [e for e in t["evidence"] if e["class"] == "experimental_cited"]
+            pe = [e for e in p.get("evidence") or [] if str(e.get("class", "")).startswith("exp")]
+            if not te and not pe:
+                res["ev_ok"] += 1
+            elif te and pe:
+                e0, q0 = te[0], pe[0]
+                res["cite_n"] += 1
+                cite_ok = str(q0.get("citation")).strip("[] ") == str(e0["citation"])
+                res["cite_ok"] += int(cite_ok)
+                if cite_ok and _close(q0.get("T"), e0["value"]):
+                    res["ev_ok"] += 1
+            elif te:
+                res["cite_n"] += 1
+    return res
+
+
+def _norm_struct(v):
+    if v is None:
+        return ""
+    s = str(v).translate(str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")).replace("_", "").replace(" ", "").replace("-", "")
+    s = s.replace("–", "").lower()
+    return s
+
+
+def score_phase_rows(truth, pred):
+    rows = (truth.get("semantic") or {}).get("phase_rows", [])
+    res = {"rows_true": len(rows), "rows_pred": len(pred), "matched": 0, "struct_n": 0, "struct_ok": 0,
+           "pearson_ok": 0, "sb_ok": 0, "proto_ok": 0, "T_low_err": [], "T_high_err": [], "hom_err": [], "hom_T_err": []}
+    used = set()
+    for t in rows:
+        keys = {_loose(t["phase"])} | {_loose(q) for q in t["tdb_phases"]}
+        k = next((i for i, p in enumerate(pred) if i not in used and _loose(p.get("phase", "")) in keys), None)
+        if k is None:
+            continue
+        used.add(k)
+        p = pred[k]
+        res["matched"] += 1
+        for f_, key in (("pearson", "pearson_ok"), ("strukturbericht", "sb_ok"), ("prototype", "proto_ok")):
+            ok = _norm_struct(p.get(f_)) == _norm_struct(t[f_])
+            res[key] += int(ok)
+            res["struct_ok"] += int(ok)
+            res["struct_n"] += 1
+        tu = p.get("T_unit", "K")
+        if t["T_low_K"] is not None and p.get("T_low") is not None:
+            res["T_low_err"].append(abs(_toK(p["T_low"], tu) - _toK(t["T_low_value"], t["T_unit"])))
+        if t["T_high_K"] is not None and p.get("T_high") is not None:
+            res["T_high_err"].append(abs(_toK(p["T_high"], tu) - _toK(t["T_high_value"], t["T_unit"])))
+        h, ph = t["homogeneity"], p.get("homogeneity") or {}
+        xu = ph.get("x_unit", "mole_fraction")
+        for a_ in ("x_min", "x_max"):
+            if ph.get(a_) is not None:
+                res["hom_err"].append(abs(_tox(ph[a_], xu) - _tox(h[a_ + "_value"], h["x_unit"])))
+        if ph.get("T") is not None:
+            res["hom_T_err"].append(abs(_toK(ph["T"], ph.get("T_unit", tu)) - _toK(h["T_value"], t["T_unit"])))
+    return res
+
+
+def score_property_records(truth, pred):
+    recs = (truth.get("semantic") or {}).get("property_records", [])
+    res = {"records_true": len(recs), "records_pred": len(pred), "matched": 0, "value_exact": 0, "rel_err": [],
+           "within_1pct": 0, "unit_ok": 0, "basis_ok": 0}
+
+    def key_t(r):
+        return (r["table"], _loose(r["phase"]) if r["table"] == "formation" else round(r["x"], 4), r["quantity"])
+
+    def key_p(r):
+        if r.get("table") == "formation":
+            return ("formation", _loose(r.get("phase", "")), r.get("quantity"))
+        x = _tox(r.get("x"), r.get("x_unit", "mole_fraction"))
+        return (r.get("table"), round(x, 4) if x is not None else None, r.get("quantity"))
+    idx = {}
+    for i, r in enumerate(pred):
+        idx.setdefault(key_p(r), []).append(i)
+    for t in recs:
+        lst = idx.get(key_t(t))
+        if not lst:
+            continue
+        p = pred[lst.pop(0)]
+        res["matched"] += 1
+        if _close(p.get("value"), t["value"], 1e-9):
+            res["value_exact"] += 1
+        u = UNIT_NORM.get(str(p.get("unit", "")).lower(), p.get("unit"))
+        bas = BASIS_NORM.get(str(p.get("basis", "mol_atoms")).lower(), p.get("basis"))
+        res["unit_ok"] += int(u == t["unit"])
+        res["basis_ok"] += int(bas == t["basis"])
+        if p.get("value") is None or u not in E_FACTOR:
+            continue
+        v = float(p["value"]) * E_FACTOR[u]
+        if bas == "formula_unit":
+            v /= t.get("atoms_per_formula_unit") or 1
+        e = t["value"] * E_FACTOR.get(t["unit"], 1.0) / ((t.get("atoms_per_formula_unit") or 1) if t["basis"] == "formula_unit" else 1)
+        re_ = abs(v - e) / max(abs(e), 1e-12)
+        res["rel_err"].append(re_)
+        res["within_1pct"] += int(re_ <= 0.01)
+    return res
+
 # ------------------------------------------------------------------------------------------------ driver
 def score_doc(truth, rendering, pred):
     st = pred.get("status", {})
@@ -392,6 +597,12 @@ def score_doc(truth, rendering, pred):
         out["phase_diagram"] = score_pd(truth, rendering, pred["phase_diagrams"])
     if "text_values" in pred:
         out["text"] = score_text(truth, pred["text_values"])
+    if "invariant_rows" in pred:
+        out["invariant_rows"] = score_invariant_rows(truth, pred["invariant_rows"])
+    if "phase_rows" in pred:
+        out["phase_rows"] = score_phase_rows(truth, pred["phase_rows"])
+    if "property_records" in pred:
+        out["property_records"] = score_property_records(truth, pred["property_records"])
     return out
 
 
@@ -466,6 +677,73 @@ def aggregate(per_doc):
             a["text"] = {"values_true": ntrue, "values_pred": npred, "precision": tp / npred if npred else None,
                          "recall": tp / ntrue if ntrue else None,
                          "value_only_recall": float(np.mean([t["value_only_recall"] for t in txs if t["value_only_recall"] is not None]))}
+        # ---- v2 tasks: invariant table, phase stability, thermodynamic property tables
+        def cells(ids):
+            if not tabs:
+                return {}
+            t_ = {k: 0 for k in ("cells", "exact", "exact_norm", "num_cells", "num_exact")}
+            rel = []
+            for tb in tabs:
+                for i_, v_ in tb["_by_id"].items():
+                    if i_ in ids:
+                        for k in t_:
+                            t_[k] += v_[k]
+                        rel += v_["num_rel_err"]
+            if not t_["cells"]:
+                return {}
+            return {"cells": t_["cells"], "cell_exact": t_["exact"] / t_["cells"],
+                    "cell_exact_normalised": t_["exact_norm"] / t_["cells"],
+                    "numeric_exact": t_["num_exact"] / t_["num_cells"] if t_["num_cells"] else None,
+                    "numeric_rel_err_median": float(np.median(rel)) if rel else None}
+
+        def med(lst):
+            return float(np.median(lst)) if lst else None
+
+        def frac(n, d_):
+            return n / d_ if d_ else None
+        inv = cells({"invariants"})
+        ir = [d["invariant_rows"] for d in docs if "invariant_rows" in d]
+        if ir:
+            S = lambda k: sum(r[k] for r in ir)  # noqa: E731
+            L = lambda k: [x for r in ir for x in r[k]]  # noqa: E731
+            inv.update({"rows_true": S("rows_true"), "rows_pred": S("rows_pred"), "row_recall": frac(S("matched"), S("rows_true")),
+                        "row_precision": frac(S("matched"), S("rows_pred")), "T_err_K_median": med(L("T_err")),
+                        "T_printed_exact": frac(S("T_printed_exact"), S("matched")), "x_err_median": med(L("x_err")),
+                        "x_recall": frac(len(L("x_err")), S("x_n")), "x_printed_exact": frac(S("x_printed_exact"), S("x_n")),
+                        "type_accuracy": frac(S("type_ok"), S("matched")), "evidence_accuracy": frac(S("ev_ok"), S("ev_n")),
+                        "citation_accuracy": frac(S("cite_ok"), S("cite_n"))})
+        if inv:
+            a["invariant_table"] = inv
+        ps = cells({"phases"})
+        pr = [d["phase_rows"] for d in docs if "phase_rows" in d]
+        if pr:
+            S = lambda k: sum(r[k] for r in pr)  # noqa: E731
+            L = lambda k: [x for r in pr for x in r[k]]  # noqa: E731
+            ps.update({"rows_true": S("rows_true"), "rows_pred": S("rows_pred"), "row_recall": frac(S("matched"), S("rows_true")),
+                       "row_precision": frac(S("matched"), S("rows_pred")), "structure_accuracy": frac(S("struct_ok"), S("struct_n")),
+                       "pearson_accuracy": frac(S("pearson_ok"), S("matched")), "strukturbericht_accuracy": frac(S("sb_ok"), S("matched")),
+                       "prototype_accuracy": frac(S("proto_ok"), S("matched")), "T_low_err_K_median": med(L("T_low_err")),
+                       "T_high_err_K_median": med(L("T_high_err")), "homogeneity_x_err_median": med(L("hom_err")),
+                       "homogeneity_T_err_K_median": med(L("hom_T_err"))})
+        npq = [d["xy"]["by_quantity"]["NP"] for d in docs if "xy" in d and "NP" in d["xy"].get("by_quantity", {})]
+        if npq:
+            ps.update({"phase_fraction_panels": sum(q["panels"] for q in npq), "phase_fraction_panels_found": sum(q["found"] for q in npq),
+                       "phase_fraction_point_recall@0.01": frac(sum(q["hits"] for q in npq), sum(q["points"] for q in npq)),
+                       "phase_fraction_point_err_median": med([x for q in npq for x in q["err"]])})
+        if ps:
+            a["phase_stability"] = ps
+        th = cells({"formation", "mixing", "rk_liquid"})
+        prr = [d["property_records"] for d in docs if "property_records" in d]
+        if prr:
+            S = lambda k: sum(r[k] for r in prr)  # noqa: E731
+            L = lambda k: [x for r in prr for x in r[k]]  # noqa: E731
+            th.update({"records_true": S("records_true"), "records_pred": S("records_pred"),
+                       "record_recall": frac(S("matched"), S("records_true")), "record_precision": frac(S("matched"), S("records_pred")),
+                       "value_exact": frac(S("value_exact"), S("matched")), "rel_err_median": med(L("rel_err")),
+                       "within_1pct": frac(S("within_1pct"), S("matched")), "unit_accuracy": frac(S("unit_ok"), S("matched")),
+                       "basis_accuracy": frac(S("basis_ok"), S("matched"))})
+        if th:
+            a["thermo_tables"] = th
         agg[rendering] = a
     return agg
 
@@ -492,6 +770,14 @@ def main(argv=None):
         for r_ in d.values():
             if "tables" in r_:
                 r_["tables"].pop("_tot", None)
+                r_["tables"].pop("_by_id", None)
+            if "xy" in r_:
+                for q in r_["xy"].get("by_quantity", {}).values():
+                    q["err"] = stats(q["err"])
+            for k in ("invariant_rows", "phase_rows", "property_records"):
+                for kk, vv in list((r_.get(k) or {}).items()):
+                    if isinstance(vv, list):
+                        r_[k][kk] = stats(vv)
             if "xy" in r_:
                 r_["xy"]["point_err"] = stats(r_["xy"]["point_err"])
     res = {"extractor": root.name, "aggregate": agg, "per_document": per_doc}

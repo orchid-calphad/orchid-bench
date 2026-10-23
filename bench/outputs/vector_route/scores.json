@@ -3,36 +3,42 @@
   "vector": {
    "documents": 20,
    "phase_diagram": {
-    "boundary_hausdorff95": 0.09986659355999514,
-    "boundary_mean_dist": 0.009638337142433269,
-    "boundary_median_dT_K": 0.2957116456041283,
-    "boundary_median_dx": 7.171793364065069e-05,
-    "boundary_precision@0.01": 0.881495560364376,
+    "boundary_hausdorff95": 0.09914371884909813,
+    "boundary_mean_dist": 0.009539555918722086,
+    "boundary_median_dT_K": 0.2957155104204561,
+    "boundary_median_dx": 7.173183380337032e-05,
+    "boundary_precision@0.01": 0.8838889436720507,
     "boundary_recall@0.01": 0.8856183229706277,
     "diagrams": 20,
     "diagrams_with_output": 20,
     "field_precision": 0.75,
     "field_pred": 32,
-    "field_recall": 0.1340782122905028,
-    "field_true_scorable": 179,
-    "invariant_T_err_K": 0.7219211678910472,
-    "invariant_precision": 0.44776119402985076,
-    "invariant_recall": 0.5882352941176471,
+    "field_recall": 0.147239263803681,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 0.7551983249269338,
+    "invariant_precision": 0.4626865671641791,
+    "invariant_recall": 0.6078431372549019,
     "invariant_type_accuracy": 0.0,
     "invariant_x_err": null
+   },
+   "phase_stability": {
+    "phase_fraction_panels": 25,
+    "phase_fraction_panels_found": 20,
+    "phase_fraction_point_err_median": 1.5879112039241194e-07,
+    "phase_fraction_point_recall@0.01": 0.7692307692307693
    },
    "xy": {
     "marker_points": 371,
     "marker_recall@0.01": 0.5876010781671159,
-    "panels_found": 30,
-    "panels_true": 48,
-    "point_err_mean": 0.009214985653859887,
-    "point_err_median": 1.3459685417616972e-07,
-    "point_recall@0.01": 0.7848309975267931,
-    "points": 3639,
-    "series_precision": 0.44666666666666666,
-    "series_pred": 150,
-    "series_recall": 0.631578947368421
+    "panels_found": 50,
+    "panels_true": 73,
+    "point_err_mean": 0.002550927604421489,
+    "point_err_median": 1.368730490298607e-07,
+    "point_recall@0.01": 0.7733979299713719,
+    "points": 13623,
+    "series_precision": 0.4690265486725664,
+    "series_pred": 339,
+    "series_recall": 0.7172774869109948
    }
   }
  },
@@ -42,11 +48,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.018897697710261254,
-      "mean_pred_to_true": 0.0048519300185534825,
-      "mean_true_to_pred": 0.0001756172788141965,
-      "median_abs_dT_K": 7.512201087855885e-05,
-      "median_abs_dx": 1.904664739260653e-07,
+      "hausdorff95": 0.01889768295922253,
+      "mean_pred_to_true": 0.004851940134866944,
+      "mean_true_to_pred": 0.00017565333574170734,
+      "median_abs_dT_K": 7.512231090522903e-05,
+      "median_abs_dx": 2.3692671397013143e-07,
       "precision@0.01": 0.7762655205348615,
       "pred_points": 4188,
       "recall@0.01": 0.9909130246646474,
@@ -63,8 +69,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 7.41017338441452e-05,
-       "median": 7.41017338441452e-05,
+       "mean": 7.410203397739679e-05,
+       "median": 7.410203397739679e-05,
        "n": 1
       },
       "f1": 0.5,
@@ -89,9 +95,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         179.608,
-        390.344,
+        376.484,
         463.136,
-        624.5840000000001
+        610.7239999999999
        ],
        "lines": 3,
        "markers": 0
@@ -100,24 +106,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        200.104,
+        295.376,
+        442.153,
+        444.841
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 1,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         206.155,
-        449.095,
+        334.665,
         442.151,
-        637.354
+        522.924
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -126,21 +148,67 @@
      ]
     },
     "xy": {
-     "hits": 305,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 1.3060416381815064e-07,
+        "median": 1.3085408053900848e-07,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 305,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 1.0246493358870916e-05,
+        "median": 2.8647839992622907e-07,
+        "n": 425
+       },
+       "found": 1,
+       "hits": 425,
+       "panels": 1,
+       "points": 425
+      }
+     },
+     "hits": 730,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 1.3185025685762441e-07,
-      "median": 1.3135230191364172e-07,
-      "n": 305
+      "mean": 6.019991708883117e-06,
+      "median": 1.9574092108021602e-07,
+      "n": 730
      },
-     "points": 407,
-     "series_pred": 9,
-     "series_pred_matched": 4,
-     "series_true": 6,
-     "series_true_matched": 4
+     "points": 832,
+     "series_pred": 17,
+     "series_pred_matched": 9,
+     "series_true": 9,
+     "series_true_matched": 7
     }
    }
   },
@@ -148,11 +216,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.016761194648566204,
-      "mean_pred_to_true": 1.339964445658972e-07,
-      "mean_true_to_pred": 0.00303159648550695,
-      "median_abs_dT_K": 5.394276365727757e-05,
-      "median_abs_dx": 9.458279454088725e-08,
+      "hausdorff95": 0.016761281548829634,
+      "mean_pred_to_true": 1.8819996535874072e-07,
+      "mean_true_to_pred": 0.0030316559720064027,
+      "median_abs_dT_K": 0.00022396793026291384,
+      "median_abs_dx": 1.273581844984939e-07,
       "precision@0.01": 1.0,
       "pred_points": 2036,
       "recall@0.01": 0.9418181818181818,
@@ -169,8 +237,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.0291020695804036e-05,
-       "median": 4.0291020695804036e-05,
+       "mean": 0.00025318604548374424,
+       "median": 0.00025318604548374424,
        "n": 2
       },
       "f1": 1.0,
@@ -195,9 +263,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         161.629,
-        413.6950146484375,
+        385.9740146484375,
         466.736,
-        643.8430146484375
+        616.1230146484374
        ],
        "lines": 2,
        "markers": 0
@@ -206,37 +274,99 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        195.372,
+        304.85501464843753,
+        429.127,
+        449.1980146484375
+       ],
+       "lines": 7,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig3"
+       "figure": "fig4"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig3"
+       "figure": "fig4"
       }
      ]
     },
     "xy": {
-     "hits": 0,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 2.1847645977584115e-07,
+        "median": 2.1400580787856614e-07,
+        "n": 779
+       },
+       "found": 1,
+       "hits": 779,
+       "panels": 1,
+       "points": 779
+      }
+     },
+     "hits": 779,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 2.1847645977584115e-07,
+      "median": 2.1400580787856614e-07,
+      "n": 779
      },
-     "points": 200,
-     "series_pred": 0,
-     "series_pred_matched": 0,
-     "series_true": 4,
-     "series_true_matched": 0
+     "points": 979,
+     "series_pred": 12,
+     "series_pred_matched": 6,
+     "series_true": 9,
+     "series_true_matched": 5
     }
    }
   },
@@ -244,13 +374,13 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.16664240878128575,
-      "mean_pred_to_true": 0.01660946657045844,
-      "mean_true_to_pred": 0.03965055370268258,
-      "median_abs_dT_K": 3.0717480051234425e-05,
-      "median_abs_dx": 3.443873995701008e-08,
-      "precision@0.01": 0.8703363914373089,
-      "pred_points": 1635,
+      "hausdorff95": 0.16664236519340872,
+      "mean_pred_to_true": 0.016599410313590277,
+      "mean_true_to_pred": 0.03964976512926097,
+      "median_abs_dT_K": 0.000121039479389351,
+      "median_abs_dx": 1.007531270080797e-07,
+      "precision@0.01": 0.8704156479217604,
+      "pred_points": 1636,
       "recall@0.01": 0.6465979381443299,
       "true_samples": 2425
      },
@@ -265,8 +395,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 3.302331882082399e-05,
-       "median": 3.302331882082399e-05,
+       "mean": 0.00010791621022576692,
+       "median": 0.00010791621022576692,
        "n": 2
       },
       "f1": 0.6666666666666666,
@@ -291,12 +421,12 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         161.629,
-        385.3090146484375,
+        399.1690146484375,
         466.736,
-        608.8100146484375
+        622.6700146484375
        ],
        "lines": 3,
-       "markers": 7
+       "markers": 6
       }
      ],
      "xy": [
@@ -306,10 +436,26 @@
        "curves": 4,
        "figure": "fig2",
        "frame_bbox_pt": [
-        201.216,
-        246.06401464843748,
+        195.372,
+        389.0800146484375,
         429.127,
-        421.3800146484375
+        533.4230146484375
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        201.216,
+        73.14901464843751,
+        429.127,
+        248.46501464843755
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -319,12 +465,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 2,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         201.216,
-        490.4290146484375,
+        317.5140146484375,
         429.127,
-        665.7450146484375
+        492.8300146484375
        ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
@@ -334,21 +480,56 @@
      ]
     },
     "xy": {
-     "hits": 198,
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 8.878879319059802e-08,
+        "median": 9.377531565885765e-08,
+        "n": 13
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 13
+      },
+      "GM": {
+       "err": {
+        "mean": 0.0005677250406450407,
+        "median": 6.74057425813058e-08,
+        "n": 187
+       },
+       "found": 1,
+       "hits": 185,
+       "panels": 1,
+       "points": 187
+      },
+      "NP": {
+       "err": {
+        "mean": 2.4968244714962644e-07,
+        "median": 3.013490591246073e-07,
+        "n": 276
+       },
+       "found": 1,
+       "hits": 276,
+       "panels": 1,
+       "points": 276
+      }
+     },
+     "hits": 474,
      "marker_hits": 13,
      "marker_points": 13,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.0005308334467489396,
-      "median": 7.349762776979805e-08,
-      "n": 200
+      "mean": 0.00022318203615619196,
+      "median": 1.1069694420822011e-07,
+      "n": 476
      },
-     "points": 200,
-     "series_pred": 10,
-     "series_pred_matched": 4,
-     "series_true": 5,
-     "series_true_matched": 4
+     "points": 476,
+     "series_pred": 17,
+     "series_pred_matched": 7,
+     "series_true": 8,
+     "series_true_matched": 7
     }
    }
   },
@@ -367,12 +548,12 @@
       "true_samples": 2382
      },
      "fields": {
-      "f1": 0.7499999999999999,
+      "f1": 0.6666666666666666,
       "loose_precision": 1.0,
       "n_pred": 3,
-      "n_true": 5,
+      "n_true": 6,
       "precision": 1.0,
-      "recall": 0.6
+      "recall": 0.5
      },
      "found": true,
      "invariants": {
@@ -414,24 +595,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        200.104,
+        347.911,
+        442.153,
+        497.376
+       ],
+       "lines": 7,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         206.155,
-        73.61400000000003,
+        325.754,
         442.153,
-        255.15099999999995
+        507.291
        ],
        "lines": 4,
        "manifest": "ok (1 legend entries)",
@@ -441,21 +638,67 @@
      ]
     },
     "xy": {
-     "hits": 192,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 3.242849236131434e-08,
+        "median": 2.7471158823501574e-08,
+        "n": 192
+       },
+       "found": 1,
+       "hits": 192,
+       "panels": 1,
+       "points": 192
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 2.221554125470529e-07,
+        "median": 2.5403203582873627e-07,
+        "n": 416
+       },
+       "found": 1,
+       "hits": 416,
+       "panels": 1,
+       "points": 416
+      }
+     },
+     "hits": 608,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 3.1110711328438584e-08,
-      "median": 3.057066300765556e-08,
-      "n": 192
+      "mean": 1.6224164827787228e-07,
+      "median": 1.7827290145709096e-07,
+      "n": 608
      },
-     "points": 294,
-     "series_pred": 9,
-     "series_pred_matched": 4,
-     "series_true": 6,
-     "series_true_matched": 4
+     "points": 710,
+     "series_pred": 21,
+     "series_pred_matched": 10,
+     "series_true": 11,
+     "series_true_matched": 9
     }
    }
   },
@@ -463,11 +706,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.004484321584081719,
-      "mean_pred_to_true": 7.521046961623951e-08,
-      "mean_true_to_pred": 0.0010083944831265428,
-      "median_abs_dT_K": 7.317547507934563e-05,
-      "median_abs_dx": 3.030497037689872e-08,
+      "hausdorff95": 0.004484316157334308,
+      "mean_pred_to_true": 1.551215900494592e-07,
+      "mean_true_to_pred": 0.0010084695590164175,
+      "median_abs_dT_K": 1.744151270077765e-05,
+      "median_abs_dx": 1.6829939553097972e-07,
       "precision@0.01": 1.0,
       "pred_points": 3656,
       "recall@0.01": 0.9642131979695432,
@@ -484,8 +727,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 4.941168947425467e-05,
-       "median": 4.941168947425467e-05,
+       "mean": 1.235424258538842e-05,
+       "median": 1.235424258538842e-05,
        "n": 1
       },
       "f1": 0.25,
@@ -510,25 +753,46 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         179.608,
-        365.264,
+        352.724,
         463.136,
-        599.504
+        586.9639999999999
        ],
        "lines": 2,
-       "markers": 8
+       "markers": 9
       }
      ],
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
-       "curves": 3,
+       "curves": 5,
        "figure": "fig2",
        "frame_bbox_pt": [
-        206.155,
-        323.534,
+        200.104,
+        366.063,
         442.153,
-        505.071
+        489.205
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        206.155,
+        73.61400000000003,
+        442.153,
+        255.15099999999995
        ],
        "lines": 2,
        "manifest": "ok (2 legend entries)",
@@ -539,12 +803,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 2,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         206.155,
-        73.61400000000003,
+        325.754,
         442.153,
-        255.15099999999995
+        507.291
        ],
        "lines": 1,
        "manifest": "ok (1 legend entries)",
@@ -554,21 +818,56 @@
      ]
     },
     "xy": {
-     "hits": 37,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.003328461674267898,
+        "median": 1.3523353303718404e-07,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 1.396197222720679e-07,
+        "median": 1.4821857242195978e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 3.094567352434824e-07,
+        "median": 3.271375724481998e-07,
+        "n": 402
+       },
+       "found": 1,
+       "hits": 402,
+       "panels": 2,
+       "points": 679
+      }
+     },
+     "hits": 439,
      "marker_hits": 37,
      "marker_points": 37,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 4,
      "point_err": {
-      "mean": 0.0024355143007229437,
-      "median": 1.5615242527100109e-07,
-      "n": 41
+      "mean": 0.00022568800824503347,
+      "median": 3.263404051935766e-07,
+      "n": 443
      },
-     "points": 41,
-     "series_pred": 10,
-     "series_pred_matched": 5,
-     "series_true": 5,
-     "series_true_matched": 3
+     "points": 720,
+     "series_pred": 19,
+     "series_pred_matched": 10,
+     "series_true": 12,
+     "series_true_matched": 7
     }
    }
   },
@@ -576,10 +875,10 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.24228716945495576,
-      "mean_pred_to_true": 0.012278699513703315,
-      "mean_true_to_pred": 0.04169092506332652,
-      "median_abs_dT_K": 7.800409160263479e-05,
+      "hausdorff95": 0.24228710840116768,
+      "mean_pred_to_true": 0.012278669223680722,
+      "mean_true_to_pred": 0.04169090044333967,
+      "median_abs_dT_K": 2.7259088278275282e-05,
       "median_abs_dx": 0.0007906812663887042,
       "precision@0.01": 0.6402027027027027,
       "pred_points": 4736,
@@ -597,15 +896,15 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 12.993370258410513,
-       "median": 12.650035711210876,
-       "n": 3
+       "mean": 13.59248624819034,
+       "median": 13.824986113799469,
+       "n": 4
       },
-      "f1": 0.4615384615384615,
+      "f1": 0.6153846153846154,
       "n_pred": 8,
       "n_true": 5,
-      "precision": 0.375,
-      "recall": 0.6,
+      "precision": 0.5,
+      "recall": 0.8,
       "type_accuracy": 0.0,
       "x_abs_err": {
        "mean": null,
@@ -623,9 +922,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         167.401,
-        411.4570146484375,
+        398.2570146484375,
         459.56,
-        631.8400146484375
+        618.6400146484375
        ],
        "lines": 20,
        "markers": 8
@@ -635,18 +934,18 @@
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 1,
+       "curves": 5,
        "figure": "fig2",
        "frame_bbox_pt": [
-        205.308,
-        315.0670146484375,
-        423.547,
-        489.1610146484375
+        199.712,
+        453.5550146484375,
+        423.548,
+        591.7740146484375
        ],
-       "lines": 1,
+       "lines": 5,
        "manifest": "ok (1 legend entries)",
-       "markers": 0,
-       "vector_markers": "ok (12 points)"
+       "markers": 1,
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
@@ -659,6 +958,22 @@
         423.547,
         253.15101464843747
        ],
+       "lines": 1,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (12 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig4",
+       "frame_bbox_pt": [
+        205.308,
+        321.8940146484375,
+        423.547,
+        495.9880146484375
+       ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
        "markers": 0,
@@ -667,21 +982,56 @@
      ]
     },
     "xy": {
-     "hits": 2,
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.5677366355747309,
+        "median": 0.5433279037884601,
+        "n": 9
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 9
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.40640908362810646,
+        "median": 0.40799043365920834,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 5.211609232162611e-08,
+        "median": 4.146569226143815e-08,
+        "n": 212
+       },
+       "found": 1,
+       "hits": 212,
+       "panels": 1,
+       "points": 212
+      }
+     },
+     "hits": 214,
      "marker_hits": 2,
      "marker_points": 20,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.4790064988756055,
-      "median": 0.4830243850467027,
-      "n": 20
+      "mean": 0.04129370986505742,
+      "median": 4.395575028229073e-08,
+      "n": 232
      },
-     "points": 20,
-     "series_pred": 3,
-     "series_pred_matched": 1,
-     "series_true": 2,
-     "series_true_matched": 1
+     "points": 232,
+     "series_pred": 14,
+     "series_pred_matched": 7,
+     "series_true": 6,
+     "series_true_matched": 5
     }
    }
   },
@@ -703,7 +1053,7 @@
       "f1": null,
       "loose_precision": null,
       "n_pred": 0,
-      "n_true": 25,
+      "n_true": 9,
       "precision": null,
       "recall": 0.0
      },
@@ -741,20 +1091,41 @@
         634.9560146484375
        ],
        "lines": 12,
-       "markers": 20
+       "markers": 18
       }
      ],
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
-       "curves": 1,
+       "curves": 5,
        "figure": "fig2",
        "frame_bbox_pt": [
+        199.712,
+        396.2300146484375,
+        423.548,
+        510.1070146484375
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
         205.308,
-        360.9620146484375,
+        79.05701464843753,
         423.547,
-        535.0560146484374
+        253.15101464843747
        ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
@@ -764,26 +1135,61 @@
       {
        "axes": "a",
        "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
-       "figure": "fig3"
+       "figure": "fig4"
       }
      ]
     },
     "xy": {
-     "hits": 1,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 26
+      },
+      "CPM": {
+       "err": {
+        "mean": 0.44457211803535757,
+        "median": 0.311860374576587,
+        "n": 18
+       },
+       "found": 1,
+       "hits": 1,
+       "panels": 1,
+       "points": 18
+      },
+      "NP": {
+       "err": {
+        "mean": 1.0660857933231628e-07,
+        "median": 1.08787795241794e-07,
+        "n": 627
+       },
+       "found": 1,
+       "hits": 627,
+       "panels": 2,
+       "points": 1208
+      }
+     },
+     "hits": 628,
      "marker_hits": 1,
      "marker_points": 44,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 0.44457212642346516,
-      "median": 0.3118603932942534,
-      "n": 18
+      "mean": 0.012406767392582445,
+      "median": 1.096277379283287e-07,
+      "n": 645
      },
-     "points": 44,
-     "series_pred": 1,
-     "series_pred_matched": 0,
-     "series_true": 3,
-     "series_true_matched": 0
+     "points": 1252,
+     "series_pred": 10,
+     "series_pred_matched": 4,
+     "series_true": 11,
+     "series_true_matched": 4
     }
    }
   },
@@ -843,20 +1249,36 @@
         618.2370146484375
        ],
        "lines": 4,
-       "markers": 15
+       "markers": 18
       }
      ],
      "xy": [
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 2,
+       "curves": 4,
        "figure": "fig2",
        "frame_bbox_pt": [
+        199.712,
+        349.8400146484375,
+        423.548,
+        488.0580146484375
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
         205.308,
-        228.16201464843755,
+        79.05701464843753,
         423.547,
-        402.2560146484375
+        253.15101464843747
        ],
        "lines": 1,
        "manifest": "ok (1 legend entries)",
@@ -867,12 +1289,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         205.308,
-        470.9990146484375,
+        321.8940146484375,
         423.547,
-        645.0930146484375
+        495.9880146484375
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -881,21 +1303,56 @@
      ]
     },
     "xy": {
-     "hits": 298,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 8.018206656951683e-08,
+        "median": 7.635021139030379e-08,
+        "n": 287
+       },
+       "found": 1,
+       "hits": 287,
+       "panels": 1,
+       "points": 287
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 8.210172109101415e-08,
+        "median": 8.51266505537469e-08,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 9.76241860454208e-08,
+        "median": 5.5341178460261176e-08,
+        "n": 421
+       },
+       "found": 1,
+       "hits": 421,
+       "panels": 1,
+       "points": 421
+      }
+     },
+     "hits": 719,
      "marker_hits": 11,
      "marker_points": 11,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 1.1942511145550248e-07,
-      "median": 1.2346200792099208e-07,
-      "n": 298
+      "mean": 9.042441496881035e-08,
+      "median": 6.920937322567934e-08,
+      "n": 719
      },
-     "points": 298,
-     "series_pred": 12,
-     "series_pred_matched": 6,
-     "series_true": 5,
-     "series_true_matched": 5
+     "points": 719,
+     "series_pred": 19,
+     "series_pred_matched": 9,
+     "series_true": 8,
+     "series_true_matched": 8
     }
    }
   },
@@ -962,13 +1419,29 @@
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 3,
+       "curves": 7,
        "figure": "fig2",
        "frame_bbox_pt": [
-        205.308,
-        242.57001464843745,
+        199.712,
+        339.9900146484375,
         423.548,
-        410.4470146484375
+        478.2080146484375
+       ],
+       "lines": 5,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        205.308,
+        78.59001464843755,
+        423.548,
+        246.4670146484375
        ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
@@ -979,12 +1452,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 3,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         205.308,
-        477.6350146484375,
+        313.6550146484375,
         423.548,
-        645.5120146484376
+        481.5320146484375
        ],
        "lines": 3,
        "manifest": "ok (2 legend entries)",
@@ -994,21 +1467,56 @@
      ]
     },
     "xy": {
-     "hits": 200,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.0015208389344763234,
+        "median": 4.21765379720513e-07,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 98,
+       "panels": 1,
+       "points": 102
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 2.0472778801187916e-07,
+        "median": 2.0855453538249722e-07,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 102,
+       "panels": 1,
+       "points": 102
+      },
+      "NP": {
+       "err": {
+        "mean": 1.1126020533427756e-07,
+        "median": 1.243709348237288e-07,
+        "n": 216
+       },
+       "found": 1,
+       "hits": 216,
+       "panels": 1,
+       "points": 216
+      }
+     },
+     "hits": 416,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.0007605091109129091,
-      "median": 2.3863220864933353e-07,
-      "n": 204
+      "mean": 0.00036945353751265337,
+      "median": 1.539066089773595e-07,
+      "n": 420
      },
-     "points": 204,
-     "series_pred": 9,
-     "series_pred_matched": 5,
-     "series_true": 6,
-     "series_true_matched": 4
+     "points": 420,
+     "series_pred": 21,
+     "series_pred_matched": 11,
+     "series_true": 11,
+     "series_true_matched": 8
     }
    }
   },
@@ -1016,10 +1524,10 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.2017347573742493,
-      "mean_pred_to_true": 0.020811762779695497,
-      "mean_true_to_pred": 0.02560025427606091,
-      "median_abs_dT_K": 2.3829596035307432e-05,
+      "hausdorff95": 0.20173471478232227,
+      "mean_pred_to_true": 0.020811756817274363,
+      "mean_true_to_pred": 0.02560023750097478,
+      "median_abs_dT_K": 8.058977246649945e-06,
       "median_abs_dx": 1.2546815869596273e-07,
       "precision@0.01": 0.7547169811320755,
       "pred_points": 1643,
@@ -1037,8 +1545,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 2.382959604574353e-05,
-       "median": 2.382959604574353e-05,
+       "mean": 8.058977243763366e-06,
+       "median": 8.058977243763366e-06,
        "n": 1
       },
       "f1": 0.5,
@@ -1063,9 +1571,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         170.935,
-        418.874,
+        405.014,
         473.918,
-        640.819
+        626.9590000000001
        ],
        "lines": 3,
        "markers": 8
@@ -1075,13 +1583,29 @@
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 1,
+       "curves": 4,
        "figure": "fig2",
        "frame_bbox_pt": [
-        210.247,
-        231.14700000000005,
+        204.444,
+        323.597,
         436.572,
-        405.243
+        466.936
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        79.05700000000002,
+        436.572,
+        253.15300000000002
        ],
        "lines": 1,
        "manifest": "ok (4 legend entries)",
@@ -1092,12 +1616,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 1,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         210.247,
-        473.987,
+        321.897,
         436.572,
-        648.083
+        495.993
        ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
@@ -1107,21 +1631,56 @@
      ]
     },
     "xy": {
-     "hits": 35,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.14968560058979274,
+        "median": 0.02943635627728051,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 9.087805610304956e-07,
+        "median": 9.05285009277632e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 1.6783484563558987e-07,
+        "median": 1.81827500888039e-07,
+        "n": 76
+       },
+       "found": 1,
+       "hits": 76,
+       "panels": 1,
+       "points": 76
+      }
+     },
+     "hits": 111,
      "marker_hits": 35,
      "marker_points": 48,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.08635712613289792,
-      "median": 1.8516736828291588e-07,
-      "n": 52
+      "mean": 0.035082818486831195,
+      "median": 1.8188470450105612e-07,
+      "n": 128
      },
-     "points": 52,
-     "series_pred": 7,
-     "series_pred_matched": 3,
-     "series_true": 6,
-     "series_true_matched": 3
+     "points": 128,
+     "series_pred": 14,
+     "series_pred_matched": 6,
+     "series_true": 9,
+     "series_true_matched": 5
     }
    }
   },
@@ -1129,10 +1688,10 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 2.0173842873760452e-07,
-      "mean_pred_to_true": 1.207289036323841e-07,
-      "mean_true_to_pred": 1.6115304662792508e-06,
-      "median_abs_dT_K": 9.112580667824943e-05,
+      "hausdorff95": 1.0872250733205429e-07,
+      "mean_pred_to_true": 9.030869452608862e-08,
+      "mean_true_to_pred": 1.5811262863528253e-06,
+      "median_abs_dT_K": 0.00010559730667658584,
       "median_abs_dx": 7.6714773422637e-08,
       "precision@0.01": 1.0,
       "pred_points": 2715,
@@ -1150,8 +1709,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.0003103381640130465,
-       "median": 0.0003103381640130465,
+       "mean": 5.859364102889231e-05,
+       "median": 5.859364102889231e-05,
        "n": 1
       },
       "f1": 1.0,
@@ -1176,9 +1735,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         180.759,
-        411.0810146484375,
+        397.8810146484375,
         442.952,
-        627.6960146484375
+        614.4960146484375
        ],
        "lines": 1,
        "markers": 1
@@ -1187,24 +1746,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 7,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        199.712,
+        320.4950146484375,
+        423.548,
+        458.7130146484375
+       ],
+       "lines": 5,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         205.308,
-        474.6400146484375,
+        313.6550146484375,
         423.548,
-        642.5170146484375
+        481.5320146484375
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -1213,21 +1788,67 @@
      ]
     },
     "xy": {
-     "hits": 282,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 1.137810353384412e-07,
+        "median": 1.0503208230283358e-07,
+        "n": 282
+       },
+       "found": 1,
+       "hits": 282,
+       "panels": 1,
+       "points": 282
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 1.2517859870192989e-07,
+        "median": 1.4227719113929343e-07,
+        "n": 521
+       },
+       "found": 1,
+       "hits": 521,
+       "panels": 1,
+       "points": 521
+      }
+     },
+     "hits": 803,
      "marker_hits": 0,
      "marker_points": 22,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 3.398468542731003e-07,
-      "median": 3.3762651500601605e-07,
-      "n": 282
+      "mean": 1.2117596748336974e-07,
+      "median": 1.1914443998385478e-07,
+      "n": 803
      },
-     "points": 304,
-     "series_pred": 9,
-     "series_pred_matched": 4,
-     "series_true": 6,
-     "series_true_matched": 4
+     "points": 825,
+     "series_pred": 21,
+     "series_pred_matched": 10,
+     "series_true": 11,
+     "series_true_matched": 9
     }
    }
   },
@@ -1293,19 +1914,24 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
-       "curves": 2,
+       "curves": 4,
        "figure": "fig2",
        "frame_bbox_pt": [
-        206.155,
-        249.47400000000005,
+        200.104,
+        234.72799999999995,
         442.153,
-        431.011
+        357.87
        ],
-       "lines": 0,
+       "lines": 3,
        "manifest": "ok (1 legend entries)",
        "markers": 0,
-       "vector_markers": "ok (14 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
@@ -1318,6 +1944,22 @@
         442.153,
         255.15099999999995
        ],
+       "lines": 0,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (14 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig4",
+       "frame_bbox_pt": [
+        206.155,
+        325.754,
+        442.153,
+        507.291
+       ],
        "lines": 1,
        "manifest": "ok (1 legend entries)",
        "markers": 0,
@@ -1326,21 +1968,56 @@
      ]
     },
     "xy": {
-     "hits": 26,
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 6.964905248948764e-08,
+        "median": 7.022112173651952e-08,
+        "n": 15
+       },
+       "found": 1,
+       "hits": 15,
+       "panels": 1,
+       "points": 15
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 1.219995092076557e-07,
+        "median": 1.2150108251749502e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 1.3314455498786543e-07,
+        "median": 1.1562592301887936e-07,
+        "n": 365
+       },
+       "found": 1,
+       "hits": 365,
+       "panels": 2,
+       "points": 789
+      }
+     },
+     "hits": 391,
      "marker_hits": 26,
      "marker_points": 26,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 4,
      "point_err": {
-      "mean": 9.202930910237591e-08,
-      "median": 8.360933586337527e-08,
-      "n": 26
+      "mean": 1.3039512265779387e-07,
+      "median": 1.140831864609949e-07,
+      "n": 391
      },
-     "points": 26,
-     "series_pred": 5,
-     "series_pred_matched": 3,
-     "series_true": 2,
-     "series_true_matched": 2
+     "points": 815,
+     "series_pred": 12,
+     "series_pred_matched": 6,
+     "series_true": 8,
+     "series_true_matched": 5
     }
    }
   },
@@ -1407,18 +2084,18 @@
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 1,
+       "curves": 5,
        "figure": "fig2",
        "frame_bbox_pt": [
-        206.155,
-        217.995,
-        442.151,
-        406.254
+        200.104,
+        427.026,
+        442.153,
+        576.491
        ],
-       "lines": 1,
-       "manifest": "ok (4 legend entries)",
-       "markers": 10,
-       "vector_markers": "ok (11 points)"
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
@@ -1431,6 +2108,22 @@
         442.151,
         262.379
        ],
+       "lines": 1,
+       "manifest": "ok (4 legend entries)",
+       "markers": 10,
+       "vector_markers": "ok (11 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig4",
+       "frame_bbox_pt": [
+        206.155,
+        334.665,
+        442.151,
+        522.924
+       ],
        "lines": 2,
        "manifest": "ok (2 legend entries)",
        "markers": 14,
@@ -1439,21 +2132,56 @@
      ]
     },
     "xy": {
-     "hits": 35,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.14456514826601435,
+        "median": 0.041580153681167284,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 1.177617770861965e-07,
+        "median": 1.1797671033721057e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 1.721260159967335e-07,
+        "median": 1.7458240115661326e-07,
+        "n": 332
+       },
+       "found": 1,
+       "hits": 332,
+       "panels": 1,
+       "points": 332
+      }
+     },
+     "hits": 367,
      "marker_hits": 35,
      "marker_points": 48,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.0834030221644051,
-      "median": 1.195024218586701e-07,
-      "n": 52
+      "mean": 0.011294307772335518,
+      "median": 1.7431572121551703e-07,
+      "n": 384
      },
-     "points": 52,
-     "series_pred": 9,
-     "series_pred_matched": 3,
-     "series_true": 6,
-     "series_true_matched": 3
+     "points": 384,
+     "series_pred": 18,
+     "series_pred_matched": 7,
+     "series_true": 10,
+     "series_true_matched": 7
     }
    }
   },
@@ -1519,24 +2247,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        199.712,
+        349.8900146484375,
+        423.548,
+        488.1080146484375
+       ],
+       "lines": 9,
+       "manifest": "ok (1 legend entries)",
+       "markers": 1,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 3,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         205.308,
-        479.9340146484375,
+        321.8940146484375,
         423.547,
-        654.0280146484375
+        495.9880146484375
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -1545,21 +2289,67 @@
      ]
     },
     "xy": {
-     "hits": 98,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.003052765184628257,
+        "median": 1.1909755651449021e-07,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 98,
+       "panels": 1,
+       "points": 102
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 1.7316652705846791e-07,
+        "median": 1.8087949529144332e-07,
+        "n": 436
+       },
+       "found": 1,
+       "hits": 436,
+       "panels": 1,
+       "points": 436
+      }
+     },
+     "hits": 534,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 0.0030527291507777333,
-      "median": 8.027647696471099e-08,
-      "n": 102
+      "mean": 0.000578917378137323,
+      "median": 1.77264975907423e-07,
+      "n": 538
      },
-     "points": 204,
-     "series_pred": 7,
-     "series_pred_matched": 2,
-     "series_true": 6,
-     "series_true_matched": 2
+     "points": 640,
+     "series_pred": 22,
+     "series_pred_matched": 10,
+     "series_true": 12,
+     "series_true_matched": 8
     }
    }
   },
@@ -1567,13 +2357,13 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.02787783475617761,
-      "mean_pred_to_true": 0.005096616834134496,
-      "mean_true_to_pred": 0.0016051532411505269,
-      "median_abs_dT_K": 5.574504065020136e-05,
-      "median_abs_dx": 1.2380665856404072e-07,
-      "precision@0.01": 0.8374200426439232,
-      "pred_points": 3752,
+      "hausdorff95": 0.013420559116993004,
+      "mean_pred_to_true": 0.0031309910275194547,
+      "mean_true_to_pred": 0.0016025081779249474,
+      "median_abs_dT_K": 9.085074564318951e-05,
+      "median_abs_dx": 1.2333331089742217e-07,
+      "precision@0.01": 0.885208452312964,
+      "pred_points": 3502,
       "recall@0.01": 0.9323040380047506,
       "true_samples": 2526
      },
@@ -1614,25 +2404,46 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         170.935,
-        392.474,
+        379.934,
         473.918,
-        614.419
+        601.879
        ],
        "lines": 8,
-       "markers": 29
+       "markers": 28
       }
      ],
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
-       "curves": 3,
+       "curves": 5,
        "figure": "fig2",
        "frame_bbox_pt": [
-        210.247,
-        381.472,
+        204.444,
+        233.567,
         436.572,
-        555.568
+        351.663
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 1,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 3,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        210.247,
+        79.05700000000002,
+        436.572,
+        253.15300000000002
        ],
        "lines": 0,
        "manifest": "ok (2 legend entries)",
@@ -1643,12 +2454,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         210.247,
-        79.05700000000002,
+        321.897,
         436.572,
-        253.15300000000002
+        495.993
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -1657,21 +2468,56 @@
      ]
     },
     "xy": {
-     "hits": 303,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 2.570470420199874e-07,
+        "median": 2.544499633026967e-07,
+        "n": 26
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 26
+      },
+      "GM": {
+       "err": {
+        "mean": 1.4437330052106626e-07,
+        "median": 1.5847141302074345e-07,
+        "n": 277
+       },
+       "found": 1,
+       "hits": 277,
+       "panels": 1,
+       "points": 277
+      },
+      "NP": {
+       "err": {
+        "mean": 1.236920404695955e-07,
+        "median": 9.153051887428102e-08,
+        "n": 292
+       },
+       "found": 1,
+       "hits": 292,
+       "panels": 2,
+       "points": 603
+      }
+     },
+     "hits": 595,
      "marker_hits": 26,
      "marker_points": 26,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 4,
      "point_err": {
-      "mean": 1.3428168360768708e-07,
-      "median": 1.332080352147582e-07,
-      "n": 303
+      "mean": 1.3914740025878473e-07,
+      "median": 1.1125855198099104e-07,
+      "n": 595
      },
-     "points": 303,
-     "series_pred": 14,
-     "series_pred_matched": 7,
-     "series_true": 6,
-     "series_true_matched": 6
+     "points": 906,
+     "series_pred": 24,
+     "series_pred_matched": 12,
+     "series_true": 14,
+     "series_true_matched": 10
     }
    }
   },
@@ -1679,11 +2525,11 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.20406364749696054,
-      "mean_pred_to_true": 5.8245568449115165e-08,
-      "mean_true_to_pred": 0.028630586157356485,
-      "median_abs_dT_K": 6.355425867243802e-05,
-      "median_abs_dx": 3.401299608629671e-08,
+      "hausdorff95": 0.20406364749924144,
+      "mean_pred_to_true": 5.620142049227515e-08,
+      "mean_true_to_pred": 0.02863058478690383,
+      "median_abs_dT_K": 6.35577989682723e-05,
+      "median_abs_dx": 2.8945155938764344e-08,
       "precision@0.01": 1.0,
       "pred_points": 1867,
       "recall@0.01": 0.7944118661607451,
@@ -1700,8 +2546,8 @@
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 3.255645009403452e-05,
-       "median": 3.255645009403452e-05,
+       "mean": 3.255999007478749e-05,
+       "median": 3.255999007478749e-05,
        "n": 2
       },
       "f1": 1.0,
@@ -1726,9 +2572,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         161.629,
-        413.0290146484375,
+        426.8890146484375,
         466.736,
-        636.5300146484375
+        650.3900146484375
        ],
        "lines": 5,
        "markers": 2
@@ -1738,13 +2584,29 @@
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 2,
+       "curves": 3,
        "figure": "fig2",
        "frame_bbox_pt": [
-        201.216,
-        236.11401464843755,
+        195.372,
+        370.1950146484375,
         429.127,
-        411.4300146484375
+        514.5380146484375
+       ],
+       "lines": 4,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 2,
+       "figure": "fig3",
+       "frame_bbox_pt": [
+        201.216,
+        73.14901464843751,
+        429.127,
+        248.46501464843755
        ],
        "lines": 2,
        "manifest": "ok (1 legend entries)",
@@ -1755,12 +2617,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 2,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         201.216,
-        480.4790146484375,
+        317.5140146484375,
         429.127,
-        655.7950146484375
+        492.8300146484375
        ],
        "lines": 1,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -1769,21 +2631,56 @@
      ]
     },
     "xy": {
-     "hits": 104,
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 1.203173327461468e-07,
+        "median": 1.1509729731880612e-07,
+        "n": 53
+       },
+       "found": 1,
+       "hits": 53,
+       "panels": 1,
+       "points": 53
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 1.0260001024164701e-07,
+        "median": 6.013509331084027e-08,
+        "n": 51
+       },
+       "found": 1,
+       "hits": 51,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 1.9909838515869768e-07,
+        "median": 1.8823229992833664e-07,
+        "n": 474
+       },
+       "found": 1,
+       "hits": 474,
+       "panels": 1,
+       "points": 474
+      }
+     },
+     "hits": 578,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 7.907512175606402e-08,
-      "median": 7.478681612706924e-08,
-      "n": 104
+      "mean": 1.8335995453822227e-07,
+      "median": 1.858996266763366e-07,
+      "n": 578
      },
-     "points": 104,
-     "series_pred": 7,
-     "series_pred_matched": 3,
-     "series_true": 2,
-     "series_true_matched": 2
+     "points": 578,
+     "series_pred": 14,
+     "series_pred_matched": 6,
+     "series_true": 5,
+     "series_true_matched": 5
     }
    }
   },
@@ -1849,24 +2746,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        204.444,
+        387.372,
+        436.572,
+        530.711
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 2,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         210.247,
-        79.05700000000002,
+        321.897,
         436.572,
-        253.15300000000002
+        495.993
        ],
        "lines": 0,
        "manifest": "ok (1 legend entries)",
@@ -1876,21 +2789,67 @@
      ]
     },
     "xy": {
-     "hits": 10,
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 4.9681862977080315e-08,
+        "median": 4.655632244398669e-08,
+        "n": 10
+       },
+       "found": 1,
+       "hits": 10,
+       "panels": 1,
+       "points": 10
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 1.1039300315987784e-07,
+        "median": 1.0558977289059527e-07,
+        "n": 280
+       },
+       "found": 1,
+       "hits": 280,
+       "panels": 1,
+       "points": 280
+      }
+     },
+     "hits": 290,
      "marker_hits": 10,
      "marker_points": 32,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 1.1956661620638975e-07,
-      "median": 1.2105725577345643e-07,
-      "n": 10
+      "mean": 1.0829951556736759e-07,
+      "median": 1.0558874033897399e-07,
+      "n": 290
      },
-     "points": 32,
-     "series_pred": 2,
-     "series_pred_matched": 1,
-     "series_true": 3,
-     "series_true_matched": 1
+     "points": 312,
+     "series_pred": 9,
+     "series_pred_matched": 4,
+     "series_true": 6,
+     "series_true_matched": 4
     }
    }
   },
@@ -1898,10 +2857,10 @@
    "vector": {
     "phase_diagram": {
      "boundary": {
-      "hausdorff95": 0.32036844950047233,
-      "mean_pred_to_true": 1.4666920439603616e-07,
-      "mean_true_to_pred": 0.06758713249310166,
-      "median_abs_dT_K": 0.00017954332593161926,
+      "hausdorff95": 0.32036840444647235,
+      "mean_pred_to_true": 1.2874431004208866e-07,
+      "mean_true_to_pred": 0.0675871089646747,
+      "median_abs_dT_K": 6.916102572029903e-05,
       "median_abs_dx": 1.2002705218616683e-07,
       "precision@0.01": 1.0,
       "pred_points": 2087,
@@ -1912,15 +2871,15 @@
       "f1": null,
       "loose_precision": null,
       "n_pred": 0,
-      "n_true": 16,
+      "n_true": 15,
       "precision": null,
       "recall": 0.0
      },
      "found": true,
      "invariants": {
       "T_abs_err_K": {
-       "mean": 0.00025991660834279173,
-       "median": 0.00025991660834279173,
+       "mean": 0.00014953430684272462,
+       "median": 0.00014953430684272462,
        "n": 2
       },
       "f1": 0.5,
@@ -1945,9 +2904,9 @@
        "figure": "fig1",
        "frame_bbox_pt": [
         170.935,
-        418.874,
+        405.014,
         473.918,
-        640.819
+        626.9590000000001
        ],
        "lines": 6,
        "markers": 7
@@ -1956,24 +2915,45 @@
      "xy": [
       {
        "axes": "a",
-       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
        "figure": "fig2"
       },
       {
        "axes": "b",
+       "calibration": "ok",
+       "curves": 4,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        204.444,
+        387.342,
+        436.572,
+        505.438
+       ],
+       "lines": 5,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 3,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         210.247,
-        79.05700000000002,
+        321.897,
         436.572,
-        253.15300000000002
+        495.993
        ],
        "lines": 2,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -1982,21 +2962,67 @@
      ]
     },
     "xy": {
-     "hits": 98,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 2.3093999278369878e-07,
+        "median": 2.270021670755972e-07,
+        "n": 98
+       },
+       "found": 1,
+       "hits": 98,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 1.1870563276625603e-07,
+        "median": 9.629060402917175e-08,
+        "n": 747
+       },
+       "found": 1,
+       "hits": 747,
+       "panels": 2,
+       "points": 1458
+      }
+     },
+     "hits": 845,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 5,
      "point_err": {
-      "mean": 2.5456435546341617e-07,
-      "median": 2.5074292131652016e-07,
-      "n": 98
+      "mean": 1.3172216209372276e-07,
+      "median": 1.2783557568956608e-07,
+      "n": 845
      },
-     "points": 200,
-     "series_pred": 5,
-     "series_pred_matched": 2,
-     "series_true": 4,
-     "series_true_matched": 2
+     "points": 1658,
+     "series_pred": 14,
+     "series_pred_matched": 6,
+     "series_true": 11,
+     "series_true_matched": 6
     }
    }
   },
@@ -2056,20 +3082,36 @@
         586.9639999999999
        ],
        "lines": 7,
-       "markers": 15
+       "markers": 18
       }
      ],
      "xy": [
       {
        "axes": "a",
        "calibration": "ok",
-       "curves": 1,
+       "curves": 4,
        "figure": "fig2",
        "frame_bbox_pt": [
+        200.104,
+        317.511,
+        442.153,
+        466.976
+       ],
+       "lines": 3,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "curves": 1,
+       "figure": "fig3",
+       "frame_bbox_pt": [
         206.155,
-        208.04499999999996,
+        74.12,
         442.151,
-        396.304
+        262.379
        ],
        "lines": 1,
        "manifest": "ok (4 legend entries)",
@@ -2080,12 +3122,12 @@
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         206.155,
-        74.12,
+        334.665,
         442.151,
-        262.379
+        522.924
        ],
        "lines": 4,
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
@@ -2094,21 +3136,56 @@
      ]
     },
     "xy": {
-     "hits": 327,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 1.2869853444226638e-07,
+        "median": 1.2792043458376434e-07,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 305,
+       "panels": 1,
+       "points": 305
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 1.3170016659457463e-07,
+        "median": 1.3063334401201035e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 2.7688148981260336e-07,
+        "median": 2.8394526272697256e-07,
+        "n": 87
+       },
+       "found": 1,
+       "hits": 87,
+       "panels": 1,
+       "points": 87
+      }
+     },
+     "hits": 414,
      "marker_hits": 22,
      "marker_points": 22,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 1.5885509571860878e-07,
-      "median": 1.5958745859993957e-07,
-      "n": 327
+      "mean": 1.5999793788325696e-07,
+      "median": 1.304559989594229e-07,
+      "n": 414
      },
-     "points": 327,
-     "series_pred": 13,
-     "series_pred_matched": 6,
-     "series_true": 6,
-     "series_true_matched": 6
+     "points": 414,
+     "series_pred": 20,
+     "series_pred_matched": 9,
+     "series_true": 9,
+     "series_true_matched": 9
     }
    }
   },
@@ -2174,24 +3251,40 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "curves": 5,
+       "figure": "fig2",
+       "frame_bbox_pt": [
+        199.712,
+        310.59501464843754,
+        423.548,
+        448.8130146484375
+       ],
+       "lines": 7,
+       "manifest": "ok (1 legend entries)",
+       "markers": 0,
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "curves": 5,
-       "figure": "fig3",
+       "figure": "fig4",
        "frame_bbox_pt": [
         205.308,
-        449.8790146484375,
+        321.8940146484375,
         423.547,
-        623.9730146484375
+        495.9880146484375
        ],
        "lines": 4,
        "manifest": "ok (1 legend entries)",
@@ -2201,21 +3294,67 @@
      ]
     },
     "xy": {
-     "hits": 305,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 9.057639615170204e-08,
+        "median": 8.785276565765586e-08,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 305,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 1.1846528372533271e-07,
+        "median": 7.091194139531305e-08,
+        "n": 296
+       },
+       "found": 1,
+       "hits": 296,
+       "panels": 1,
+       "points": 296
+      }
+     },
+     "hits": 601,
      "marker_hits": 0,
      "marker_points": 22,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 1.142912124835423e-07,
-      "median": 1.2516301458362695e-07,
-      "n": 305
+      "mean": 1.0431202131275807e-07,
+      "median": 8.500584947083578e-08,
+      "n": 601
      },
-     "points": 327,
-     "series_pred": 9,
-     "series_pred_matched": 4,
-     "series_true": 6,
-     "series_true_matched": 4
+     "points": 623,
+     "series_pred": 21,
+     "series_pred_matched": 10,
+     "series_true": 11,
+     "series_true_matched": 9
     }
    }
   }

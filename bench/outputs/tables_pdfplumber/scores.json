@@ -2,14 +2,68 @@
  "aggregate": {
   "vector": {
    "documents": 20,
-   "tables": {
-    "cell_exact": 0.36595174262734587,
-    "cell_exact_normalised": 0.36595174262734587,
-    "cells": 746,
-    "numeric_exact": 0.40431266846361186,
+   "invariant_table": {
+    "T_err_K_median": 0.0,
+    "T_printed_exact": 1.0,
+    "cell_exact": 0.6651376146788991,
+    "cell_exact_normalised": 0.6651376146788991,
+    "cells": 654,
+    "citation_accuracy": 1.0,
+    "evidence_accuracy": 1.0,
+    "numeric_exact": 0.8729096989966555,
     "numeric_rel_err_median": 0.0,
-    "tables_pred": 70,
-    "tables_true": 40
+    "row_precision": 0.9767441860465116,
+    "row_recall": 0.5915492957746479,
+    "rows_pred": 43,
+    "rows_true": 71,
+    "type_accuracy": 1.0,
+    "x_err_median": 0.0,
+    "x_printed_exact": 1.0,
+    "x_recall": 1.0
+   },
+   "phase_stability": {
+    "T_high_err_K_median": 0.0,
+    "T_low_err_K_median": 0.0,
+    "cell_exact": 0.6105263157894737,
+    "cell_exact_normalised": 0.6105263157894737,
+    "cells": 760,
+    "homogeneity_T_err_K_median": 0.0,
+    "homogeneity_x_err_median": 0.0,
+    "numeric_exact": 0.5643939393939394,
+    "numeric_rel_err_median": 0.0,
+    "pearson_accuracy": 0.9642857142857143,
+    "prototype_accuracy": 0.8928571428571429,
+    "row_precision": 1.0,
+    "row_recall": 0.8484848484848485,
+    "rows_pred": 56,
+    "rows_true": 66,
+    "structure_accuracy": 0.9285714285714286,
+    "strukturbericht_accuracy": 0.9285714285714286
+   },
+   "tables": {
+    "cell_exact": 0.7587591240875913,
+    "cell_exact_normalised": 0.7587591240875913,
+    "cells": 2740,
+    "numeric_exact": 0.8847352024922118,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 149,
+    "tables_true": 81
+   },
+   "thermo_tables": {
+    "basis_accuracy": 1.0,
+    "cell_exact": 0.8909229595728452,
+    "cell_exact_normalised": 0.8909229595728452,
+    "cells": 1311,
+    "numeric_exact": 0.9689320388349515,
+    "numeric_rel_err_median": 0.0,
+    "record_precision": 0.7514285714285714,
+    "record_recall": 0.653416149068323,
+    "records_pred": 700,
+    "records_true": 805,
+    "rel_err_median": 0.0,
+    "unit_accuracy": 0.9372623574144486,
+    "value_exact": 0.8422053231939164,
+    "within_1pct": 0.8422053231939164
    }
   }
  },
@@ -17,399 +71,1251 @@
  "per_document": {
   "syn-AgCu-06He-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.125,
-     "cell_exact_normalised": 0.125,
-     "numeric_exact": 0.0,
+     "cell_exact": 0.6967213114754098,
+     "cell_exact_normalised": 0.6967213114754098,
+     "numeric_exact": 0.8641975308641975,
      "numeric_rel_err": {
-      "mean": 172460470.45753345,
-      "median": 62.937639198218264,
-      "n": 5
+      "mean": 0.20152946020666987,
+      "median": 0.0,
+      "n": 72
      },
      "per_table": [
       {
        "cells": 12,
-       "exact": 0,
-       "exact_norm": 0,
+       "exact": 5,
+       "exact_norm": 5,
        "id": "invariants",
        "num_cells": 4,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 318.7343333333333,
+        "median": 5.403,
+        "n": 3
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
        "num_exact": 0,
        "numeric_abs_err": {
         "mean": null,
         "median": null,
         "n": 0
-       }
+       },
+       "segments": 1
       },
       {
        "cells": 12,
-       "exact": 3,
-       "exact_norm": 3,
+       "exact": 9,
+       "exact_norm": 9,
        "id": "rk_liquid",
        "num_cells": 6,
-       "num_exact": 0,
+       "num_exact": 6,
        "numeric_abs_err": {
-        "mean": 3962.0032720000004,
-        "median": 929.7211,
-        "n": 5
-       }
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 71,
+       "exact_norm": 71,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 3,
-     "tables_true": 2
+     "tables_pred": 5,
+     "tables_true": 4
     }
    }
   },
   "syn-AgNi-04Din-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 740.5275,
+      "median": 617.45,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 0,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 4
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 20,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.0625,
-     "cell_exact_normalised": 0.0625,
-     "numeric_exact": 0.21428571428571427,
+     "cell_exact": 0.5555555555555556,
+     "cell_exact_normalised": 0.5555555555555556,
+     "numeric_exact": 0.7446808510638298,
      "numeric_rel_err": {
-      "mean": 3350504211.9409604,
+      "mean": 314.5365794189963,
       "median": 0.0,
-      "n": 5
+      "n": 41
      },
      "per_table": [
       {
-       "cells": 19,
-       "exact": 1,
-       "exact_norm": 1,
+       "cells": 20,
+       "exact": 8,
+       "exact_norm": 8,
        "id": "invariants",
        "num_cells": 8,
-       "num_exact": 2,
+       "num_exact": 8,
        "numeric_abs_err": {
-        "mean": 0.004113333333331563,
+        "mean": 0.0,
         "median": 0.0,
-        "n": 3
-       }
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 9,
+       "exact_norm": 9,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 599.05,
+        "median": 481.55000000000007,
+        "n": 4
+       },
+       "segments": 1
       },
       {
        "cells": 13,
-       "exact": 1,
-       "exact_norm": 1,
+       "exact": 3,
+       "exact_norm": 3,
        "id": "rk_liquid",
        "num_cells": 6,
-       "num_exact": 1,
+       "num_exact": 2,
        "numeric_abs_err": {
-        "mean": 59632818421.05963,
-        "median": 59632818421.05963,
-        "n": 2
-       }
+        "mean": 19429.489025,
+        "median": 7329.093417499999,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 3,
-     "tables_true": 2
+     "tables_pred": 7,
+     "tables_true": 4
     }
    }
   },
   "syn-AgSn-12Gie-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "T_printed_exact": 3,
+     "cite_n": 2,
+     "cite_ok": 2,
+     "ev_n": 3,
+     "ev_ok": 3,
+     "matched": 3,
+     "rows_pred": 3,
+     "rows_true": 3,
+     "type_ok": 3,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "x_n": 9,
+     "x_printed_exact": 9
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 601.1750000000001,
+      "median": 569.25,
+      "n": 4
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "matched": 4,
+     "pearson_ok": 4,
+     "proto_ok": 4,
+     "rows_pred": 4,
+     "rows_true": 4,
+     "sb_ok": 4,
+     "struct_n": 12,
+     "struct_ok": 12
+    },
+    "property_records": {
+     "basis_ok": 6,
+     "matched": 6,
+     "records_pred": 33,
+     "records_true": 42,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "unit_ok": 6,
+     "value_exact": 6,
+     "within_1pct": 6
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 1.0,
-     "cell_exact_normalised": 1.0,
+     "cell_exact": 0.7985611510791367,
+     "cell_exact_normalised": 0.7985611510791367,
+     "numeric_exact": 0.8072289156626506,
+     "numeric_rel_err": {
+      "mean": 15631645571.212252,
+      "median": 0.0,
+      "n": 79
+     },
+     "per_table": [
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "invariants",
+       "num_cells": 14,
+       "num_exact": 14,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 14
+       },
+       "segments": 1
+      },
+      {
+       "cells": 43,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "phases",
+       "num_cells": 16,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 671.4166666666666,
+        "median": 715.0,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 15,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "formation",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 47,
+       "exact_norm": 47,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_printed_exact": 2,
+     "cite_n": 2,
+     "cite_ok": 2,
+     "ev_n": 2,
+     "ev_ok": 2,
+     "matched": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "type_ok": 2,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "x_n": 6,
+     "x_printed_exact": 6
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 465.34975,
+      "median": 465.3495,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 30,
+     "matched": 30,
+     "records_pred": 30,
+     "records_true": 30,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 30
+     },
+     "unit_ok": 30,
+     "value_exact": 30,
+     "within_1pct": 30
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.956140350877193,
+     "cell_exact_normalised": 0.956140350877193,
      "numeric_exact": 1.0,
      "numeric_rel_err": {
       "mean": 0.0,
       "median": 0.0,
-      "n": 18
+      "n": 59
      },
      "per_table": [
       {
-       "cells": 25,
-       "exact": 25,
-       "exact_norm": 25,
+       "cells": 26,
+       "exact": 26,
+       "exact_norm": 26,
        "id": "invariants",
+       "num_cells": 10,
+       "num_exact": 10,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 10
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 13,
+       "exact_norm": 13,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 51,
+       "exact_norm": 51,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 2
+      }
+     ],
+     "tables_pred": 8,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "T_printed_exact": 8,
+     "cite_n": 6,
+     "cite_ok": 6,
+     "ev_n": 8,
+     "ev_ok": 8,
+     "matched": 8,
+     "rows_pred": 8,
+     "rows_true": 8,
+     "type_ok": 8,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 23
+     },
+     "x_n": 23,
+     "x_printed_exact": 23
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 250.3252,
+      "median": 135.12599999999998,
+      "n": 5
+     },
+     "hom_err": {
+      "mean": 1.375826,
+      "median": 0.0,
+      "n": 10
+     },
+     "matched": 5,
+     "pearson_ok": 5,
+     "proto_ok": 3,
+     "rows_pred": 5,
+     "rows_true": 5,
+     "sb_ok": 5,
+     "struct_n": 15,
+     "struct_ok": 13
+    },
+    "property_records": {
+     "basis_ok": 45,
+     "matched": 45,
+     "records_pred": 45,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 45
+     },
+     "unit_ok": 45,
+     "value_exact": 45,
+     "within_1pct": 45
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.8097560975609757,
+     "cell_exact_normalised": 0.8097560975609757,
+     "numeric_exact": 0.9298245614035088,
+     "numeric_rel_err": {
+      "mean": 0.22076658565748847,
+      "median": 0.0,
+      "n": 110
+     },
+     "per_table": [
+      {
+       "cells": 72,
+       "exact": 56,
+       "exact_norm": 56,
+       "id": "invariants",
+       "num_cells": 37,
+       "num_exact": 37,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 37
+       },
+       "segments": 1
+      },
+      {
+       "cells": 62,
+       "exact": 39,
+       "exact_norm": 39,
+       "id": "phases",
+       "num_cells": 20,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 68.120375,
+        "median": 0.0,
+        "n": 16
+       },
+       "segments": 2
+      },
+      {
+       "cells": 21,
+       "exact": 21,
+       "exact_norm": 21,
+       "id": "formation",
        "num_cells": 12,
        "num_exact": 12,
        "numeric_abs_err": {
         "mean": 0.0,
         "median": 0.0,
         "n": 12
-       }
+       },
+       "segments": 1
       },
       {
-       "cells": 13,
-       "exact": 13,
-       "exact_norm": 13,
-       "id": "formation",
-       "num_cells": 6,
-       "num_exact": 6,
+       "cells": 50,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
        "numeric_abs_err": {
         "mean": 0.0,
         "median": 0.0,
-        "n": 6
-       }
+        "n": 45
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-AlBi-06Kim-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 1.0,
-     "cell_exact_normalised": 1.0,
-     "numeric_exact": 1.0,
-     "numeric_rel_err": {
-      "mean": 0.0,
-      "median": 0.0,
-      "n": 14
-     },
-     "per_table": [
-      {
-       "cells": 19,
-       "exact": 19,
-       "exact_norm": 19,
-       "id": "invariants",
-       "num_cells": 8,
-       "num_exact": 8,
-       "numeric_abs_err": {
-        "mean": 0.0,
-        "median": 0.0,
-        "n": 8
-       }
-      },
-      {
-       "cells": 13,
-       "exact": 13,
-       "exact_norm": 13,
-       "id": "rk_liquid",
-       "num_cells": 6,
-       "num_exact": 6,
-       "numeric_abs_err": {
-        "mean": 0.0,
-        "median": 0.0,
-        "n": 6
-       }
-      }
-     ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-AlCu-02Mie-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.015625,
-     "cell_exact_normalised": 0.015625,
-     "numeric_exact": 0.0,
-     "numeric_rel_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
-     },
-     "per_table": [
-      {
-       "cells": 48,
-       "exact": 0,
-       "exact_norm": 0,
-       "id": "invariants",
-       "num_cells": 28,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
-      },
-      {
-       "cells": 16,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "formation",
-       "num_cells": 9,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
-      }
-     ],
-     "tables_pred": 2,
-     "tables_true": 2
+     "tables_pred": 8,
+     "tables_true": 4
     }
    }
   },
   "syn-AlMg-12Tan-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_printed_exact": 7,
+     "cite_n": 5,
+     "cite_ok": 5,
+     "ev_n": 7,
+     "ev_ok": 7,
+     "matched": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "type_ok": 7,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 19
+     },
+     "x_n": 19,
+     "x_printed_exact": 19
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 5,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 9,
+     "matched": 9,
+     "records_pred": 36,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "unit_ok": 9,
+     "value_exact": 9,
+     "within_1pct": 9
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 1.0,
-     "cell_exact_normalised": 1.0,
-     "numeric_exact": 1.0,
+     "cell_exact": 0.7351351351351352,
+     "cell_exact_normalised": 0.7351351351351352,
+     "numeric_exact": 0.8240740740740741,
      "numeric_rel_err": {
-      "mean": 0.0,
+      "mean": 467000000.08540726,
       "median": 0.0,
-      "n": 29
+      "n": 100
      },
      "per_table": [
       {
-       "cells": 36,
-       "exact": 36,
-       "exact_norm": 36,
+       "cells": 64,
+       "exact": 64,
+       "exact_norm": 64,
        "id": "invariants",
+       "num_cells": 31,
+       "num_exact": 31,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 31
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 5,
+       "exact_norm": 5,
+       "id": "phases",
+       "num_cells": 20,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 352.97499999999997,
+        "median": 257.35,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 20,
+       "exact": 20,
+       "exact_norm": 20,
+       "id": "formation",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 47,
+       "exact_norm": 47,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "T_printed_exact": 9,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 9,
+     "rows_pred": 9,
+     "rows_true": 9,
+     "type_ok": 9,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 769.4008571428573,
+      "median": 856.6450000000001,
+      "n": 7
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 35,
+     "matched": 35,
+     "records_pred": 35,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 1974.978675270175,
+      "median": 0.9999012567324955,
+      "n": 35
+     },
+     "unit_ok": 25,
+     "value_exact": 9,
+     "within_1pct": 9
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.7251184834123223,
+     "cell_exact_normalised": 0.7251184834123223,
+     "numeric_exact": 0.7413793103448276,
+     "numeric_rel_err": {
+      "mean": 6057798308.039842,
+      "median": 0.0,
+      "n": 109
+     },
+     "per_table": [
+      {
+       "cells": 60,
+       "exact": 60,
+       "exact_norm": 60,
+       "id": "invariants",
+       "num_cells": 33,
+       "num_exact": 33,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 33
+       },
+       "segments": 1
+      },
+      {
+       "cells": 78,
+       "exact": 34,
+       "exact_norm": 34,
+       "id": "phases",
+       "num_cells": 28,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 992.781523809524,
+        "median": 1046.276,
+        "n": 21
+       },
+       "segments": 2
+      },
+      {
+       "cells": 30,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "formation",
        "num_cells": 20,
        "num_exact": 20,
        "numeric_abs_err": {
         "mean": 0.0,
         "median": 0.0,
         "n": 20
-       }
+       },
+       "segments": 1
       },
       {
-       "cells": 16,
-       "exact": 16,
-       "exact_norm": 16,
-       "id": "formation",
-       "num_cells": 9,
-       "num_exact": 9,
+       "cells": 43,
+       "exact": 34,
+       "exact_norm": 34,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 33,
        "numeric_abs_err": {
-        "mean": 0.0,
+        "mean": 0.002463274285714321,
         "median": 0.0,
-        "n": 9
-       }
+        "n": 35
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 5,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-AlNi-14Zhu-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 1.0,
-     "cell_exact_normalised": 1.0,
-     "numeric_exact": 1.0,
-     "numeric_rel_err": {
-      "mean": 0.0,
-      "median": 0.0,
-      "n": 39
-     },
-     "per_table": [
-      {
-       "cells": 42,
-       "exact": 42,
-       "exact_norm": 42,
-       "id": "invariants",
-       "num_cells": 24,
-       "num_exact": 24,
-       "numeric_abs_err": {
-        "mean": 0.0,
-        "median": 0.0,
-        "n": 24
-       }
-      },
-      {
-       "cells": 24,
-       "exact": 24,
-       "exact_norm": 24,
-       "id": "formation",
-       "num_cells": 15,
-       "num_exact": 15,
-       "numeric_abs_err": {
-        "mean": 0.0,
-        "median": 0.0,
-        "n": 15
-       }
-      }
-     ],
-     "tables_pred": 5,
-     "tables_true": 2
+     "tables_pred": 9,
+     "tables_true": 4
     }
    }
   },
   "syn-AlSi-12Tan-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 0,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 6,
+     "struct_ok": 2
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 20,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.07692307692307693,
-     "cell_exact_normalised": 0.07692307692307693,
-     "numeric_exact": 0.1,
+     "cell_exact": 0.4819277108433735,
+     "cell_exact_normalised": 0.4819277108433735,
+     "numeric_exact": 0.8181818181818182,
      "numeric_rel_err": {
-      "mean": 1.00000002589924,
-      "median": 1.00000002589924,
-      "n": 2
+      "mean": 2625.022151306471,
+      "median": 0.0,
+      "n": 42
      },
      "per_table": [
       {
-       "cells": 13,
-       "exact": 0,
-       "exact_norm": 0,
+       "cells": 16,
+       "exact": 1,
+       "exact_norm": 1,
        "id": "invariants",
-       "num_cells": 4,
-       "num_exact": 0,
+       "num_cells": 5,
+       "num_exact": 1,
        "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
+        "mean": 734.2524,
+        "median": 842.2,
+        "n": 5
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 6,
+       "exact_norm": 6,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
       },
       {
        "cells": 13,
-       "exact": 2,
-       "exact_norm": 2,
+       "exact": 3,
+       "exact_norm": 3,
        "id": "rk_liquid",
        "num_cells": 6,
-       "num_exact": 1,
+       "num_exact": 2,
        "numeric_abs_err": {
-        "mean": 13842.1053585,
-        "median": 13842.1053585,
-        "n": 2
-       }
+        "mean": 429.4405025,
+        "median": 0.228665,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 4,
-     "tables_true": 2
+     "tables_pred": 7,
+     "tables_true": 4
     }
    }
   },
   "syn-AlZn-93Mey-LB-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_printed_exact": 2,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "type_ok": 2,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "x_n": 6,
+     "x_printed_exact": 6
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 3.3874054917959984,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 19,
+     "within_1pct": 19
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 1.0,
-     "cell_exact_normalised": 1.0,
+     "cell_exact": 0.9448818897637795,
+     "cell_exact_normalised": 0.9448818897637795,
      "numeric_exact": 1.0,
      "numeric_rel_err": {
       "mean": 0.0,
       "median": 0.0,
-      "n": 11
+      "n": 82
      },
      "per_table": [
       {
-       "cells": 19,
-       "exact": 19,
-       "exact_norm": 19,
+       "cells": 20,
+       "exact": 20,
+       "exact_norm": 20,
        "id": "invariants",
        "num_cells": 8,
        "num_exact": 8,
@@ -417,7 +1323,22 @@
         "mean": 0.0,
         "median": 0.0,
         "n": 8
-       }
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 27,
+       "exact_norm": 27,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
       },
       {
        "cells": 9,
@@ -430,528 +1351,1635 @@
         "mean": 0.0,
         "median": 0.0,
         "n": 3
-       }
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 64,
+       "exact_norm": 64,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 4,
-     "tables_true": 2
+     "tables_pred": 7,
+     "tables_true": 4
     }
    }
   },
   "syn-BiSn-08Li-v0": {
    "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.0,
-     "cell_exact_normalised": 0.0,
-     "numeric_exact": 0.0,
-     "numeric_rel_err": {
+    "invariant_rows": {
+     "T_err": {
       "mean": null,
       "median": null,
       "n": 0
      },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 251.17774999999997,
+      "median": 251.20549999999997,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.7950819672131147,
+     "cell_exact_normalised": 0.7950819672131147,
+     "numeric_exact": 0.9390243902439024,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 77
+     },
      "per_table": [
       {
-       "cells": 12,
+       "cells": 16,
        "exact": 0,
        "exact_norm": 0,
        "id": "invariants",
-       "num_cells": 4,
+       "num_cells": 5,
        "num_exact": 0,
        "numeric_abs_err": {
         "mean": null,
         "median": null,
         "n": 0
-       }
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
       },
       {
        "cells": 12,
-       "exact": 0,
-       "exact_norm": 0,
+       "exact": 8,
+       "exact_norm": 8,
        "id": "rk_liquid",
        "num_cells": 6,
-       "num_exact": 0,
+       "num_exact": 6,
        "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 6
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 5,
-     "tables_true": 2
+     "tables_pred": 8,
+     "tables_true": 4
     }
    }
   },
   "syn-CrFe-11Xio-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 0,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 6,
+     "struct_ok": 2
+    },
+    "property_records": {
+     "basis_ok": 3,
+     "matched": 3,
+     "records_pred": 39,
+     "records_true": 57,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "unit_ok": 3,
+     "value_exact": 3,
+     "within_1pct": 3
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.13636363636363635,
-     "cell_exact_normalised": 0.13636363636363635,
-     "numeric_exact": 0.5714285714285714,
+     "cell_exact": 0.752,
+     "cell_exact_normalised": 0.752,
+     "numeric_exact": 1.0,
      "numeric_rel_err": {
-      "mean": 0.2,
+      "mean": 0.0,
       "median": 0.0,
-      "n": 5
+      "n": 82
      },
      "per_table": [
       {
-       "cells": 13,
-       "exact": 2,
-       "exact_norm": 2,
+       "cells": 20,
+       "exact": 8,
+       "exact_norm": 8,
        "id": "invariants",
-       "num_cells": 4,
-       "num_exact": 2,
+       "num_cells": 7,
+       "num_exact": 7,
        "numeric_abs_err": {
         "mean": 0.0,
         "median": 0.0,
-        "n": 2
-       }
+        "n": 7
+       },
+       "segments": 1
       },
       {
-       "cells": 9,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "formation",
-       "num_cells": 3,
-       "num_exact": 2,
+       "cells": 24,
+       "exact": 11,
+       "exact_norm": 11,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
        "numeric_abs_err": {
-        "mean": 11.520000000000001,
+        "mean": 0.0,
         "median": 0.0,
-        "n": 3
-       }
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 11,
+       "exact": 11,
+       "exact_norm": 11,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 64,
+       "exact_norm": 64,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 3,
-     "tables_true": 2
+     "tables_pred": 7,
+     "tables_true": 4
     }
    }
   },
   "syn-CuMg-16Hal-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 5,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "matched": 4,
+     "pearson_ok": 4,
+     "proto_ok": 4,
+     "rows_pred": 4,
+     "rows_true": 4,
+     "sb_ok": 4,
+     "struct_n": 12,
+     "struct_ok": 12
+    },
+    "property_records": {
+     "basis_ok": 26,
+     "matched": 26,
+     "records_pred": 26,
+     "records_true": 26,
+     "rel_err": {
+      "mean": 1495.278598112756,
+      "median": 0.0,
+      "n": 26
+     },
+     "unit_ok": 24,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.3333333333333333,
-     "cell_exact_normalised": 0.3333333333333333,
-     "numeric_exact": 0.3333333333333333,
+     "cell_exact": 0.6640625,
+     "cell_exact_normalised": 0.6640625,
+     "numeric_exact": 0.8169014084507042,
      "numeric_rel_err": {
-      "mean": 0.2769487073205479,
+      "mean": 0.16539112557005095,
       "median": 0.0,
-      "n": 10
+      "n": 70
      },
      "per_table": [
       {
-       "cells": 24,
-       "exact": 10,
-       "exact_norm": 10,
+       "cells": 42,
+       "exact": 16,
+       "exact_norm": 16,
        "id": "invariants",
-       "num_cells": 12,
-       "num_exact": 6,
+       "num_cells": 22,
+       "num_exact": 13,
        "numeric_abs_err": {
-        "mean": 9.833333333333334,
+        "mean": 166.87142857142857,
         "median": 0.0,
-        "n": 9
-       }
+        "n": 21
+       },
+       "segments": 1
       },
       {
-       "cells": 12,
-       "exact": 2,
-       "exact_norm": 2,
-       "id": "formation",
-       "num_cells": 6,
-       "num_exact": 0,
+       "cells": 40,
+       "exact": 35,
+       "exact_norm": 35,
+       "id": "phases",
+       "num_cells": 16,
+       "num_exact": 16,
        "numeric_abs_err": {
-        "mean": 12.2,
-        "median": 12.2,
-        "n": 1
-       }
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 16
+       },
+       "segments": 1
+      },
+      {
+       "cells": 16,
+       "exact": 4,
+       "exact_norm": 4,
+       "id": "formation",
+       "num_cells": 8,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 31.617500000000003,
+        "median": 15.75,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 6,
-     "tables_true": 2
+     "tables_pred": 10,
+     "tables_true": 4
     }
    }
   },
   "syn-CuNi-87Jan-v0": {
    "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.0,
-     "cell_exact_normalised": 0.0,
-     "numeric_exact": 0.0,
-     "numeric_rel_err": {
+    "invariant_rows": {
+     "T_err": {
       "mean": null,
       "median": null,
       "n": 0
      },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "matched": 1,
+     "pearson_ok": 1,
+     "proto_ok": 1,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "sb_ok": 1,
+     "struct_n": 3,
+     "struct_ok": 3
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 15,
+     "records_true": 20,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.72,
+     "cell_exact_normalised": 0.72,
+     "numeric_exact": 0.9272727272727272,
+     "numeric_rel_err": {
+      "mean": 0.0188679405724554,
+      "median": 0.0,
+      "n": 53
+     },
      "per_table": [
       {
+       "cells": 23,
+       "exact": 10,
+       "exact_norm": 10,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
        "cells": 15,
-       "exact": 0,
-       "exact_norm": 0,
+       "exact": 12,
+       "exact_norm": 12,
        "id": "liquidus",
        "num_cells": 12,
-       "num_exact": 0,
+       "num_exact": 12,
        "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 19,
+       "exact": 19,
+       "exact_norm": 19,
+       "id": "phases",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       },
+       "segments": 1
       },
       {
        "cells": 13,
-       "exact": 0,
-       "exact_norm": 0,
+       "exact": 4,
+       "exact_norm": 4,
        "id": "rk_liquid",
        "num_cells": 6,
-       "num_exact": 0,
+       "num_exact": 2,
        "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
+        "mean": 0.2735000000000546,
+        "median": 0.005000000000109139,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 27,
+       "exact_norm": 27,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 1,
-     "tables_true": 2
+     "tables_pred": 8,
+     "tables_true": 5
     }
    }
   },
   "syn-CuPb-86Hay-LB-v0": {
    "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.07142857142857142,
-     "cell_exact_normalised": 0.07142857142857142,
-     "numeric_exact": 0.2727272727272727,
-     "numeric_rel_err": {
-      "mean": 500000000.0000321,
-      "median": 1.7035953177258665e-05,
-      "n": 6
-     },
-     "per_table": [
-      {
-       "cells": 19,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "invariants",
-       "num_cells": 8,
-       "num_exact": 2,
-       "numeric_abs_err": {
-        "mean": 0.6065400000000004,
-        "median": 9.999999999998899e-05,
-        "n": 5
-       }
-      },
-      {
-       "cells": 9,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "formation",
-       "num_cells": 3,
-       "num_exact": 1,
-       "numeric_abs_err": {
-        "mean": 0.0,
-        "median": 0.0,
-        "n": 1
-       }
-      }
-     ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-CuZn-08Gie-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.01282051282051282,
-     "cell_exact_normalised": 0.01282051282051282,
-     "numeric_exact": 0.0,
-     "numeric_rel_err": {
-      "mean": 732.7175619732012,
-      "median": 1069.7850707850707,
-      "n": 3
-     },
-     "per_table": [
-      {
-       "cells": 54,
-       "exact": 0,
-       "exact_norm": 0,
-       "id": "invariants",
-       "num_cells": 32,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": 851.7249999999999,
-        "median": 851.7249999999999,
-        "n": 2
-       }
-      },
-      {
-       "cells": 24,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "formation",
-       "num_cells": 15,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": 0.07499999999999574,
-        "median": 0.07499999999999574,
-        "n": 1
-       }
-      }
-     ],
-     "tables_pred": 2,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-MgSi-12Sch-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.038461538461538464,
-     "cell_exact_normalised": 0.038461538461538464,
-     "numeric_exact": 0.09090909090909091,
-     "numeric_rel_err": {
-      "mean": 0.45495495495495497,
-      "median": 0.45495495495495497,
-      "n": 2
-     },
-     "per_table": [
-      {
-       "cells": 18,
-       "exact": 0,
-       "exact_norm": 0,
-       "id": "invariants",
-       "num_cells": 8,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
-      },
-      {
-       "cells": 8,
-       "exact": 1,
-       "exact_norm": 1,
-       "id": "formation",
-       "num_cells": 3,
-       "num_exact": 1,
-       "numeric_abs_err": {
-        "mean": 15.149999999999999,
-        "median": 15.149999999999999,
-        "n": 2
-       }
-      }
-     ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-MgSn-04Fri-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.21428571428571427,
-     "cell_exact_normalised": 0.21428571428571427,
-     "numeric_exact": 0.18181818181818182,
-     "numeric_rel_err": {
-      "mean": 0.4748493027668319,
-      "median": 0.00827272727272721,
-      "n": 9
-     },
-     "per_table": [
-      {
-       "cells": 19,
-       "exact": 3,
-       "exact_norm": 3,
-       "id": "invariants",
-       "num_cells": 8,
-       "num_exact": 0,
-       "numeric_abs_err": {
-        "mean": 113.72194999999999,
-        "median": 0.06934999999998137,
-        "n": 6
-       }
-      },
-      {
-       "cells": 9,
-       "exact": 3,
-       "exact_norm": 3,
-       "id": "formation",
-       "num_cells": 3,
-       "num_exact": 2,
-       "numeric_abs_err": {
-        "mean": 11.556666666666667,
-        "median": 0.0,
-        "n": 3
-       }
-      }
-     ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-NiTi-04Tok-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.4074074074074074,
-     "cell_exact_normalised": 0.4074074074074074,
-     "numeric_exact": 0.6551724137931034,
-     "numeric_rel_err": {
-      "mean": 0.26500574121330006,
-      "median": 0.0,
-      "n": 29
-     },
-     "per_table": [
-      {
-       "cells": 37,
-       "exact": 15,
-       "exact_norm": 15,
-       "id": "invariants",
-       "num_cells": 20,
-       "num_exact": 15,
-       "numeric_abs_err": {
-        "mean": 254.5,
-        "median": 0.0,
-        "n": 20
-       }
-      },
-      {
-       "cells": 17,
-       "exact": 7,
-       "exact_norm": 7,
-       "id": "formation",
-       "num_cells": 9,
-       "num_exact": 4,
-       "numeric_abs_err": {
-        "mean": 8.586666666666666,
-        "median": 0.03999999999999915,
-        "n": 9
-       }
-      }
-     ],
-     "tables_pred": 3,
-     "tables_true": 2
-    }
-   }
-  },
-  "syn-PbSn-17Gie-v0": {
-   "vector": {
-    "status": {
-     "tables": "ran: pdfplumber 0.11.9"
-    },
-    "tables": {
-     "cell_exact": 0.0,
-     "cell_exact_normalised": 0.0,
-     "numeric_exact": 0.0,
-     "numeric_rel_err": {
+    "invariant_rows": {
+     "T_err": {
       "mean": null,
       "median": null,
       "n": 0
      },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 57,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.5434782608695652,
+     "cell_exact_normalised": 0.5434782608695652,
+     "numeric_exact": 0.7386363636363636,
+     "numeric_rel_err": {
+      "mean": 54794520.61344152,
+      "median": 0.0,
+      "n": 73
+     },
      "per_table": [
       {
-       "cells": 13,
-       "exact": 0,
-       "exact_norm": 0,
+       "cells": 26,
+       "exact": 3,
+       "exact_norm": 3,
        "id": "invariants",
+       "num_cells": 9,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 48.95183333333333,
+        "median": 0.20550000000000002,
+        "n": 6
+       },
+       "segments": 1
+      },
+      {
+       "cells": 32,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 238.27499999999998,
+        "median": 191.85,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
        "num_cells": 4,
        "num_exact": 0,
        "numeric_abs_err": {
         "mean": null,
         "median": null,
         "n": 0
-       }
+       },
+       "segments": 1
       },
       {
-       "cells": 13,
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "T_printed_exact": 8,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 8,
+     "rows_pred": 8,
+     "rows_true": 8,
+     "type_ok": 8,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 69,
+     "matched": 69,
+     "records_pred": 69,
+     "records_true": 69,
+     "rel_err": {
+      "mean": 1.0522307976774683,
+      "median": 0.0,
+      "n": 69
+     },
+     "unit_ok": 64,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.918918918918919,
+     "cell_exact_normalised": 0.918918918918919,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 143
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 41,
+       "exact_norm": 41,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       },
+       "segments": 1
+      },
+      {
+       "cells": 67,
+       "exact": 67,
+       "exact_norm": 67,
+       "id": "phases",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 25,
+       "exact_norm": 25,
+       "id": "formation",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 71,
+       "exact_norm": 71,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "T_printed_exact": 3,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 3,
+     "rows_pred": 3,
+     "rows_true": 3,
+     "type_ok": 3,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "x_n": 8,
+     "x_printed_exact": 8
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "matched": 3,
+     "pearson_ok": 3,
+     "proto_ok": 3,
+     "rows_pred": 3,
+     "rows_true": 3,
+     "sb_ok": 3,
+     "struct_n": 9,
+     "struct_ok": 9
+    },
+    "property_records": {
+     "basis_ok": 3,
+     "matched": 3,
+     "records_pred": 30,
+     "records_true": 39,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "unit_ok": 3,
+     "value_exact": 3,
+     "within_1pct": 3
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.9137931034482759,
+     "cell_exact_normalised": 0.9137931034482759,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 72
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 17,
+       "exact_norm": 17,
+       "id": "invariants",
+       "num_cells": 11,
+       "num_exact": 11,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 11
+       },
+       "segments": 1
+      },
+      {
+       "cells": 32,
+       "exact": 32,
+       "exact_norm": 32,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 12,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 10,
+       "exact_norm": 10,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 47,
+       "exact_norm": 47,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 3,
+     "pearson_ok": 3,
+     "proto_ok": 3,
+     "rows_pred": 3,
+     "rows_true": 3,
+     "sb_ok": 3,
+     "struct_n": 9,
+     "struct_ok": 9
+    },
+    "property_records": {
+     "basis_ok": 3,
+     "matched": 3,
+     "records_pred": 18,
+     "records_true": 23,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "unit_ok": 3,
+     "value_exact": 3,
+     "within_1pct": 3
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.6470588235294118,
+     "cell_exact_normalised": 0.6470588235294118,
+     "numeric_exact": 0.75,
+     "numeric_rel_err": {
+      "mean": 18836734694.69149,
+      "median": 0.0,
+      "n": 49
+     },
+     "per_table": [
+      {
+       "cells": 26,
+       "exact": 14,
+       "exact_norm": 14,
+       "id": "invariants",
+       "num_cells": 11,
+       "num_exact": 10,
+       "numeric_abs_err": {
+        "mean": 90.9090909090909,
+        "median": 0.0,
+        "n": 11
+       },
+       "segments": 1
+      },
+      {
+       "cells": 35,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 596.3333333333334,
+        "median": 623.0,
+        "n": 9
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 10,
+       "exact_norm": 10,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 31,
+       "exact": 27,
+       "exact_norm": 27,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 7,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "T_low_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 6
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 12
+     },
+     "matched": 6,
+     "pearson_ok": 6,
+     "proto_ok": 6,
+     "rows_pred": 6,
+     "rows_true": 6,
+     "sb_ok": 6,
+     "struct_n": 18,
+     "struct_ok": 18
+    },
+    "property_records": {
+     "basis_ok": 29,
+     "matched": 29,
+     "records_pred": 29,
+     "records_true": 39,
+     "rel_err": {
+      "mean": 69.34313467423168,
+      "median": 0.9987085789129011,
+      "n": 29
+     },
+     "unit_ok": 13,
+     "value_exact": 10,
+     "within_1pct": 10
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.8140703517587939,
+     "cell_exact_normalised": 0.8140703517587939,
+     "numeric_exact": 0.94,
+     "numeric_rel_err": {
+      "mean": 1.398984310374188,
+      "median": 0.0,
+      "n": 97
+     },
+     "per_table": [
+      {
+       "cells": 66,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "invariants",
+       "num_cells": 29,
+       "num_exact": 29,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 29
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "phases",
+       "num_cells": 24,
+       "num_exact": 24,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 24
+       },
+       "segments": 2
+      },
+      {
+       "cells": 20,
+       "exact": 6,
+       "exact_norm": 6,
+       "id": "formation",
+       "num_cells": 12,
+       "num_exact": 6,
+       "numeric_abs_err": {
+        "mean": 380.49,
+        "median": 0.0,
+        "n": 9
+       },
+       "segments": 1
+      },
+      {
+       "cells": 43,
+       "exact": 36,
+       "exact_norm": 36,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 8,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 97.85000000000002,
+      "median": 97.85000000000002,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 276.18100000000004,
+      "median": 252.062,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 30,
+     "matched": 30,
+     "records_pred": 30,
+     "records_true": 30,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 30
+     },
+     "unit_ok": 30,
+     "value_exact": 30,
+     "within_1pct": 30
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
+     "tables": "ran: pdfplumber 0.11.9"
+    },
+    "tables": {
+     "cell_exact": 0.6224489795918368,
+     "cell_exact_normalised": 0.6224489795918368,
+     "numeric_exact": 0.7592592592592593,
+     "numeric_rel_err": {
+      "mean": 10222222232.468122,
+      "median": 0.0,
+      "n": 45
+     },
+     "per_table": [
+      {
+       "cells": 16,
        "exact": 0,
        "exact_norm": 0,
-       "id": "rk_liquid",
-       "num_cells": 6,
+       "id": "invariants",
+       "num_cells": 5,
        "num_exact": 0,
        "numeric_abs_err": {
         "mean": null,
         "median": null,
         "n": 0
-       }
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 15,
+       "exact_norm": 15,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 4,
+       "numeric_abs_err": {
+        "mean": 151.504,
+        "median": 0.0,
+        "n": 6
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 4,
+       "exact_norm": 4,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 0.38975000000005094,
+        "median": 0.0005000000001018634,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 4,
-     "tables_true": 2
+     "tables_pred": 8,
+     "tables_true": 4
     }
    }
   },
   "syn-PbZn-98Jan-v0": {
    "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 366.502,
+      "median": 366.502,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 27,
+     "records_true": 36,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
     "status": {
+     "semantic": "ran: header-keyword glue over pdfplumber cells",
      "tables": "ran: pdfplumber 0.11.9"
     },
     "tables": {
-     "cell_exact": 0.058823529411764705,
-     "cell_exact_normalised": 0.058823529411764705,
-     "numeric_exact": 0.0,
+     "cell_exact": 0.7631578947368421,
+     "cell_exact_normalised": 0.7631578947368421,
+     "numeric_exact": 0.9444444444444444,
      "numeric_rel_err": {
-      "mean": 0.31694291333265434,
-      "median": 0.0010040160642571137,
-      "n": 3
+      "mean": 0.0004744192910880297,
+      "median": 0.0,
+      "n": 70
      },
      "per_table": [
       {
-       "cells": 18,
-       "exact": 2,
-       "exact_norm": 2,
+       "cells": 21,
+       "exact": 6,
+       "exact_norm": 6,
        "id": "invariants",
-       "num_cells": 8,
-       "num_exact": 0,
+       "num_cells": 10,
+       "num_exact": 6,
        "numeric_abs_err": {
-        "mean": 31.607233333333337,
-        "median": 0.10000000000000853,
-        "n": 3
-       }
+        "mean": 1.6156250000000014,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 22,
+       "exact_norm": 22,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 8,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 8
+       },
+       "segments": 1
       },
       {
        "cells": 16,
-       "exact": 0,
-       "exact_norm": 0,
+       "exact": 12,
+       "exact_norm": 12,
        "id": "rk_liquid",
        "num_cells": 9,
-       "num_exact": 0,
+       "num_exact": 9,
        "numeric_abs_err": {
-        "mean": null,
-        "median": null,
-        "n": 0
-       }
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 9
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 47,
+       "exact_norm": 47,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
       }
      ],
-     "tables_pred": 5,
-     "tables_true": 2
+     "tables_pred": 9,
+     "tables_true": 4
     }
    }
   }

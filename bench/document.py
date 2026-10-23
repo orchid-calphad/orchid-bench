@@ -32,7 +32,8 @@ NUM_RE = re.compile(r"[−\-–]?\d+(?:\.\d+)?(?:[eE][−\-]?\d+)?")
 def parse_number(text):
     """First number in a cell; '−12.3 ± 0.5' -> (-12.3, 0.5)."""
     t = text.replace("−", "-").replace("–", "-").replace(" ", "").replace(" ", "")
-    m = re.match(r"^\(?([-+]?\d+(?:\.\d+)?)(?:±([0-9.]+))?", t)
+    t = t.lstrip("<>")
+    m = re.match(r"^\(?([-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)(?:±([0-9.]+))?", t)
     if not m:
         return None, None
     try:
@@ -189,8 +190,10 @@ class Doc:
                              x0=self.ml + 0.04 * self.text_width, width=0.92 * self.text_width)
         return {"page": page, "rect": [rect.x0, rect.y0, rect.x1, rect.y1], "caption": cap}
 
-    def table(self, spec, style, size=8.5, cap_pieces=None):
-        """spec: {'header': [[{text, colspan}]], 'rows': [[text]], 'align': ['l','r',...], 'footnotes': [str]}"""
+    def table(self, spec, style, size=8.5, cap_pieces=None, cont_pieces=None, split_at=None):
+        """spec: {'header': [[{text, colspan}]], 'rows': [[text]], 'align': ['l','r',...], 'footnotes': [str]}.
+        split_at: body-row index at which the table is continued on a new page under cont_pieces
+        ("Table N (continued)") with the header repeated."""
         ncol = len(spec["rows"][0]) if spec["rows"] else sum(c.get("colspan", 1) for c in spec["header"][-1])
         fn, fnb = "sans", "sans-b"
         pad = 5.0
@@ -210,90 +213,97 @@ class Doc:
                             colw[k] += (need - have) / span
                     j += span
             total = sum(colw)
-            if total <= self.text_width or size < 6.5:
+            if total <= self.text_width or size < 6.0:
                 break
             size -= 0.5
+            pad = max(3.0, pad - 0.5)
         rh = size * 1.75
-        nrows = len(spec["header"]) + len(spec["rows"])
-        cap_h = (size + 1) * 1.3 * 3 if cap_pieces else 0
-        self.ensure(cap_h + rh * nrows + 30 + 12 * len(spec.get("footnotes", [])))
-        cap = None
-        if cap_pieces:
-            cap = self.paragraph(cap_pieces, fname="sans", size=size + 0.5, align="left", gap_after=3)
-        page = self.page
+        segs = [(0, len(spec["rows"]))]
+        if split_at and 0 < split_at < len(spec["rows"]):
+            segs = [(0, split_at), (split_at, len(spec["rows"]))]
         x0 = self.ml + (self.text_width - total) / 2
         xs = [x0]
         for w in colw:
             xs.append(xs[-1] + w)
-        y = self.y
-        top = y
-        cells = []
         f = font(fn)
         lw_heavy, lw_light = 0.9, 0.45
         black = (0, 0, 0)
-        if style["rules"] == "booktabs":
-            page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_heavy)
-        r_idx = 0
-        for hi, hrow in enumerate(spec["header"]):
-            j = 0
-            for c in hrow:
-                span = c.get("colspan", 1)
-                cx0, cx1 = xs[j], xs[j + span]
-                tw = tlen(c["text"], fnb, size)
-                tx = (cx0 + cx1 - tw) / 2 if (span > 1 or style.get("center_header", True)) else cx0 + pad
-                bl = y + (rh + f.ascender * size + f.descender * size) / 2
-                if c["text"]:
-                    self._put(tx, bl, c["text"], fnb, size)
-                cells.append({"row": r_idx, "col": j, "colspan": span, "rowspan": 1, "header": True, "text": c["text"],
-                              "page": self.pno,
-                              "bbox": [round(cx0, 2), round(y, 2), round(cx1, 2), round(y + rh, 2)]})
-                if span > 1 and style["rules"] == "booktabs":
-                    page.draw_line((cx0 + 3, y + rh - 1), (cx1 - 3, y + rh - 1), color=black, width=lw_light)
-                j += span
-            y += rh
-            r_idx += 1
-        if style["rules"] == "booktabs":
-            page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_light)
-        elif style["rules"] == "plain":
-            page.draw_line((xs[0], top), (xs[-1], top), color=black, width=lw_light)
-            page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_light)
-        for bi, row in enumerate(spec["rows"]):
-            if style["rules"] == "plain" and bi % 2 == 1:
-                page.draw_rect(pymupdf.Rect(xs[0], y, xs[-1], y + rh), color=None, fill=(0.92, 0.92, 0.92), width=0)
-            for j, t in enumerate(row):
-                al = spec["align"][j]
-                tw = tlen(t, fn, size)
-                tx = xs[j] + pad if al == "l" else (xs[j + 1] - pad - tw if al == "r" else (xs[j] + xs[j + 1] - tw) / 2)
-                bl = y + (rh + f.ascender * size + f.descender * size) / 2
-                self._put(tx, bl, t, fn, size)
-                cells.append({"row": r_idx, "col": j, "colspan": 1, "rowspan": 1, "header": False, "text": t,
-                              "page": self.pno,
-                              "bbox": [round(xs[j], 2), round(y, 2), round(xs[j + 1], 2), round(y + rh, 2)]})
-            y += rh
-            r_idx += 1
-        if style["rules"] in ("booktabs", "plain"):
-            page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_heavy if style["rules"] == "booktabs" else lw_light)
-        if style["rules"] == "grid":
-            yy = top
-            hr = len(spec["header"])
-            for i in range(nrows + 1):
-                page.draw_line((xs[0], yy), (xs[-1], yy), color=black, width=lw_light if 0 < i < nrows else lw_heavy * 0.8)
-                yy += rh
-            # verticals (respect merged header cells)
-            for c in cells:
-                bx = c["bbox"]
-                page.draw_line((bx[0], bx[1]), (bx[0], bx[3]), color=black, width=lw_light)
-                page.draw_line((bx[2], bx[1]), (bx[2], bx[3]), color=black, width=lw_light)
-            del hr
-        self.y = y + 3
+        cells, caps, pages, bboxes = [], [], [], []
+        nh = len(spec["header"])
+        for si, (r0, r1) in enumerate(segs):
+            pieces = cap_pieces if si == 0 else cont_pieces
+            nrows = nh + (r1 - r0)
+            cap_h = (size + 1) * 1.3 * 3 if pieces else 0
+            if si > 0:
+                self.new_page()
+            self.ensure(cap_h + rh * nrows + 30 + (12 * len(spec.get("footnotes", [])) if si == len(segs) - 1 else 0))
+            cap = self.paragraph(pieces, fname="sans", size=size + 0.5, align="left", gap_after=3) if pieces else None
+            caps.append(cap)
+            page = self.page
+            pages.append(self.pno)
+            y = self.y
+            top = y
+            seg_cells = []
+            if style["rules"] == "booktabs":
+                page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_heavy)
+            for hi, hrow in enumerate(spec["header"]):
+                j = 0
+                for c in hrow:
+                    span = c.get("colspan", 1)
+                    cx0, cx1 = xs[j], xs[j + span]
+                    tw = tlen(c["text"], fnb, size)
+                    tx = (cx0 + cx1 - tw) / 2
+                    bl = y + (rh + f.ascender * size + f.descender * size) / 2
+                    if c["text"]:
+                        self._put(tx, bl, c["text"], fnb, size)
+                    seg_cells.append({"row": hi, "col": j, "colspan": span, "rowspan": 1, "header": True, "text": c["text"],
+                                      "page": self.pno, "segment": si, "seg_row": hi, "repeated_header": si > 0,
+                                      "bbox": [round(cx0, 2), round(y, 2), round(cx1, 2), round(y + rh, 2)]})
+                    if span > 1 and style["rules"] == "booktabs":
+                        page.draw_line((cx0 + 3, y + rh - 1), (cx1 - 3, y + rh - 1), color=black, width=lw_light)
+                    j += span
+                y += rh
+            if style["rules"] == "booktabs":
+                page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_light)
+            elif style["rules"] == "plain":
+                page.draw_line((xs[0], top), (xs[-1], top), color=black, width=lw_light)
+                page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_light)
+            for bi in range(r0, r1):
+                row = spec["rows"][bi]
+                if style["rules"] == "plain" and (bi - r0) % 2 == 1:
+                    page.draw_rect(pymupdf.Rect(xs[0], y, xs[-1], y + rh), color=None, fill=(0.92, 0.92, 0.92), width=0)
+                for j, t in enumerate(row):
+                    al = spec["align"][j]
+                    tw = tlen(t, fn, size)
+                    tx = xs[j] + pad if al == "l" else (xs[j + 1] - pad - tw if al == "r" else (xs[j] + xs[j + 1] - tw) / 2)
+                    bl = y + (rh + f.ascender * size + f.descender * size) / 2
+                    self._put(tx, bl, t, fn, size)
+                    seg_cells.append({"row": nh + bi, "col": j, "colspan": 1, "rowspan": 1, "header": False, "text": t,
+                                      "page": self.pno, "segment": si, "seg_row": nh + bi - r0, "repeated_header": False,
+                                      "bbox": [round(xs[j], 2), round(y, 2), round(xs[j + 1], 2), round(y + rh, 2)]})
+                y += rh
+            if style["rules"] in ("booktabs", "plain"):
+                page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_heavy if style["rules"] == "booktabs" else lw_light)
+            if style["rules"] == "grid":
+                yy = top
+                for i in range(nrows + 1):
+                    page.draw_line((xs[0], yy), (xs[-1], yy), color=black, width=lw_light if 0 < i < nrows else lw_heavy * 0.8)
+                    yy += rh
+                for c in seg_cells:
+                    bx = c["bbox"]
+                    page.draw_line((bx[0], bx[1]), (bx[0], bx[3]), color=black, width=lw_light)
+                    page.draw_line((bx[2], bx[1]), (bx[2], bx[3]), color=black, width=lw_light)
+            cells += seg_cells
+            bboxes.append({"page": self.pno, "bbox": [round(xs[0], 2), round(top, 2), round(xs[-1], 2), round(y, 2)]})
+            self.y = y + 3
         notes = []
         for k, note in enumerate(spec.get("footnotes", [])):
             r = self.paragraph([(note, f"fn{k}")], fname="sans", size=size - 1, align="left", gap_after=0,
                                x0=xs[0], width=max(total, 0.6 * self.text_width))
             notes.append(r[f"fn{k}"])
         self.y += 10
-        return {"page": self.pno, "bbox": [round(xs[0], 2), round(top, 2), round(xs[-1], 2), round(y, 2)],
-                "font_size": size, "cells": cells, "caption": cap, "footnotes": notes}
+        return {"page": pages[0], "bbox": bboxes[0]["bbox"], "segments": bboxes, "font_size": size, "cells": cells,
+                "caption": caps[0], "continued_captions": caps[1:], "footnotes": notes}
 
     def save(self, path):
         self.pdf.set_metadata({"title": "", "author": "ORCHID synthetic benchmark", "producer": "PyMuPDF",
