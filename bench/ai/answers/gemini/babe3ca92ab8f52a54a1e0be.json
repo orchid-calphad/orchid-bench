@@ -1,0 +1,42 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "babe3ca92ab8f52a54a1e0be",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "10",
+    "temperature": 1800,
+    "temperature_unit": "K",
+    "temperature_printed": "1800 K",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "10"
+   }
+  ],
+  "column_units": []
+ },
+ "usage": {
+  "prompt_token_count": 3824,
+  "cached_content_token_count": null,
+  "candidates_token_count": 118,
+  "thoughts_token_count": 1169,
+  "total_token_count": 5111
+ },
+ "seconds": 10.8
+}

@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f2f91bc56f7dda5285cc7fb1",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Ag",
+   "Sn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Ag)",
+    "temperature": 990,
+    "temperature_unit": "K",
+    "temperature_printed": "990",
+    "temperature_role": "other",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3380,
+  "cached_content_token_count": null,
+  "candidates_token_count": 151,
+  "thoughts_token_count": 4137,
+  "total_token_count": 7668
+ },
+ "seconds": 31.8
+}

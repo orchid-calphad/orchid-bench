@@ -1,0 +1,257 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8bbef55e80b56d7a1049faad",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Ti",
+  "rows": [
+   {
+    "reaction": "L -> Ni3Ti",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "Ni3Ti"
+    ],
+    "temperature": 1376.2,
+    "temperature_unit": "C",
+    "temperature_printed": "1376.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.236
+     },
+     {
+      "phase": "Ni3Ti",
+      "value": 0.236
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> NiTi",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "NiTi"
+    ],
+    "temperature": 1311.8,
+    "temperature_unit": "C",
+    "temperature_printed": "1311.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.502
+     },
+     {
+      "phase": "NiTi",
+      "value": 0.502
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> NiTi",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "NiTi"
+    ],
+    "temperature": 1308.8,
+    "temperature_unit": "C",
+    "temperature_printed": "1308.8",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "3"
+    ]
+   },
+   {
+    "reaction": "L -> (Ni) + Ni3Ti",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Ni)",
+     "Ni3Ti"
+    ],
+    "temperature": 1302.5,
+    "temperature_unit": "C",
+    "temperature_printed": "1302.5",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.166
+     },
+     {
+      "phase": "(Ni)",
+      "value": 0.157
+     },
+     {
+      "phase": "Ni3Ti",
+      "value": 0.204
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Ni) + Ni3Ti",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Ni)",
+     "Ni3Ti"
+    ],
+    "temperature": 1298.5,
+    "temperature_unit": "C",
+    "temperature_printed": "1298.5",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "L -> Ni3Ti + NiTi",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "Ni3Ti",
+     "NiTi"
+    ],
+    "temperature": 1119.9,
+    "temperature_unit": "C",
+    "temperature_printed": "1119.9",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.384
+     },
+     {
+      "phase": "Ni3Ti",
+      "value": 0.25
+     },
+     {
+      "phase": "NiTi",
+      "value": 0.433
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "NiTi + L -> NiTi2",
+    "reaction_type": "peritectic",
+    "phases": [
+     "NiTi",
+     "L",
+     "NiTi2"
+    ],
+    "temperature": 986.4,
+    "temperature_unit": "C",
+    "temperature_printed": "986.4",
+    "compositions": [
+     {
+      "phase": "NiTi",
+      "value": 0.51
+     },
+     {
+      "phase": "L",
+      "value": 0.669
+     },
+     {
+      "phase": "NiTi2",
+      "value": 0.667
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> NiTi2 + (βTi)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "NiTi2",
+     "(βTi)"
+    ],
+    "temperature": 943.2,
+    "temperature_unit": "C",
+    "temperature_printed": "943.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.746
+     },
+     {
+      "phase": "NiTi2",
+      "value": 0.667
+     },
+     {
+      "phase": "(βTi)",
+      "value": 0.894
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "(βTi) -> NiTi2 + (αTi)",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "(βTi)",
+     "NiTi2",
+     "(αTi)"
+    ],
+    "temperature": 767.6,
+    "temperature_unit": "C",
+    "temperature_printed": "767.6",
+    "compositions": [
+     {
+      "phase": "(βTi)",
+      "value": 0.947
+     },
+     {
+      "phase": "NiTi2",
+      "value": 0.667
+     },
+     {
+      "phase": "(αTi)",
+      "value": 0.998
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "(βTi) -> NiTi2 + (αTi)",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "(βTi)",
+     "NiTi2",
+     "(αTi)"
+    ],
+    "temperature": 760.6,
+    "temperature_unit": "C",
+    "temperature_printed": "760.6",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   }
+  ],
+  "notes": "Phases 1-3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document. Experimental temperatures are fictitious values attributed to invented references [3-5] for testing evidence-class extraction; they are not data."
+ },
+ "usage": {
+  "prompt_token_count": 2153,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1642,
+  "thoughts_token_count": 2109,
+  "total_token_count": 5904
+ },
+ "seconds": 38.5
+}

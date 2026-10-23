@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f2821ded5774f5402a3317a1",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3331,
+  "cached_content_token_count": null,
+  "candidates_token_count": 128,
+  "thoughts_token_count": 1710,
+  "total_token_count": 5169
+ },
+ "seconds": 15.9
+}

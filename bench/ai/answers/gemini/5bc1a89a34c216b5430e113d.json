@@ -1,0 +1,110 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5bc1a89a34c216b5430e113d",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Bi",
+   "Sn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 441.8,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "441.8",
+      "volume_state": ""
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 1.33493,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "1.33493",
+      "volume_state": ""
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -298.1,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "-298.1",
+      "volume_state": ""
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -0.28229,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "-0.28229",
+      "volume_state": ""
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "notes": "Values as printed in the TDB file.",
+  "column_units": [
+   {
+    "column_header": "a / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "b / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   },
+   {
+    "column_header": "c / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3430,
+  "cached_content_token_count": null,
+  "candidates_token_count": 453,
+  "thoughts_token_count": 1510,
+  "total_token_count": 5393
+ },
+ "seconds": 12.9
+}

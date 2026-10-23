@@ -1,0 +1,256 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "0e461bff94ef615497c5c3db",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "Al3Ni2",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni2",
+      "element": "Ni",
+      "value": 39.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔfH(298.15 K)",
+      "quantity_kind": "formation_enthalpy",
+      "value": -301381,
+      "unit": "J mol⁻¹ (f.u.)",
+      "phase": "Al3Ni2",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "ΔfS",
+      "quantity_kind": "entropy",
+      "value": -36.32,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni2",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "Cp(298.15 K)",
+      "quantity_kind": "heat_capacity",
+      "value": 122.82,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni2",
+      "unit_source": "column_header"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni5",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni5",
+      "element": "Ni",
+      "value": 62.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔfH(298.15 K)",
+      "quantity_kind": "formation_enthalpy",
+      "value": -427141,
+      "unit": "J mol⁻¹ (f.u.)",
+      "phase": "Al3Ni5",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "ΔfS",
+      "quantity_kind": "entropy",
+      "value": -26.19,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni5",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "Cp(298.15 K)",
+      "quantity_kind": "heat_capacity",
+      "value": 197.79,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni5",
+      "unit_source": "column_header"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni",
+      "element": "Ni",
+      "value": 25.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔfH(298.15 K)",
+      "quantity_kind": "formation_enthalpy",
+      "value": -173793,
+      "unit": "J mol⁻¹ (f.u.)",
+      "phase": "Al3Ni",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "ΔfS",
+      "quantity_kind": "entropy",
+      "value": -30.14,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "Cp(298.15 K)",
+      "quantity_kind": "heat_capacity",
+      "value": 97.86,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Al3Ni",
+      "unit_source": "column_header"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "NiAl",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "NiAl",
+      "element": "Ni",
+      "value": 53.4
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔfH(298.15 K)",
+      "quantity_kind": "formation_enthalpy",
+      "value": -124483,
+      "unit": "J mol⁻¹ (f.u.)",
+      "phase": "NiAl",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "ΔfS",
+      "quantity_kind": "entropy",
+      "value": -8.73,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "NiAl",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "Cp(298.15 K)",
+      "quantity_kind": "heat_capacity",
+      "value": 49.32,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "NiAl",
+      "unit_source": "column_header"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Ni3Al",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 74.8
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔfH(298.15 K)",
+      "quantity_kind": "formation_enthalpy",
+      "value": -160945,
+      "unit": "J mol⁻¹ (f.u.)",
+      "phase": "Ni3Al",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "ΔfS",
+      "quantity_kind": "entropy",
+      "value": -6.7,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Ni3Al",
+      "reference_state": "stable elements (SER) at 298.15 K",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "Cp(298.15 K)",
+      "quantity_kind": "heat_capacity",
+      "value": 99.28,
+      "unit": "J mol⁻¹ K⁻¹ (f.u.)",
+      "phase": "Ni3Al",
+      "unit_source": "column_header"
+     }
+    ],
+    "source": "this_work"
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "at.% Ni",
+    "unit": "at.%"
+   },
+   {
+    "column_header": "ΔfH(298.15 K) / J mol⁻¹ (f.u.)",
+    "unit": "J mol⁻¹ (f.u.)"
+   },
+   {
+    "column_header": "ΔfS / J mol⁻¹ K⁻¹ (f.u.)",
+    "unit": "J mol⁻¹ K⁻¹ (f.u.)"
+   },
+   {
+    "column_header": "Cp(298.15 K) / J mol⁻¹ K⁻¹ (f.u.)",
+    "unit": "J mol⁻¹ K⁻¹ (f.u.)"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2271,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2429,
+  "thoughts_token_count": 1582,
+  "total_token_count": 6282
+ },
+ "seconds": 25.8
+}

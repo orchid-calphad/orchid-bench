@@ -1,0 +1,285 @@
+{
+ "table_kind": "thermochemical_properties",
+ "system": [
+  "Cu",
+  "Zn"
+ ],
+ "temperature_unit": "K",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "β",
+   "phases_present": [
+    "β"
+   ],
+   "temperature": 298.15,
+   "temperature_unit": "K",
+   "temperature_printed": "298.15 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 49.7,
+     "printed": "49.7"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "ΔfH(298.15 K)",
+     "quantity_kind": "formation_enthalpy",
+     "value": -9.43,
+     "printed": "-9.43",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "β",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "ΔfS",
+     "quantity_kind": "entropy",
+     "value": 4.39,
+     "printed": "4.39",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "β",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "Cp(298.15 K)",
+     "quantity_kind": "heat_capacity",
+     "value": 24.92,
+     "printed": "24.92",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "β"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "Calculated (caption)"
+  },
+  {
+   "row_label": "δ",
+   "phases_present": [
+    "δ"
+   ],
+   "temperature": 298.15,
+   "temperature_unit": "K",
+   "temperature_printed": "298.15 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 75.0,
+     "printed": "75.0"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "ΔfH(298.15 K)",
+     "quantity_kind": "formation_enthalpy",
+     "value": -5.76,
+     "printed": "-5.76",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "δ",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "ΔfS",
+     "quantity_kind": "entropy",
+     "value": 5.22,
+     "printed": "5.22",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "δ",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "Cp(298.15 K)",
+     "quantity_kind": "heat_capacity",
+     "value": 25.16,
+     "printed": "25.16",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "δ"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "Calculated (caption)"
+  },
+  {
+   "row_label": "γ",
+   "phases_present": [
+    "γ"
+   ],
+   "temperature": 298.15,
+   "temperature_unit": "K",
+   "temperature_printed": "298.15 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 64.0,
+     "printed": "64.0"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "ΔfH(298.15 K)",
+     "quantity_kind": "formation_enthalpy",
+     "value": -10.64,
+     "printed": "-10.64",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "γ",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "ΔfS",
+     "quantity_kind": "entropy",
+     "value": 2.56,
+     "printed": "2.56",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "γ",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "Cp(298.15 K)",
+     "quantity_kind": "heat_capacity",
+     "value": 25.05,
+     "printed": "25.05",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "γ"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "Calculated (caption)"
+  },
+  {
+   "row_label": "β′",
+   "phases_present": [
+    "β′"
+   ],
+   "temperature": 298.15,
+   "temperature_unit": "K",
+   "temperature_printed": "298.15 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 46.0,
+     "printed": "46.0"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "ΔfH(298.15 K)",
+     "quantity_kind": "formation_enthalpy",
+     "value": -10.41,
+     "printed": "-10.41",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "β′",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "ΔfS",
+     "quantity_kind": "entropy",
+     "value": 2.74,
+     "printed": "2.74",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "β′",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "Cp(298.15 K)",
+     "quantity_kind": "heat_capacity",
+     "value": 24.88,
+     "printed": "24.88",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "β′"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "Calculated (caption)"
+  },
+  {
+   "row_label": "ε",
+   "phases_present": [
+    "ε"
+   ],
+   "temperature": 298.15,
+   "temperature_unit": "K",
+   "temperature_printed": "298.15 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 83.0,
+     "printed": "83.0"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "ΔfH(298.15 K)",
+     "quantity_kind": "formation_enthalpy",
+     "value": -4.89,
+     "printed": "-4.89",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "ε",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "ΔfS",
+     "quantity_kind": "entropy",
+     "value": 3.42,
+     "printed": "3.42",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "ε",
+     "reference_state": "stable elements (SER) at 298.15 K; values per mole of atoms"
+    },
+    {
+     "quantity": "Cp(298.15 K)",
+     "quantity_kind": "heat_capacity",
+     "value": 25.24,
+     "printed": "25.24",
+     "unit": "J mol⁻¹ K⁻¹",
+     "unit_source": "column_header",
+     "phase": "ε"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "Calculated (caption)"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "at.% Zn",
+   "unit": "at.%"
+  },
+  {
+   "column_header": "ΔfH(298.15 K) / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  },
+  {
+   "column_header": "ΔfS / J mol⁻¹ K⁻¹",
+   "unit": "J mol⁻¹ K⁻¹"
+  },
+  {
+   "column_header": "Cp(298.15 K) / J mol⁻¹ K⁻¹",
+   "unit": "J mol⁻¹ K⁻¹"
+  }
+ ],
+ "notes": "Footnote: Reference: stable elements (SER) at 298.15 K; values per mole of atoms."
+}

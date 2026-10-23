@@ -1,0 +1,358 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Cu",
+  "Zn"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "mole_fraction",
+ "rows": [
+  {
+   "row_label": "(Cu)",
+   "phases_present": [
+    "(Cu)"
+   ],
+   "structure": {
+    "phase": "(Cu)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "temperature": 467,
+   "temperature_unit": "C",
+   "temperature_printed": "467",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Cu)",
+     "element": "Zn",
+     "value": 0.0,
+     "value_max": 0.386,
+     "printed": "0.000–0.386",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 1084.6,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "1084.6"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "β′",
+   "phases_present": [
+    "β′"
+   ],
+   "structure": {
+    "phase": "β′",
+    "pearson_symbol": "cP2",
+    "strukturbericht": "B2",
+    "prototype": "CsCl"
+   },
+   "temperature": 57,
+   "temperature_unit": "C",
+   "temperature_printed": "57",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "β′",
+     "element": "Zn",
+     "value": 0.421,
+     "value_max": 0.499,
+     "printed": "0.421–0.499",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 462.7,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "462.7"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "β",
+   "phases_present": [
+    "β"
+   ],
+   "structure": {
+    "phase": "β",
+    "pearson_symbol": "cI2",
+    "strukturbericht": "A2",
+    "prototype": "W"
+   },
+   "temperature": 827,
+   "temperature_unit": "C",
+   "temperature_printed": "827",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "β",
+     "element": "Zn",
+     "value": 0.378,
+     "value_max": 0.556,
+     "printed": "0.378–0.556",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 460.4,
+     "bound": "none",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "460.4"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 899.4,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "899.4"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "γ",
+   "phases_present": [
+    "γ"
+   ],
+   "structure": {
+    "phase": "γ",
+    "pearson_symbol": "cI52",
+    "strukturbericht": "D8₂",
+    "prototype": "Cu5Zn8"
+   },
+   "temperature": 557,
+   "temperature_unit": "C",
+   "temperature_printed": "557",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "γ",
+     "element": "Zn",
+     "value": 0.564,
+     "value_max": 0.693,
+     "printed": "0.564–0.693",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 834.2,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "834.2"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "δ",
+   "phases_present": [
+    "δ"
+   ],
+   "structure": {
+    "phase": "δ",
+    "pearson_symbol": "cI2",
+    "strukturbericht": "A2",
+    "prototype": "W"
+   },
+   "temperature": 607,
+   "temperature_unit": "C",
+   "temperature_printed": "607",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "δ",
+     "element": "Zn",
+     "value": 0.739,
+     "value_max": 0.77,
+     "printed": "0.739–0.770",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 558.8,
+     "bound": "none",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "558.8"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 703.1,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "703.1"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "ε",
+   "phases_present": [
+    "ε"
+   ],
+   "structure": {
+    "phase": "ε",
+    "pearson_symbol": "hP2",
+    "strukturbericht": "A3",
+    "prototype": "Mg"
+   },
+   "temperature": 417,
+   "temperature_unit": "C",
+   "temperature_printed": "417",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "ε",
+     "element": "Zn",
+     "value": 0.784,
+     "value_max": 0.874,
+     "printed": "0.784–0.874",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 600.2,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "600.2"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "(Zn)",
+   "phases_present": [
+    "(Zn)"
+   ],
+   "structure": {
+    "phase": "(Zn)",
+    "pearson_symbol": "hP2",
+    "strukturbericht": "A3",
+    "prototype": "Mg"
+   },
+   "temperature": 417,
+   "temperature_unit": "C",
+   "temperature_printed": "417",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Zn)",
+     "element": "Zn",
+     "value": 0.981,
+     "value_max": 1.0,
+     "printed": "0.981–1.000",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 419.5,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "419.5"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "Stability range / °C",
+   "unit": "°C"
+  },
+  {
+   "column_header": "at T / °C",
+   "unit": "°C"
+  }
+ ],
+ "notes": "Row temperature is the 'at T / °C' of the homogeneity range. '< 27' entries carry footnote a: 'Stable at the lowest calculated temperature.'"
+}

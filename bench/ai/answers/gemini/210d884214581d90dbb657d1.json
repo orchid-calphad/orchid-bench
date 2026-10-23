@@ -1,0 +1,139 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "210d884214581d90dbb657d1",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Sn",
+  "rows": [
+   {
+    "reaction": "(Ag) + L -> ζ",
+    "reaction_type": "peritectic",
+    "phases": [
+     "(Ag)",
+     "L",
+     "ζ"
+    ],
+    "temperature": 719.3,
+    "temperature_unit": "C",
+    "temperature_printed": "719.3",
+    "compositions": [
+     {
+      "phase": "(Ag)",
+      "value": 0.115
+     },
+     {
+      "phase": "L",
+      "value": 0.211
+     },
+     {
+      "phase": "ζ",
+      "value": 0.131
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "(Ag) + L -> ζ",
+    "reaction_type": "peritectic",
+    "phases": [
+     "(Ag)",
+     "L",
+     "ζ"
+    ],
+    "temperature": 722.3,
+    "temperature_unit": "C",
+    "temperature_printed": "722.3 [4]",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "ζ + L -> Ag3Sn",
+    "reaction_type": "peritectic",
+    "phases": [
+     "ζ",
+     "L",
+     "Ag3Sn"
+    ],
+    "temperature": 488.2,
+    "temperature_unit": "C",
+    "temperature_printed": "488.2",
+    "compositions": [
+     {
+      "phase": "ζ",
+      "value": 0.237
+     },
+     {
+      "phase": "L",
+      "value": 0.473
+     },
+     {
+      "phase": "Ag3Sn",
+      "value": 0.247
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "ζ + L -> Ag3Sn",
+    "reaction_type": "peritectic",
+    "phases": [
+     "ζ",
+     "L",
+     "Ag3Sn"
+    ],
+    "temperature": 492.2,
+    "temperature_unit": "C",
+    "temperature_printed": "492.2 [5]",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "L -> Ag3Sn + (Sn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "Ag3Sn",
+     "(Sn)"
+    ],
+    "temperature": 219.8,
+    "temperature_unit": "C",
+    "temperature_printed": "219.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.961
+     },
+     {
+      "phase": "Ag3Sn",
+      "value": 0.25
+     },
+     {
+      "phase": "(Sn)",
+      "value": 0.999
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   }
+  ],
+  "notes": "Experimental temperatures are fictitious values attributed to invented references [3–5] for testing evidence-class extraction; they are not data."
+ },
+ "usage": {
+  "prompt_token_count": 2296,
+  "cached_content_token_count": null,
+  "candidates_token_count": 818,
+  "thoughts_token_count": 1345,
+  "total_token_count": 4459
+ },
+ "seconds": 13.8
+}

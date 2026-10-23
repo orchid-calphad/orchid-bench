@@ -1,0 +1,777 @@
+{
+ "table_kind": "thermochemical_properties",
+ "system": [
+  "Cu",
+  "Zn"
+ ],
+ "temperature_unit": "K",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "10",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 10.0,
+     "printed": "10"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -2.62,
+     "printed": "-2.62",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -6.1,
+     "printed": "-6.10",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.8862,
+     "printed": "0.8862",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.0189,
+     "printed": "0.0189",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -0.33,
+     "printed": "-0.33",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -23.2,
+     "printed": "-23.20",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "20",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 20.0,
+     "printed": "20"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -4.56,
+     "printed": "-4.56",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -9.98,
+     "printed": "-9.98",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.7446,
+     "printed": "0.7446",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.0518,
+     "printed": "0.0518",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -1.37,
+     "printed": "-1.37",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -17.35,
+     "printed": "-17.35",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "30",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 30.0,
+     "printed": "30"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -5.82,
+     "printed": "-5.82",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -12.6,
+     "printed": "-12.60",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.5856,
+     "printed": "0.5856",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.1069,
+     "printed": "0.1069",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -3.09,
+     "printed": "-3.09",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -12.17,
+     "printed": "-12.17",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "40",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 40.0,
+     "printed": "40"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -6.39,
+     "printed": "-6.39",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -14.11,
+     "printed": "-14.11",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.4278,
+     "printed": "0.4278",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.1916,
+     "printed": "0.1916",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -5.41,
+     "printed": "-5.41",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -7.86,
+     "printed": "-7.86",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "50",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 50.0,
+     "printed": "50"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -6.32,
+     "printed": "-6.32",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -14.55,
+     "printed": "-14.55",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.2894,
+     "printed": "0.2894",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.3091,
+     "printed": "0.3091",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -8.13,
+     "printed": "-8.13",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -4.52,
+     "printed": "-4.52",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "60",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 60.0,
+     "printed": "60"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -5.69,
+     "printed": "-5.69",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -13.96,
+     "printed": "-13.96",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.181,
+     "printed": "0.1810",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.4539,
+     "printed": "0.4539",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -10.98,
+     "printed": "-10.98",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -2.17,
+     "printed": "-2.17",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "70",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 70.0,
+     "printed": "70"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -4.6,
+     "printed": "-4.60",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -12.34,
+     "printed": "-12.34",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.1041,
+     "printed": "0.1041",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.6112,
+     "printed": "0.6112",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -13.59,
+     "printed": "-13.59",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -0.75,
+     "printed": "-0.75",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "80",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 80.0,
+     "printed": "80"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -3.17,
+     "printed": "-3.17",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -9.68,
+     "printed": "-9.68",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.0536,
+     "printed": "0.0536",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.7621,
+     "printed": "0.7621",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -15.5,
+     "printed": "-15.50",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -0.09,
+     "printed": "-0.09",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  },
+  {
+   "row_label": "90",
+   "temperature": 1450.0,
+   "temperature_unit": "K",
+   "temperature_printed": "1450",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 90.0,
+     "printed": "90"
+    }
+   ],
+   "phases_present": [
+    "L"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": -1.58,
+     "printed": "-1.58",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -5.87,
+     "printed": "-5.87",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "a(Cu)",
+     "quantity_kind": "activity",
+     "value": 0.0215,
+     "printed": "0.0215",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.8923,
+     "printed": "0.8923",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K",
+     "unit_source": "not_printed"
+    },
+    {
+     "quantity": "ΔH(Cu)",
+     "quantity_kind": "partial_enthalpy",
+     "value": -16.17,
+     "printed": "-16.17",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Cu",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    },
+    {
+     "quantity": "ΔH(Zn)",
+     "quantity_kind": "partial_enthalpy",
+     "value": 0.04,
+     "printed": "0.04",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header",
+     "component": "Zn",
+     "phase": "L",
+     "reference_state": "pure liquid Cu and Zn at 1450 K"
+    }
+   ],
+   "source": "this_work"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "ΔmixH / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  },
+  {
+   "column_header": "ΔmixG / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  },
+  {
+   "column_header": "ΔH(Cu) / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  },
+  {
+   "column_header": "ΔH(Zn) / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  }
+ ],
+ "notes": "Composition column header \"at.% Zn\". Footnote: Reference states: pure liquid Cu and Zn at 1450 K; per mole of atoms. ΔH: partial molar enthalpies of mixing. Phase = liquid (caption). Source this_work assumed from document context (pycalphad calculation); the table itself carries no source label."
+}

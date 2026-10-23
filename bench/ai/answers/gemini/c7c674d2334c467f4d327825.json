@@ -1,0 +1,46 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "c7c674d2334c467f4d327825",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "L",
+    "reason": "Marker 1 is located in the Al-rich liquid region above the liquidus curve."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 is located in the two-phase field (Al3Ni + L), which is not among the given options."
+   },
+   {
+    "marker": 3,
+    "assemblage": "none of these",
+    "reason": "Marker 3 sits in the (Al) solid solution / (Al)+L region, which is not listed in the choices."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Marker 4 is in the sub-eutectic two-phase field ((Al) + Al3Ni), which is not among the choices."
+   },
+   {
+    "marker": 5,
+    "assemblage": "Al3Ni2+L",
+    "reason": "Marker 5 is in the two-phase region between the liquidus and the Al3Ni2 intermetallic phase."
+   },
+   {
+    "marker": 6,
+    "assemblage": "none of these",
+    "reason": "Marker 6 is also in the Al3Ni2 + L two-phase field (above the 854 °C peritectic decomposition temperature of Al3Ni), but Al3Ni2+L is not among the offered choices."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1443,
+  "cached_content_token_count": null,
+  "candidates_token_count": 373,
+  "thoughts_token_count": 6136,
+  "total_token_count": 7952
+ },
+ "seconds": 47.1
+}

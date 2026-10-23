@@ -1,0 +1,118 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Pb",
+  "Zn"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "mole_fraction",
+ "rows": [
+  {
+   "row_label": "(Pb)",
+   "phases_present": [
+    "(Pb)"
+   ],
+   "structure": {
+    "phase": "(Pb)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "temperature": 317,
+   "temperature_unit": "C",
+   "temperature_printed": "317",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Pb)",
+     "element": "Zn",
+     "value": 0.0,
+     "value_max": 0.003,
+     "printed": "0.000–0.003",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 327.5,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "327.5"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  },
+  {
+   "row_label": "(Zn)",
+   "phases_present": [
+    "(Zn)"
+   ],
+   "structure": {
+    "phase": "(Zn)",
+    "pearson_symbol": "hP2",
+    "strukturbericht": "A3",
+    "prototype": "Mg"
+   },
+   "temperature": 417,
+   "temperature_unit": "C",
+   "temperature_printed": "417",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Zn)",
+     "element": "Zn",
+     "value": 0.996,
+     "value_max": 1.0,
+     "printed": "0.996–1.000",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "Stability range from",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27ᵃ"
+    },
+    {
+     "quantity": "Stability range to",
+     "quantity_kind": "other",
+     "value": 420.0,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "420.0"
+    }
+   ],
+   "source": "this_work",
+   "source_label": "calculated"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "Stability range / °C",
+   "unit": "°C"
+  },
+  {
+   "column_header": "at T / °C",
+   "unit": "°C"
+  }
+ ],
+ "notes": "Row temperature is the 'at T / °C' of the homogeneity range. Stability-range 'from' is printed '< 27' with footnote a: 'Stable at the lowest calculated temperature.'"
+}

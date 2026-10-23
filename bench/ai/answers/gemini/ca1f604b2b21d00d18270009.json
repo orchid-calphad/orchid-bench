@@ -1,0 +1,20 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "ca1f604b2b21d00d18270009",
+ "result": {
+  "table_kind": "transition_temperatures",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "rows": []
+ },
+ "usage": {
+  "prompt_token_count": 3301,
+  "cached_content_token_count": null,
+  "candidates_token_count": 41,
+  "thoughts_token_count": 480,
+  "total_token_count": 3822
+ },
+ "seconds": 7.0
+}

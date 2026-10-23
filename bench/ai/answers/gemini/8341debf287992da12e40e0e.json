@@ -1,0 +1,211 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8341debf287992da12e40e0e",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 647,
+    "temperature_unit": "C",
+    "temperature_printed": "647",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "(Al)",
+      "element": "Ni",
+      "value": 0.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 660.3,
+      "unit": "°C",
+      "phase": "(Al)"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni",
+    "temperature": 77,
+    "temperature_unit": "C",
+    "temperature_printed": "77",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni",
+      "element": "Ni",
+      "value": 0.25
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 853.9,
+      "unit": "°C",
+      "phase": "Al3Ni"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni2",
+    "temperature": 857,
+    "temperature_unit": "C",
+    "temperature_printed": "857",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni2",
+      "element": "Ni",
+      "value": 0.355
+     },
+     {
+      "phase": "Al3Ni2",
+      "element": "Ni",
+      "value": 0.413
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 1139.1,
+      "unit": "°C",
+      "phase": "Al3Ni2"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "NiAl",
+    "temperature": 1367,
+    "temperature_unit": "C",
+    "temperature_printed": "1367",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "NiAl",
+      "element": "Ni",
+      "value": 0.456
+     },
+     {
+      "phase": "NiAl",
+      "element": "Ni",
+      "value": 0.711
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 1649.1,
+      "unit": "°C",
+      "phase": "NiAl"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni5",
+    "temperature": 27,
+    "temperature_unit": "C",
+    "temperature_printed": "27",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni5",
+      "element": "Ni",
+      "value": 0.625
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 700.2,
+      "unit": "°C",
+      "phase": "Al3Ni5"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Ni3Al",
+    "temperature": 1047,
+    "temperature_unit": "C",
+    "temperature_printed": "1047",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 0.724
+     },
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 0.771
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 1369.6,
+      "unit": "°C",
+      "phase": "Ni3Al"
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "(Ni)",
+    "temperature": 1367,
+    "temperature_unit": "C",
+    "temperature_printed": "1367",
+    "temperature_role": "equilibration",
+    "phase_compositions": [
+     {
+      "phase": "(Ni)",
+      "element": "Ni",
+      "value": 0.784
+     },
+     {
+      "phase": "(Ni)",
+      "element": "Ni",
+      "value": 1.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "to",
+      "quantity_kind": "other",
+      "value": 1455.2,
+      "unit": "°C",
+      "phase": "(Ni)"
+     }
+    ],
+    "source": "this_work"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2805,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1462,
+  "thoughts_token_count": 8417,
+  "total_token_count": 12684
+ },
+ "seconds": 76.0
+}

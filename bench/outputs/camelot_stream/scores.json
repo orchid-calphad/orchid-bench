@@ -1,0 +1,2987 @@
+{
+ "aggregate": {
+  "vector": {
+   "documents": 20,
+   "invariant_table": {
+    "T_err_K_median": 0.0,
+    "T_printed_exact": 1.0,
+    "cell_exact": 0.5458715596330275,
+    "cell_exact_normalised": 0.5458715596330275,
+    "cells": 654,
+    "citation_accuracy": 0.0,
+    "evidence_accuracy": 0.3333333333333333,
+    "numeric_exact": 0.6187290969899666,
+    "numeric_rel_err_median": 0.0,
+    "row_precision": 1.0,
+    "row_recall": 0.6197183098591549,
+    "rows_pred": 44,
+    "rows_true": 71,
+    "type_accuracy": 1.0,
+    "x_err_median": 0.0,
+    "x_printed_exact": 1.0,
+    "x_recall": 1.0
+   },
+   "phase_stability": {
+    "T_high_err_K_median": 0.0,
+    "T_low_err_K_median": 0.0,
+    "cell_exact": 0.17105263157894737,
+    "cell_exact_normalised": 0.17105263157894737,
+    "cells": 760,
+    "homogeneity_T_err_K_median": 0.0,
+    "homogeneity_x_err_median": 0.0,
+    "numeric_exact": 0.19318181818181818,
+    "numeric_rel_err_median": 0.0,
+    "pearson_accuracy": 1.0,
+    "prototype_accuracy": 1.0,
+    "row_precision": 1.0,
+    "row_recall": 0.18181818181818182,
+    "rows_pred": 12,
+    "rows_true": 66,
+    "structure_accuracy": 1.0,
+    "strukturbericht_accuracy": 1.0
+   },
+   "tables": {
+    "cell_exact": 0.5667883211678832,
+    "cell_exact_normalised": 0.5667883211678832,
+    "cells": 2740,
+    "numeric_exact": 0.7146417445482866,
+    "numeric_rel_err_median": 0.0,
+    "tables_pred": 101,
+    "tables_true": 81
+   },
+   "thermo_tables": {
+    "basis_accuracy": 1.0,
+    "cell_exact": 0.8123569794050344,
+    "cell_exact_normalised": 0.8123569794050344,
+    "cells": 1311,
+    "numeric_exact": 0.8844660194174757,
+    "numeric_rel_err_median": 0.0,
+    "record_precision": 0.9973544973544973,
+    "record_recall": 0.9366459627329192,
+    "records_pred": 756,
+    "records_true": 805,
+    "rel_err_median": 0.0,
+    "unit_accuracy": 1.0,
+    "value_exact": 1.0,
+    "within_1pct": 1.0
+   }
+  }
+ },
+ "extractor": "camelot_stream",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5737704918032787,
+     "cell_exact_normalised": 0.5737704918032787,
+     "numeric_exact": 0.7777777777777778,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 63
+     },
+     "per_table": [
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 22,
+     "records_true": 20,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.3333333333333333,
+     "cell_exact_normalised": 0.3333333333333333,
+     "numeric_exact": 0.5319148936170213,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 25
+     },
+     "per_table": [
+      {
+       "cells": 20,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 4,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 42,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.3669064748201439,
+     "cell_exact_normalised": 0.3669064748201439,
+     "numeric_exact": 0.5421686746987951,
+     "numeric_rel_err": {
+      "mean": 129.77876515289472,
+      "median": 0.0,
+      "n": 53
+     },
+     "per_table": [
+      {
+       "cells": 30,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 14,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 43,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 16,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 15,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 2503.4470874999997,
+        "median": 1208.0097,
+        "n": 8
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 30,
+     "matched": 30,
+     "records_pred": 30,
+     "records_true": 30,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 30
+     },
+     "unit_ok": 30,
+     "value_exact": 30,
+     "within_1pct": 30
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.43859649122807015,
+     "cell_exact_normalised": 0.43859649122807015,
+     "numeric_exact": 0.6101694915254238,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "per_table": [
+      {
+       "cells": 26,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 10,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 1
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 49,
+       "exact_norm": 49,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 2
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "T_printed_exact": 8,
+     "cite_n": 6,
+     "cite_ok": 0,
+     "ev_n": 8,
+     "ev_ok": 2,
+     "matched": 8,
+     "rows_pred": 8,
+     "rows_true": 8,
+     "type_ok": 8,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 23
+     },
+     "x_n": 23,
+     "x_printed_exact": 23
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 5,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.6097560975609756,
+     "cell_exact_normalised": 0.6097560975609756,
+     "numeric_exact": 0.7192982456140351,
+     "numeric_rel_err": {
+      "mean": 185.75235668737412,
+      "median": 0.0,
+      "n": 102
+     },
+     "per_table": [
+      {
+       "cells": 72,
+       "exact": 72,
+       "exact_norm": 72,
+       "id": "invariants",
+       "num_cells": 37,
+       "num_exact": 37,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 37
+       },
+       "segments": 1
+      },
+      {
+       "cells": 62,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "phases",
+       "num_cells": 20,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 395.375,
+        "median": 52.7,
+        "n": 8
+       },
+       "segments": 2
+      },
+      {
+       "cells": 21,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 5468.382633333332,
+        "median": 166.3,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_printed_exact": 7,
+     "cite_n": 5,
+     "cite_ok": 0,
+     "ev_n": 7,
+     "ev_ok": 2,
+     "matched": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "type_ok": 7,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 19
+     },
+     "x_n": 19,
+     "x_printed_exact": 19
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 5
+     },
+     "T_low_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 5
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 10
+     },
+     "matched": 5,
+     "pearson_ok": 5,
+     "proto_ok": 5,
+     "rows_pred": 5,
+     "rows_true": 5,
+     "sb_ok": 5,
+     "struct_n": 15,
+     "struct_ok": 15
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.8972972972972973,
+     "cell_exact_normalised": 0.8972972972972973,
+     "numeric_exact": 0.8888888888888888,
+     "numeric_rel_err": {
+      "mean": 0.44546465235005217,
+      "median": 0.0,
+      "n": 101
+     },
+     "per_table": [
+      {
+       "cells": 64,
+       "exact": 64,
+       "exact_norm": 64,
+       "id": "invariants",
+       "num_cells": 31,
+       "num_exact": 31,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 31
+       },
+       "segments": 1
+      },
+      {
+       "cells": 51,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "phases",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       },
+       "segments": 1
+      },
+      {
+       "cells": 20,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "formation",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 221.41199999999998,
+        "median": 275.39,
+        "n": 5
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 6,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "T_printed_exact": 9,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 9,
+     "rows_pred": 9,
+     "rows_true": 9,
+     "type_ok": 9,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 7,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 45,
+     "matched": 45,
+     "records_pred": 45,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 45
+     },
+     "unit_ok": 45,
+     "value_exact": 45,
+     "within_1pct": 45
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.6398104265402843,
+     "cell_exact_normalised": 0.6398104265402843,
+     "numeric_exact": 0.7672413793103449,
+     "numeric_rel_err": {
+      "mean": 7435643.764684375,
+      "median": 0.0,
+      "n": 101
+     },
+     "per_table": [
+      {
+       "cells": 60,
+       "exact": 60,
+       "exact_norm": 60,
+       "id": "invariants",
+       "num_cells": 33,
+       "num_exact": 33,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 33
+       },
+       "segments": 1
+      },
+      {
+       "cells": 78,
+       "exact": 3,
+       "exact_norm": 3,
+       "id": "phases",
+       "num_cells": 28,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 243.44969230769235,
+        "median": 76.288,
+        "n": 13
+       },
+       "segments": 2
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "formation",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       },
+       "segments": 1
+      },
+      {
+       "cells": 43,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 20,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.39759036144578314,
+     "cell_exact_normalised": 0.39759036144578314,
+     "numeric_exact": 0.5909090909090909,
+     "numeric_rel_err": {
+      "mean": 148148148.14814812,
+      "median": 0.0,
+      "n": 27
+     },
+     "per_table": [
+      {
+       "cells": 16,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 5,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 2.0,
+        "median": 2.0,
+        "n": 2
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5590551181102362,
+     "cell_exact_normalised": 0.5590551181102362,
+     "numeric_exact": 0.7682926829268293,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 63
+     },
+     "per_table": [
+      {
+       "cells": 20,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 9,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 3,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5737704918032787,
+     "cell_exact_normalised": 0.5737704918032787,
+     "numeric_exact": 0.7682926829268293,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 63
+     },
+     "per_table": [
+      {
+       "cells": 16,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 5,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 12,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 6,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 57,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.568,
+     "cell_exact_normalised": 0.568,
+     "numeric_exact": 0.7682926829268293,
+     "numeric_rel_err": {
+      "mean": 12.063894239959314,
+      "median": 0.0,
+      "n": 67
+     },
+     "per_table": [
+      {
+       "cells": 20,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 7,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 24,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 11,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 3328.081725,
+        "median": 2979.5,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 5
+     },
+     "T_printed_exact": 5,
+     "cite_n": 4,
+     "cite_ok": 0,
+     "ev_n": 5,
+     "ev_ok": 1,
+     "matched": 5,
+     "rows_pred": 5,
+     "rows_true": 5,
+     "type_ok": 5,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 13
+     },
+     "x_n": 13,
+     "x_printed_exact": 13
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 4,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 26,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5625,
+     "cell_exact_normalised": 0.5625,
+     "numeric_exact": 0.6619718309859155,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 47
+     },
+     "per_table": [
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "invariants",
+       "num_cells": 22,
+       "num_exact": 22,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 22
+       },
+       "segments": 1
+      },
+      {
+       "cells": 40,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 16,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 16,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "formation",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 6,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 20,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.31,
+     "cell_exact_normalised": 0.31,
+     "numeric_exact": 0.45454545454545453,
+     "numeric_rel_err": {
+      "mean": 0.2446255176814412,
+      "median": 0.0,
+      "n": 37
+     },
+     "per_table": [
+      {
+       "cells": 23,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 15,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "liquidus",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 1043.9083333333335,
+        "median": 1485.7800000000002,
+        "n": 12
+       },
+       "segments": 1
+      },
+      {
+       "cells": 19,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 5
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 57,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5072463768115942,
+     "cell_exact_normalised": 0.5072463768115942,
+     "numeric_exact": 0.7159090909090909,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 63
+     },
+     "per_table": [
+      {
+       "cells": 26,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 9,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 32,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "T_printed_exact": 8,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 8,
+     "rows_pred": 8,
+     "rows_true": 8,
+     "type_ok": 8,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "hom_T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 69,
+     "matched": 69,
+     "records_pred": 69,
+     "records_true": 69,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 69
+     },
+     "unit_ok": 69,
+     "value_exact": 69,
+     "within_1pct": 69
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.990990990990991,
+     "cell_exact_normalised": 0.990990990990991,
+     "numeric_exact": 1.0,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 143
+     },
+     "per_table": [
+      {
+       "cells": 54,
+       "exact": 54,
+       "exact_norm": 54,
+       "id": "invariants",
+       "num_cells": 32,
+       "num_exact": 32,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 32
+       },
+       "segments": 1
+      },
+      {
+       "cells": 67,
+       "exact": 66,
+       "exact_norm": 66,
+       "id": "phases",
+       "num_cells": 28,
+       "num_exact": 28,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 28
+       },
+       "segments": 1
+      },
+      {
+       "cells": 30,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "formation",
+       "num_cells": 20,
+       "num_exact": 20,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 20
+       },
+       "segments": 1
+      },
+      {
+       "cells": 71,
+       "exact": 70,
+       "exact_norm": 70,
+       "id": "mixing",
+       "num_cells": 63,
+       "num_exact": 63,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 63
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 7,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 39,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.4396551724137931,
+     "cell_exact_normalised": 0.4396551724137931,
+     "numeric_exact": 0.625,
+     "numeric_rel_err": {
+      "mean": 22.169512505954298,
+      "median": 0.0,
+      "n": 49
+     },
+     "per_table": [
+      {
+       "cells": 24,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 11,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 32,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 3402.4759000000004,
+        "median": 2737.3618,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 4,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 3,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 20,
+     "matched": 20,
+     "records_pred": 20,
+     "records_true": 23,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 20
+     },
+     "unit_ok": 20,
+     "value_exact": 20,
+     "within_1pct": 20
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.30392156862745096,
+     "cell_exact_normalised": 0.30392156862745096,
+     "numeric_exact": 0.4807692307692308,
+     "numeric_rel_err": {
+      "mean": 0.10000211229017432,
+      "median": 0.0,
+      "n": 29
+     },
+     "per_table": [
+      {
+       "cells": 26,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 11,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 35,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 10,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "formation",
+       "num_cells": 4,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": 45.71445,
+        "median": 47.724999999999994,
+        "n": 4
+       },
+       "segments": 1
+      },
+      {
+       "cells": 31,
+       "exact": 30,
+       "exact_norm": 30,
+       "id": "mixing",
+       "num_cells": 25,
+       "num_exact": 25,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 25
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_printed_exact": 7,
+     "cite_n": 3,
+     "cite_ok": 0,
+     "ev_n": 7,
+     "ev_ok": 4,
+     "matched": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "type_ok": 7,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 19
+     },
+     "x_n": 19,
+     "x_printed_exact": 19
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 6,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 30,
+     "matched": 30,
+     "records_pred": 30,
+     "records_true": 39,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 30
+     },
+     "unit_ok": 30,
+     "value_exact": 30,
+     "within_1pct": 30
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.5527638190954773,
+     "cell_exact_normalised": 0.5527638190954773,
+     "numeric_exact": 0.66,
+     "numeric_rel_err": {
+      "mean": 0.4960711589537249,
+      "median": 0.0,
+      "n": 75
+     },
+     "per_table": [
+      {
+       "cells": 66,
+       "exact": 64,
+       "exact_norm": 64,
+       "id": "invariants",
+       "num_cells": 29,
+       "num_exact": 29,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 29
+       },
+       "segments": 1
+      },
+      {
+       "cells": 70,
+       "exact": 4,
+       "exact_norm": 4,
+       "id": "phases",
+       "num_cells": 24,
+       "num_exact": 2,
+       "numeric_abs_err": {
+        "mean": 621.3542727272728,
+        "median": 767.0980000000001,
+        "n": 11
+       },
+       "segments": 2
+      },
+      {
+       "cells": 20,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "formation",
+       "num_cells": 12,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 43,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 6,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 1,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 30,
+     "matched": 30,
+     "records_pred": 30,
+     "records_true": 30,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 30
+     },
+     "unit_ok": 30,
+     "value_exact": 30,
+     "within_1pct": 30
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.4489795918367347,
+     "cell_exact_normalised": 0.4489795918367347,
+     "numeric_exact": 0.6481481481481481,
+     "numeric_rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 35
+     },
+     "per_table": [
+      {
+       "cells": 16,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "invariants",
+       "num_cells": 5,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 2,
+       "exact_norm": 2,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 13,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "rk_liquid",
+       "num_cells": 6,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 42,
+       "exact": 42,
+       "exact_norm": 42,
+       "id": "mixing",
+       "num_cells": 35,
+       "num_exact": 35,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 35
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 0,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 0,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 0,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 36,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+     "tables": "ran: camelot-py 0.11.0 stream via thermo_extractor.tables.extraction.build_report (whole-page profile)"
+    },
+    "tables": {
+     "cell_exact": 0.45614035087719296,
+     "cell_exact_normalised": 0.45614035087719296,
+     "numeric_exact": 0.6527777777777778,
+     "numeric_rel_err": {
+      "mean": 150000000.0063158,
+      "median": 0.0,
+      "n": 50
+     },
+     "per_table": [
+      {
+       "cells": 21,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "invariants",
+       "num_cells": 10,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 0.30000000000000004,
+        "median": 0.30000000000000004,
+        "n": 2
+       },
+       "segments": 1
+      },
+      {
+       "cells": 27,
+       "exact": 0,
+       "exact_norm": 0,
+       "id": "phases",
+       "num_cells": 8,
+       "num_exact": 0,
+       "numeric_abs_err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "segments": 1
+      },
+      {
+       "cells": 16,
+       "exact": 1,
+       "exact_norm": 1,
+       "id": "rk_liquid",
+       "num_cells": 9,
+       "num_exact": 1,
+       "numeric_abs_err": {
+        "mean": 2.5,
+        "median": 2.5,
+        "n": 3
+       },
+       "segments": 1
+      },
+      {
+       "cells": 50,
+       "exact": 50,
+       "exact_norm": 50,
+       "id": "mixing",
+       "num_cells": 45,
+       "num_exact": 45,
+       "numeric_abs_err": {
+        "mean": 0.0,
+        "median": 0.0,
+        "n": 45
+       },
+       "segments": 1
+      }
+     ],
+     "tables_pred": 5,
+     "tables_true": 4
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "d867c2f7bfe5f177b79d22cf",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Ni",
+   "Ti"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "reaction": "L → Ni3Ti",
+    "transition_kind": "congruent melting",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "code": "pycalphad 0.11.2"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3756,
+  "cached_content_token_count": null,
+  "candidates_token_count": 137,
+  "thoughts_token_count": 3766,
+  "total_token_count": 7659
+ },
+ "seconds": 26.3
+}

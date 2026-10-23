@@ -1,0 +1,113 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "bf7b50467153dd332924321a",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "0.100",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.200",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.300",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.400",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.500",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.600",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.700",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.800",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.900",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3336,
+  "cached_content_token_count": null,
+  "candidates_token_count": 455,
+  "thoughts_token_count": 2474,
+  "total_token_count": 6265
+ },
+ "seconds": 17.3
+}

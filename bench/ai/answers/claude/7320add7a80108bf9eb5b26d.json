@@ -1,0 +1,34 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Top field above both liquidus curves (single liquid field); the two-solid assemblage offered does not apply. No printed field labels."
+  },
+  {
+   "marker": 2,
+   "assemblage": "(Cu)+L",
+   "reason": "Lens between the right liquidus and right solidus above the horizontal invariant line."
+  },
+  {
+   "marker": 3,
+   "assemblage": "(Cu)",
+   "reason": "Between the right solidus curve and the Cu axis, above the invariant line: Cu-side terminal solid field."
+  },
+  {
+   "marker": 4,
+   "assemblage": "(Ag)",
+   "reason": "Between the Ag axis and the left solidus/solvus: Ag-side terminal solid field."
+  },
+  {
+   "marker": 5,
+   "assemblage": "(Ag)+L",
+   "reason": "Between left liquidus and left solidus above the horizontal invariant line."
+  },
+  {
+   "marker": 6,
+   "assemblage": "(Ag)+(Cu)",
+   "reason": "Large field below the invariant line between the two solvus curves."
+  }
+ ]
+}

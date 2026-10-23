@@ -1,0 +1,49 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "66312fb2155a498aadb84ce0",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Cu",
+  "rows": [
+   {
+    "reaction": "L -> (Ag) + (Cu)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Ag)",
+     "(Cu)"
+    ],
+    "temperature": 1055.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1055.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.397
+     },
+     {
+      "phase": "(Ag)",
+      "value": 0.141
+     },
+     {
+      "phase": "(Cu)",
+      "value": 0.951
+     }
+    ],
+    "source": "this_work",
+    "source_label": "Calculated with pycalphad 0.11.2 from the SGTE dataset"
+   }
+  ],
+  "notes": "Phases 1-3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document."
+ },
+ "usage": {
+  "prompt_token_count": 2077,
+  "cached_content_token_count": null,
+  "candidates_token_count": 313,
+  "thoughts_token_count": 607,
+  "total_token_count": 2997
+ },
+ "seconds": 9.0
+}

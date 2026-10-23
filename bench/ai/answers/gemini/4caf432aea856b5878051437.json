@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4caf432aea856b5878051437",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Pb"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "HCP_A3",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "other",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "temperature_treatment": "static"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3521,
+  "cached_content_token_count": null,
+  "candidates_token_count": 170,
+  "thoughts_token_count": 971,
+  "total_token_count": 4662
+ },
+ "seconds": 9.7
+}

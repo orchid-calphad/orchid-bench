@@ -1,0 +1,112 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "cf114e435fada814a92f568a",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Bi",
+   "Sn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 441.8,
+      "unit": "J mol^-1",
+      "unit_source": "column_header",
+      "printed": "441.8",
+      "expression_variable": "none",
+      "volume_state": "none"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 1.33493,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header",
+      "printed": "1.33493",
+      "expression_variable": "none",
+      "volume_state": "none"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "expression_variable": "none",
+      "volume_state": "none"
+     }
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed"
+   },
+   {
+    "row_label": "L1",
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -298.1,
+      "unit": "J mol^-1",
+      "unit_source": "column_header",
+      "printed": "-298.1",
+      "expression_variable": "none",
+      "volume_state": "none"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -0.28229,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header",
+      "printed": "-0.28229",
+      "expression_variable": "none",
+      "volume_state": "none"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "expression_variable": "none",
+      "volume_state": "none"
+     }
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed"
+   }
+  ],
+  "notes": "Values as printed in the TDB file.",
+  "column_units": [
+   {
+    "column_header": "a / J mol^-1",
+    "unit": "J mol^-1"
+   },
+   {
+    "column_header": "b / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   },
+   {
+    "column_header": "c / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3310,
+  "cached_content_token_count": null,
+  "candidates_token_count": 493,
+  "thoughts_token_count": 1500,
+  "total_token_count": 5303
+ },
+ "seconds": 14.4
+}

@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "427e22f427ec35b4570d3298",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Bi"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "L1 → (Al) + L2",
+    "reaction": "L1 → (Al) + L2",
+    "transition_kind": "monotectic",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "column_units": []
+ },
+ "usage": {
+  "prompt_token_count": 3533,
+  "cached_content_token_count": null,
+  "candidates_token_count": 162,
+  "thoughts_token_count": 2218,
+  "total_token_count": 5913
+ },
+ "seconds": 15.8
+}

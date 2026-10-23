@@ -1,0 +1,114 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "96b15f7faf5f17084dfca566",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Si",
+  "rows": [
+   {
+    "reaction": "L -> Mg2Si",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "Mg2Si"
+    ],
+    "temperature": 1077.4,
+    "temperature_unit": "C",
+    "temperature_printed": "1077.4",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.333,
+      "bound": "none"
+     },
+     {
+      "phase": "Mg2Si",
+      "value": 0.333,
+      "bound": "none"
+     }
+    ],
+    "source": "this_work",
+    "source_label": "calculated"
+   },
+   {
+    "reaction": "L -> Mg2Si + (Si)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "Mg2Si",
+     "(Si)"
+    ],
+    "temperature": 939.3,
+    "temperature_unit": "C",
+    "temperature_printed": "939.3",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.543,
+      "bound": "none"
+     },
+     {
+      "phase": "Mg2Si",
+      "value": 0.333,
+      "bound": "none"
+     },
+     {
+      "phase": "(Si)",
+      "value": 1.0,
+      "bound": "none"
+     }
+    ],
+    "source": "this_work",
+    "source_label": "calculated"
+   },
+   {
+    "reaction": "L -> (Mg) + Mg2Si",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Mg)",
+     "Mg2Si"
+    ],
+    "temperature": 637.1,
+    "temperature_unit": "C",
+    "temperature_printed": "637.1",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.015,
+      "bound": "none"
+     },
+     {
+      "phase": "(Mg)",
+      "value": 0.0,
+      "bound": "none"
+     },
+     {
+      "phase": "Mg2Si",
+      "value": 0.333,
+      "bound": "none"
+     }
+    ],
+    "source": "this_work",
+    "source_label": "calculated"
+   }
+  ],
+  "notes": "Phases 1-3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document. a Two-phase equilibrium at a temperature extremum; both phases have the same composition."
+ },
+ "usage": {
+  "prompt_token_count": 2142,
+  "cached_content_token_count": null,
+  "candidates_token_count": 471,
+  "thoughts_token_count": 861,
+  "total_token_count": 3474
+ },
+ "seconds": 14.9
+}

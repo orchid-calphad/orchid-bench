@@ -1,0 +1,232 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Cu",
+  "Zn"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "mole_fraction",
+ "rows": [
+  {
+   "row_label": "(Cu)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 1084.6,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Cu)"
+   ],
+   "structure": {
+    "phase": "(Cu)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Cu)",
+     "element": "Zn",
+     "printed": "0.000–0.386 at 467",
+     "phase_source": "row_label",
+     "value": 0.0,
+     "value_max": 0.386
+    }
+   ]
+  },
+  {
+   "row_label": "β′",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 462.7,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "β′"
+   ],
+   "structure": {
+    "phase": "β′",
+    "pearson_symbol": "cP2",
+    "strukturbericht": "B2",
+    "prototype": "CsCl"
+   },
+   "phase_compositions": [
+    {
+     "phase": "β′",
+     "element": "Zn",
+     "printed": "0.421–0.499 at 57",
+     "phase_source": "row_label",
+     "value": 0.421,
+     "value_max": 0.499
+    }
+   ]
+  },
+  {
+   "row_label": "β",
+   "temperature": 460.4,
+   "temperature_unit": "C",
+   "temperature_printed": "460.4",
+   "temperature_bound": "none",
+   "temperature_max": 899.4,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "β"
+   ],
+   "structure": {
+    "phase": "β",
+    "pearson_symbol": "cI2",
+    "strukturbericht": "A2",
+    "prototype": "W"
+   },
+   "phase_compositions": [
+    {
+     "phase": "β",
+     "element": "Zn",
+     "printed": "0.378–0.556 at 827",
+     "phase_source": "row_label",
+     "value": 0.378,
+     "value_max": 0.556
+    }
+   ]
+  },
+  {
+   "row_label": "γ",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 834.2,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "γ"
+   ],
+   "structure": {
+    "phase": "γ",
+    "pearson_symbol": "cI52",
+    "strukturbericht": "D8₂",
+    "prototype": "Cu5Zn8"
+   },
+   "phase_compositions": [
+    {
+     "phase": "γ",
+     "element": "Zn",
+     "printed": "0.564–0.693 at 557",
+     "phase_source": "row_label",
+     "value": 0.564,
+     "value_max": 0.693
+    }
+   ]
+  },
+  {
+   "row_label": "δ",
+   "temperature": 558.8,
+   "temperature_unit": "C",
+   "temperature_printed": "558.8",
+   "temperature_bound": "none",
+   "temperature_max": 703.1,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "δ"
+   ],
+   "structure": {
+    "phase": "δ",
+    "pearson_symbol": "cI2",
+    "strukturbericht": "A2",
+    "prototype": "W"
+   },
+   "phase_compositions": [
+    {
+     "phase": "δ",
+     "element": "Zn",
+     "printed": "0.739–0.770 at 607",
+     "phase_source": "row_label",
+     "value": 0.739,
+     "value_max": 0.77
+    }
+   ]
+  },
+  {
+   "row_label": "ε",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 600.2,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "ε"
+   ],
+   "structure": {
+    "phase": "ε",
+    "pearson_symbol": "hP2",
+    "strukturbericht": "A3",
+    "prototype": "Mg"
+   },
+   "phase_compositions": [
+    {
+     "phase": "ε",
+     "element": "Zn",
+     "printed": "0.784–0.874 at 417",
+     "phase_source": "row_label",
+     "value": 0.784,
+     "value_max": 0.874
+    }
+   ]
+  },
+  {
+   "row_label": "(Zn)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 419.5,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Zn)"
+   ],
+   "structure": {
+    "phase": "(Zn)",
+    "pearson_symbol": "hP2",
+    "strukturbericht": "A3",
+    "prototype": "Mg"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Zn)",
+     "element": "Zn",
+     "printed": "0.981–1.000 at 417",
+     "phase_source": "row_label",
+     "value": 0.981,
+     "value_max": 1.0
+    }
+   ]
+  }
+ ],
+ "notes": "Row temperature = stability range (from-to, C). \"< 27ᵃ\" footnote a: stable at the lowest calculated temperature. Homogeneity range x(Zn) is given at the separate \"at T / °C\" column value, recorded in each phase_compositions.printed: (Cu) at 467; β′ at 57; β at 827; γ at 557; δ at 607; ε at 417; (Zn) at 417.",
+ "column_units": [
+  {
+   "column_header": "Stability range / °C",
+   "unit": "°C"
+  },
+  {
+   "column_header": "at T / °C",
+   "unit": "°C"
+  }
+ ]
+}

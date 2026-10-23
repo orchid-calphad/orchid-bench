@@ -1,0 +1,37 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "161173a662dda91a7472b47b",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Bi",
+   "Sn"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Bi)",
+    "temperature": 147,
+    "temperature_unit": "C",
+    "temperature_printed": "147",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3339,
+  "cached_content_token_count": null,
+  "candidates_token_count": 160,
+  "thoughts_token_count": 1721,
+  "total_token_count": 5220
+ },
+ "seconds": 14.1
+}

@@ -1,0 +1,103 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "377da22876efcf7508faef11",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 16914.949,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "16914.949",
+      "volume_state": "liquid"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -14.7721,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "-14.7721",
+      "volume_state": "liquid"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 1.54955,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "1.54955",
+      "volume_state": "liquid"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -1963.3,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "-1963.3",
+      "volume_state": "liquid"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.8623,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.8623",
+      "volume_state": "liquid"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": "liquid"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "a / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "b / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   },
+   {
+    "column_header": "c / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3432,
+  "cached_content_token_count": null,
+  "candidates_token_count": 766,
+  "thoughts_token_count": 1199,
+  "total_token_count": 5397
+ },
+ "seconds": 12.1
+}

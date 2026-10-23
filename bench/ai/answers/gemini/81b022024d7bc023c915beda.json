@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "81b022024d7bc023c915beda",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Bi",
+   "Sn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L > (Bi) + (Sn)",
+    "temperature": 415.8,
+    "temperature_unit": "K",
+    "temperature_printed": "415.8 K",
+    "temperature_role": "invariant",
+    "reaction": "L > (Bi) + (Sn)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L > (Bi) + (Sn), lies at 415.8 K.",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 601,
+  "cached_content_token_count": null,
+  "candidates_token_count": 207,
+  "thoughts_token_count": 346,
+  "total_token_count": 1154
+ },
+ "seconds": 5.0
+}

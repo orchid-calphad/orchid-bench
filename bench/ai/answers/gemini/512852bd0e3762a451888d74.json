@@ -1,0 +1,95 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "512852bd0e3762a451888d74",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L -> (Cu) + Cu2Mg",
+    "reaction": "L > (Cu) + Cu2Mg",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 20.9
+     }
+    ],
+    "source": "this_work",
+    "quote": "Eutectic equilibrium L > (Cu) + Cu2Mg is found at 725.2 °C and 20.9 at.% Mg (L).",
+    "page": 1
+   },
+   {
+    "row_label": "L -> Cu2Mg + CuMg2",
+    "reaction": "L - Cu2Mg.+ CuMg2",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 59.5
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 552.0 °C-for the eutectic reaction (L - Cu2Mg.+ CuMg2), where L has 59.5 at.% Mg.",
+    "page": 1
+   },
+   {
+    "row_label": "L -> CuMg2 + (Mg)",
+    "reaction": "L: -.CuMg2 + '(Mg)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 83.7
+     }
+    ],
+    "source": "this_work",
+    "quote": "Eutectic equilibrium L: -.CuMg2 + '(Mg) is found at 484.9.°C and 83.7 at.% (L).",
+    "page": 1
+   },
+   {
+    "row_label": "Cu2Mg congruent melting",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "Cu2Mg",
+      "element": "Mg",
+      "value": 33.0
+     }
+    ],
+    "source": "this_work",
+    "quote": "Cu2Mg' melts congruently at 795.8 °C and 33:0 at.% Mg.",
+    "page": 1
+   },
+   {
+    "row_label": "CuMg2 congruent melting",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "CuMg2",
+      "value": 66.5
+     }
+    ],
+    "source": "this_work",
+    "quote": "CuMg2 melts congruently at 567.9 °C and 66.5 at.%",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 441,
+  "cached_content_token_count": null,
+  "candidates_token_count": 769,
+  "thoughts_token_count": 1361,
+  "total_token_count": 2571
+ },
+ "seconds": 12.8
+}

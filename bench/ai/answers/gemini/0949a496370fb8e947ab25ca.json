@@ -1,0 +1,41 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "0949a496370fb8e947ab25ca",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is located in the single-phase liquid field (L) indicated by the label above it, which is not among the explicit options offered."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 is in the two-phase field between the eutectic temperature (591 K) and the monotectic temperature (~690 K), consisting of solid (Zn) and liquid (L). Since '(Zn)+L' is not offered, the correct choice is 'none of these'."
+   },
+   {
+    "marker": 3,
+    "assemblage": "L+L2",
+    "reason": "Marker 3 lies inside the liquid miscibility gap above the monotectic reaction line, where two immiscible liquid phases coexist (L + L2)."
+   },
+   {
+    "marker": 4,
+    "assemblage": "L",
+    "reason": "Marker 4 is in the single-phase liquid (L) region on the Pb-rich side, situated above the melting point of pure lead and outside the liquid miscibility gap."
+   },
+   {
+    "marker": 5,
+    "assemblage": "(Zn)+L",
+    "reason": "Marker 5 is situated in the two-phase region below the monotectic horizontal line (~690 K) and above the eutectic horizontal line (591 K), where solid (Zn) is in equilibrium with liquid (L)."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1362,
+  "cached_content_token_count": null,
+  "candidates_token_count": 373,
+  "thoughts_token_count": 2298,
+  "total_token_count": 4033
+ },
+ "seconds": 23.3
+}

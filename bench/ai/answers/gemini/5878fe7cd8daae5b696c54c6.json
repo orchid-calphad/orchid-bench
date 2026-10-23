@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5878fe7cd8daae5b696c54c6",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "Al3Ni2",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "calculation_settings": {
+     "temperature_treatment": "calculated"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3338,
+  "cached_content_token_count": null,
+  "candidates_token_count": 156,
+  "thoughts_token_count": 1237,
+  "total_token_count": 4731
+ },
+ "seconds": 11.3
+}

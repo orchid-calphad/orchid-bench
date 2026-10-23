@@ -1,0 +1,72 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "d4bd06feecc068e00f2c6c45",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Fe",
+  "rows": [
+   {
+    "reaction": "(Cr,Fe) -> σ",
+    "reaction_type": "congruent transformation",
+    "phases": [
+     "(Cr,Fe)",
+     "σ"
+    ],
+    "temperature": 812.5,
+    "temperature_unit": "C",
+    "temperature_printed": "812.5",
+    "compositions": [
+     {
+      "phase": "(Cr,Fe)",
+      "value": 0.522
+     },
+     {
+      "phase": "σ",
+      "value": 0.522
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "σ -> (Cr,Fe)1 + (Cr,Fe)2",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "σ",
+     "(Cr,Fe)1",
+     "(Cr,Fe)2"
+    ],
+    "temperature": 517.0,
+    "temperature_unit": "C",
+    "temperature_printed": "517.0",
+    "compositions": [
+     {
+      "phase": "σ",
+      "value": 0.508
+     },
+     {
+      "phase": "(Cr,Fe)1",
+      "value": 0.149
+     },
+     {
+      "phase": "(Cr,Fe)2",
+      "value": 0.837
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   }
+  ],
+  "notes": "Phases 1–3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document."
+ },
+ "usage": {
+  "prompt_token_count": 2242,
+  "cached_content_token_count": null,
+  "candidates_token_count": 490,
+  "thoughts_token_count": 636,
+  "total_token_count": 3368
+ },
+ "seconds": 9.2
+}

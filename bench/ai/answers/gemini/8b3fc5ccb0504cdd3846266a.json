@@ -1,0 +1,112 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8b3fc5ccb0504cdd3846266a",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Zn",
+  "rows": [
+   {
+    "reaction": "L1 + L2 -> (Zn)",
+    "reaction_type": "syntectic",
+    "phases": [
+     "L1",
+     "L2",
+     "(Zn)"
+    ],
+    "temperature": 420.0,
+    "temperature_unit": "C",
+    "temperature_printed": "420.0",
+    "compositions": [
+     {
+      "phase": "L1",
+      "value": 5.0
+     },
+     {
+      "phase": "L2",
+      "value": 99.7
+     },
+     {
+      "phase": "(Zn)",
+      "value": 99.6
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L1 + L2 -> (Zn)",
+    "reaction_type": "syntectic",
+    "phases": [
+     "L1",
+     "L2",
+     "(Zn)"
+    ],
+    "temperature": 429.0,
+    "temperature_unit": "C",
+    "temperature_printed": "429.0 [3]",
+    "compositions": [],
+    "source": "experimental",
+    "source_label": "T exp.b",
+    "citations": [
+     "3"
+    ]
+   },
+   {
+    "reaction": "L -> (Pb) + (Zn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Pb)",
+     "(Zn)"
+    ],
+    "temperature": 317.8,
+    "temperature_unit": "C",
+    "temperature_printed": "317.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 1.9
+     },
+     {
+      "phase": "(Pb)",
+      "value": 0.3
+     },
+     {
+      "phase": "(Zn)",
+      "value": 99.8
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Pb) + (Zn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Pb)",
+     "(Zn)"
+    ],
+    "temperature": 321.8,
+    "temperature_unit": "C",
+    "temperature_printed": "321.8 [5]",
+    "compositions": [],
+    "source": "experimental",
+    "source_label": "T exp.b",
+    "citations": [
+     "5"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2180,
+  "cached_content_token_count": null,
+  "candidates_token_count": 722,
+  "thoughts_token_count": 1334,
+  "total_token_count": 4236
+ },
+ "seconds": 15.2
+}

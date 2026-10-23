@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "d22ff6f3aec1528689653d9e",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Pb",
+   "Sn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phase_compositions": [],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 5174.58,
+      "printed": "5174.58",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 1.558,
+      "printed": "1.558",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "phase_compositions": [],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 331.69,
+      "printed": "331.69",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(v) = a + b·T + c·T·ln T"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "notes": "Values as printed in the TDB file.",
+  "column_units": []
+ },
+ "usage": {
+  "prompt_token_count": 3314,
+  "cached_content_token_count": 2320,
+  "candidates_token_count": 616,
+  "thoughts_token_count": 3636,
+  "total_token_count": 7566
+ },
+ "seconds": 33.8
+}

@@ -1,0 +1,36 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "244e403a5d35da81215c3c17",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Mg"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L → Al12Mg17",
+    "reaction": "L → Al12Mg17",
+    "transition_kind": "congruent",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3344,
+  "cached_content_token_count": null,
+  "candidates_token_count": 157,
+  "thoughts_token_count": 3793,
+  "total_token_count": 7294
+ },
+ "seconds": 26.2
+}

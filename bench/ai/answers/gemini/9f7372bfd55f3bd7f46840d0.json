@@ -1,0 +1,70 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "9f7372bfd55f3bd7f46840d0",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "highest invariant reaction",
+    "temperature": 380.8,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "L = (Al) +.(Zn)",
+    "transition_kind": "invariant",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L = (Al) +.(Zn), lies at 380.8 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectic reaction",
+    "temperature": 380.8,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "L - (Al) + (Zn)-",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.884
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L - (Al) + (Zn)-is caléulated at 380.8 °C, with L at x(Zn) = 0.884.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectoid reaction",
+    "temperature": 277.2,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "(Al)2 - (All + (Zn)",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "(Al)2",
+      "element": "Zn",
+      "value": 0.59
+     }
+    ],
+    "source": "this_work",
+    "quote": "The 'dataset places a eutectoid ((Al)2 - (All + (Zn)) at 277.2 °C; the composition of (Al)2 is a mole fraction of 0.590.",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 457,
+  "cached_content_token_count": null,
+  "candidates_token_count": 375,
+  "thoughts_token_count": 1180,
+  "total_token_count": 2012
+ },
+ "seconds": 10.7
+}

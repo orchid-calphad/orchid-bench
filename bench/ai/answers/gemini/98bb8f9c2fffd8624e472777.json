@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "98bb8f9c2fffd8624e472777",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is located in the high-temperature single-phase liquid region (L), which is not listed among the provided choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 is located in the high-temperature solid-solution field (βTi), which is not among the offered choices."
+   },
+   {
+    "marker": 3,
+    "assemblage": "(αTi)+(βTi)",
+    "reason": "Marker 3 lies in the two-phase field between the low-temperature (αTi) and high-temperature (βTi) phase boundaries."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Marker 4 lies in the Ni-rich solid solution field (Ni), which is not among the offered choices."
+   },
+   {
+    "marker": 5,
+    "assemblage": "L+Ni3Ti",
+    "reason": "Marker 5 is situated in the two-phase region between the liquidus and the eutectic line, adjacent to the Ni3Ti phase."
+   },
+   {
+    "marker": 6,
+    "assemblage": "L+Ni3Ti",
+    "reason": "Marker 6 is located in the two-phase field between liquid (L) and the intermetallic compound Ni3Ti."
+   },
+   {
+    "marker": 7,
+    "assemblage": "L",
+    "reason": "Marker 7 lies above the liquidus curve in the homogeneous liquid phase field."
+   },
+   {
+    "marker": 8,
+    "assemblage": "none of these",
+    "reason": "Marker 8 is situated above the liquidus in the liquid region (L), which is not offered in the choices."
+   },
+   {
+    "marker": 9,
+    "assemblage": "L+NiTi",
+    "reason": "Marker 9 lies between the liquidus and the solidus of the NiTi phase field, containing the two-phase mixture L+NiTi."
+   },
+   {
+    "marker": 10,
+    "assemblage": "L+NiTi",
+    "reason": "Marker 10 lies to the right of the stoichiometric NiTi phase between the liquidus and the solidus/peritectic line, containing L+NiTi."
+   },
+   {
+    "marker": 11,
+    "assemblage": "L+NiTi2",
+    "reason": "Marker 11 is located in the two-phase region between the liquid phase and the NiTi2 phase just above the eutectic temperature."
+   },
+   {
+    "marker": 12,
+    "assemblage": "(βTi)+NiTi2",
+    "reason": "Marker 12 lies below the eutectic line in the two-phase region between NiTi2 and the (βTi) solid solution."
+   },
+   {
+    "marker": 13,
+    "assemblage": "none of these",
+    "reason": "Marker 13 is located in the low-temperature single-phase (αTi) field at the Ti-rich end, which is not among the offered choices."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1511,
+  "cached_content_token_count": null,
+  "candidates_token_count": 556,
+  "thoughts_token_count": 20652,
+  "total_token_count": 22719
+ },
+ "seconds": 155.3
+}

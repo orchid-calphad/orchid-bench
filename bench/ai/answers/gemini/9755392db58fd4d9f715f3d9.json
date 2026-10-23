@@ -1,0 +1,101 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "9755392db58fd4d9f715f3d9",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 16914.949,
+      "unit": "J mol⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -14.7721,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 1.54955,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     }
+    ]
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -1963.3,
+      "unit": "J mol⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.8623,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid",
+      "unit_source": "column_header"
+     }
+    ]
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "a / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "b / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   },
+   {
+    "column_header": "c / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2364,
+  "cached_content_token_count": null,
+  "candidates_token_count": 378,
+  "thoughts_token_count": 618,
+  "total_token_count": 3360
+ },
+ "seconds": 7.5
+}

@@ -1,0 +1,59 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "eacfe578bcf517f9876eb31d",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu)",
+    "temperature": 727,
+    "temperature_unit": "C",
+    "temperature_printed": "727",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "Cu2Mg",
+    "temperature": 557,
+    "temperature_unit": "C",
+    "temperature_printed": "557",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "CuMg2",
+    "temperature": 47,
+    "temperature_unit": "C",
+    "temperature_printed": "47",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "(Mg)",
+    "temperature": 487,
+    "temperature_unit": "C",
+    "temperature_printed": "487",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3594,
+  "cached_content_token_count": null,
+  "candidates_token_count": 220,
+  "thoughts_token_count": 3094,
+  "total_token_count": 6908
+ },
+ "seconds": 22.9
+}

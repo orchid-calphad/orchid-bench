@@ -1,0 +1,37 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4d7ae7fd16b76c5cb910c18b",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Al",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 850,
+    "temperature_unit": "K",
+    "temperature_printed": "850",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3314,
+  "cached_content_token_count": null,
+  "candidates_token_count": 168,
+  "thoughts_token_count": 1431,
+  "total_token_count": 4913
+ },
+ "seconds": 13.3
+}

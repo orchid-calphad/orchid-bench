@@ -1,0 +1,37 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "e49a05bf0963e8e486a822c1",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 647,
+    "temperature_unit": "C",
+    "temperature_printed": "647",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3344,
+  "cached_content_token_count": null,
+  "candidates_token_count": 164,
+  "thoughts_token_count": 4435,
+  "total_token_count": 7943
+ },
+ "seconds": 33.7
+}

@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "76e389774e99525689779900",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Al",
+   "Si"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3356,
+  "cached_content_token_count": null,
+  "candidates_token_count": 122,
+  "thoughts_token_count": 2609,
+  "total_token_count": 6087
+ },
+ "seconds": 24.7
+}

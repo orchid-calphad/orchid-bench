@@ -1,0 +1,83 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "0ab3becc15c5c07fe7074626",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Al",
+   "Bi"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 75351.7,
+      "printed": "75351.7",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -52.8,
+      "printed": "-52.8",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 20421.2,
+      "printed": "20421.2",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -3.7,
+      "printed": "-3.7",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3330,
+  "cached_content_token_count": null,
+  "candidates_token_count": 615,
+  "thoughts_token_count": 1946,
+  "total_token_count": 5891
+ },
+ "seconds": 17.4
+}

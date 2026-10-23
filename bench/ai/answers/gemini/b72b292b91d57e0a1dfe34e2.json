@@ -1,0 +1,145 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "b72b292b91d57e0a1dfe34e2",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 32263.4,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "32263.4",
+      "volume_state": ""
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -13.10176,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "−13.10176",
+      "volume_state": ""
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -14909.2,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−14909.2",
+      "volume_state": ""
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 10.92958,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "10.92958",
+      "volume_state": ""
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L2",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 2829.4,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "2829.4",
+      "volume_state": ""
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "unit_source": "column_header",
+      "printed": "0.0",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "a / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "b / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   },
+   {
+    "column_header": "c / J mol⁻¹ K⁻¹",
+    "unit": "J mol⁻¹ K⁻¹"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3465,
+  "cached_content_token_count": null,
+  "candidates_token_count": 615,
+  "thoughts_token_count": 1205,
+  "total_token_count": 5285
+ },
+ "seconds": 14.0
+}

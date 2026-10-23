@@ -1,0 +1,54 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "49c50e436f6e3714ec277113",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 10465.55,
+      "printed": "10465.55",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -3.39259,
+      "printed": "-3.39259",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "printed": "0.0",
+      "volume_state": "Liquid: L(ν) = a + b·T + c·T·ln T"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "notes": "Values as printed in the TDB file."
+ },
+ "usage": {
+  "prompt_token_count": 3354,
+  "cached_content_token_count": null,
+  "candidates_token_count": 363,
+  "thoughts_token_count": 1912,
+  "total_token_count": 5629
+ },
+ "seconds": 18.6
+}

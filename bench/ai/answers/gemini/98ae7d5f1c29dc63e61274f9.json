@@ -1,0 +1,149 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "98ae7d5f1c29dc63e61274f9",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L → Cu2Mg",
+    "temperature": 1068.9,
+    "temperature_unit": "K",
+    "temperature_printed": "1068.9",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → Cu2Mg",
+    "temperature": 1064.9,
+    "temperature_unit": "K",
+    "temperature_printed": "1064.9 [5]",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → (Cu) + Cu2Mg",
+    "temperature": 998.4,
+    "temperature_unit": "K",
+    "temperature_printed": "998.4",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → CuMg2",
+    "temperature": 841.1,
+    "temperature_unit": "K",
+    "temperature_printed": "841.1",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → CuMg2",
+    "temperature": 843.1,
+    "temperature_unit": "K",
+    "temperature_printed": "843.1 [4]",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → Cu2Mg + CuMg2",
+    "temperature": 825.2,
+    "temperature_unit": "K",
+    "temperature_printed": "825.2",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → Cu2Mg + CuMg2",
+    "temperature": 834.2,
+    "temperature_unit": "K",
+    "temperature_printed": "834.2 [5]",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → CuMg2 + (Mg)",
+    "temperature": 758.1,
+    "temperature_unit": "K",
+    "temperature_printed": "758.1",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L → CuMg2 + (Mg)",
+    "temperature": 761.1,
+    "temperature_unit": "K",
+    "temperature_printed": "761.1 [3]",
+    "temperature_role": "invariant",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "T (K) this work",
+    "unit": "K"
+   },
+   {
+    "column_header": "at.% Mg, 1",
+    "unit": "at.%"
+   },
+   {
+    "column_header": "at.% Mg, 2",
+    "unit": "at.%"
+   },
+   {
+    "column_header": "at.% Mg, 3",
+    "unit": "at.%"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3341,
+  "cached_content_token_count": null,
+  "candidates_token_count": 693,
+  "thoughts_token_count": 5357,
+  "total_token_count": 9391
+ },
+ "seconds": 40.2
+}

@@ -1,0 +1,195 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "233d03e64e26c7161bf58d67",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "L - B +.(Cu)",
+    "temperature": 1036.7,
+    "temperature_unit": "C",
+    "temperature_printed": "1036.7",
+    "temperature_role": "invariant",
+    "reaction": "L - B +.(Cu)",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L - B +.(Cu), lies at 1036.7 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "L - B.+ (Cu)",
+    "temperature": 1036.7,
+    "temperature_unit": "C",
+    "temperature_printed": "1036.7.",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.829
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L - B.+ (Cu) is calculated at 1036.7. °C, with L at. x(Cu) = 0.829.",
+    "page": 1
+   },
+   {
+    "row_label": "L + 6 - y",
+    "temperature": 1020.6,
+    "temperature_unit": "C",
+    "temperature_printed": "1020.6",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.658
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 1020.6 °C for the peritectic reaction (L + 6 - y), where L has x(Cu) = 0.658.",
+    "page": 1
+   },
+   {
+    "row_label": "L + y - B",
+    "temperature": 993.5,
+    "temperature_unit": "C",
+    "temperature_printed": "993.5",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.609
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a peritectic (L + y - B) at 993.5 °C; the composition of L is a mole fraction: of 0.609.",
+    "page": 1
+   },
+   {
+    "row_label": "L + B > @",
+    "temperature": 742.1,
+    "temperature_unit": "C",
+    "temperature_printed": "742.1",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.286
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 742.1 °C for the peritectic reaction (L + B > @), where L has a mole-fraction of 0.286:",
+    "page": 1
+   },
+   {
+    "row_label": "L - (Al) + @",
+    "temperature": 607.9,
+    "temperature_unit": "C",
+    "temperature_printed": "607.9",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.113
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain.607.9 °C for the eutectic reaction (L - (Al) + @), where L has-a mole fraction of 0.113.",
+    "page": 1
+   },
+   {
+    "row_label": "8 ~-y + (Cu)",
+    "temperature": 566.9,
+    "temperature_unit": "C",
+    "temperature_printed": "566.9",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectoid",
+    "phase_compositions": [
+     {
+      "phase": "B",
+      "element": "Cu",
+      "value": 0.762
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 566.9 °C for the eutectoid reaction (8 ~-y + (Cu)), where B has a mole fraction of 0.762.",
+    "page": 1
+   },
+   {
+    "row_label": "y",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_role": "other",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -20.31,
+      "unit": "kJ/mol",
+      "phase": "y"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of y at 298.15 K is -20.31 kJ/mol 'per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "y",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.4,
+      "unit": "J/(mol K)",
+      "phase": "y"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 24.40 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "equiatomic liquid",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_role": "other",
+    "properties": [
+     {
+      "quantity": "Gibbs \"energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -22.08,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs \"energy of mixing is -22.08 kJ/mol.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1043,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1817,
+  "thoughts_token_count": 14935,
+  "total_token_count": 17795
+ },
+ "seconds": 108.9
+}

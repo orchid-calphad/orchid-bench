@@ -1,0 +1,39 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Inset: above the V formed by the two liquidus branches meeting at ~1.9 at.% / 591 K; this liquid region is continuous with the field labelled L, so it is L, not L#2."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Inset: right of the rising Zn-side liquidus and above 591 K, between liquid and the Zn edge: a liquid plus Zn-solid field, not a liquid alone or two liquids."
+  },
+  {
+   "marker": 3,
+   "assemblage": "L+L#2",
+   "reason": "Inside the closed dome above 693 K; the grey settled label L+L#2 drawn (over the inset) in the dome names this field."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Inset: narrow sliver under the Pb-side liquidus branch, above the 591 K line, next to the Pb edge: liquid plus Pb solid, not L#2."
+  },
+  {
+   "marker": 5,
+   "assemblage": "none of these",
+   "reason": "Inset: on the 591 K line at the Pb edge, in the Pb-side solid band or its two-phase sliver; not a single liquid."
+  },
+  {
+   "marker": 6,
+   "assemblage": "(Zn)+L",
+   "reason": "Between the 693 K and 591 K horizontals, bounded by the liquid region labelled L on the left and the Zn edge band on the right."
+  },
+  {
+   "marker": 7,
+   "assemblage": "L",
+   "reason": "Pb edge at ~630 K, left of the Pb-side liquidus and above the 591 K line, continuous with the field labelled L."
+  }
+ ]
+}

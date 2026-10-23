@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1d8fc8a5cd3cb3c35a69dff8",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "reaction": "L → Cu2Mg",
+    "transition_kind": "congruent melting",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3636,
+  "cached_content_token_count": null,
+  "candidates_token_count": 155,
+  "thoughts_token_count": 2270,
+  "total_token_count": 6061
+ },
+ "seconds": 18.2
+}

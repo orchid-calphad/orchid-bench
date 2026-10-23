@@ -1,0 +1,77 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "74e0a4f01c21949fc2e54ea4",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Zn",
+  "rows": [
+   {
+    "reaction": "L -> (Al) + (Zn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "(Zn)"
+    ],
+    "temperature": 380.8,
+    "temperature_unit": "C",
+    "temperature_printed": "380.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 88.4
+     },
+     {
+      "phase": "(Al)",
+      "value": 67.3
+     },
+     {
+      "phase": "(Zn)",
+      "value": 96.9
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "(Al)2 -> (Al)1 + (Zn)",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "(Al)2",
+     "(Al)1",
+     "(Zn)"
+    ],
+    "temperature": 277.2,
+    "temperature_unit": "C",
+    "temperature_printed": "277.2",
+    "compositions": [
+     {
+      "phase": "(Al)2",
+      "value": 59.0
+     },
+     {
+      "phase": "(Al)1",
+      "value": 14.1
+     },
+     {
+      "phase": "(Zn)",
+      "value": 98.4
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   }
+  ],
+  "notes": "Phases 1–3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document."
+ },
+ "usage": {
+  "prompt_token_count": 2240,
+  "cached_content_token_count": null,
+  "candidates_token_count": 302,
+  "thoughts_token_count": 737,
+  "total_token_count": 3279
+ },
+ "seconds": 8.0
+}

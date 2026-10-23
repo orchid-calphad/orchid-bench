@@ -1,0 +1,90 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "b34909053e1ea65840df7ef5",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 11760.0,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "11760.0"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 1.084,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "1.084"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "0.0"
+     }
+    ],
+    "temperature_basis": "not_printed"
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -1671.8,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "-1671.8"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "0.0"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "phase": "Liquid",
+      "unit_source": "not_printed",
+      "printed": "0.0"
+     }
+    ],
+    "temperature_basis": "not_printed"
+   }
+  ],
+  "column_units": []
+ },
+ "usage": {
+  "prompt_token_count": 3314,
+  "cached_content_token_count": null,
+  "candidates_token_count": 581,
+  "thoughts_token_count": 2228,
+  "total_token_count": 6123
+ },
+ "seconds": 22.0
+}

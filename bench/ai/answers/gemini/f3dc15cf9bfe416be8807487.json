@@ -1,0 +1,344 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f3dc15cf9bfe416be8807487",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 2000,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Ni",
+      "value": 0.1
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -14.14,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -15.4,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.8965,
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Ni)",
+      "quantity_kind": "activity",
+      "value": 0.000255,
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Al)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 0.13,
+      "unit": "kJ mol-1",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Ni)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -142.57,
+      "unit": "kJ mol-1",
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "temperature": 2000,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Ni",
+      "value": 0.3
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -39.06,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -37.24,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.443,
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Ni)",
+      "quantity_kind": "activity",
+      "value": 0.0038,
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Al)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -10.45,
+      "unit": "kJ mol-1",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Ni)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -105.83,
+      "unit": "kJ mol-1",
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "temperature": 2000,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Ni",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -49.27,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -45.62,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.0698,
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Ni)",
+      "quantity_kind": "activity",
+      "value": 0.0593,
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Al)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -47.91,
+      "unit": "kJ mol-1",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Ni)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -50.63,
+      "unit": "kJ mol-1",
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "temperature": 2000,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Ni",
+      "value": 0.7
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -39.98,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -38.15,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.0041,
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Ni)",
+      "quantity_kind": "activity",
+      "value": 0.3984,
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Al)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -104.76,
+      "unit": "kJ mol-1",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Ni)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -12.21,
+      "unit": "kJ mol-1",
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "temperature": 2000,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Ni",
+      "value": 0.9
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -14.93,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -16.18,
+      "unit": "kJ mol-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.0001854,
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "a(Ni)",
+      "quantity_kind": "activity",
+      "value": 0.8813,
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Al)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -147.87,
+      "unit": "kJ mol-1",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     },
+     {
+      "quantity": "ΔH(Ni)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -0.15,
+      "unit": "kJ mol-1",
+      "component": "Ni",
+      "reference_state": "pure liquid Al and Ni at 2000 K"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ],
+  "notes": "Reference states: pure liquid Al and Ni at 2000 K; per mole of atoms. ΔH: partial molar enthalpies of mixing."
+ },
+ "usage": {
+  "prompt_token_count": 2159,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1825,
+  "thoughts_token_count": 1560,
+  "total_token_count": 5544
+ },
+ "seconds": 21.6
+}

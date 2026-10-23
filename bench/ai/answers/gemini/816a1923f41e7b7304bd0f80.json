@@ -1,0 +1,64 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "816a1923f41e7b7304bd0f80",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L1",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "L2",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "a / J mol^-1",
+    "unit": "J mol^-1"
+   },
+   {
+    "column_header": "b / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   },
+   {
+    "column_header": "c / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3331,
+  "cached_content_token_count": 2425,
+  "candidates_token_count": 208,
+  "thoughts_token_count": 1829,
+  "total_token_count": 5368
+ },
+ "seconds": 23.3
+}

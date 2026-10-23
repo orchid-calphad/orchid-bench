@@ -1,0 +1,94 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Top-left corner above all liquidus lines: liquid field; not offered."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Top-right corner above all liquidus lines: liquid field; not offered."
+  },
+  {
+   "marker": 3,
+   "assemblage": "none of these",
+   "reason": "Open field above both liquidus branches: liquid; not offered."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Inset: above both liquidus branches meeting at the eutectic point: liquid; not offered."
+  },
+  {
+   "marker": 5,
+   "assemblage": "none of these",
+   "reason": "Sn edge at ~370 C, above the Sn-side liquidus end (~232 C): liquid; not offered."
+  },
+  {
+   "marker": 6,
+   "assemblage": "none of these",
+   "reason": "Inset: between left liquidus branch and eutectic line, liquid plus Bi-side solid; not offered."
+  },
+  {
+   "marker": 7,
+   "assemblage": "none of these",
+   "reason": "Sn edge at ~350 C, above the liquidus end: liquid; not offered."
+  },
+  {
+   "marker": 8,
+   "assemblage": "none of these",
+   "reason": "Inset: between right liquidus branch and eutectic line, liquid plus Sn-side solid; not offered."
+  },
+  {
+   "marker": 9,
+   "assemblage": "none of these",
+   "reason": "Inset: below the eutectic horizontal, two-solid field; not offered."
+  },
+  {
+   "marker": 10,
+   "assemblage": "(Bi)+L",
+   "reason": "Triangle between the Bi-side liquidus, the Bi solidus and the eutectic horizontal."
+  },
+  {
+   "marker": 11,
+   "assemblage": "(Bi)",
+   "reason": "Narrow single-phase band at the pure-Bi edge, left of the solidus curve."
+  },
+  {
+   "marker": 12,
+   "assemblage": "(Sn)+L",
+   "reason": "Between the Sn-side liquidus and the Sn solidus curve above the eutectic horizontal."
+  },
+  {
+   "marker": 13,
+   "assemblage": "none of these",
+   "reason": "Single-phase region at the Sn edge bounded by solidus and solvus: Sn-based solid alone, not offered."
+  },
+  {
+   "marker": 14,
+   "assemblage": "(Bi)+(Sn)",
+   "reason": "Below the eutectic horizontal between the two terminal solvus lines."
+  },
+  {
+   "marker": 15,
+   "assemblage": "(Bi)",
+   "reason": "Bi edge at ~100 C, left of the Bi solvus: the Bi-side single-phase band."
+  },
+  {
+   "marker": 16,
+   "assemblage": "none of these",
+   "reason": "Bottom axis just left of the Sn-side solvus: two-solid field; not offered."
+  },
+  {
+   "marker": 17,
+   "assemblage": "none of these",
+   "reason": "Bottom axis at x~0.73, below the eutectic between the solvus lines: two-solid field; not offered."
+  },
+  {
+   "marker": 18,
+   "assemblage": "none of these",
+   "reason": "Bottom axis at x~0.55, in the two-solid field below the eutectic, not liquid."
+  }
+ ]
+}

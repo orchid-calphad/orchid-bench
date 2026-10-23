@@ -1,0 +1,83 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5bec55151bf6b7a36a59d2f2",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 16914.949,
+      "unit": "J mol⁻¹",
+      "phase": "liquid"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -14.7721,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 1.54955,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid"
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -1963.3,
+      "unit": "J mol⁻¹",
+      "phase": "liquid"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.8623,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol⁻¹ K⁻¹",
+      "phase": "liquid"
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2233,
+  "cached_content_token_count": null,
+  "candidates_token_count": 268,
+  "thoughts_token_count": 649,
+  "total_token_count": 3150
+ },
+ "seconds": 7.3
+}

@@ -1,0 +1,94 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "ad07ac341ce46eb54e41bdfc",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Pb",
+  "rows": [
+   {
+    "reaction": "L1 -> (Cu) + L2",
+    "reaction_type": "monotectic",
+    "phases": [
+     "L1",
+     "(Cu)",
+     "L2"
+    ],
+    "temperature": 956.8,
+    "temperature_unit": "C",
+    "temperature_printed": "956.8",
+    "compositions": [
+     {
+      "phase": "L1",
+      "value": 0.222
+     },
+     {
+      "phase": "(Cu)",
+      "value": 0.007
+     },
+     {
+      "phase": "L2",
+      "value": 0.631
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu) + (Pb)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Cu)",
+     "(Pb)"
+    ],
+    "temperature": 326.3,
+    "temperature_unit": "C",
+    "temperature_printed": "326.3",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.998
+     },
+     {
+      "phase": "(Cu)",
+      "value": 0.0
+     },
+     {
+      "phase": "(Pb)",
+      "value": 1.0
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu) + (Pb)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Cu)",
+     "(Pb)"
+    ],
+    "temperature": 321.3,
+    "temperature_unit": "C",
+    "temperature_printed": "321.3",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   }
+  ],
+  "notes": "Phases 1–3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document. Experimental temperatures are fictitious values attributed to invented references [3–5] for testing evidence-class extraction; they are not data."
+ },
+ "usage": {
+  "prompt_token_count": 2343,
+  "cached_content_token_count": null,
+  "candidates_token_count": 388,
+  "thoughts_token_count": 1285,
+  "total_token_count": 4016
+ },
+ "seconds": 12.7
+}

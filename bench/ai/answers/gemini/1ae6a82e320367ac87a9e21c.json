@@ -1,0 +1,106 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1ae6a82e320367ac87a9e21c",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is located above the liquidus in the fully liquid (L) region, which is not among the choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "L",
+    "reason": "Marker 2 is located in the inset above the liquidus line in the single-phase liquid field (L)."
+   },
+   {
+    "marker": 3,
+    "assemblage": "L+NiAl",
+    "reason": "Marker 3 lies between the liquidus curve and the NiAl solidus above the 1139°C peritectic invariant line, which is the two-phase L + NiAl field."
+   },
+   {
+    "marker": 4,
+    "assemblage": "L",
+    "reason": "Marker 4 is in the zoomed-in inset, located above the liquidus curve in the liquid phase field (L)."
+   },
+   {
+    "marker": 5,
+    "assemblage": "L",
+    "reason": "Marker 5 is located just above the eutectic line in the liquid phase (L)."
+   },
+   {
+    "marker": 6,
+    "assemblage": "(Ni)+Ni3Al",
+    "reason": "Marker 6 is located at around 84 at% Ni and 260°C, which lies in the two-phase region between Ni3Al and the Ni-rich solid solution (Ni)."
+   },
+   {
+    "marker": 7,
+    "assemblage": "Al3Ni2+L",
+    "reason": "Marker 7 lies between the peritectic temperatures 854°C and 1139°C, between the liquidus line and the Al3Ni2 phase, defining the two-phase Al3Ni2 + L region."
+   },
+   {
+    "marker": 8,
+    "assemblage": "cannot tell",
+    "reason": "Markers 8 through 16 along that horizontal line overlap and are obscured by inset graphics or crowded labels, preventing definitive assignment."
+   },
+   {
+    "marker": 9,
+    "assemblage": "cannot tell",
+    "reason": "Markers along the obscured boundary cannot be unambiguously discerned due to overlap."
+   },
+   {
+    "marker": 10,
+    "assemblage": "cannot tell",
+    "reason": "Markers along the obscured boundary cannot be unambiguously discerned due to overlap."
+   },
+   {
+    "marker": 11,
+    "assemblage": "cannot tell",
+    "reason": "Markers along the obscured boundary cannot be unambiguously discerned due to overlap."
+   },
+   {
+    "marker": 12,
+    "assemblage": "cannot tell",
+    "reason": "Markers along the obscured boundary cannot be unambiguously discerned due to overlap."
+   },
+   {
+    "marker": 13,
+    "assemblage": "Ni3Al",
+    "reason": "Marker 13 is located inside the single-phase field labeled Ni3Al."
+   },
+   {
+    "marker": 14,
+    "assemblage": "cannot tell",
+    "reason": "Marker 14 is placed on an obscured region near the liquidus boundary."
+   },
+   {
+    "marker": 15,
+    "assemblage": "cannot tell",
+    "reason": "Marker 15 is placed on an obscured region near the liquidus boundary."
+   },
+   {
+    "marker": 16,
+    "assemblage": "L",
+    "reason": "Marker 16 is located just above the liquidus line in the liquid (L) region."
+   },
+   {
+    "marker": 17,
+    "assemblage": "Al3Ni+L",
+    "reason": "Marker 17 is located below the liquidus and above the 854°C invariant peritectic line to the left of the Al3Ni stoichiometric line, representing the Al3Ni + L two-phase field."
+   },
+   {
+    "marker": 18,
+    "assemblage": "(Ni)+Ni3Al",
+    "reason": "Marker 18 is located at ~78 at% Ni and 700°C, in the two-phase field between Ni3Al and (Ni)."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1840,
+  "cached_content_token_count": null,
+  "candidates_token_count": 809,
+  "thoughts_token_count": 2144,
+  "total_token_count": 4793
+ },
+ "seconds": 23.4
+}

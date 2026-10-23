@@ -1,0 +1,44 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "L",
+   "reason": "Inset (Al-rich corner): above both liquidus curves meeting at the 651 °C point; continuous with the open liquid region."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Inset: right of the rising liquidus above the 651 °C line; liquid plus the compound whose vertical line stands near x(Ni)=0.25 in the main diagram, not (Ni)."
+  },
+  {
+   "marker": 3,
+   "assemblage": "cannot tell",
+   "reason": "Below the liquidus between the 1139 °C line and the maximum; a liquid + solid field whose solid partner is not labelled in the image (not single L)."
+  },
+  {
+   "marker": 4,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the Al axis next to the left liquidus near the eutectic line."
+  },
+  {
+   "marker": 5,
+   "assemblage": "none of these",
+   "reason": "Inset: below the 651 °C line at the Al edge; solid two-phase field labelled (Al)+Al3Ni lower in the main diagram, not (Ni)-bearing."
+  },
+  {
+   "marker": 6,
+   "assemblage": "cannot tell",
+   "reason": "Two-phase field between liquidus and the compound boundary between 854 and 1139 °C; it is not single L but the solid partner is not labelled."
+  },
+  {
+   "marker": 7,
+   "assemblage": "cannot tell",
+   "reason": "Marker centred on the liquidus line."
+  },
+  {
+   "marker": 8,
+   "assemblage": "cannot tell",
+   "reason": "Marker centred on the liquidus line."
+  }
+ ]
+}

@@ -1,0 +1,617 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "9429a0516d84dc2005157f0b",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.1
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 1.18,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2.9,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.9075,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.2154,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 0.1,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 10.93,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.2
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2.16,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -4.21,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.8278,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.3724,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 0.41,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 9.14,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.3
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2.92,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -4.94,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.7575,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.4885,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 1,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 7.38,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.4
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3.43,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -5.3,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.693,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.5772,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 1.91,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 5.7,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.5
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3.67,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -5.39,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.6299,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.6488,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 3.18,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 4.16,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.6
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3.61,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -5.24,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.5626,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.7116,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 4.86,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 2.79,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.7
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3.25,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -4.82,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.4828,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.7721,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 6.99,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 1.64,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.8
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2.54,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -4.07,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.378,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.8364,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 9.64,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 0.76,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   },
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.9
+     }
+    ],
+    "phases_present": [
+     "Liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 1.46,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2.8,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Ag)",
+      "quantity_kind": "activity",
+      "value": 0.2282,
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.9103,
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Ag)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 12.84,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Ag",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 0.2,
+      "unit": "kJ mol⁻¹",
+      "phase": "Liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Ag and Cu at 1450 K"
+     }
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2913,
+  "cached_content_token_count": null,
+  "candidates_token_count": 3209,
+  "thoughts_token_count": 1851,
+  "total_token_count": 7973
+ },
+ "seconds": 30.3
+}

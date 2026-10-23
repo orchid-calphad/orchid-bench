@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "3b1bc1efe91a085ea94779c8",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Mg",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Mg)",
+    "temperature": 910,
+    "temperature_unit": "K",
+    "temperature_printed": "910",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3729,
+  "cached_content_token_count": null,
+  "candidates_token_count": 142,
+  "thoughts_token_count": 2079,
+  "total_token_count": 5950
+ },
+ "seconds": 17.5
+}

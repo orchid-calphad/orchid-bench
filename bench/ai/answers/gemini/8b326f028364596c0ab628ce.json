@@ -1,0 +1,22 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8b326f028364596c0ab628ce",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": []
+ },
+ "usage": {
+  "prompt_token_count": 469,
+  "cached_content_token_count": null,
+  "candidates_token_count": 55,
+  "thoughts_token_count": 913,
+  "total_token_count": 1437
+ },
+ "seconds": 8.0
+}

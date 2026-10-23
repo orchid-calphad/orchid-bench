@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "e10745523b144f3eda4697d0",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cr",
+   "Fe"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cr,Fe)",
+    "temperature": 1640,
+    "temperature_unit": "K",
+    "temperature_printed": "1640",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3368,
+  "cached_content_token_count": null,
+  "candidates_token_count": 145,
+  "thoughts_token_count": 2582,
+  "total_token_count": 6095
+ },
+ "seconds": 19.1
+}

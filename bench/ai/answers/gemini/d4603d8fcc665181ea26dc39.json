@@ -1,0 +1,69 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "d4603d8fcc665181ea26dc39",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Ag)",
+    "temperature": 787,
+    "temperature_unit": "C",
+    "temperature_printed": "787",
+    "temperature_role": "other",
+    "phases_present": [
+     "(Ag)"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "(Ag)",
+      "element": "Cu",
+      "value": 0.0
+     },
+     {
+      "phase": "(Ag)",
+      "element": "Cu",
+      "value": 13.8
+     }
+    ],
+    "source": "unlabelled"
+   },
+   {
+    "row_label": "(Cu)",
+    "temperature": 847,
+    "temperature_unit": "C",
+    "temperature_printed": "847",
+    "temperature_role": "other",
+    "phases_present": [
+     "(Cu)"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "(Cu)",
+      "element": "Cu",
+      "value": 94.8
+     },
+     {
+      "phase": "(Cu)",
+      "element": "Cu",
+      "value": 100.0
+     }
+    ],
+    "source": "unlabelled"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2256,
+  "cached_content_token_count": null,
+  "candidates_token_count": 384,
+  "thoughts_token_count": 2779,
+  "total_token_count": 5419
+ },
+ "seconds": 24.4
+}

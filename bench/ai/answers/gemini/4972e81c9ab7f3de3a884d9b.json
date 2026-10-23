@@ -1,0 +1,36 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4972e81c9ab7f3de3a884d9b",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Bi",
+   "Sn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 650,
+    "temperature_unit": "K",
+    "temperature_printed": "650 K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3335,
+  "cached_content_token_count": null,
+  "candidates_token_count": 92,
+  "thoughts_token_count": 1980,
+  "total_token_count": 5407
+ },
+ "seconds": 16.6
+}

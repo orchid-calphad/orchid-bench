@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "b521c75539694cacab97a884",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Zn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3337,
+  "cached_content_token_count": null,
+  "candidates_token_count": 132,
+  "thoughts_token_count": 1438,
+  "total_token_count": 4907
+ },
+ "seconds": 12.2
+}

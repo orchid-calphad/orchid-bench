@@ -1,0 +1,119 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1b8178c10916229352564caf",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cr",
+   "Fe"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 2250,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "10",
+    "temperature": 2250,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "overall_composition": [
+     {
+      "element": "Fe",
+      "value": 10,
+      "printed": "10"
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -28,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "-28",
+      "volume_state": ""
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -7321,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "-7321",
+      "volume_state": ""
+     },
+     {
+      "quantity": "a(Cr)",
+      "quantity_kind": "activity",
+      "value": 0.8931,
+      "component": "Cr",
+      "unit_source": "not_printed",
+      "printed": "0.8931",
+      "volume_state": ""
+     },
+     {
+      "quantity": "a(Fe)",
+      "quantity_kind": "activity",
+      "value": 0.0553,
+      "component": "Fe",
+      "unit_source": "not_printed",
+      "printed": "0.0553",
+      "volume_state": ""
+     },
+     {
+      "quantity": "ΔH̄(Cr)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -10,
+      "unit": "J mol⁻¹",
+      "component": "Cr",
+      "unit_source": "column_header",
+      "printed": "-10",
+      "volume_state": ""
+     },
+     {
+      "quantity": "ΔH̄(Fe)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -187,
+      "unit": "J mol⁻¹",
+      "component": "Fe",
+      "unit_source": "column_header",
+      "printed": "-187",
+      "volume_state": ""
+     }
+    ],
+    "source": "unlabelled",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 4057,
+  "cached_content_token_count": null,
+  "candidates_token_count": 480,
+  "thoughts_token_count": 2655,
+  "total_token_count": 7192
+ },
+ "seconds": 21.1
+}

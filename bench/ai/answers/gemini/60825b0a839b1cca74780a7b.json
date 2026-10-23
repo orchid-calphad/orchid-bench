@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "60825b0a839b1cca74780a7b",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 647,
+    "temperature_unit": "C",
+    "temperature_printed": "647",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "code": "CALPHAD"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3344,
+  "cached_content_token_count": 2436,
+  "candidates_token_count": 147,
+  "thoughts_token_count": 38379,
+  "total_token_count": 41870
+ },
+ "seconds": 258.4
+}

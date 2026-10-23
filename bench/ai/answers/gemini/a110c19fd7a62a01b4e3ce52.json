@@ -1,0 +1,57 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "a110c19fd7a62a01b4e3ce52",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "Al12Mg17",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "code": "",
+     "functional": "",
+     "pseudopotential": "",
+     "cutoff": "",
+     "k_points": "",
+     "k_points_phonon": "",
+     "supercell": "",
+     "relaxation": "",
+     "temperature_treatment": "",
+     "other": []
+    }
+   },
+   {
+    "row_label": "β",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "caption"
+   },
+   {
+    "row_label": "εᵃ",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "caption"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3348,
+  "cached_content_token_count": null,
+  "candidates_token_count": 242,
+  "thoughts_token_count": 1610,
+  "total_token_count": 5200
+ },
+ "seconds": 14.2
+}

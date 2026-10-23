@@ -1,0 +1,86 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "0663f2f71d59ab7102e90024",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Ag",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "highest invariant reaction",
+    "reaction": "L2 → L1 + (Ni)",
+    "phase_compositions": [],
+    "properties": [],
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L2 → L1 + (Ni), lies at 1703.4 K.",
+    "page": 1
+   },
+   {
+    "row_label": "Pure Ag melting",
+    "phase_compositions": [],
+    "properties": [],
+    "source": "this_work",
+    "quote": "Pure Ag melts at 1234.9 K.",
+    "page": 1
+   },
+   {
+    "row_label": "Pure Ni melting",
+    "phase_compositions": [],
+    "properties": [],
+    "source": "this_work",
+    "quote": "Pure Ni melts at 1728.2 K.",
+    "page": 1
+   },
+   {
+    "row_label": "mixing enthalpy maximum of liquid",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 15118,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 2600 K the integral mixing enthalpy of the liquid has its maximum, 15118 J/mol, at 38.0 at.% Ni.",
+    "page": 2
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid",
+    "phases_present": [
+     "liquid"
+    ],
+    "phase_compositions": [],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -3.88,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 2600 K, the Gibbs energy of mixing is -3.88 kJ/mol-atom.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 560,
+  "cached_content_token_count": null,
+  "candidates_token_count": 626,
+  "thoughts_token_count": 2025,
+  "total_token_count": 3211
+ },
+ "seconds": 17.5
+}

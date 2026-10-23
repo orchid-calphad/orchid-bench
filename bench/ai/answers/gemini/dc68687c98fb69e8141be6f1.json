@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "dc68687c98fb69e8141be6f1",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is in the single-phase liquid (L) region above the liquidus, which is not among the options."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 lies in the terminal solid solution region of aluminum, (Al), which is not listed in the options."
+   },
+   {
+    "marker": 3,
+    "assemblage": "(Al)+L",
+    "reason": "Marker 3 lies in the two-phase field between the liquidus and solidus on the Al-rich side, consisting of (Al) and Liquid."
+   },
+   {
+    "marker": 4,
+    "assemblage": "(Zn)+L",
+    "reason": "Marker 4 lies in the two-phase region between the liquidus and solidus on the Zn-rich side, consisting of (Zn) and Liquid."
+   },
+   {
+    "marker": 5,
+    "assemblage": "(Zn)",
+    "reason": "Marker 5 lies in the narrow terminal solid solution field of zinc, (Zn)."
+   },
+   {
+    "marker": 6,
+    "assemblage": "none of these",
+    "reason": "Marker 6 lies in the solid two-phase region between (Al) and (Zn) below the eutectic line, not in (Zn)+L."
+   },
+   {
+    "marker": 7,
+    "assemblage": "(Al)1+(Al)2",
+    "reason": "Marker 7 lies inside the solid-state miscibility gap dome where the fcc phase separates into two coherent phases, (Al)1 + (Al)2."
+   },
+   {
+    "marker": 8,
+    "assemblage": "(Al)+(Zn)",
+    "reason": "Marker 8 lies in the broad two-phase region below the eutectoid line consisting of the two terminal solid solutions (Al) + (Zn)."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1429,
+  "cached_content_token_count": null,
+  "candidates_token_count": 350,
+  "thoughts_token_count": 5929,
+  "total_token_count": 7708
+ },
+ "seconds": 45.3
+}

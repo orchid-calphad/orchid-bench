@@ -1,0 +1,47 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "be30ad696b795e6abdd3c957",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Ni",
+   "Ti"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "reaction": "L → Ni3Ti",
+    "transition_kind": "congruent",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "reaction": "L → Ni3Ti",
+    "transition_kind": "congruent",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3370,
+  "cached_content_token_count": 2458,
+  "candidates_token_count": 135,
+  "thoughts_token_count": 4602,
+  "total_token_count": 8107
+ },
+ "seconds": 30.5
+}

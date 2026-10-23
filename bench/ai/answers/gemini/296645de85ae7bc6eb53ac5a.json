@@ -1,0 +1,20 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "296645de85ae7bc6eb53ac5a",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "rows": []
+ },
+ "usage": {
+  "prompt_token_count": 3347,
+  "cached_content_token_count": 2340,
+  "candidates_token_count": 30,
+  "thoughts_token_count": 390,
+  "total_token_count": 3767
+ },
+ "seconds": 4.5
+}

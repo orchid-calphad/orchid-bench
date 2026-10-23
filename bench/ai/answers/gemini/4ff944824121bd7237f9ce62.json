@@ -1,0 +1,43 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4ff944824121bd7237f9ce62",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_printed": "1000 K",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "code": "",
+     "functional": "",
+     "pseudopotential": "",
+     "cutoff": "",
+     "k_points": "",
+     "k_points_phonon": "",
+     "supercell": "",
+     "relaxation": "",
+     "temperature_treatment": "",
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3384,
+  "cached_content_token_count": 2469,
+  "candidates_token_count": 160,
+  "thoughts_token_count": 3659,
+  "total_token_count": 7203
+ },
+ "seconds": 30.7
+}

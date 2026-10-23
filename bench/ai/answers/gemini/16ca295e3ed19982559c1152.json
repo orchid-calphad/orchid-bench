@@ -1,0 +1,108 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "16ca295e3ed19982559c1152",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "melting point of Al",
+    "temperature": 935,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "The melting point of Al reproduced by the dataset is 935 K.",
+    "page": 1
+   },
+   {
+    "row_label": "melting point of Si",
+    "temperature": 1687,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "Pure Si melts at 1687 K.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectic reaction",
+    "temperature": 850,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Si",
+      "value": 0.121
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L → (Al) + (Si) is calculated at 850 K, with L at x(Si) = 0.121.",
+    "page": 1
+   },
+   {
+    "row_label": "minimum mixing enthalpy of liquid",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "overall_composition": [
+     {
+      "element": "Si",
+      "value": 0.52
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -3.46,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1750 K the integral mixing enthalpy of the liquid has its minimum, -3.46 kJ/mol, at x(Si) = 0.520.",
+    "page": 2
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -13346,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1750 K, the Gibbs energy of mixing is -13346 J/mol.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 651,
+  "cached_content_token_count": null,
+  "candidates_token_count": 829,
+  "thoughts_token_count": 6566,
+  "total_token_count": 8046
+ },
+ "seconds": 52.2
+}

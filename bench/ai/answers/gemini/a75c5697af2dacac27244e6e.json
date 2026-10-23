@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "a75c5697af2dacac27244e6e",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3331,
+  "cached_content_token_count": null,
+  "candidates_token_count": 144,
+  "thoughts_token_count": 1872,
+  "total_token_count": 5347
+ },
+ "seconds": 16.2
+}

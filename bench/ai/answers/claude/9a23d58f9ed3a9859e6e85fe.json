@@ -1,0 +1,119 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Top-left corner above the Cu-side liquidus start: liquid field, not offered."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Top-right corner far above all liquidus lines, in the field labelled L; L not offered."
+  },
+  {
+   "marker": 3,
+   "assemblage": "none of these",
+   "reason": "Field carries the printed label (Cu); not offered."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Inset (x 0.90-1.00 Zn, 650-740 K): above the 692 K line, left of the liquidus, i.e. the field labelled ε + L in the main plot; not offered."
+  },
+  {
+   "marker": 5,
+   "assemblage": "L",
+   "reason": "Inset: above the 692 K horizontal and right of the liquidus curve, continuous with the field labelled L."
+  },
+  {
+   "marker": 6,
+   "assemblage": "none of these",
+   "reason": "Cu edge near the top of the liquidus/solidus start; whatever the field, no assemblage is offered."
+  },
+  {
+   "marker": 7,
+   "assemblage": "none of these",
+   "reason": "Inset: below the 692 K line at x~0.92, the field labelled ε + (Zn) in the main plot; not offered."
+  },
+  {
+   "marker": 8,
+   "assemblage": "none of these",
+   "reason": "Inset: below 692 K right of the near-vertical solvus at x~0.985, the Zn-side single-phase band (Zn), which is not among the choices."
+  },
+  {
+   "marker": 9,
+   "assemblage": "none of these",
+   "reason": "Cu edge at ~1200 K, inside the field labelled (Cu); not offered."
+  },
+  {
+   "marker": 10,
+   "assemblage": "none of these",
+   "reason": "Zn edge at ~1020 K, far above the liquidus, in the field labelled L; (Zn) does not apply."
+  },
+  {
+   "marker": 11,
+   "assemblage": "(Cu)+β",
+   "reason": "Narrow band between the (Cu) field and the field labelled β, above the ~73x K horizontal."
+  },
+  {
+   "marker": 12,
+   "assemblage": "γ+δ",
+   "reason": "Below the 976 K horizontal, between the boundary of the field labelled γ and the narrow δ single-phase band left of δ + L."
+  },
+  {
+   "marker": 13,
+   "assemblage": "(Zn)",
+   "reason": "Hidden under marker 19 at the Zn edge below 692 K; the inset shows this band right of the solvus is (Zn)."
+  },
+  {
+   "marker": 14,
+   "assemblage": "cannot tell",
+   "reason": "Marker overlaps the junction of several lines near the 873 K and 832 K horizontals; its field cannot be resolved."
+  },
+  {
+   "marker": 15,
+   "assemblage": "none of these",
+   "reason": "Field carries the printed label ε; ε alone is not offered."
+  },
+  {
+   "marker": 16,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the junction of the 692 K horizontal and the ε boundary; side cannot be resolved."
+  },
+  {
+   "marker": 17,
+   "assemblage": "(Zn)+ε",
+   "reason": "Between the ε boundary and the Zn-edge band, the field carrying the printed label ε + (Zn)."
+  },
+  {
+   "marker": 18,
+   "assemblage": "(Zn)",
+   "reason": "Just below 692 K at x~0.99; inset shows the band right of the solvus below 692 K is single-phase (Zn)."
+  },
+  {
+   "marker": 19,
+   "assemblage": "(Zn)",
+   "reason": "Below 692 K at the Zn edge; inset shows this band is single-phase (Zn)."
+  },
+  {
+   "marker": 20,
+   "assemblage": "none of these",
+   "reason": "Bottom-left corner at the Cu edge, inside the (Cu) field; not offered."
+  },
+  {
+   "marker": 21,
+   "assemblage": "(Cu)",
+   "reason": "Bottom axis at x~0.2, left of the first solvus line, continuous with the field labelled (Cu)."
+  },
+  {
+   "marker": 22,
+   "assemblage": "cannot tell",
+   "reason": "Bottom axis near x~0.40 where lines are hidden by the legend; marker lies close to a boundary."
+  },
+  {
+   "marker": 23,
+   "assemblage": "cannot tell",
+   "reason": "Bottom axis near x~0.60 where lines are hidden by the legend; marker lies close to a boundary."
+  }
+ ]
+}

@@ -1,0 +1,289 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4cfc2180c04e4393e75bc2f4",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Mg",
+  "rows": [
+   {
+    "reaction": "L -> Al12Mg17",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "Al12Mg17"
+    ],
+    "temperature": 460.3,
+    "temperature_unit": "C",
+    "temperature_printed": "460.3",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 53.5
+     },
+     {
+      "phase": "Al12Mg17",
+      "value": 53.5
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> Al12Mg17",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "Al12Mg17"
+    ],
+    "temperature": 457.3,
+    "temperature_unit": "C",
+    "temperature_printed": "457.3",
+    "source": "experimental",
+    "source_label": "[5]",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "L -> β",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "β"
+    ],
+    "temperature": 451.5,
+    "temperature_unit": "C",
+    "temperature_printed": "451.5",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 38.8
+     },
+     {
+      "phase": "β",
+      "value": 38.8
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> β",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "β"
+    ],
+    "temperature": 444.5,
+    "temperature_unit": "C",
+    "temperature_printed": "444.5",
+    "source": "experimental",
+    "source_label": "[3]",
+    "citations": [
+     "3"
+    ]
+   },
+   {
+    "reaction": "L -> (Al) + β",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "β"
+    ],
+    "temperature": 450.7,
+    "temperature_unit": "C",
+    "temperature_printed": "450.7",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 36.4
+     },
+     {
+      "phase": "(Al)",
+      "value": 16.6
+     },
+     {
+      "phase": "β",
+      "value": 38.9
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Al) + β",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "β"
+    ],
+    "temperature": 448.7,
+    "temperature_unit": "C",
+    "temperature_printed": "448.7",
+    "source": "experimental",
+    "source_label": "[5]",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "L -> β + Al12Mg17",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "β",
+     "Al12Mg17"
+    ],
+    "temperature": 450.4,
+    "temperature_unit": "C",
+    "temperature_printed": "450.4",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 41.9
+     },
+     {
+      "phase": "β",
+      "value": 38.9
+     },
+     {
+      "phase": "Al12Mg17",
+      "value": 46.7
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> β + Al12Mg17",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "β",
+     "Al12Mg17"
+    ],
+    "temperature": 456.4,
+    "temperature_unit": "C",
+    "temperature_printed": "456.4",
+    "source": "experimental",
+    "source_label": "[4]",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "L -> Al12Mg17 + (Mg)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "Al12Mg17",
+     "(Mg)"
+    ],
+    "temperature": 438.1,
+    "temperature_unit": "C",
+    "temperature_printed": "438.1",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 69.7
+     },
+     {
+      "phase": "Al12Mg17",
+      "value": 61.0
+     },
+     {
+      "phase": "(Mg)",
+      "value": 86.6
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "β + Al12Mg17 -> ε",
+    "reaction_type": "peritectoid",
+    "phases": [
+     "β",
+     "Al12Mg17",
+     "ε"
+    ],
+    "temperature": 426.4,
+    "temperature_unit": "C",
+    "temperature_printed": "426.4",
+    "compositions": [
+     {
+      "phase": "β",
+      "value": 38.9
+     },
+     {
+      "phase": "Al12Mg17",
+      "value": 48.3
+     },
+     {
+      "phase": "ε",
+      "value": 43.4
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "ε -> β + Al12Mg17",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "ε",
+     "β",
+     "Al12Mg17"
+    ],
+    "temperature": 250.7,
+    "temperature_unit": "C",
+    "temperature_printed": "250.7",
+    "compositions": [
+     {
+      "phase": "ε",
+      "value": 43.4
+     },
+     {
+      "phase": "β",
+      "value": 38.9
+     },
+     {
+      "phase": "Al12Mg17",
+      "value": 54.9
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "ε -> β + Al12Mg17",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "ε",
+     "β",
+     "Al12Mg17"
+    ],
+    "temperature": 248.7,
+    "temperature_unit": "C",
+    "temperature_printed": "248.7",
+    "source": "experimental",
+    "source_label": "[5]",
+    "citations": [
+     "5"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2093,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1780,
+  "thoughts_token_count": 1680,
+  "total_token_count": 5553
+ },
+ "seconds": 24.2
+}

@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "87acb55511141fc1d5a9ea71",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cu",
+   "Zn"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu)",
+    "temperature": 467,
+    "temperature_unit": "C",
+    "temperature_printed": "467",
+    "temperature_role": "other",
+    "temperature_basis": "column_header",
+    "calculation_settings": {
+     "temperature_treatment": "static"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3360,
+  "cached_content_token_count": null,
+  "candidates_token_count": 147,
+  "thoughts_token_count": 5811,
+  "total_token_count": 9318
+ },
+ "seconds": 41.9
+}

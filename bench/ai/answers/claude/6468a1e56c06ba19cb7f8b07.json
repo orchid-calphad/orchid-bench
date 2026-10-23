@@ -1,0 +1,146 @@
+{
+ "table_kind": "invariant_reactions",
+ "system": [
+  "Pb",
+  "Zn"
+ ],
+ "temperature_unit": "mixed",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "highest invariant L1+L2 -> (Zn)",
+   "temperature": 420.0,
+   "temperature_unit": "C",
+   "temperature_printed": "420.0 °C",
+   "temperature_role": "invariant",
+   "reaction": "L1 + L2 → (Zn)",
+   "phases_present": [
+    "L1",
+    "L2",
+    "(Zn)"
+   ],
+   "source": "this_work",
+   "quote": "The highest invariant reaction, L1 + L2 → (Zn), lies at 420.0 °C.",
+   "page": 1
+  },
+  {
+   "row_label": "liquidus at Pb axis",
+   "temperature": 327.5,
+   "temperature_unit": "C",
+   "temperature_printed": "327.5 °C",
+   "temperature_role": "transition",
+   "transition_kind": "liquidus",
+   "source": "this_work",
+   "quote": "For Pb, the liquidus meets the axis at 327.5 °C.",
+   "page": 1
+  },
+  {
+   "row_label": "melting point of Zn",
+   "temperature": 419.5,
+   "temperature_unit": "C",
+   "temperature_printed": "419.5 °C",
+   "temperature_role": "transition",
+   "transition_kind": "other",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 100
+    }
+   ],
+   "source": "this_work",
+   "quote": "The melting point of Zn reproduced by the dataset is 419.5 °C.",
+   "page": 1
+  },
+  {
+   "row_label": "syntectic L1+L2 -> (Zn)",
+   "temperature": 420.0,
+   "temperature_unit": "C",
+   "temperature_printed": "420.0 °C",
+   "temperature_role": "invariant",
+   "reaction": "L1 + L2 → (Zn)",
+   "transition_kind": "other",
+   "phases_present": [
+    "L1",
+    "L2",
+    "(Zn)"
+   ],
+   "phase_compositions": [
+    {
+     "phase": "(Zn)",
+     "element": "Zn",
+     "value": 99.6
+    }
+   ],
+   "source": "this_work",
+   "quote": "We obtain 420.0 °C for the syntectic reaction (L1 + L2 → (Zn)), where (Zn) has 99.6 at.% Zn.",
+   "page": 1
+  },
+  {
+   "row_label": "eutectic L -> (Pb)+(Zn)",
+   "temperature": 317.8,
+   "temperature_unit": "C",
+   "temperature_printed": "317.8 °C",
+   "temperature_role": "invariant",
+   "reaction": "L → (Pb) + (Zn)",
+   "transition_kind": "eutectic",
+   "phases_present": [
+    "L",
+    "(Pb)",
+    "(Zn)"
+   ],
+   "phase_compositions": [
+    {
+     "phase": "L",
+     "value": 1.9
+    }
+   ],
+   "source": "this_work",
+   "quote": "Eutectic equilibrium L → (Pb) + (Zn) is found at 317.8 °C and 1.9 at.% (L).",
+   "page": 1
+  },
+  {
+   "row_label": "max liquid mixing enthalpy at 1150 K",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 60.0
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "integral mixing enthalpy",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 8.49,
+     "unit": "kJ/mol",
+     "phase": "liquid"
+    }
+   ],
+   "source": "this_work",
+   "quote": "At 1150 K the integral mixing enthalpy of the liquid has its maximum, 8.49 kJ/mol, at 60.0 at.% Zn.",
+   "page": 2
+  },
+  {
+   "row_label": "Gibbs energy of mixing, equiatomic liquid 1150 K",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "properties": [
+    {
+     "quantity": "Gibbs energy of mixing",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.33,
+     "unit": "kJ/mol-atom",
+     "phase": "liquid"
+    }
+   ],
+   "source": "this_work",
+   "quote": "For the equiatomic liquid at 1150 K, the Gibbs energy of mixing is -2.33 kJ/mol-atom.",
+   "page": 2
+  }
+ ]
+}

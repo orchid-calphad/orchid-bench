@@ -1,0 +1,4409 @@
+{
+ "aggregate": {
+  "clean_raster": {
+   "documents": 20,
+   "phase_stability": {
+    "phase_fraction_panels": 25,
+    "phase_fraction_panels_found": 20,
+    "phase_fraction_point_err_median": 0.2389220805083085,
+    "phase_fraction_point_recall@0.01": 0.07552083333333333
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 0.7412398921832885,
+    "panels_found": 41,
+    "panels_true": 73,
+    "point_err_mean": 0.30936245922927114,
+    "point_err_median": 0.19256846737448235,
+    "point_recall@0.01": 0.0794979079497908,
+    "points": 13623,
+    "series_precision": 0.45454545454545453,
+    "series_pred": 44,
+    "series_recall": 0.10471204188481675
+   }
+  },
+  "degraded_raster": {
+   "documents": 20,
+   "phase_stability": {
+    "phase_fraction_panels": 25,
+    "phase_fraction_panels_found": 20,
+    "phase_fraction_point_err_median": 0.08102343747560735,
+    "phase_fraction_point_recall@0.01": 0.052383814102564104
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 0.6172506738544474,
+    "panels_found": 41,
+    "panels_true": 73,
+    "point_err_mean": 0.12874807540149533,
+    "point_err_median": 0.08334036394426977,
+    "point_recall@0.01": 0.05740292152976584,
+    "points": 13623,
+    "series_precision": 0.39215686274509803,
+    "series_pred": 51,
+    "series_recall": 0.09424083769633508
+   }
+  },
+  "image_only_pdf": {
+   "documents": 20,
+   "phase_stability": {
+    "phase_fraction_panels": 25,
+    "phase_fraction_panels_found": 20,
+    "phase_fraction_point_err_median": 0.08102343747560735,
+    "phase_fraction_point_recall@0.01": 0.052383814102564104
+   },
+   "xy": {
+    "marker_points": 371,
+    "marker_recall@0.01": 0.6172506738544474,
+    "panels_found": 41,
+    "panels_true": 73,
+    "point_err_mean": 0.12874807540149533,
+    "point_err_median": 0.08334036394426977,
+    "point_recall@0.01": 0.05740292152976584,
+    "points": 13623,
+    "series_precision": 0.39215686274509803,
+    "series_pred": 51,
+    "series_recall": 0.09424083769633508
+   }
+  }
+ },
+ "extractor": "raster_markers",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (134 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.46531020234225257,
+        "median": 0.15135250972171216,
+        "n": 425
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 425
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.46531020234225257,
+      "median": 0.15135250972171216,
+      "n": 425
+     },
+     "points": 832,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (29 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.057864332290029526,
+        "median": 0.044871569932390026,
+        "n": 425
+       },
+       "found": 1,
+       "hits": 42,
+       "panels": 1,
+       "points": 425
+      }
+     },
+     "hits": 42,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.057864332290029526,
+      "median": 0.044871569932390026,
+      "n": 425
+     },
+     "points": 832,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (29 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.057864332290029526,
+        "median": 0.044871569932390026,
+        "n": 425
+       },
+       "found": 1,
+       "hits": 42,
+       "panels": 1,
+       "points": 425
+      }
+     },
+     "hits": 42,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.057864332290029526,
+      "median": 0.044871569932390026,
+      "n": 425
+     },
+     "points": 832,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (86 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.02906823860163964,
+        "median": 0.006517163918949458,
+        "n": 779
+       },
+       "found": 1,
+       "hits": 488,
+       "panels": 1,
+       "points": 779
+      }
+     },
+     "hits": 488,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.02906823860163964,
+      "median": 0.006517163918949458,
+      "n": 779
+     },
+     "points": 979,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (0 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 779
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "points": 979,
+     "series_pred": 0,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (0 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 779
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "points": 979,
+     "series_pred": 0,
+     "series_pred_matched": 0,
+     "series_true": 9,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (0 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (22 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.0016424376390153143,
+        "median": 0.0014149035861629904,
+        "n": 13
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 13
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 187
+      },
+      "NP": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 276
+      }
+     },
+     "hits": 13,
+     "marker_hits": 13,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.0016424376390153143,
+      "median": 0.0014149035861629904,
+      "n": 13
+     },
+     "points": 476,
+     "series_pred": 1,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (27 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (25 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.005679807639119317,
+        "median": 0.005170022316660942,
+        "n": 13
+       },
+       "found": 1,
+       "hits": 12,
+       "panels": 1,
+       "points": 13
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 187
+      },
+      "NP": {
+       "err": {
+        "mean": 0.1064258680707568,
+        "median": 0.0988117212645836,
+        "n": 276
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 276
+      }
+     },
+     "hits": 14,
+     "marker_hits": 12,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.10189403836275926,
+      "median": 0.09318621811813081,
+      "n": 289
+     },
+     "points": 476,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (27 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (25 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.005679807639119317,
+        "median": 0.005170022316660942,
+        "n": 13
+       },
+       "found": 1,
+       "hits": 12,
+       "panels": 1,
+       "points": 13
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 187
+      },
+      "NP": {
+       "err": {
+        "mean": 0.1064258680707568,
+        "median": 0.0988117212645836,
+        "n": 276
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 276
+      }
+     },
+     "hits": 14,
+     "marker_hits": 12,
+     "marker_points": 13,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.10189403836275926,
+      "median": 0.09318621811813081,
+      "n": 289
+     },
+     "points": 476,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (15 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (7 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.45763119726738744,
+        "median": 0.42928315955208707,
+        "n": 192
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 192
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.12911946849875797,
+        "median": 0.10525908676749265,
+        "n": 416
+       },
+       "found": 1,
+       "hits": 25,
+       "panels": 1,
+       "points": 416
+      }
+     },
+     "hits": 25,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.23286001442569357,
+      "median": 0.19118698572225878,
+      "n": 608
+     },
+     "points": 710,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (14 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.37207981172236054,
+        "median": 0.3459938830641551,
+        "n": 192
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 192
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.15436548074983575,
+        "median": 0.12865616235783472,
+        "n": 416
+       },
+       "found": 1,
+       "hits": 7,
+       "panels": 1,
+       "points": 416
+      }
+     },
+     "hits": 7,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.22311737474115936,
+      "median": 0.19158267184008076,
+      "n": 608
+     },
+     "points": 710,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (14 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.37207981172236054,
+        "median": 0.3459938830641551,
+        "n": 192
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 192
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.15436548074983575,
+        "median": 0.12865616235783472,
+        "n": 416
+       },
+       "found": 1,
+       "hits": 7,
+       "panels": 1,
+       "points": 416
+      }
+     },
+     "hits": 7,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.22311737474115936,
+      "median": 0.19158267184008076,
+      "n": 608
+     },
+     "points": 710,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (61 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (51 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (17 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.003575177046102532,
+        "median": 0.0014600963996197888,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 28,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.001217603931836886,
+        "median": 0.0007986215581528957,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5008494697473882,
+        "median": 0.42169966064051423,
+        "n": 402
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 679
+      }
+     },
+     "hits": 39,
+     "marker_hits": 37,
+     "marker_points": 37,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.4547678008873213,
+      "median": 0.3670586430892651,
+      "n": 443
+     },
+     "points": 720,
+     "series_pred": 4,
+     "series_pred_matched": 2,
+     "series_true": 12,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (37 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (22 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.012433293353101558,
+        "median": 0.01065598412814506,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 14,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.011756703256076872,
+        "median": 0.012151087785068942,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 4,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09525331830357064,
+        "median": 0.08138024877250696,
+        "n": 402
+       },
+       "found": 1,
+       "hits": 17,
+       "panels": 2,
+       "points": 679
+      }
+     },
+     "hits": 35,
+     "marker_hits": 18,
+     "marker_points": 37,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.08757145935540696,
+      "median": 0.07238441649425029,
+      "n": 443
+     },
+     "points": 720,
+     "series_pred": 4,
+     "series_pred_matched": 2,
+     "series_true": 12,
+     "series_true_matched": 2
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (37 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (22 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.012433293353101558,
+        "median": 0.01065598412814506,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 14,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.011756703256076872,
+        "median": 0.012151087785068942,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 4,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09525331830357064,
+        "median": 0.08138024877250696,
+        "n": 402
+       },
+       "found": 1,
+       "hits": 17,
+       "panels": 2,
+       "points": 679
+      }
+     },
+     "hits": 35,
+     "marker_hits": 18,
+     "marker_points": 37,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.08757145935540696,
+      "median": 0.07238441649425029,
+      "n": 443
+     },
+     "points": 720,
+     "series_pred": 4,
+     "series_pred_matched": 2,
+     "series_true": 12,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (192 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (17 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.0017210540168907263,
+        "median": 0.001656358112272849,
+        "n": 9
+       },
+       "found": 1,
+       "hits": 9,
+       "panels": 1,
+       "points": 9
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.001703488365309433,
+        "median": 0.0015010766203814598,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.3736965805813144,
+        "median": 0.4097084543253563,
+        "n": 212
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 212
+      }
+     },
+     "hits": 20,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.34162889198883223,
+      "median": 0.3884476815071548,
+      "n": 232
+     },
+     "points": 232,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 6,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (11 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.001506571687213946,
+        "median": 0.001166694449787595,
+        "n": 9
+       },
+       "found": 1,
+       "hits": 9,
+       "panels": 1,
+       "points": 9
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0016946638578332347,
+        "median": 0.0015336141300059938,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.16047786360804214,
+        "median": 0.14534614817527147,
+        "n": 212
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 212
+      }
+     },
+     "hits": 22,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.14678236005399145,
+      "median": 0.1307168488235056,
+      "n": 232
+     },
+     "points": 232,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 6,
+     "series_true_matched": 2
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (11 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.001506571687213946,
+        "median": 0.001166694449787595,
+        "n": 9
+       },
+       "found": 1,
+       "hits": 9,
+       "panels": 1,
+       "points": 9
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0016946638578332347,
+        "median": 0.0015336141300059938,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.16047786360804214,
+        "median": 0.14534614817527147,
+        "n": 212
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 212
+      }
+     },
+     "hits": 22,
+     "marker_hits": 20,
+     "marker_points": 20,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.14678236005399145,
+      "median": 0.1307168488235056,
+      "n": 232
+     },
+     "points": 232,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 6,
+     "series_true_matched": 2
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (211 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (21 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 26
+      },
+      "CPM": {
+       "err": {
+        "mean": 0.004492652794216716,
+        "median": 0.000833452091932657,
+        "n": 18
+       },
+       "found": 1,
+       "hits": 17,
+       "panels": 1,
+       "points": 18
+      },
+      "NP": {
+       "err": {
+        "mean": 0.44960433742200395,
+        "median": 0.4067912059489687,
+        "n": 627
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 1208
+      }
+     },
+     "hits": 17,
+     "marker_hits": 17,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.4371826159905309,
+      "median": 0.40089275854965606,
+      "n": 645
+     },
+     "points": 1252,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 11,
+     "series_true_matched": 1
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (32 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 26
+      },
+      "CPM": {
+       "err": {
+        "mean": 0.0047025205984879085,
+        "median": 0.001177188291717366,
+        "n": 18
+       },
+       "found": 1,
+       "hits": 17,
+       "panels": 1,
+       "points": 18
+      },
+      "NP": {
+       "err": {
+        "mean": 0.10437176360927652,
+        "median": 0.09159031278872827,
+        "n": 627
+       },
+       "found": 1,
+       "hits": 6,
+       "panels": 2,
+       "points": 1208
+      }
+     },
+     "hits": 23,
+     "marker_hits": 17,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.10159029636246383,
+      "median": 0.0893129402985093,
+      "n": 645
+     },
+     "points": 1252,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 11,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (32 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 26
+      },
+      "CPM": {
+       "err": {
+        "mean": 0.0047025205984879085,
+        "median": 0.001177188291717366,
+        "n": 18
+       },
+       "found": 1,
+       "hits": 17,
+       "panels": 1,
+       "points": 18
+      },
+      "NP": {
+       "err": {
+        "mean": 0.10437176360927652,
+        "median": 0.09159031278872827,
+        "n": 627
+       },
+       "found": 1,
+       "hits": 6,
+       "panels": 2,
+       "points": 1208
+      }
+     },
+     "hits": 23,
+     "marker_hits": 17,
+     "marker_points": 44,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.10159029636246383,
+      "median": 0.0893129402985093,
+      "n": 645
+     },
+     "points": 1252,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 11,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (201 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 287
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.001920058058193493,
+        "median": 0.0015377420501100027,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.31691123314298336,
+        "median": 0.1823641722838923,
+        "n": 421
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 421
+      }
+     },
+     "hits": 11,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.30889062451813915,
+      "median": 0.18055869148088252,
+      "n": 432
+     },
+     "points": 719,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (38 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 287
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.006132445477997403,
+        "median": 0.006242190865836727,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09500077343900694,
+        "median": 0.09948814004646649,
+        "n": 421
+       },
+       "found": 1,
+       "hits": 21,
+       "panels": 1,
+       "points": 421
+      }
+     },
+     "hits": 32,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.09273792249555532,
+      "median": 0.09644321046664861,
+      "n": 432
+     },
+     "points": 719,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (38 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 287
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.006132445477997403,
+        "median": 0.006242190865836727,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09500077343900694,
+        "median": 0.09948814004646649,
+        "n": 421
+       },
+       "found": 1,
+       "hits": 21,
+       "panels": 1,
+       "points": 421
+      }
+     },
+     "hits": 32,
+     "marker_hits": 11,
+     "marker_points": 11,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.09273792249555532,
+      "median": 0.09644321046664861,
+      "n": 432
+     },
+     "points": 719,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 8,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (174 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (3 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (6 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.27884283081933026,
+        "median": 0.22116235049903415,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 102
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.24359924421875948,
+        "median": 0.23057592088559245,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "NP": {
+       "err": {
+        "mean": 0.3760858021258873,
+        "median": 0.2119203196983543,
+        "n": 216
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 216
+      }
+     },
+     "hits": 2,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.3202943450311353,
+      "median": 0.2153866182636031,
+      "n": 420
+     },
+     "points": 420,
+     "series_pred": 3,
+     "series_pred_matched": 1,
+     "series_true": 11,
+     "series_true_matched": 1
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (51 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (13 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (6 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.22716209453763558,
+        "median": 0.21209570518936582,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.34219380773288494,
+        "median": 0.3369703168134097,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "NP": {
+       "err": {
+        "mean": 0.0756625673379327,
+        "median": 0.0678960207566328,
+        "n": 216
+       },
+       "found": 1,
+       "hits": 21,
+       "panels": 1,
+       "points": 216
+      }
+     },
+     "hits": 21,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.17718432518234895,
+      "median": 0.13347450268744543,
+      "n": 420
+     },
+     "points": 420,
+     "series_pred": 4,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (51 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (13 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (6 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.22716209453763558,
+        "median": 0.21209570518936582,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.34219380773288494,
+        "median": 0.3369703168134097,
+        "n": 102
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "NP": {
+       "err": {
+        "mean": 0.0756625673379327,
+        "median": 0.0678960207566328,
+        "n": 216
+       },
+       "found": 1,
+       "hits": 21,
+       "panels": 1,
+       "points": 216
+      }
+     },
+     "hits": 21,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.17718432518234895,
+      "median": 0.13347450268744543,
+      "n": 420
+     },
+     "points": 420,
+     "series_pred": 4,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (193 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (29 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.011532122136555205,
+        "median": 0.0012222320060061125,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 24,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.001779185907460594,
+        "median": 0.0008777714405624163,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.23288444475268155,
+        "median": 0.045005394068053595,
+        "n": 76
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 76
+      }
+     },
+     "hits": 46,
+     "marker_hits": 45,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.1412837777755046,
+      "median": 0.04483349096776952,
+      "n": 128
+     },
+     "points": 128,
+     "series_pred": 4,
+     "series_pred_matched": 1,
+     "series_true": 9,
+     "series_true_matched": 1
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (57 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (14 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (29 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.009945309282765297,
+        "median": 0.00292560868860307,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 25,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.003995728619081738,
+        "median": 0.00389908496997323,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.04489224011788806,
+        "median": 0.02254778543186618,
+        "n": 76
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 76
+      }
+     },
+     "hits": 60,
+     "marker_hits": 46,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.029672465289548828,
+      "median": 0.010931874847296894,
+      "n": 128
+     },
+     "points": 128,
+     "series_pred": 4,
+     "series_pred_matched": 1,
+     "series_true": 9,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (57 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (14 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (29 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.009945309282765297,
+        "median": 0.00292560868860307,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 25,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.003995728619081738,
+        "median": 0.00389908496997323,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.04489224011788806,
+        "median": 0.02254778543186618,
+        "n": 76
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 76
+      }
+     },
+     "hits": 60,
+     "marker_hits": 46,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.029672465289548828,
+      "median": 0.010931874847296894,
+      "n": 128
+     },
+     "points": 128,
+     "series_pred": 4,
+     "series_pred_matched": 1,
+     "series_true": 9,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (43 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 282
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5140178767485377,
+        "median": 0.5273672438445863,
+        "n": 521
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 521
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.5140178767485377,
+      "median": 0.5273672438445863,
+      "n": 521
+     },
+     "points": 825,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (37 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 282
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.1076357071553456,
+        "median": 0.07683700452890303,
+        "n": 521
+       },
+       "found": 1,
+       "hits": 7,
+       "panels": 1,
+       "points": 521
+      }
+     },
+     "hits": 7,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.1076357071553456,
+      "median": 0.07683700452890303,
+      "n": 521
+     },
+     "points": 825,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (37 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 282
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.1076357071553456,
+        "median": 0.07683700452890303,
+        "n": 521
+       },
+       "found": 1,
+       "hits": 7,
+       "panels": 1,
+       "points": 521
+      }
+     },
+     "hits": 7,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.1076357071553456,
+      "median": 0.07683700452890303,
+      "n": 521
+     },
+     "points": 825,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (30 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (15 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.0014802600636658995,
+        "median": 0.0009604631857919718,
+        "n": 15
+       },
+       "found": 1,
+       "hits": 15,
+       "panels": 1,
+       "points": 15
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0012887608333714197,
+        "median": 0.0008389469242850754,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5956269326228754,
+        "median": 0.6015223785461006,
+        "n": 365
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 789
+      }
+     },
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.5561130707863723,
+      "median": 0.5735244938035998,
+      "n": 391
+     },
+     "points": 815,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 8,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (1 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (16 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.0045033604676849946,
+        "median": 0.004375216852191223,
+        "n": 15
+       },
+       "found": 1,
+       "hits": 15,
+       "panels": 1,
+       "points": 15
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0022966824566433147,
+        "median": 0.002408976801869572,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5165717139012739,
+        "median": 0.4192724750398422,
+        "n": 365
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 789
+      }
+     },
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.48245905239898546,
+      "median": 0.369330898255731,
+      "n": 391
+     },
+     "points": 815,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 8,
+     "series_true_matched": 3
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (1 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (18 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (16 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.0045033604676849946,
+        "median": 0.004375216852191223,
+        "n": 15
+       },
+       "found": 1,
+       "hits": 15,
+       "panels": 1,
+       "points": 15
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0022966824566433147,
+        "median": 0.002408976801869572,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5165717139012739,
+        "median": 0.4192724750398422,
+        "n": 365
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 789
+      }
+     },
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 3,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.48245905239898546,
+      "median": 0.369330898255731,
+      "n": 391
+     },
+     "points": 815,
+     "series_pred": 3,
+     "series_pred_matched": 3,
+     "series_true": 8,
+     "series_true_matched": 3
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (234 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (11 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (38 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.0066851770951295774,
+        "median": 0.0017218727448119295,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0020829858789768495,
+        "median": 0.0016374012735488011,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.06971383294196924,
+        "median": 0.04646993151311625,
+        "n": 332
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 332
+      }
+     },
+     "hits": 48,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.06091503525761762,
+      "median": 0.04646533856024265,
+      "n": 384
+     },
+     "points": 384,
+     "series_pred": 4,
+     "series_pred_matched": 3,
+     "series_true": 10,
+     "series_true_matched": 3
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (45 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (43 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (36 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.006211902783524447,
+        "median": 0.0010242349197972958,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0015918639505226725,
+        "median": 0.0015527038613451435,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.04303414445930696,
+        "median": 0.03910482230575235,
+        "n": 332
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 332
+      }
+     },
+     "hits": 48,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.03778310950757068,
+      "median": 0.0354615253551709,
+      "n": 384
+     },
+     "points": 384,
+     "series_pred": 7,
+     "series_pred_matched": 4,
+     "series_true": 10,
+     "series_true_matched": 4
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (45 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (43 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      },
+      {
+       "markers": "ok (36 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.006211902783524447,
+        "median": 0.0010242349197972958,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.0015918639505226725,
+        "median": 0.0015527038613451435,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.04303414445930696,
+        "median": 0.03910482230575235,
+        "n": 332
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 332
+      }
+     },
+     "hits": 48,
+     "marker_hits": 48,
+     "marker_points": 48,
+     "panels_found": 3,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.03778310950757068,
+      "median": 0.0354615253551709,
+      "n": 384
+     },
+     "points": 384,
+     "series_pred": 7,
+     "series_pred_matched": 4,
+     "series_true": 10,
+     "series_true_matched": 4
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (181 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.060993604205823164,
+        "median": 0.04166989275177759,
+        "n": 436
+       },
+       "found": 1,
+       "hits": 154,
+       "panels": 1,
+       "points": 436
+      }
+     },
+     "hits": 154,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.060993604205823164,
+      "median": 0.04166989275177759,
+      "n": 436
+     },
+     "points": 640,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 12,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (50 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.05133163422487384,
+        "median": 0.048730981127349124,
+        "n": 436
+       },
+       "found": 1,
+       "hits": 30,
+       "panels": 1,
+       "points": 436
+      }
+     },
+     "hits": 30,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.05133163422487384,
+      "median": 0.048730981127349124,
+      "n": 436
+     },
+     "points": 640,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 12,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (50 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.05133163422487384,
+        "median": 0.048730981127349124,
+        "n": 436
+       },
+       "found": 1,
+       "hits": 30,
+       "panels": 1,
+       "points": 436
+      }
+     },
+     "hits": 30,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.05133163422487384,
+      "median": 0.048730981127349124,
+      "n": 436
+     },
+     "points": 640,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 12,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (19 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (36 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.0013031055357359512,
+        "median": 0.0011463100730423734,
+        "n": 26
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 26
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 277
+      },
+      "NP": {
+       "err": {
+        "mean": 0.6147847848789623,
+        "median": 0.5234553873089827,
+        "n": 292
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 603
+      }
+     },
+     "hits": 26,
+     "marker_hits": 26,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.5646259054358055,
+      "median": 0.4968691061973015,
+      "n": 318
+     },
+     "points": 906,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 14,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (31 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (25 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.011510264579485162,
+        "median": 0.012011864192866975,
+        "n": 26
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 26
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 277
+      },
+      "NP": {
+       "err": {
+        "mean": 0.07837173257741978,
+        "median": 0.06486574966595972,
+        "n": 292
+       },
+       "found": 1,
+       "hits": 29,
+       "panels": 2,
+       "points": 603
+      }
+     },
+     "hits": 40,
+     "marker_hits": 11,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.07290507167192828,
+      "median": 0.057475128964140185,
+      "n": 318
+     },
+     "points": 906,
+     "series_pred": 3,
+     "series_pred_matched": 1,
+     "series_true": 14,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (31 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      },
+      {
+       "markers": "ok (25 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.011510264579485162,
+        "median": 0.012011864192866975,
+        "n": 26
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 26
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 277
+      },
+      "NP": {
+       "err": {
+        "mean": 0.07837173257741978,
+        "median": 0.06486574966595972,
+        "n": 292
+       },
+       "found": 1,
+       "hits": 29,
+       "panels": 2,
+       "points": 603
+      }
+     },
+     "hits": 40,
+     "marker_hits": 11,
+     "marker_points": 26,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.07290507167192828,
+      "median": 0.057475128964140185,
+      "n": 318
+     },
+     "points": 906,
+     "series_pred": 3,
+     "series_pred_matched": 1,
+     "series_true": 14,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (104 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (2 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 53
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.6157844078437484,
+        "median": 0.5520318854457384,
+        "n": 51
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.40025667740101045,
+        "median": 0.3325617567739533,
+        "n": 474
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 474
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.4211936569297336,
+      "median": 0.3325681690924991,
+      "n": 525
+     },
+     "points": 578,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 5,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (35 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (13 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 53
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.2246887194478459,
+        "median": 0.19160949308005829,
+        "n": 51
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.13549176553372946,
+        "median": 0.12262218671514742,
+        "n": 474
+       },
+       "found": 1,
+       "hits": 99,
+       "panels": 1,
+       "points": 474
+      }
+     },
+     "hits": 99,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.14415661248538647,
+      "median": 0.13993496155285381,
+      "n": 525
+     },
+     "points": 578,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 5,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (35 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (13 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 53
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.2246887194478459,
+        "median": 0.19160949308005829,
+        "n": 51
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.13549176553372946,
+        "median": 0.12262218671514742,
+        "n": 474
+       },
+       "found": 1,
+       "hits": 99,
+       "panels": 1,
+       "points": 474
+      }
+     },
+     "hits": 99,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.14415661248538647,
+      "median": 0.13993496155285381,
+      "n": 525
+     },
+     "points": 578,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 5,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (16 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.001349263961777718,
+        "median": 0.0010868971091035945,
+        "n": 10
+       },
+       "found": 1,
+       "hits": 10,
+       "panels": 1,
+       "points": 10
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.34350100096589303,
+        "median": 0.3867625165126862,
+        "n": 280
+       },
+       "found": 1,
+       "hits": 15,
+       "panels": 1,
+       "points": 280
+      }
+     },
+     "hits": 25,
+     "marker_hits": 10,
+     "marker_points": 32,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.3317026652071305,
+      "median": 0.38607966724045173,
+      "n": 290
+     },
+     "points": 312,
+     "series_pred": 2,
+     "series_pred_matched": 2,
+     "series_true": 6,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (8 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (26 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.012327157997311078,
+        "median": 0.013029869968494305,
+        "n": 10
+       },
+       "found": 1,
+       "hits": 4,
+       "panels": 1,
+       "points": 10
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.2600089461688996,
+        "median": 0.20389641135204137,
+        "n": 280
+       },
+       "found": 1,
+       "hits": 6,
+       "panels": 1,
+       "points": 280
+      }
+     },
+     "hits": 10,
+     "marker_hits": 4,
+     "marker_points": 32,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.25146819485263794,
+      "median": 0.1961465846207011,
+      "n": 290
+     },
+     "points": 312,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 6,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (8 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (26 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.012327157997311078,
+        "median": 0.013029869968494305,
+        "n": 10
+       },
+       "found": 1,
+       "hits": 4,
+       "panels": 1,
+       "points": 10
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.2600089461688996,
+        "median": 0.20389641135204137,
+        "n": 280
+       },
+       "found": 1,
+       "hits": 6,
+       "panels": 1,
+       "points": 280
+      }
+     },
+     "hits": 10,
+     "marker_hits": 4,
+     "marker_points": 32,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.25146819485263794,
+      "median": 0.1961465846207011,
+      "n": 290
+     },
+     "points": 312,
+     "series_pred": 2,
+     "series_pred_matched": 1,
+     "series_true": 6,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (189 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.3424334280034068,
+        "median": 0.3334302004988467,
+        "n": 747
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 1458
+      }
+     },
+     "hits": 0,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 5,
+     "point_err": {
+      "mean": 0.3424334280034068,
+      "median": 0.3334302004988467,
+      "n": 747
+     },
+     "points": 1658,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (33 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09439513103921118,
+        "median": 0.059625556987998554,
+        "n": 747
+       },
+       "found": 1,
+       "hits": 152,
+       "panels": 2,
+       "points": 1458
+      }
+     },
+     "hits": 152,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 5,
+     "point_err": {
+      "mean": 0.09439513103921118,
+      "median": 0.059625556987998554,
+      "n": 747
+     },
+     "points": 1658,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (33 proposals, 0 auto-accepted)",
+       "panel": "fig2-b"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.09439513103921118,
+        "median": 0.059625556987998554,
+        "n": 747
+       },
+       "found": 1,
+       "hits": 152,
+       "panels": 2,
+       "points": 1458
+      }
+     },
+     "hits": 152,
+     "marker_hits": 0,
+     "marker_points": 0,
+     "panels_found": 1,
+     "panels_true": 5,
+     "point_err": {
+      "mean": 0.09439513103921118,
+      "median": 0.059625556987998554,
+      "n": 747
+     },
+     "points": 1658,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (203 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (12 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.002305519683098634,
+        "median": 0.0017176050176331992,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.06164515822871585,
+        "median": 0.0016629382753925795,
+        "n": 87
+       },
+       "found": 1,
+       "hits": 72,
+       "panels": 1,
+       "points": 87
+      }
+     },
+     "hits": 94,
+     "marker_hits": 22,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.04966835044886651,
+      "median": 0.0017050022797062382,
+      "n": 109
+     },
+     "points": 414,
+     "series_pred": 3,
+     "series_pred_matched": 2,
+     "series_true": 9,
+     "series_true_matched": 2
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (27 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (23 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.008073879790792911,
+        "median": 0.009303428160448114,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 16,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.06947619813351072,
+        "median": 0.0555152378136287,
+        "n": 87
+       },
+       "found": 1,
+       "hits": 3,
+       "panels": 1,
+       "points": 87
+      }
+     },
+     "hits": 19,
+     "marker_hits": 16,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.05708306966066859,
+      "median": 0.04563755057282055,
+      "n": 109
+     },
+     "points": 414,
+     "series_pred": 5,
+     "series_pred_matched": 3,
+     "series_true": 9,
+     "series_true_matched": 1
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (27 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (23 proposals, 0 auto-accepted)",
+       "panel": "fig3-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.008073879790792911,
+        "median": 0.009303428160448114,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 16,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.06947619813351072,
+        "median": 0.0555152378136287,
+        "n": 87
+       },
+       "found": 1,
+       "hits": 3,
+       "panels": 1,
+       "points": 87
+      }
+     },
+     "hits": 19,
+     "marker_hits": 16,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 3,
+     "point_err": {
+      "mean": 0.05708306966066859,
+      "median": 0.04563755057282055,
+      "n": 109
+     },
+     "points": 414,
+     "series_pred": 5,
+     "series_pred_matched": 3,
+     "series_true": 9,
+     "series_true_matched": 1
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "clean_raster": {
+    "status": {
+     "manifest": "manifests from the vector twin (clean-raster pixel frame)",
+     "xy": [
+      {
+       "markers": "ok (0 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (74 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.05753913266427488,
+        "median": 0.047378255654477855,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 49,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 296
+      }
+     },
+     "hits": 49,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.05753913266427488,
+      "median": 0.047378255654477855,
+      "n": 305
+     },
+     "points": 623,
+     "series_pred": 1,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (51 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (26 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.11694651863565009,
+        "median": 0.10198232617407789,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 29,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.03588930067037579,
+        "median": 0.018941464146604338,
+        "n": 296
+       },
+       "found": 1,
+       "hits": 66,
+       "panels": 1,
+       "points": 296
+      }
+     },
+     "hits": 95,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.07702482725841017,
+      "median": 0.037017481879432726,
+      "n": 601
+     },
+     "points": 623,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "manifest": "vector-twin manifests mapped with the truth page transform (oracle)",
+     "xy": [
+      {
+       "markers": "ok (51 proposals, 0 auto-accepted)",
+       "panel": "fig2-a"
+      },
+      {
+       "markers": "ok (26 proposals, 0 auto-accepted)",
+       "panel": "fig4-a"
+      }
+     ]
+    },
+    "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": 0.11694651863565009,
+        "median": 0.10198232617407789,
+        "n": 305
+       },
+       "found": 1,
+       "hits": 29,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.03588930067037579,
+        "median": 0.018941464146604338,
+        "n": 296
+       },
+       "found": 1,
+       "hits": 66,
+       "panels": 1,
+       "points": 296
+      }
+     },
+     "hits": 95,
+     "marker_hits": 0,
+     "marker_points": 22,
+     "panels_found": 2,
+     "panels_true": 4,
+     "point_err": {
+      "mean": 0.07702482725841017,
+      "median": 0.037017481879432726,
+      "n": 601
+     },
+     "points": 623,
+     "series_pred": 2,
+     "series_pred_matched": 0,
+     "series_true": 11,
+     "series_true_matched": 0
+    }
+   }
+  }
+ }
+}
