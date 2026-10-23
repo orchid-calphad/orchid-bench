@@ -14,7 +14,42 @@ from common import CACHE, PD_DIR, P_ATM, R_GAS, TDB_DIR, el, load_json, sha256_f
 from systems import Labeller, base  # noqa: E402
 
 warnings.filterwarnings("ignore")
-CACHE_VERSION = 10
+CACHE_VERSION = 12
+
+
+
+# ----------------------------------------------------------------------------------------------- order/disorder naming
+_LAYOUT = {}
+DISORDERED_OF = (("FCC", "FCC_A1"), ("BCC", "BCC_A2"), ("HCP", "HCP_A3"))
+
+
+def _layout(dbf, comps, phase):
+    key = (id(dbf), phase)
+    if key not in _LAYOUT:
+        from pycalphad import Model
+        _LAYOUT[key] = [sorted(str(s.name) for s in sub) for sub in Model(dbf, comps, phase).constituents]
+    return _LAYOUT[key]
+
+
+def disorder_name(dbf, comps, phases, name, y):
+    """A phase modelled with equivalent sublattices (e.g. L12_FCC with an A1_FCC disordered part) that pycalphad
+    reports in its disordered state is renamed to the disordered lattice phase (FCC_A1, ...) when that phase exists."""
+    cons = _layout(dbf, comps, name)
+    groups, off = {}, 0
+    for sub in cons:
+        if len(sub) > 1:
+            groups.setdefault(tuple(sub), []).append(off)
+        off += len(sub)
+    groups = [g for g in groups.values() if len(g) > 1]
+    if not groups:
+        return name
+    spread = max(max(float(y[o]) for o in g) - min(float(y[o]) for o in g) for g in groups)
+    if spread < 1e-4:
+        hint = str(dbf.phases[name].model_hints.get("disordered_phase", ""))
+        for k, dis in DISORDERED_OF:
+            if (k in name or k in hint) and dis in phases and dis != name:
+                return dis
+    return name
 
 
 # ----------------------------------------------------------------------------------------------- pycalphad helpers
@@ -30,10 +65,11 @@ def eq_point(dbf, comps, phases, B, x, T):
     names = res.Phase.values.squeeze()
     xb = res.X.sel(component=B).values.squeeze()
     npf = res.NP.values.squeeze()
+    Y = res.Y.values.reshape(len(np.atleast_1d(names)), -1)
     out = []
-    for n, xx, f in zip(np.atleast_1d(names), np.atleast_1d(xb), np.atleast_1d(npf)):
+    for n, xx, f, y in zip(np.atleast_1d(names), np.atleast_1d(xb), np.atleast_1d(npf), Y):
         if n and str(n) != "" and np.isfinite(f) and f > 1e-6:
-            out.append({"phase": str(n), "x": float(xx), "np": float(f)})
+            out.append({"phase": disorder_name(dbf, comps, phases, str(n), y), "x": float(xx), "np": float(f)})
     out.sort(key=lambda c: c["x"])
     seen = {}
     for c in out:
@@ -283,13 +319,14 @@ def prepare(stem: str, force: bool = False) -> dict:
         ph = res.Phase.values[0, 0]
         xb = res.X.sel(component=B).values[0, 0]
         npf = res.NP.values[0, 0]
+        Yv = res.Y.values[0, 0]
         for a in range(len(Ts)):
             for j in range(nx):
                 cs = []
                 for k in range(ph.shape[-1]):
                     n = str(ph[a, j, k])
                     if n and np.isfinite(npf[a, j, k]) and npf[a, j, k] > 1e-6:
-                        cs.append({"phase": n, "x": float(xb[a, j, k])})
+                        cs.append({"phase": disorder_name(dbf, comps, phases, n, Yv[a, j, k]), "x": float(xb[a, j, k])})
                 cs.sort(key=lambda c: c["x"])
                 seen = {}
                 for c in cs:
@@ -414,7 +451,10 @@ def prepare(stem: str, force: bool = False) -> dict:
         liq = [c for c in rg["curves"] if base(c["phase"]) == "LIQUID"][0]
         k = int(np.argmax(other["T"]))
         if 0.02 < other["x"][k] < 0.98 and abs(other["x"][k] - liq["x"][k]) < 0.004 and abs(other["T"][k] - max(liq["T"])) < 0.5:
-            if not any(abs(c_["T"] - other["T"][k]) < 1 for c_ in congruent):
+            lab_c = labeller.label(other["phase"], other["x"][k])
+            chk = eq_point(dbf, comps, phases, B, other["x"][k], other["T"][k] - 1.0)
+            ok_c = len(chk) == 1 and labeller.label(chk[0]["phase"], chk[0]["x"]) == lab_c
+            if ok_c and not any(abs(c_["T"] - other["T"][k]) < 1 for c_ in congruent):
                 congruent.append({"phase": other["phase"], "x": float(other["x"][k]), "T": float(other["T"][k]),
                                   "label": labeller.label(other["phase"], other["x"][k])})
 
@@ -537,6 +577,7 @@ def prepare(stem: str, force: bool = False) -> dict:
         "invariants": invs, "congruent": congruent, "properties": props,
         "calculation": {"engine": "pycalphad 0.11.2", "P_Pa": P_ATM, "N": 1, "phases": phases,
                         "field_map": "own pycalphad equilibrium grid, dx 0.01 (ends 1e-5), dT 10 K; fields = connected cells with equal labelled assemblage",
+                        "order_disorder": "composition sets of phases with equivalent sublattices reported in the disordered state are renamed to the disordered lattice phase (e.g. L12_FCC -> FCC_A1)",
                         "invariant_type": "equilibria at x_mid, T +/- 1.5 K",
                         "liquid_mixing": "calculate HM/GM of LIQUID minus linear pure-liquid reference",
                         "activity": "LIQUID-only equilibria; reference pure liquid at T",

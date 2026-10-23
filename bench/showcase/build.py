@@ -10,7 +10,7 @@ from pathlib import Path
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
 from common import DOCS, TRUTH, load_json  # noqa: E402
-from score import aabb  # noqa: E402
+from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
 R = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
@@ -110,6 +110,59 @@ def doc_payload(doc):
             "invariants": [{"T": i["T"], "type": i["type"], "reaction": i["reaction"]} for i in t["phase_diagram"]["invariants"]]}
 
 
+def table_payload(doc, table_id):
+    """Truth cells vs pdfplumber cells (best-aligned per segment) for one table of one document."""
+    from PIL import Image
+    t = load_json(TRUTH / f"{doc}.json")
+    tb = next(x for x in t["tables"] if x["id"] == table_id)
+    o = load_json(B / "outputs" / "tables_pdfplumber" / "vector" / f"{doc}.json")
+    segs = []
+    for si, tc in enumerate(_segments(tb)):
+        best = align_segment(tc, o.get("tables", []))
+        nrow = max(r for r, _ in tc) + 1
+        ncol = tb["n_cols"]
+        grid = []
+        for r in range(nrow):
+            row = []
+            c = 0
+            while c < ncol:
+                cell = tc.get((r, c))
+                span = (cell or {}).get("colspan", 1)
+                got = best[1].get((r + best[2], c + best[3])) if best else None
+                txt = cell["text"] if cell else ""
+                row.append({"truth": txt, "got": got, "span": span, "header": bool(cell and cell["header"]),
+                            "ok": (norm_text(got) == norm_text(txt)) if txt else None})
+                c += span
+            grid.append(row)
+        sg = tb["segments"][si]
+        page = Image.open(DOCS / doc / "clean" / f"page-{sg['page'] + 1}.png")
+        bb = aabb(sg["corners"]["clean_raster"])
+        crop = page.crop((int(bb[0]) - 20, int(bb[1]) - 60, int(bb[2]) + 20, int(bb[3]) + 20))
+        crop.thumbnail((1100, 900))
+        route = o["tables"][best[4]]["route"] if best else None
+        segs.append({"grid": grid, "img": img_uri(crop, q=85), "route": route, "page": sg["page"] + 1})
+    n_ok = sum(1 for sgm in segs for r in sgm["grid"] for c in r if c["ok"])
+    n = sum(1 for sgm in segs for r in sgm["grid"] for c in r if c["ok"] is not None)
+    return {"doc": doc, "system": t["system"], "table": table_id, "caption": tb["caption"], "style": tb["style"],
+            "footnotes": tb["footnotes"], "segments": segs, "cell_exact": n_ok / n if n else None}
+
+
+def pick_tables():
+    out = []
+    for tf in sorted(TRUTH.glob("*.json")):
+        t = load_json(tf)
+        inv = next((x for x in t["tables"] if x["id"] == "invariants"), None)
+        if inv and t["style"]["invariant_table"]["exp_column"] and inv["n_body_rows"] >= 4 and not out:
+            out.append((t["doc_id"], "invariants"))
+    for tf in sorted(TRUTH.glob("*.json")):
+        t = load_json(tf)
+        sp = [x for x in t["tables"] if len(x.get("segments") or []) > 1]
+        if sp and t["doc_id"] != out[0][0]:
+            out.append((t["doc_id"], sp[0]["id"]))
+            break
+    return out
+
+
 HTML = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Synthetic Papers Showcase</title>
@@ -130,11 +183,19 @@ table{border-collapse:collapse;width:100%;font-size:.82rem}th,td{border-bottom:1
 .scroll{overflow-x:auto}details{margin-top:8px}summary{cursor:pointer;color:var(--muted)}small{color:var(--muted)}
 .tabs{display:flex;gap:6px;margin:8px 0}.tabs button{background:var(--chip);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit;font-size:.85rem}
 .tabs button[aria-pressed="true"]{border-color:var(--truth)}
+table.cmp td,table.cmp th{border:1px solid var(--line);vertical-align:top;font-size:.78rem;padding:3px 5px}
+table.cmp .t{display:block}table.cmp .g{display:block;font-family:ui-monospace,Menlo,monospace;font-size:.72rem}
+table.cmp td.ok .g{color:var(--ext3)}table.cmp td.bad .g{color:var(--ext)}table.cmp th{background:var(--chip)}
+img.tab{max-width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff;margin:6px 0}
 </style></head><body><main>
 <h1>ORCHID synthetic-papers benchmark</h1>
-<p class="lead">Three of the twenty generated documents. Each document is a short synthetic paper calculated with pycalphad from a CC BY 4.0 SGTE dataset (Hallstedt 2025). The overlay draws the truth phase boundaries (blue) over the figure, with what each deterministic baseline extracted. Not real publications; generated documents are CC BY 4.0.</p>
+<p class="lead">Three of the twenty generated documents (4–5 pages each). Each document is a short synthetic paper calculated with pycalphad from a CC BY 4.0 SGTE dataset (Hallstedt 2025). The overlay draws the truth phase boundaries (blue) over the figure, with what each deterministic baseline extracted. Not real publications; generated documents are CC BY 4.0.</p>
 <div id="app"></div>
+<h2 style="margin-top:32px">Table extraction: truth vs extracted cells</h2>
+<p class="lead">Each cell shows the printed truth (top) and what the pdfplumber baseline returned at the best-aligned position (bottom, green = exact match, red = different or missing). Split tables are scored segment by segment ("Table N (continued)").</p>
+<div id="tabs"></div>
 <script id="data" type="application/json">__DATA__</script>
+<script id="tdata" type="application/json">__TDATA__</script>
 <script>
 (function(){
 const data=JSON.parse(document.getElementById('data').textContent);
@@ -185,6 +246,25 @@ for(const d of data){
   const det=el('details');det.appendChild(el('summary',null,'Invariant reactions in the truth key ('+d.invariants.length+')'));
   const ul=el('ul');d.invariants.forEach(i=>ul.appendChild(el('li',null,i.type+': '+i.reaction+' at '+i.T.toFixed(2)+' K')));det.appendChild(ul);card.appendChild(det);
 }
+const tdata=JSON.parse(document.getElementById('tdata').textContent);const tapp=document.getElementById('tabs');
+for(const T of tdata){
+  const card=el('section',{class:'card'});tapp.appendChild(card);
+  card.appendChild(el('h2',null,T.system+' — '+T.doc+' — table "'+T.table+'"'));
+  const chips=el('div',{class:'chips'});card.appendChild(chips);
+  ['rules: '+T.style.rules, T.style.merged_header?'merged header':'single header', T.style.markers?'footnote markers':null,
+   T.segments.length>1?'continued over '+T.segments.length+' pages':null, 'cell exact '+(T.cell_exact==null?'–':T.cell_exact.toFixed(3))]
+   .filter(Boolean).forEach(x=>chips.appendChild(el('span',{class:'chip'},x)));
+  card.appendChild(el('p',null,T.caption||''));
+  T.segments.forEach((sg,si)=>{
+    card.appendChild(el('h3',null,'Segment '+(si+1)+' (page '+sg.page+'; extracted by: '+(sg.route||'nothing')+')'));
+    card.appendChild(el('img',{class:'tab',src:sg.img,alt:'Rendered table segment '+(si+1)}));
+    const sc=el('div',{class:'scroll'});const tb=el('table',{class:'cmp'});sc.appendChild(tb);card.appendChild(sc);
+    for(const row of sg.grid){const tr=el('tr');for(const c of row){const td=el(c.header?'th':'td',{colspan:String(c.span)});
+      if(c.ok===true)td.className='ok';else if(c.ok===false)td.className='bad';
+      td.appendChild(el('span',{class:'t'},c.truth||'\u00a0'));td.appendChild(el('span',{class:'g'},c.truth?(c.got==null?'(missing)':(c.got||'(empty)')):'\u00a0'));tr.appendChild(td)}tb.appendChild(tr)}
+  });
+  if(T.footnotes.length){const ul=el('ul');T.footnotes.forEach(x=>ul.appendChild(el('li',null,x)));card.appendChild(ul)}
+}
 })();
 </script></main></body></html>"""
 
@@ -192,8 +272,9 @@ for(const d of data){
 def main():
     data = [doc_payload(d) for d in EXAMPLES]
     js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    tj = json.dumps([table_payload(d, tid) for d, tid in pick_tables()], ensure_ascii=False).replace("</", "<\\/")
     out = B / "showcase" / "index.html"
-    out.write_text(HTML.replace("__DATA__", js), encoding="utf-8")
+    out.write_text(HTML.replace("__DATA__", js).replace("__TDATA__", tj), encoding="utf-8")
     print(out, out.stat().st_size // 1024, "KB")
 
 

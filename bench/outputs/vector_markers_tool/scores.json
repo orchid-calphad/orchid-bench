@@ -2,18 +2,24 @@
  "aggregate": {
   "vector": {
    "documents": 20,
+   "phase_stability": {
+    "phase_fraction_panels": 25,
+    "phase_fraction_panels_found": 20,
+    "phase_fraction_point_err_median": 0.5421453745651129,
+    "phase_fraction_point_recall@0.01": 0.0006009615384615385
+   },
    "xy": {
     "marker_points": 371,
     "marker_recall@0.01": 0.738544474393531,
-    "panels_found": 21,
-    "panels_true": 48,
-    "point_err_mean": 0.005704812966407126,
-    "point_err_median": 6.684512310508333e-07,
-    "point_recall@0.01": 0.07529541082715031,
-    "points": 3639,
-    "series_precision": 1.0,
-    "series_pred": 18,
-    "series_recall": 0.17894736842105263
+    "panels_found": 41,
+    "panels_true": 73,
+    "point_err_mean": 0.498929840430182,
+    "point_err_median": 0.520589789399372,
+    "point_recall@0.01": 0.0205534757395581,
+    "points": 13623,
+    "series_precision": 0.5263157894736842,
+    "series_pred": 38,
+    "series_recall": 0.09947643979057591
    }
   }
  },
@@ -25,38 +31,91 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
-     "hits": 0,
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5918451964090656,
+        "median": 0.7209152802730542,
+        "n": 425
+       },
+       "found": 1,
+       "hits": 2,
+       "panels": 1,
+       "points": 425
+      }
+     },
+     "hits": 2,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5918451964090656,
+      "median": 0.7209152802730542,
+      "n": 425
      },
-     "points": 407,
-     "series_pred": 0,
-     "series_pred_matched": 0,
-     "series_true": 6,
-     "series_true_matched": 0
+     "points": 832,
+     "series_pred": 1,
+     "series_pred_matched": 1,
+     "series_true": 9,
+     "series_true_matched": 1
     }
    }
   },
@@ -66,37 +125,90 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig3"
+       "figure": "fig4"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig3"
+       "figure": "fig4"
       }
      ]
     },
     "xy": {
-     "hits": 0,
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5606363396349484,
+        "median": 0.6425258022318509,
+        "n": 779
+       },
+       "found": 1,
+       "hits": 4,
+       "panels": 1,
+       "points": 779
+      }
+     },
+     "hits": 4,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5606363396349484,
+      "median": 0.6425258022318509,
+      "n": 779
      },
-     "points": 200,
-     "series_pred": 0,
-     "series_pred_matched": 0,
-     "series_true": 4,
-     "series_true_matched": 0
+     "points": 979,
+     "series_pred": 1,
+     "series_pred_matched": 1,
+     "series_true": 9,
+     "series_true_matched": 1
     }
    }
   },
@@ -108,32 +220,74 @@
        "axes": "a",
        "calibration": "ok",
        "figure": "fig2",
-       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
+       "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (13 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 7.524641134631677e-07,
+        "median": 6.747973404578444e-07,
+        "n": 13
+       },
+       "found": 1,
+       "hits": 13,
+       "panels": 1,
+       "points": 13
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 187
+      },
+      "NP": {
+       "err": {
+        "mean": 0.4888680269515911,
+        "median": 0.48768451578761146,
+        "n": 276
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 276
+      }
+     },
      "hits": 13,
      "marker_hits": 13,
      "marker_points": 13,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 3,
      "point_err": {
-      "mean": 1.1573396709279306e-06,
-      "median": 1.1983932343213826e-06,
-      "n": 13
+      "mean": 0.46687745751097787,
+      "median": 0.46765284483724584,
+      "n": 289
      },
-     "points": 200,
-     "series_pred": 1,
+     "points": 476,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 5,
+     "series_true": 8,
      "series_true_matched": 1
     }
    }
@@ -144,38 +298,91 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (0 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 192
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.6056678594635839,
+        "median": 0.7779740002271642,
+        "n": 416
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 416
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.6056678594635839,
+      "median": 0.7779740002271642,
+      "n": 416
      },
-     "points": 294,
-     "series_pred": 0,
+     "points": 710,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 6,
+     "series_true": 11,
      "series_true_matched": 0
     }
    }
@@ -186,35 +393,82 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (2 legend entries)",
        "vector_markers": "ok (26 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (11 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.003329177837870968,
+        "median": 1.1227303573743422e-06,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.014115268158856243,
+        "median": 7.97277825800306e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 10,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5519219405440036,
+        "median": 0.641883325442435,
+        "n": 402
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 679
+      }
+     },
      "hits": 36,
      "marker_hits": 36,
      "marker_points": 37,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 4,
      "point_err": {
-      "mean": 0.006222873466939238,
-      "median": 8.716428519659774e-07,
-      "n": 41
+      "mean": 0.5014170731006161,
+      "median": 0.5859213787438667,
+      "n": 443
      },
-     "points": 41,
-     "series_pred": 3,
+     "points": 720,
+     "series_pred": 4,
      "series_pred_matched": 3,
-     "series_true": 5,
+     "series_true": 12,
      "series_true_matched": 3
     }
    }
@@ -228,32 +482,74 @@
        "calibration": "ok",
        "figure": "fig2",
        "manifest": "ok (1 legend entries)",
-       "vector_markers": "ok (12 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
        "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (12 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
+       "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (9 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 9.358611677373831e-07,
+        "median": 9.31865211617816e-07,
+        "n": 9
+       },
+       "found": 1,
+       "hits": 9,
+       "panels": 1,
+       "points": 9
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 7.549136350118535e-07,
+        "median": 8.478470480558145e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5050717171190227,
+        "median": 0.5136608161136085,
+        "n": 212
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 212
+      }
+     },
      "hits": 20,
      "marker_hits": 20,
      "marker_points": 20,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 6.999344369341424e-07,
-      "median": 6.882121585616234e-07,
-      "n": 20
+      "mean": 0.4615311239484194,
+      "median": 0.5108688278818659,
+      "n": 232
      },
-     "points": 20,
-     "series_pred": 2,
+     "points": 232,
+     "series_pred": 3,
      "series_pred_matched": 2,
-     "series_true": 2,
+     "series_true": 6,
      "series_true_matched": 2
     }
    }
@@ -264,33 +560,80 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (18 points)"
       },
       {
        "axes": "a",
        "calibration": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
-       "figure": "fig3"
+       "figure": "fig4"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 26
+      },
+      "CPM": {
+       "err": {
+        "mean": 5.87035344687534e-07,
+        "median": 5.995248288926232e-07,
+        "n": 18
+       },
+       "found": 1,
+       "hits": 18,
+       "panels": 1,
+       "points": 18
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5214099293880072,
+        "median": 0.5572287006443769,
+        "n": 627
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 1208
+      }
+     },
      "hits": 18,
      "marker_hits": 18,
      "marker_points": 44,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 6.147910996429311e-07,
-      "median": 5.995248293671207e-07,
-      "n": 18
+      "mean": 0.50685897099677,
+      "median": 0.5555607309801421,
+      "n": 645
      },
-     "points": 44,
-     "series_pred": 1,
+     "points": 1252,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 3,
+     "series_true": 11,
      "series_true_matched": 1
     }
    }
@@ -304,31 +647,73 @@
        "calibration": "ok",
        "figure": "fig2",
        "manifest": "ok (1 legend entries)",
-       "vector_markers": "ok (12 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (12 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 287
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 7.202022486463771e-07,
+        "median": 6.72736356209116e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 11,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.49590553829405726,
+        "median": 0.546852245969456,
+        "n": 421
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 421
+      }
+     },
      "hits": 11,
      "marker_hits": 11,
      "marker_points": 11,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 3,
      "point_err": {
-      "mean": 6.778320890173125e-07,
-      "median": 6.620653485110232e-07,
-      "n": 11
+      "mean": 0.48327833227783057,
+      "median": 0.5286214415619617,
+      "n": 432
      },
-     "points": 298,
-     "series_pred": 1,
+     "points": 719,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 5,
+     "series_true": 8,
      "series_true_matched": 1
     }
    }
@@ -342,32 +727,74 @@
        "calibration": "ok",
        "figure": "fig2",
        "manifest": "ok (1 legend entries)",
-       "vector_markers": "ok (0 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (0 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
        "manifest": "ok (2 legend entries)",
        "vector_markers": "ok (0 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5272379246200787,
+        "median": 0.6456387856153449,
+        "n": 216
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 216
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5272379246200787,
+      "median": 0.6456387856153449,
+      "n": 216
      },
-     "points": 204,
-     "series_pred": 0,
+     "points": 420,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 6,
+     "series_true": 11,
      "series_true_matched": 0
     }
    }
@@ -380,33 +807,75 @@
        "axes": "a",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (4 legend entries)",
        "vector_markers": "ok (20 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (27 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.0040341613042692405,
+        "median": 7.695635748337932e-07,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.04078273550131322,
+        "median": 2.3148321093291457e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 20,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.47045651314797293,
+        "median": 0.5023556859019334,
+        "n": 76
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 76
+      }
+     },
      "hits": 46,
      "marker_hits": 46,
      "marker_points": 48,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.0195815637271042,
-      "median": 4.4156866404655253e-07,
-      "n": 52
+      "mean": 0.28728859390158523,
+      "median": 0.12702445043510546,
+      "n": 128
      },
-     "points": 52,
-     "series_pred": 3,
+     "points": 128,
+     "series_pred": 4,
      "series_pred_matched": 3,
-     "series_true": 6,
+     "series_true": 9,
      "series_true_matched": 2
     }
    }
@@ -417,37 +886,90 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 282
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.46556441156480116,
+        "median": 0.4421974785879069,
+        "n": 521
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 521
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 22,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.46556441156480116,
+      "median": 0.4421974785879069,
+      "n": 521
      },
-     "points": 304,
-     "series_pred": 0,
+     "points": 825,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 6,
+     "series_true": 11,
      "series_true_matched": 0
     }
    }
@@ -458,35 +980,82 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
        "figure": "fig2",
        "manifest": "ok (1 legend entries)",
-       "vector_markers": "ok (14 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
        "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (14 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
+       "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (11 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 0.004768580901448186,
+        "median": 6.055655332570767e-07,
+        "n": 15
+       },
+       "found": 1,
+       "hits": 14,
+       "panels": 1,
+       "points": 15
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 0.014012109335950686,
+        "median": 6.50237652018417e-07,
+        "n": 11
+       },
+       "found": 1,
+       "hits": 10,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5125039827631234,
+        "median": 0.5319993287654574,
+        "n": 365
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 789
+      }
+     },
      "hits": 24,
      "marker_hits": 24,
      "marker_points": 26,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 4,
      "point_err": {
-      "mean": 0.008679344636844916,
-      "median": 7.945467973065014e-07,
-      "n": 26
+      "mean": 0.47900157448787006,
+      "median": 0.48438485767458955,
+      "n": 391
      },
-     "points": 26,
-     "series_pred": 2,
+     "points": 815,
+     "series_pred": 3,
      "series_pred_matched": 2,
-     "series_true": 2,
+     "series_true": 8,
      "series_true_matched": 2
     }
    }
@@ -499,33 +1068,75 @@
        "axes": "a",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (4 legend entries)",
        "vector_markers": "ok (11 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (2 legend entries)",
        "vector_markers": "ok (26 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 0.005366186462218454,
+        "median": 1.8698428939150727e-06,
+        "n": 30
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 30
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 6.715374330686939e-07,
+        "median": 7.446496671261515e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.38094932180490904,
+        "median": 0.34330645299454365,
+        "n": 332
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 332
+      }
+     },
      "hits": 48,
      "marker_hits": 48,
      "marker_points": 48,
-     "panels_found": 2,
-     "panels_true": 2,
+     "panels_found": 3,
+     "panels_true": 3,
      "point_err": {
-      "mean": 0.003095782470138572,
-      "median": 7.315003091555526e-07,
-      "n": 52
+      "mean": 0.3297817062680205,
+      "median": 0.263517993850909,
+      "n": 384
      },
-     "points": 52,
-     "series_pred": 2,
+     "points": 384,
+     "series_pred": 3,
      "series_pred_matched": 2,
-     "series_true": 6,
+     "series_true": 10,
      "series_true_matched": 2
     }
    }
@@ -536,37 +1147,90 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 102
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5444947914277327,
+        "median": 0.511465718053161,
+        "n": 436
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 436
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5444947914277327,
+      "median": 0.511465718053161,
+      "n": 436
      },
-     "points": 204,
-     "series_pred": 0,
+     "points": 640,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 6,
+     "series_true": 12,
      "series_true_matched": 0
     }
    }
@@ -577,34 +1241,81 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
+       "figure": "fig2"
+      },
+      {
+       "axes": "b",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (2 legend entries)",
        "vector_markers": "ok (26 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": 9.95581844367891e-07,
+        "median": 9.420657352364424e-07,
+        "n": 26
+       },
+       "found": 1,
+       "hits": 26,
+       "panels": 1,
+       "points": 26
+      },
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 277
+      },
+      "NP": {
+       "err": {
+        "mean": 0.42002609440013317,
+        "median": 0.41181788709243916,
+        "n": 292
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 603
+      }
+     },
      "hits": 26,
      "marker_hits": 26,
      "marker_points": 26,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 6.345755959261193e-07,
-      "median": 6.398100866592241e-07,
-      "n": 26
+      "mean": 0.38568441965398376,
+      "median": 0.3746828729638897,
+      "n": 318
      },
-     "points": 303,
-     "series_pred": 1,
+     "points": 906,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 6,
+     "series_true": 14,
      "series_true_matched": 1
     }
    }
@@ -618,31 +1329,73 @@
        "calibration": "ok",
        "figure": "fig2",
        "manifest": "ok (1 legend entries)",
-       "vector_markers": "ok (0 points)"
+       "vector_markers": "ok (1 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
        "figure": "fig3",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (0 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 53
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5162240594192364,
+        "median": 0.6099149164479687,
+        "n": 474
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 474
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 3,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5162240594192364,
+      "median": 0.6099149164479687,
+      "n": 474
      },
-     "points": 104,
-     "series_pred": 0,
+     "points": 578,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 2,
+     "series_true": 5,
      "series_true_matched": 0
     }
    }
@@ -653,38 +1406,91 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (10 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "CPM": {
+       "err": {
+        "mean": 4.489608525615159e-07,
+        "median": 4.4657564615216306e-07,
+        "n": 10
+       },
+       "found": 1,
+       "hits": 10,
+       "panels": 1,
+       "points": 10
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5654828323564088,
+        "median": 0.70595353805268,
+        "n": 280
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 280
+      }
+     },
      "hits": 10,
      "marker_hits": 10,
      "marker_points": 32,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": 3.9224650911025407e-07,
-      "median": 3.369672438971098e-07,
-      "n": 10
+      "mean": 0.5459834398255277,
+      "median": 0.6788207958473721,
+      "n": 290
      },
-     "points": 32,
-     "series_pred": 1,
+     "points": 312,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 3,
+     "series_true": 6,
      "series_true_matched": 1
     }
    }
@@ -695,37 +1501,95 @@
      "xy": [
       {
        "axes": "a",
-       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "calibration": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
        "figure": "fig2"
       },
       {
        "axes": "b",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
+      },
+      {
+       "axes": "b",
+       "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "ACR": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 98
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 51
+      },
+      "NP": {
+       "err": {
+        "mean": 0.49620354289248775,
+        "median": 0.5548255683883527,
+        "n": 747
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 2,
+       "points": 1458
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 0,
-     "panels_found": 0,
-     "panels_true": 3,
+     "panels_found": 1,
+     "panels_true": 5,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.49620354289248775,
+      "median": 0.5548255683883527,
+      "n": 747
      },
-     "points": 200,
-     "series_pred": 0,
+     "points": 1658,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 4,
+     "series_true": 11,
      "series_true_matched": 0
     }
    }
@@ -738,32 +1602,74 @@
        "axes": "a",
        "calibration": "ok",
        "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
+       "calibration": "ok",
+       "figure": "fig3",
        "manifest": "ok (4 legend entries)",
        "vector_markers": "ok (11 points)"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": 4.689320848247288e-07,
+        "median": 5.065128180903052e-07,
+        "n": 22
+       },
+       "found": 1,
+       "hits": 22,
+       "panels": 1,
+       "points": 22
+      },
+      "NP": {
+       "err": {
+        "mean": 0.4029244052069476,
+        "median": 0.3665593257875797,
+        "n": 87
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 87
+      }
+     },
      "hits": 22,
      "marker_hits": 22,
      "marker_points": 22,
-     "panels_found": 1,
-     "panels_true": 2,
+     "panels_found": 2,
+     "panels_true": 3,
      "point_err": {
-      "mean": 4.4592443428040793e-07,
-      "median": 5.065128114233099e-07,
-      "n": 22
+      "mean": 0.3216003079771587,
+      "median": 0.23169933915651436,
+      "n": 109
      },
-     "points": 327,
-     "series_pred": 1,
+     "points": 414,
+     "series_pred": 2,
      "series_pred_matched": 1,
-     "series_true": 6,
+     "series_true": 9,
      "series_true_matched": 1
     }
    }
@@ -774,38 +1680,91 @@
      "xy": [
       {
        "axes": "a",
+       "calibration": "ok",
+       "figure": "fig2",
+       "manifest": "ok (1 legend entries)",
+       "vector_markers": "ok (1 points)"
+      },
+      {
+       "axes": "a",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "b",
        "calibration": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
-       "figure": "fig2"
+       "figure": "fig3"
       },
       {
        "axes": "a",
        "calibration": "ok",
-       "figure": "fig3",
+       "figure": "fig4",
        "manifest": "ok (1 legend entries)",
        "vector_markers": "ok (0 points)"
       }
      ]
     },
     "xy": {
+     "by_quantity": {
+      "GM": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 305
+      },
+      "GM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "HM_MIX": {
+       "err": {
+        "mean": null,
+        "median": null,
+        "n": 0
+       },
+       "found": 0,
+       "hits": 0,
+       "panels": 1,
+       "points": 11
+      },
+      "NP": {
+       "err": {
+        "mean": 0.5438470572783035,
+        "median": 0.6462523371232782,
+        "n": 296
+       },
+       "found": 1,
+       "hits": 0,
+       "panels": 1,
+       "points": 296
+      }
+     },
      "hits": 0,
      "marker_hits": 0,
      "marker_points": 22,
-     "panels_found": 1,
-     "panels_true": 3,
+     "panels_found": 2,
+     "panels_true": 4,
      "point_err": {
-      "mean": null,
-      "median": null,
-      "n": 0
+      "mean": 0.5438470572783035,
+      "median": 0.6462523371232782,
+      "n": 296
      },
-     "points": 327,
-     "series_pred": 0,
+     "points": 623,
+     "series_pred": 1,
      "series_pred_matched": 0,
-     "series_true": 6,
+     "series_true": 11,
      "series_true_matched": 0
     }
    }

@@ -3,41 +3,41 @@
   "clean_raster": {
    "documents": 20,
    "text": {
-    "precision": 0.9026315789473685,
-    "recall": 0.849009900990099,
-    "value_only_recall": 0.8620660072624082,
-    "values_pred": 380,
-    "values_true": 404
+    "precision": 0.7986577181208053,
+    "recall": 0.8623188405797102,
+    "value_only_recall": 0.8719545823167685,
+    "values_pred": 596,
+    "values_true": 552
    }
   },
   "degraded_raster": {
    "documents": 20,
    "text": {
-    "precision": 0.9079754601226994,
-    "recall": 0.7326732673267327,
-    "value_only_recall": 0.7515596856425031,
-    "values_pred": 326,
-    "values_true": 404
+    "precision": 0.8127490039840638,
+    "recall": 0.7391304347826086,
+    "value_only_recall": 0.7577943376108129,
+    "values_pred": 502,
+    "values_true": 552
    }
   },
   "image_only_pdf": {
    "documents": 20,
    "text": {
-    "precision": 0.9079754601226994,
-    "recall": 0.7326732673267327,
-    "value_only_recall": 0.7515596856425031,
-    "values_pred": 326,
-    "values_true": 404
+    "precision": 0.8127490039840638,
+    "recall": 0.7391304347826086,
+    "value_only_recall": 0.7577943376108129,
+    "values_pred": 502,
+    "values_true": 552
    }
   },
   "vector": {
    "documents": 20,
    "text": {
-    "precision": 0.927360774818402,
-    "recall": 0.948019801980198,
-    "value_only_recall": 0.946584975589426,
-    "values_pred": 413,
-    "values_true": 404
+    "precision": 0.8470031545741324,
+    "recall": 0.9728260869565217,
+    "value_only_recall": 0.9734340687999363,
+    "values_pred": 634,
+    "values_true": 552
    }
   }
  },
@@ -49,12 +49,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.9166666666666666,
-     "n_pred": 11,
-     "n_true": 13,
-     "precision": 1.0,
-     "recall": 0.8461538461538461,
-     "value_only_recall": 0.8461538461538461
+     "f1": 0.9500000000000001,
+     "n_pred": 20,
+     "n_true": 20,
+     "precision": 0.95,
+     "recall": 0.95,
+     "value_only_recall": 0.95
     }
    },
    "degraded_raster": {
@@ -62,12 +62,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.761904761904762,
-     "n_pred": 8,
-     "n_true": 13,
-     "precision": 1.0,
-     "recall": 0.6153846153846154,
-     "value_only_recall": 0.6153846153846154
+     "f1": 0.9500000000000001,
+     "n_pred": 20,
+     "n_true": 20,
+     "precision": 0.95,
+     "recall": 0.95,
+     "value_only_recall": 0.95
     }
    },
    "image_only_pdf": {
@@ -75,12 +75,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.761904761904762,
-     "n_pred": 8,
-     "n_true": 13,
-     "precision": 1.0,
-     "recall": 0.6153846153846154,
-     "value_only_recall": 0.6153846153846154
+     "f1": 0.9500000000000001,
+     "n_pred": 20,
+     "n_true": 20,
+     "precision": 0.95,
+     "recall": 0.95,
+     "value_only_recall": 0.95
     }
    },
    "vector": {
@@ -88,12 +88,12 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.8799999999999999,
-     "n_pred": 12,
-     "n_true": 13,
-     "precision": 0.9166666666666666,
-     "recall": 0.8461538461538461,
-     "value_only_recall": 0.8461538461538461
+     "f1": 0.9523809523809523,
+     "n_pred": 22,
+     "n_true": 20,
+     "precision": 0.9090909090909091,
+     "recall": 1.0,
+     "value_only_recall": 1.0
     }
    }
   },
@@ -103,12 +103,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.8666666666666666,
-     "n_pred": 13,
-     "n_true": 17,
-     "precision": 1.0,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.909090909090909,
+     "n_pred": 21,
+     "n_true": 23,
+     "precision": 0.9523809523809523,
+     "recall": 0.8695652173913043,
+     "value_only_recall": 0.8695652173913043
     }
    },
    "degraded_raster": {
@@ -116,12 +116,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.8275862068965517,
-     "n_pred": 12,
-     "n_true": 17,
-     "precision": 1.0,
-     "recall": 0.7058823529411765,
-     "value_only_recall": 0.7058823529411765
+     "f1": 0.7804878048780488,
+     "n_pred": 18,
+     "n_true": 23,
+     "precision": 0.8888888888888888,
+     "recall": 0.6956521739130435,
+     "value_only_recall": 0.6956521739130435
     }
    },
    "image_only_pdf": {
@@ -129,12 +129,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.8275862068965517,
-     "n_pred": 12,
-     "n_true": 17,
-     "precision": 1.0,
-     "recall": 0.7058823529411765,
-     "value_only_recall": 0.7058823529411765
+     "f1": 0.7804878048780488,
+     "n_pred": 18,
+     "n_true": 23,
+     "precision": 0.8888888888888888,
+     "recall": 0.6956521739130435,
+     "value_only_recall": 0.6956521739130435
     }
    },
    "vector": {
@@ -142,12 +142,12 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.9375,
-     "n_pred": 15,
-     "n_true": 17,
-     "precision": 1.0,
-     "recall": 0.8823529411764706,
-     "value_only_recall": 0.8823529411764706
+     "f1": 0.9787234042553191,
+     "n_pred": 24,
+     "n_true": 23,
+     "precision": 0.9583333333333334,
+     "recall": 1.0,
+     "value_only_recall": 1.0
     }
    }
   },
@@ -157,12 +157,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.8823529411764706,
-     "n_pred": 17,
-     "n_true": 17,
-     "precision": 0.8823529411764706,
-     "recall": 0.8823529411764706,
-     "value_only_recall": 0.8823529411764706
+     "f1": 0.8070175438596491,
+     "n_pred": 30,
+     "n_true": 27,
+     "precision": 0.7666666666666667,
+     "recall": 0.8518518518518519,
+     "value_only_recall": 0.8518518518518519
     }
    },
    "degraded_raster": {
@@ -170,12 +170,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.8387096774193549,
-     "n_pred": 14,
-     "n_true": 17,
-     "precision": 0.9285714285714286,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.7058823529411765,
+     "n_pred": 24,
+     "n_true": 27,
+     "precision": 0.75,
+     "recall": 0.6666666666666666,
+     "value_only_recall": 0.6666666666666666
     }
    },
    "image_only_pdf": {
@@ -183,12 +183,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.8387096774193549,
-     "n_pred": 14,
-     "n_true": 17,
-     "precision": 0.9285714285714286,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.7058823529411765,
+     "n_pred": 24,
+     "n_true": 27,
+     "precision": 0.75,
+     "recall": 0.6666666666666666,
+     "value_only_recall": 0.6666666666666666
     }
    },
    "vector": {
@@ -196,664 +196,16 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 1.0,
-     "n_pred": 17,
-     "n_true": 17,
-     "precision": 1.0,
+     "f1": 0.9310344827586207,
+     "n_pred": 31,
+     "n_true": 27,
+     "precision": 0.8709677419354839,
      "recall": 1.0,
      "value_only_recall": 1.0
     }
    }
   },
   "syn-AlBi-06Kim-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9285714285714286,
-     "n_pred": 13,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.8666666666666667,
-     "value_only_recall": 0.8666666666666667
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.846153846153846,
-     "n_pred": 11,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.7333333333333333,
-     "value_only_recall": 0.7333333333333333
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.846153846153846,
-     "n_pred": 11,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.7333333333333333,
-     "value_only_recall": 0.7333333333333333
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.896551724137931,
-     "n_pred": 14,
-     "n_true": 15,
-     "precision": 0.9285714285714286,
-     "recall": 0.8666666666666667,
-     "value_only_recall": 0.8666666666666667
-    }
-   }
-  },
-  "syn-AlCu-02Mie-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.888888888888889,
-     "n_pred": 33,
-     "n_true": 30,
-     "precision": 0.8484848484848485,
-     "recall": 0.9333333333333333,
-     "value_only_recall": 0.9333333333333333
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7636363636363636,
-     "n_pred": 25,
-     "n_true": 30,
-     "precision": 0.84,
-     "recall": 0.7,
-     "value_only_recall": 0.7
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.7636363636363636,
-     "n_pred": 25,
-     "n_true": 30,
-     "precision": 0.84,
-     "recall": 0.7,
-     "value_only_recall": 0.7
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9375,
-     "n_pred": 34,
-     "n_true": 30,
-     "precision": 0.8823529411764706,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-AlMg-12Tan-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7868852459016394,
-     "n_pred": 29,
-     "n_true": 32,
-     "precision": 0.8275862068965517,
-     "recall": 0.75,
-     "value_only_recall": 0.75
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7586206896551724,
-     "n_pred": 26,
-     "n_true": 32,
-     "precision": 0.8461538461538461,
-     "recall": 0.6875,
-     "value_only_recall": 0.6875
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.7586206896551724,
-     "n_pred": 26,
-     "n_true": 32,
-     "precision": 0.8461538461538461,
-     "recall": 0.6875,
-     "value_only_recall": 0.6875
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.8923076923076922,
-     "n_pred": 33,
-     "n_true": 32,
-     "precision": 0.8787878787878788,
-     "recall": 0.90625,
-     "value_only_recall": 0.90625
-    }
-   }
-  },
-  "syn-AlNi-14Zhu-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.870967741935484,
-     "n_pred": 30,
-     "n_true": 32,
-     "precision": 0.9,
-     "recall": 0.84375,
-     "value_only_recall": 0.84375
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7272727272727273,
-     "n_pred": 23,
-     "n_true": 32,
-     "precision": 0.8695652173913043,
-     "recall": 0.625,
-     "value_only_recall": 0.625
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.7272727272727273,
-     "n_pred": 23,
-     "n_true": 32,
-     "precision": 0.8695652173913043,
-     "recall": 0.625,
-     "value_only_recall": 0.625
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9375,
-     "n_pred": 32,
-     "n_true": 32,
-     "precision": 0.9375,
-     "recall": 0.9375,
-     "value_only_recall": 0.9375
-    }
-   }
-  },
-  "syn-AlSi-12Tan-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9166666666666666,
-     "n_pred": 12,
-     "n_true": 12,
-     "precision": 0.9166666666666666,
-     "recall": 0.9166666666666666,
-     "value_only_recall": 0.9166666666666666
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9166666666666666,
-     "n_pred": 12,
-     "n_true": 12,
-     "precision": 0.9166666666666666,
-     "recall": 0.9166666666666666,
-     "value_only_recall": 0.9166666666666666
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.9166666666666666,
-     "n_pred": 12,
-     "n_true": 12,
-     "precision": 0.9166666666666666,
-     "recall": 0.9166666666666666,
-     "value_only_recall": 0.9166666666666666
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9600000000000001,
-     "n_pred": 13,
-     "n_true": 12,
-     "precision": 0.9230769230769231,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-AlZn-93Mey-LB-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 1.0,
-     "n_pred": 16,
-     "n_true": 16,
-     "precision": 1.0,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.896551724137931,
-     "n_pred": 13,
-     "n_true": 16,
-     "precision": 1.0,
-     "recall": 0.8125,
-     "value_only_recall": 0.8125
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.896551724137931,
-     "n_pred": 13,
-     "n_true": 16,
-     "precision": 1.0,
-     "recall": 0.8125,
-     "value_only_recall": 0.8125
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9696969696969697,
-     "n_pred": 17,
-     "n_true": 16,
-     "precision": 0.9411764705882353,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-BiSn-08Li-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.962962962962963,
-     "n_pred": 13,
-     "n_true": 14,
-     "precision": 1.0,
-     "recall": 0.9285714285714286,
-     "value_only_recall": 0.9285714285714286
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.962962962962963,
-     "n_pred": 13,
-     "n_true": 14,
-     "precision": 1.0,
-     "recall": 0.9285714285714286,
-     "value_only_recall": 0.9285714285714286
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.962962962962963,
-     "n_pred": 13,
-     "n_true": 14,
-     "precision": 1.0,
-     "recall": 0.9285714285714286,
-     "value_only_recall": 0.9285714285714286
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 1.0,
-     "n_pred": 14,
-     "n_true": 14,
-     "precision": 1.0,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-CrFe-11Xio-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9090909090909091,
-     "n_pred": 16,
-     "n_true": 17,
-     "precision": 0.9375,
-     "recall": 0.8823529411764706,
-     "value_only_recall": 0.8823529411764706
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7142857142857143,
-     "n_pred": 11,
-     "n_true": 17,
-     "precision": 0.9090909090909091,
-     "recall": 0.5882352941176471,
-     "value_only_recall": 0.5882352941176471
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.7142857142857143,
-     "n_pred": 11,
-     "n_true": 17,
-     "precision": 0.9090909090909091,
-     "recall": 0.5882352941176471,
-     "value_only_recall": 0.5882352941176471
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.8823529411764706,
-     "n_pred": 17,
-     "n_true": 17,
-     "precision": 0.8823529411764706,
-     "recall": 0.8823529411764706,
-     "value_only_recall": 0.8823529411764706
-    }
-   }
-  },
-  "syn-CuMg-16Hal-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.8095238095238095,
-     "n_pred": 23,
-     "n_true": 19,
-     "precision": 0.7391304347826086,
-     "recall": 0.8947368421052632,
-     "value_only_recall": 0.8947368421052632
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.8421052631578947,
-     "n_pred": 19,
-     "n_true": 19,
-     "precision": 0.8421052631578947,
-     "recall": 0.8421052631578947,
-     "value_only_recall": 0.8421052631578947
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.8421052631578947,
-     "n_pred": 19,
-     "n_true": 19,
-     "precision": 0.8421052631578947,
-     "recall": 0.8421052631578947,
-     "value_only_recall": 0.8421052631578947
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9047619047619047,
-     "n_pred": 23,
-     "n_true": 19,
-     "precision": 0.8260869565217391,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-CuNi-87Jan-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 1.0,
-     "n_pred": 12,
-     "n_true": 12,
-     "precision": 1.0,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9565217391304348,
-     "n_pred": 11,
-     "n_true": 12,
-     "precision": 1.0,
-     "recall": 0.9166666666666666,
-     "value_only_recall": 0.9166666666666666
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.9565217391304348,
-     "n_pred": 11,
-     "n_true": 12,
-     "precision": 1.0,
-     "recall": 0.9166666666666666,
-     "value_only_recall": 0.9166666666666666
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9600000000000001,
-     "n_pred": 13,
-     "n_true": 12,
-     "precision": 0.9230769230769231,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-CuPb-86Hay-LB-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9444444444444444,
-     "n_pred": 17,
-     "n_true": 19,
-     "precision": 1.0,
-     "recall": 0.8947368421052632,
-     "value_only_recall": 0.8947368421052632
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.9444444444444444,
-     "n_pred": 17,
-     "n_true": 19,
-     "precision": 1.0,
-     "recall": 0.8947368421052632,
-     "value_only_recall": 0.8947368421052632
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.9444444444444444,
-     "n_pred": 17,
-     "n_true": 19,
-     "precision": 1.0,
-     "recall": 0.8947368421052632,
-     "value_only_recall": 0.8947368421052632
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9444444444444444,
-     "n_pred": 17,
-     "n_true": 19,
-     "precision": 1.0,
-     "recall": 0.8947368421052632,
-     "value_only_recall": 0.8947368421052632
-    }
-   }
-  },
-  "syn-CuZn-08Gie-v0": {
-   "clean_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.8059701492537312,
-     "n_pred": 30,
-     "n_true": 37,
-     "precision": 0.9,
-     "recall": 0.7297297297297297,
-     "value_only_recall": 0.7297297297297297
-    }
-   },
-   "degraded_raster": {
-    "status": {
-     "text": "ran: tesseract OCR"
-    },
-    "text": {
-     "f1": 0.7692307692307693,
-     "n_pred": 28,
-     "n_true": 37,
-     "precision": 0.8928571428571429,
-     "recall": 0.6756756756756757,
-     "value_only_recall": 0.6756756756756757
-    }
-   },
-   "image_only_pdf": {
-    "status": {
-     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
-    },
-    "text": {
-     "f1": 0.7692307692307693,
-     "n_pred": 28,
-     "n_true": 37,
-     "precision": 0.8928571428571429,
-     "recall": 0.6756756756756757,
-     "value_only_recall": 0.6756756756756757
-    }
-   },
-   "vector": {
-    "status": {
-     "text": "ran: pdf_text_layer"
-    },
-    "text": {
-     "f1": 0.9736842105263158,
-     "n_pred": 39,
-     "n_true": 37,
-     "precision": 0.9487179487179487,
-     "recall": 1.0,
-     "value_only_recall": 1.0
-    }
-   }
-  },
-  "syn-MgSi-12Sch-v0": {
    "clean_raster": {
     "status": {
      "text": "ran: tesseract OCR"
@@ -898,10 +250,658 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.9767441860465117,
-     "n_pred": 22,
+     "f1": 0.909090909090909,
+     "n_pred": 23,
      "n_true": 21,
-     "precision": 0.9545454545454546,
+     "precision": 0.8695652173913043,
+     "recall": 0.9523809523809523,
+     "value_only_recall": 0.9523809523809523
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.85,
+     "n_pred": 43,
+     "n_true": 37,
+     "precision": 0.7906976744186046,
+     "recall": 0.918918918918919,
+     "value_only_recall": 0.918918918918919
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7631578947368421,
+     "n_pred": 39,
+     "n_true": 37,
+     "precision": 0.7435897435897436,
+     "recall": 0.7837837837837838,
+     "value_only_recall": 0.7837837837837838
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.7631578947368421,
+     "n_pred": 39,
+     "n_true": 37,
+     "precision": 0.7435897435897436,
+     "recall": 0.7837837837837838,
+     "value_only_recall": 0.7837837837837838
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.891566265060241,
+     "n_pred": 46,
+     "n_true": 37,
+     "precision": 0.8043478260869565,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7692307692307693,
+     "n_pred": 39,
+     "n_true": 39,
+     "precision": 0.7692307692307693,
+     "recall": 0.7692307692307693,
+     "value_only_recall": 0.7692307692307693
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7567567567567569,
+     "n_pred": 35,
+     "n_true": 39,
+     "precision": 0.8,
+     "recall": 0.717948717948718,
+     "value_only_recall": 0.717948717948718
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.7567567567567569,
+     "n_pred": 35,
+     "n_true": 39,
+     "precision": 0.8,
+     "recall": 0.717948717948718,
+     "value_only_recall": 0.717948717948718
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.8433734939759037,
+     "n_pred": 44,
+     "n_true": 39,
+     "precision": 0.7954545454545454,
+     "recall": 0.8974358974358975,
+     "value_only_recall": 0.8974358974358975
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8045977011494252,
+     "n_pred": 44,
+     "n_true": 43,
+     "precision": 0.7954545454545454,
+     "recall": 0.813953488372093,
+     "value_only_recall": 0.813953488372093
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.765432098765432,
+     "n_pred": 38,
+     "n_true": 43,
+     "precision": 0.8157894736842105,
+     "recall": 0.7209302325581395,
+     "value_only_recall": 0.7209302325581395
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.765432098765432,
+     "n_pred": 38,
+     "n_true": 43,
+     "precision": 0.8157894736842105,
+     "recall": 0.7209302325581395,
+     "value_only_recall": 0.7209302325581395
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.9010989010989011,
+     "n_pred": 48,
+     "n_true": 43,
+     "precision": 0.8541666666666666,
+     "recall": 0.9534883720930233,
+     "value_only_recall": 0.9534883720930233
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8421052631578948,
+     "n_pred": 20,
+     "n_true": 18,
+     "precision": 0.8,
+     "recall": 0.8888888888888888,
+     "value_only_recall": 0.8888888888888888
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8333333333333334,
+     "n_pred": 18,
+     "n_true": 18,
+     "precision": 0.8333333333333334,
+     "recall": 0.8333333333333334,
+     "value_only_recall": 0.8333333333333334
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.8333333333333334,
+     "n_pred": 18,
+     "n_true": 18,
+     "precision": 0.8333333333333334,
+     "recall": 0.8333333333333334,
+     "value_only_recall": 0.8333333333333334
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.923076923076923,
+     "n_pred": 21,
+     "n_true": 18,
+     "precision": 0.8571428571428571,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8749999999999999,
+     "n_pred": 25,
+     "n_true": 23,
+     "precision": 0.84,
+     "recall": 0.9130434782608695,
+     "value_only_recall": 0.9130434782608695
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8695652173913043,
+     "n_pred": 23,
+     "n_true": 23,
+     "precision": 0.8695652173913043,
+     "recall": 0.8695652173913043,
+     "value_only_recall": 0.8695652173913043
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.8695652173913043,
+     "n_pred": 23,
+     "n_true": 23,
+     "precision": 0.8695652173913043,
+     "recall": 0.8695652173913043,
+     "value_only_recall": 0.8695652173913043
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.8800000000000001,
+     "n_pred": 27,
+     "n_true": 23,
+     "precision": 0.8148148148148148,
+     "recall": 0.9565217391304348,
+     "value_only_recall": 0.9565217391304348
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8837209302325583,
+     "n_pred": 23,
+     "n_true": 20,
+     "precision": 0.8260869565217391,
+     "recall": 0.95,
+     "value_only_recall": 0.95
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.9230769230769231,
+     "n_pred": 19,
+     "n_true": 20,
+     "precision": 0.9473684210526315,
+     "recall": 0.9,
+     "value_only_recall": 0.9
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.9230769230769231,
+     "n_pred": 19,
+     "n_true": 20,
+     "precision": 0.9473684210526315,
+     "recall": 0.9,
+     "value_only_recall": 0.9
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.9302325581395349,
+     "n_pred": 23,
+     "n_true": 20,
+     "precision": 0.8695652173913043,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8571428571428572,
+     "n_pred": 27,
+     "n_true": 22,
+     "precision": 0.7777777777777778,
+     "recall": 0.9545454545454546,
+     "value_only_recall": 0.9545454545454546
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8181818181818182,
+     "n_pred": 22,
+     "n_true": 22,
+     "precision": 0.8181818181818182,
+     "recall": 0.8181818181818182,
+     "value_only_recall": 0.8181818181818182
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.8181818181818182,
+     "n_pred": 22,
+     "n_true": 22,
+     "precision": 0.8181818181818182,
+     "recall": 0.8181818181818182,
+     "value_only_recall": 0.8181818181818182
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.8979591836734693,
+     "n_pred": 27,
+     "n_true": 22,
+     "precision": 0.8148148148148148,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7536231884057972,
+     "n_pred": 38,
+     "n_true": 31,
+     "precision": 0.6842105263157895,
+     "recall": 0.8387096774193549,
+     "value_only_recall": 0.8387096774193549
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7540983606557377,
+     "n_pred": 30,
+     "n_true": 31,
+     "precision": 0.7666666666666667,
+     "recall": 0.7419354838709677,
+     "value_only_recall": 0.7419354838709677
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.7540983606557377,
+     "n_pred": 30,
+     "n_true": 31,
+     "precision": 0.7666666666666667,
+     "recall": 0.7419354838709677,
+     "value_only_recall": 0.7419354838709677
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.8571428571428572,
+     "n_pred": 39,
+     "n_true": 31,
+     "precision": 0.7692307692307693,
+     "recall": 0.967741935483871,
+     "value_only_recall": 0.967741935483871
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7999999999999999,
+     "n_pred": 19,
+     "n_true": 16,
+     "precision": 0.7368421052631579,
+     "recall": 0.875,
+     "value_only_recall": 0.875
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.823529411764706,
+     "n_pred": 18,
+     "n_true": 16,
+     "precision": 0.7777777777777778,
+     "recall": 0.875,
+     "value_only_recall": 0.875
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.823529411764706,
+     "n_pred": 18,
+     "n_true": 16,
+     "precision": 0.7777777777777778,
+     "recall": 0.875,
+     "value_only_recall": 0.875
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.8333333333333334,
+     "n_pred": 20,
+     "n_true": 16,
+     "precision": 0.75,
+     "recall": 0.9375,
+     "value_only_recall": 0.9375
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.9,
+     "n_pred": 31,
+     "n_true": 29,
+     "precision": 0.8709677419354839,
+     "recall": 0.9310344827586207,
+     "value_only_recall": 0.9310344827586207
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7777777777777777,
+     "n_pred": 25,
+     "n_true": 29,
+     "precision": 0.84,
+     "recall": 0.7241379310344828,
+     "value_only_recall": 0.7241379310344828
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.7777777777777777,
+     "n_pred": 25,
+     "n_true": 29,
+     "precision": 0.84,
+     "recall": 0.7241379310344828,
+     "value_only_recall": 0.7241379310344828
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.9333333333333333,
+     "n_pred": 31,
+     "n_true": 29,
+     "precision": 0.9032258064516129,
+     "recall": 0.9655172413793104,
+     "value_only_recall": 0.9655172413793104
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7777777777777778,
+     "n_pred": 44,
+     "n_true": 46,
+     "precision": 0.7954545454545454,
+     "recall": 0.7608695652173914,
+     "value_only_recall": 0.7608695652173914
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.7012987012987013,
+     "n_pred": 31,
+     "n_true": 46,
+     "precision": 0.8709677419354839,
+     "recall": 0.5869565217391305,
+     "value_only_recall": 0.5869565217391305
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.7012987012987013,
+     "n_pred": 31,
+     "n_true": 46,
+     "precision": 0.8709677419354839,
+     "recall": 0.5869565217391305,
+     "value_only_recall": 0.5869565217391305
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.9292929292929293,
+     "n_pred": 53,
+     "n_true": 46,
+     "precision": 0.8679245283018868,
+     "recall": 1.0,
+     "value_only_recall": 1.0
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "clean_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.8070175438596492,
+     "n_pred": 31,
+     "n_true": 26,
+     "precision": 0.7419354838709677,
+     "recall": 0.8846153846153846,
+     "value_only_recall": 0.8846153846153846
+    }
+   },
+   "degraded_raster": {
+    "status": {
+     "text": "ran: tesseract OCR"
+    },
+    "text": {
+     "f1": 0.68,
+     "n_pred": 24,
+     "n_true": 26,
+     "precision": 0.7083333333333334,
+     "recall": 0.6538461538461539,
+     "value_only_recall": 0.6538461538461539
+    }
+   },
+   "image_only_pdf": {
+    "status": {
+     "text": "ran: text layer empty -> tesseract OCR of embedded page images"
+    },
+    "text": {
+     "f1": 0.68,
+     "n_pred": 24,
+     "n_true": 26,
+     "precision": 0.7083333333333334,
+     "recall": 0.6538461538461539,
+     "value_only_recall": 0.6538461538461539
+    }
+   },
+   "vector": {
+    "status": {
+     "text": "ran: pdf_text_layer"
+    },
+    "text": {
+     "f1": 0.9122807017543859,
+     "n_pred": 31,
+     "n_true": 26,
+     "precision": 0.8387096774193549,
      "recall": 1.0,
      "value_only_recall": 1.0
     }
@@ -913,12 +913,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.7692307692307692,
-     "n_pred": 18,
-     "n_true": 21,
-     "precision": 0.8333333333333334,
-     "recall": 0.7142857142857143,
-     "value_only_recall": 0.7142857142857143
+     "f1": 0.7741935483870969,
+     "n_pred": 32,
+     "n_true": 30,
+     "precision": 0.75,
+     "recall": 0.8,
+     "value_only_recall": 0.8
     }
    },
    "degraded_raster": {
@@ -926,12 +926,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.6486486486486486,
-     "n_pred": 16,
-     "n_true": 21,
-     "precision": 0.75,
-     "recall": 0.5714285714285714,
-     "value_only_recall": 0.5714285714285714
+     "f1": 0.6415094339622641,
+     "n_pred": 23,
+     "n_true": 30,
+     "precision": 0.7391304347826086,
+     "recall": 0.5666666666666667,
+     "value_only_recall": 0.5666666666666667
     }
    },
    "image_only_pdf": {
@@ -939,12 +939,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.6486486486486486,
-     "n_pred": 16,
-     "n_true": 21,
-     "precision": 0.75,
-     "recall": 0.5714285714285714,
-     "value_only_recall": 0.5714285714285714
+     "f1": 0.6415094339622641,
+     "n_pred": 23,
+     "n_true": 30,
+     "precision": 0.7391304347826086,
+     "recall": 0.5666666666666667,
+     "value_only_recall": 0.5666666666666667
     }
    },
    "vector": {
@@ -952,12 +952,12 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.9047619047619048,
-     "n_pred": 21,
-     "n_true": 21,
-     "precision": 0.9047619047619048,
-     "recall": 0.9047619047619048,
-     "value_only_recall": 0.9047619047619048
+     "f1": 0.888888888888889,
+     "n_pred": 33,
+     "n_true": 30,
+     "precision": 0.8484848484848485,
+     "recall": 0.9333333333333333,
+     "value_only_recall": 0.9333333333333333
     }
    }
   },
@@ -967,12 +967,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.888888888888889,
-     "n_pred": 26,
-     "n_true": 28,
-     "precision": 0.9230769230769231,
-     "recall": 0.8571428571428571,
-     "value_only_recall": 0.8571428571428571
+     "f1": 0.8641975308641975,
+     "n_pred": 42,
+     "n_true": 39,
+     "precision": 0.8333333333333334,
+     "recall": 0.8974358974358975,
+     "value_only_recall": 0.8974358974358975
     }
    },
    "degraded_raster": {
@@ -980,12 +980,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.7916666666666667,
-     "n_pred": 20,
-     "n_true": 28,
-     "precision": 0.95,
-     "recall": 0.6785714285714286,
-     "value_only_recall": 0.6785714285714286
+     "f1": 0.7567567567567569,
+     "n_pred": 35,
+     "n_true": 39,
+     "precision": 0.8,
+     "recall": 0.717948717948718,
+     "value_only_recall": 0.717948717948718
     }
    },
    "image_only_pdf": {
@@ -993,12 +993,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.7916666666666667,
-     "n_pred": 20,
-     "n_true": 28,
-     "precision": 0.95,
-     "recall": 0.6785714285714286,
-     "value_only_recall": 0.6785714285714286
+     "f1": 0.7567567567567569,
+     "n_pred": 35,
+     "n_true": 39,
+     "precision": 0.8,
+     "recall": 0.717948717948718,
+     "value_only_recall": 0.717948717948718
     }
    },
    "vector": {
@@ -1007,11 +1007,11 @@
     },
     "text": {
      "f1": 0.962962962962963,
-     "n_pred": 26,
-     "n_true": 28,
-     "precision": 1.0,
-     "recall": 0.9285714285714286,
-     "value_only_recall": 0.9285714285714286
+     "n_pred": 42,
+     "n_true": 39,
+     "precision": 0.9285714285714286,
+     "recall": 1.0,
+     "value_only_recall": 1.0
     }
    }
   },
@@ -1021,12 +1021,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.9285714285714286,
-     "n_pred": 13,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.8666666666666667,
-     "value_only_recall": 0.8666666666666667
+     "f1": 0.8636363636363636,
+     "n_pred": 23,
+     "n_true": 21,
+     "precision": 0.8260869565217391,
+     "recall": 0.9047619047619048,
+     "value_only_recall": 0.9047619047619048
     }
    },
    "degraded_raster": {
@@ -1034,12 +1034,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.888888888888889,
-     "n_pred": 12,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.8,
-     "value_only_recall": 0.8
+     "f1": 0.8292682926829269,
+     "n_pred": 20,
+     "n_true": 21,
+     "precision": 0.85,
+     "recall": 0.8095238095238095,
+     "value_only_recall": 0.8095238095238095
     }
    },
    "image_only_pdf": {
@@ -1047,12 +1047,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.888888888888889,
-     "n_pred": 12,
-     "n_true": 15,
-     "precision": 1.0,
-     "recall": 0.8,
-     "value_only_recall": 0.8
+     "f1": 0.8292682926829269,
+     "n_pred": 20,
+     "n_true": 21,
+     "precision": 0.85,
+     "recall": 0.8095238095238095,
+     "value_only_recall": 0.8095238095238095
     }
    },
    "vector": {
@@ -1060,10 +1060,10 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.967741935483871,
-     "n_pred": 16,
-     "n_true": 15,
-     "precision": 0.9375,
+     "f1": 0.9130434782608696,
+     "n_pred": 25,
+     "n_true": 21,
+     "precision": 0.84,
      "recall": 1.0,
      "value_only_recall": 1.0
     }
@@ -1075,12 +1075,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.787878787878788,
-     "n_pred": 16,
-     "n_true": 17,
-     "precision": 0.8125,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.7441860465116279,
+     "n_pred": 22,
+     "n_true": 21,
+     "precision": 0.7272727272727273,
+     "recall": 0.7619047619047619,
+     "value_only_recall": 0.7619047619047619
     }
    },
    "degraded_raster": {
@@ -1088,12 +1088,12 @@
      "text": "ran: tesseract OCR"
     },
     "text": {
-     "f1": 0.8125,
-     "n_pred": 15,
-     "n_true": 17,
-     "precision": 0.8666666666666667,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.7317073170731706,
+     "n_pred": 20,
+     "n_true": 21,
+     "precision": 0.75,
+     "recall": 0.7142857142857143,
+     "value_only_recall": 0.7142857142857143
     }
    },
    "image_only_pdf": {
@@ -1101,12 +1101,12 @@
      "text": "ran: text layer empty -> tesseract OCR of embedded page images"
     },
     "text": {
-     "f1": 0.8125,
-     "n_pred": 15,
-     "n_true": 17,
-     "precision": 0.8666666666666667,
-     "recall": 0.7647058823529411,
-     "value_only_recall": 0.7647058823529411
+     "f1": 0.7317073170731706,
+     "n_pred": 20,
+     "n_true": 21,
+     "precision": 0.75,
+     "recall": 0.7142857142857143,
+     "value_only_recall": 0.7142857142857143
     }
    },
    "vector": {
@@ -1114,12 +1114,12 @@
      "text": "ran: pdf_text_layer"
     },
     "text": {
-     "f1": 0.8571428571428571,
-     "n_pred": 18,
-     "n_true": 17,
-     "precision": 0.8333333333333334,
-     "recall": 0.8823529411764706,
-     "value_only_recall": 0.8823529411764706
+     "f1": 0.8444444444444444,
+     "n_pred": 24,
+     "n_true": 21,
+     "precision": 0.7916666666666666,
+     "recall": 0.9047619047619048,
+     "value_only_recall": 0.9047619047619048
     }
    }
   }

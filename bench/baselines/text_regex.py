@@ -20,6 +20,8 @@ PATTERNS = [
     (re.compile(NUM + r"\s?kJ\s?/\s?mol"), "kJ/mol"),
     (re.compile(r"(?<![k\w])" + NUM + r"\s?J\s?/\s?mol(?!\w)"), "J/mol"),
     (re.compile(NUM + r"\s?atm\b"), "atm"),
+    (re.compile(NUM + r"\s?cal\s?/\s?mol"), "cal/mol"),
+    (re.compile(NUM + r"\s?J\s?/\s?\(mol\s?K\)"), "J/(mol K)"),
 ]
 
 

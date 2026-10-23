@@ -16,7 +16,7 @@
     "task": "phase_diagram"
    },
    {
-    "count": 3,
+    "count": 4,
     "outcome": "automatic (ticks + printed labels)",
     "rendering": "degraded_raster",
     "stage": "calibration",
@@ -30,14 +30,14 @@
     "task": "phase_diagram"
    },
    {
-    "count": 15,
+    "count": 14,
     "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too",
     "rendering": "degraded_raster",
     "stage": "calibration",
     "task": "phase_diagram"
    },
    {
-    "count": 3,
+    "count": 4,
     "outcome": "automatic (ticks + printed labels)",
     "rendering": "image_only_pdf",
     "stage": "calibration",
@@ -51,7 +51,7 @@
     "task": "phase_diagram"
    },
    {
-    "count": 15,
+    "count": 14,
     "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too",
     "rendering": "image_only_pdf",
     "stage": "calibration",
@@ -88,6 +88,13 @@
     "task": "xy"
    },
    {
+    "count": 5,
+    "outcome": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are ",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "xy"
+   },
+   {
     "count": 2,
     "outcome": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are ",
     "rendering": "vector",
@@ -95,7 +102,7 @@
     "task": "xy"
    },
    {
-    "count": 30,
+    "count": 50,
     "outcome": "ok",
     "rendering": "vector",
     "stage": "calibration",
@@ -109,7 +116,7 @@
     "task": "xy"
    },
    {
-    "count": 14,
+    "count": 34,
     "outcome": "ok (1 legend entries)",
     "rendering": "vector",
     "stage": "manifest",
@@ -130,7 +137,7 @@
     "task": "xy"
    },
    {
-    "count": 21,
+    "count": 41,
     "outcome": "ok",
     "rendering": "vector",
     "stage": "vector_markers",
@@ -151,13 +158,13 @@
      "not_run": "not run: no text layer; OCR table route needs OpenCV"
     },
     "vector": {
-     "cell_exact": 0.36595174262734587,
-     "cell_exact_normalised": 0.36595174262734587,
-     "cells": 746,
-     "numeric_exact": 0.40431266846361186,
+     "cell_exact": 0.7587591240875913,
+     "cell_exact_normalised": 0.7587591240875913,
+     "cells": 2740,
+     "numeric_exact": 0.8847352024922118,
      "numeric_rel_err_median": 0.0,
-     "tables_pred": 70,
-     "tables_true": 40
+     "tables_pred": 149,
+     "tables_true": 81
     }
    },
    "extractor": "tables_pdfplumber",
@@ -177,15 +184,15 @@
     "vector": {
      "marker_points": 371,
      "marker_recall@0.01": 0.5876010781671159,
-     "panels_found": 30,
-     "panels_true": 48,
-     "point_err_mean": 0.009214985653859887,
-     "point_err_median": 1.3459685417616972e-07,
-     "point_recall@0.01": 0.7848309975267931,
-     "points": 3639,
-     "series_precision": 0.44666666666666666,
-     "series_pred": 150,
-     "series_recall": 0.631578947368421
+     "panels_found": 50,
+     "panels_true": 73,
+     "point_err_mean": 0.002550927604421489,
+     "point_err_median": 1.368730490298607e-07,
+     "point_recall@0.01": 0.7733979299713719,
+     "points": 13623,
+     "series_precision": 0.4690265486725664,
+     "series_pred": 339,
+     "series_recall": 0.7172774869109948
     }
    },
    "extractor": "vector_route",
@@ -205,15 +212,15 @@
     "vector": {
      "marker_points": 371,
      "marker_recall@0.01": 0.738544474393531,
-     "panels_found": 21,
-     "panels_true": 48,
-     "point_err_mean": 0.005704812966407126,
-     "point_err_median": 6.684512310508333e-07,
-     "point_recall@0.01": 0.07529541082715031,
-     "points": 3639,
-     "series_precision": 1.0,
-     "series_pred": 18,
-     "series_recall": 0.17894736842105263
+     "panels_found": 41,
+     "panels_true": 73,
+     "point_err_mean": 0.498929840430182,
+     "point_err_median": 0.520589789399372,
+     "point_recall@0.01": 0.0205534757395581,
+     "points": 13623,
+     "series_precision": 0.5263157894736842,
+     "series_pred": 38,
+     "series_recall": 0.09947643979057591
     }
    },
    "extractor": "vector_markers_tool",
@@ -231,21 +238,21 @@
      "not_run": "not run: the vector route needs PDF vector objects (see assessed_pd for rasters)"
     },
     "vector": {
-     "boundary_hausdorff95": 0.09986659355999514,
-     "boundary_mean_dist": 0.009638337142433269,
-     "boundary_median_dT_K": 0.2957116456041283,
-     "boundary_median_dx": 7.171793364065069e-05,
-     "boundary_precision@0.01": 0.881495560364376,
+     "boundary_hausdorff95": 0.09914371884909813,
+     "boundary_mean_dist": 0.009539555918722086,
+     "boundary_median_dT_K": 0.2957155104204561,
+     "boundary_median_dx": 7.173183380337032e-05,
+     "boundary_precision@0.01": 0.8838889436720507,
      "boundary_recall@0.01": 0.8856183229706277,
      "diagrams": 20,
      "diagrams_with_output": 20,
      "field_precision": 0.75,
      "field_pred": 32,
-     "field_recall": 0.1340782122905028,
-     "field_true_scorable": 179,
-     "invariant_T_err_K": 0.7219211678910472,
-     "invariant_precision": 0.44776119402985076,
-     "invariant_recall": 0.5882352941176471,
+     "field_recall": 0.147239263803681,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 0.7551983249269338,
+     "invariant_precision": 0.4626865671641791,
+     "invariant_recall": 0.6078431372549019,
      "invariant_type_accuracy": 0.0,
      "invariant_x_err": null
     }
@@ -256,79 +263,79 @@
   {
    "by_rendering": {
     "clean_raster": {
-     "boundary_hausdorff95": 0.3222940787226573,
-     "boundary_mean_dist": 0.025876339755809167,
-     "boundary_median_dT_K": 6.9350023923444635,
-     "boundary_median_dx": 0.011182971445350723,
-     "boundary_precision@0.01": 0.8755191943593562,
-     "boundary_recall@0.01": 0.5181542774600771,
+     "boundary_hausdorff95": 0.3245475831041553,
+     "boundary_mean_dist": 0.021970863996231948,
+     "boundary_median_dT_K": 7.323181704260632,
+     "boundary_median_dx": 0.010825445911576463,
+     "boundary_precision@0.01": 0.8623517103030834,
+     "boundary_recall@0.01": 0.5409636570573655,
      "diagrams": 20,
      "diagrams_with_output": 20,
-     "field_precision": 0.6739130434782609,
-     "field_pred": 46,
-     "field_recall": 0.1564245810055866,
-     "field_true_scorable": 179,
-     "invariant_T_err_K": 1.376249999999971,
-     "invariant_precision": 0.32710280373831774,
-     "invariant_recall": 0.6862745098039216,
+     "field_precision": 0.5471698113207547,
+     "field_pred": 53,
+     "field_recall": 0.1656441717791411,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 1.4456444444444052,
+     "invariant_precision": 0.33636363636363636,
+     "invariant_recall": 0.7254901960784313,
      "invariant_type_accuracy": 0.0,
      "invariant_x_err": null
     },
     "degraded_raster": {
-     "boundary_hausdorff95": 0.2992931326972899,
-     "boundary_mean_dist": 0.039976661423620184,
-     "boundary_median_dT_K": 7.08401250000001,
-     "boundary_median_dx": 0.011027237358709975,
-     "boundary_precision@0.01": 0.7631459712657513,
-     "boundary_recall@0.01": 0.7130032820620705,
+     "boundary_hausdorff95": 0.22941510677587312,
+     "boundary_mean_dist": 0.02524289428799948,
+     "boundary_median_dT_K": 4.155791883116877,
+     "boundary_median_dx": 0.0020399063619797484,
+     "boundary_precision@0.01": 0.8243958625369313,
+     "boundary_recall@0.01": 0.7530025406771239,
      "diagrams": 20,
      "diagrams_with_output": 20,
-     "field_precision": 0.5,
-     "field_pred": 30,
-     "field_recall": 0.0782122905027933,
-     "field_true_scorable": 179,
-     "invariant_T_err_K": 2.701784313725514,
-     "invariant_precision": 0.21025641025641026,
-     "invariant_recall": 0.803921568627451,
+     "field_precision": 0.36363636363636365,
+     "field_pred": 33,
+     "field_recall": 0.06748466257668712,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 2.8353859649122617,
+     "invariant_precision": 0.2186046511627907,
+     "invariant_recall": 0.9215686274509803,
      "invariant_type_accuracy": 0.0,
      "invariant_x_err": null
     },
     "image_only_pdf": {
-     "boundary_hausdorff95": 0.2992931326972899,
-     "boundary_mean_dist": 0.039976661423620184,
-     "boundary_median_dT_K": 7.08401250000001,
-     "boundary_median_dx": 0.011027237358709975,
-     "boundary_precision@0.01": 0.7631459712657513,
-     "boundary_recall@0.01": 0.7130032820620705,
+     "boundary_hausdorff95": 0.22941510677587312,
+     "boundary_mean_dist": 0.02524289428799948,
+     "boundary_median_dT_K": 4.155791883116877,
+     "boundary_median_dx": 0.0020399063619797484,
+     "boundary_precision@0.01": 0.8243958625369313,
+     "boundary_recall@0.01": 0.7530025406771239,
      "diagrams": 20,
      "diagrams_with_output": 20,
-     "field_precision": 0.5,
-     "field_pred": 30,
-     "field_recall": 0.0782122905027933,
-     "field_true_scorable": 179,
-     "invariant_T_err_K": 2.701784313725514,
-     "invariant_precision": 0.21025641025641026,
-     "invariant_recall": 0.803921568627451,
+     "field_precision": 0.36363636363636365,
+     "field_pred": 33,
+     "field_recall": 0.06748466257668712,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 2.8353859649122617,
+     "invariant_precision": 0.2186046511627907,
+     "invariant_recall": 0.9215686274509803,
      "invariant_type_accuracy": 0.0,
      "invariant_x_err": null
     },
     "vector": {
-     "boundary_hausdorff95": 0.2628813280541282,
-     "boundary_mean_dist": 0.02130438376872883,
-     "boundary_median_dT_K": 6.895520050125314,
-     "boundary_median_dx": 0.010835085801220523,
-     "boundary_precision@0.01": 0.871575217756025,
-     "boundary_recall@0.01": 0.5686060588498613,
+     "boundary_hausdorff95": 0.26533223475191253,
+     "boundary_mean_dist": 0.021430827216325415,
+     "boundary_median_dT_K": 7.071160401002529,
+     "boundary_median_dx": 0.010772780633847514,
+     "boundary_precision@0.01": 0.8587157643322684,
+     "boundary_recall@0.01": 0.5765442148067438,
      "diagrams": 20,
      "diagrams_with_output": 20,
-     "field_precision": 0.8135593220338984,
-     "field_pred": 59,
-     "field_recall": 0.24581005586592178,
-     "field_true_scorable": 179,
-     "invariant_T_err_K": 0.546766666666656,
-     "invariant_precision": 0.3185840707964602,
-     "invariant_recall": 0.7058823529411765,
-     "invariant_type_accuracy": 0.12000000000000001,
+     "field_precision": 0.7377049180327869,
+     "field_pred": 61,
+     "field_recall": 0.25766871165644173,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 0.6889479166666539,
+     "invariant_precision": 0.33043478260869563,
+     "invariant_recall": 0.7450980392156863,
+     "invariant_type_accuracy": 0.1125,
      "invariant_x_err": null
     }
    },
@@ -338,36 +345,156 @@
   {
    "by_rendering": {
     "clean_raster": {
-     "precision": 0.9026315789473685,
-     "recall": 0.849009900990099,
-     "value_only_recall": 0.8620660072624082,
-     "values_pred": 380,
-     "values_true": 404
+     "precision": 0.7986577181208053,
+     "recall": 0.8623188405797102,
+     "value_only_recall": 0.8719545823167685,
+     "values_pred": 596,
+     "values_true": 552
     },
     "degraded_raster": {
-     "precision": 0.9079754601226994,
-     "recall": 0.7326732673267327,
-     "value_only_recall": 0.7515596856425031,
-     "values_pred": 326,
-     "values_true": 404
+     "precision": 0.8127490039840638,
+     "recall": 0.7391304347826086,
+     "value_only_recall": 0.7577943376108129,
+     "values_pred": 502,
+     "values_true": 552
     },
     "image_only_pdf": {
-     "precision": 0.9079754601226994,
-     "recall": 0.7326732673267327,
-     "value_only_recall": 0.7515596856425031,
-     "values_pred": 326,
-     "values_true": 404
+     "precision": 0.8127490039840638,
+     "recall": 0.7391304347826086,
+     "value_only_recall": 0.7577943376108129,
+     "values_pred": 502,
+     "values_true": 552
     },
     "vector": {
-     "precision": 0.927360774818402,
-     "recall": 0.948019801980198,
-     "value_only_recall": 0.946584975589426,
-     "values_pred": 413,
-     "values_true": 404
+     "precision": 0.8470031545741324,
+     "recall": 0.9728260869565217,
+     "value_only_recall": 0.9734340687999363,
+     "values_pred": 634,
+     "values_true": 552
     }
    },
    "extractor": "text_regex",
    "task": "text"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
+    },
+    "degraded_raster": {
+     "not_run": "not run: as clean raster"
+    },
+    "image_only_pdf": {
+     "not_run": "not run: no text layer; OCR table route needs OpenCV"
+    },
+    "vector": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "cell_exact": 0.6651376146788991,
+     "cell_exact_normalised": 0.6651376146788991,
+     "cells": 654,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "numeric_exact": 0.8729096989966555,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": 0.9767441860465116,
+     "row_recall": 0.5915492957746479,
+     "rows_pred": 43,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 1.0,
+     "x_recall": 1.0
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
+    },
+    "degraded_raster": {
+     "not_run": "not run: as clean raster"
+    },
+    "image_only_pdf": {
+     "not_run": "not run: no text layer; OCR table route needs OpenCV"
+    },
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": 0.0,
+     "cell_exact": 0.6105263157894737,
+     "cell_exact_normalised": 0.6105263157894737,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.5643939393939394,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.9642857142857143,
+     "prototype_accuracy": 0.8928571428571429,
+     "row_precision": 1.0,
+     "row_recall": 0.8484848484848485,
+     "rows_pred": 56,
+     "rows_true": 66,
+     "structure_accuracy": 0.9285714285714286,
+     "strukturbericht_accuracy": 0.9285714285714286
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "not_run": "not run: raster curve route needs OpenCV"
+    },
+    "degraded_raster": {
+     "not_run": "not run: as clean raster"
+    },
+    "image_only_pdf": {
+     "not_run": "not run: vector route needs PDF vector objects"
+    },
+    "vector": {
+     "phase_fraction_panels": 25,
+     "phase_fraction_panels_found": 20,
+     "phase_fraction_point_err_median": 1.5879112039241194e-07,
+     "phase_fraction_point_recall@0.01": 0.7692307692307693
+    }
+   },
+   "extractor": "vector_route",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
+    },
+    "degraded_raster": {
+     "not_run": "not run: as clean raster"
+    },
+    "image_only_pdf": {
+     "not_run": "not run: no text layer; OCR table route needs OpenCV"
+    },
+    "vector": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.8909229595728452,
+     "cell_exact_normalised": 0.8909229595728452,
+     "cells": 1311,
+     "numeric_exact": 0.9689320388349515,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 0.7514285714285714,
+     "record_recall": 0.653416149068323,
+     "records_pred": 700,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 0.9372623574144486,
+     "value_exact": 0.8422053231939164,
+     "within_1pct": 0.8422053231939164
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "task": "thermo_tables"
   }
  ]
 }
