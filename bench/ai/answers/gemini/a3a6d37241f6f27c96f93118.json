@@ -1,0 +1,76 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "a3a6d37241f6f27c96f93118",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Cu",
+   "Zn"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu)",
+    "temperature": 467,
+    "temperature_unit": "C",
+    "temperature_printed": "467",
+    "temperature_role": "equilibration",
+    "temperature_basis": "column_header",
+    "calculation_settings": {
+     "temperature_treatment": "static"
+    }
+   },
+   {
+    "phase_compositions": [
+     {
+      "phase": "(Cu)",
+      "element": "Zn",
+      "value": 0.0,
+      "value_max": 0.386,
+      "printed": "0.000-0.386",
+      "phase_source": "row_label"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "stability range from",
+      "quantity_kind": "other",
+      "value": 27,
+      "bound": "<",
+      "printed": "< 27*",
+      "expression_range": {
+       "unit": "C"
+      },
+      "volume_state": "other"
+     },
+     {
+      "quantity": "stability range to",
+      "quantity_kind": "other",
+      "value": 1084.6,
+      "printed": "1084.6",
+      "expression_range": {
+       "unit": "C"
+      },
+      "volume_state": "other"
+     }
+    ],
+    "structure": {
+     "phase": "(Cu)",
+     "pearson_symbol": "cF4",
+     "strukturbericht": "A1",
+     "designation": "(Cu)",
+     "sites": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3333,
+  "cached_content_token_count": null,
+  "candidates_token_count": 282,
+  "thoughts_token_count": 3647,
+  "total_token_count": 7262
+ },
+ "seconds": 26.8
+}

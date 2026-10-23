@@ -1,0 +1,47 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "feba895c0ca804a8e4b9d8bb",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [
+     {
+      "value": 1450,
+      "unit": "K",
+      "printed": "1450 K"
+     }
+    ],
+    "calculation_settings": {
+     "code": "",
+     "functional": "",
+     "pseudopotential": "",
+     "cutoff": "",
+     "k_points": "",
+     "k_points_phonon": "",
+     "supercell": "",
+     "relaxation": "",
+     "temperature_treatment": "",
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3336,
+  "cached_content_token_count": null,
+  "candidates_token_count": 161,
+  "thoughts_token_count": 1531,
+  "total_token_count": 5028
+ },
+ "seconds": 13.4
+}

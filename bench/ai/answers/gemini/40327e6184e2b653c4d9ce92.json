@@ -1,0 +1,179 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "40327e6184e2b653c4d9ce92",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 647,
+    "temperature_unit": "C",
+    "temperature_printed": "647",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "(Al)"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "(Al)",
+      "element": "Ni",
+      "value": 0.0
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni",
+    "temperature": 77,
+    "temperature_unit": "C",
+    "temperature_printed": "77",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "Al3Ni"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni",
+      "element": "Ni",
+      "value": 0.25
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni2",
+    "temperature": 857,
+    "temperature_unit": "C",
+    "temperature_printed": "857",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "Al3Ni2"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni2",
+      "element": "Ni",
+      "value": 0.355
+     },
+     {
+      "phase": "Al3Ni2",
+      "element": "Ni",
+      "value": 0.413
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "NiAl",
+    "temperature": 1367,
+    "temperature_unit": "C",
+    "temperature_printed": "1367",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "NiAl"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "NiAl",
+      "element": "Ni",
+      "value": 0.456
+     },
+     {
+      "phase": "NiAl",
+      "element": "Ni",
+      "value": 0.711
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Al3Ni5",
+    "temperature": 27,
+    "temperature_unit": "C",
+    "temperature_printed": "27",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "Al3Ni5"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "Al3Ni5",
+      "element": "Ni",
+      "value": 0.625
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "Ni3Al",
+    "temperature": 1047,
+    "temperature_unit": "C",
+    "temperature_printed": "1047",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "Ni3Al"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 0.724
+     },
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 0.771
+     }
+    ],
+    "source": "this_work"
+   },
+   {
+    "row_label": "(Ni)",
+    "temperature": 1367,
+    "temperature_unit": "C",
+    "temperature_printed": "1367",
+    "temperature_role": "equilibration",
+    "phases_present": [
+     "(Ni)"
+    ],
+    "phase_compositions": [
+     {
+      "phase": "(Ni)",
+      "element": "Ni",
+      "value": 0.784
+     },
+     {
+      "phase": "(Ni)",
+      "element": "Ni",
+      "value": 1.0
+     }
+    ],
+    "source": "this_work"
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "Stability range / °C",
+    "unit": "°C"
+   },
+   {
+    "column_header": "at T / °C",
+    "unit": "°C"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2276,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1167,
+  "thoughts_token_count": 19178,
+  "total_token_count": 22621
+ },
+ "seconds": 142.9
+}

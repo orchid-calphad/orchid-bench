@@ -1,0 +1,4291 @@
+{
+ "aggregate": {
+  "clean_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.3246877533914226,
+    "boundary_mean_dist": 0.0223023847979423,
+    "boundary_median_dT_K": 7.621666666666661,
+    "boundary_median_dx": 0.010867554525077516,
+    "boundary_precision@0.01": 0.8558083437212879,
+    "boundary_recall@0.01": 0.5407916676808658,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.5384615384615384,
+    "field_pred": 52,
+    "field_recall": 0.1656441717791411,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 1.682799999999966,
+    "invariant_precision": 0.3394495412844037,
+    "invariant_recall": 0.7254901960784313,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "degraded_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.2222839583303144,
+    "boundary_mean_dist": 0.025312093522263806,
+    "boundary_median_dT_K": 4.380498313492079,
+    "boundary_median_dx": 0.002157056087467464,
+    "boundary_precision@0.01": 0.8078459141062628,
+    "boundary_recall@0.01": 0.7362039845129967,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.41379310344827586,
+    "field_pred": 29,
+    "field_recall": 0.06748466257668712,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 3.3338245614034974,
+    "invariant_precision": 0.22488038277511962,
+    "invariant_recall": 0.9215686274509803,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "image_only_pdf": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.2222839583303144,
+    "boundary_mean_dist": 0.025312093522263806,
+    "boundary_median_dT_K": 4.380498313492079,
+    "boundary_median_dx": 0.002157056087467464,
+    "boundary_precision@0.01": 0.8078459141062628,
+    "boundary_recall@0.01": 0.7362039845129967,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.41379310344827586,
+    "field_pred": 29,
+    "field_recall": 0.06748466257668712,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 3.3338245614034974,
+    "invariant_precision": 0.22488038277511962,
+    "invariant_recall": 0.9215686274509803,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "vector": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.265300501134107,
+    "boundary_mean_dist": 0.021549726847569253,
+    "boundary_median_dT_K": 7.070126794258394,
+    "boundary_median_dx": 0.010720622878532041,
+    "boundary_precision@0.01": 0.8516383211654602,
+    "boundary_recall@0.01": 0.5791174747137904,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.7377049180327869,
+    "field_pred": 61,
+    "field_recall": 0.25766871165644173,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 0.6413229166666568,
+    "invariant_precision": 0.33043478260869563,
+    "invariant_recall": 0.7450980392156863,
+    "invariant_type_accuracy": 0.1125,
+    "invariant_x_err": null
+   }
+  }
+ },
+ "extractor": "assessed_pd_auto",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5003986182614747,
+      "mean_pred_to_true": 0.001164605024004589,
+      "mean_true_to_pred": 0.09161008707965641,
+      "median_abs_dT_K": 1.3099999999999223,
+      "median_abs_dx": 0.0005380740740740242,
+      "precision@0.01": 1.0,
+      "pred_points": 1788,
+      "recall@0.01": 0.5581999134573777,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.3099999999999454,
+       "median": 1.3099999999999454,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 5, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "5 traced, 0 named",
+      "labels": "19 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.34903296482801693,
+      "mean_pred_to_true": 0.045667001636151,
+      "mean_true_to_pred": 0.006726142607225,
+      "median_abs_dT_K": 3.350000000000064,
+      "median_abs_dx": 0.007015000000000011,
+      "precision@0.01": 0.6144018583042973,
+      "pred_points": 3444,
+      "recall@0.01": 0.7793163132842925,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.32999999999992724,
+       "median": 0.32999999999992724,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "27 traced, 0 named",
+      "labels": "26 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.34903296482801693,
+      "mean_pred_to_true": 0.045667001636151,
+      "mean_true_to_pred": 0.006726142607225,
+      "median_abs_dT_K": 3.350000000000064,
+      "median_abs_dx": 0.007015000000000011,
+      "precision@0.01": 0.6144018583042973,
+      "pred_points": 3444,
+      "recall@0.01": 0.7793163132842925,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.32999999999992724,
+       "median": 0.32999999999992724,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "27 traced, 0 named",
+      "labels": "26 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2576295526666752,
+      "mean_pred_to_true": 0.0005575357145740844,
+      "mean_true_to_pred": 0.04090861278790165,
+      "median_abs_dT_K": 0.025000000000030553,
+      "median_abs_dx": 0.0004734567901235609,
+      "precision@0.01": 1.0,
+      "pred_points": 1857,
+      "recall@0.01": 0.6477715274772826,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.01999999999998181,
+       "median": 0.01999999999998181,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "6 traced, 0 named",
+      "labels": "13 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.29164103000540903,
+      "mean_pred_to_true": 0.0010152015859779802,
+      "mean_true_to_pred": 0.08534476660265258,
+      "median_abs_dT_K": 1.6900000000000692,
+      "median_abs_dx": 0.0005300000000000027,
+      "precision@0.01": 1.0,
+      "pred_points": 2694,
+      "recall@0.01": 0.482020202020202,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.5454545454545454,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.375
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.119999999999891,
+       "median": 2.119999999999891,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 1, y pairs 0); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "4 traced, 3 named",
+      "labels": "15 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2919568599649208,
+      "mean_pred_to_true": 0.0014463350007161875,
+      "mean_true_to_pred": 0.0872737733298961,
+      "median_abs_dT_K": 2.939999999999948,
+      "median_abs_dx": 0.0005243487394958057,
+      "precision@0.01": 1.0,
+      "pred_points": 1303,
+      "recall@0.01": 0.4585858585858586,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.8599999999999,
+       "median": 1.8599999999999,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 3,
+      "n_true": 2,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "3 traced, 2 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2919568599649208,
+      "mean_pred_to_true": 0.0014463350007161875,
+      "mean_true_to_pred": 0.0872737733298961,
+      "median_abs_dT_K": 2.939999999999948,
+      "median_abs_dx": 0.0005243487394958057,
+      "precision@0.01": 1.0,
+      "pred_points": 1303,
+      "recall@0.01": 0.4585858585858586,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.8599999999999,
+       "median": 1.8599999999999,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 3,
+      "n_true": 2,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "3 traced, 2 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.29164103000540903,
+      "mean_pred_to_true": 0.0010152015859779802,
+      "mean_true_to_pred": 0.08534476660265258,
+      "median_abs_dT_K": 1.6900000000000692,
+      "median_abs_dx": 0.0005300000000000027,
+      "precision@0.01": 1.0,
+      "pred_points": 2694,
+      "recall@0.01": 0.482020202020202,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.5,
+      "loose_precision": 0.75,
+      "n_pred": 4,
+      "n_true": 8,
+      "precision": 0.75,
+      "recall": 0.375
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.119999999999891,
+       "median": 2.119999999999891,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 0, y pairs 0); no detector calibration -> truth axes (oracle)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "4 traced, 4 named",
+      "labels": "30 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.9
+     }
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5554527197688953,
+      "mean_pred_to_true": 0.01236565191987271,
+      "mean_true_to_pred": 0.3362516067808293,
+      "median_abs_dT_K": 11.339999999999975,
+      "median_abs_dx": 0.007410000000000028,
+      "precision@0.01": 0.21739130434782608,
+      "pred_points": 23,
+      "recall@0.01": 0.0053608247422680414,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 3,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "10 traced, 0 named",
+      "labels": "31 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.04632569860747876,
+      "mean_pred_to_true": 0.0009335580170121552,
+      "mean_true_to_pred": 0.00704553055488823,
+      "median_abs_dT_K": 0.7999999999999785,
+      "median_abs_dx": 0.0005399999999999849,
+      "precision@0.01": 1.0,
+      "pred_points": 2090,
+      "recall@0.01": 0.8367010309278351,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.9966666666666887,
+       "median": 0.9900000000000091,
+       "n": 3
+      },
+      "f1": 0.4,
+      "n_pred": 12,
+      "n_true": 3,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "9 traced, 0 named",
+      "labels": "28 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.04632569860747876,
+      "mean_pred_to_true": 0.0009335580170121552,
+      "mean_true_to_pred": 0.00704553055488823,
+      "median_abs_dT_K": 0.7999999999999785,
+      "median_abs_dx": 0.0005399999999999849,
+      "precision@0.01": 1.0,
+      "pred_points": 2090,
+      "recall@0.01": 0.8367010309278351,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.9966666666666887,
+       "median": 0.9900000000000091,
+       "n": 3
+      },
+      "f1": 0.4,
+      "n_pred": 12,
+      "n_true": 3,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "9 traced, 0 named",
+      "labels": "28 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5549920372061047,
+      "mean_pred_to_true": 0.011408311023818687,
+      "mean_true_to_pred": 0.3360156292366132,
+      "median_abs_dT_K": 10.930000000000062,
+      "median_abs_dx": 0.0065150000000000485,
+      "precision@0.01": 0.2608695652173913,
+      "pred_points": 23,
+      "recall@0.01": 0.006185567010309278,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 3,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "12 traced, 0 named",
+      "labels": "27 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.014412329884736563,
+      "mean_pred_to_true": 0.0007288275222005023,
+      "mean_true_to_pred": 0.002336486772068326,
+      "median_abs_dT_K": 0.450000000000067,
+      "median_abs_dx": 0.00043035799522673016,
+      "precision@0.01": 1.0,
+      "pred_points": 3281,
+      "recall@0.01": 0.9340890008396305,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.5799999999999841,
+       "median": 0.5799999999999841,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 6, y pairs 1); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "4 traced, 0 named",
+      "labels": "27 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.21371019879012845,
+      "mean_pred_to_true": 0.04373299337554691,
+      "mean_true_to_pred": 0.004704129605654862,
+      "median_abs_dT_K": 5.484999999999953,
+      "median_abs_dx": 0.0008583479608381614,
+      "precision@0.01": 0.6916398713826366,
+      "pred_points": 3110,
+      "recall@0.01": 0.9399664147774979,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.5699999999999932,
+       "median": 1.5699999999999932,
+       "n": 2
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 12,
+      "n_true": 2,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "14 traced, 1 named",
+      "labels": "30 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.21371019879012845,
+      "mean_pred_to_true": 0.04373299337554691,
+      "mean_true_to_pred": 0.004704129605654862,
+      "median_abs_dT_K": 5.484999999999953,
+      "median_abs_dx": 0.0008583479608381614,
+      "precision@0.01": 0.6916398713826366,
+      "pred_points": 3110,
+      "recall@0.01": 0.9399664147774979,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.5699999999999932,
+       "median": 1.5699999999999932,
+       "n": 2
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 12,
+      "n_true": 2,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "14 traced, 1 named",
+      "labels": "30 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.13608956597803162,
+      "mean_pred_to_true": 0.0005760518248884251,
+      "mean_true_to_pred": 0.016229813465796945,
+      "median_abs_dT_K": 0.140000000000029,
+      "median_abs_dx": 0.0004574999999999996,
+      "precision@0.01": 1.0,
+      "pred_points": 3123,
+      "recall@0.01": 0.8375314861460957,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.12999999999999545,
+       "median": 0.12999999999999545,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "3 traced, 0 named",
+      "labels": "15 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.01107826487254087,
+      "mean_pred_to_true": 0.001053752560486375,
+      "mean_true_to_pred": 0.002672365507109436,
+      "median_abs_dT_K": 0.7000000000000561,
+      "median_abs_dx": 0.0006000000000000449,
+      "precision@0.01": 0.9924756565358512,
+      "pred_points": 6778,
+      "recall@0.01": 0.9403553299492385,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.6111111111111112,
+      "loose_precision": 0.6111111111111112,
+      "n_pred": 18,
+      "n_true": 18,
+      "precision": 0.6111111111111112,
+      "recall": 0.6111111111111112
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.15,
+       "median": 1.2300000000000182,
+       "n": 5
+      },
+      "f1": 0.5882352941176471,
+      "n_pred": 11,
+      "n_true": 6,
+      "precision": 0.45454545454545453,
+      "recall": 0.8333333333333334,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "22 traced, 18 named",
+      "labels": "36 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.05046915264315564,
+      "mean_pred_to_true": 0.010773088455286453,
+      "mean_true_to_pred": 0.0034008718324063407,
+      "median_abs_dT_K": 0.9000000000000341,
+      "median_abs_dx": 0.0016487500000000113,
+      "precision@0.01": 0.9053537284894837,
+      "pred_points": 4184,
+      "recall@0.01": 0.9406091370558376,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 18,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.009999999999968,
+       "median": 2.519999999999982,
+       "n": 5
+      },
+      "f1": 0.625,
+      "n_pred": 10,
+      "n_true": 6,
+      "precision": 0.5,
+      "recall": 0.8333333333333334,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "29 traced, 0 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.05046915264315564,
+      "mean_pred_to_true": 0.010773088455286453,
+      "mean_true_to_pred": 0.0034008718324063407,
+      "median_abs_dT_K": 0.9000000000000341,
+      "median_abs_dx": 0.0016487500000000113,
+      "precision@0.01": 0.9053537284894837,
+      "pred_points": 4184,
+      "recall@0.01": 0.9406091370558376,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 18,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.009999999999968,
+       "median": 2.519999999999982,
+       "n": 5
+      },
+      "f1": 0.625,
+      "n_pred": 10,
+      "n_true": 6,
+      "precision": 0.5,
+      "recall": 0.8333333333333334,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "29 traced, 0 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.01063489784258628,
+      "mean_pred_to_true": 0.0008128159693445664,
+      "mean_true_to_pred": 0.0024027070886563765,
+      "median_abs_dT_K": 0.6299999999999972,
+      "median_abs_dx": 0.00026250000000005436,
+      "precision@0.01": 0.9917477158856469,
+      "pred_points": 6786,
+      "recall@0.01": 0.9439086294416243,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.9473684210526316,
+      "loose_precision": 0.9,
+      "n_pred": 20,
+      "n_true": 18,
+      "precision": 0.9,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.695999999999958,
+       "median": 1.0399999999999636,
+       "n": 5
+      },
+      "f1": 0.5882352941176471,
+      "n_pred": 11,
+      "n_true": 6,
+      "precision": 0.45454545454545453,
+      "recall": 0.8333333333333334,
+      "type_accuracy": 0.8,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "23 traced, 20 named",
+      "labels": "24 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 1.0
+     }
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5135218932327308,
+      "mean_pred_to_true": 0.0020682921787024727,
+      "mean_true_to_pred": 0.09538531107010577,
+      "median_abs_dT_K": 0.2800000000000025,
+      "median_abs_dx": 0.0005479999999999929,
+      "precision@0.01": 0.9472063352397713,
+      "pred_points": 2273,
+      "recall@0.01": 0.5086775849425569,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 11,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.699999999999932,
+       "median": 6.699999999999932,
+       "n": 2
+      },
+      "f1": 0.3636363636363636,
+      "n_pred": 6,
+      "n_true": 5,
+      "precision": 0.3333333333333333,
+      "recall": 0.4,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "11 traced, 0 named",
+      "labels": "53 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.18243963989393344,
+      "mean_pred_to_true": 0.022937611218457846,
+      "mean_true_to_pred": 0.029470624804657685,
+      "median_abs_dT_K": 1.5707142857143075,
+      "median_abs_dx": 0.004381166666666667,
+      "precision@0.01": 0.8452157598499062,
+      "pred_points": 2132,
+      "recall@0.01": 0.6885846981178196,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.14285714285714288,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 11,
+      "precision": 0.3333333333333333,
+      "recall": 0.09090909090909091
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.981999999999948,
+       "median": 4.559999999999945,
+       "n": 5
+      },
+      "f1": 0.7692307692307693,
+      "n_pred": 8,
+      "n_true": 5,
+      "precision": 0.625,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "22 traced, 3 named",
+      "labels": "26 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.4
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.18243963989393344,
+      "mean_pred_to_true": 0.022937611218457846,
+      "mean_true_to_pred": 0.029470624804657685,
+      "median_abs_dT_K": 1.5707142857143075,
+      "median_abs_dx": 0.004381166666666667,
+      "precision@0.01": 0.8452157598499062,
+      "pred_points": 2132,
+      "recall@0.01": 0.6885846981178196,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.14285714285714288,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 11,
+      "precision": 0.3333333333333333,
+      "recall": 0.09090909090909091
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.981999999999948,
+       "median": 4.559999999999945,
+       "n": 5
+      },
+      "f1": 0.7692307692307693,
+      "n_pred": 8,
+      "n_true": 5,
+      "precision": 0.625,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "22 traced, 3 named",
+      "labels": "26 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.09459605054944797,
+      "mean_pred_to_true": 0.00516193340328423,
+      "mean_true_to_pred": 0.015359804675038665,
+      "median_abs_dT_K": 0.29000000000006804,
+      "median_abs_dx": 0.0005070000000000074,
+      "precision@0.01": 0.7834668751221419,
+      "pred_points": 5117,
+      "recall@0.01": 0.7636274749450013,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 3,
+      "n_true": 11,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.31749999999996703,
+       "median": 0.33499999999997954,
+       "n": 4
+      },
+      "f1": 0.5000000000000001,
+      "n_pred": 11,
+      "n_true": 5,
+      "precision": 0.36363636363636365,
+      "recall": 0.8,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "22 traced, 4 named",
+      "labels": "45 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.15476667621981555,
+      "mean_pred_to_true": 0.0010583894019406028,
+      "mean_true_to_pred": 0.027265425251092105,
+      "median_abs_dT_K": 0.6900000000000628,
+      "median_abs_dx": 0.0004274193548387262,
+      "precision@0.01": 0.9807995791688585,
+      "pred_points": 3802,
+      "recall@0.01": 0.7590293453724605,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.1739130434782609,
+      "loose_precision": 0.4,
+      "n_pred": 5,
+      "n_true": 9,
+      "precision": 0.4,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.4749999999999659,
+       "median": 0.5,
+       "n": 4
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 8,
+      "n_true": 4,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "23 traced, 5 named",
+      "labels": "40 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5857921109244035,
+      "mean_pred_to_true": 0.0028596515198978886,
+      "mean_true_to_pred": 0.19028753328351772,
+      "median_abs_dT_K": 4.410000000000008,
+      "median_abs_dx": 0.00092680412371135,
+      "precision@0.01": 1.0,
+      "pred_points": 546,
+      "recall@0.01": 0.28978555304740405,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 5.30000000000003,
+       "median": 5.269999999999982,
+       "n": 3
+      },
+      "f1": 0.5454545454545454,
+      "n_pred": 7,
+      "n_true": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 4, y pairs 1); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "8 traced, 2 named",
+      "labels": "19 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5857921109244035,
+      "mean_pred_to_true": 0.0028596515198978886,
+      "mean_true_to_pred": 0.19028753328351772,
+      "median_abs_dT_K": 4.410000000000008,
+      "median_abs_dx": 0.00092680412371135,
+      "precision@0.01": 1.0,
+      "pred_points": 546,
+      "recall@0.01": 0.28978555304740405,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 5.30000000000003,
+       "median": 5.269999999999982,
+       "n": 3
+      },
+      "f1": 0.5454545454545454,
+      "n_pred": 7,
+      "n_true": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 4, y pairs 1); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "8 traced, 2 named",
+      "labels": "19 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.49933866794124987,
+      "mean_pred_to_true": 0.0010028745816651704,
+      "mean_true_to_pred": 0.13798775530380886,
+      "median_abs_dT_K": 0.6400000000000017,
+      "median_abs_dx": 0.0005900000000000349,
+      "precision@0.01": 0.9839167455061495,
+      "pred_points": 2114,
+      "recall@0.01": 0.5457110609480813,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.5966666666666166,
+       "median": 0.6399999999999864,
+       "n": 3
+      },
+      "f1": 0.5454545454545454,
+      "n_pred": 7,
+      "n_true": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "12 traced, 4 named",
+      "labels": "25 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.23237236387207433,
+      "mean_pred_to_true": 0.0019161077198464357,
+      "mean_true_to_pred": 0.05377217698233154,
+      "median_abs_dT_K": 0.2199999999998592,
+      "median_abs_dx": 0.0005506109979633578,
+      "precision@0.01": 0.9257425742574258,
+      "pred_points": 1414,
+      "recall@0.01": 0.46991576413959085,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.2199999999999136,
+       "median": 0.2199999999999136,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "11 traced, 2 named",
+      "labels": "44 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.30695321706838835,
+      "mean_pred_to_true": 0.02227625780472807,
+      "mean_true_to_pred": 0.059633042760470614,
+      "median_abs_dT_K": 6.550000000000111,
+      "median_abs_dx": 0.0007864562118126972,
+      "precision@0.01": 0.8667192429022083,
+      "pred_points": 1268,
+      "recall@0.01": 0.618531889290012,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.05999999999994543,
+       "median": 0.05999999999994543,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "11 traced, 1 named",
+      "labels": "30 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.30695321706838835,
+      "mean_pred_to_true": 0.02227625780472807,
+      "mean_true_to_pred": 0.059633042760470614,
+      "median_abs_dT_K": 6.550000000000111,
+      "median_abs_dx": 0.0007864562118126972,
+      "precision@0.01": 0.8667192429022083,
+      "pred_points": 1268,
+      "recall@0.01": 0.618531889290012,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.05999999999994543,
+       "median": 0.05999999999994543,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "11 traced, 1 named",
+      "labels": "30 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2106566966213886,
+      "mean_pred_to_true": 0.0015904281305346025,
+      "mean_true_to_pred": 0.032294629456783505,
+      "median_abs_dT_K": 0.31999999999993145,
+      "median_abs_dx": 0.0004415478615071161,
+      "precision@0.01": 0.9436152570480929,
+      "pred_points": 1809,
+      "recall@0.01": 0.7093862815884476,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 1.0,
+      "loose_precision": 1.0,
+      "n_pred": 6,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 1.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.31999999999993634,
+       "median": 0.31999999999993634,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 1.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "12 traced, 7 named",
+      "labels": "41 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.09880324038615451,
+      "mean_pred_to_true": 0.0014809308969991398,
+      "mean_true_to_pred": 0.012417807974778686,
+      "median_abs_dT_K": 1.000000000000012,
+      "median_abs_dx": 0.0005379073634204368,
+      "precision@0.01": 1.0,
+      "pred_points": 4178,
+      "recall@0.01": 0.8746006389776357,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.1299999999999955,
+       "median": 1.1299999999999955,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "5 traced, 0 named",
+      "labels": "26 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2779562114313747,
+      "mean_pred_to_true": 0.03699599165314119,
+      "mean_true_to_pred": 0.004580060001832556,
+      "median_abs_dT_K": 2.870000000000034,
+      "median_abs_dx": 0.0024706904761904952,
+      "precision@0.01": 0.8305180180180181,
+      "pred_points": 3552,
+      "recall@0.01": 0.9580670926517572,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.49500000000000455,
+       "median": 0.49500000000000455,
+       "n": 2
+      },
+      "f1": 0.3076923076923077,
+      "n_pred": 11,
+      "n_true": 2,
+      "precision": 0.18181818181818182,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "17 traced, 0 named",
+      "labels": "19 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2779562114313747,
+      "mean_pred_to_true": 0.03699599165314119,
+      "mean_true_to_pred": 0.004580060001832556,
+      "median_abs_dT_K": 2.870000000000034,
+      "median_abs_dx": 0.0024706904761904952,
+      "precision@0.01": 0.8305180180180181,
+      "pred_points": 3552,
+      "recall@0.01": 0.9580670926517572,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.49500000000000455,
+       "median": 0.49500000000000455,
+       "n": 2
+      },
+      "f1": 0.3076923076923077,
+      "n_pred": 11,
+      "n_true": 2,
+      "precision": 0.18181818181818182,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "17 traced, 0 named",
+      "labels": "19 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.010094946084424683,
+      "mean_pred_to_true": 0.0006548112124541256,
+      "mean_true_to_pred": 0.005876876457837569,
+      "median_abs_dT_K": 0.24000000000004018,
+      "median_abs_dx": 0.000402540404040308,
+      "precision@0.01": 1.0,
+      "pred_points": 4532,
+      "recall@0.01": 0.9496805111821086,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.2699999999999818,
+       "median": 0.2699999999999818,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "8 traced, 0 named",
+      "labels": "13 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.7010329099717206,
+      "mean_pred_to_true": 0.29685436575097807,
+      "mean_true_to_pred": 0.4468717143649846,
+      "median_abs_dT_K": 116.20333333333328,
+      "median_abs_dx": 0.19003333333333333,
+      "precision@0.01": 0.0,
+      "pred_points": 751,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "18 traced, 0 named",
+      "labels": "21 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2582857613499621,
+      "mean_pred_to_true": 0.04612440729754412,
+      "mean_true_to_pred": 0.004295529361606078,
+      "median_abs_dT_K": 1.2599999999999778,
+      "median_abs_dx": 0.0025814285714285123,
+      "precision@0.01": 0.7599109131403118,
+      "pred_points": 2245,
+      "recall@0.01": 0.9578518014955812,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6200000000000045,
+       "median": 0.6200000000000045,
+       "n": 1
+      },
+      "f1": 0.15384615384615385,
+      "n_pred": 12,
+      "n_true": 1,
+      "precision": 0.08333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "18 traced, 0 named",
+      "labels": "12 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2582857613499621,
+      "mean_pred_to_true": 0.04612440729754412,
+      "mean_true_to_pred": 0.004295529361606078,
+      "median_abs_dT_K": 1.2599999999999778,
+      "median_abs_dx": 0.0025814285714285123,
+      "precision@0.01": 0.7599109131403118,
+      "pred_points": 2245,
+      "recall@0.01": 0.9578518014955812,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6200000000000045,
+       "median": 0.6200000000000045,
+       "n": 1
+      },
+      "f1": 0.15384615384615385,
+      "n_pred": 12,
+      "n_true": 1,
+      "precision": 0.08333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "18 traced, 0 named",
+      "labels": "12 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.7004295649410371,
+      "mean_pred_to_true": 0.296633231512304,
+      "mean_true_to_pred": 0.4463164402198357,
+      "median_abs_dT_K": 115.94333333333331,
+      "median_abs_dx": 0.18923333333333334,
+      "precision@0.01": 0.0,
+      "pred_points": 751,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "9 traced, 0 named",
+      "labels": "20 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.6427100926059915,
+      "mean_pred_to_true": 0.0014524970473525976,
+      "mean_true_to_pred": 0.2416939174741883,
+      "median_abs_dT_K": 2.5800000000000267,
+      "median_abs_dx": 0.00043612499999998167,
+      "precision@0.01": 1.0,
+      "pred_points": 1292,
+      "recall@0.01": 0.4423997055576003,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "3 traced, 0 named",
+      "labels": "21 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.5
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.11562552015594046,
+      "mean_pred_to_true": 0.0034205532490178187,
+      "mean_true_to_pred": 0.015753530902766114,
+      "median_abs_dT_K": 6.04888888888877,
+      "median_abs_dx": 0.0006300000000000194,
+      "precision@0.01": 1.0,
+      "pred_points": 1550,
+      "recall@0.01": 0.8914243651085756,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 11.739999999999895,
+       "median": 11.739999999999895,
+       "n": 1
+      },
+      "f1": 0.125,
+      "n_pred": 15,
+      "n_true": 1,
+      "precision": 0.06666666666666667,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "6 traced, 0 named",
+      "labels": "18 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.11562552015594046,
+      "mean_pred_to_true": 0.0034205532490178187,
+      "mean_true_to_pred": 0.015753530902766114,
+      "median_abs_dT_K": 6.04888888888877,
+      "median_abs_dx": 0.0006300000000000194,
+      "precision@0.01": 1.0,
+      "pred_points": 1550,
+      "recall@0.01": 0.8914243651085756,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 11.739999999999895,
+       "median": 11.739999999999895,
+       "n": 1
+      },
+      "f1": 0.125,
+      "n_pred": 15,
+      "n_true": 1,
+      "precision": 0.06666666666666667,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "6 traced, 0 named",
+      "labels": "18 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.11734648643481406,
+      "mean_pred_to_true": 0.0005487655498003304,
+      "mean_true_to_pred": 0.016480909855079003,
+      "median_abs_dT_K": 0.2800000000001135,
+      "median_abs_dx": 0.0003999999999999837,
+      "precision@0.01": 1.0,
+      "pred_points": 2959,
+      "recall@0.01": 0.8384247331615753,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.2800000000000864,
+       "median": 0.2800000000000864,
+       "n": 1
+      },
+      "f1": 0.19999999999999998,
+      "n_pred": 9,
+      "n_true": 1,
+      "precision": 0.1111111111111111,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "6 traced, 0 named",
+      "labels": "13 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.323886322459621,
+      "mean_pred_to_true": 0.041472968565520775,
+      "mean_true_to_pred": 0.01569131764773941,
+      "median_abs_dT_K": 0.9200000000000319,
+      "median_abs_dx": 0.0007325844155844363,
+      "precision@0.01": 0.809412679891093,
+      "pred_points": 2571,
+      "recall@0.01": 0.7384324834749764,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 0.5714285714285714,
+      "loose_precision": 0.8,
+      "n_pred": 5,
+      "n_true": 9,
+      "precision": 0.8,
+      "recall": 0.4444444444444444
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.3100000000000591,
+       "median": 1.3100000000000591,
+       "n": 1
+      },
+      "f1": 0.22222222222222224,
+      "n_pred": 7,
+      "n_true": 2,
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "25 traced, 5 named",
+      "labels": "18 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2844931168692013,
+      "mean_pred_to_true": 0.03445446933062469,
+      "mean_true_to_pred": 0.017536807124357,
+      "median_abs_dT_K": 1.9799999999999818,
+      "median_abs_dx": 0.0035159999999999636,
+      "precision@0.01": 0.8625224148236701,
+      "pred_points": 1673,
+      "recall@0.01": 0.8389990557129368,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 7.420000000000016,
+       "median": 7.420000000000016,
+       "n": 2
+      },
+      "f1": 0.4444444444444445,
+      "n_pred": 7,
+      "n_true": 2,
+      "precision": 0.2857142857142857,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "17 traced, 3 named",
+      "labels": "16 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2844931168692013,
+      "mean_pred_to_true": 0.03445446933062469,
+      "mean_true_to_pred": 0.017536807124357,
+      "median_abs_dT_K": 1.9799999999999818,
+      "median_abs_dx": 0.0035159999999999636,
+      "precision@0.01": 0.8625224148236701,
+      "pred_points": 1673,
+      "recall@0.01": 0.8389990557129368,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 7.420000000000016,
+       "median": 7.420000000000016,
+       "n": 2
+      },
+      "f1": 0.4444444444444445,
+      "n_pred": 7,
+      "n_true": 2,
+      "precision": 0.2857142857142857,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "17 traced, 3 named",
+      "labels": "16 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.22347283861113493,
+      "mean_pred_to_true": 0.02491651815239142,
+      "mean_true_to_pred": 0.021726528294757234,
+      "median_abs_dT_K": 0.5099999999999438,
+      "median_abs_dx": 0.00047999999999998044,
+      "precision@0.01": 0.8346200731409996,
+      "pred_points": 2461,
+      "recall@0.01": 0.7261567516525024,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": 0.5797101449275363,
+      "loose_precision": 0.8333333333333334,
+      "n_pred": 6,
+      "n_true": 9,
+      "precision": 0.8333333333333334,
+      "recall": 0.4444444444444444
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.12000000000000455,
+       "median": 0.12000000000000455,
+       "n": 1
+      },
+      "f1": 0.22222222222222224,
+      "n_pred": 7,
+      "n_true": 2,
+      "precision": 0.14285714285714285,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "18 traced, 6 named",
+      "labels": "19 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.025140908457382774,
+      "mean_pred_to_true": 0.0010623474458546145,
+      "mean_true_to_pred": 0.0036604486617817997,
+      "median_abs_dT_K": 0.8300000000001972,
+      "median_abs_dx": 0.000489000000000045,
+      "precision@0.01": 1.0,
+      "pred_points": 3010,
+      "recall@0.01": 0.9010194015126604,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 19,
+      "n_true": 0,
+      "precision": 0.0,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 5, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "4 traced, 0 named",
+      "labels": "16 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.01972577727397587,
+      "mean_pred_to_true": 0.010548319663372609,
+      "mean_true_to_pred": 0.009521421868139084,
+      "median_abs_dT_K": 15.068125000000077,
+      "median_abs_dx": 0.002431571428571422,
+      "precision@0.01": 0.503337041156841,
+      "pred_points": 1798,
+      "recall@0.01": 0.5425846760933903,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 34,
+      "n_true": 0,
+      "precision": 0.0,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "10 traced, 0 named",
+      "labels": "25 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.4
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.01972577727397587,
+      "mean_pred_to_true": 0.010548319663372609,
+      "mean_true_to_pred": 0.009521421868139084,
+      "median_abs_dT_K": 15.068125000000077,
+      "median_abs_dx": 0.002431571428571422,
+      "precision@0.01": 0.503337041156841,
+      "pred_points": 1798,
+      "recall@0.01": 0.5425846760933903,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 34,
+      "n_true": 0,
+      "precision": 0.0,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "10 traced, 0 named",
+      "labels": "25 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.02529892991931674,
+      "mean_pred_to_true": 0.0005660396749329765,
+      "mean_true_to_pred": 0.003109533706858835,
+      "median_abs_dT_K": 0.40157575757584496,
+      "median_abs_dx": 0.0003889999999999727,
+      "precision@0.01": 1.0,
+      "pred_points": 3014,
+      "recall@0.01": 0.9049654718842486,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 19,
+      "n_true": 0,
+      "precision": 0.0,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "4 traced, 0 named",
+      "labels": "13 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.9172369477810716,
+      "mean_pred_to_true": 0.0009365976109412462,
+      "mean_true_to_pred": 0.436836382421379,
+      "median_abs_dT_K": 0.9599999999998499,
+      "median_abs_dx": 0.0004950964630225096,
+      "precision@0.01": 1.0,
+      "pred_points": 208,
+      "recall@0.01": 0.05675146771037182,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.959999999999809,
+       "median": 0.959999999999809,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 1,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (calibration refused: x pairs 6, y pairs 0); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "4 traced, 0 named",
+      "labels": "21 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.5
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2368247884891708,
+      "mean_pred_to_true": 0.06484123672880514,
+      "mean_true_to_pred": 0.03731232228523048,
+      "median_abs_dT_K": 14.899999999999983,
+      "median_abs_dx": 0.0007528456913827725,
+      "precision@0.01": 0.5668711656441717,
+      "pred_points": 2445,
+      "recall@0.01": 0.5193737769080234,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3999999999999204,
+       "median": 0.3999999999999204,
+       "n": 2
+      },
+      "f1": 0.2666666666666667,
+      "n_pred": 13,
+      "n_true": 2,
+      "precision": 0.15384615384615385,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "14 traced, 0 named",
+      "labels": "24 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.4
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2368247884891708,
+      "mean_pred_to_true": 0.06484123672880514,
+      "mean_true_to_pred": 0.03731232228523048,
+      "median_abs_dT_K": 14.899999999999983,
+      "median_abs_dx": 0.0007528456913827725,
+      "precision@0.01": 0.5668711656441717,
+      "pred_points": 2445,
+      "recall@0.01": 0.5193737769080234,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3999999999999204,
+       "median": 0.3999999999999204,
+       "n": 2
+      },
+      "f1": 0.2666666666666667,
+      "n_pred": 13,
+      "n_true": 2,
+      "precision": 0.15384615384615385,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "14 traced, 0 named",
+      "labels": "24 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5846484017984053,
+      "mean_pred_to_true": 0.000519397007638317,
+      "mean_true_to_pred": 0.2526105776665951,
+      "median_abs_dT_K": 0.10999999999997123,
+      "median_abs_dx": 0.0005025723472668747,
+      "precision@0.01": 1.0,
+      "pred_points": 643,
+      "recall@0.01": 0.13150684931506848,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.10999999999989996,
+       "median": 0.10999999999989996,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 1,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "5 traced, 0 named",
+      "labels": "27 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.14764746126801087,
+      "mean_pred_to_true": 0.004940685703295892,
+      "mean_true_to_pred": 0.05158435371998217,
+      "median_abs_dT_K": 0.9999999999999898,
+      "median_abs_dx": 0.0005175000000000596,
+      "precision@0.01": 0.8491983967935872,
+      "pred_points": 1996,
+      "recall@0.01": 0.3978622327790974,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.08,
+      "loose_precision": 0.1,
+      "n_pred": 10,
+      "n_true": 15,
+      "precision": 0.1,
+      "recall": 0.06666666666666667
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.454999999999984,
+       "median": 1.509999999999934,
+       "n": 6
+      },
+      "f1": 0.7058823529411764,
+      "n_pred": 10,
+      "n_true": 7,
+      "precision": 0.6,
+      "recall": 0.8571428571428571,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "21 traced, 12 named",
+      "labels": "68 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 1.1
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.29493475574827355,
+      "mean_pred_to_true": 0.04928013949011182,
+      "mean_true_to_pred": 0.04991353894351444,
+      "median_abs_dT_K": 3.375000000000028,
+      "median_abs_dx": 0.0074,
+      "precision@0.01": 0.6817325800376648,
+      "pred_points": 2124,
+      "recall@0.01": 0.47149643705463185,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 15,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.390000000000032,
+       "median": 4.509999999999991,
+       "n": 5
+      },
+      "f1": 0.4761904761904762,
+      "n_pred": 14,
+      "n_true": 7,
+      "precision": 0.35714285714285715,
+      "recall": 0.7142857142857143,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "23 traced, 0 named",
+      "labels": "21 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.29493475574827355,
+      "mean_pred_to_true": 0.04928013949011182,
+      "mean_true_to_pred": 0.04991353894351444,
+      "median_abs_dT_K": 3.375000000000028,
+      "median_abs_dx": 0.0074,
+      "precision@0.01": 0.6817325800376648,
+      "pred_points": 2124,
+      "recall@0.01": 0.47149643705463185,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 15,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.390000000000032,
+       "median": 4.509999999999991,
+       "n": 5
+      },
+      "f1": 0.4761904761904762,
+      "n_pred": 14,
+      "n_true": 7,
+      "precision": 0.35714285714285715,
+      "recall": 0.7142857142857143,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "23 traced, 0 named",
+      "labels": "21 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.3213502731488829,
+      "mean_pred_to_true": 0.0034934286331610633,
+      "mean_true_to_pred": 0.11712307921916346,
+      "median_abs_dT_K": 0.519999999999976,
+      "median_abs_dx": 0.0002474999999999561,
+      "precision@0.01": 0.9006433166547534,
+      "pred_points": 1399,
+      "recall@0.01": 0.2988915281076801,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.27272727272727276,
+      "loose_precision": 0.42857142857142855,
+      "n_pred": 7,
+      "n_true": 15,
+      "precision": 0.42857142857142855,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.8240000000000465,
+       "median": 0.16000000000008185,
+       "n": 5
+      },
+      "f1": 0.6250000000000001,
+      "n_pred": 9,
+      "n_true": 7,
+      "precision": 0.5555555555555556,
+      "recall": 0.7142857142857143,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "13 traced, 8 named",
+      "labels": "47 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 0.4444444444444444,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 2,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 1)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "6 traced, 3 named",
+      "labels": "22 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.22257066093820438,
+      "mean_pred_to_true": 0.03131684784161639,
+      "mean_true_to_pred": 0.003770330573852109,
+      "median_abs_dT_K": 10.193333333333465,
+      "median_abs_dx": 0.0010000000000000009,
+      "precision@0.01": 0.7456242707117853,
+      "pred_points": 2571,
+      "recall@0.01": 0.9203173508106244,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 0.25,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 6,
+      "precision": 0.5,
+      "recall": 0.16666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 5.880000000000052,
+       "median": 5.880000000000052,
+       "n": 2
+      },
+      "f1": 0.25,
+      "n_pred": 14,
+      "n_true": 2,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "13 traced, 2 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.22257066093820438,
+      "mean_pred_to_true": 0.03131684784161639,
+      "mean_true_to_pred": 0.003770330573852109,
+      "median_abs_dT_K": 10.193333333333465,
+      "median_abs_dx": 0.0010000000000000009,
+      "precision@0.01": 0.7456242707117853,
+      "pred_points": 2571,
+      "recall@0.01": 0.9203173508106244,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 0.25,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 6,
+      "precision": 0.5,
+      "recall": 0.16666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 5.880000000000052,
+       "median": 5.880000000000052,
+       "n": 2
+      },
+      "f1": 0.25,
+      "n_pred": 14,
+      "n_true": 2,
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "13 traced, 2 named",
+      "labels": "17 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": 0.4444444444444444,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 2,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "6 traced, 3 named",
+      "labels": "28 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 1.0
+     }
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2908921730364874,
+      "mean_pred_to_true": 0.0009383097358954352,
+      "mean_true_to_pred": 0.06789325302638805,
+      "median_abs_dT_K": 0.41833333333332057,
+      "median_abs_dx": 0.00014700000000000824,
+      "precision@0.01": 1.0,
+      "pred_points": 1676,
+      "recall@0.01": 0.5559254327563249,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
+      "n_true": 7,
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.400000000000034,
+       "median": 1.400000000000034,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "7 traced, 3 named",
+      "labels": "29 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.10382450150121761,
+      "mean_pred_to_true": 0.017782331233653557,
+      "mean_true_to_pred": 0.004431958539916344,
+      "median_abs_dT_K": 0.9233333333333427,
+      "median_abs_dx": 0.003605999999999998,
+      "precision@0.01": 0.6424100156494522,
+      "pred_points": 3834,
+      "recall@0.01": 0.8918109187749668,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 0.3243243243243243,
+      "loose_precision": 0.375,
+      "n_pred": 8,
+      "n_true": 7,
+      "precision": 0.375,
+      "recall": 0.2857142857142857
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.5900000000000318,
+       "median": 1.5900000000000318,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "24 traced, 9 named",
+      "labels": "23 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.4
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.10382450150121761,
+      "mean_pred_to_true": 0.017782331233653557,
+      "mean_true_to_pred": 0.004431958539916344,
+      "median_abs_dT_K": 0.9233333333333427,
+      "median_abs_dx": 0.003605999999999998,
+      "precision@0.01": 0.6424100156494522,
+      "pred_points": 3834,
+      "recall@0.01": 0.8918109187749668,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 0.3243243243243243,
+      "loose_precision": 0.375,
+      "n_pred": 8,
+      "n_true": 7,
+      "precision": 0.375,
+      "recall": 0.2857142857142857
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.5900000000000318,
+       "median": 1.5900000000000318,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "truth figure bbox (oracle) (oracle)",
+      "fields": "24 traced, 9 named",
+      "labels": "23 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2667779112608333,
+      "mean_pred_to_true": 0.0007480700302663414,
+      "mean_true_to_pred": 0.050808574630296734,
+      "median_abs_dT_K": 0.5199999999999871,
+      "median_abs_dx": 0.00029400000000001647,
+      "precision@0.01": 1.0,
+      "pred_points": 2361,
+      "recall@0.01": 0.6471371504660453,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 0.6,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 7,
+      "precision": 1.0,
+      "recall": 0.42857142857142855
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6100000000000136,
+       "median": 0.6100000000000136,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "8 traced, 3 named",
+      "labels": "18 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.22779354414012745,
+      "mean_pred_to_true": 0.0013118202745725656,
+      "mean_true_to_pred": 0.05627904132119608,
+      "median_abs_dT_K": 3.019999999999884,
+      "median_abs_dx": 0.0005370329670330021,
+      "precision@0.01": 0.9953566905867455,
+      "pred_points": 2369,
+      "recall@0.01": 0.4092151503319016,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 15,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.8320000000000163,
+       "median": 3.4500000000000455,
+       "n": 5
+      },
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 1)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "14 traced, 2 named",
+      "labels": "35 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.15811623774847883,
+      "mean_pred_to_true": 0.0017681895205066355,
+      "mean_true_to_pred": 0.021818077359789523,
+      "median_abs_dT_K": 1.740000000000012,
+      "median_abs_dx": 0.0006604645986924285,
+      "precision@0.01": 1.0,
+      "pred_points": 2282,
+      "recall@0.01": 0.7495119094103866,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 0.2,
+      "loose_precision": 0.6,
+      "n_pred": 5,
+      "n_true": 15,
+      "precision": 0.4,
+      "recall": 0.13333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.024000000000024,
+       "median": 4.529999999999973,
+       "n": 5
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 10,
+      "n_true": 5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "17 traced, 6 named",
+      "labels": "25 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.15811623774847883,
+      "mean_pred_to_true": 0.0017681895205066355,
+      "mean_true_to_pred": 0.021818077359789523,
+      "median_abs_dT_K": 1.740000000000012,
+      "median_abs_dx": 0.0006604645986924285,
+      "precision@0.01": 1.0,
+      "pred_points": 2282,
+      "recall@0.01": 0.7495119094103866,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 0.2,
+      "loose_precision": 0.6,
+      "n_pred": 5,
+      "n_true": 15,
+      "precision": 0.4,
+      "recall": 0.13333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.024000000000024,
+       "median": 4.529999999999973,
+       "n": 5
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 10,
+      "n_true": 5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "17 traced, 6 named",
+      "labels": "25 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.1746362619929166,
+      "mean_pred_to_true": 0.0009413023973870535,
+      "mean_true_to_pred": 0.037040519243779484,
+      "median_abs_dT_K": 0.5900000000001376,
+      "median_abs_dx": 0.0005600000000000049,
+      "precision@0.01": 0.9848920863309353,
+      "pred_points": 2780,
+      "recall@0.01": 0.5419757907067552,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 0.2105263157894737,
+      "loose_precision": 0.5,
+      "n_pred": 4,
+      "n_true": 15,
+      "precision": 0.5,
+      "recall": 0.13333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.49200000000005273,
+       "median": 0.41000000000008185,
+       "n": 5
+      },
+      "f1": 0.7142857142857143,
+      "n_pred": 9,
+      "n_true": 5,
+      "precision": 0.5555555555555556,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "18 traced, 5 named",
+      "labels": "13 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.3203339753573271,
+      "mean_pred_to_true": 0.04786161723410624,
+      "mean_true_to_pred": 0.004597165398443447,
+      "median_abs_dT_K": 0.5100000000000549,
+      "median_abs_dx": 0.0009054940119760657,
+      "precision@0.01": 0.6270531400966184,
+      "pred_points": 4140,
+      "recall@0.01": 0.9443079443079443,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0999999999999659,
+       "median": 0.0999999999999659,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "33 traced, 0 named",
+      "labels": "35 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.7
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2711899471366724,
+      "mean_pred_to_true": 0.05337678975086647,
+      "mean_true_to_pred": 0.05743607244741505,
+      "median_abs_dT_K": 0.5355714285714464,
+      "median_abs_dx": 0.0007087370713119712,
+      "precision@0.01": 0.7197898423817863,
+      "pred_points": 1142,
+      "recall@0.01": 0.6052416052416052,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.410000000000025,
+       "median": 0.410000000000025,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "20 traced, 0 named",
+      "labels": "28 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2711899471366724,
+      "mean_pred_to_true": 0.05337678975086647,
+      "mean_true_to_pred": 0.05743607244741505,
+      "median_abs_dT_K": 0.5355714285714464,
+      "median_abs_dx": 0.0007087370713119712,
+      "precision@0.01": 0.7197898423817863,
+      "pred_points": 1142,
+      "recall@0.01": 0.6052416052416052,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.410000000000025,
+       "median": 0.410000000000025,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "20 traced, 0 named",
+      "labels": "28 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.3
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.3614353327276331,
+      "mean_pred_to_true": 0.0547058028080038,
+      "mean_true_to_pred": 0.051653794722951896,
+      "median_abs_dT_K": 0.40250000000003894,
+      "median_abs_dx": 0.0008097222222222533,
+      "precision@0.01": 0.5793716986377537,
+      "pred_points": 3597,
+      "recall@0.01": 0.7706797706797707,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.26000000000004775,
+       "median": 0.26000000000004775,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic (assessed_pd ticks + printed labels)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "22 traced, 0 named",
+      "labels": "26 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.8
+     }
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.19994584285545675,
+      "mean_pred_to_true": 0.004062342982355494,
+      "mean_true_to_pred": 0.023092163804114992,
+      "median_abs_dT_K": 0.689999999999924,
+      "median_abs_dx": 0.0006180000000000074,
+      "precision@0.01": 0.91572217378669,
+      "pred_points": 3441,
+      "recall@0.01": 0.8376709307454786,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.33333333333333337,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.5,
+       "median": 0.5,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 1, y pairs 0)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "16 traced, 1 named",
+      "labels": "22 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.1754520452433897,
+      "mean_pred_to_true": 0.005706097658219189,
+      "mean_true_to_pred": 0.02220186229780394,
+      "median_abs_dT_K": 2.710000000000068,
+      "median_abs_dx": 0.000702510209247012,
+      "precision@0.01": 0.9208715596330275,
+      "pred_points": 1744,
+      "recall@0.01": 0.8253198059108955,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.28571428571428575,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 0.5,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.265000000000043,
+       "median": 3.265000000000043,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "Tesseract searchable PDF via extract_pdf_figure_panels",
+      "fields": "7 traced, 2 named",
+      "labels": "15 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.1754520452433897,
+      "mean_pred_to_true": 0.005706097658219189,
+      "mean_true_to_pred": 0.02220186229780394,
+      "median_abs_dT_K": 2.710000000000068,
+      "median_abs_dx": 0.000702510209247012,
+      "precision@0.01": 0.9208715596330275,
+      "pred_points": 1744,
+      "recall@0.01": 0.8253198059108955,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.28571428571428575,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 0.5,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.265000000000043,
+       "median": 3.265000000000043,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+      "crop": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+      "fields": "7 traced, 2 named",
+      "labels": "15 from tesseract words",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.2
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.19964007581774207,
+      "mean_pred_to_true": 0.003592290891388629,
+      "mean_true_to_pred": 0.022656308168247628,
+      "median_abs_dT_K": 0.14999999999993352,
+      "median_abs_dx": 0.0005961617336152567,
+      "precision@0.01": 0.9179847685998829,
+      "pred_points": 3414,
+      "recall@0.01": 0.8367887075430084,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.5714285714285715,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.4
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.09500000000002728,
+       "median": 0.09500000000002728,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 0, y pairs 0)",
+      "crop": "vector.pdf via extract_pdf_figure_panels",
+      "fields": "10 traced, 3 named",
+      "labels": "30 from pdf text layer",
+      "phase_table": "truth (oracle)",
+      "seconds": 0.6
+     }
+    }
+   }
+  }
+ }
+}

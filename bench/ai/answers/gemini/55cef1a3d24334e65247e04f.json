@@ -1,0 +1,229 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "55cef1a3d24334e65247e04f",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "L + (Ni) - Ni3Al",
+    "temperature": 1643.1,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Ni",
+      "value": 0.759
+     }
+    ],
+    "quote": "At 1643.1 K the peritectic L + (Ni) - Ni3Al takes place; the L phase then contains a mole fraction of 0.759.",
+    "page": 1
+   },
+   {
+    "row_label": "L - NiAl + Ni3Al",
+    "temperature": 1642.3,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Ni",
+      "value": 0.744
+     }
+    ],
+    "quote": "At 1642.3 K the eutectic L - NiAl + Ni3Al takes place; the L phase then contains a mole fraction of 0.744.",
+    "page": 1
+   },
+   {
+    "row_label": "L + NiAl > AI3Ni2",
+    "temperature": 1412.2,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Ni",
+      "value": 0.261
+     }
+    ],
+    "quote": "At 1412.2 K the peritectic L + NiAl > AI3Ni2 takes place; the L phase then contains a mole fraction of 0.261.",
+    "page": 1
+   },
+   {
+    "row_label": "L + AI3Ni2 > AI3Ni",
+    "temperature": 1127.0,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Ni",
+      "value": 0.16
+     }
+    ],
+    "quote": "Peritectic equilibrium L + AI3Ni2 > AI3Ni is found at 1127.0 K and a mole fraction of 0.160 (L).",
+    "page": 2
+   },
+   {
+    "row_label": "NiAl + Ni3Al - AI3Ni5",
+    "temperature": 973.4,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "AI3Ni5",
+      "element": "Ni",
+      "value": 0.625
+     }
+    ],
+    "quote": "The dataset places a peritectoid (NiAl + Ni3Al - AI3Ni5) at 973.4 K; the composition of AI3Ni5 is x(Ni) = 0.625.",
+    "page": 2
+   },
+   {
+    "row_label": "L - (Al) + AI3Ni",
+    "temperature": 924.4,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Ni",
+      "value": 0.016
+     }
+    ],
+    "quote": "At 924.4 K the eutectic L - (Al) + AI3Ni takes place; the L phase then contains x(Ni) = 0.016.",
+    "page": 2
+   },
+   {
+    "row_label": "(Ni) congruent melting",
+    "temperature": 1728.4,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "(Ni)",
+      "element": "Ni",
+      "value": 0.988
+     }
+    ],
+    "quote": "(Ni) melts congruently at 1728.4 K and x(Ni) = 0.988.",
+    "page": 2
+   },
+   {
+    "row_label": "Ni3Al congruent melting",
+    "temperature": 1642.7,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "Ni3Al",
+      "element": "Ni",
+      "value": 0.751
+     }
+    ],
+    "quote": "Ni3Al melts congruently at 1642.7 K and x(Ni) = 0.751.",
+    "page": 2
+   },
+   {
+    "row_label": "liquid mixing enthalpy minimum",
+    "temperature": 2000.0,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Ni",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -49.27,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "quote": "At 2000 K the integral mixing enthalpy of the liquid has its minimum, -49.27 kJ/mol, at x(Ni) = 0.500.",
+    "page": 3
+   },
+   {
+    "row_label": "AI3Ni enthalpy of formation",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_role": "measurement",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -43.45,
+      "unit": "kJ/mol per mole of atoms",
+      "phase": "AI3Ni"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of AI3Ni at 298.15 K is -43.45 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "AI3Ni heat capacity",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.46,
+      "unit": "J/(mol K)",
+      "phase": "AI3Ni"
+     }
+    ],
+    "quote": "Its heat capacity at room temperature is 24.46 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 2000.0,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Ni",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -45.62,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "quote": "For the equiatomic liquid at 2000 K, the Gibbs energy of mixing is -45.62 kJ/mol-atom.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 723,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1360,
+  "thoughts_token_count": 3672,
+  "total_token_count": 5755
+ },
+ "seconds": 32.9
+}

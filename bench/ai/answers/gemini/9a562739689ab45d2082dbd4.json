@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "9a562739689ab45d2082dbd4",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L - (Al) + (Si)",
+    "temperature": 850,
+    "temperature_unit": "K",
+    "temperature_printed": "850",
+    "temperature_role": "invariant",
+    "reaction": "L - (Al) + (Si)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L - (Al) + (Si), lies at 850 K.",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 124,
+  "thoughts_token_count": 439,
+  "total_token_count": 921
+ },
+ "seconds": 6.7
+}

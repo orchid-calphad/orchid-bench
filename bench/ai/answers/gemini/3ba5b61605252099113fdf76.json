@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "3ba5b61605252099113fdf76",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Mg",
+   "Sn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1150,
+    "temperature_unit": "K",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3336,
+  "cached_content_token_count": null,
+  "candidates_token_count": 124,
+  "thoughts_token_count": 4794,
+  "total_token_count": 8254
+ },
+ "seconds": 40.5
+}

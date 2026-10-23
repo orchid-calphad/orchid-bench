@@ -1,0 +1,82 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Ag",
+  "Cu"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "(Ag)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27",
+   "temperature_bound": "<",
+   "temperature_max": 961.8,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Ag)"
+   ],
+   "structure": {
+    "phase": "(Ag)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Ag)",
+     "element": "Cu",
+     "printed": "0.0–13.8 at 787",
+     "phase_source": "row_label",
+     "value": 0.0,
+     "value_max": 13.8
+    }
+   ]
+  },
+  {
+   "row_label": "(Cu)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27",
+   "temperature_bound": "<",
+   "temperature_max": 1084.6,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Cu)"
+   ],
+   "structure": {
+    "phase": "(Cu)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Cu)",
+     "element": "Cu",
+     "printed": "94.8–100.0 at 847",
+     "phase_source": "row_label",
+     "value": 94.8,
+     "value_max": 100.0
+    }
+   ]
+  }
+ ],
+ "notes": "Row temperature = stability range (from-to, C). Homogeneity range at.% Cu is given at the separate \"at T / °C\" column value, recorded in each phase_compositions.printed: (Ag) at 787; (Cu) at 847.",
+ "column_units": [
+  {
+   "column_header": "Stability range / °C",
+   "unit": "°C"
+  },
+  {
+   "column_header": "at T / °C",
+   "unit": "°C"
+  }
+ ]
+}

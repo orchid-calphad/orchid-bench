@@ -1,0 +1,76 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "36467760c3537d707bbc2849",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is in the high-temperature liquid (L) region, which is not among the choices provided."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 is in the (βTi) solid solution region, which is not among the choices provided."
+   },
+   {
+    "marker": 3,
+    "assemblage": "(αTi)+(βTi)",
+    "reason": "Marker 3 is located in the two-phase region between the (αTi) and (βTi) fields."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Marker 4 is in the (Ni) solid solution field, which is not among the choices provided."
+   },
+   {
+    "marker": 5,
+    "assemblage": "L+Ni3Ti",
+    "reason": "Marker 5 lies in the two-phase field between the liquidus and the Ni3Ti line compound."
+   },
+   {
+    "marker": 6,
+    "assemblage": "none of these",
+    "reason": "Marker 6 is located in the two-phase (Ni)+L field between the liquidus and the (Ni) solvus/solidus, which is not among the choices."
+   },
+   {
+    "marker": 7,
+    "assemblage": "L",
+    "reason": "Marker 7 is above the liquidus curve in the single-phase liquid (L) field."
+   },
+   {
+    "marker": 8,
+    "assemblage": "L",
+    "reason": "Marker 8 is situated above the liquidus line in the single-phase liquid (L) field."
+   },
+   {
+    "marker": 9,
+    "assemblage": "L+NiTi",
+    "reason": "Marker 9 is located in the two-phase field between the liquidus and the NiTi stoichiometric phase."
+   },
+   {
+    "marker": 10,
+    "assemblage": "L",
+    "reason": "Marker 10 lies just above the eutectic line in the liquid (L) region along the liquidus boundary."
+   },
+   {
+    "marker": 11,
+    "assemblage": "(βTi)+NiTi2",
+    "reason": "Marker 11 is in the two-phase solid field between the NiTi2 intermetallic compound and the (βTi) phase."
+   },
+   {
+    "marker": 12,
+    "assemblage": "(αTi)",
+    "reason": "Marker 12 is in the terminal single-phase (αTi) region at the lower right corner."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1498,
+  "cached_content_token_count": null,
+  "candidates_token_count": 554,
+  "thoughts_token_count": 3356,
+  "total_token_count": 5408
+ },
+ "seconds": 30.1
+}

@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1e78f6ce27d41c7ad5831cf5",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "γ",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "β",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "ζᵃ",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3338,
+  "cached_content_token_count": 2430,
+  "candidates_token_count": 346,
+  "thoughts_token_count": 1321,
+  "total_token_count": 5005
+ },
+ "seconds": 13.1
+}

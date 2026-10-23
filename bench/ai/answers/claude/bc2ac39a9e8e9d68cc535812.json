@@ -1,0 +1,27 @@
+{
+ "table_kind": "invariant_reactions",
+ "system": [
+  "Pb",
+  "Zn"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "none",
+ "rows": [
+  {
+   "row_label": "highest invariant L1+L2 -> (Zn)",
+   "temperature": 420.0,
+   "temperature_unit": "C",
+   "temperature_printed": "420.0 °C",
+   "temperature_role": "invariant",
+   "reaction": "L1 + L2 - (Zn)",
+   "phases_present": [
+    "L1",
+    "L2",
+    "(Zn)"
+   ],
+   "source": "this_work",
+   "quote": "The highest invariant reaction, L1 + L2 - (Zn), lies 'at 420.0 °C.",
+   "page": 1
+  }
+ ]
+}

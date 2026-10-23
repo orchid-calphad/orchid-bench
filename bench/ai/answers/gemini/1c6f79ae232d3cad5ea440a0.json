@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1c6f79ae232d3cad5ea440a0",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L → β",
+    "reaction": "L → β",
+    "transition_kind": "congruent",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3332,
+  "cached_content_token_count": null,
+  "candidates_token_count": 134,
+  "thoughts_token_count": 4080,
+  "total_token_count": 7546
+ },
+ "seconds": 27.9
+}

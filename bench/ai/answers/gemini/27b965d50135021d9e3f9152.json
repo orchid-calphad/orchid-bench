@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "27b965d50135021d9e3f9152",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cu",
+   "Pb"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu)",
+    "temperature": 600,
+    "temperature_unit": "K",
+    "temperature_printed": "600",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {}
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3345,
+  "cached_content_token_count": null,
+  "candidates_token_count": 97,
+  "thoughts_token_count": 2327,
+  "total_token_count": 5769
+ },
+ "seconds": 17.2
+}

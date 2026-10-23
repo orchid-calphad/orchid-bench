@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f3ada901c6b59206437f969f",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Ag",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Ag)",
+    "phases_present": [
+     "(Ag)"
+    ],
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3457,
+  "cached_content_token_count": null,
+  "candidates_token_count": 135,
+  "thoughts_token_count": 2922,
+  "total_token_count": 6514
+ },
+ "seconds": 20.7
+}

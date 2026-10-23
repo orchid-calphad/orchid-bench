@@ -1,0 +1,41 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "848e918e44ab3f39cc362d1e",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "calculation_settings": {
+     "other": [
+      {
+       "name": "model",
+       "value": "Redlich–Kister"
+      }
+     ]
+    }
+   }
+  ],
+  "notes": "Values as printed in the TDB file.",
+  "column_units": []
+ },
+ "usage": {
+  "prompt_token_count": 3412,
+  "cached_content_token_count": null,
+  "candidates_token_count": 186,
+  "thoughts_token_count": 1862,
+  "total_token_count": 5460
+ },
+ "seconds": 17.6
+}

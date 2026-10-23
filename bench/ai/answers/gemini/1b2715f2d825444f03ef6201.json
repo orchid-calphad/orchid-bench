@@ -1,0 +1,105 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1b2715f2d825444f03ef6201",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Pb",
+  "rows": [
+   {
+    "reaction": "L1 -> (Cu) + L2",
+    "reaction_type": "monotectic",
+    "phases": [
+     "L1",
+     "(Cu)",
+     "L2"
+    ],
+    "temperature": 956.8,
+    "temperature_unit": "C",
+    "temperature_printed": "956.8",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "compositions": [
+     {
+      "phase": "L1",
+      "value": 0.222,
+      "bound": "none"
+     },
+     {
+      "phase": "(Cu)",
+      "value": 0.007,
+      "bound": "none"
+     },
+     {
+      "phase": "L2",
+      "value": 0.631,
+      "bound": "none"
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu) + (Pb)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Cu)",
+     "(Pb)"
+    ],
+    "temperature": 326.3,
+    "temperature_unit": "C",
+    "temperature_printed": "326.3",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.998,
+      "bound": "none"
+     },
+     {
+      "phase": "(Cu)",
+      "value": 0.0,
+      "bound": "none"
+     },
+     {
+      "phase": "(Pb)",
+      "value": 1.0,
+      "bound": "none"
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu) + (Pb)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Cu)",
+     "(Pb)"
+    ],
+    "temperature": 321.3,
+    "temperature_unit": "C",
+    "temperature_printed": "321.3",
+    "temperature_bound": "none",
+    "temperature_approximate": false,
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2169,
+  "cached_content_token_count": null,
+  "candidates_token_count": 661,
+  "thoughts_token_count": 1197,
+  "total_token_count": 4027
+ },
+ "seconds": 13.6
+}

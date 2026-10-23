@@ -1,0 +1,285 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "c1ae1bd49c389d509e803b63",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Cu",
+   "Zn"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu) + L -> β",
+    "temperature": 899,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "(Cu) + L → β",
+    "transition_kind": "peritectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, (Cu) + L → β, lies at 899 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "Cu melting point",
+    "temperature": 1085,
+    "temperature_unit": "C",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "For Cu, the liquidus meets the axis at 1085 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "Zn melting point",
+    "temperature": 420,
+    "temperature_unit": "C",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "Pure Zn melts at 420 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "(Cu) + L -> β",
+    "temperature": 899,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "(Cu) + L → β",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.375
+     }
+    ],
+    "source": "this_work",
+    "quote": "The peritectic reaction (Cu) + L → β is calculated at 899 °C, with L at x(Zn) = 0.375.",
+    "page": 1
+   },
+   {
+    "row_label": "β + L -> γ",
+    "temperature": 834,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "β + L → γ",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.593
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 834 °C for the peritectic reaction (β + L → γ), where L has a mole fraction of 0.593.",
+    "page": 1
+   },
+   {
+    "row_label": "γ + L -> δ",
+    "temperature": 703,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "γ + L → δ",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.804
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a peritectic (γ + L → δ) at 703 °C; the composition of L is a mole fraction of 0.804.",
+    "page": 1
+   },
+   {
+    "row_label": "δ + L -> ε",
+    "temperature": 600,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "δ + L → ε",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.883
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 600 °C for the peritectic reaction (δ + L → ε), where L has x(Zn) = 0.883.",
+    "page": 1
+   },
+   {
+    "row_label": "δ -> γ + ε",
+    "temperature": 559,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "δ → γ + ε",
+    "transition_kind": "eutectoid",
+    "phase_compositions": [
+     {
+      "phase": "δ",
+      "element": "Zn",
+      "value": 0.749
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a eutectoid (δ → γ + ε) at 559 °C; the composition of δ is a mole fraction of 0.749.",
+    "page": 2
+   },
+   {
+    "row_label": "β + γ -> β′",
+    "temperature": 463,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "β + γ → β′",
+    "transition_kind": "peritectoid",
+    "phase_compositions": [
+     {
+      "phase": "β′",
+      "element": "Zn",
+      "value": 0.491
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a peritectoid (β + γ → β′) at 463 °C; the composition of β′ is a mole fraction of 0.491.",
+    "page": 2
+   },
+   {
+    "row_label": "β -> (Cu) + β′",
+    "temperature": 460,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "β → (Cu) + β′",
+    "transition_kind": "eutectoid",
+    "phase_compositions": [
+     {
+      "phase": "β",
+      "element": "Zn",
+      "value": 0.445
+     }
+    ],
+    "source": "this_work",
+    "quote": "Eutectoid equilibrium β → (Cu) + β′ is found at 460 °C and a mole fraction of 0.445 (β).",
+    "page": 2
+   },
+   {
+    "row_label": "L -> ε + (Zn)",
+    "temperature": 419,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "L → ε + (Zn)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.98
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L → ε + (Zn) is calculated at 419 °C, with L at x(Zn) = 0.980.",
+    "page": 2
+   },
+   {
+    "row_label": "liquid integral mixing enthalpy minimum",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Zn",
+      "value": 0.44
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -6436,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy of the liquid has its minimum, -6436 J/mol, at x(Zn) = 0.440.",
+    "page": 3
+   },
+   {
+    "row_label": "δ enthalpy of formation",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "phases_present": [
+     "δ"
+    ],
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -5.76,
+      "unit": "kJ/mol per mole of atoms",
+      "phase": "δ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of δ at 298.15 K is -5.76 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "δ heat capacity",
+    "phases_present": [
+     "δ"
+    ],
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 25.16,
+      "unit": "J/(mol K)",
+      "phase": "δ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 25.16 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -14.55,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs energy of mixing is -14.55 kJ/mol-atom.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 957,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2559,
+  "thoughts_token_count": 4342,
+  "total_token_count": 7858
+ },
+ "seconds": 38.0
+}

@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "cef140195f5779fd7155178f",
+ "result": {
+  "table_kind": "phase_compositions",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 607,
+    "temperature_unit": "C",
+    "temperature_printed": "607",
+    "temperature_role": "other",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3464,
+  "cached_content_token_count": null,
+  "candidates_token_count": 163,
+  "thoughts_token_count": 4230,
+  "total_token_count": 7857
+ },
+ "seconds": 31.1
+}

@@ -1,0 +1,81 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "7e95b74ed998d683ef36e1b8",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Sits in the single-phase liquid region at 1400 K on the Bi side; LIQUID or L is not among the choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "L1",
+    "reason": "Sits in the Al-rich liquid phase field (L1) above the melting point of Al."
+   },
+   {
+    "marker": 3,
+    "assemblage": "none of these",
+    "reason": "Sits in the settled single-phase LIQUID field; neither LIQUID nor L is among the choices."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Sits in the settled LIQUID + LIQUID miscibility gap; this phase assemblage is not among the choices."
+   },
+   {
+    "marker": 5,
+    "assemblage": "L1",
+    "reason": "Sits in the Al-rich liquid field (L1) between pure Al and the liquid miscibility gap."
+   },
+   {
+    "marker": 6,
+    "assemblage": "(Al)+L",
+    "reason": "Sits in the settled FCC_A1 + LIQUID two-phase field, which corresponds to (Al)+L."
+   },
+   {
+    "marker": 7,
+    "assemblage": "L",
+    "reason": "Sits in the liquid region (L) above the melting point of Bi (544 K)."
+   },
+   {
+    "marker": 8,
+    "assemblage": "(Al)+(Bi)",
+    "reason": "Sits below the eutectic line at 544 K in the two-phase solid region (Al)+(Bi)."
+   },
+   {
+    "marker": 9,
+    "assemblage": "none of these",
+    "reason": "Sits in the solid Al (FCC_A1) region at 300 K; this phase is not among the choices."
+   },
+   {
+    "marker": 10,
+    "assemblage": "none of these",
+    "reason": "Sits in the two-phase solid region (Al)+(Bi) below 544 K; this assemblage is not among the choices."
+   },
+   {
+    "marker": 11,
+    "assemblage": "none of these",
+    "reason": "Sits in the two-phase solid region (Al)+(Bi) below 544 K; this assemblage is not among the choices."
+   },
+   {
+    "marker": 12,
+    "assemblage": "none of these",
+    "reason": "Sits in the two-phase solid region (Al)+(Bi) below 544 K; this assemblage is not among the choices."
+   },
+   {
+    "marker": 13,
+    "assemblage": "none of these",
+    "reason": "Sits in the two-phase solid region (Al)+(Bi) below 544 K; this assemblage is not among the choices."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1618,
+  "cached_content_token_count": null,
+  "candidates_token_count": 749,
+  "thoughts_token_count": 16228,
+  "total_token_count": 18595
+ },
+ "seconds": 123.6
+}

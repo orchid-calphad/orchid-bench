@@ -1,0 +1,251 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "eefb0c41be2c00f75dca48ee",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "Al melting",
+    "temperature": 660.3,
+    "temperature_unit": "C",
+    "temperature_printed": "660.3",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "Pure Al melts at 660.3 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "Cu melting",
+    "temperature": 1084.6,
+    "temperature_unit": "C",
+    "temperature_printed": "1084.6",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "The melting point of Cu reproduced by the dataset is 1084.6 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "L -> beta + (Cu)",
+    "temperature": 1036.7,
+    "temperature_unit": "C",
+    "temperature_printed": "1036.7",
+    "temperature_role": "invariant",
+    "reaction": "L → β + (Cu)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.829
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L → β + (Cu) is calculated at 1036.7 °C, with L at x(Cu) = 0.829.",
+    "page": 1
+   },
+   {
+    "row_label": "L + beta -> gamma",
+    "temperature": 1020.6,
+    "temperature_unit": "C",
+    "temperature_printed": "1020.6",
+    "temperature_role": "invariant",
+    "reaction": "L + β → γ",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.658
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 1020.6 °C for the peritectic reaction (L + β → γ), where L has x(Cu) = 0.658.",
+    "page": 1
+   },
+   {
+    "row_label": "L + gamma -> beta",
+    "temperature": 993.5,
+    "temperature_unit": "C",
+    "temperature_printed": "993.5",
+    "temperature_role": "invariant",
+    "reaction": "L + γ → β",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "value": 0.609
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a peritectic (L + γ → β) at 993.5 °C; the composition of L is a mole fraction of 0.609.",
+    "page": 1
+   },
+   {
+    "row_label": "L + beta -> zeta",
+    "temperature": 742.1,
+    "temperature_unit": "C",
+    "temperature_printed": "742.1",
+    "temperature_role": "invariant",
+    "reaction": "L + β → ζ",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "value": 0.286
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 742.1 °C for the peritectic reaction (L + β → ζ), where L has a mole fraction of 0.286.",
+    "page": 1
+   },
+   {
+    "row_label": "L -> (Al) + zeta",
+    "temperature": 607.9,
+    "temperature_unit": "C",
+    "temperature_printed": "607.9",
+    "temperature_role": "invariant",
+    "reaction": "L → (Al) + ζ",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "value": 0.113
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 607.9 °C for the eutectic reaction (L → (Al) + ζ), where L has a mole fraction of 0.113.",
+    "page": 1
+   },
+   {
+    "row_label": "beta -> gamma + (Cu)",
+    "temperature": 566.9,
+    "temperature_unit": "C",
+    "temperature_printed": "566.9",
+    "temperature_role": "invariant",
+    "reaction": "β → γ + (Cu)",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "β",
+      "value": 0.762
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 566.9 °C for the eutectoid reaction (β → γ + (Cu)), where β has a mole fraction of 0.762.",
+    "page": 1
+   },
+   {
+    "row_label": "beta congruent melting",
+    "temperature": 1049.9,
+    "temperature_unit": "C",
+    "temperature_printed": "1049.9",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "β",
+      "element": "Cu",
+      "value": 0.765
+     }
+    ],
+    "source": "this_work",
+    "quote": "β melts congruently at 1049.9 °C and x(Cu) = 0.765.",
+    "page": 2
+   },
+   {
+    "row_label": "liquid mixing enthalpy minimum",
+    "temperature": 1450.0,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_role": "measurement",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 0.6
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -17.57,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy of the liquid has its minimum, -17.57 kJ/mol, at x(Cu) = 0.600.",
+    "page": 3
+   },
+   {
+    "row_label": "gamma enthalpy of formation",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_role": "measurement",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -20.31,
+      "unit": "kJ/mol per mole of atoms",
+      "phase": "γ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of γ at 298.15 K is -20.31 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "gamma heat capacity",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.4,
+      "unit": "J/(mol K)",
+      "phase": "γ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 24.40 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 1450.0,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_role": "measurement",
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -22.08,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs energy of mixing is -22.08 kJ/mol.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 986,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2364,
+  "thoughts_token_count": 998,
+  "total_token_count": 4348
+ },
+ "seconds": 19.6
+}

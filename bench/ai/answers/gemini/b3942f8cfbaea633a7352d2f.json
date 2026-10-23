@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "b3942f8cfbaea633a7352d2f",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu)",
+    "temperature": 727,
+    "temperature_unit": "C",
+    "temperature_printed": "727",
+    "temperature_role": "measurement",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3343,
+  "cached_content_token_count": null,
+  "candidates_token_count": 151,
+  "thoughts_token_count": 3373,
+  "total_token_count": 6867
+ },
+ "seconds": 24.1
+}

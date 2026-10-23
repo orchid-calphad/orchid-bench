@@ -1,0 +1,49 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Open field above both liquidus branches spanning the whole diagram: the single liquid, which is not offered."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Inset: above both liquidus branches meeting at the eutectic point, i.e. the liquid field; not offered."
+  },
+  {
+   "marker": 3,
+   "assemblage": "none of these",
+   "reason": "Inset: between the left liquidus branch and the eutectic line, a liquid plus Bi-side solid field; not offered."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Inset: between the right liquidus branch and the eutectic line, a liquid plus Sn-side solid field; not offered."
+  },
+  {
+   "marker": 5,
+   "assemblage": "none of these",
+   "reason": "Inset: below the eutectic horizontal, the two-solid field; not offered as a choice."
+  },
+  {
+   "marker": 6,
+   "assemblage": "(Bi)",
+   "reason": "Narrow single-phase band at the pure-Bi edge, bounded by solidus and solvus lines: the Bi-based solid solution."
+  },
+  {
+   "marker": 7,
+   "assemblage": "(Sn)+L",
+   "reason": "Lens between the right liquidus and the solidus near the Sn edge, above the eutectic line."
+  },
+  {
+   "marker": 8,
+   "assemblage": "none of these",
+   "reason": "Single-phase region at the pure-Sn edge bounded by solidus and solvus: the Sn-based solid solution alone, not offered."
+  },
+  {
+   "marker": 9,
+   "assemblage": "(Bi)+(Sn)",
+   "reason": "Below the eutectic horizontal, between the two terminal solvus lines."
+  }
+ ]
+}

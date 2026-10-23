@@ -1,0 +1,60 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8ed5ee02cac310155fe4dd4e",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Al",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 720,
+    "temperature_unit": "K",
+    "temperature_printed": "720",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "(Al)",
+    "temperature": 720,
+    "temperature_unit": "K",
+    "temperature_printed": "720",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "notes": "",
+  "column_units": [
+   {
+    "column_header": "Stability range / K",
+    "unit": "K"
+   },
+   {
+    "column_header": "at.% Mg",
+    "unit": "at.%"
+   },
+   {
+    "column_header": "at T / K",
+    "unit": "K"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3333,
+  "cached_content_token_count": null,
+  "candidates_token_count": 197,
+  "thoughts_token_count": 1790,
+  "total_token_count": 5320
+ },
+ "seconds": 15.8
+}

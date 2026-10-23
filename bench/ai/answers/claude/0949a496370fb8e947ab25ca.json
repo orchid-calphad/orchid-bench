@@ -1,0 +1,29 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Marker sits next to the printed label 'L' in the single liquid field above the curve; L alone is not offered."
+  },
+  {
+   "marker": 2,
+   "assemblage": "cannot tell",
+   "reason": "Inset field has no printed label and no settled neighbour identifies it."
+  },
+  {
+   "marker": 3,
+   "assemblage": "L+L2",
+   "reason": "Field lies under a closed dome whose two boundaries meet at a maximum, above the horizontal invariant line and away from the pure-Zn edge; a dome-closed two-phase field joins two liquids."
+  },
+  {
+   "marker": 4,
+   "assemblage": "L",
+   "reason": "Marker at the Pb edge near 690 K lies left of/above the curve that starts near 600 K at pure Pb, continuous with the field labelled L."
+  },
+  {
+   "marker": 5,
+   "assemblage": "(Zn)+L",
+   "reason": "Between the upper invariant line and the lower one; below lies the labelled (Pb)+(Zn) field and to the left the liquid curve, so the field holds L plus the Zn-side solid."
+  }
+ ]
+}

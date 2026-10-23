@@ -1,0 +1,27 @@
+{
+ "table_kind": "invariant_reactions",
+ "system": [
+  "Bi",
+  "Sn"
+ ],
+ "temperature_unit": "K",
+ "composition_basis": "none",
+ "rows": [
+  {
+   "row_label": "highest invariant L -> (Bi)+(Sn)",
+   "temperature": 415.8,
+   "temperature_unit": "K",
+   "temperature_printed": "415.8 K",
+   "temperature_role": "invariant",
+   "reaction": "L - (Bi) + (Sn)",
+   "phases_present": [
+    "L",
+    "(Bi)",
+    "(Sn)"
+   ],
+   "source": "this_work",
+   "quote": "The highest invariant reaction, L - (Bi) + (Sn), lies at 415.8 K.",
+   "page": 1
+  }
+ ]
+}

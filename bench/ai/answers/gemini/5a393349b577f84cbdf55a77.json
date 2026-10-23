@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5a393349b577f84cbdf55a77",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Al",
+   "Bi"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3330,
+  "cached_content_token_count": null,
+  "candidates_token_count": 134,
+  "thoughts_token_count": 1747,
+  "total_token_count": 5211
+ },
+ "seconds": 14.4
+}

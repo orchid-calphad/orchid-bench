@@ -1,0 +1,71 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "37b84190b0ac3151081e84d3",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is located in the high-temperature single-phase liquid (L) region, which is not among the choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 is located in the high-temperature solid solution (βTi) field, which is not among the choices."
+   },
+   {
+    "marker": 3,
+    "assemblage": "(αTi)+(βTi)",
+    "reason": "Marker 3 is in the two-phase region between the (βTi) and (αTi) terminal solid solution fields."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Marker 4 is located in the terminal solid solution (Ni) field, which is not among the choices."
+   },
+   {
+    "marker": 5,
+    "assemblage": "L+Ni3Ti",
+    "reason": "Marker 5 lies between the liquidus and the eutectic line to the right of the stoichiometric compound Ni3Ti, in the two-phase L+Ni3Ti field."
+   },
+   {
+    "marker": 6,
+    "assemblage": "L+Ni3Ti",
+    "reason": "Marker 6 is below the liquidus and to the right of the (Ni)-Ni3Ti eutectic, placing it within the two-phase L+Ni3Ti region."
+   },
+   {
+    "marker": 7,
+    "assemblage": "none of these",
+    "reason": "Marker 7 lies in the two-phase L+(βTi) region between the liquidus and the solidus of (βTi), which is not among the choices."
+   },
+   {
+    "marker": 8,
+    "assemblage": "L+NiTi",
+    "reason": "Marker 8 is in the two-phase field between the liquidus and the solidus/eutectic line to the left of the NiTi phase, making it L+NiTi."
+   },
+   {
+    "marker": 9,
+    "assemblage": "L+NiTi2",
+    "reason": "Marker 9 is located in the two-phase region between the liquidus and the eutectic line adjacent to the NiTi2 phase."
+   },
+   {
+    "marker": 10,
+    "assemblage": "(βTi)+NiTi2",
+    "reason": "Marker 10 lies in the two-phase field between the NiTi2 intermetallic compound and the (βTi) solid solution, below the eutectic line and above the eutectoid transformation."
+   },
+   {
+    "marker": 11,
+    "assemblage": "(αTi)",
+    "reason": "Marker 11 is situated in the terminal low-temperature solid solution phase field of pure titanium, (αTi)."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1494,
+  "cached_content_token_count": null,
+  "candidates_token_count": 592,
+  "thoughts_token_count": 8244,
+  "total_token_count": 10330
+ },
+ "seconds": 67.6
+}

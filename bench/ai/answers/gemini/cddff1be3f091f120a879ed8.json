@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "cddff1be3f091f120a879ed8",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Pb)",
+    "temperature": 317,
+    "temperature_unit": "C",
+    "temperature_printed": "317",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3339,
+  "cached_content_token_count": null,
+  "candidates_token_count": 143,
+  "thoughts_token_count": 2854,
+  "total_token_count": 6336
+ },
+ "seconds": 21.9
+}

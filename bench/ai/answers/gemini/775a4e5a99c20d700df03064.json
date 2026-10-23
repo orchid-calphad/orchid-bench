@@ -1,0 +1,118 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "775a4e5a99c20d700df03064",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Ni",
+  "rows": [
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)a",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1728.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1728.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 100.0
+     },
+     {
+      "phase": "(Cu,Ni)",
+      "value": 100.0
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)a",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1730.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1730.2 [4]",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 100.0
+     },
+     {
+      "phase": "(Cu,Ni)",
+      "value": 100.0
+     }
+    ],
+    "source": "experimental",
+    "source_label": "exp.b",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)a",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1357.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1357.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.0
+     },
+     {
+      "phase": "(Cu,Ni)",
+      "value": 0.0
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)a",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1359.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1359.8 [5]",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.0
+     },
+     {
+      "phase": "(Cu,Ni)",
+      "value": 0.0
+     }
+    ],
+    "source": "experimental",
+    "source_label": "exp.b",
+    "citations": [
+     "5"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2143,
+  "cached_content_token_count": null,
+  "candidates_token_count": 739,
+  "thoughts_token_count": 1090,
+  "total_token_count": 3972
+ },
+ "seconds": 12.9
+}

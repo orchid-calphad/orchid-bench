@@ -1,0 +1,100 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "eff845363df5f76dcdf54bcd",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Sn",
+  "rows": [
+   {
+    "reaction": "L -> Mg2Sn",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "Mg2Sn"
+    ],
+    "temperature": 1048.7,
+    "temperature_unit": "K",
+    "temperature_printed": "1048.7",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 33.3
+     },
+     {
+      "phase": "Mg2Sn",
+      "value": 33.3
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Mg) + Mg2Sn",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Mg)",
+     "Mg2Sn"
+    ],
+    "temperature": 836.5,
+    "temperature_unit": "K",
+    "temperature_printed": "836.5",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 11.0
+     },
+     {
+      "phase": "(Mg)",
+      "value": 3.1
+     },
+     {
+      "phase": "Mg2Sn",
+      "value": 33.3
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> Mg2Sn + (Sn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "Mg2Sn",
+     "(Sn)"
+    ],
+    "temperature": 477.1,
+    "temperature_unit": "K",
+    "temperature_printed": "477.1",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 91.1
+     },
+     {
+      "phase": "Mg2Sn",
+      "value": 33.3
+     },
+     {
+      "phase": "(Sn)",
+      "value": 100.0
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   }
+  ],
+  "notes": "Phases 1-3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE dataset; synthetic document. a Two-phase equilibrium at a temperature extremum; both phases have the same composition."
+ },
+ "usage": {
+  "prompt_token_count": 2142,
+  "cached_content_token_count": null,
+  "candidates_token_count": 399,
+  "thoughts_token_count": 841,
+  "total_token_count": 3382
+ },
+ "seconds": 9.2
+}

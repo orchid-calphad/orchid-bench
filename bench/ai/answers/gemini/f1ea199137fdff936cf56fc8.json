@@ -1,0 +1,95 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f1ea199137fdff936cf56fc8",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Mg",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "10",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "20",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "30",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "40",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "50",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "60",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "70",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "80",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   },
+   {
+    "row_label": "90",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {}
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 393,
+  "thoughts_token_count": 3016,
+  "total_token_count": 6767
+ },
+ "seconds": 21.2
+}

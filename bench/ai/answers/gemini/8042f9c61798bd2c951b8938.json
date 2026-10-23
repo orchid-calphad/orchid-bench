@@ -1,0 +1,238 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8042f9c61798bd2c951b8938",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "L > B + (Cu)",
+    "temperature": 1036.7,
+    "temperature_unit": "C",
+    "temperature_printed": "1036.7",
+    "temperature_role": "invariant",
+    "reaction": "L > B + (Cu)",
+    "transition_kind": "invariant",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L > B + (Cu), lies at 1036.7 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "L - B + (Cu)",
+    "temperature": 1036.7,
+    "temperature_unit": "C",
+    "temperature_printed": "1036.7",
+    "temperature_role": "invariant",
+    "reaction": "L - B + (Cu)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.829
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L - B + (Cu) is calculated at 1036.7 °C, with L at x(Cu) = 0.829.",
+    "page": 1
+   },
+   {
+    "row_label": "L + B - y",
+    "temperature": 1020.6,
+    "temperature_unit": "C",
+    "temperature_printed": "1020.6",
+    "temperature_role": "invariant",
+    "reaction": "L + B - y",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.658
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 1020.6 °C for the peritectic reaction (L + B - y), where L has x(Cu) = 0.658.",
+    "page": 1
+   },
+   {
+    "row_label": "L + y > B",
+    "temperature": 993.5,
+    "temperature_unit": "C",
+    "temperature_printed": "993.5",
+    "temperature_role": "invariant",
+    "reaction": "L + y > B",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.609
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a peritectic (L + y > B) at 993.5 °C; the composition of L is a mole fraction of 0.609.",
+    "page": 1
+   },
+   {
+    "row_label": "L + B - C",
+    "temperature": 742.1,
+    "temperature_unit": "C",
+    "temperature_printed": "742.1",
+    "temperature_role": "invariant",
+    "reaction": "L + B - C",
+    "transition_kind": "peritectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.286
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 742.1 °C for the peritectic reaction (L + B - C), where L has a mole fraction of 0.286.",
+    "page": 1
+   },
+   {
+    "row_label": "L - (Al) + C",
+    "temperature": 607.9,
+    "temperature_unit": "C",
+    "temperature_printed": "607.9",
+    "temperature_role": "invariant",
+    "reaction": "L - (Al) + C",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Cu",
+      "value": 0.113
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 607.9 °C for the eutectic reaction (L - (Al) + C), where L has a mole fraction of 0.113.",
+    "page": 1
+   },
+   {
+    "row_label": "8 -- y + (Cu)",
+    "temperature": 566.9,
+    "temperature_unit": "C",
+    "temperature_printed": "566.9",
+    "temperature_role": "invariant",
+    "reaction": "8 -- y + (Cu)",
+    "transition_kind": "eutectoid",
+    "phase_compositions": [
+     {
+      "phase": "B",
+      "element": "Cu",
+      "value": 0.762
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 566.9 °C for the eutectoid reaction (8 -- y + (Cu)), where B has a mole fraction of 0.762.",
+    "page": 1
+   },
+   {
+    "row_label": "mixing enthalpy liquid",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Cu",
+      "value": 0.6
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -17.57,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy of the liquid has its minimum, -17.57 kJ/mol, at x(Cu) = 0.600.",
+    "page": 3
+   },
+   {
+    "row_label": "enthalpy of formation y",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15",
+    "temperature_role": "measurement",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -20.31,
+      "unit": "kJ/mol",
+      "phase": "y"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of y at 298.15 K is -20.31 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "heat capacity y",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.4,
+      "unit": "J/(mol K)",
+      "phase": "y"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 24.40 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "Gibbs energy of mixing liquid",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_role": "measurement",
+    "overall_composition": [
+     {
+      "element": "Al",
+      "value": 0.5
+     },
+     {
+      "element": "Cu",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -22.08,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs energy of mixing is -22.08 kJ/mol.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1052,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2186,
+  "thoughts_token_count": 8829,
+  "total_token_count": 12067
+ },
+ "seconds": 63.8
+}

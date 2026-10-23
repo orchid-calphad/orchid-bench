@@ -1,0 +1,91 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "e311544f9093c98f3bddc84c",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "The field contains the printed label 'L', but 'L' is not offered among the choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 3,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 4,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 5,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 6,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 7,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 8,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 9,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 10,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 11,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 12,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 13,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 14,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   },
+   {
+    "marker": 15,
+    "assemblage": "cannot tell",
+    "reason": "The field lacks any printed label, arrow, or neighbouring settled fields to determine its phase assemblage without outside knowledge."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1572,
+  "cached_content_token_count": null,
+  "candidates_token_count": 648,
+  "thoughts_token_count": 12750,
+  "total_token_count": 14970
+ },
+ "seconds": 98.4
+}

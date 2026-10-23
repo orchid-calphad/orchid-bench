@@ -1,0 +1,126 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "2eab1486e2dc4ba44f537adf",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "integral mixing enthalpy of liquid minimum",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "overall_composition": [
+     {
+      "element": "Mg",
+      "value": 44.0
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -9350,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy of the liquid has its minimum, -9350 J/mol, at 44.0 at.% Mg.",
+    "page": 3
+   },
+   {
+    "row_label": "enthalpy of formation of CuMg2",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "phases_present": [
+     "CuMg2"
+    ],
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -8.65,
+      "unit": "kJ/mol per mole of atoms",
+      "phase": "CuMg2"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of CuMg2 at 298.15 K is -8.65 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "enthalpy of formation of CuMg2 per formula unit",
+    "phases_present": [
+     "CuMg2"
+    ],
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -25.9,
+      "unit": "kJ/mol",
+      "phase": "CuMg2"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Per formula unit CuMg2 this is -25.9 kJ/mol.",
+    "page": 3
+   },
+   {
+    "row_label": "heat capacity of CuMg2",
+    "temperature_printed": "room temperature",
+    "phases_present": [
+     "CuMg2"
+    ],
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.59,
+      "unit": "J/(mol K)",
+      "phase": "CuMg2"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 24.59 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -15.88,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs energy of mixing is -15.88 kJ/mol-atom.",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 633,
+  "cached_content_token_count": null,
+  "candidates_token_count": 946,
+  "thoughts_token_count": 10733,
+  "total_token_count": 12312
+ },
+ "seconds": 67.9
+}

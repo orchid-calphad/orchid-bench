@@ -1,0 +1,40 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5eba14c4a66daf9bc79d9122",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L -- (Ag) + (Cu)",
+    "temperature": 1055.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1055.8",
+    "temperature_role": "invariant",
+    "phases_present": [
+     "L",
+     "(Ag)",
+     "(Cu)"
+    ],
+    "reaction": "L -- (Ag) + (Cu)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L -- (Ag) + (Cu), lies at 1055.8 K.",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 361,
+  "cached_content_token_count": null,
+  "candidates_token_count": 236,
+  "thoughts_token_count": 300,
+  "total_token_count": 897
+ },
+ "seconds": 4.2
+}

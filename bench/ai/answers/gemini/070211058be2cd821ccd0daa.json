@@ -1,0 +1,32 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "070211058be2cd821ccd0daa",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Pb",
+   "Zn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1150,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 130,
+  "thoughts_token_count": 955,
+  "total_token_count": 4443
+ },
+ "seconds": 10.8
+}

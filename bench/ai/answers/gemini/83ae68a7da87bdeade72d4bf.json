@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "83ae68a7da87bdeade72d4bf",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Mg",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "10",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_printed": "1750 K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 151,
+  "thoughts_token_count": 598,
+  "total_token_count": 4107
+ },
+ "seconds": 9.4
+}

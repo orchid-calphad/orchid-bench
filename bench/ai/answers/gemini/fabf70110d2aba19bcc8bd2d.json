@@ -1,0 +1,95 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "fabf70110d2aba19bcc8bd2d",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": 16914.949,
+      "unit": "J mol^-1",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": -14.7721,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 1.54955,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header"
+     }
+    ]
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "a",
+      "quantity_kind": "other",
+      "value": -1963.3,
+      "unit": "J mol^-1",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "b",
+      "quantity_kind": "other",
+      "value": 0.8623,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header"
+     },
+     {
+      "quantity": "c",
+      "quantity_kind": "other",
+      "value": 0.0,
+      "unit": "J mol^-1 K^-1",
+      "unit_source": "column_header"
+     }
+    ]
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "a / J mol^-1",
+    "unit": "J mol^-1"
+   },
+   {
+    "column_header": "b / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   },
+   {
+    "column_header": "c / J mol^-1 K^-1",
+    "unit": "J mol^-1 K^-1"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2246,
+  "cached_content_token_count": null,
+  "candidates_token_count": 354,
+  "thoughts_token_count": 857,
+  "total_token_count": 3457
+ },
+ "seconds": 12.1
+}

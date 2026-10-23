@@ -1,0 +1,36 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "57146dda039fa6c9e6bf2bc0",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Si"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "1",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": 53,
+  "candidates_token_count": 88,
+  "thoughts_token_count": 1608,
+  "total_token_count": 5054
+ },
+ "seconds": 16.9
+}

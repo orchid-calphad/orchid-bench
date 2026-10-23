@@ -1,0 +1,4615 @@
+{
+ "aggregate": {
+  "clean_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": null,
+    "boundary_mean_dist": null,
+    "boundary_median_dT_K": null,
+    "boundary_median_dx": null,
+    "boundary_precision@0.01": null,
+    "boundary_recall@0.01": 0.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.21428571428571427,
+    "field_pred": 56,
+    "field_recall": 0.0736196319018405,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 3.059071516733839,
+    "invariant_precision": 0.5,
+    "invariant_recall": 0.5294117647058824,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "degraded_raster": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": null,
+    "boundary_mean_dist": null,
+    "boundary_median_dT_K": null,
+    "boundary_median_dx": null,
+    "boundary_precision@0.01": null,
+    "boundary_recall@0.01": 0.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.375,
+    "field_pred": 16,
+    "field_recall": 0.03680981595092025,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 4.3485070433976825,
+    "invariant_precision": 0.4864864864864865,
+    "invariant_recall": 0.35294117647058826,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "image_only_pdf": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": null,
+    "boundary_mean_dist": null,
+    "boundary_median_dT_K": null,
+    "boundary_median_dx": null,
+    "boundary_precision@0.01": null,
+    "boundary_recall@0.01": 0.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 0.375,
+    "field_pred": 16,
+    "field_recall": 0.03680981595092025,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 4.3485070433976825,
+    "invariant_precision": 0.4864864864864865,
+    "invariant_recall": 0.35294117647058826,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  },
+  "vector": {
+   "documents": 20,
+   "phase_diagram": {
+    "boundary_hausdorff95": null,
+    "boundary_mean_dist": null,
+    "boundary_median_dT_K": null,
+    "boundary_median_dx": null,
+    "boundary_precision@0.01": null,
+    "boundary_recall@0.01": 0.0,
+    "diagrams": 20,
+    "diagrams_with_output": 20,
+    "field_precision": 1.0,
+    "field_pred": 37,
+    "field_recall": 0.22699386503067484,
+    "field_true_scorable": 163,
+    "invariant_T_err_K": 1.5147358431453366,
+    "invariant_precision": 0.46296296296296297,
+    "invariant_recall": 0.49019607843137253,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   }
+  }
+ },
+ "extractor": "raster_topology",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 11.139405672861358,
+       "median": 11.139405672861358,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.252130640293899,
+       "median": 1.252130640293899,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 1.2488133478127565,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.252130640293899,
+       "median": 1.252130640293899,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 1.2488133478127565,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AgNi-04Din-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.36363636363636365,
+      "loose_precision": 0.6666666666666666,
+      "n_pred": 3,
+      "n_true": 8,
+      "precision": 0.6666666666666666,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.43784325318620176,
+       "median": 0.43784325318620176,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=1003.27 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 0.013142165432100228,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.05421403409764,
+       "median": 4.05421403409764,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 3.420987039898364,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 1 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.05421403409764,
+       "median": 4.05421403409764,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 3.420987039898364,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 1 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2475
+     },
+     "fields": {
+      "f1": 0.7692307692307693,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 8,
+      "precision": 1.0,
+      "recall": 0.625
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.4782431130383884,
+       "median": 1.4782431130383884,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis do not run monotonically along the axis, so); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=1003.27 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 1.2642487453842932,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AgSn-12Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.884197991303921,
+       "median": 1.884197991303921,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 2.9858583695445304,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.1778127843899426,
+       "median": 1.1778127843899426,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": 2.184918217090967,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.1778127843899426,
+       "median": 1.1778127843899426,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": 2.184918217090967,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2425
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 8,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.3454405989039913,
+       "median": 1.3454405989039913,
+       "n": 2
+      },
+      "f1": 0.8,
+      "n_pred": 2,
+      "n_true": 3,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 2.522175574787866,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlBi-06Kim-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.578381147540938,
+       "median": 0.578381147540938,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 3.538 is 1.4% of the left axis span; a scale is accep); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=1077.68 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.2032923845993082,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 0 binary candidate(s)",
+      "topology": "2 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.2222222222222222,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.9268666865636987,
+       "median": 0.9268666865636987,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 1,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=550.695 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_consistent_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 0,
+       "max_temperature_difference_kelvin": 0.9228434973925914,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 0 binary candidate(s)",
+      "topology": "1 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.2222222222222222,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 0.3333333333333333,
+      "recall": 0.16666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.9268666865636987,
+       "median": 0.9268666865636987,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 1,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=550.695 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_consistent_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 0,
+       "max_temperature_difference_kelvin": 0.9228434973925914,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 0 binary candidate(s)",
+      "topology": "1 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2382
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.578381147540938,
+       "median": 0.578381147540938,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 4.085 is 1.6% of the left axis span; a scale is accep); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=1019.68 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.2032923845993082,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlCu-02Mie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.14814814814814814,
+      "loose_precision": 0.2222222222222222,
+      "n_pred": 9,
+      "n_true": 18,
+      "precision": 0.2222222222222222,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.9010137154269842,
+       "median": 0.9010137154269842,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 0.9011656885579669,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "13 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 16 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.09999999999999999,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 18,
+      "precision": 0.5,
+      "recall": 0.05555555555555555
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.0159530214542656,
+       "median": 2.0159530214542656,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 2.015801048323283,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 16 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.09999999999999999,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 18,
+      "precision": 0.5,
+      "recall": 0.05555555555555555
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.0159530214542656,
+       "median": 2.0159530214542656,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 2.015801048323283,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 16 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3940
+     },
+     "fields": {
+      "f1": 0.7142857142857143,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 18,
+      "precision": 1.0,
+      "recall": 0.5555555555555556
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.2504427723253002,
+       "median": 0.2504427723253002,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 0.2505947454562829,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "13 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 16 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlMg-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.08333333333333334,
+      "loose_precision": 0.07692307692307693,
+      "n_pred": 13,
+      "n_true": 11,
+      "precision": 0.07692307692307693,
+      "recall": 0.09090909090909091
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 12.757522619979284,
+       "median": 12.757522619979284,
+       "n": 2
+      },
+      "f1": 0.4000000000000001,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 0.4,
+      "recall": 0.4,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 11,
+       "max_temperature_difference_kelvin": 0.7607553900735411,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "19 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 15 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 11,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 16,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 11,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 16,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 4091
+     },
+     "fields": {
+      "f1": 0.625,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 11,
+      "precision": 1.0,
+      "recall": 0.45454545454545453
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 8.856279751414945,
+       "median": 8.856279751414945,
+       "n": 2
+      },
+      "f1": 0.4000000000000001,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 0.4,
+      "recall": 0.4,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 11,
+       "max_temperature_difference_kelvin": 5.218871419289712,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "7 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 15 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3893442622945713,
+       "median": 0.3893442622945713,
+       "n": 1
+      },
+      "f1": 0.25,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 0.25,
+      "recall": 0.25,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 18,
+       "max_temperature_difference_kelvin": 0.3927341226012686,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "7 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 0 binary candidate(s)",
+      "topology": "4 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 14.033126833584902,
+       "median": 14.033126833584902,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 1,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.25,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: scales_fitted_range_implausible (  temperature fitted from 6 label(s), max residual 2.182); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 25,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "4 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 0 binary candidate(s)",
+      "topology": "1 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 14.033126833584902,
+       "median": 14.033126833584902,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 1,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.25,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: scales_fitted_range_implausible (  temperature fitted from 6 label(s), max residual 2.182); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 25,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "4 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 0 binary candidate(s)",
+      "topology": "1 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3893442622947987,
+       "median": 0.3893442622947987,
+       "n": 1
+      },
+      "f1": 0.25,
+      "n_pred": 4,
+      "n_true": 4,
+      "precision": 0.25,
+      "recall": 0.25,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 18,
+       "max_temperature_difference_kelvin": 0.392734122601496,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlSi-12Tan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.3333333333333333,
+      "loose_precision": 0.5,
+      "n_pred": 2,
+      "n_true": 4,
+      "precision": 0.5,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 13.461306605693949,
+       "median": 13.461306605693949,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.6745); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=933.077 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 7,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "9 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.28571428571428575,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 4,
+      "precision": 0.3333333333333333,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 1.008); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=945.872 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.28571428571428575,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 4,
+      "precision": 0.3333333333333333,
+      "recall": 0.25
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 1.008); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=945.872 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1662
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 4,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.674); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=932.077 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 7,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-AlZn-93Mey-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3704567783515813,
+       "median": 0.3704567783515813,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.5964702624421534,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 2,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 1 binary candidate(s)",
+      "topology": "0 invariant candidates, 11 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 2,
+      "precision": null,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 1 binary candidate(s)",
+      "topology": "0 invariant candidates, 11 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2504
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.19042081066612582,
+       "median": 0.19042081066612582,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.30050464784960695,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.192722423777127,
+       "median": 0.192722423777127,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 0.18815934004567225,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 10 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.889527433647288,
+       "median": 0.889527433647288,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.3049); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=981.106 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 0.8940905173787428,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.889527433647288,
+       "median": 0.889527433647288,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.3049); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=981.106 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 0.8940905173787428,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.2979314638398023,
+       "median": 0.2979314638398023,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 0.29336838010834754,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 10 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-CrFe-11Xio-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 3,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.3804844150582767,
+       "median": 0.3804844150582767,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.3813732176780604,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.7108062642834057,
+       "median": 1.7108062642834057,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 1.709917461663622,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.7108062642834057,
+       "median": 1.7108062642834057,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 2,
+       "max_temperature_difference_kelvin": 1.709917461663622,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2717
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.8715966562639323,
+       "median": 0.8715966562639323,
+       "n": 1
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.8724854588837161,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-CuMg-16Hal-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.443161498187749,
+       "median": 4.443161498187749,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 8.068669378869572,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "6 invariant candidates, 14 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.669069134910558,
+       "median": 6.669069134910558,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 7.646699174170408,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 10 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 6.669069134910558,
+       "median": 6.669069134910558,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 7.646699174170408,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 10 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2118
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 9,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.369831821416199,
+       "median": 4.369831821416199,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 8.021564995367044,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "6 invariant candidates, 14 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-CuNi-87Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_consistent_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 0,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "0 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 3 figure(s), 0 binary candidate(s)",
+      "topology": "0 invariant candidates, 1 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 3 figure(s), 0 binary candidate(s)",
+      "topology": "0 invariant candidates, 1 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3041
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": null,
+      "n_pred": 0,
+      "n_true": 0,
+      "precision": null,
+      "recall": null,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_consistent_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 0,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "0 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-CuPb-86Hay-LB-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.013057153205409122,
+       "median": 0.013057153205409122,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 9.095e-13); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=933.077 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 8.656172420929352,
+       "median": 8.656172420929352,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 20.11 is 5.0% of the left axis span; a scale is accep); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=952.87 lies more than 25% of the frame outside); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 2 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 6,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 8.656172420929352,
+       "median": 8.656172420929352,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 20.11 is 5.0% of the left axis span; a scale is accep); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=952.87 lies more than 25% of the frame outside); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 2 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2555
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6878032791300939,
+       "median": 0.6878032791300939,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 3 label(s), max residual 3.411e-13); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=932.077 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 4 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.1379310344827586,
+      "loose_precision": 0.14285714285714285,
+      "n_pred": 14,
+      "n_true": 15,
+      "precision": 0.14285714285714285,
+      "recall": 0.13333333333333333
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 3,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 23,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "22 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "3 invariant candidates, 11 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 15,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=43.072 lies more than 25% of the frame outside); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 22,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 9 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 15,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 1,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=43.072 lies more than 25% of the frame outside); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 22,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 9 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.8,
+      "loose_precision": 1.0,
+      "n_pred": 10,
+      "n_true": 15,
+      "precision": 1.0,
+      "recall": 0.6666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 3,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 23,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "17 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "3 invariant candidates, 11 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-MgSi-12Sch-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.6273078080959635,
+       "median": 1.6273078080959635,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 2.008084902215387,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.523166131100879,
+       "median": 4.523166131100879,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=994.684 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": 4.519840800850261,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.523166131100879,
+       "median": 4.523166131100879,
+       "n": 1
+      },
+      "f1": 0.5,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 0.5,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis; at least 3 are needed before a misread la); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=994.684 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": 4.519840800850261,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 8 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2899
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 6,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6455447403183712,
+       "median": 0.6455447403183712,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.7167657013230837,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "0 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 6 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-MgSn-04Fri-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 5,
+      "n_true": 7,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.46396134509484455,
+       "median": 0.46396134509484455,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.8305772044886908,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "7 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.292937275419149,
+       "median": 2.292937275419149,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 6 label(s), max residual 0.5287); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=537.241 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": 2.7898821113878967,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 1 figure(s), 0 binary candidate(s)",
+      "topology": "2 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.292937275419149,
+       "median": 2.292937275419149,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature fitted from 6 label(s), max residual 0.5287); then declared axes from truth (oracle): frame_only (binary axis detection error: declared tick at pixel_y=537.241 lies more than 25% of the frame outsid); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 3,
+       "max_temperature_difference_kelvin": 2.7898821113878967,
+       "mode": "positional"
+      },
+      "crop": "truth figure bbox (oracle)",
+      "fields": "2 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 1 figure(s), 0 binary candidate(s)",
+      "topology": "2 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 3004
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 7,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.5500270730382226,
+       "median": 0.5500270730382226,
+       "n": 2
+      },
+      "f1": 1.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": true,
+       "discrepancies": 1,
+       "max_temperature_difference_kelvin": 0.739470496334377,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "2 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-NiTi-04Tok-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 15,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.842727896932047,
+       "median": 2.842727896932047,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 2.8407964172708944,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "7 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 15,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 11.070351464093164,
+       "median": 11.070351464093164,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis do not run monotonically along the axis, so); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 8,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 15,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 11.070351464093164,
+       "median": 11.070351464093164,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis do not run monotonically along the axis, so); then declared axes from truth (oracle): calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 8,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 5122
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 15,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.1538549888568923,
+       "median": 1.1538549888568923,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 6,
+       "max_temperature_difference_kelvin": 1.1519235091957398,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "1 invariant candidates, 13 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-PbSn-17Gie-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.7432023613098977,
+       "median": 2.7432023613098977,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 2.7472502074235194,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "6 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 9 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.6069644827994125,
+       "median": 1.6069644827994125,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: scales_fitted_frame_overshoots_labels (  temperature fitted from 5 label(s), max residual 0.2678); then declared axes from truth (oracle): scales_fitted_frame_overshoots_labels (  temperature fitted from 2 label(s), max residual 2.274e-13 [declared]); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 10,
+       "max_temperature_difference_kelvin": 1.6029166366857908,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "6 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.6069644827994125,
+       "median": 1.6069644827994125,
+       "n": 1
+      },
+      "f1": 0.2857142857142857,
+      "n_pred": 6,
+      "n_true": 1,
+      "precision": 0.16666666666666666,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "detect_binary_axes: scales_fitted_frame_overshoots_labels (  temperature fitted from 5 label(s), max residual 0.2678); then declared axes from truth (oracle): scales_fitted_frame_overshoots_labels (  temperature fitted from 2 label(s), max residual 2.274e-13 [declared]); calibration written from truth frame (oracle)",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 10,
+       "max_temperature_difference_kelvin": 1.6029166366857908,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "5 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "6 invariant candidates, 3 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 1221
+     },
+     "fields": {
+      "f1": null,
+      "loose_precision": null,
+      "n_pred": 0,
+      "n_true": 5,
+      "precision": null,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 2.477816006235116,
+       "median": 2.477816006235116,
+       "n": 1
+      },
+      "f1": 0.4,
+      "n_pred": 4,
+      "n_true": 1,
+      "precision": 0.25,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 4,
+       "max_temperature_difference_kelvin": 2.481863852348738,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "4 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "4 invariant candidates, 10 unlabelled faces"
+     }
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "clean_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.33333333333333337,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.4371903529089991,
+       "median": 0.4371903529089991,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": 0.685002919764429,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   },
+   "degraded_raster": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.33333333333333337,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 8,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "Tesseract searchable PDF: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "image_only_pdf": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.33333333333333337,
+      "loose_precision": 1.0,
+      "n_pred": 1,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 8,
+       "max_temperature_difference_kelvin": null,
+       "mode": "positional"
+      },
+      "crop": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+      "fields": "1 printed labels from tesseract words placed with the tool calibration",
+      "panels": "image_only.pdf (no text layer): 0 figure(s), 0 binary candidate(s); image_only.pdf + Tesseract text layer: 4 figure(s), 1 binary candidate(s)",
+      "topology": "2 invariant candidates, 2 unlabelled faces"
+     }
+    }
+   },
+   "vector": {
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": null,
+      "mean_pred_to_true": null,
+      "mean_true_to_pred": null,
+      "precision@0.01": null,
+      "pred_points": 0,
+      "recall@0.01": 0.0,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.5714285714285715,
+      "loose_precision": 1.0,
+      "n_pred": 2,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.4
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.0928150050422687,
+       "median": 0.0928150050422687,
+       "n": 2
+      },
+      "f1": 0.5714285714285715,
+      "n_pred": 5,
+      "n_true": 2,
+      "precision": 0.4,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "status": {
+     "phase_diagram": {
+      "calibration": "automatic: detect_binary_axes calibrated",
+      "compare": "proposal_conflicts_with_database",
+      "compare_detail": {
+       "all_matched": false,
+       "discrepancies": 5,
+       "max_temperature_difference_kelvin": 0.1500367721737348,
+       "mode": "positional"
+      },
+      "crop": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+      "fields": "3 printed labels from pdf text layer placed with the tool calibration",
+      "panels": "vector.pdf: 4 figure(s), 1 binary candidate(s)",
+      "topology": "5 invariant candidates, 7 unlabelled faces"
+     }
+    }
+   }
+  }
+ }
+}

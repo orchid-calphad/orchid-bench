@@ -1,0 +1,56 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "bfc481ae45b259d3c8e66694",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "L",
+    "reason": "Marker 1 is located in the high-temperature region above the liquidus line, which corresponds to the single-phase liquid field (L)."
+   },
+   {
+    "marker": 2,
+    "assemblage": "none of these",
+    "reason": "Marker 2 lies below the liquidus of Al3Ni and above the 651 °C eutectic line, which corresponds to the two-phase field Al3Ni + L. This phase assemblage is not among the offered choices."
+   },
+   {
+    "marker": 3,
+    "assemblage": "L+NiAl",
+    "reason": "Marker 3 is situated above the 1139 °C peritectic isotherm between the liquidus and the NiAl phase boundary, corresponding to the two-phase field L + NiAl."
+   },
+   {
+    "marker": 4,
+    "assemblage": "none of these",
+    "reason": "Marker 4 is located at the Al-rich corner near the solid solution (Al) or (Al)+L, neither of which is among the offered choices."
+   },
+   {
+    "marker": 5,
+    "assemblage": "none of these",
+    "reason": "Marker 5 lies below the eutectic temperature of 651 °C in the two-phase field (Al) + Al3Ni, which is not among the offered choices."
+   },
+   {
+    "marker": 6,
+    "assemblage": "Al3Ni2+L",
+    "reason": "Marker 6 is between the 854 °C and 1139 °C invariant reactions, bounded by the liquidus on the left and the Al3Ni2 phase on the right, placing it in the Al3Ni2 + L two-phase field."
+   },
+   {
+    "marker": 7,
+    "assemblage": "none of these",
+    "reason": "Marker 7 sits to the right of the liquidus line between 854 °C and 1139 °C in the two-phase field Al3Ni2 + L, which is not among the offered choices."
+   },
+   {
+    "marker": 8,
+    "assemblage": "L",
+    "reason": "Marker 8 is positioned to the left (above) the liquidus boundary, inside the completely molten liquid region (L)."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1493,
+  "cached_content_token_count": null,
+  "candidates_token_count": 578,
+  "thoughts_token_count": 6173,
+  "total_token_count": 8244
+ },
+ "seconds": 52.4
+}

@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "a1f012398c64b1f7a2124b3e",
+ "result": {
+  "table_kind": "transition_temperatures",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1464.4,
+    "temperature_unit": "K",
+    "temperature_printed": "1464.4",
+    "temperature_role": "transition",
+    "temperature_basis": "cell",
+    "calculation_settings": {
+     "temperature_treatment": "calculated"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3432,
+  "cached_content_token_count": null,
+  "candidates_token_count": 143,
+  "thoughts_token_count": 4216,
+  "total_token_count": 7791
+ },
+ "seconds": 31.8
+}

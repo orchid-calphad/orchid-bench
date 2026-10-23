@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "c87ea17f3648324c8897b64e",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ag",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "1",
+    "temperature": 2600,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 132,
+  "thoughts_token_count": 1636,
+  "total_token_count": 5126
+ },
+ "seconds": 15.1
+}

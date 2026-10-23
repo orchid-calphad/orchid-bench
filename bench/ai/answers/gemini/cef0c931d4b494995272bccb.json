@@ -1,0 +1,44 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "cef0c931d4b494995272bccb",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu,Ni)",
+    "phases_present": [
+     "(Cu,Ni)"
+    ],
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "column_units": [
+   {
+    "column_header": "Stability range / K",
+    "unit": "K"
+   },
+   {
+    "column_header": "at T / K",
+    "unit": "K"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3362,
+  "cached_content_token_count": null,
+  "candidates_token_count": 190,
+  "thoughts_token_count": 2446,
+  "total_token_count": 5998
+ },
+ "seconds": 20.8
+}

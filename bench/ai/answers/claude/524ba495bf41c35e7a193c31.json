@@ -1,0 +1,139 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Marker in the large top field above both liquidus curves (liquid); liquid is not among the choices. No printed field labels."
+  },
+  {
+   "marker": 2,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits outside the plot frame at the top-right corner."
+  },
+  {
+   "marker": 3,
+   "assemblage": "cannot tell",
+   "reason": "Marker covers the meeting of the liquidus/solidus near the Cu axis top; field not resolvable."
+  },
+  {
+   "marker": 4,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the right-hand liquidus line."
+  },
+  {
+   "marker": 5,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the right-hand solidus line."
+  },
+  {
+   "marker": 6,
+   "assemblage": "(Cu)",
+   "reason": "Field between the right solidus curve and the Cu axis, below the melting point: Cu-side terminal solid field."
+  },
+  {
+   "marker": 7,
+   "assemblage": "(Cu)+L",
+   "reason": "Field between right liquidus and right solidus above the horizontal invariant line."
+  },
+  {
+   "marker": 8,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the left liquidus line."
+  },
+  {
+   "marker": 9,
+   "assemblage": "(Ag)",
+   "reason": "Field between the Ag axis and the left solidus, above the invariant line: Ag-side terminal solid field."
+  },
+  {
+   "marker": 10,
+   "assemblage": "(Ag)+L",
+   "reason": "Field between left liquidus and left solidus above the horizontal invariant line."
+  },
+  {
+   "marker": 11,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the left liquidus line."
+  },
+  {
+   "marker": 12,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the point where the liquidus curves meet the invariant line."
+  },
+  {
+   "marker": 13,
+   "assemblage": "(Ag)+(Cu)",
+   "reason": "Large field below the horizontal invariant line between the two solvus curves."
+  },
+  {
+   "marker": 14,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the junction of the left solidus, solvus and invariant line."
+  },
+  {
+   "marker": 15,
+   "assemblage": "(Ag)",
+   "reason": "Marker at the Ag axis edge where the band between axis and left solvus is wide."
+  },
+  {
+   "marker": 16,
+   "assemblage": "cannot tell",
+   "reason": "Marker covers the right solvus lines."
+  },
+  {
+   "marker": 17,
+   "assemblage": "(Ag)",
+   "reason": "Marker at the Ag axis edge inside the thin band between axis and left solvus."
+  },
+  {
+   "marker": 18,
+   "assemblage": "cannot tell",
+   "reason": "Marker covers the right solvus lines near the axis."
+  },
+  {
+   "marker": 19,
+   "assemblage": "cannot tell",
+   "reason": "Marker covers the right solvus line at the frame edge."
+  },
+  {
+   "marker": 20,
+   "assemblage": "(Ag)",
+   "reason": "Marker at the Ag axis edge inside the thin band between axis and left solvus."
+  },
+  {
+   "marker": 21,
+   "assemblage": "cannot tell",
+   "reason": "Marker where the left solvus essentially meets the axis; band not resolvable."
+  },
+  {
+   "marker": 22,
+   "assemblage": "cannot tell",
+   "reason": "Marker on the bottom frame line near the right solvus."
+  },
+  {
+   "marker": 23,
+   "assemblage": "cannot tell",
+   "reason": "Marker at the bottom-right frame corner."
+  },
+  {
+   "marker": 24,
+   "assemblage": "none of these",
+   "reason": "Marker on the bottom frame line within the two-solid field below the invariant line; not liquid."
+  },
+  {
+   "marker": 25,
+   "assemblage": "none of these",
+   "reason": "Marker on the bottom frame line within the two-solid field below the invariant line; not liquid."
+  },
+  {
+   "marker": 26,
+   "assemblage": "none of these",
+   "reason": "Marker on the bottom frame line within the two-solid field below the invariant line; not liquid."
+  },
+  {
+   "marker": 27,
+   "assemblage": "none of these",
+   "reason": "Marker on the bottom frame line within the two-solid field below the invariant line."
+  }
+ ]
+}

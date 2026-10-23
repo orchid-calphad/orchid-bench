@@ -1,0 +1,16 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "214caebe172450177ef61b4d",
+ "result": {
+  "table_kind": "transition_temperatures",
+  "rows": []
+ },
+ "usage": {
+  "prompt_token_count": 3279,
+  "cached_content_token_count": null,
+  "candidates_token_count": 13,
+  "thoughts_token_count": 675,
+  "total_token_count": 3967
+ },
+ "seconds": 6.8
+}

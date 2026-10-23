@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "af1294d77156d48febed8e5e",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_printed": "1000",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 147,
+  "thoughts_token_count": 1776,
+  "total_token_count": 5281
+ },
+ "seconds": 15.8
+}

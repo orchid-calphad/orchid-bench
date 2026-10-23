@@ -1,0 +1,16 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4b55ff7e7976fa30f44d7f80",
+ "result": {
+  "table_kind": "other",
+  "rows": []
+ },
+ "usage": {
+  "prompt_token_count": 3369,
+  "cached_content_token_count": null,
+  "candidates_token_count": 13,
+  "thoughts_token_count": 473,
+  "total_token_count": 3855
+ },
+ "seconds": 7.4
+}

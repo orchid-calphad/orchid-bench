@@ -1,4 +1,494 @@
 {
+ "ai_spend": {
+  "by_kind": {
+   "context": {
+    "calls": 3,
+    "errors": 0,
+    "input": 1183,
+    "output": 69,
+    "thinking": 964,
+    "usd_conservative": 0.0095,
+    "usd_list": 0.0048
+   },
+   "inv_table": {
+    "calls": 76,
+    "errors": 0,
+    "input": 165473,
+    "output": 55471,
+    "thinking": 101968,
+    "usd_conservative": 1.429,
+    "usd_list": 0.7145
+   },
+   "pd_fields": {
+    "calls": 79,
+    "errors": 0,
+    "input": 121413,
+    "output": 50327,
+    "thinking": 515928,
+    "usd_conservative": 4.429,
+    "usd_list": 2.2145
+   },
+   "text": {
+    "calls": 73,
+    "errors": 0,
+    "input": 44193,
+    "output": 79934,
+    "thinking": 212587,
+    "usd_conservative": 2.2602,
+    "usd_list": 1.1301
+   },
+   "thermo_table": {
+    "calls": 270,
+    "errors": 0,
+    "input": 928632,
+    "output": 48079,
+    "thinking": 762798,
+    "usd_conservative": 7.4745,
+    "usd_list": 3.7373
+   },
+   "thermo_table_v5": {
+    "calls": 12,
+    "errors": 0,
+    "input": 28673,
+    "output": 16208,
+    "thinking": 54299,
+    "usd_conservative": 0.5718,
+    "usd_list": 0.2859
+   },
+   "thermo_table_v6": {
+    "calls": 12,
+    "errors": 0,
+    "input": 30245,
+    "output": 20015,
+    "thinking": 74544,
+    "usd_conservative": 0.7546,
+    "usd_list": 0.3773
+   }
+  },
+  "claude_subset": "answered by Claude Code sub-agents; no separate API billing recorded",
+  "model": "gemini-3.8-flash",
+  "price_source": "third-party price trackers, Oct 2026 (list); conservative = 2x list. Not confirmed on Google's page.",
+  "price_usd_per_million": {
+   "conservative": {
+    "input": 1.5,
+    "output_incl_thinking": 7.5
+   },
+   "list": {
+    "input": 0.75,
+    "output_incl_thinking": 3.75
+   }
+  },
+  "total": {
+   "calls": 525,
+   "errors": 0,
+   "input": 1319812,
+   "output": 270103,
+   "thinking": 1723088,
+   "usd_conservative": 16.9287,
+   "usd_list": 8.4643
+  }
+ },
+ "ai_subset": [
+  {
+   "degraded_raster": 0.6190476190476191,
+   "metric": "row_recall",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.5238095238095238,
+   "metric": "row_recall",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 0.9047619047619048
+  },
+  {
+   "degraded_raster": 0.6190476190476191,
+   "metric": "row_recall",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_precision",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.8461538461538461,
+   "metric": "row_precision",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 0.9047619047619048
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_precision",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "T_printed_exact",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "T_printed_exact",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "T_printed_exact",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.9166666666666666,
+   "metric": "x_printed_exact",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "x_printed_exact",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.75,
+   "metric": "x_printed_exact",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 0.9
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "type_accuracy",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "type_accuracy",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "type_accuracy",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "evidence_accuracy",
+   "reader": "ai_gemini_subset",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "evidence_accuracy",
+   "reader": "ai_claude",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "evidence_accuracy",
+   "reader": "ai_dual",
+   "task": "invariant_table",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.25,
+   "metric": "row_recall",
+   "reader": "ai_gemini_subset",
+   "task": "phase_stability",
+   "vector": 0.25
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_recall",
+   "reader": "ai_claude",
+   "task": "phase_stability",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.25,
+   "metric": "row_recall",
+   "reader": "ai_dual",
+   "task": "phase_stability",
+   "vector": 0.25
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_precision",
+   "reader": "ai_gemini_subset",
+   "task": "phase_stability",
+   "vector": 0.8333333333333334
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_precision",
+   "reader": "ai_claude",
+   "task": "phase_stability",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "row_precision",
+   "reader": "ai_dual",
+   "task": "phase_stability",
+   "vector": 0.8333333333333334
+  },
+  {
+   "degraded_raster": 0.0,
+   "metric": "structure_accuracy",
+   "reader": "ai_gemini_subset",
+   "task": "phase_stability",
+   "vector": 0.0
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "structure_accuracy",
+   "reader": "ai_claude",
+   "task": "phase_stability",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.0,
+   "metric": "structure_accuracy",
+   "reader": "ai_dual",
+   "task": "phase_stability",
+   "vector": 0.0
+  },
+  {
+   "degraded_raster": 0.0,
+   "metric": "record_recall",
+   "reader": "ai_gemini_subset",
+   "task": "thermo_tables",
+   "vector": 0.0
+  },
+  {
+   "degraded_raster": 0.8604651162790697,
+   "metric": "record_recall",
+   "reader": "ai_claude",
+   "task": "thermo_tables",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.0,
+   "metric": "record_recall",
+   "reader": "ai_dual",
+   "task": "thermo_tables",
+   "vector": 0.0
+  },
+  {
+   "degraded_raster": null,
+   "metric": "record_precision",
+   "reader": "ai_gemini_subset",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "record_precision",
+   "reader": "ai_claude",
+   "task": "thermo_tables",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": null,
+   "metric": "record_precision",
+   "reader": "ai_dual",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": null,
+   "metric": "value_exact",
+   "reader": "ai_gemini_subset",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "value_exact",
+   "reader": "ai_claude",
+   "task": "thermo_tables",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": null,
+   "metric": "value_exact",
+   "reader": "ai_dual",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": null,
+   "metric": "unit_accuracy",
+   "reader": "ai_gemini_subset",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": 1.0,
+   "metric": "unit_accuracy",
+   "reader": "ai_claude",
+   "task": "thermo_tables",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": null,
+   "metric": "unit_accuracy",
+   "reader": "ai_dual",
+   "task": "thermo_tables",
+   "vector": null
+  },
+  {
+   "degraded_raster": 30,
+   "metric": "field_pred",
+   "reader": "ai_gemini_subset",
+   "task": "phase_diagram",
+   "vector": 22
+  },
+  {
+   "degraded_raster": 20,
+   "metric": "field_pred",
+   "reader": "ai_claude",
+   "task": "phase_diagram",
+   "vector": 22
+  },
+  {
+   "degraded_raster": 22,
+   "metric": "field_pred",
+   "reader": "ai_dual",
+   "task": "phase_diagram",
+   "vector": 22
+  },
+  {
+   "degraded_raster": 0.6,
+   "metric": "field_precision",
+   "reader": "ai_gemini_subset",
+   "task": "phase_diagram",
+   "vector": 0.7272727272727273
+  },
+  {
+   "degraded_raster": 0.75,
+   "metric": "field_precision",
+   "reader": "ai_claude",
+   "task": "phase_diagram",
+   "vector": 0.7272727272727273
+  },
+  {
+   "degraded_raster": 0.8181818181818182,
+   "metric": "field_precision",
+   "reader": "ai_dual",
+   "task": "phase_diagram",
+   "vector": 0.7272727272727273
+  },
+  {
+   "degraded_raster": 0.4146341463414634,
+   "metric": "field_recall",
+   "reader": "ai_gemini_subset",
+   "task": "phase_diagram",
+   "vector": 0.36585365853658536
+  },
+  {
+   "degraded_raster": 0.36585365853658536,
+   "metric": "field_recall",
+   "reader": "ai_claude",
+   "task": "phase_diagram",
+   "vector": 0.36585365853658536
+  },
+  {
+   "degraded_raster": 0.3902439024390244,
+   "metric": "field_recall",
+   "reader": "ai_dual",
+   "task": "phase_diagram",
+   "vector": 0.36585365853658536
+  },
+  {
+   "degraded_raster": 49,
+   "metric": "values_pred",
+   "reader": "ai_gemini_subset",
+   "task": "text",
+   "vector": 83
+  },
+  {
+   "degraded_raster": 48,
+   "metric": "values_pred",
+   "reader": "ai_claude",
+   "task": "text",
+   "vector": 82
+  },
+  {
+   "degraded_raster": 46,
+   "metric": "values_pred",
+   "reader": "ai_dual",
+   "task": "text",
+   "vector": 82
+  },
+  {
+   "degraded_raster": 0.9795918367346939,
+   "metric": "precision",
+   "reader": "ai_gemini_subset",
+   "task": "text",
+   "vector": 0.9879518072289156
+  },
+  {
+   "degraded_raster": 0.9791666666666666,
+   "metric": "precision",
+   "reader": "ai_claude",
+   "task": "text",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.9782608695652174,
+   "metric": "precision",
+   "reader": "ai_dual",
+   "task": "text",
+   "vector": 1.0
+  },
+  {
+   "degraded_raster": 0.32,
+   "metric": "recall",
+   "reader": "ai_gemini_subset",
+   "task": "text",
+   "vector": 0.5466666666666666
+  },
+  {
+   "degraded_raster": 0.31333333333333335,
+   "metric": "recall",
+   "reader": "ai_claude",
+   "task": "text",
+   "vector": 0.5466666666666666
+  },
+  {
+   "degraded_raster": 0.3,
+   "metric": "recall",
+   "reader": "ai_dual",
+   "task": "text",
+   "vector": 0.5466666666666666
+  }
+ ],
  "extractor_status": {
   "assessed_pd": [
    {
@@ -9,13 +499,41 @@
     "task": "phase_diagram"
    },
    {
-    "count": 14,
-    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refuse",
+    "count": 2,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
     "rendering": "clean_raster",
     "stage": "calibration",
     "task": "phase_diagram"
    },
    {
+    "count": 2,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 5, y pairs 0",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 7,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 0",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 3,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 6, y pairs 1",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "clean_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
     "count": 4,
     "outcome": "automatic (ticks + printed labels)",
     "rendering": "degraded_raster",
@@ -23,17 +541,31 @@
     "task": "phase_diagram"
    },
    {
-    "count": 2,
-    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refuse",
+    "count": 1,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 4, y pairs 1",
     "rendering": "degraded_raster",
     "stage": "calibration",
     "task": "phase_diagram"
    },
    {
     "count": 14,
-    "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too",
+    "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
     "rendering": "degraded_raster",
     "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "degraded_raster",
+    "stage": "crop",
     "task": "phase_diagram"
    },
    {
@@ -44,17 +576,31 @@
     "task": "phase_diagram"
    },
    {
-    "count": 2,
-    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refuse",
+    "count": 1,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 4, y pairs 1",
     "rendering": "image_only_pdf",
     "stage": "calibration",
     "task": "phase_diagram"
    },
    {
     "count": 14,
-    "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too",
+    "outcome": "manual from truth axes (oracle) after automatic failure: no plot frame: too few long straight edges",
     "rendering": "image_only_pdf",
     "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "image_only_pdf",
+    "stage": "crop",
     "task": "phase_diagram"
    },
    {
@@ -66,9 +612,526 @@
    },
    {
     "count": 2,
-    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refuse",
+    "outcome": "manual from truth axes (oracle) after automatic failure: calibration refused: x pairs 1, y pairs 0",
     "rendering": "vector",
     "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "vector",
+    "stage": "crop",
+    "task": "phase_diagram"
+   }
+  ],
+  "assessed_pd_auto": [
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 1, y pairs 0); no detector calibration -> truth axes (oracle)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 6, y pairs 0); no detector calibration -> truth axes (oracle)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 6, y pairs 1); no detector calibration -> truth axes (oracle)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 6,
+    "outcome": "automatic (assessed_pd ticks + printed labels)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 1, y pairs 0)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 5, y pairs 0)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 6,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 0)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 6, y pairs 1)",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 18,
+    "outcome": "Tesseract searchable PDF via extract_pdf_figure_panels",
+    "rendering": "clean_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "truth figure bbox (oracle) (oracle)",
+    "rendering": "clean_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 4, y pairs 1); no detector calibration -> truth axes (oracle)",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 10,
+    "outcome": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "automatic (assessed_pd ticks + printed labels)",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 8,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 16,
+    "outcome": "Tesseract searchable PDF via extract_pdf_figure_panels",
+    "rendering": "degraded_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "truth figure bbox (oracle) (oracle)",
+    "rendering": "degraded_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 4, y pairs 1); no detector calibration -> truth axes (oracle)",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 10,
+    "outcome": "assessed_pd failed (no plot frame: too few long straight edges); no detector calibration -> truth axes (oracle",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "automatic (assessed_pd ticks + printed labels)",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 8,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (no plot frame: too few long straight edges)",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 16,
+    "outcome": "image_only.pdf + Tesseract text layer via extract_pdf_figure_panels",
+    "rendering": "image_only_pdf",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "truth figure bbox (oracle) (oracle)",
+    "rendering": "image_only_pdf",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "assessed_pd failed (calibration refused: x pairs 0, y pairs 0); no detector calibration -> truth axes (oracle)",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 18,
+    "outcome": "automatic (assessed_pd ticks + printed labels)",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "thermo_extractor detect_binary_axes after assessed_pd failure (calibration refused: x pairs 0, y pairs 0)",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "vector.pdf via extract_pdf_figure_panels",
+    "rendering": "vector",
+    "stage": "crop",
+    "task": "phase_diagram"
+   }
+  ],
+  "raster_markers": [
+   {
+    "count": 41,
+    "outcome": "ok",
+    "rendering": "clean_raster",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 41,
+    "outcome": "ok",
+    "rendering": "degraded_raster",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 41,
+    "outcome": "ok",
+    "rendering": "image_only_pdf",
+    "stage": "markers",
+    "task": "xy"
+   }
+  ],
+  "raster_topology": [
+   {
+    "count": 16,
+    "outcome": "automatic: detect_binary_axes calibrated",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 9.095e-13); then declared a",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.6745); then declared axes",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 3.538 is 1.",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis;",
+    "rendering": "clean_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 19,
+    "outcome": "proposal_conflicts_with_database",
+    "rendering": "clean_raster",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "proposal_consistent_with_database",
+    "rendering": "clean_raster",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 18,
+    "outcome": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+    "rendering": "clean_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "clean_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 9,
+    "outcome": "automatic: detect_binary_axes calibrated",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 1.008); then declared axes ",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.3049); then declared axes",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 6 label(s), max residual 0.5287); then declared axes",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis d",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 20.11 is 5.",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis;",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: scales_fitted_frame_overshoots_labels (  temperature fitted from 5 label(s), max residual ",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: scales_fitted_range_implausible (  temperature fitted from 6 label(s), max residual 2.182)",
+    "rendering": "degraded_raster",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 19,
+    "outcome": "proposal_conflicts_with_database",
+    "rendering": "degraded_raster",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "proposal_consistent_with_database",
+    "rendering": "degraded_raster",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 16,
+    "outcome": "Tesseract searchable PDF -> extract_pdf_figure_panels binary_candidate",
+    "rendering": "degraded_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "degraded_raster",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 9,
+    "outcome": "automatic: detect_binary_axes calibrated",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 4 label(s), max residual 1.008); then declared axes ",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.3049); then declared axes",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 6 label(s), max residual 0.5287); then declared axes",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis d",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 20.11 is 5.",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: too_few_labels (2 labelled tick(s) on the left axis;",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: scales_fitted_frame_overshoots_labels (  temperature fitted from 5 label(s), max residual ",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: scales_fitted_range_implausible (  temperature fitted from 6 label(s), max residual 2.182)",
+    "rendering": "image_only_pdf",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 19,
+    "outcome": "proposal_conflicts_with_database",
+    "rendering": "image_only_pdf",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "proposal_consistent_with_database",
+    "rendering": "image_only_pdf",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 16,
+    "outcome": "image_only.pdf + Tesseract text layer -> extract_pdf_figure_panels binary_candidate",
+    "rendering": "image_only_pdf",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 4,
+    "outcome": "truth figure bbox (oracle)",
+    "rendering": "image_only_pdf",
+    "stage": "crop",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 16,
+    "outcome": "automatic: detect_binary_axes calibrated",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 3 label(s), max residual 3.411e-13); then declared a",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature fitted from 5 label(s), max residual 0.674); then declared axes ",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: labels_not_monotone (label values on the left axis d",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "detect_binary_axes: frame_only (  temperature not_fitted: residual_exceeds_tolerance (max residual 4.085 is 1.",
+    "rendering": "vector",
+    "stage": "calibration",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 19,
+    "outcome": "proposal_conflicts_with_database",
+    "rendering": "vector",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "proposal_consistent_with_database",
+    "rendering": "vector",
+    "stage": "compare",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 20,
+    "outcome": "vector.pdf -> extract_pdf_figure_panels binary_candidate",
+    "rendering": "vector",
+    "stage": "crop",
     "task": "phase_diagram"
    }
   ],
@@ -81,6 +1144,69 @@
     "task": "phase_diagram"
    },
    {
+    "count": 6,
+    "outcome": "0",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "1",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 3,
+    "outcome": "18",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "2",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "28",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "6",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 1,
+    "outcome": "7",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 3,
+    "outcome": "8",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
+    "count": 2,
+    "outcome": "9",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "phase_diagram"
+   },
+   {
     "count": 16,
     "outcome": "failed: x-axis: fewer than two ticks touch the frame; cannot calibrate",
     "rendering": "vector",
@@ -89,14 +1215,14 @@
    },
    {
     "count": 5,
-    "outcome": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are ",
+    "outcome": "failed: x-axis: only 0 numeric label(s) align with ticks; at least two are required",
     "rendering": "vector",
     "stage": "calibration",
     "task": "xy"
    },
    {
     "count": 2,
-    "outcome": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are ",
+    "outcome": "failed: y-axis: only 1 numeric label(s) align with ticks; at least two are required",
     "rendering": "vector",
     "stage": "calibration",
     "task": "xy"
@@ -110,7 +1236,7 @@
    },
    {
     "count": 9,
-    "outcome": "failed: no legend swatch with text beside it was found; the manifest needs ",
+    "outcome": "failed: no legend swatch with text beside it was found; the manifest needs at least one legend entry",
     "rendering": "vector",
     "stage": "manifest",
     "task": "xy"
@@ -137,6 +1263,41 @@
     "task": "xy"
    },
    {
+    "count": 39,
+    "outcome": "0",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 4,
+    "outcome": "1",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 3,
+    "outcome": "10",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 2,
+    "outcome": "13",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
+    "count": 2,
+    "outcome": "14",
+    "rendering": "vector",
+    "stage": "markers",
+    "task": "xy"
+   },
+   {
     "count": 41,
     "outcome": "ok",
     "rendering": "vector",
@@ -145,18 +1306,542 @@
    }
   ]
  },
+ "headline": [
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.7587591240875913
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "metric": "cell_exact",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.5667883211678832
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "metric": "cell_exact",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.3332116788321168
+   },
+   "extractor": "camelot_lattice",
+   "family": "det",
+   "metric": "cell_exact",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.44963503649635034,
+    "degraded_raster": 0.16423357664233576,
+    "image_only_pdf": 0.17153284671532848,
+    "vector": 0.4474452554744526
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "metric": "cell_exact",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.5915492957746479
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "metric": "row_recall",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.6197183098591549
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "metric": "row_recall",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.0,
+    "degraded_raster": 0.0,
+    "image_only_pdf": 0.0,
+    "vector": 0.0
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "metric": "row_recall",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.9859154929577465,
+    "degraded_raster": 0.8450704225352113,
+    "image_only_pdf": 0.8450704225352113,
+    "vector": 0.9859154929577465
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "row_recall",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.8484848484848485
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "metric": "row_recall",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.18181818181818182
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "metric": "row_recall",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5151515151515151,
+    "degraded_raster": 0.30303030303030304,
+    "image_only_pdf": 0.3181818181818182,
+    "vector": 0.5151515151515151
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "metric": "row_recall",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.30303030303030304,
+    "degraded_raster": 0.2878787878787879,
+    "image_only_pdf": 0.2878787878787879,
+    "vector": 0.36363636363636365
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "row_recall",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.9285714285714286
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "metric": "structure_accuracy",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 1.0
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "metric": "structure_accuracy",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.7156862745098039,
+    "degraded_raster": 0.25,
+    "image_only_pdf": 0.25396825396825395,
+    "vector": 0.7156862745098039
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "metric": "structure_accuracy",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.0,
+    "degraded_raster": 0.0,
+    "image_only_pdf": 0.0,
+    "vector": 0.0
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "structure_accuracy",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.653416149068323
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "metric": "record_recall",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.9366459627329192
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "metric": "record_recall",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.18385093167701863,
+    "degraded_raster": 0.0670807453416149,
+    "image_only_pdf": 0.08571428571428572,
+    "vector": 0.18385093167701863
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "metric": "record_recall",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.0,
+    "degraded_raster": 0.006211180124223602,
+    "image_only_pdf": 0.0,
+    "vector": 0.007453416149068323
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "record_recall",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.5876010781671159
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "metric": "marker_recall@0.01",
+   "task": "xy"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.738544474393531
+   },
+   "extractor": "vector_markers_tool",
+   "family": "prev",
+   "metric": "marker_recall@0.01",
+   "task": "xy"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.7412398921832885,
+    "degraded_raster": 0.6172506738544474,
+    "image_only_pdf": 0.6172506738544474,
+    "vector": "n/r"
+   },
+   "extractor": "raster_markers",
+   "family": "det",
+   "metric": "marker_recall@0.01",
+   "task": "xy"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.8856183229706277
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "metric": "boundary_recall@0.01",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5409636570573655,
+    "degraded_raster": 0.7530025406771239,
+    "image_only_pdf": 0.7530025406771239,
+    "vector": 0.5765442148067438
+   },
+   "extractor": "assessed_pd",
+   "family": "prev",
+   "metric": "boundary_recall@0.01",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5407916676808658,
+    "degraded_raster": 0.7362039845129967,
+    "image_only_pdf": 0.7362039845129967,
+    "vector": 0.5791174747137904
+   },
+   "extractor": "assessed_pd_auto",
+   "family": "det",
+   "metric": "boundary_recall@0.01",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.75
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "metric": "field_precision",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5471698113207547,
+    "degraded_raster": 0.36363636363636365,
+    "image_only_pdf": 0.36363636363636365,
+    "vector": 0.7377049180327869
+   },
+   "extractor": "assessed_pd",
+   "family": "prev",
+   "metric": "field_precision",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5384615384615384,
+    "degraded_raster": 0.41379310344827586,
+    "image_only_pdf": 0.41379310344827586,
+    "vector": 0.7377049180327869
+   },
+   "extractor": "assessed_pd_auto",
+   "family": "det",
+   "metric": "field_precision",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.21428571428571427,
+    "degraded_raster": 0.375,
+    "image_only_pdf": 0.375,
+    "vector": 1.0
+   },
+   "extractor": "raster_topology",
+   "family": "det",
+   "metric": "field_precision",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.6632653061224489,
+    "degraded_raster": 0.6538461538461539,
+    "image_only_pdf": 0.6435643564356436,
+    "vector": 0.7864077669902912
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "field_precision",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.147239263803681
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "metric": "field_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.1656441717791411,
+    "degraded_raster": 0.06748466257668712,
+    "image_only_pdf": 0.06748466257668712,
+    "vector": 0.25766871165644173
+   },
+   "extractor": "assessed_pd",
+   "family": "prev",
+   "metric": "field_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.1656441717791411,
+    "degraded_raster": 0.06748466257668712,
+    "image_only_pdf": 0.06748466257668712,
+    "vector": 0.25766871165644173
+   },
+   "extractor": "assessed_pd_auto",
+   "family": "det",
+   "metric": "field_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.0736196319018405,
+    "degraded_raster": 0.03680981595092025,
+    "image_only_pdf": 0.03680981595092025,
+    "vector": 0.22699386503067484
+   },
+   "extractor": "raster_topology",
+   "family": "det",
+   "metric": "field_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.3558282208588957,
+    "degraded_raster": 0.38650306748466257,
+    "image_only_pdf": 0.36809815950920244,
+    "vector": 0.4539877300613497
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "field_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": 0.6078431372549019
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "metric": "invariant_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.7254901960784313,
+    "degraded_raster": 0.9215686274509803,
+    "image_only_pdf": 0.9215686274509803,
+    "vector": 0.7450980392156863
+   },
+   "extractor": "assessed_pd",
+   "family": "prev",
+   "metric": "invariant_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.7254901960784313,
+    "degraded_raster": 0.9215686274509803,
+    "image_only_pdf": 0.9215686274509803,
+    "vector": 0.7450980392156863
+   },
+   "extractor": "assessed_pd_auto",
+   "family": "det",
+   "metric": "invariant_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.5294117647058824,
+    "degraded_raster": 0.35294117647058826,
+    "image_only_pdf": 0.35294117647058826,
+    "vector": 0.49019607843137253
+   },
+   "extractor": "raster_topology",
+   "family": "det",
+   "metric": "invariant_recall",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.8623188405797102,
+    "degraded_raster": 0.7391304347826086,
+    "image_only_pdf": 0.7391304347826086,
+    "vector": 0.9728260869565217
+   },
+   "extractor": "text_regex",
+   "family": "prev",
+   "metric": "recall",
+   "task": "text"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.3423913043478261,
+    "degraded_raster": 0.3134057971014493,
+    "image_only_pdf": 0.266304347826087,
+    "vector": 0.532608695652174
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "recall",
+   "task": "text"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 0.7986577181208053,
+    "degraded_raster": 0.8127490039840638,
+    "image_only_pdf": 0.8127490039840638,
+    "vector": 0.8470031545741324
+   },
+   "extractor": "text_regex",
+   "family": "prev",
+   "metric": "precision",
+   "task": "text"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": 1.0,
+    "degraded_raster": 0.9774011299435028,
+    "image_only_pdf": 0.9607843137254902,
+    "vector": 0.9865771812080537
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "metric": "precision",
+   "task": "text"
+  }
+ ],
  "tasks": [
   {
    "by_rendering": {
-    "clean_raster": {
-     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
-    },
-    "degraded_raster": {
-     "not_run": "not run: as clean raster"
-    },
-    "image_only_pdf": {
-     "not_run": "not run: no text layer; OCR table route needs OpenCV"
-    },
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
     "vector": {
      "cell_exact": 0.7587591240875913,
      "cell_exact_normalised": 0.7587591240875913,
@@ -168,19 +1853,777 @@
     }
    },
    "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "cell_exact": 0.5667883211678832,
+     "cell_exact_normalised": 0.5667883211678832,
+     "cells": 2740,
+     "numeric_exact": 0.7146417445482866,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 101,
+     "tables_true": 81
+    }
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "cell_exact": 0.3332116788321168,
+     "cell_exact_normalised": 0.3332116788321168,
+     "cells": 2740,
+     "numeric_exact": 0.3781931464174455,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 62,
+     "tables_true": 81
+    }
+   },
+   "extractor": "camelot_lattice",
+   "family": "det",
    "task": "tables"
   },
   {
    "by_rendering": {
     "clean_raster": {
-     "not_run": "not run: multipanel raster marker proposals (`proposals/multipanel_markers.py`) need OpenCV"
+     "cell_exact": 0.44963503649635034,
+     "cell_exact_normalised": 0.48175182481751827,
+     "cells": 2740,
+     "numeric_exact": 0.5482866043613707,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 84,
+     "tables_true": 81
     },
     "degraded_raster": {
-     "not_run": "not run: as clean raster"
+     "cell_exact": 0.16423357664233576,
+     "cell_exact_normalised": 0.17883211678832117,
+     "cells": 2740,
+     "numeric_exact": 0.30654205607476637,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 85,
+     "tables_true": 81
     },
     "image_only_pdf": {
-     "not_run": "not run: vector route needs PDF vector objects; raster route needs OpenCV"
+     "cell_exact": 0.17153284671532848,
+     "cell_exact_normalised": 0.18722627737226277,
+     "cells": 2740,
+     "numeric_exact": 0.3320872274143302,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 85,
+     "tables_true": 81
     },
+    "vector": {
+     "cell_exact": 0.4474452554744526,
+     "cell_exact_normalised": 0.477007299270073,
+     "cells": 2740,
+     "numeric_exact": 0.5439252336448598,
+     "numeric_rel_err_median": 0.0,
+     "tables_pred": 84,
+     "tables_true": 81
+    }
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "task": "tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "cell_exact": 0.6651376146788991,
+     "cell_exact_normalised": 0.6651376146788991,
+     "cells": 654,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "numeric_exact": 0.8729096989966555,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": 0.9767441860465116,
+     "row_recall": 0.5915492957746479,
+     "rows_pred": 43,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 1.0,
+     "x_recall": 1.0
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "cell_exact": 0.5458715596330275,
+     "cell_exact_normalised": 0.5458715596330275,
+     "cells": 654,
+     "citation_accuracy": 0.0,
+     "evidence_accuracy": 0.3333333333333333,
+     "numeric_exact": 0.6187290969899666,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": 1.0,
+     "row_recall": 0.6197183098591549,
+     "rows_pred": 44,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 1.0,
+     "x_recall": 1.0
+    }
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "cell_exact": 0.27370030581039756,
+     "cell_exact_normalised": 0.27370030581039756,
+     "cells": 654,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "numeric_exact": 0.2909698996655518,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": 0.9047619047619048,
+     "row_recall": 0.2676056338028169,
+     "rows_pred": 21,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 1.0,
+     "x_recall": 1.0
+    }
+   },
+   "extractor": "camelot_lattice",
+   "family": "det",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "T_err_K_median": null,
+     "T_printed_exact": null,
+     "cell_exact": 0.5351681957186545,
+     "cell_exact_normalised": 0.5795107033639144,
+     "cells": 654,
+     "citation_accuracy": null,
+     "evidence_accuracy": null,
+     "numeric_exact": 0.7625418060200669,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": null,
+     "row_recall": 0.0,
+     "rows_pred": 0,
+     "rows_true": 71,
+     "type_accuracy": null,
+     "x_err_median": null,
+     "x_printed_exact": null,
+     "x_recall": null
+    },
+    "degraded_raster": {
+     "T_err_K_median": null,
+     "T_printed_exact": null,
+     "cell_exact": 0.2018348623853211,
+     "cell_exact_normalised": 0.20795107033639143,
+     "cells": 654,
+     "citation_accuracy": null,
+     "evidence_accuracy": null,
+     "numeric_exact": 0.3712374581939799,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": null,
+     "row_recall": 0.0,
+     "rows_pred": 0,
+     "rows_true": 71,
+     "type_accuracy": null,
+     "x_err_median": null,
+     "x_printed_exact": null,
+     "x_recall": null
+    },
+    "image_only_pdf": {
+     "T_err_K_median": null,
+     "T_printed_exact": null,
+     "cell_exact": 0.20642201834862386,
+     "cell_exact_normalised": 0.21406727828746178,
+     "cells": 654,
+     "citation_accuracy": null,
+     "evidence_accuracy": null,
+     "numeric_exact": 0.40468227424749165,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": null,
+     "row_recall": 0.0,
+     "rows_pred": 0,
+     "rows_true": 71,
+     "type_accuracy": null,
+     "x_err_median": null,
+     "x_printed_exact": null,
+     "x_recall": null
+    },
+    "vector": {
+     "T_err_K_median": null,
+     "T_printed_exact": null,
+     "cell_exact": 0.536697247706422,
+     "cell_exact_normalised": 0.581039755351682,
+     "cells": 654,
+     "citation_accuracy": null,
+     "evidence_accuracy": null,
+     "numeric_exact": 0.7625418060200669,
+     "numeric_rel_err_median": 0.0,
+     "row_precision": null,
+     "row_recall": 0.0,
+     "rows_pred": 0,
+     "rows_true": 71,
+     "type_accuracy": null,
+     "x_err_median": null,
+     "x_printed_exact": null,
+     "x_recall": null
+    }
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "row_precision": 1.0,
+     "row_recall": 0.9859154929577465,
+     "rows_pred": 70,
+     "rows_true": 71,
+     "type_accuracy": 0.9857142857142858,
+     "x_err_median": 0.0,
+     "x_printed_exact": 0.826530612244898,
+     "x_recall": 0.826530612244898
+    },
+    "degraded_raster": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "row_precision": 1.0,
+     "row_recall": 0.8450704225352113,
+     "rows_pred": 60,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 0.8313253012048193,
+     "x_recall": 0.8313253012048193
+    },
+    "image_only_pdf": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "row_precision": 1.0,
+     "row_recall": 0.8450704225352113,
+     "rows_pred": 60,
+     "rows_true": 71,
+     "type_accuracy": 1.0,
+     "x_err_median": 0.0,
+     "x_printed_exact": 0.8373493975903614,
+     "x_recall": 0.8373493975903614
+    },
+    "vector": {
+     "T_err_K_median": 0.0,
+     "T_printed_exact": 1.0,
+     "citation_accuracy": 1.0,
+     "evidence_accuracy": 1.0,
+     "row_precision": 1.0,
+     "row_recall": 0.9859154929577465,
+     "rows_pred": 70,
+     "rows_true": 71,
+     "type_accuracy": 0.9857142857142858,
+     "x_err_median": 0.0,
+     "x_printed_exact": 0.8418367346938775,
+     "x_recall": 0.8418367346938775
+    }
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "task": "invariant_table"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": 0.0,
+     "cell_exact": 0.6105263157894737,
+     "cell_exact_normalised": 0.6105263157894737,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.5643939393939394,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.9642857142857143,
+     "prototype_accuracy": 0.8928571428571429,
+     "row_precision": 1.0,
+     "row_recall": 0.8484848484848485,
+     "rows_pred": 56,
+     "rows_true": 66,
+     "structure_accuracy": 0.9285714285714286,
+     "strukturbericht_accuracy": 0.9285714285714286
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": 0.0,
+     "cell_exact": 0.17105263157894737,
+     "cell_exact_normalised": 0.17105263157894737,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.19318181818181818,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 1.0,
+     "prototype_accuracy": 1.0,
+     "row_precision": 1.0,
+     "row_recall": 0.18181818181818182,
+     "rows_pred": 12,
+     "rows_true": 66,
+     "structure_accuracy": 1.0,
+     "strukturbericht_accuracy": 1.0
+    }
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": 0.0,
+     "cell_exact": 0.2394736842105263,
+     "cell_exact_normalised": 0.2394736842105263,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.25,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.8888888888888888,
+     "prototype_accuracy": 0.8888888888888888,
+     "row_precision": 1.0,
+     "row_recall": 0.2727272727272727,
+     "rows_pred": 18,
+     "rows_true": 66,
+     "structure_accuracy": 0.8888888888888888,
+     "strukturbericht_accuracy": 0.8888888888888888
+    }
+   },
+   "extractor": "camelot_lattice",
+   "family": "det",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": null,
+     "cell_exact": 0.4842105263157895,
+     "cell_exact_normalised": 0.5486842105263158,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.000999999999999945,
+     "numeric_exact": 0.7310606060606061,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.8529411764705882,
+     "prototype_accuracy": 0.8235294117647058,
+     "row_precision": 0.6938775510204082,
+     "row_recall": 0.5151515151515151,
+     "rows_pred": 49,
+     "rows_true": 66,
+     "structure_accuracy": 0.7156862745098039,
+     "strukturbericht_accuracy": 0.47058823529411764
+    },
+    "degraded_raster": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": null,
+     "cell_exact": 0.20789473684210527,
+     "cell_exact_normalised": 0.22763157894736843,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.5,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.25,
+     "prototype_accuracy": 0.35,
+     "row_precision": 0.35714285714285715,
+     "row_recall": 0.30303030303030304,
+     "rows_pred": 56,
+     "rows_true": 66,
+     "structure_accuracy": 0.25,
+     "strukturbericht_accuracy": 0.15
+    },
+    "image_only_pdf": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": null,
+     "cell_exact": 0.19736842105263158,
+     "cell_exact_normalised": 0.21973684210526315,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0,
+     "numeric_exact": 0.5189393939393939,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.2857142857142857,
+     "prototype_accuracy": 0.3333333333333333,
+     "row_precision": 0.38181818181818183,
+     "row_recall": 0.3181818181818182,
+     "rows_pred": 55,
+     "rows_true": 66,
+     "structure_accuracy": 0.25396825396825395,
+     "strukturbericht_accuracy": 0.14285714285714285
+    },
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": null,
+     "cell_exact": 0.4776315789473684,
+     "cell_exact_normalised": 0.5434210526315789,
+     "cells": 760,
+     "homogeneity_T_err_K_median": 0.0,
+     "homogeneity_x_err_median": 0.0004999999999999449,
+     "numeric_exact": 0.7386363636363636,
+     "numeric_rel_err_median": 0.0,
+     "pearson_accuracy": 0.8529411764705882,
+     "prototype_accuracy": 0.8235294117647058,
+     "row_precision": 0.6938775510204082,
+     "row_recall": 0.5151515151515151,
+     "rows_pred": 49,
+     "rows_true": 66,
+     "structure_accuracy": 0.7156862745098039,
+     "strukturbericht_accuracy": 0.47058823529411764
+    }
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "T_high_err_K_median": null,
+     "T_low_err_K_median": null,
+     "homogeneity_T_err_K_median": null,
+     "homogeneity_x_err_median": null,
+     "pearson_accuracy": 0.0,
+     "prototype_accuracy": 0.0,
+     "row_precision": 0.9523809523809523,
+     "row_recall": 0.30303030303030304,
+     "rows_pred": 21,
+     "rows_true": 66,
+     "structure_accuracy": 0.0,
+     "strukturbericht_accuracy": 0.0
+    },
+    "degraded_raster": {
+     "T_high_err_K_median": null,
+     "T_low_err_K_median": null,
+     "homogeneity_T_err_K_median": null,
+     "homogeneity_x_err_median": null,
+     "pearson_accuracy": 0.0,
+     "prototype_accuracy": 0.0,
+     "row_precision": 0.95,
+     "row_recall": 0.2878787878787879,
+     "rows_pred": 20,
+     "rows_true": 66,
+     "structure_accuracy": 0.0,
+     "strukturbericht_accuracy": 0.0
+    },
+    "image_only_pdf": {
+     "T_high_err_K_median": null,
+     "T_low_err_K_median": null,
+     "homogeneity_T_err_K_median": null,
+     "homogeneity_x_err_median": null,
+     "pearson_accuracy": 0.0,
+     "prototype_accuracy": 0.0,
+     "row_precision": 0.95,
+     "row_recall": 0.2878787878787879,
+     "rows_pred": 20,
+     "rows_true": 66,
+     "structure_accuracy": 0.0,
+     "strukturbericht_accuracy": 0.0
+    },
+    "vector": {
+     "T_high_err_K_median": 0.0,
+     "T_low_err_K_median": null,
+     "homogeneity_T_err_K_median": null,
+     "homogeneity_x_err_median": null,
+     "pearson_accuracy": 0.0,
+     "prototype_accuracy": 0.0,
+     "row_precision": 0.9230769230769231,
+     "row_recall": 0.36363636363636365,
+     "rows_pred": 26,
+     "rows_true": 66,
+     "structure_accuracy": 0.0,
+     "strukturbericht_accuracy": 0.0
+    }
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "phase_fraction_panels": 25,
+     "phase_fraction_panels_found": 20,
+     "phase_fraction_point_err_median": 1.5879112039241194e-07,
+     "phase_fraction_point_recall@0.01": 0.7692307692307693
+    }
+   },
+   "extractor": "vector_route",
+   "family": "prev",
+   "task": "phase_stability"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.8909229595728452,
+     "cell_exact_normalised": 0.8909229595728452,
+     "cells": 1311,
+     "numeric_exact": 0.9689320388349515,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 0.7514285714285714,
+     "record_recall": 0.653416149068323,
+     "records_pred": 700,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 0.9372623574144486,
+     "value_exact": 0.8422053231939164,
+     "within_1pct": 0.8422053231939164
+    }
+   },
+   "extractor": "tables_pdfplumber",
+   "family": "prev",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.8123569794050344,
+     "cell_exact_normalised": 0.8123569794050344,
+     "cells": 1311,
+     "numeric_exact": 0.8844660194174757,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 0.9973544973544973,
+     "record_recall": 0.9366459627329192,
+     "records_pred": 756,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 1.0,
+     "within_1pct": 1.0
+    }
+   },
+   "extractor": "camelot_stream",
+   "family": "det",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
+    "vector": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.42105263157894735,
+     "cell_exact_normalised": 0.42105263157894735,
+     "cells": 1311,
+     "numeric_exact": 0.4407766990291262,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 1.0,
+     "record_recall": 0.4720496894409938,
+     "records_pred": 380,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 1.0,
+     "within_1pct": 1.0
+    }
+   },
+   "extractor": "camelot_lattice",
+   "family": "det",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.38215102974828374,
+     "cell_exact_normalised": 0.3897787948131198,
+     "cells": 1311,
+     "numeric_exact": 0.43398058252427185,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 1.0,
+     "record_recall": 0.18385093167701863,
+     "records_pred": 148,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 0.9932432432432432,
+     "within_1pct": 0.9932432432432432
+    },
+    "degraded_raster": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.11746758199847444,
+     "cell_exact_normalised": 0.13348588863463004,
+     "cells": 1311,
+     "numeric_exact": 0.23300970873786409,
+     "numeric_rel_err_median": 0.14727793696275074,
+     "record_precision": 0.75,
+     "record_recall": 0.0670807453416149,
+     "records_pred": 72,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 0.9259259259259259,
+     "within_1pct": 0.9259259259259259
+    },
+    "image_only_pdf": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.13653699466056446,
+     "cell_exact_normalised": 0.15255530129672007,
+     "cells": 1311,
+     "numeric_exact": 0.258252427184466,
+     "numeric_rel_err_median": 0.10873440285204995,
+     "record_precision": 0.8414634146341463,
+     "record_recall": 0.08571428571428572,
+     "records_pred": 82,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 0.9130434782608695,
+     "within_1pct": 0.927536231884058
+    },
+    "vector": {
+     "basis_accuracy": 1.0,
+     "cell_exact": 0.37986270022883295,
+     "cell_exact_normalised": 0.38138825324180015,
+     "cells": 1311,
+     "numeric_exact": 0.42524271844660194,
+     "numeric_rel_err_median": 0.0,
+     "record_precision": 1.0,
+     "record_recall": 0.18385093167701863,
+     "records_pred": 148,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 0.9932432432432432,
+     "within_1pct": 0.9932432432432432
+    }
+   },
+   "extractor": "ocr_table_cells",
+   "family": "det",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "basis_accuracy": null,
+     "record_precision": null,
+     "record_recall": 0.0,
+     "records_pred": 0,
+     "records_true": 805,
+     "rel_err_median": null,
+     "unit_accuracy": null,
+     "value_exact": null,
+     "within_1pct": null
+    },
+    "degraded_raster": {
+     "basis_accuracy": 1.0,
+     "record_precision": 1.0,
+     "record_recall": 0.006211180124223602,
+     "records_pred": 5,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 0.8,
+     "value_exact": 1.0,
+     "within_1pct": 0.8
+    },
+    "image_only_pdf": {
+     "basis_accuracy": null,
+     "record_precision": null,
+     "record_recall": 0.0,
+     "records_pred": 0,
+     "records_true": 805,
+     "rel_err_median": null,
+     "unit_accuracy": null,
+     "value_exact": null,
+     "within_1pct": null
+    },
+    "vector": {
+     "basis_accuracy": 1.0,
+     "record_precision": 1.0,
+     "record_recall": 0.007453416149068323,
+     "records_pred": 6,
+     "records_true": 805,
+     "rel_err_median": 0.0,
+     "unit_accuracy": 1.0,
+     "value_exact": 1.0,
+     "within_1pct": 1.0
+    }
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "task": "thermo_tables"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
     "vector": {
      "marker_points": 371,
      "marker_recall@0.01": 0.5876010781671159,
@@ -196,19 +2639,14 @@
     }
    },
    "extractor": "vector_route",
+   "family": "prev",
    "task": "xy"
   },
   {
    "by_rendering": {
-    "clean_raster": {
-     "not_run": "not run: multipanel raster marker proposals (`proposals/multipanel_markers.py`) need OpenCV"
-    },
-    "degraded_raster": {
-     "not_run": "not run: as clean raster"
-    },
-    "image_only_pdf": {
-     "not_run": "not run: vector route needs PDF vector objects; raster route needs OpenCV"
-    },
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
     "vector": {
      "marker_points": 371,
      "marker_recall@0.01": 0.738544474393531,
@@ -224,19 +2662,61 @@
     }
    },
    "extractor": "vector_markers_tool",
+   "family": "prev",
    "task": "xy"
   },
   {
    "by_rendering": {
     "clean_raster": {
-     "not_run": "not run: the vector route needs PDF vector objects (see assessed_pd for rasters)"
+     "marker_points": 371,
+     "marker_recall@0.01": 0.7412398921832885,
+     "panels_found": 41,
+     "panels_true": 73,
+     "point_err_mean": 0.30936245922927114,
+     "point_err_median": 0.19256846737448235,
+     "point_recall@0.01": 0.0794979079497908,
+     "points": 13623,
+     "series_precision": 0.45454545454545453,
+     "series_pred": 44,
+     "series_recall": 0.10471204188481675
     },
     "degraded_raster": {
-     "not_run": "not run: the vector route needs PDF vector objects (see assessed_pd for rasters)"
+     "marker_points": 371,
+     "marker_recall@0.01": 0.6172506738544474,
+     "panels_found": 41,
+     "panels_true": 73,
+     "point_err_mean": 0.12874807540149533,
+     "point_err_median": 0.08334036394426977,
+     "point_recall@0.01": 0.05740292152976584,
+     "points": 13623,
+     "series_precision": 0.39215686274509803,
+     "series_pred": 51,
+     "series_recall": 0.09424083769633508
     },
     "image_only_pdf": {
-     "not_run": "not run: the vector route needs PDF vector objects (see assessed_pd for rasters)"
+     "marker_points": 371,
+     "marker_recall@0.01": 0.6172506738544474,
+     "panels_found": 41,
+     "panels_true": 73,
+     "point_err_mean": 0.12874807540149533,
+     "point_err_median": 0.08334036394426977,
+     "point_recall@0.01": 0.05740292152976584,
+     "points": 13623,
+     "series_precision": 0.39215686274509803,
+     "series_pred": 51,
+     "series_recall": 0.09424083769633508
     },
+    "vector": "n/r"
+   },
+   "extractor": "raster_markers",
+   "family": "det",
+   "task": "xy"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": "n/r",
+    "degraded_raster": "n/r",
+    "image_only_pdf": "n/r",
     "vector": {
      "boundary_hausdorff95": 0.09914371884909813,
      "boundary_mean_dist": 0.009539555918722086,
@@ -258,6 +2738,7 @@
     }
    },
    "extractor": "vector_route",
+   "family": "prev",
    "task": "phase_diagram"
   },
   {
@@ -340,6 +2821,256 @@
     }
    },
    "extractor": "assessed_pd",
+   "family": "prev",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "boundary_hausdorff95": 0.3246877533914226,
+     "boundary_mean_dist": 0.0223023847979423,
+     "boundary_median_dT_K": 7.621666666666661,
+     "boundary_median_dx": 0.010867554525077516,
+     "boundary_precision@0.01": 0.8558083437212879,
+     "boundary_recall@0.01": 0.5407916676808658,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.5384615384615384,
+     "field_pred": 52,
+     "field_recall": 0.1656441717791411,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 1.682799999999966,
+     "invariant_precision": 0.3394495412844037,
+     "invariant_recall": 0.7254901960784313,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "degraded_raster": {
+     "boundary_hausdorff95": 0.2222839583303144,
+     "boundary_mean_dist": 0.025312093522263806,
+     "boundary_median_dT_K": 4.380498313492079,
+     "boundary_median_dx": 0.002157056087467464,
+     "boundary_precision@0.01": 0.8078459141062628,
+     "boundary_recall@0.01": 0.7362039845129967,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.41379310344827586,
+     "field_pred": 29,
+     "field_recall": 0.06748466257668712,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 3.3338245614034974,
+     "invariant_precision": 0.22488038277511962,
+     "invariant_recall": 0.9215686274509803,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "image_only_pdf": {
+     "boundary_hausdorff95": 0.2222839583303144,
+     "boundary_mean_dist": 0.025312093522263806,
+     "boundary_median_dT_K": 4.380498313492079,
+     "boundary_median_dx": 0.002157056087467464,
+     "boundary_precision@0.01": 0.8078459141062628,
+     "boundary_recall@0.01": 0.7362039845129967,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.41379310344827586,
+     "field_pred": 29,
+     "field_recall": 0.06748466257668712,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 3.3338245614034974,
+     "invariant_precision": 0.22488038277511962,
+     "invariant_recall": 0.9215686274509803,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "vector": {
+     "boundary_hausdorff95": 0.265300501134107,
+     "boundary_mean_dist": 0.021549726847569253,
+     "boundary_median_dT_K": 7.070126794258394,
+     "boundary_median_dx": 0.010720622878532041,
+     "boundary_precision@0.01": 0.8516383211654602,
+     "boundary_recall@0.01": 0.5791174747137904,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.7377049180327869,
+     "field_pred": 61,
+     "field_recall": 0.25766871165644173,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 0.6413229166666568,
+     "invariant_precision": 0.33043478260869563,
+     "invariant_recall": 0.7450980392156863,
+     "invariant_type_accuracy": 0.1125,
+     "invariant_x_err": null
+    }
+   },
+   "extractor": "assessed_pd_auto",
+   "family": "det",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "boundary_hausdorff95": null,
+     "boundary_mean_dist": null,
+     "boundary_median_dT_K": null,
+     "boundary_median_dx": null,
+     "boundary_precision@0.01": null,
+     "boundary_recall@0.01": 0.0,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.21428571428571427,
+     "field_pred": 56,
+     "field_recall": 0.0736196319018405,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 3.059071516733839,
+     "invariant_precision": 0.5,
+     "invariant_recall": 0.5294117647058824,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "degraded_raster": {
+     "boundary_hausdorff95": null,
+     "boundary_mean_dist": null,
+     "boundary_median_dT_K": null,
+     "boundary_median_dx": null,
+     "boundary_precision@0.01": null,
+     "boundary_recall@0.01": 0.0,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.375,
+     "field_pred": 16,
+     "field_recall": 0.03680981595092025,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 4.3485070433976825,
+     "invariant_precision": 0.4864864864864865,
+     "invariant_recall": 0.35294117647058826,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "image_only_pdf": {
+     "boundary_hausdorff95": null,
+     "boundary_mean_dist": null,
+     "boundary_median_dT_K": null,
+     "boundary_median_dx": null,
+     "boundary_precision@0.01": null,
+     "boundary_recall@0.01": 0.0,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.375,
+     "field_pred": 16,
+     "field_recall": 0.03680981595092025,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 4.3485070433976825,
+     "invariant_precision": 0.4864864864864865,
+     "invariant_recall": 0.35294117647058826,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "vector": {
+     "boundary_hausdorff95": null,
+     "boundary_mean_dist": null,
+     "boundary_median_dT_K": null,
+     "boundary_median_dx": null,
+     "boundary_precision@0.01": null,
+     "boundary_recall@0.01": 0.0,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 1.0,
+     "field_pred": 37,
+     "field_recall": 0.22699386503067484,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 1.5147358431453366,
+     "invariant_precision": 0.46296296296296297,
+     "invariant_recall": 0.49019607843137253,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    }
+   },
+   "extractor": "raster_topology",
+   "family": "det",
+   "task": "phase_diagram"
+  },
+  {
+   "by_rendering": {
+    "clean_raster": {
+     "boundary_hausdorff95": 0.3246877533914226,
+     "boundary_mean_dist": 0.0223023847979423,
+     "boundary_median_dT_K": 7.621666666666661,
+     "boundary_median_dx": 0.010867554525077516,
+     "boundary_precision@0.01": 0.8558083437212879,
+     "boundary_recall@0.01": 0.5407916676808658,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.6632653061224489,
+     "field_pred": 98,
+     "field_recall": 0.3558282208588957,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 1.682799999999966,
+     "invariant_precision": 0.3394495412844037,
+     "invariant_recall": 0.7254901960784313,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "degraded_raster": {
+     "boundary_hausdorff95": 0.2222839583303144,
+     "boundary_mean_dist": 0.025312093522263806,
+     "boundary_median_dT_K": 4.380498313492079,
+     "boundary_median_dx": 0.002157056087467464,
+     "boundary_precision@0.01": 0.8078459141062628,
+     "boundary_recall@0.01": 0.7362039845129967,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.6538461538461539,
+     "field_pred": 104,
+     "field_recall": 0.38650306748466257,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 3.3338245614034974,
+     "invariant_precision": 0.22488038277511962,
+     "invariant_recall": 0.9215686274509803,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "image_only_pdf": {
+     "boundary_hausdorff95": 0.2222839583303144,
+     "boundary_mean_dist": 0.025312093522263806,
+     "boundary_median_dT_K": 4.380498313492079,
+     "boundary_median_dx": 0.002157056087467464,
+     "boundary_precision@0.01": 0.8078459141062628,
+     "boundary_recall@0.01": 0.7362039845129967,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.6435643564356436,
+     "field_pred": 101,
+     "field_recall": 0.36809815950920244,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 3.3338245614034974,
+     "invariant_precision": 0.22488038277511962,
+     "invariant_recall": 0.9215686274509803,
+     "invariant_type_accuracy": 0.0,
+     "invariant_x_err": null
+    },
+    "vector": {
+     "boundary_hausdorff95": 0.265300501134107,
+     "boundary_mean_dist": 0.021549726847569253,
+     "boundary_median_dT_K": 7.070126794258394,
+     "boundary_median_dx": 0.010720622878532041,
+     "boundary_precision@0.01": 0.8516383211654602,
+     "boundary_recall@0.01": 0.5791174747137904,
+     "diagrams": 20,
+     "diagrams_with_output": 20,
+     "field_precision": 0.7864077669902912,
+     "field_pred": 103,
+     "field_recall": 0.4539877300613497,
+     "field_true_scorable": 163,
+     "invariant_T_err_K": 0.6413229166666568,
+     "invariant_precision": 0.33043478260869563,
+     "invariant_recall": 0.7450980392156863,
+     "invariant_type_accuracy": 0.1125,
+     "invariant_x_err": null
+    }
+   },
+   "extractor": "ai_gemini",
+   "family": "ai",
    "task": "phase_diagram"
   },
   {
@@ -374,127 +3105,43 @@
     }
    },
    "extractor": "text_regex",
+   "family": "prev",
    "task": "text"
   },
   {
    "by_rendering": {
     "clean_raster": {
-     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
+     "precision": 1.0,
+     "recall": 0.3423913043478261,
+     "value_only_recall": 0.287255542895238,
+     "values_pred": 189,
+     "values_true": 552
     },
     "degraded_raster": {
-     "not_run": "not run: as clean raster"
+     "precision": 0.9774011299435028,
+     "recall": 0.3134057971014493,
+     "value_only_recall": 0.2705265334850652,
+     "values_pred": 177,
+     "values_true": 552
     },
     "image_only_pdf": {
-     "not_run": "not run: no text layer; OCR table route needs OpenCV"
+     "precision": 0.9607843137254902,
+     "recall": 0.266304347826087,
+     "value_only_recall": 0.2393897033838201,
+     "values_pred": 153,
+     "values_true": 552
     },
     "vector": {
-     "T_err_K_median": 0.0,
-     "T_printed_exact": 1.0,
-     "cell_exact": 0.6651376146788991,
-     "cell_exact_normalised": 0.6651376146788991,
-     "cells": 654,
-     "citation_accuracy": 1.0,
-     "evidence_accuracy": 1.0,
-     "numeric_exact": 0.8729096989966555,
-     "numeric_rel_err_median": 0.0,
-     "row_precision": 0.9767441860465116,
-     "row_recall": 0.5915492957746479,
-     "rows_pred": 43,
-     "rows_true": 71,
-     "type_accuracy": 1.0,
-     "x_err_median": 0.0,
-     "x_printed_exact": 1.0,
-     "x_recall": 1.0
+     "precision": 0.9865771812080537,
+     "recall": 0.532608695652174,
+     "value_only_recall": 0.5081800946344146,
+     "values_pred": 298,
+     "values_true": 552
     }
    },
-   "extractor": "tables_pdfplumber",
-   "task": "invariant_table"
-  },
-  {
-   "by_rendering": {
-    "clean_raster": {
-     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
-    },
-    "degraded_raster": {
-     "not_run": "not run: as clean raster"
-    },
-    "image_only_pdf": {
-     "not_run": "not run: no text layer; OCR table route needs OpenCV"
-    },
-    "vector": {
-     "T_high_err_K_median": 0.0,
-     "T_low_err_K_median": 0.0,
-     "cell_exact": 0.6105263157894737,
-     "cell_exact_normalised": 0.6105263157894737,
-     "cells": 760,
-     "homogeneity_T_err_K_median": 0.0,
-     "homogeneity_x_err_median": 0.0,
-     "numeric_exact": 0.5643939393939394,
-     "numeric_rel_err_median": 0.0,
-     "pearson_accuracy": 0.9642857142857143,
-     "prototype_accuracy": 0.8928571428571429,
-     "row_precision": 1.0,
-     "row_recall": 0.8484848484848485,
-     "rows_pred": 56,
-     "rows_true": 66,
-     "structure_accuracy": 0.9285714285714286,
-     "strukturbericht_accuracy": 0.9285714285714286
-    }
-   },
-   "extractor": "tables_pdfplumber",
-   "task": "phase_stability"
-  },
-  {
-   "by_rendering": {
-    "clean_raster": {
-     "not_run": "not run: raster curve route needs OpenCV"
-    },
-    "degraded_raster": {
-     "not_run": "not run: as clean raster"
-    },
-    "image_only_pdf": {
-     "not_run": "not run: vector route needs PDF vector objects"
-    },
-    "vector": {
-     "phase_fraction_panels": 25,
-     "phase_fraction_panels_found": 20,
-     "phase_fraction_point_err_median": 1.5879112039241194e-07,
-     "phase_fraction_point_recall@0.01": 0.7692307692307693
-    }
-   },
-   "extractor": "vector_route",
-   "task": "phase_stability"
-  },
-  {
-   "by_rendering": {
-    "clean_raster": {
-     "not_run": "not run: `thermo_extractor.tables.ocr` (ocr_table_cells) needs OpenCV; Camelot not installed"
-    },
-    "degraded_raster": {
-     "not_run": "not run: as clean raster"
-    },
-    "image_only_pdf": {
-     "not_run": "not run: no text layer; OCR table route needs OpenCV"
-    },
-    "vector": {
-     "basis_accuracy": 1.0,
-     "cell_exact": 0.8909229595728452,
-     "cell_exact_normalised": 0.8909229595728452,
-     "cells": 1311,
-     "numeric_exact": 0.9689320388349515,
-     "numeric_rel_err_median": 0.0,
-     "record_precision": 0.7514285714285714,
-     "record_recall": 0.653416149068323,
-     "records_pred": 700,
-     "records_true": 805,
-     "rel_err_median": 0.0,
-     "unit_accuracy": 0.9372623574144486,
-     "value_exact": 0.8422053231939164,
-     "within_1pct": 0.8422053231939164
-    }
-   },
-   "extractor": "tables_pdfplumber",
-   "task": "thermo_tables"
+   "extractor": "ai_gemini",
+   "family": "ai",
+   "task": "text"
   }
  ]
 }

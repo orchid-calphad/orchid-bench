@@ -1,0 +1,34 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "L",
+   "reason": "Inset (Al-rich corner, 600-700 °C): above both liquidus curves meeting at the 651 °C eutectic point; continuous with the open liquid region."
+  },
+  {
+   "marker": 2,
+   "assemblage": "none of these",
+   "reason": "Inset: right of the rising liquidus, above the 651 °C line; two-phase liquid plus the compound whose vertical line stands at x(Ni)~0.25 in the main diagram, not (Ni)."
+  },
+  {
+   "marker": 3,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the Al axis just under the left liquidus curve near the eutectic line; field too small to resolve."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Inset: below the 651 °C eutectic line next to the Al axis; a two-solid field containing the Al-side terminal phase, not (Ni) or liquid."
+  },
+  {
+   "marker": 5,
+   "assemblage": "cannot tell",
+   "reason": "Two-phase field between liquidus and the compound boundary between 854 and 1139 °C; the solid partner is not labelled in the image."
+  },
+  {
+   "marker": 6,
+   "assemblage": "cannot tell",
+   "reason": "Marker sits on the liquidus curve next to the DTA points."
+  }
+ ]
+}

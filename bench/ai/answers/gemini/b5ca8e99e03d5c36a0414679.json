@@ -1,0 +1,341 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "b5ca8e99e03d5c36a0414679",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Cu",
+  "rows": [
+   {
+    "reaction": "L -> β",
+    "reaction_type": "congruent melting",
+    "phases": [
+     "L",
+     "β"
+    ],
+    "temperature": 1323.1,
+    "temperature_unit": "K",
+    "temperature_printed": "1323.1",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 76.5
+     },
+     {
+      "phase": "β",
+      "value": 76.5
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> β + (Cu)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "β",
+     "(Cu)"
+    ],
+    "temperature": 1309.9,
+    "temperature_unit": "K",
+    "temperature_printed": "1309.9",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 82.9
+     },
+     {
+      "phase": "β",
+      "value": 81.6
+     },
+     {
+      "phase": "(Cu)",
+      "value": 84.7
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> β + (Cu)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "β",
+     "(Cu)"
+    ],
+    "temperature": 1305.9,
+    "temperature_unit": "K",
+    "temperature_printed": "1305.9",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "L + β -> γ",
+    "reaction_type": "peritectic",
+    "phases": [
+     "L",
+     "β",
+     "γ"
+    ],
+    "temperature": 1293.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1293.8",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 65.8
+     },
+     {
+      "phase": "β",
+      "value": 68.2
+     },
+     {
+      "phase": "γ",
+      "value": 67.5
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L + γ -> β",
+    "reaction_type": "peritectic",
+    "phases": [
+     "L",
+     "γ",
+     "β"
+    ],
+    "temperature": 1266.7,
+    "temperature_unit": "K",
+    "temperature_printed": "1266.7",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 60.9
+     },
+     {
+      "phase": "γ",
+      "value": 66.1
+     },
+     {
+      "phase": "β",
+      "value": 64.4
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L + γ -> β",
+    "reaction_type": "peritectic",
+    "phases": [
+     "L",
+     "γ",
+     "β"
+    ],
+    "temperature": 1268.7,
+    "temperature_unit": "K",
+    "temperature_printed": "1268.7",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "L + β -> ζ",
+    "reaction_type": "peritectic",
+    "phases": [
+     "L",
+     "β",
+     "ζ"
+    ],
+    "temperature": 1015.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1015.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 28.6
+     },
+     {
+      "phase": "β",
+      "value": 40.7
+     },
+     {
+      "phase": "ζ",
+      "value": 37.3
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L + β -> ζ",
+    "reaction_type": "peritectic",
+    "phases": [
+     "L",
+     "β",
+     "ζ"
+    ],
+    "temperature": 1013.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1013.2",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "L -> (Al) + ζ",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "ζ"
+    ],
+    "temperature": 881.1,
+    "temperature_unit": "K",
+    "temperature_printed": "881.1",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 11.3
+     },
+     {
+      "phase": "(Al)",
+      "value": 5.4
+     },
+     {
+      "phase": "ζ",
+      "value": 26.6
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Al) + ζ",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "ζ"
+    ],
+    "temperature": 876.1,
+    "temperature_unit": "K",
+    "temperature_printed": "876.1",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "3"
+    ]
+   },
+   {
+    "reaction": "β -> γ + (Cu)",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "β",
+     "γ",
+     "(Cu)"
+    ],
+    "temperature": 840.0,
+    "temperature_unit": "K",
+    "temperature_printed": "840.0",
+    "compositions": [
+     {
+      "phase": "β",
+      "value": 76.2
+     },
+     {
+      "phase": "γ",
+      "value": 70.1
+     },
+     {
+      "phase": "(Cu)",
+      "value": 80.3
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "β -> γ + (Cu)",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "β",
+     "γ",
+     "(Cu)"
+    ],
+    "temperature": 843.0,
+    "temperature_unit": "K",
+    "temperature_printed": "843.0",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "5"
+    ]
+   },
+   {
+    "reaction": "ζ -> (Al) + β",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "ζ",
+     "(Al)",
+     "β"
+    ],
+    "temperature": 747.0,
+    "temperature_unit": "K",
+    "temperature_printed": "747.0",
+    "compositions": [
+     {
+      "phase": "ζ",
+      "value": 27.7
+     },
+     {
+      "phase": "(Al)",
+      "value": 4.2
+     },
+     {
+      "phase": "β",
+      "value": 32.1
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "ζ -> (Al) + β",
+    "reaction_type": "eutectoid",
+    "phases": [
+     "ζ",
+     "(Al)",
+     "β"
+    ],
+    "temperature": 743.0,
+    "temperature_unit": "K",
+    "temperature_printed": "743.0",
+    "source": "experimental",
+    "source_label": "T exp.ᵇ",
+    "citations": [
+     "4"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2560,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2016,
+  "thoughts_token_count": 1762,
+  "total_token_count": 6338
+ },
+ "seconds": 22.7
+}

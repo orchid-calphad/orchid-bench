@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4cc5e422f0e8853ed5909a91",
+ "result": {
+  "table_kind": "transition_temperatures",
+  "system": [
+   "Al",
+   "Ni"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "phases_present": [
+     "(Al)"
+    ],
+    "source": "this_work",
+    "source_label": "calculated",
+    "citations": [
+     "a",
+     "b"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2145,
+  "cached_content_token_count": null,
+  "candidates_token_count": 117,
+  "thoughts_token_count": 28938,
+  "total_token_count": 31200
+ },
+ "seconds": 202.5
+}

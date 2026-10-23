@@ -1,0 +1,39 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "21dfe273bb0aa41d501936a8",
+ "result": {
+  "table_kind": "invariant_reactions",
+  "system": [
+   "Ag",
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L2 = L1 + (Ni)",
+    "temperature": 1703.4,
+    "temperature_unit": "K",
+    "temperature_printed": "1703:4 K",
+    "temperature_role": "invariant",
+    "phases_present": [
+     "L2",
+     "L1",
+     "(Ni)"
+    ],
+    "reaction": "L2 = L1 + (Ni)",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L2 = L1 + (Ni), lies at 1703:4 K.",
+    "page": 1
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 469,
+  "cached_content_token_count": null,
+  "candidates_token_count": 209,
+  "thoughts_token_count": 874,
+  "total_token_count": 1552
+ },
+ "seconds": 7.5
+}

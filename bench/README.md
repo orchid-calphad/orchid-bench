@@ -48,6 +48,22 @@ $PY bench/showcase/build.py
 $PY bench/score.py --outputs bench/outputs/<your-extractor>
 ```
 
+OpenCV / Camelot routes and AI readers (2026-10-22):
+
+```
+VPY=.venv-vision/bin/python        # opencv-python-headless 4.11, camelot-py 0.11.0, PyMuPDF, pdfplumber, pycalphad, pytesseract, scikit-image
+PYTHONPATH=~/projects/orchid-pipeline/src $VPY bench/baselines/run_all.py     # all deterministic routes + scores + results
+~/orchid-py313/bin/python bench/ai/prepare.py                 # reader requests from the production prompts (no calls)
+~/orchid-py313/bin/python bench/ai/run_gemini.py --cap-usd 22 # Gemini 3.8 Flash; key from GEMINI_API_KEY; spends money
+~/orchid-py313/bin/python bench/ai/map_outputs.py             # answers -> outputs/ai_* (then score + build_results)
+```
+
+New baselines: `ocr_pdf.py` (Tesseract searchable PDFs of the rasters), `tdb_topology.py` (build_binary_topology on the
+source TDB), `raster_pd.py` (figure panels + axis detection + blind topology + database comparison; assessed_pd with the
+automatic crop/axes = `assessed_pd_auto`), `tables_camelot.py`, `tables_ocr.py` (ocr_table_cells), `raster_xy.py`
+(multipanel marker detector). Reader answers are archived in `bench/ai/answers/` (Gemini cache with usage, Claude
+blind-reader answers) and the call ledger in `results/gemini_ledger.jsonl`.
+
 Environment knobs: `ORCHID_TDB_DIR`, `ORCHID_PD_DIR`, `OPEN_TDB`, `ASSESSED_PD_SRC`.
 
 ## Documents

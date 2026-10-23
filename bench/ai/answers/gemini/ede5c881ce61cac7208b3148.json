@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "ede5c881ce61cac7208b3148",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Ag)",
+    "temperature": 787,
+    "temperature_unit": "C",
+    "temperature_printed": "787",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3455,
+  "cached_content_token_count": null,
+  "candidates_token_count": 143,
+  "thoughts_token_count": 2739,
+  "total_token_count": 6337
+ },
+ "seconds": 18.8
+}

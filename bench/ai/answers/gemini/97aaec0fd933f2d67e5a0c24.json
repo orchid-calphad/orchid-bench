@@ -1,0 +1,100 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "97aaec0fd933f2d67e5a0c24",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Al",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "10",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_printed": "1450 K",
+    "temperature_role": "measurement",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 10,
+      "printed": "10"
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -3832,
+      "unit": "J mol^-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Cu at 1450 K; per mole of atoms",
+      "unit_source": "column_header",
+      "printed": "-3832"
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -7530,
+      "unit": "J mol^-1",
+      "phase": "liquid",
+      "reference_state": "pure liquid Al and Cu at 1450 K; per mole of atoms",
+      "unit_source": "column_header",
+      "printed": "-7530"
+     },
+     {
+      "quantity": "a(Al)",
+      "quantity_kind": "activity",
+      "value": 0.8918,
+      "phase": "liquid",
+      "component": "Al",
+      "reference_state": "pure liquid Al and Cu at 1450 K; per mole of atoms",
+      "unit_source": "not_printed",
+      "printed": "0.8918"
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.0054,
+      "phase": "liquid",
+      "component": "Cu",
+      "reference_state": "pure liquid Al and Cu at 1450 K; per mole of atoms",
+      "unit_source": "not_printed",
+      "printed": "0.0054"
+     }
+    ],
+    "source": "unlabelled",
+    "citations": []
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3339,
+  "cached_content_token_count": null,
+  "candidates_token_count": 444,
+  "thoughts_token_count": 1540,
+  "total_token_count": 5323
+ },
+ "seconds": 14.6
+}

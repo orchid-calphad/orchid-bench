@@ -1,0 +1,226 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Al",
+  "Ni"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "mole_fraction",
+ "rows": [
+  {
+   "row_label": "(Al)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 660.3,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Al)"
+   ],
+   "structure": {
+    "phase": "(Al)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Al)",
+     "element": "Ni",
+     "printed": "0.000 at 647",
+     "phase_source": "row_label",
+     "value": 0.0
+    }
+   ]
+  },
+  {
+   "row_label": "Al3Ni",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 853.9,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "Al3Ni"
+   ],
+   "structure": {
+    "phase": "Al3Ni",
+    "pearson_symbol": "oP16",
+    "strukturbericht": "D0₁₁",
+    "prototype": "Fe3C"
+   },
+   "phase_compositions": [
+    {
+     "phase": "Al3Ni",
+     "element": "Ni",
+     "printed": "0.250 at 77",
+     "phase_source": "row_label",
+     "value": 0.25
+    }
+   ]
+  },
+  {
+   "row_label": "Al3Ni2",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 1139.1,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "Al3Ni2"
+   ],
+   "structure": {
+    "phase": "Al3Ni2",
+    "pearson_symbol": "hP5",
+    "strukturbericht": "D5₁₃",
+    "prototype": "Ni2Al3"
+   },
+   "phase_compositions": [
+    {
+     "phase": "Al3Ni2",
+     "element": "Ni",
+     "printed": "0.355–0.413 at 857",
+     "phase_source": "row_label",
+     "value": 0.355,
+     "value_max": 0.413
+    }
+   ]
+  },
+  {
+   "row_label": "NiAl",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 1649.1,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "NiAl"
+   ],
+   "structure": {
+    "phase": "NiAl",
+    "pearson_symbol": "cP2",
+    "strukturbericht": "B2",
+    "prototype": "CsCl"
+   },
+   "phase_compositions": [
+    {
+     "phase": "NiAl",
+     "element": "Ni",
+     "printed": "0.456–0.711 at 1367",
+     "phase_source": "row_label",
+     "value": 0.456,
+     "value_max": 0.711
+    }
+   ]
+  },
+  {
+   "row_label": "Al3Ni5",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 700.2,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "Al3Ni5"
+   ],
+   "structure": {
+    "phase": "Al3Ni5"
+   },
+   "phase_compositions": [
+    {
+     "phase": "Al3Ni5",
+     "element": "Ni",
+     "printed": "0.625 at 27",
+     "phase_source": "row_label",
+     "value": 0.625
+    }
+   ]
+  },
+  {
+   "row_label": "Ni3Al",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 1369.6,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "Ni3Al"
+   ],
+   "structure": {
+    "phase": "Ni3Al",
+    "pearson_symbol": "cP4",
+    "strukturbericht": "L1₂",
+    "prototype": "Cu3Au"
+   },
+   "phase_compositions": [
+    {
+     "phase": "Ni3Al",
+     "element": "Ni",
+     "printed": "0.724–0.771 at 1047",
+     "phase_source": "row_label",
+     "value": 0.724,
+     "value_max": 0.771
+    }
+   ]
+  },
+  {
+   "row_label": "(Ni)",
+   "temperature": 27.0,
+   "temperature_unit": "C",
+   "temperature_printed": "< 27ᵃ",
+   "temperature_bound": "<",
+   "temperature_max": 1455.2,
+   "temperature_role": "transition",
+   "temperature_basis": "cell",
+   "source": "this_work",
+   "phases_present": [
+    "(Ni)"
+   ],
+   "structure": {
+    "phase": "(Ni)",
+    "pearson_symbol": "cF4",
+    "strukturbericht": "A1",
+    "prototype": "Cu"
+   },
+   "phase_compositions": [
+    {
+     "phase": "(Ni)",
+     "element": "Ni",
+     "printed": "0.784–1.000 at 1367",
+     "phase_source": "row_label",
+     "value": 0.784,
+     "value_max": 1.0
+    }
+   ]
+  }
+ ],
+ "notes": "Row temperature = stability range (from-to, C). \"< 27ᵃ\" footnote a: stable at the lowest calculated temperature. Homogeneity range x(Ni) is given at the separate \"at T / °C\" column value, recorded in each phase_compositions.printed: (Al) at 647; Al3Ni at 77; Al3Ni2 at 857; NiAl at 1367; Al3Ni5 at 27; Ni3Al at 1047; (Ni) at 1367. Footnote b (on 1649.1, 1369.6, 1455.2): congruent point (melting or transformation). Table continues on the next page as \"Table 2 (continued)\"; Al3Ni5 structure printed as dashes.",
+ "column_units": [
+  {
+   "column_header": "Stability range / °C",
+   "unit": "°C"
+  },
+  {
+   "column_header": "at T / °C",
+   "unit": "°C"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "685f0f42e3d2c1d23783fa63",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ni",
+   "Ti"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 2600,
+    "temperature_unit": "K",
+    "temperature_printed": "2600 K",
+    "temperature_role": "measurement",
+    "temperature_basis": "column_header",
+    "calculation_settings": {
+     "code": "none"
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3336,
+  "cached_content_token_count": null,
+  "candidates_token_count": 140,
+  "thoughts_token_count": 3039,
+  "total_token_count": 6515
+ },
+ "seconds": 24.9
+}

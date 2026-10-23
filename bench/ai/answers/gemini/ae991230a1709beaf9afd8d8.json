@@ -1,0 +1,119 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "ae991230a1709beaf9afd8d8",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Cu",
+   "Zn"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Cu) + L > B",
+    "reaction": "(Cu) + L > B",
+    "transition_kind": "peritectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, (Cu) + L > B, lies at 899 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "(Cu) + L - B",
+    "reaction": "(Cu) + L - B",
+    "transition_kind": "peritectic",
+    "source": "this_work",
+    "quote": "The peritectic reaction (Cu) + L - B is calculated at 899° °C, with 'L at x(Zn) = 0.375.",
+    "page": 1
+   },
+   {
+    "row_label": "B + L - y",
+    "reaction": "B + L - y",
+    "transition_kind": "peritectic",
+    "source": "this_work",
+    "quote": "We obtain 834 °C for the peritectic reaction (B + L - y), where L has a mole fraction of 0.593.",
+    "page": 1
+   },
+   {
+    "row_label": "y + L - 6",
+    "reaction": "y + L - 6",
+    "transition_kind": "peritectic",
+    "source": "other_calculation",
+    "quote": "The dataset places a peritectic (y + L - 6) at 703 °C; the composition of L is a mole fraction of 0.804.",
+    "page": 1
+   },
+   {
+    "row_label": "6 + L - e",
+    "reaction": "6 + L - e",
+    "transition_kind": "peritectic",
+    "source": "this_work",
+    "quote": "We obtain 600 °C for the peritectic reaction (6 + L - e), where L has x(Zn) = 0.883.",
+    "page": 1
+   },
+   {
+    "row_label": "6 - y + ¢",
+    "reaction": "6 - y + ¢",
+    "transition_kind": "eutectoid",
+    "source": "other_calculation",
+    "quote": "The dataset places a eutectoid (6 - y + ¢)-at 559-°C; the Soto of Bisa mole fraction of 0.749.",
+    "page": 2
+   },
+   {
+    "row_label": "8 + y -.B'",
+    "reaction": "8 + y -.B'",
+    "transition_kind": "peritectoid",
+    "source": "other_calculation",
+    "quote": "The dataset, places a peritectoid (8 + y -.B') at 463 °C; the composition of 8' is a mole fraction of 0.491.",
+    "page": 2
+   },
+   {
+    "row_label": "B'- (Cu) +'f'",
+    "reaction": "B'- (Cu) +'f'",
+    "transition_kind": "eutectoid",
+    "source": "this_work",
+    "quote": "Eutectoid equilibrium B'- (Cu) +'f' is found. at 460.°C and a mole fraction of 0.445 B).",
+    "page": 2
+   },
+   {
+    "row_label": "L + ¢ + (Zn)",
+    "reaction": "L + ¢ + (Zn)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The eutectic reaction L + ¢ + (Zn) is calculated at 419 °C, with-L at x(Zn) = 0. 980.",
+    "page": 2
+   },
+   {
+    "row_label": "mixing enthalpy of liquid at 1450 K",
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy' of the liquid has its minimum, -6436 J/mol, at x(Zn) =' 0.440.",
+    "page": 3
+   },
+   {
+    "row_label": "enthalpy of formation of 6 at 298.15 K",
+    "source": "this_work",
+    "quote": "The caiculated enthalpy of formation of 6 at 298.15 K is -5.76 kJ/mol per mole of atoms.",
+    "page": 3
+   },
+   {
+    "row_label": "heat capacity of 6 at room temperature",
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 25.16 J/(mol K).",
+    "page": 3
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid at 1450 K",
+    "source": "this_work",
+    "quote": "ins the equiatomic liquid at 1450-K, the Gibbs energy of mixing is -14.55 Ki/mob-atom., : :",
+    "page": 3
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 803,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1334,
+  "thoughts_token_count": 10487,
+  "total_token_count": 12624
+ },
+ "seconds": 73.9
+}

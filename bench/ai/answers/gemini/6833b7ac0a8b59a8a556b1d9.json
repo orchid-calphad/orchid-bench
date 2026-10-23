@@ -1,0 +1,80 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "6833b7ac0a8b59a8a556b1d9",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "composition_component": "Ni",
+  "rows": [
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1728.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1728.2",
+    "source": "this_work",
+    "source_label": "this work",
+    "citations": []
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1730.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1730.2 [4]",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1357.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1357.8",
+    "source": "this_work",
+    "source_label": "this work",
+    "citations": []
+   },
+   {
+    "reaction": "L -> (Cu,Ni)",
+    "reaction_type": "melting (pure component)",
+    "phases": [
+     "L",
+     "(Cu,Ni)"
+    ],
+    "temperature": 1359.8,
+    "temperature_unit": "K",
+    "temperature_printed": "1359.8 [5]",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "5"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2144,
+  "cached_content_token_count": null,
+  "candidates_token_count": 539,
+  "thoughts_token_count": 1956,
+  "total_token_count": 4639
+ },
+ "seconds": 15.3
+}

@@ -1,0 +1,35 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "96554a71503ac52a7b790c95",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Ni",
+   "Ti"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Ni)",
+    "temperature": 1297,
+    "temperature_unit": "C",
+    "temperature_printed": "1297",
+    "temperature_role": "equilibration",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3339,
+  "cached_content_token_count": null,
+  "candidates_token_count": 162,
+  "thoughts_token_count": 30857,
+  "total_token_count": 34358
+ },
+ "seconds": 207.2
+}

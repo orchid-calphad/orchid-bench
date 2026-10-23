@@ -1,0 +1,33 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f4c65d5fec39e4ca24db15b5",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_printed": "1450",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3361,
+  "cached_content_token_count": null,
+  "candidates_token_count": 135,
+  "thoughts_token_count": 4280,
+  "total_token_count": 7776
+ },
+ "seconds": 35.3
+}

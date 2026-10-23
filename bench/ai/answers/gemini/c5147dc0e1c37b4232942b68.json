@@ -1,0 +1,46 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "c5147dc0e1c37b4232942b68",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 650,
+    "temperature_unit": "K",
+    "temperature_printed": "650",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "code": "",
+     "functional": "",
+     "pseudopotential": "",
+     "cutoff": "",
+     "k_points": "",
+     "k_points_phonon": "",
+     "supercell": "",
+     "relaxation": "",
+     "temperature_treatment": "",
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3338,
+  "cached_content_token_count": null,
+  "candidates_token_count": 224,
+  "thoughts_token_count": 2784,
+  "total_token_count": 6346
+ },
+ "seconds": 23.3
+}

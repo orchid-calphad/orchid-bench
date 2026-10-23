@@ -1,0 +1,102 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4ed3f06f1de6ae3f731bb0d7",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Ag",
+   "Cu"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L → (Ag) + (Cu) invariant reaction",
+    "temperature": 1055.8,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "reaction": "L → (Ag) + (Cu)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L → (Ag) + (Cu), lies at 1055.8 K.",
+    "page": 1
+   },
+   {
+    "row_label": "Melting point of Ag",
+    "temperature": 1234.9,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "source": "this_work",
+    "quote": "Pure Ag melts at 1234.9 K.",
+    "page": 1
+   },
+   {
+    "row_label": "Melting point of Cu",
+    "temperature": 1357.8,
+    "temperature_unit": "K",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "source": "this_work",
+    "quote": "The melting point of Cu reproduced by the dataset is 1357.8 K.",
+    "page": 1
+   },
+   {
+    "row_label": "Integral mixing enthalpy of liquid at 1450 K",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 54
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3683,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1450 K the integral mixing enthalpy of the liquid has its maximum, 3683 J/mol, at 54.0 at.% Cu.",
+    "page": 2
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid at 1450 K",
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Cu",
+      "value": 50
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -5394,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1450 K, the Gibbs energy of mixing is -5394 J/mol.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 586,
+  "cached_content_token_count": null,
+  "candidates_token_count": 530,
+  "thoughts_token_count": 1596,
+  "total_token_count": 2712
+ },
+ "seconds": 15.2
+}

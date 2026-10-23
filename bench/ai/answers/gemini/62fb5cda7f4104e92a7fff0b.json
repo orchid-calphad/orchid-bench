@@ -1,0 +1,53 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "62fb5cda7f4104e92a7fff0b",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Sn",
+  "rows": [
+   {
+    "reaction": "L -> (Pb) + (Sn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Pb)",
+     "(Sn)"
+    ],
+    "temperature": 455.8,
+    "temperature_unit": "K",
+    "temperature_printed": "455.8",
+    "source": "this_work",
+    "source_label": "this work",
+    "citations": []
+   },
+   {
+    "reaction": "L -> (Pb) + (Sn)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Pb)",
+     "(Sn)"
+    ],
+    "temperature": 464.8,
+    "temperature_unit": "K",
+    "temperature_printed": "464.8 [4]",
+    "source": "experimental",
+    "source_label": "exp.",
+    "citations": [
+     "4"
+    ]
+   }
+  ],
+  "notes": "Experimental temperatures are fictitious values attributed to invented references [3–5] for testing evidence-class extraction; they are not data."
+ },
+ "usage": {
+  "prompt_token_count": 2209,
+  "cached_content_token_count": null,
+  "candidates_token_count": 332,
+  "thoughts_token_count": 1221,
+  "total_token_count": 3762
+ },
+ "seconds": 16.3
+}

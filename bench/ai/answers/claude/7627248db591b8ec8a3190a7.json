@@ -1,0 +1,539 @@
+{
+ "table_kind": "thermochemical_properties",
+ "system": [
+  "Pb",
+  "Zn"
+ ],
+ "temperature_unit": "K",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "10",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 10.0,
+     "printed": "10"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 1.99,
+     "printed": "1.99",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -1.57,
+     "printed": "−1.57",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.9201,
+     "printed": "0.9201",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.4114,
+     "printed": "0.4114",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "20",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 20.0,
+     "printed": "20"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 3.89,
+     "printed": "3.89",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.09,
+     "printed": "−2.09",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.8644,
+     "printed": "0.8644",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.599,
+     "printed": "0.5990",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "30",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 30.0,
+     "printed": "30"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 5.62,
+     "printed": "5.62",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.33,
+     "printed": "−2.33",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.8184,
+     "printed": "0.8184",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.7081,
+     "printed": "0.7081",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "40",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 40.0,
+     "printed": "40"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 7.05,
+     "printed": "7.05",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.39,
+     "printed": "−2.39",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.7763,
+     "printed": "0.7763",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.7821,
+     "printed": "0.7821",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "50",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 50.0,
+     "printed": "50"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 8.07,
+     "printed": "8.07",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.33,
+     "printed": "−2.33",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.7373,
+     "printed": "0.7373",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.8333,
+     "printed": "0.8333",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "60",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 60.0,
+     "printed": "60"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 8.49,
+     "printed": "8.49",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -2.17,
+     "printed": "−2.17",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.7036,
+     "printed": "0.7036",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.8662,
+     "printed": "0.8662",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "70",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 70.0,
+     "printed": "70"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 8.12,
+     "printed": "8.12",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -1.94,
+     "printed": "−1.94",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.675,
+     "printed": "0.6750",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.886,
+     "printed": "0.8860",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "80",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 80.0,
+     "printed": "80"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 6.76,
+     "printed": "6.76",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -1.65,
+     "printed": "−1.65",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.6377,
+     "printed": "0.6377",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.9024,
+     "printed": "0.9024",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "90",
+   "temperature": 1150,
+   "temperature_unit": "K",
+   "temperature_printed": "1150 K",
+   "temperature_role": "other",
+   "temperature_basis": "caption",
+   "overall_composition": [
+    {
+     "element": "Zn",
+     "value": 90.0,
+     "printed": "90"
+    }
+   ],
+   "phases_present": [
+    "liquid"
+   ],
+   "properties": [
+    {
+     "quantity": "ΔmixH",
+     "quantity_kind": "mixing_enthalpy",
+     "value": 4.14,
+     "printed": "4.14",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "ΔmixG",
+     "quantity_kind": "gibbs_energy",
+     "value": -1.23,
+     "printed": "−1.23",
+     "phase": "liquid",
+     "unit": "kJ mol⁻¹",
+     "unit_source": "column_header"
+    },
+    {
+     "quantity": "a(Pb)",
+     "quantity_kind": "activity",
+     "value": 0.522,
+     "printed": "0.5220",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Pb"
+    },
+    {
+     "quantity": "a(Zn)",
+     "quantity_kind": "activity",
+     "value": 0.9318,
+     "printed": "0.9318",
+     "phase": "liquid",
+     "unit_source": "not_printed",
+     "component": "Zn"
+    }
+   ],
+   "source": "unlabelled"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "at.% Zn",
+   "unit": "at.%"
+  },
+  {
+   "column_header": "ΔmixH / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  },
+  {
+   "column_header": "ΔmixG / kJ mol⁻¹",
+   "unit": "kJ mol⁻¹"
+  }
+ ],
+ "notes": "Temperature 1150 K from caption. No reference state printed."
+}

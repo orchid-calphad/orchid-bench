@@ -1,0 +1,68 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "df79787be1d1ff9641a82854",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ni"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "maximum integral mixing enthalpy of liquid",
+    "temperature": 1800,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Ni",
+      "value": 54.0
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2954,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "quote": "At 1800 K the integral mixing enthalpy of the liquid has its maximum, 2954 J/mol, at 54.0 at.% Ni.",
+    "page": 2
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 1800,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -6.95,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "quote": "For the equiatomic liquid at 1800 K, the Gibbs energy of mixing is -6.95 kJ/mol-atom.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 354,
+  "cached_content_token_count": null,
+  "candidates_token_count": 277,
+  "thoughts_token_count": 811,
+  "total_token_count": 1442
+ },
+ "seconds": 9.8
+}

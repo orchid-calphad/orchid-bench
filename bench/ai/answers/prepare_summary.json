@@ -1,0 +1,1148 @@
+[
+ {
+  "doc": "syn-AgCu-06He-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-AgCu-06He-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-AgCu-06He-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 27
+ },
+ {
+  "doc": "syn-AgCu-06He-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 27
+ },
+ {
+  "doc": "syn-AgNi-04Din-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 0
+ },
+ {
+  "doc": "syn-AgNi-04Din-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 1
+ },
+ {
+  "doc": "syn-AgNi-04Din-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 1
+ },
+ {
+  "doc": "syn-AgNi-04Din-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 1
+ },
+ {
+  "doc": "syn-AgSn-12Gie-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 12
+ },
+ {
+  "doc": "syn-AgSn-12Gie-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 10
+ },
+ {
+  "doc": "syn-AgSn-12Gie-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 9
+ },
+ {
+  "doc": "syn-AgSn-12Gie-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 9
+ },
+ {
+  "doc": "syn-AlBi-06Kim-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 3
+ },
+ {
+  "doc": "syn-AlBi-06Kim-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-AlBi-06Kim-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 13
+ },
+ {
+  "doc": "syn-AlBi-06Kim-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 13
+ },
+ {
+  "doc": "syn-AlCu-02Mie-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 5,
+  "context_jobs": 0,
+  "pd_questions": 3
+ },
+ {
+  "doc": "syn-AlCu-02Mie-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-AlCu-02Mie-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 29
+ },
+ {
+  "doc": "syn-AlCu-02Mie-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 29
+ },
+ {
+  "doc": "syn-AlMg-12Tan-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 5,
+  "context_jobs": 0,
+  "pd_questions": 18
+ },
+ {
+  "doc": "syn-AlMg-12Tan-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 11
+ },
+ {
+  "doc": "syn-AlMg-12Tan-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 19
+ },
+ {
+  "doc": "syn-AlMg-12Tan-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 19
+ },
+ {
+  "doc": "syn-AlNi-14Zhu-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 5,
+  "context_jobs": 0,
+  "pd_questions": 8
+ },
+ {
+  "doc": "syn-AlNi-14Zhu-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 1,
+  "pd_questions": 18
+ },
+ {
+  "doc": "syn-AlNi-14Zhu-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-AlNi-14Zhu-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-AlSi-12Tan-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-AlSi-12Tan-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 9
+ },
+ {
+  "doc": "syn-AlSi-12Tan-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 10
+ },
+ {
+  "doc": "syn-AlSi-12Tan-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 10
+ },
+ {
+  "doc": "syn-AlZn-93Mey-LB-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 8
+ },
+ {
+  "doc": "syn-AlZn-93Mey-LB-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-AlZn-93Mey-LB-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 17
+ },
+ {
+  "doc": "syn-AlZn-93Mey-LB-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 17
+ },
+ {
+  "doc": "syn-BiSn-08Li-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 9
+ },
+ {
+  "doc": "syn-BiSn-08Li-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 18
+ },
+ {
+  "doc": "syn-BiSn-08Li-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 18
+ },
+ {
+  "doc": "syn-BiSn-08Li-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 18
+ },
+ {
+  "doc": "syn-CrFe-11Xio-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-CrFe-11Xio-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 3
+ },
+ {
+  "doc": "syn-CrFe-11Xio-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-CrFe-11Xio-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 6
+ },
+ {
+  "doc": "syn-CuMg-16Hal-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 12
+ },
+ {
+  "doc": "syn-CuMg-16Hal-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 20
+ },
+ {
+  "doc": "syn-CuMg-16Hal-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 14
+ },
+ {
+  "doc": "syn-CuMg-16Hal-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 14
+ },
+ {
+  "doc": "syn-CuNi-87Jan-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4",
+   "table5"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-CuNi-87Jan-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4",
+   "table5"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-CuNi-87Jan-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 10
+ },
+ {
+  "doc": "syn-CuNi-87Jan-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 10
+ },
+ {
+  "doc": "syn-CuPb-86Hay-LB-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-CuPb-86Hay-LB-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-CuPb-86Hay-LB-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 14
+ },
+ {
+  "doc": "syn-CuPb-86Hay-LB-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 0,
+  "passages": 0,
+  "context_jobs": 0,
+  "pd_questions": 14
+ },
+ {
+  "doc": "syn-CuZn-08Gie-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 5,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-CuZn-08Gie-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 1,
+  "pd_questions": 9
+ },
+ {
+  "doc": "syn-CuZn-08Gie-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 23
+ },
+ {
+  "doc": "syn-CuZn-08Gie-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 23
+ },
+ {
+  "doc": "syn-MgSi-12Sch-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 3
+ },
+ {
+  "doc": "syn-MgSi-12Sch-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 3
+ },
+ {
+  "doc": "syn-MgSi-12Sch-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 11
+ },
+ {
+  "doc": "syn-MgSi-12Sch-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 11
+ },
+ {
+  "doc": "syn-MgSn-04Fri-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-MgSn-04Fri-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 4
+ },
+ {
+  "doc": "syn-MgSn-04Fri-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 15
+ },
+ {
+  "doc": "syn-MgSn-04Fri-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 15
+ },
+ {
+  "doc": "syn-NiTi-04Tok-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 13
+ },
+ {
+  "doc": "syn-NiTi-04Tok-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 1,
+  "pd_questions": 12
+ },
+ {
+  "doc": "syn-NiTi-04Tok-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 11
+ },
+ {
+  "doc": "syn-NiTi-04Tok-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 2,
+  "context_jobs": 0,
+  "pd_questions": 11
+ },
+ {
+  "doc": "syn-PbSn-17Gie-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 22
+ },
+ {
+  "doc": "syn-PbSn-17Gie-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 33
+ },
+ {
+  "doc": "syn-PbSn-17Gie-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 20
+ },
+ {
+  "doc": "syn-PbSn-17Gie-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 3,
+  "context_jobs": 0,
+  "pd_questions": 20
+ },
+ {
+  "doc": "syn-PbZn-98Jan-v0",
+  "rendering": "vector",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 4,
+  "context_jobs": 0,
+  "pd_questions": 7
+ },
+ {
+  "doc": "syn-PbZn-98Jan-v0",
+  "rendering": "clean_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3",
+   "table4"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 15
+ },
+ {
+  "doc": "syn-PbZn-98Jan-v0",
+  "rendering": "degraded_raster",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 5
+ },
+ {
+  "doc": "syn-PbZn-98Jan-v0",
+  "rendering": "image_only_pdf",
+  "tables": [
+   "table1",
+   "table1",
+   "table2",
+   "table3"
+  ],
+  "text_chunks": 1,
+  "passages": 1,
+  "context_jobs": 0,
+  "pd_questions": 5
+ }
+]

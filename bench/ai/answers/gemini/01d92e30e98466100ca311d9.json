@@ -1,0 +1,110 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "01d92e30e98466100ca311d9",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "C",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Bi",
+  "rows": [
+   {
+    "reaction": "L1 -> (Al) + L2",
+    "reaction_type": "monotectic",
+    "phases": [
+     "L1",
+     "(Al)",
+     "L2"
+    ],
+    "temperature": 658.6,
+    "temperature_unit": "C",
+    "temperature_printed": "658.6",
+    "compositions": [
+     {
+      "phase": "L1",
+      "value": 0.003
+     },
+     {
+      "phase": "(Al)",
+      "value": 0.001
+     },
+     {
+      "phase": "L2",
+      "value": 0.84
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L1 -> (Al) + L2",
+    "reaction_type": "monotectic",
+    "phases": [
+     "L1",
+     "(Al)",
+     "L2"
+    ],
+    "temperature": 651.6,
+    "temperature_unit": "C",
+    "temperature_printed": "651.6",
+    "source": "experimental",
+    "source_label": "exp.b",
+    "citations": [
+     "3"
+    ]
+   },
+   {
+    "reaction": "L -> (Al) + (Bi)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "(Bi)"
+    ],
+    "temperature": 271.2,
+    "temperature_unit": "C",
+    "temperature_printed": "271.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.999
+     },
+     {
+      "phase": "(Al)",
+      "value": 0
+     },
+     {
+      "phase": "(Bi)",
+      "value": 1
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Al) + (Bi)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Al)",
+     "(Bi)"
+    ],
+    "temperature": 266.2,
+    "temperature_unit": "C",
+    "temperature_printed": "266.2",
+    "source": "experimental",
+    "source_label": "exp.b",
+    "citations": [
+     "3"
+    ]
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2089,
+  "cached_content_token_count": null,
+  "candidates_token_count": 391,
+  "thoughts_token_count": 2636,
+  "total_token_count": 5116
+ },
+ "seconds": 22.7
+}

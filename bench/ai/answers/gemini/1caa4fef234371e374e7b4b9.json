@@ -1,0 +1,672 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "1caa4fef234371e374e7b4b9",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cu",
+   "Pb"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "temperature": 1450,
+    "temperature_unit": "K",
+    "temperature_basis": "caption",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.100",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.1,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 1862,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "1862",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -1782,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−1782",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.9251,
+      "unit_source": "not_printed",
+      "printed": "0.9251",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.4599,
+      "unit_source": "not_printed",
+      "printed": "0.4599",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": -211,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−211",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 20518,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "20518",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.200",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.2,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3904,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "3904",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2385,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−2385",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.8827,
+      "unit_source": "not_printed",
+      "printed": "0.8827",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.6128,
+      "unit_source": "not_printed",
+      "printed": "0.6128",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 67,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "67",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 19250,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "19250",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.300",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.3,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 5562,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "5562",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2736,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−2736",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.8545,
+      "unit_source": "not_printed",
+      "printed": "0.8545",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.6773,
+      "unit_source": "not_printed",
+      "printed": "0.6773",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 1508,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "1508",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 15019,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "15019",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.400",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.4,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 6551,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "6551",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2962,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−2962",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.8288,
+      "unit_source": "not_printed",
+      "printed": "0.8288",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.717,
+      "unit_source": "not_printed",
+      "printed": "0.7170",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 4085,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "4085",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 10250,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "10250",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.500",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.5,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 6798,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "6798",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -3086,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−3086",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.7978,
+      "unit_source": "not_printed",
+      "printed": "0.7978",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.7512,
+      "unit_source": "not_printed",
+      "printed": "0.7512",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 7355,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "7355",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 6240,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "6240",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.600",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.6,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 6365,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "6365",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -3101,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−3101",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.7552,
+      "unit_source": "not_printed",
+      "printed": "0.7552",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.7854,
+      "unit_source": "not_printed",
+      "printed": "0.7854",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 10744,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "10744",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 3446,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "3446",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.700",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.7,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 5386,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "5386",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2979,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−2979",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.6931,
+      "unit_source": "not_printed",
+      "printed": "0.6931",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.8221,
+      "unit_source": "not_printed",
+      "printed": "0.8221",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 13832,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "13832",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 1766,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "1766",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.800",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.8,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 3987,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "3987",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -2661,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−2661",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.5938,
+      "unit_source": "not_printed",
+      "printed": "0.5938",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.8645,
+      "unit_source": "not_printed",
+      "printed": "0.8645",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 16634,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "16634",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 826,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "826",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "0.900",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Pb",
+      "value": 0.9,
+      "phase_source": "caption"
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "ΔmixH",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2223,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "2223",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔmixG",
+      "quantity_kind": "gibbs_energy",
+      "value": -1988,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "−1988",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Cu)",
+      "quantity_kind": "activity",
+      "value": 0.4093,
+      "unit_source": "not_printed",
+      "printed": "0.4093",
+      "expression_range": {}
+     },
+     {
+      "quantity": "a(Pb)",
+      "quantity_kind": "activity",
+      "value": 0.9195,
+      "unit_source": "not_printed",
+      "printed": "0.9195",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Cu)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 19886,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "19886",
+      "expression_range": {}
+     },
+     {
+      "quantity": "ΔH̄(Pb)",
+      "quantity_kind": "partial_enthalpy",
+      "value": 260,
+      "unit": "J mol⁻¹",
+      "unit_source": "column_header",
+      "printed": "260",
+      "expression_range": {}
+     }
+    ],
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ],
+  "notes": "Reference states: pure liquid Cu and Pb at 1450 K; per mole of atoms. ΔH̄: partial molar enthalpies of mixing.",
+  "column_units": [
+   {
+    "column_header": "ΔmixH / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "ΔmixG / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "ΔH̄(Cu) / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   },
+   {
+    "column_header": "ΔH̄(Pb) / J mol⁻¹",
+    "unit": "J mol⁻¹"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 4132,
+  "cached_content_token_count": null,
+  "candidates_token_count": 3421,
+  "thoughts_token_count": 1764,
+  "total_token_count": 9317
+ },
+ "seconds": 29.2
+}

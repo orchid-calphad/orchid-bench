@@ -1,0 +1,86 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "48bb1873322b076a4af43d1c",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "none of these",
+    "reason": "Marker 1 is at pure Cu above its melting temperature (in the single-phase liquid field L), which is not among the choices."
+   },
+   {
+    "marker": 2,
+    "assemblage": "L",
+    "reason": "Marker 2 is located at high temperature in the homogeneous liquid phase region above the liquid miscibility gap."
+   },
+   {
+    "marker": 3,
+    "assemblage": "L",
+    "reason": "Marker 3 lies in the single-phase liquid field L at high temperature."
+   },
+   {
+    "marker": 4,
+    "assemblage": "L",
+    "reason": "Marker 4 is in the single-phase liquid field L at high temperature above the liquidus."
+   },
+   {
+    "marker": 5,
+    "assemblage": "(Cu)+L",
+    "reason": "Marker 5 is situated between the monotectic temperature (957°C) and the eutectic temperature (326°C), where solid (Cu) coexists with liquid L."
+   },
+   {
+    "marker": 6,
+    "assemblage": "none of these",
+    "reason": "Marker 6 is on the Cu axis at ~1180°C, above the melting point of pure Cu (1085°C), which is the liquid phase L, but L is not offered."
+   },
+   {
+    "marker": 7,
+    "assemblage": "none of these",
+    "reason": "Marker 7 sits in the two-phase (Cu)+L region between the Cu solidus and liquidus, which is not among the options."
+   },
+   {
+    "marker": 8,
+    "assemblage": "(Pb)",
+    "reason": "Marker 8 is on the pure Pb side below its melting temperature (327°C), within the terminal solid solution (Pb)."
+   },
+   {
+    "marker": 9,
+    "assemblage": "(Cu)",
+    "reason": "Marker 9 is located inside the terminal solid solution region of copper, (Cu)."
+   },
+   {
+    "marker": 10,
+    "assemblage": "L+L1",
+    "reason": "Marker 10 lies inside the liquid-liquid immiscibility dome above the 957°C monotectic horizontal line."
+   },
+   {
+    "marker": 11,
+    "assemblage": "(Cu)+(Pb)",
+    "reason": "Marker 11 is below the eutectic invariant line at 326°C, where the solid phases (Cu) and (Pb) coexist."
+   },
+   {
+    "marker": 12,
+    "assemblage": "(Cu)",
+    "reason": "Marker 12 is at the pure Cu edge at low temperature, corresponding to the (Cu) terminal solid phase."
+   },
+   {
+    "marker": 13,
+    "assemblage": "none of these",
+    "reason": "Marker 13 lies in the low-temperature two-phase region (Cu)+(Pb) below 326°C, but (Cu)+(Pb) is not offered in its choices."
+   },
+   {
+    "marker": 14,
+    "assemblage": "none of these",
+    "reason": "Marker 14 lies in the two-phase field (Cu)+(Pb) below 326°C, which is not among the choices provided."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1898,
+  "cached_content_token_count": null,
+  "candidates_token_count": 837,
+  "thoughts_token_count": 6018,
+  "total_token_count": 8753
+ },
+ "seconds": 53.6
+}

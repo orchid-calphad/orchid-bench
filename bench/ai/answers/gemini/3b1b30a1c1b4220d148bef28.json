@@ -1,0 +1,46 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "3b1b30a1c1b4220d148bef28",
+ "result": {
+  "answers": [
+   {
+    "marker": 1,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   },
+   {
+    "marker": 2,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   },
+   {
+    "marker": 3,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   },
+   {
+    "marker": 4,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   },
+   {
+    "marker": 5,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   },
+   {
+    "marker": 6,
+    "assemblage": "cannot tell",
+    "reason": "There are no printed phase labels, arrows, or settled neighbouring fields to identify the phase assemblage, and the instructions forbid using outside knowledge."
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 1433,
+  "cached_content_token_count": null,
+  "candidates_token_count": 354,
+  "thoughts_token_count": 4244,
+  "total_token_count": 6031
+ },
+ "seconds": 37.1
+}

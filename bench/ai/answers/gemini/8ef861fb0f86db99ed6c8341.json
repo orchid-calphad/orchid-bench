@@ -1,0 +1,31 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "8ef861fb0f86db99ed6c8341",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3314,
+  "cached_content_token_count": null,
+  "candidates_token_count": 118,
+  "thoughts_token_count": 3294,
+  "total_token_count": 6726
+ },
+ "seconds": 25.2
+}

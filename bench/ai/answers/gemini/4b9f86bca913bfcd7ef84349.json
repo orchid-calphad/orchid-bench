@@ -1,0 +1,95 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "4b9f86bca913bfcd7ef84349",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Bi"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "L1 → (Al) + L2 invariant reaction",
+    "temperature": 658.6,
+    "temperature_unit": "C",
+    "temperature_printed": "658.6",
+    "temperature_role": "invariant",
+    "reaction": "L1 → (Al) + L2",
+    "transition_kind": "other",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L1 → (Al) + L2, lies at 658.6 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "liquid maximum mixing enthalpy",
+    "temperature": 1400,
+    "temperature_unit": "K",
+    "temperature_printed": "1400",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Bi",
+      "value": 0.44
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 19170,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1400 K the integral mixing enthalpy of the liquid has its maximum, 19170 J/mol, at x(Bi) = 0.440.",
+    "page": 2
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 1400,
+    "temperature_unit": "K",
+    "temperature_printed": "1400",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Bi",
+      "value": 0.5
+     },
+     {
+      "element": "Al",
+      "value": 0.5
+     }
+    ],
+    "phases_present": [
+     "liquid"
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -7.71,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1400 K, the Gibbs energy of mixing is -7.71 kJ/mol-atom.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 446,
+  "cached_content_token_count": null,
+  "candidates_token_count": 722,
+  "thoughts_token_count": 1225,
+  "total_token_count": 2393
+ },
+ "seconds": 11.2
+}

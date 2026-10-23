@@ -1,0 +1,263 @@
+{
+ "aggregate": {
+  "degraded_raster": {
+   "documents": 2,
+   "phase_stability": {
+    "T_high_err_K_median": null,
+    "T_low_err_K_median": null,
+    "homogeneity_T_err_K_median": null,
+    "homogeneity_x_err_median": null,
+    "pearson_accuracy": 0.0,
+    "prototype_accuracy": 0.0,
+    "row_precision": 1.0,
+    "row_recall": 0.2222222222222222,
+    "rows_pred": 2,
+    "rows_true": 9,
+    "structure_accuracy": 0.0,
+    "strukturbericht_accuracy": 0.0
+   },
+   "thermo_tables": {
+    "basis_accuracy": null,
+    "record_precision": null,
+    "record_recall": 0.0,
+    "records_pred": 0,
+    "records_true": 99,
+    "rel_err_median": null,
+    "unit_accuracy": null,
+    "value_exact": null,
+    "within_1pct": null
+   }
+  },
+  "vector": {
+   "documents": 2,
+   "phase_stability": {
+    "T_high_err_K_median": 0.0,
+    "T_low_err_K_median": null,
+    "homogeneity_T_err_K_median": null,
+    "homogeneity_x_err_median": null,
+    "pearson_accuracy": 0.0,
+    "prototype_accuracy": 0.0,
+    "row_precision": 1.0,
+    "row_recall": 0.2222222222222222,
+    "rows_pred": 2,
+    "rows_true": 9,
+    "structure_accuracy": 0.0,
+    "strukturbericht_accuracy": 0.0
+   },
+   "thermo_tables": {
+    "basis_accuracy": null,
+    "record_precision": null,
+    "record_recall": 0.0,
+    "records_pred": 0,
+    "records_true": 99,
+    "rel_err_median": null,
+    "unit_accuracy": null,
+    "value_exact": null,
+    "within_1pct": null
+   }
+  }
+ },
+ "extractor": "ai_gemini_thermo_v71_pilot",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "degraded_raster": {
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 1,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 1,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 3,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 0,
+     "records_true": 54,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "ablation": "thermo tables read with prompt v71"
+    }
+   },
+   "vector": {
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 1,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 1,
+     "rows_true": 2,
+     "sb_ok": 0,
+     "struct_n": 3,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 0,
+     "records_true": 54,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "ablation": "thermo tables read with prompt v71"
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "degraded_raster": {
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 1,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 1,
+     "rows_true": 7,
+     "sb_ok": 0,
+     "struct_n": 3,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 0,
+     "records_true": 45,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "ablation": "thermo tables read with prompt v71"
+    }
+   },
+   "vector": {
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "matched": 1,
+     "pearson_ok": 0,
+     "proto_ok": 0,
+     "rows_pred": 1,
+     "rows_true": 7,
+     "sb_ok": 0,
+     "struct_n": 3,
+     "struct_ok": 0
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 0,
+     "records_true": 45,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "ablation": "thermo tables read with prompt v71"
+    }
+   }
+  }
+ }
+}

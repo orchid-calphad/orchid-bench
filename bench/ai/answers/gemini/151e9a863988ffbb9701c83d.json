@@ -1,0 +1,141 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "151e9a863988ffbb9701c83d",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Zn"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "mole_fraction",
+  "rows": [
+   {
+    "row_label": "highest invariant reaction",
+    "temperature": 380.8,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "L → (Al) + (Zn)",
+    "transition_kind": "eutectic",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L → (Al) + (Zn), lies at 380.8 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "Al liquidus axis intercept",
+    "temperature": 660.3,
+    "temperature_unit": "C",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "For Al, the liquidus meets the axis at 660.3 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "Zn liquidus axis intercept",
+    "temperature": 419.5,
+    "temperature_unit": "C",
+    "temperature_role": "transition",
+    "transition_kind": "liquidus",
+    "source": "this_work",
+    "quote": "For Zn, the liquidus meets the axis at 419.5 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectic reaction",
+    "temperature": 380.8,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "L → (Al) + (Zn)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Zn",
+      "value": 0.884
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L → (Al) + (Zn) is calculated at 380.8 °C, with L at x(Zn) = 0.884.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectoid reaction",
+    "temperature": 277.2,
+    "temperature_unit": "C",
+    "temperature_role": "invariant",
+    "reaction": "(Al)2 → (Al)1 + (Zn)",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "(Al)2",
+      "value": 0.59
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places a eutectoid ((Al)2 → (Al)1 + (Zn)) at 277.2 °C; the composition of (Al)2 is a mole fraction of 0.590.",
+    "page": 1
+   },
+   {
+    "row_label": "integral mixing enthalpy maximum of liquid",
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Zn",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 2616,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1000 K the integral mixing enthalpy of the liquid has its maximum, 2616 J/mol, at x(Zn) = 0.500.",
+    "page": 2
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid",
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Zn",
+      "value": 0.5
+     },
+     {
+      "element": "Al",
+      "value": 0.5
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -3.99,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1000 K, the Gibbs energy of mixing is -3.99 kJ/mol.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 680,
+  "cached_content_token_count": null,
+  "candidates_token_count": 1218,
+  "thoughts_token_count": 1800,
+  "total_token_count": 3698
+ },
+ "seconds": 18.5
+}

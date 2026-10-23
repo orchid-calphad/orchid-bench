@@ -1,0 +1,124 @@
+{
+ "table_kind": "crystallographic",
+ "system": [
+  "Bi",
+  "Sn"
+ ],
+ "temperature_unit": "C",
+ "composition_basis": "atomic_percent",
+ "rows": [
+  {
+   "row_label": "(Bi)",
+   "phases_present": [
+    "(Bi)"
+   ],
+   "structure": {
+    "phase": "(Bi)",
+    "pearson_symbol": "hR2",
+    "strukturbericht": "A7",
+    "prototype": "α-As"
+   },
+   "temperature": 147,
+   "temperature_unit": "C",
+   "temperature_printed": "147",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Bi)",
+     "element": "Sn",
+     "value": 0.0,
+     "value_max": 3.8,
+     "printed": "0.0–3.8",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "T min",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27"
+    },
+    {
+     "quantity": "T max",
+     "quantity_kind": "other",
+     "value": 271.4,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "271.4"
+    }
+   ],
+   "source": "unlabelled"
+  },
+  {
+   "row_label": "(Sn)",
+   "phases_present": [
+    "(Sn)"
+   ],
+   "structure": {
+    "phase": "(Sn)",
+    "pearson_symbol": "tI4",
+    "strukturbericht": "A5",
+    "prototype": "β-Sn"
+   },
+   "temperature": 137,
+   "temperature_unit": "C",
+   "temperature_printed": "137",
+   "temperature_role": "other",
+   "temperature_basis": "cell",
+   "phase_compositions": [
+    {
+     "phase": "(Sn)",
+     "element": "Sn",
+     "value": 85.1,
+     "value_max": 100.0,
+     "printed": "85.1–100.0",
+     "phase_source": "row_label"
+    }
+   ],
+   "properties": [
+    {
+     "quantity": "T min",
+     "quantity_kind": "other",
+     "value": 27,
+     "bound": "<",
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "< 27"
+    },
+    {
+     "quantity": "T max",
+     "quantity_kind": "other",
+     "value": 231.9,
+     "unit": "°C",
+     "unit_source": "column_header",
+     "printed": "231.9"
+    }
+   ],
+   "source": "unlabelled"
+  }
+ ],
+ "column_units": [
+  {
+   "column_header": "T min (°C)",
+   "unit": "°C"
+  },
+  {
+   "column_header": "T max (°C)",
+   "unit": "°C"
+  },
+  {
+   "column_header": "Range (at.% Sn)",
+   "unit": "at.% Sn"
+  },
+  {
+   "column_header": "T (°C)",
+   "unit": "°C"
+  }
+ ],
+ "notes": "Row temperature is the 'T (°C)' column belonging to the homogeneity range. T min / T max given as properties."
+}

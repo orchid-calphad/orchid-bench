@@ -1,0 +1,36 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "d4411f70f86452153d0fead8",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Ag",
+   "Sn"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "temperature": 1300,
+    "temperature_unit": "K",
+    "temperature_printed": "1300",
+    "temperature_basis": "column_header",
+    "temperature_also_printed": [],
+    "annealing_time": {
+     "printed": ""
+    },
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3358,
+  "cached_content_token_count": null,
+  "candidates_token_count": 157,
+  "thoughts_token_count": 1870,
+  "total_token_count": 5385
+ },
+ "seconds": 15.6
+}

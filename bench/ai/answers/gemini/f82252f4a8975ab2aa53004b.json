@@ -1,0 +1,55 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "f82252f4a8975ab2aa53004b",
+ "result": {
+  "table_kind": "model_parameters",
+  "system": [
+   "Cu",
+   "Ni"
+  ],
+  "temperature_unit": "none",
+  "composition_basis": "none",
+  "rows": [
+   {
+    "row_label": "L0",
+    "phases_present": [
+     "Liquid"
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "calculation_settings": {
+     "other": [
+      {
+       "name": "formula",
+       "value": "Liquid: L(ν) = a + b·T + c·T·ln T"
+      }
+     ]
+    }
+   },
+   {
+    "row_label": "L1",
+    "phases_present": [
+     "Liquid"
+    ],
+    "source": "unlabelled",
+    "temperature_basis": "not_printed",
+    "calculation_settings": {
+     "other": [
+      {
+       "name": "formula",
+       "value": "Liquid: L(ν) = a + b·T + c·T·ln T"
+      }
+     ]
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3420,
+  "cached_content_token_count": null,
+  "candidates_token_count": 291,
+  "thoughts_token_count": 2980,
+  "total_token_count": 6691
+ },
+ "seconds": 25.2
+}

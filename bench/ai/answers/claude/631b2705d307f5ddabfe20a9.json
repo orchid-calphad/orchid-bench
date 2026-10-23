@@ -1,0 +1,29 @@
+{
+ "answers": [
+  {
+   "marker": 1,
+   "assemblage": "none of these",
+   "reason": "Inset (x 0.90-1.00): left of the liquidus and above the horizontal line; corresponds to the field labelled ε + L in the main diagram, not offered."
+  },
+  {
+   "marker": 2,
+   "assemblage": "L",
+   "reason": "Inset: right of the steep liquidus line and above the horizontal invariant line, continuous with the main L field."
+  },
+  {
+   "marker": 3,
+   "assemblage": "none of these",
+   "reason": "Inset: below the horizontal invariant line, left of the near-vertical solvus; corresponds to the main-diagram field labelled ε + (Zn)."
+  },
+  {
+   "marker": 4,
+   "assemblage": "none of these",
+   "reason": "Main diagram, inside the dotted box below the 692 K line; field continuous with the label ε + (Zn), not offered."
+  },
+  {
+   "marker": 5,
+   "assemblage": "(Zn)",
+   "reason": "Just right of the near-vertical solvus at the Zn edge below the invariant line (inset shows the band); grey label (Zn) beside it."
+  }
+ ]
+}

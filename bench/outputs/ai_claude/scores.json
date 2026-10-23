@@ -1,0 +1,1423 @@
+{
+ "aggregate": {
+  "degraded_raster": {
+   "documents": 5,
+   "invariant_table": {
+    "T_err_K_median": 0.0,
+    "T_printed_exact": 1.0,
+    "citation_accuracy": 1.0,
+    "evidence_accuracy": 1.0,
+    "row_precision": 0.8461538461538461,
+    "row_recall": 0.5238095238095238,
+    "rows_pred": 13,
+    "rows_true": 21,
+    "type_accuracy": 1.0,
+    "x_err_median": 0.0,
+    "x_printed_exact": 1.0,
+    "x_recall": 1.0
+   },
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.33269952761880917,
+    "boundary_mean_dist": 0.0299274595203848,
+    "boundary_median_dT_K": 3.0210000000000297,
+    "boundary_median_dx": 0.003725148580877377,
+    "boundary_precision@0.01": 0.7953833822230603,
+    "boundary_recall@0.01": 0.6647539821585611,
+    "diagrams": 5,
+    "diagrams_with_output": 5,
+    "field_precision": 0.75,
+    "field_pred": 20,
+    "field_recall": 0.36585365853658536,
+    "field_true_scorable": 41,
+    "invariant_T_err_K": 2.7810000000000072,
+    "invariant_precision": 0.2857142857142857,
+    "invariant_recall": 0.8,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   },
+   "phase_stability": {
+    "T_high_err_K_median": 0.0,
+    "T_low_err_K_median": 207.4000000000001,
+    "homogeneity_T_err_K_median": 109.64999999999998,
+    "homogeneity_x_err_median": 0.0,
+    "pearson_accuracy": 1.0,
+    "prototype_accuracy": 1.0,
+    "row_precision": 1.0,
+    "row_recall": 1.0,
+    "rows_pred": 20,
+    "rows_true": 20,
+    "structure_accuracy": 1.0,
+    "strukturbericht_accuracy": 1.0
+   },
+   "text": {
+    "precision": 0.9791666666666666,
+    "recall": 0.31333333333333335,
+    "value_only_recall": 0.22680389041359722,
+    "values_pred": 48,
+    "values_true": 150
+   },
+   "thermo_tables": {
+    "basis_accuracy": 1.0,
+    "record_precision": 1.0,
+    "record_recall": 0.8604651162790697,
+    "records_pred": 222,
+    "records_true": 258,
+    "rel_err_median": 0.0,
+    "unit_accuracy": 1.0,
+    "value_exact": 1.0,
+    "within_1pct": 1.0
+   }
+  },
+  "vector": {
+   "documents": 5,
+   "invariant_table": {
+    "T_err_K_median": 0.0,
+    "T_printed_exact": 1.0,
+    "citation_accuracy": 1.0,
+    "evidence_accuracy": 1.0,
+    "row_precision": 0.9047619047619048,
+    "row_recall": 0.9047619047619048,
+    "rows_pred": 21,
+    "rows_true": 21,
+    "type_accuracy": 1.0,
+    "x_err_median": 0.0,
+    "x_printed_exact": 1.0,
+    "x_recall": 1.0
+   },
+   "phase_diagram": {
+    "boundary_hausdorff95": 0.3956776269031174,
+    "boundary_mean_dist": 0.061055872266618585,
+    "boundary_median_dT_K": 23.45566666666665,
+    "boundary_median_dx": 0.03822809037141443,
+    "boundary_precision@0.01": 0.7605089661521571,
+    "boundary_recall@0.01": 0.4658325648152105,
+    "diagrams": 5,
+    "diagrams_with_output": 5,
+    "field_precision": 0.7272727272727273,
+    "field_pred": 22,
+    "field_recall": 0.36585365853658536,
+    "field_true_scorable": 41,
+    "invariant_T_err_K": 0.633916666666668,
+    "invariant_precision": 0.44,
+    "invariant_recall": 0.7333333333333333,
+    "invariant_type_accuracy": 0.0,
+    "invariant_x_err": null
+   },
+   "phase_stability": {
+    "T_high_err_K_median": 0.0,
+    "T_low_err_K_median": 0.0,
+    "homogeneity_T_err_K_median": 109.64999999999998,
+    "homogeneity_x_err_median": 0.0,
+    "pearson_accuracy": 1.0,
+    "prototype_accuracy": 1.0,
+    "row_precision": 1.0,
+    "row_recall": 1.0,
+    "rows_pred": 20,
+    "rows_true": 20,
+    "structure_accuracy": 1.0,
+    "strukturbericht_accuracy": 1.0
+   },
+   "text": {
+    "precision": 1.0,
+    "recall": 0.5466666666666666,
+    "value_only_recall": 0.5172584139823776,
+    "values_pred": 82,
+    "values_true": 150
+   },
+   "thermo_tables": {
+    "basis_accuracy": 1.0,
+    "record_precision": 1.0,
+    "record_recall": 1.0,
+    "records_pred": 258,
+    "records_true": 258,
+    "rel_err_median": 0.0,
+    "unit_accuracy": 1.0,
+    "value_exact": 1.0,
+    "within_1pct": 1.0
+   }
+  }
+ },
+ "extractor": "ai_claude",
+ "per_document": {
+  "syn-AgCu-06He-v0": {
+   "degraded_raster": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_printed_exact": 1,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 1,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "type_ok": 1,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "x_n": 3,
+     "x_printed_exact": 3
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.34903296482801693,
+      "mean_pred_to_true": 0.045667001636151,
+      "mean_true_to_pred": 0.006726142607225,
+      "median_abs_dT_K": 3.350000000000064,
+      "median_abs_dx": 0.007015000000000011,
+      "precision@0.01": 0.6144018583042973,
+      "pred_points": 3444,
+      "recall@0.01": 0.7793163132842925,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 0.9090909090909091,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.8333333333333334
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.32999999999992724,
+       "median": 0.32999999999992724,
+       "n": 1
+      },
+      "f1": 0.33333333333333337,
+      "n_pred": 5,
+      "n_true": 1,
+      "precision": 0.2,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "answered": 4,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 5,
+      "human_queue": 22
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": null,
+     "n_pred": 0,
+     "n_true": 20,
+     "precision": null,
+     "recall": 0.0,
+     "value_only_recall": 0.0
+    }
+   },
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_printed_exact": 1,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 1,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "type_ok": 1,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "x_n": 3,
+     "x_printed_exact": 3
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2576295526666752,
+      "mean_pred_to_true": 0.0005575357145740844,
+      "mean_true_to_pred": 0.04090861278790165,
+      "median_abs_dT_K": 0.025000000000030553,
+      "median_abs_dx": 0.0004734567901235609,
+      "precision@0.01": 1.0,
+      "pred_points": 1857,
+      "recall@0.01": 0.6477715274772826,
+      "true_samples": 2311
+     },
+     "fields": {
+      "f1": 0.9090909090909091,
+      "loose_precision": 1.0,
+      "n_pred": 5,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.8333333333333334
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.01999999999998181,
+       "median": 0.01999999999998181,
+       "n": 1
+      },
+      "f1": 1.0,
+      "n_pred": 1,
+      "n_true": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "answered": 5,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 5,
+      "human_queue": 1
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": 0.5714285714285715,
+     "n_pred": 8,
+     "n_true": 20,
+     "precision": 1.0,
+     "recall": 0.4,
+     "value_only_recall": 0.4
+    }
+   }
+  },
+  "syn-AlNi-14Zhu-v0": {
+   "degraded_raster": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "T_printed_exact": 9,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 9,
+     "rows_pred": 9,
+     "rows_true": 9,
+     "type_ok": 9,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.5857921109244035,
+      "mean_pred_to_true": 0.0028596515198978886,
+      "mean_true_to_pred": 0.19028753328351772,
+      "median_abs_dT_K": 4.410000000000008,
+      "median_abs_dx": 0.00092680412371135,
+      "precision@0.01": 1.0,
+      "pred_points": 546,
+      "recall@0.01": 0.28978555304740405,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.0,
+      "loose_precision": 0.0,
+      "n_pred": 2,
+      "n_true": 9,
+      "precision": 0.0,
+      "recall": 0.0
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 5.30000000000003,
+       "median": 5.269999999999982,
+       "n": 3
+      },
+      "f1": 0.5454545454545454,
+      "n_pred": 7,
+      "n_true": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 45,
+     "matched": 45,
+     "records_pred": 45,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 45
+     },
+     "unit_ok": 45,
+     "value_exact": 45,
+     "within_1pct": 45
+    },
+    "status": {
+     "answered": 5,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 0,
+      "human_queue": 6
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 1
+    },
+    "text": {
+     "f1": 0.7164179104477612,
+     "n_pred": 24,
+     "n_true": 43,
+     "precision": 1.0,
+     "recall": 0.5581395348837209,
+     "value_only_recall": 0.5581395348837209
+    }
+   },
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 9
+     },
+     "T_printed_exact": 9,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 9,
+     "rows_pred": 9,
+     "rows_true": 9,
+     "type_ok": 9,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.49933866794124987,
+      "mean_pred_to_true": 0.0010028745816651704,
+      "mean_true_to_pred": 0.13798775530380886,
+      "median_abs_dT_K": 0.6400000000000017,
+      "median_abs_dx": 0.0005900000000000349,
+      "precision@0.01": 0.9839167455061495,
+      "pred_points": 2114,
+      "recall@0.01": 0.5457110609480813,
+      "true_samples": 3544
+     },
+     "fields": {
+      "f1": 0.16666666666666666,
+      "loose_precision": 0.3333333333333333,
+      "n_pred": 3,
+      "n_true": 9,
+      "precision": 0.3333333333333333,
+      "recall": 0.1111111111111111
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.5966666666666166,
+       "median": 0.6399999999999864,
+       "n": 3
+      },
+      "f1": 0.5454545454545454,
+      "n_pred": 7,
+      "n_true": 4,
+      "precision": 0.42857142857142855,
+      "recall": 0.75,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 11
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 45,
+     "matched": 45,
+     "records_pred": 45,
+     "records_true": 45,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 45
+     },
+     "unit_ok": 45,
+     "value_exact": 45,
+     "within_1pct": 45
+    },
+    "status": {
+     "answered": 5,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 0,
+      "human_queue": 8
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": 0.7714285714285715,
+     "n_pred": 27,
+     "n_true": 43,
+     "precision": 1.0,
+     "recall": 0.627906976744186,
+     "value_only_recall": 0.627906976744186
+    }
+   }
+  },
+  "syn-BiSn-08Li-v0": {
+   "degraded_raster": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_printed_exact": 1,
+     "cite_n": 1,
+     "cite_ok": 1,
+     "ev_n": 1,
+     "ev_ok": 1,
+     "matched": 1,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "type_ok": 1,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "x_n": 3,
+     "x_printed_exact": 3
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.2582857613499621,
+      "mean_pred_to_true": 0.04612440729754412,
+      "mean_true_to_pred": 0.004295529361606078,
+      "median_abs_dT_K": 1.2599999999999778,
+      "median_abs_dx": 0.0025814285714285123,
+      "precision@0.01": 0.7599109131403118,
+      "pred_points": 2245,
+      "recall@0.01": 0.9578518014955812,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.6200000000000045,
+       "median": 0.6200000000000045,
+       "n": 1
+      },
+      "f1": 0.15384615384615385,
+      "n_pred": 12,
+      "n_true": 1,
+      "precision": 0.08333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 109.64999999999998,
+      "median": 109.64999999999998,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "answered": 6,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 3,
+      "human_queue": 15
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": 0.09523809523809523,
+     "n_pred": 1,
+     "n_true": 20,
+     "precision": 1.0,
+     "recall": 0.05,
+     "value_only_recall": 0.05
+    }
+   },
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 1
+     },
+     "T_printed_exact": 1,
+     "cite_n": 1,
+     "cite_ok": 1,
+     "ev_n": 1,
+     "ev_ok": 1,
+     "matched": 1,
+     "rows_pred": 1,
+     "rows_true": 1,
+     "type_ok": 1,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 3
+     },
+     "x_n": 3,
+     "x_printed_exact": 3
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.7004295649410371,
+      "mean_pred_to_true": 0.296633231512304,
+      "mean_true_to_pred": 0.4463164402198357,
+      "median_abs_dT_K": 115.94333333333331,
+      "median_abs_dx": 0.18923333333333334,
+      "precision@0.01": 0.0,
+      "pred_points": 751,
+      "recall@0.01": 0.0,
+      "true_samples": 1471
+     },
+     "fields": {
+      "f1": 0.6666666666666666,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 6,
+      "precision": 1.0,
+      "recall": 0.5
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      },
+      "f1": 0.0,
+      "n_pred": 2,
+      "n_true": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "type_accuracy": null,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": 109.64999999999998,
+      "median": 109.64999999999998,
+      "n": 2
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 54,
+     "matched": 54,
+     "records_pred": 54,
+     "records_true": 54,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 54
+     },
+     "unit_ok": 54,
+     "value_exact": 54,
+     "within_1pct": 54
+    },
+    "status": {
+     "answered": 6,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 3,
+      "human_queue": 6
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 1
+    },
+    "text": {
+     "f1": 0.5714285714285715,
+     "n_pred": 8,
+     "n_true": 20,
+     "precision": 1.0,
+     "recall": 0.4,
+     "value_only_recall": 0.4
+    }
+   }
+  },
+  "syn-CuZn-08Gie-v0": {
+   "degraded_raster": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 0,
+     "rows_true": 8,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.29493475574827355,
+      "mean_pred_to_true": 0.04928013949011182,
+      "mean_true_to_pred": 0.04991353894351444,
+      "median_abs_dT_K": 3.375000000000028,
+      "median_abs_dx": 0.0074,
+      "precision@0.01": 0.6817325800376648,
+      "pred_points": 2124,
+      "recall@0.01": 0.47149643705463185,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.4,
+      "loose_precision": 0.8,
+      "n_pred": 5,
+      "n_true": 15,
+      "precision": 0.8,
+      "recall": 0.26666666666666666
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 4.390000000000032,
+       "median": 4.509999999999991,
+       "n": 5
+      },
+      "f1": 0.4761904761904762,
+      "n_pred": 14,
+      "n_true": 7,
+      "precision": 0.35714285714285715,
+      "recall": 0.7142857142857143,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": 207.4000000000001,
+      "median": 207.4000000000001,
+      "n": 2
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 69,
+     "matched": 69,
+     "records_pred": 69,
+     "records_true": 69,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 69
+     },
+     "unit_ok": 69,
+     "value_exact": 69,
+     "within_1pct": 69
+    },
+    "status": {
+     "answered": 4,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 6,
+      "human_queue": 17
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 1
+    },
+    "text": {
+     "f1": 0.6176470588235293,
+     "n_pred": 22,
+     "n_true": 46,
+     "precision": 0.9545454545454546,
+     "recall": 0.45652173913043476,
+     "value_only_recall": 0.4782608695652174
+    }
+   },
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 8
+     },
+     "T_printed_exact": 8,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 8,
+     "rows_pred": 8,
+     "rows_true": 8,
+     "type_ok": 8,
+     "x_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 24
+     },
+     "x_n": 24,
+     "x_printed_exact": 24
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.3213502731488829,
+      "mean_pred_to_true": 0.0034934286331610633,
+      "mean_true_to_pred": 0.11712307921916346,
+      "median_abs_dT_K": 0.519999999999976,
+      "median_abs_dx": 0.0002474999999999561,
+      "precision@0.01": 0.9006433166547534,
+      "pred_points": 1399,
+      "recall@0.01": 0.2988915281076801,
+      "true_samples": 2526
+     },
+     "fields": {
+      "f1": 0.28571428571428575,
+      "loose_precision": 0.5,
+      "n_pred": 8,
+      "n_true": 15,
+      "precision": 0.5,
+      "recall": 0.2
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 1.8240000000000465,
+       "median": 0.16000000000008185,
+       "n": 5
+      },
+      "f1": 0.6250000000000001,
+      "n_pred": 9,
+      "n_true": 7,
+      "precision": 0.5555555555555556,
+      "recall": 0.7142857142857143,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 7
+     },
+     "T_low_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 2
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 14
+     },
+     "matched": 7,
+     "pearson_ok": 7,
+     "proto_ok": 7,
+     "rows_pred": 7,
+     "rows_true": 7,
+     "sb_ok": 7,
+     "struct_n": 21,
+     "struct_ok": 21
+    },
+    "property_records": {
+     "basis_ok": 69,
+     "matched": 69,
+     "records_pred": 69,
+     "records_true": 69,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 69
+     },
+     "unit_ok": 69,
+     "value_exact": 69,
+     "within_1pct": 69
+    },
+    "status": {
+     "answered": 5,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 1,
+      "human_queue": 4
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": 0.7397260273972603,
+     "n_pred": 27,
+     "n_true": 46,
+     "precision": 1.0,
+     "recall": 0.5869565217391305,
+     "value_only_recall": 0.5869565217391305
+    }
+   }
+  },
+  "syn-PbZn-98Jan-v0": {
+   "degraded_raster": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.1754520452433897,
+      "mean_pred_to_true": 0.005706097658219189,
+      "mean_true_to_pred": 0.02220186229780394,
+      "median_abs_dT_K": 2.710000000000068,
+      "median_abs_dx": 0.000702510209247012,
+      "precision@0.01": 0.9208715596330275,
+      "pred_points": 1744,
+      "recall@0.01": 0.8253198059108955,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.6,
+      "loose_precision": 0.8,
+      "n_pred": 5,
+      "n_true": 5,
+      "precision": 0.6,
+      "recall": 0.6
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 3.265000000000043,
+       "median": 3.265000000000043,
+       "n": 2
+      },
+      "f1": 0.6666666666666666,
+      "n_pred": 4,
+      "n_true": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 0,
+     "matched": 0,
+     "records_pred": 0,
+     "records_true": 36,
+     "rel_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "unit_ok": 0,
+     "value_exact": 0,
+     "within_1pct": 0
+    },
+    "status": {
+     "answered": 5,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 3,
+      "human_queue": 2
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 0
+    },
+    "text": {
+     "f1": 0.0909090909090909,
+     "n_pred": 1,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 0.047619047619047616,
+     "value_only_recall": 0.047619047619047616
+    }
+   },
+   "vector": {
+    "invariant_rows": {
+     "T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_printed_exact": 0,
+     "cite_n": 0,
+     "cite_ok": 0,
+     "ev_n": 0,
+     "ev_ok": 0,
+     "matched": 0,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "type_ok": 0,
+     "x_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "x_n": 0,
+     "x_printed_exact": 0
+    },
+    "phase_diagram": {
+     "boundary": {
+      "hausdorff95": 0.19964007581774207,
+      "mean_pred_to_true": 0.003592290891388629,
+      "mean_true_to_pred": 0.022656308168247628,
+      "median_abs_dT_K": 0.14999999999993352,
+      "median_abs_dx": 0.0005961617336152567,
+      "precision@0.01": 0.9179847685998829,
+      "pred_points": 3414,
+      "recall@0.01": 0.8367887075430084,
+      "true_samples": 2267
+     },
+     "fields": {
+      "f1": 0.7499999999999999,
+      "loose_precision": 1.0,
+      "n_pred": 3,
+      "n_true": 5,
+      "precision": 1.0,
+      "recall": 0.6
+     },
+     "found": true,
+     "invariants": {
+      "T_abs_err_K": {
+       "mean": 0.09500000000002728,
+       "median": 0.09500000000002728,
+       "n": 2
+      },
+      "f1": 0.5,
+      "n_pred": 6,
+      "n_true": 2,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "type_accuracy": 0.0,
+      "x_abs_err": {
+       "mean": null,
+       "median": null,
+       "n": 0
+      }
+     }
+    },
+    "phase_rows": {
+     "T_high_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "T_low_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_T_err": {
+      "mean": null,
+      "median": null,
+      "n": 0
+     },
+     "hom_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 4
+     },
+     "matched": 2,
+     "pearson_ok": 2,
+     "proto_ok": 2,
+     "rows_pred": 2,
+     "rows_true": 2,
+     "sb_ok": 2,
+     "struct_n": 6,
+     "struct_ok": 6
+    },
+    "property_records": {
+     "basis_ok": 36,
+     "matched": 36,
+     "records_pred": 36,
+     "records_true": 36,
+     "rel_err": {
+      "mean": 0.0,
+      "median": 0.0,
+      "n": 36
+     },
+     "unit_ok": 36,
+     "value_exact": 36,
+     "within_1pct": 36
+    },
+    "status": {
+     "answered": 6,
+     "missing": 0,
+     "pd_fields": {
+      "accepted": 1,
+      "human_queue": 6
+     },
+     "reader": "claude-opus-5.5 (blind file-broker reader)",
+     "text_refused": 1
+    },
+    "text": {
+     "f1": 0.7272727272727273,
+     "n_pred": 12,
+     "n_true": 21,
+     "precision": 1.0,
+     "recall": 0.5714285714285714,
+     "value_only_recall": 0.5714285714285714
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,225 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5e0a300f76f68e2e1e167908",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Al",
+   "Mg"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "eutectic reaction L -> (Al) + B",
+    "temperature": 723.9,
+    "temperature_unit": "K",
+    "temperature_printed": "723.9 K",
+    "temperature_role": "invariant",
+    "reaction": "L - (Al) + B",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 36.4
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 723.9 K for the eutectic reaction (L - (Al) + B), where L has 36.4 at.% Mg.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectic reaction L -> B + Al12Mg17",
+    "temperature": 723.5,
+    "temperature_unit": "K",
+    "temperature_printed": "723.5 K",
+    "temperature_role": "invariant",
+    "reaction": "L - B + All2Mg17",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 41.9
+     }
+    ],
+    "source": "this_work",
+    "quote": "We obtain 723.5 K for the eutectic reaction (L - B + All2Mg17), where L has 41.9 at.%.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectic reaction L -> Al12Mg17 + (Mg)",
+    "temperature": 711.2,
+    "temperature_unit": "K",
+    "temperature_printed": "711.2 K",
+    "temperature_role": "invariant",
+    "reaction": "L - All2Mg17 + (Mg)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Mg",
+      "value": 69.7
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 711.2 K the eutectic L - All2Mg17 + (Mg) takes place; the .L phase then contains 69.7 at.% Mg.",
+    "page": 1
+   },
+   {
+    "row_label": "peritectoid reaction B + Al12Mg17 -> ¢",
+    "temperature": 699.5,
+    "temperature_unit": "K",
+    "temperature_printed": "699.5 K",
+    "temperature_role": "invariant",
+    "reaction": "B + All2Mg17'- ¢",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "e",
+      "element": "Mg",
+      "value": 43.4
+     }
+    ],
+    "source": "this_work",
+    "quote": "The dataset places:a peritectoid (B + All2Mg17'- ¢) at 699.5 K; the composition of e is 43.4 at.% Mg.",
+    "page": 1
+   },
+   {
+    "row_label": "eutectoid reaction e -> B + Al12Mg17",
+    "temperature": 523.9,
+    "temperature_unit": "K",
+    "temperature_printed": "523.9 K",
+    "temperature_role": "invariant",
+    "reaction": "e > B + Al12Mg17",
+    "transition_kind": "other",
+    "phase_compositions": [
+     {
+      "phase": "e",
+      "element": "Mg",
+      "value": 43.4
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectoid reaction e > B + Al12Mg17 is calculated at 523.9 K, with e at 43.4 at.%.",
+    "page": 1
+   },
+   {
+    "row_label": "congruent melting of Al12Mg17",
+    "temperature": 733.4,
+    "temperature_unit": "K",
+    "temperature_printed": "733.4 K",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "All2Mg17",
+      "element": "Mg",
+      "value": 53.5
+     }
+    ],
+    "source": "this_work",
+    "quote": "All2Mg17 melts congruently at 733.4 K and 53.5 at.%",
+    "page": 1
+   },
+   {
+    "row_label": "integral mixing enthalpy minimum of liquid",
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_printed": "1000 K",
+    "temperature_role": "measurement",
+    "phase_compositions": [
+     {
+      "phase": "liquid",
+      "element": "Mg",
+      "value": 52.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -2344,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1000 K the integral mixing enthalpy of the liquid has its minimum, -2344 J/mol, at 52.0 at.% Mg.",
+    "page": 2
+   },
+   {
+    "row_label": "enthalpy of formation of ¢",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "measurement",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -3.99,
+      "unit": "kJ/mol per mole of atoms",
+      "phase": "¢"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of ¢ at 298.15 K is -3.99 kJ/mol per mole of atoms.",
+    "page": 2
+   },
+   {
+    "row_label": "heat capacity of ¢",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.54,
+      "unit": "J/(mol K)",
+      "phase": "¢"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at toom temperature is 24.54 J/(mol K).",
+    "page": 2
+   },
+   {
+    "row_label": "Gibbs energy of mixing of equiatomic liquid",
+    "temperature": 1000,
+    "temperature_unit": "K",
+    "temperature_printed": "1000 K",
+    "temperature_role": "measurement",
+    "overall_composition": [
+     {
+      "element": "Mg",
+      "value": 50
+     },
+     {
+      "element": "Al",
+      "value": 50
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -7.53,
+      "unit": "kJ/mol-atom",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1000 K, the Gibbs energy of mixing is -7.53 kJ/mol-atom.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 619,
+  "cached_content_token_count": null,
+  "candidates_token_count": 2092,
+  "thoughts_token_count": 1372,
+  "total_token_count": 4083
+ },
+ "seconds": 19.5
+}

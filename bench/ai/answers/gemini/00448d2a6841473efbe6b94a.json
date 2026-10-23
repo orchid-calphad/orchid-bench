@@ -1,0 +1,110 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "00448d2a6841473efbe6b94a",
+ "result": {
+  "table_kind": "thermochemical_properties",
+  "system": [
+   "Cr",
+   "Fe"
+  ],
+  "temperature_unit": "K",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "invariant reaction σ → (Cr,Fe)1 + (Cr,Fe)2",
+    "temperature": 790,
+    "temperature_unit": "K",
+    "temperature_role": "invariant",
+    "reaction": "σ → (Cr,Fe)1 + (Cr,Fe)2",
+    "transition_kind": "invariant",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, σ → (Cr,Fe)1 + (Cr,Fe)2, lies at 790 K.",
+    "page": 1
+   },
+   {
+    "row_label": "liquid mixing enthalpy maximum",
+    "temperature": 2250,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "overall_composition": [
+     {
+      "element": "Fe",
+      "value": 78.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": 37,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 2250 K the integral mixing enthalpy of the liquid has its maximum, 37 J/mol, at 78.0 at.% Fe.",
+    "page": 2
+   },
+   {
+    "row_label": "σ enthalpy of formation",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": 5.89,
+      "unit": "kJ/mol",
+      "phase": "σ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of σ at 298.15 K is 5.89 kJ/mol per mole of atoms.",
+    "page": 2
+   },
+   {
+    "row_label": "σ heat capacity",
+    "temperature_printed": "room temperature",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 24.12,
+      "unit": "J/(mol K)",
+      "phase": "σ"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 24.12 J/(mol K).",
+    "page": 2
+   },
+   {
+    "row_label": "equiatomic liquid Gibbs energy of mixing",
+    "temperature": 2250,
+    "temperature_unit": "K",
+    "temperature_role": "other",
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -16.33,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 2250 K, the Gibbs energy of mixing is -16.33 kJ/mol.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 491,
+  "cached_content_token_count": null,
+  "candidates_token_count": 568,
+  "thoughts_token_count": 2309,
+  "total_token_count": 3368
+ },
+ "seconds": 18.9
+}

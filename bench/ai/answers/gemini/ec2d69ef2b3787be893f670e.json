@@ -1,0 +1,45 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "ec2d69ef2b3787be893f670e",
+ "result": {
+  "table_kind": "crystallographic",
+  "system": [
+   "Al",
+   "Bi"
+  ],
+  "temperature_unit": "C",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "(Al)",
+    "temperature": 657,
+    "temperature_unit": "C",
+    "temperature_printed": "657",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   },
+   {
+    "row_label": "(Bi)",
+    "temperature": 27,
+    "temperature_unit": "C",
+    "temperature_printed": "27",
+    "temperature_basis": "cell",
+    "temperature_also_printed": [],
+    "calculation_settings": {
+     "other": []
+    }
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 3576,
+  "cached_content_token_count": null,
+  "candidates_token_count": 226,
+  "thoughts_token_count": 3021,
+  "total_token_count": 6823
+ },
+ "seconds": 25.7
+}

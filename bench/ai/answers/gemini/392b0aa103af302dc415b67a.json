@@ -1,0 +1,76 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "392b0aa103af302dc415b67a",
+ "result": {
+  "table_found": true,
+  "temperature_unit": "K",
+  "composition_basis": "mole_fraction",
+  "composition_component": "Ni",
+  "rows": [
+   {
+    "reaction": "L2 -> L1 + (Ni)",
+    "reaction_type": "monotectic",
+    "phases": [
+     "L2",
+     "L1",
+     "(Ni)"
+    ],
+    "temperature": 1703.4,
+    "temperature_unit": "K",
+    "temperature_printed": "1703.4",
+    "compositions": [
+     {
+      "phase": "L2",
+      "value": 0.97
+     },
+     {
+      "phase": "L1",
+      "value": 0.038
+     },
+     {
+      "phase": "(Ni)",
+      "value": 0.99
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   },
+   {
+    "reaction": "L -> (Ag) + (Ni)",
+    "reaction_type": "eutectic",
+    "phases": [
+     "L",
+     "(Ag)",
+     "(Ni)"
+    ],
+    "temperature": 1234.2,
+    "temperature_unit": "K",
+    "temperature_printed": "1234.2",
+    "compositions": [
+     {
+      "phase": "L",
+      "value": 0.003
+     },
+     {
+      "phase": "(Ag)",
+      "value": 0.003
+     },
+     {
+      "phase": "(Ni)",
+      "value": 0.997
+     }
+    ],
+    "source": "this_work",
+    "source_label": "this work"
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 2102,
+  "cached_content_token_count": null,
+  "candidates_token_count": 439,
+  "thoughts_token_count": 559,
+  "total_token_count": 3100
+ },
+ "seconds": 7.2
+}

@@ -1,0 +1,168 @@
+{
+ "model": "gemini-3.8-flash",
+ "key": "5df7045e63d6aaa2ff34e945",
+ "result": {
+  "table_kind": "other",
+  "system": [
+   "Mg",
+   "Si"
+  ],
+  "temperature_unit": "mixed",
+  "composition_basis": "atomic_percent",
+  "rows": [
+   {
+    "row_label": "L > Mg2Si + (Si) invariant reaction",
+    "temperature": 939.3,
+    "temperature_unit": "C",
+    "temperature_printed": "939.3 °C",
+    "temperature_role": "invariant",
+    "reaction": "L > Mg2Si + (Si)",
+    "source": "this_work",
+    "quote": "The highest invariant reaction, L > Mg2Si + (Si), lies at 939.3 °C.",
+    "page": 1
+   },
+   {
+    "row_label": "L ~ Mg2Si + (Si) eutectic",
+    "temperature": 939.3,
+    "temperature_unit": "C",
+    "temperature_printed": "939.3 °C",
+    "temperature_role": "invariant",
+    "reaction": "L ~ Mg2Si + (Si)",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Si",
+      "value": 54.3
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 939.3 °C the eutectic L ~ Mg2Si + (Si) takes place; the L phase then contains 54.3 at.%.",
+    "page": 1
+   },
+   {
+    "row_label": "L ~ (Mg) + Mg2Si eutectic",
+    "temperature": 637.1,
+    "temperature_unit": "C",
+    "temperature_printed": "637.1 °C",
+    "temperature_role": "invariant",
+    "reaction": "L ~ (Mg) + Mg2Si",
+    "transition_kind": "eutectic",
+    "phase_compositions": [
+     {
+      "phase": "L",
+      "element": "Si",
+      "value": 1.5
+     }
+    ],
+    "source": "this_work",
+    "quote": "The eutectic reaction L ~ (Mg) + Mg2Si is calculated at 637.1 °C, with L at 1.5 at.% Si.",
+    "page": 1
+   },
+   {
+    "row_label": "Mg2Si congruent melting",
+    "temperature": 1077.4,
+    "temperature_unit": "C",
+    "temperature_printed": "1077.4 °C",
+    "temperature_role": "transition",
+    "transition_kind": "congruent",
+    "phase_compositions": [
+     {
+      "phase": "Mg2Si",
+      "element": "Si",
+      "value": 33.3
+     }
+    ],
+    "source": "this_work",
+    "quote": "Mg2Si melts congruently at 1077.4 °C and 33.3 at.% Si.",
+    "page": 1
+   },
+   {
+    "row_label": "Liquid integral mixing enthalpy minimum",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_printed": "1750 K",
+    "temperature_role": "equilibration",
+    "overall_composition": [
+     {
+      "element": "Si",
+      "value": 48.0
+     }
+    ],
+    "properties": [
+     {
+      "quantity": "integral mixing enthalpy",
+      "quantity_kind": "mixing_enthalpy",
+      "value": -16345,
+      "unit": "J/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "At 1750 K the integral mixing enthalpy of the liquid has its minimum, -16345 J/mol, at 48.0 at.% Si.",
+    "page": 2
+   },
+   {
+    "row_label": "Mg2Si enthalpy of formation",
+    "temperature": 298.15,
+    "temperature_unit": "K",
+    "temperature_printed": "298.15 K",
+    "temperature_role": "equilibration",
+    "properties": [
+     {
+      "quantity": "enthalpy of formation",
+      "quantity_kind": "formation_enthalpy",
+      "value": -21.05,
+      "unit": "kJ/mol",
+      "phase": "Mg2Si"
+     }
+    ],
+    "source": "this_work",
+    "quote": "The calculated enthalpy of formation of Mg2Si at 298.15 K is -21.05 kJ/mol per mole of atoms.",
+    "page": 2
+   },
+   {
+    "row_label": "Mg2Si heat capacity",
+    "properties": [
+     {
+      "quantity": "heat capacity",
+      "quantity_kind": "heat_capacity",
+      "value": 22.92,
+      "unit": "J/(mol K)",
+      "phase": "Mg2Si"
+     }
+    ],
+    "source": "this_work",
+    "quote": "Its heat capacity at room temperature is 22.92 J/(mol K).",
+    "page": 2
+   },
+   {
+    "row_label": "Liquid Gibbs energy of mixing",
+    "temperature": 1750,
+    "temperature_unit": "K",
+    "temperature_printed": "1750 K",
+    "temperature_role": "equilibration",
+    "properties": [
+     {
+      "quantity": "Gibbs energy of mixing",
+      "quantity_kind": "gibbs_energy",
+      "value": -19.16,
+      "unit": "kJ/mol",
+      "phase": "liquid"
+     }
+    ],
+    "source": "this_work",
+    "quote": "For the equiatomic liquid at 1750 K, the Gibbs energy of mixing is -19.16 kJ/mol.",
+    "page": 2
+   }
+  ]
+ },
+ "usage": {
+  "prompt_token_count": 589,
+  "cached_content_token_count": null,
+  "candidates_token_count": 989,
+  "thoughts_token_count": 2309,
+  "total_token_count": 3887
+ },
+ "seconds": 20.7
+}
