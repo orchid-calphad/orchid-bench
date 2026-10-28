@@ -1,0 +1,50 @@
+{
+  "title": "ORCHID-Bench: synthetic benchmark for extracting thermodynamic data from documents",
+  "upload_type": "software",
+  "description": "Synthetic benchmark for extracting thermodynamic data from documents: invariant-reaction tables and phase diagrams generated from SGTE assessments with known answers, rendered as born-digital PDFs and degraded scans, with the generator and scorer. Code MIT; benchmark data CC BY 4.0 (see LICENSE-DATA.md).",
+  "creators": [
+    {
+      "name": "Arróyave, Raymundo",
+      "affiliation": "Texas A&M University",
+      "orcid": "0000-0001-7548-8686"
+    },
+    {
+      "name": "Saal, James",
+      "affiliation": "Citrine Informatics",
+      "orcid": "0000-0003-0935-158X"
+    },
+    {
+      "name": "Shin, Dongwon",
+      "affiliation": "Oak Ridge National Laboratory",
+      "orcid": "0000-0002-5797-3423"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "benchmark",
+    "information extraction",
+    "CALPHAD",
+    "phase diagrams",
+    "document AI"
+  ],
+  "communities": [
+    {
+      "identifier": "orchid-calphad"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23736065",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://orchid-project.org",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ],
+  "notes": "This work was supported by the U.S. National Science Foundation under awards OAC-2608825 and 2534344.",
+  "version": "v2026.10"
+}
