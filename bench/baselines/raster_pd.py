@@ -33,14 +33,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.assessed_pd_raster import merge_words, phase_table, text_layer_words  # noqa: E402
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
 from baselines.ocr_cache import read_tsv
-from common import ASSESSED_PD, BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
+from common import ASSESSED_PD, bench, docs_dir, truth_dir, load_json, sha256_file, write_json  # noqa: E402
 from score import aabb  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
 PY = sys.executable
-OUT = BENCH / "outputs" / "raster_topology"
-OUT2 = BENCH / "outputs" / "assessed_pd_auto"
-WORK = BENCH / "work" / "raster_pd"
+OUT = bench / "outputs" / "raster_topology"
+OUT2 = bench / "outputs" / "assessed_pd_auto"
+WORK = bench / "work" / "raster_pd"
 import os
 
 ENV = {**{k: v for k, v in os.environ.items() if "KEY" not in k.upper()}, "PYTHONPATH": str(PIPE / "src"), "OMP_THREAD_LIMIT": "1"}
@@ -54,18 +54,18 @@ def sh(args):
 
 def pdf_for(doc, rendering):
     if rendering == "vector":
-        return [("vector.pdf", DOCS / doc / "vector.pdf")]
+        return [("vector.pdf", docs_dir / doc / "vector.pdf")]
     if rendering == "image_only_pdf":
-        return [("image_only.pdf (no text layer)", DOCS / doc / "image_only.pdf"),
-                ("image_only.pdf + Tesseract text layer", BENCH / "work" / "ocrpdf" / doc / "image_only_pdf.pdf")]
-    return [("Tesseract searchable PDF", BENCH / "work" / "ocrpdf" / doc / f"{rendering}.pdf")]
+        return [("image_only.pdf (no text layer)", docs_dir / doc / "image_only.pdf"),
+                ("image_only.pdf + Tesseract text layer", bench / "work" / "ocrpdf" / doc / "image_only_pdf.pdf")]
+    return [("Tesseract searchable PDF", bench / "work" / "ocrpdf" / doc / f"{rendering}.pdf")]
 
 
 def page_image(doc, rendering, page):
     if rendering in ("vector", "clean_raster"):
-        return DOCS / doc / "clean" / f"page-{page + 1}.png"
+        return docs_dir / doc / "clean" / f"page-{page + 1}.png"
     if rendering == "degraded_raster":
-        return DOCS / doc / "degraded" / f"page-{page + 1}.jpg"
+        return docs_dir / doc / "degraded" / f"page-{page + 1}.jpg"
     return next((OCR / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
 
 
@@ -199,7 +199,7 @@ def run(t, rendering):
         raise RuntimeError(f"extract_binary_topology failed: {log.strip()[-200:]}")
     topo = load_json(topo_p)
     st["topology"] = f"{len(topo['invariant_candidates'])} invariant candidates, {len(topo['face_hypotheses'])} unlabelled faces"
-    comp = BENCH / "work" / "tdb_topology" / f"{doc}.json"
+    comp = bench / "work" / "tdb_topology" / f"{doc}.json"
     if comp.exists():
         cp = w / "compare.json"
         rc, log = sh([PY, PIPE / "scripts/compare_binary_topology.py", comp, topo_p, "--output", cp, "--format", "json"])
@@ -370,7 +370,7 @@ def main(argv=None):
     args = argv or sys.argv[1:]
     rends = [a for a in args if a in RENDS] or RENDS
     docs = [a for a in args if a not in RENDS]
-    tfs = [tf for tf in sorted(TRUTH.glob("*.json")) if not docs or tf.stem in docs]
+    tfs = [tf for tf in sorted(truth_dir.glob("*.json")) if not docs or tf.stem in docs]
     with Pool(8) as pool:
         pool.starmap(one, [(tf, r) for tf in tfs for r in rends])
 

@@ -10,11 +10,11 @@ from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, TRUTH, load_json  # noqa: E402
+from common import bench, truth_dir, load_json  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
 PY = sys.executable
-OUT = BENCH / "work" / "tdb_topology"
+OUT = bench / "work" / "tdb_topology"
 
 
 def one(tf):
@@ -42,5 +42,5 @@ def one(tf):
 
 if __name__ == "__main__":
     with Pool(8) as p:
-        for d, s in p.imap_unordered(one, sorted(TRUTH.glob("*.json"))):
+        for d, s in p.imap_unordered(one, sorted(truth_dir.glob("*.json"))):
             print(d, s.replace("\n", " | "), flush=True)

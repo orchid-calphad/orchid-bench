@@ -10,11 +10,11 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import CACHE, P_ATM, PD_DIR, R_GAS, TDB_DIR, el, load_json, sha256_file, write_json  # noqa: E402
+from common import cache, p_atm, pd_dir, r_gas, tdb_dir, el, load_json, sha256_file, write_json  # noqa: E402
 from systems import Labeller, base  # noqa: E402
 
 warnings.filterwarnings("ignore")
-CACHE_VERSION = 12
+cache_version = 12
 
 
 
@@ -63,7 +63,7 @@ def _pyc():
 def eq_point(dbf, comps, phases, B, x, T):
     """Stable composition sets at (x_B, T): list of {phase, x, np} sorted by x, '#2' for repeated phases."""
     _, equilibrium, _, v = _pyc()
-    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: P_ATM, v.N: 1})
+    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     names = res.Phase.values.squeeze()
     xb = res.X.sel(component=B).values.squeeze()
     npf = res.NP.values.squeeze()
@@ -177,7 +177,7 @@ def liquid_mixing(dbf, comps, A, B, T, xs):
     _, equilibrium, _, v = _pyc()
     xs = np.asarray(xs, float)
     xc = np.clip(xs, 1e-7, 1 - 1e-7)
-    res = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): xc.tolist(), v.T: float(T), v.P: P_ATM, v.N: 1}, output="HM")
+    res = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): xc.tolist(), v.T: float(T), v.P: p_atm, v.N: 1}, output="HM")
     H = res.HM.values.ravel()
     G = res.GM.values.ravel()
     Hm = H - ((1 - xc) * H[0] + xc * H[-1]) if xs[0] == 0 and xs[-1] == 1 else H
@@ -191,21 +191,21 @@ def liquid_activity(dbf, comps, A, B, T, xs):
     """Activities of A and B in the liquid (reference: pure liquid at T) from LIQUID-only equilibria."""
     _, equilibrium, _, v = _pyc()
     xs = [float(x) for x in xs]
-    res = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): [1e-7] + xs + [1 - 1e-7], v.T: float(T), v.P: P_ATM, v.N: 1})
+    res = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): [1e-7] + xs + [1 - 1e-7], v.T: float(T), v.P: p_atm, v.N: 1})
     mu = res.MU.squeeze()
     muA = mu.sel(component=A).values.ravel()
     muB = mu.sel(component=B).values.ravel()
     gA = res.GM.values.ravel()[0]
     gB = res.GM.values.ravel()[-1]
-    aA = np.exp((muA[1:-1] - gA) / (R_GAS * T))
-    aB = np.exp((muB[1:-1] - gB) / (R_GAS * T))
+    aA = np.exp((muA[1:-1] - gA) / (r_gas * T))
+    aB = np.exp((muB[1:-1] - gB) / (r_gas * T))
     return aA, aB
 
 
 def phase_min_curve(dbf, comps, phase, B, T, nbins=101):
     """Lower envelope of GM(x) for one phase at T from sampled internal configurations."""
     _, _, calculate, v = _pyc()
-    res = calculate(dbf, comps, phase, T=T, P=P_ATM, N=1, pdens=2000, output="GM")
+    res = calculate(dbf, comps, phase, T=T, P=p_atm, N=1, pdens=2000, output="GM")
     x = res.X.sel(component=B).values.ravel()
     g = res.GM.values.ravel()
     ok = np.isfinite(x) & np.isfinite(g)
@@ -223,7 +223,7 @@ def phase_min_curve(dbf, comps, phase, B, T, nbins=101):
 
 def compound_at(dbf, comps, phase, B, x0, T, prop):
     _, equilibrium, _, v = _pyc()
-    res = equilibrium(dbf, comps, [phase], {v.X(B): float(x0), v.T: T, v.P: P_ATM, v.N: 1}, output=prop)
+    res = equilibrium(dbf, comps, [phase], {v.X(B): float(x0), v.T: T, v.P: p_atm, v.N: 1}, output=prop)
     return np.asarray(getattr(res, prop).values).squeeze(), res
 
 
@@ -271,16 +271,16 @@ def rk_parameters(dbf, phase, A, B):
 
 # ----------------------------------------------------------------------------------------------- main preparation
 def prepare(stem: str, force: bool = False) -> dict:
-    out_path = CACHE / f"{stem}.json"
+    out_path = cache / f"{stem}.json"
     if out_path.exists() and not force:
         d = load_json(out_path)
-        if d.get("cache_version") == CACHE_VERSION:
+        if d.get("cache_version") == cache_version:
             return d
     Database, equilibrium, calculate, v = _pyc()
     from scipy import ndimage
-    pd_path = PD_DIR / f"{stem}.json"
+    pd_path = pd_dir / f"{stem}.json"
     pdj = load_json(pd_path)
-    tdb = TDB_DIR / pdj["tdb"]
+    tdb = tdb_dir / pdj["tdb"]
     dbf = Database(str(tdb))
     A, B = [c.upper() for c in pdj["components"]]
     assert pdj["x_component"].upper() == B
@@ -315,7 +315,7 @@ def prepare(stem: str, force: bool = False) -> dict:
     cellsets = [[None] * nx for _ in range(nT)]
     for i0 in range(0, nT, 40):
         Ts = Tgrid[i0:i0 + 40]
-        res = equilibrium(dbf, comps, phases, {v.X(B): xcalc.tolist(), v.T: Ts.tolist(), v.P: P_ATM, v.N: 1})
+        res = equilibrium(dbf, comps, phases, {v.X(B): xcalc.tolist(), v.T: Ts.tolist(), v.P: p_atm, v.N: 1})
         ph = res.Phase.values[0, 0]
         xb = res.X.sel(component=B).values[0, 0]
         npf = res.NP.values[0, 0]
@@ -542,7 +542,7 @@ def prepare(stem: str, force: bool = False) -> dict:
                 if len(curves) >= 3:
                     break
             # reference: pure-liquid endpoints (LIQUID-only equilibria at x -> 0, 1)
-            res0 = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): [1e-7, 1 - 1e-7], v.T: Tg, v.P: P_ATM, v.N: 1})
+            res0 = equilibrium(dbf, comps, ["LIQUID"], {v.X(B): [1e-7, 1 - 1e-7], v.T: Tg, v.P: p_atm, v.N: 1})
             ref = res0.GM.values.ravel()
             tang = eq_point(dbf, comps, phases, B, f["point"][0], Tg)
             props["gibbs"] = {"T": Tg, "ref_A": float(ref[0]), "ref_B": float(ref[1]), "curves": curves,
@@ -551,7 +551,7 @@ def prepare(stem: str, force: bool = False) -> dict:
             # G values at tangent points from the curves' phases
             from pycalphad import variables as vv  # noqa: F401
             _, equilibrium_, _, v_ = _pyc()
-            res = equilibrium_(dbf, comps, phases, {v_.X(B): f["point"][0], v_.T: Tg, v_.P: P_ATM, v_.N: 1})
+            res = equilibrium_(dbf, comps, phases, {v_.X(B): f["point"][0], v_.T: Tg, v_.P: p_atm, v_.N: 1})
             mu = res.MU.squeeze()
             props["gibbs"]["mu"] = [float(mu.sel(component=A)), float(mu.sel(component=B))]
     except Exception as e:  # noqa: BLE001
@@ -562,7 +562,7 @@ def prepare(stem: str, force: bool = False) -> dict:
         props["rk_error"] = repr(e)
 
     data = {
-        "cache_version": CACHE_VERSION, "stem": stem,
+        "cache_version": cache_version, "stem": stem,
         "tdb": {"file": tdb.name, "sha256": sha256_file(tdb)},
         "diagram_source": {"file": f"orchid-data/phase-diagrams/sgte/{pd_path.name}", "sha256": sha256_file(pd_path),
                            "engine": pdj.get("engine")},
@@ -575,7 +575,7 @@ def prepare(stem: str, force: bool = False) -> dict:
         "field_map": {"x0": 0.0, "dx": dx, "nx": nx, "T0": 300.0, "dT": dT, "nT": nT, "rows": fmap_rows,
                       "note": "field id per cell (row = T0 + i*dT, column = i*dx); -1 = not a field"},
         "invariants": invs, "congruent": congruent, "properties": props,
-        "calculation": {"engine": "pycalphad 0.11.2", "P_Pa": P_ATM, "N": 1, "phases": phases,
+        "calculation": {"engine": "pycalphad 0.11.2", "P_Pa": p_atm, "N": 1, "phases": phases,
                         "field_map": "own pycalphad equilibrium grid, dx 0.01 (ends 1e-5), dT 10 K; fields = connected cells with equal labelled assemblage",
                         "order_disorder": "composition sets of phases with equivalent sublattices reported in the disordered state are renamed to the disordered lattice phase (e.g. L12_FCC -> FCC_A1)",
                         "invariant_type": "equilibria at x_mid, T +/- 1.5 K",

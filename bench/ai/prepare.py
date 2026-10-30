@@ -30,7 +30,7 @@ from pathlib import Path
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
-from common import DOCS, TRUTH, load_json  # noqa: E402
+from common import docs_dir, truth_dir, load_json  # noqa: E402
 
 SGTE = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus"
 REL = SGTE / "tools-release-v2.1.18"
@@ -151,10 +151,10 @@ def png_bytes(im):
 def page_image(doc, r, page):
     from PIL import Image
     if r == "clean_raster":
-        im = Image.open(DOCS / doc / "clean" / f"page-{page}.png").convert("RGB")
+        im = Image.open(docs_dir / doc / "clean" / f"page-{page}.png").convert("RGB")
         return im.resize((int(round(im.width * 160 / 300)), int(round(im.height * 160 / 300))), Image.LANCZOS), 160 / 300
     if r == "degraded_raster":
-        return Image.open(DOCS / doc / "degraded" / f"page-{page}.jpg").convert("RGB"), 1.0
+        return Image.open(docs_dir / doc / "degraded" / f"page-{page}.jpg").convert("RGB"), 1.0
     return Image.open(next((OCR / doc / "image_only_pdf").glob(f"page-{page}.*[gG]"))).convert("RGB"), 1.0
 
 
@@ -207,7 +207,7 @@ def write_job(kind, doc, r, prompt, schema, images, meta):
 def table_jobs(t, r):
     doc = t["doc_id"]
     n = t["renderings"]["vector"]["pages"]
-    pdf = DOCS / doc / "vector.pdf"
+    pdf = docs_dir / doc / "vector.pdf"
     per_page = {}
     for p in range(1, n + 1):
         lines = vector_lines(pdf, p) if r == "vector" else ocr_lines(doc, r, p)
@@ -344,10 +344,10 @@ def pd_job(t, r):
 def main():
     JOBS.mkdir(parents=True, exist_ok=True)
     IMG.mkdir(parents=True, exist_ok=True)
-    docs = sys.argv[1:] or [tf.stem for tf in sorted(TRUTH.glob("*.json"))]
+    docs = sys.argv[1:] or [tf.stem for tf in sorted(truth_dir.glob("*.json"))]
     summary = []
     for doc in docs:
-        t = load_json(TRUTH / f"{doc}.json")
+        t = load_json(truth_dir / f"{doc}.json")
         for r in RENDS:
             tj, pages = table_jobs(t, r)
             xj, cj, npass = text_jobs(t, r, pages)

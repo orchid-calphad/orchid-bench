@@ -17,14 +17,14 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, OPEN_TDB, TRUTH, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, open_tdb, truth_dir, load_json, write_json  # noqa: E402
 
-sys.path.insert(0, str(OPEN_TDB / "src"))
+sys.path.insert(0, str(open_tdb / "src"))
 from thermo_extractor.proposals import vector_manifest as VM  # noqa: E402
 from thermo_extractor.proposals.vector_markers import page_transform, propose_vector_markers  # noqa: E402
 
-OUT = BENCH / "outputs" / "vector_route"
-WORK = BENCH / "work" / "vector"
+OUT = bench / "outputs" / "vector_route"
+WORK = bench / "work" / "vector"
 PY = sys.executable
 
 
@@ -32,9 +32,9 @@ def run_inventory(doc):
     w = WORK / doc
     w.mkdir(parents=True, exist_ok=True)
     inv, gr = w / "inventory.json", w / "graphics.json"
-    env = {"PYTHONPATH": str(OPEN_TDB / "src"), "PATH": "/usr/bin:/bin"}
+    env = {"PYTHONPATH": str(open_tdb / "src"), "PATH": "/usr/bin:/bin"}
     if not inv.exists():
-        subprocess.run([PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(DOCS / doc / "vector.pdf"), "--output", str(inv)],
+        subprocess.run([PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(docs_dir / doc / "vector.pdf"), "--output", str(inv)],
                        check=True, capture_output=True, env=env)
     if not gr.exists():
         subprocess.run([PY, "-m", "thermo_extractor.cli", "propose-pdf-graphics", str(inv), "--output", str(gr)],
@@ -106,7 +106,7 @@ def to_data(pts_tl, H, mx, my):
 
 
 def main():
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
         inv_p, gr_p = run_inventory(doc)
@@ -118,7 +118,7 @@ def main():
             pno = f["page"] + 1
             page = next(p for p in inv["pages"] if p["page_number"] == pno)
             role_of = roles(gr, pno)
-            img = DOCS / doc / "clean" / f"page-{pno}.png"
+            img = docs_dir / doc / "clean" / f"page-{pno}.png"
             iw, ih = t["renderings"]["clean_raster"]["files"][f["page"]]["size_px"]
             panels = []
             for ax in f["axes"]:
@@ -193,7 +193,7 @@ def main():
                     (w / "manifest.json").write_text(json.dumps(man), encoding="utf-8")
                     rec["manifest"] = f"ok ({len(man['panels'][0]['legend'].get('entries', []))} legend entries)"
                     try:
-                        data = propose_vector_markers(w / "manifest.json", DOCS / doc / "vector.pdf", img, inv_p, page_number=pno)
+                        data = propose_vector_markers(w / "manifest.json", docs_dir / doc / "vector.pdf", img, inv_p, page_number=pno)
                         rec["vector_markers"] = f"ok ({len(data['points'])} points)"
                         grp = {}
                         for q in data["points"]:
@@ -212,7 +212,7 @@ def main():
         for r in ("vector",):
             write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "vector_route",
                                                   "status": status, "xy_figures": xy_out, "phase_diagrams": pd_out})
-        write_json(BENCH / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
+        write_json(bench / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
                    {"doc_id": doc, "rendering": "vector", "extractor": "propose_vector_markers (official route only)",
                     "status": {"xy": [{k: v for k, v in r_.items() if k in ("figure", "axes", "calibration", "manifest", "vector_markers")}
                                       for r_ in status["xy"]]},

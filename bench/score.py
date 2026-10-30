@@ -19,13 +19,13 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import TRUTH, load_json, write_json  # noqa: E402
+from common import truth_dir, load_json, write_json  # noqa: E402
 
-RENDERINGS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
-TOL = 0.01          # normalised axis distance counted as a hit
-SERIES_TOL = 0.02   # median distance for a predicted series to match a truth series
-MIN_FIELD_CELLS = 6
-INV_T_TOL = 15.0    # K
+renderings = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
+hit_tol = 0.01          # normalised axis distance counted as a hit
+series_tol = 0.02   # median distance for a predicted series to match a truth series
+min_field_cells = 6
+inv_t_tol = 15.0    # K
 
 
 # ------------------------------------------------------------------------------------------------ helpers
@@ -224,16 +224,16 @@ def score_xy(truth, rendering, pred_figs):
             for tp, _, ism in tser:
                 d = nn_dist(tp, allp)
                 res["point_err"] += [float(x) for x in d if np.isfinite(x)]
-                res["hits"] += int((d <= TOL).sum())
-                bq["hits"] += int((d <= TOL).sum())
+                res["hits"] += int((d <= hit_tol).sum())
+                bq["hits"] += int((d <= hit_tol).sum())
                 bq["err"] += [float(x) for x in d if np.isfinite(x)]
                 if ism:
-                    res["marker_hits"] += int((d <= TOL).sum())
+                    res["marker_hits"] += int((d <= hit_tol).sum())
             matched_t = set()
             for ps in pser:
                 res["series_pred"] += 1
                 meds = [float(np.median(nn_dist(ps, tl))) for _, tl, _ in tser]
-                if meds and min(meds) <= SERIES_TOL:
+                if meds and min(meds) <= series_tol:
                     res["series_pred_matched"] += 1
                     matched_t.add(int(np.argmin(meds)))
             res["series_true_matched"] += len(matched_t)
@@ -306,8 +306,8 @@ def score_pd(truth, rendering, pred_pds):
     d_tp = nn_dist(tpts, ppts)
     out["boundary"] = {
         "pred_points": int(len(ppts)), "true_samples": int(len(tpts)),
-        "precision@0.01": float((d_pt <= TOL).mean()) if len(d_pt) else None,
-        "recall@0.01": float((d_tp <= TOL).mean()) if len(d_tp) else None,
+        "precision@0.01": float((d_pt <= hit_tol).mean()) if len(d_pt) else None,
+        "recall@0.01": float((d_tp <= hit_tol).mean()) if len(d_tp) else None,
         "mean_pred_to_true": float(np.mean(d_pt)) if len(d_pt) else None,
         "mean_true_to_pred": float(np.mean(d_tp[np.isfinite(d_tp)])) if len(d_tp) and np.isfinite(d_tp).any() else None,
         "hausdorff95": float(max(np.percentile(d_pt, 95), np.percentile(d_tp, 95))) if len(d_pt) and len(d_tp) else None,
@@ -336,7 +336,7 @@ def score_pd(truth, rendering, pred_pds):
         if 0 <= i < grid.shape[0] and 0 <= j < grid.shape[1]:
             return int(grid[i, j])
         return -1
-    scorable = {f["id"] for f in pdt["fields"] if f["n_cells"] >= MIN_FIELD_CELLS and visible(*f["point"])}
+    scorable = {f["id"] for f in pdt["fields"] if f["n_cells"] >= min_field_cells and visible(*f["point"])}
     correct_fields, tp, npred, loose_tp = set(), 0, 0, 0
     for pf in pred.get("fields", []):
         if not pf.get("phases"):
@@ -363,7 +363,7 @@ def score_pd(truth, rendering, pred_pds):
     pinv = [p for p in pinv if len(p["xs"]) != 3 or visible(p["xs"][1], p["T"])]
     used, terr, xerr, typ_ok, matched = set(), [], [], 0, 0
     for ti in sorted(tinv, key=lambda q: q["T"]):
-        cands = [(abs(p["T"] - ti["T"]), k) for k, p in enumerate(pinv) if k not in used and abs(p["T"] - ti["T"]) <= INV_T_TOL]
+        cands = [(abs(p["T"] - ti["T"]), k) for k, p in enumerate(pinv) if k not in used and abs(p["T"] - ti["T"]) <= inv_t_tol]
         if not cands:
             continue
         _, k = min(cands)
@@ -382,7 +382,7 @@ def score_pd(truth, rendering, pred_pds):
 
 
 # ------------------------------------------------------------------------------------------------ text values
-UNIT_ALIASES = {"k": "K", "°c": "°C", "c": "°C", "degc": "°C", "at.%": "at.%", "at%": "at.%", "mole_fraction": "mole_fraction",
+unit_aliases = {"k": "K", "°c": "°C", "c": "°C", "degc": "°C", "at.%": "at.%", "at%": "at.%", "mole_fraction": "mole_fraction",
                 "x": "mole_fraction", "kj/mol": "kJ/mol", "j/mol": "J/mol", "atm": "atm", "cal/mol": "cal/mol",
                 "j/(mol k)": "J/(mol K)", "j/mol/k": "J/(mol K)", "j": "J"}
 
@@ -401,7 +401,7 @@ def score_text(truth, pred_vals):
             if c["header"]:
                 for m in re.finditer(r"(\d+(?:\.\d+)?) K\b", c["text"]):
                     tv.append((float(m.group(1)), "K"))
-    pv = [(float(v["value"]), UNIT_ALIASES.get(str(v.get("unit", "")).lower(), v.get("unit"))) for v in pred_vals
+    pv = [(float(v["value"]), unit_aliases.get(str(v.get("unit", "")).lower(), v.get("unit"))) for v in pred_vals
           if v.get("value") is not None]
     def mm(a, b, with_unit=True):
         rem = list(b)
@@ -420,11 +420,11 @@ def score_text(truth, pred_vals):
 
 
 # ------------------------------------------------------------------------------------------------ semantic tables (v2)
-INV_T_ROW_TOL = 15.0
-E_FACTOR = {"J/mol": 1.0, "kJ/mol": 1000.0, "cal/mol": 4.184, "kcal/mol": 4184.0, "J/(mol K)": 1.0, "cal/(mol K)": 4.184, "1": 1.0}
-UNIT_NORM = {"j/mol": "J/mol", "kj/mol": "kJ/mol", "cal/mol": "cal/mol", "kcal/mol": "kcal/mol", "j/(mol k)": "J/(mol K)",
+inv_t_row_tol = 15.0
+e_factor = {"J/mol": 1.0, "kJ/mol": 1000.0, "cal/mol": 4.184, "kcal/mol": 4184.0, "J/(mol K)": 1.0, "cal/(mol K)": 4.184, "1": 1.0}
+unit_norm = {"j/mol": "J/mol", "kj/mol": "kJ/mol", "cal/mol": "cal/mol", "kcal/mol": "kcal/mol", "j/(mol k)": "J/(mol K)",
              "j/mol/k": "J/(mol K)", "cal/(mol k)": "cal/(mol K)", "1": "1", "": "1", "none": "1"}
-BASIS_NORM = {"mol_atoms": "mol_atoms", "atom": "mol_atoms", "mol-atom": "mol_atoms", "per mole of atoms": "mol_atoms",
+basis_norm = {"mol_atoms": "mol_atoms", "atom": "mol_atoms", "mol-atom": "mol_atoms", "per mole of atoms": "mol_atoms",
               "formula_unit": "formula_unit", "f.u.": "formula_unit", "per formula unit": "formula_unit"}
 
 
@@ -461,7 +461,7 @@ def score_invariant_rows(truth, pred):
         tset = sorted(_loose(p["label"]) for p in t["phases"])
         tset2 = sorted(_loose(p["tdb_phase"] or "") for p in t["phases"])
         cands = [(abs(p["_TK"] - t["T_K"]), k) for k, p in enumerate(P) if k not in used and p["_set"] in (tset, tset2)
-                 and abs(p["_TK"] - t["T_K"]) <= INV_T_ROW_TOL]
+                 and abs(p["_TK"] - t["T_K"]) <= inv_t_row_tol]
         if not cands:
             continue
         _, k = min(cands)
@@ -571,16 +571,16 @@ def score_property_records(truth, pred):
         res["matched"] += 1
         if _close(p.get("value"), t["value"], 1e-9):
             res["value_exact"] += 1
-        u = UNIT_NORM.get(str(p.get("unit", "")).lower(), p.get("unit"))
-        bas = BASIS_NORM.get(str(p.get("basis", "mol_atoms")).lower(), p.get("basis"))
+        u = unit_norm.get(str(p.get("unit", "")).lower(), p.get("unit"))
+        bas = basis_norm.get(str(p.get("basis", "mol_atoms")).lower(), p.get("basis"))
         res["unit_ok"] += int(u == t["unit"])
         res["basis_ok"] += int(bas == t["basis"])
-        if p.get("value") is None or u not in E_FACTOR:
+        if p.get("value") is None or u not in e_factor:
             continue
-        v = float(p["value"]) * E_FACTOR[u]
+        v = float(p["value"]) * e_factor[u]
         if bas == "formula_unit":
             v /= t.get("atoms_per_formula_unit") or 1
-        e = t["value"] * E_FACTOR.get(t["unit"], 1.0) / ((t.get("atoms_per_formula_unit") or 1) if t["basis"] == "formula_unit" else 1)
+        e = t["value"] * e_factor.get(t["unit"], 1.0) / ((t.get("atoms_per_formula_unit") or 1) if t["basis"] == "formula_unit" else 1)
         re_ = abs(v - e) / max(abs(e), 1e-12)
         res["rel_err"].append(re_)
         res["within_1pct"] += int(re_ <= 0.01)
@@ -609,7 +609,7 @@ def score_doc(truth, rendering, pred):
 
 def aggregate(per_doc):
     agg = {}
-    for rendering in RENDERINGS:
+    for rendering in renderings:
         docs = [d[rendering] for d in per_doc.values() if rendering in d]
         if not docs:
             continue
@@ -756,10 +756,10 @@ def main(argv=None):
     a = ap.parse_args(argv)
     root = Path(a.outputs)
     per_doc = {}
-    for rendering in RENDERINGS:
+    for rendering in renderings:
         for f in sorted((root / rendering).glob("*.json")) if (root / rendering).exists() else []:
             pred = load_json(f)
-            truth = load_json(TRUTH / f"{pred['doc_id']}.json")
+            truth = load_json(truth_dir / f"{pred['doc_id']}.json")
             per_doc.setdefault(pred["doc_id"], {})[rendering] = score_doc(truth, rendering, pred)
     for d in per_doc.values():
         for r_ in d.values():

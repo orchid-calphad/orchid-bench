@@ -20,13 +20,13 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json, sha256_file, write_json  # noqa: E402
 
 sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
 from thermo_extractor.proposals.multipanel_markers import propose_multipanel_markers  # noqa: E402
 
-OUT = BENCH / "outputs" / "raster_markers"
-WORK = BENCH / "work" / "raster_xy"
+OUT = bench / "outputs" / "raster_markers"
+WORK = bench / "work" / "raster_xy"
 RENDS = ["clean_raster", "degraded_raster", "image_only_pdf"]
 
 
@@ -77,16 +77,16 @@ def one(tf, r):
     t = load_json(tf)
     doc = t["doc_id"]
     panels, status = [], []
-    for mp in sorted((BENCH / "work" / "vector" / doc).glob("*/manifest.json")):
+    for mp in sorted((bench / "work" / "vector" / doc).glob("*/manifest.json")):
         man = load_json(mp)
         page = man["source"]["pdf_page"] - 1
         try:
             if r == "clean_raster":
-                img, pdf, use = DOCS / doc / "clean" / f"page-{page + 1}.png", DOCS / doc / "vector.pdf", mp
+                img, pdf, use = docs_dir / doc / "clean" / f"page-{page + 1}.png", docs_dir / doc / "vector.pdf", mp
             else:
-                img = DOCS / doc / "degraded" / f"page-{page + 1}.jpg" if r == "degraded_raster" else \
-                    next((BENCH / "work" / "ocr" / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
-                pdf = DOCS / doc / "image_only.pdf"
+                img = docs_dir / doc / "degraded" / f"page-{page + 1}.jpg" if r == "degraded_raster" else \
+                    next((bench / "work" / "ocr" / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
+                pdf = docs_dir / doc / "image_only.pdf"
                 png = WORK / doc / r / f"page-{page + 1}.png"   # the tool accepts PNG only: decoded JPEG pixels, lossless
                 if not png.exists():
                     from PIL import Image
@@ -123,7 +123,7 @@ def one(tf, r):
 
 
 if __name__ == "__main__":
-    jobs = [(tf, r) for tf in sorted(TRUTH.glob("*.json")) for r in RENDS]
+    jobs = [(tf, r) for tf in sorted(truth_dir.glob("*.json")) for r in RENDS]
     with Pool(8) as p:
         for res in p.starmap(one, jobs):
             print(*res, flush=True)

@@ -8,9 +8,9 @@ from __future__ import annotations
 from common import fmt
 from systems import base
 
-CAL = 4.184
-MARK = ["ᵃ", "ᵇ", "ᶜ", "ᵈ"]
-INV_ORDER = ["eutectic", "peritectic", "monotectic", "syntectic", "metatectic", "eutectoid", "peritectoid",
+cal = 4.184
+mark = ["ᵃ", "ᵇ", "ᶜ", "ᵈ"]
+inv_order = ["eutectic", "peritectic", "monotectic", "syntectic", "metatectic", "eutectoid", "peritectoid",
              "monotectoid", "congruent melting", "congruent transformation", "melting (pure component)"]
 
 
@@ -75,8 +75,8 @@ def invariant_table(data, ext, labeller, st, rng, refs):
     logical = invariant_rows(data, ext, labeller)
     rows, meta, sem = [], [], []
     marks = st["markers"]
-    cong_mark = MARK[0] if marks else ""
-    exp_mark = (MARK[1] if marks else "") if exp else ""
+    cong_mark = mark[0] if marks else ""
+    exp_mark = (mark[1] if marks else "") if exp else ""
     for i, r in enumerate(logical):
         Tv = tval(r["T_K"], tunit)
         Ts = fmt(Tv, 1)
@@ -139,15 +139,15 @@ def invariant_table(data, ext, labeller, st, rng, refs):
         notes.append("Phases 1–3 in the order written in the reaction. Calculated with pycalphad 0.11.2 from the SGTE "
                      "dataset; synthetic document.")
     if marks and any(r["type"].startswith(("congruent", "melting")) for r in logical):
-        notes.append(f"{MARK[0]} Two-phase equilibrium at a temperature extremum; both phases have the same composition.")
+        notes.append(f"{mark[0]} Two-phase equilibrium at a temperature extremum; both phases have the same composition.")
     if exp:
-        notes.append((f"{MARK[1]} " if marks else "") + "Experimental temperatures are fictitious values attributed to "
+        notes.append((f"{mark[1]} " if marks else "") + "Experimental temperatures are fictitious values attributed to "
                      "invented references [3–5] for testing evidence-class extraction; they are not data.")
         if marks:
             for hrow in header:
                 for h in hrow:
                     if h["text"] in ("T exp.", "exp."):
-                        h["text"] += MARK[1]
+                        h["text"] += mark[1]
     ncol = len(rows[0]) if rows else 6
     units = [None, None, tunit] + ([tunit] if exp else []) + ([None] if exp and not inline else []) + [xunit] * 3
     align = ["l", "l"] + ["r"] * (ncol - 2)
@@ -162,8 +162,8 @@ def phase_table(data, ext, st):
     marks = st["markers"]
     stab = sorted(ext["phase_stability"], key=lambda p: (0.5 * (p["homogeneity"]["x_min"] + p["homogeneity"]["x_max"]), p["label"]))
     rows, meta, sem = [], [], []
-    low_mark = MARK[0] if marks else ""
-    cong_mark = MARK[1] if marks else ""
+    low_mark = mark[0] if marks else ""
+    cong_mark = mark[1] if marks else ""
     used = set()
     for i, p in enumerate(stab):
         lo = "< " + fmt(tval(300.0, tunit), 0) + low_mark if p["T_low_K"] is None else fmt(tval(p["T_low_K"], tunit), 1)
@@ -193,7 +193,7 @@ def phase_table(data, ext, st):
                     "T_low_K": p["T_low_K"], "T_low_printed": lo, "T_low_kind": p["T_low_kind"],
                     "T_low_value": None if p["T_low_K"] is None else float(lo),
                     "T_high_K": p["T_high_K"], "T_high_printed": hi, "T_high_kind": p["T_high_kind"], "T_unit": tunit,
-                    "T_high_value": None if p["T_high_K"] is None else float(hi.rstrip("".join(MARK))),
+                    "T_high_value": None if p["T_high_K"] is None else float(hi.rstrip("".join(mark))),
                     "homogeneity": {"T_K": h["T_K"], "T_printed": Th, "T_value": float(Th), "x_min": h["x_min"], "x_max": h["x_max"],
                                     "x_min_value": float(a), "x_max_value": float(b), "printed": hr, "x_unit": xunit}})
     xu = xu_label(xunit, B)
@@ -210,16 +210,16 @@ def phase_table(data, ext, st):
         notes.append("Structure labels follow the TDB phase names (– where the name does not identify a structure). "
                      "Stability range: temperatures between which the phase is stable in some part of the diagram.")
     if "low" in used:
-        notes.append(f"{MARK[0]} Stable at the lowest calculated temperature.")
+        notes.append(f"{mark[0]} Stable at the lowest calculated temperature.")
     if "cong" in used:
-        notes.append(f"{MARK[1]} Congruent point (melting or transformation).")
+        notes.append(f"{mark[1]} Congruent point (melting or transformation).")
     return {"id": "phases", "header": header, "rows": rows, "align": ["l", "l", "l", "l", "r", "r", "r", "r"],
             "footnotes": notes, "column_units": [None, None, None, None, tunit, tunit, xunit, tunit], "meta": meta}, sem
 
 
 # ------------------------------------------------------------------------------------------------ formation table
 def e_conv(J, unit):
-    return {"J/mol": J, "kJ/mol": J / 1000.0, "cal/mol": J / CAL, "kcal/mol": J / CAL / 1000.0}[unit]
+    return {"J/mol": J, "kJ/mol": J / 1000.0, "cal/mol": J / cal, "kcal/mol": J / cal / 1000.0}[unit]
 
 
 def formation_table(data, ext, st, rng, minus):
@@ -238,14 +238,14 @@ def formation_table(data, ext, st, rng, minus):
         hs = fmt(e_conv(H, eu), nd)
         unc = None
         if st["uncertainty"]:
-            unc = [0.5, 1.0, 1.5, 2.0][int(rng.integers(4))] * (1000.0 if eu == "J/mol" else (1000 / CAL if eu == "cal/mol" else 1.0))
+            unc = [0.5, 1.0, 1.5, 2.0][int(rng.integers(4))] * (1000.0 if eu == "J/mol" else (1000 / cal if eu == "cal/mol" else 1.0))
             hs = f"{hs} ± {fmt(unc, 1 if eu == 'kJ/mol' else 0)}"
-        sconv = (lambda v: v / CAL) if su.startswith("cal") else (lambda v: v)
+        sconv = (lambda v: v / cal) if su.startswith("cal") else (lambda v: v)
         ss = fmt(sconv(S), 2)
         cs = fmt(sconv(Cp), 2) if Cp is not None else "–"
         lab = c["label"]
         if marks and not c["stable_at_298K"]:
-            lab += MARK[0]
+            lab += mark[0]
             used = True
         row = [lab, fmt(100 * c["x"], 1), hs.replace("-", minus), ss.replace("-", minus), cs.replace("-", minus)]
         rows.append(row)
@@ -286,7 +286,7 @@ def formation_table(data, ext, st, rng, minus):
             n_ += " ± values are synthetic illustration uncertainties, not data."
         notes.append(n_)
     if used:
-        notes.append(f"{MARK[0]} Not stable at 298.15 K in this description; properties of the metastable phase.")
+        notes.append(f"{mark[0]} Not stable at 298.15 K in this description; properties of the metastable phase.")
     return {"id": "formation", "header": header, "rows": rows, "align": ["l", "r", "r", "r", "r"], "footnotes": notes,
             "column_units": [None, "at.%", eu, su, su], "meta": meta, "basis": basis}, recs
 

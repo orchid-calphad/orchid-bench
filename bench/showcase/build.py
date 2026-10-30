@@ -11,7 +11,7 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
-from common import DOCS, TRUTH, load_json  # noqa: E402
+from common import docs_dir, truth_dir, load_json  # noqa: E402
 from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
@@ -27,18 +27,18 @@ def img_uri(im, fmt="JPEG", q=80):
 
 def doc_payload(doc):
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+    t = load_json(truth_dir / f"{doc}.json")
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")
     main = next(a for a in fig["axes"] if a["role"] == "main")
     page = fig["page"]
-    full = Image.open(DOCS / doc / "clean" / f"page-{page + 1}.png")
+    full = Image.open(docs_dir / doc / "clean" / f"page-{page + 1}.png")
     fb = aabb(fig["corners"]["clean_raster"])
     crop = full.crop(tuple(int(v) for v in fb))
     scale = 900 / crop.width
     crop = crop.resize((900, int(crop.height * scale)))
     thumb = full.copy()
     thumb.thumbnail((620, 800))
-    deg = Image.open(DOCS / doc / "degraded" / f"page-{page + 1}.jpg")
+    deg = Image.open(docs_dir / doc / "degraded" / f"page-{page + 1}.jpg")
     deg.thumbnail((620, 800))
     ab = aabb(main["corners"]["clean_raster"])
     X0, Y0, X1, Y1 = [(ab[0] - fb[0]) * scale, (ab[1] - fb[1]) * scale, (ab[2] - fb[0]) * scale, (ab[3] - fb[1]) * scale]
@@ -125,7 +125,7 @@ def doc_payload(doc):
 def table_payload(doc, table_id):
     """Truth cells vs pdfplumber cells (best-aligned per segment) for one table of one document."""
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+    t = load_json(truth_dir / f"{doc}.json")
     tb = next(x for x in t["tables"] if x["id"] == table_id)
     o = load_json(B / "outputs" / "tables_pdfplumber" / "vector" / f"{doc}.json")
     segs = []
@@ -147,7 +147,7 @@ def table_payload(doc, table_id):
                 c += span
             grid.append(row)
         sg = tb["segments"][si]
-        page = Image.open(DOCS / doc / "clean" / f"page-{sg['page'] + 1}.png")
+        page = Image.open(docs_dir / doc / "clean" / f"page-{sg['page'] + 1}.png")
         bb = aabb(sg["corners"]["clean_raster"])
         crop = page.crop((int(bb[0]) - 20, int(bb[1]) - 60, int(bb[2]) + 20, int(bb[3]) + 20))
         crop.thumbnail((1100, 900))
@@ -197,7 +197,7 @@ def naming_payload(doc, r):
                                        "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src"))
     from assessed_pd.pipeline import annotate
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+    t = load_json(truth_dir / f"{doc}.json")
     job = next((load_json(p) for p in (B / "work" / "ai" / "jobs").glob(f"{doc}__{r}__pd_fields__*.json")), None)
     if job is None:
         return None
@@ -241,12 +241,12 @@ def naming_payload(doc, r):
 
 def pick_tables():
     out = []
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         inv = next((x for x in t["tables"] if x["id"] == "invariants"), None)
         if inv and t["style"]["invariant_table"]["exp_column"] and inv["n_body_rows"] >= 4 and not out:
             out.append((t["doc_id"], "invariants"))
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         sp = [x for x in t["tables"] if len(x.get("segments") or []) > 1]
         if sp and t["doc_id"] != out[0][0]:

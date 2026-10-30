@@ -6,19 +6,19 @@ from __future__ import annotations
 import re
 
 import pymupdf
-from common import FONT_DIR
+from common import font_dir
 
-FONTS = {
-    "serif": FONT_DIR / "DejaVuSerif.ttf", "serif-b": FONT_DIR / "DejaVuSerif-Bold.ttf",
-    "serif-i": FONT_DIR / "DejaVuSerif-Italic.ttf", "sans": FONT_DIR / "DejaVuSans.ttf",
-    "sans-b": FONT_DIR / "DejaVuSans-Bold.ttf",
+fonts = {
+    "serif": font_dir / "DejaVuSerif.ttf", "serif-b": font_dir / "DejaVuSerif-Bold.ttf",
+    "serif-i": font_dir / "DejaVuSerif-Italic.ttf", "sans": font_dir / "DejaVuSans.ttf",
+    "sans-b": font_dir / "DejaVuSans-Bold.ttf",
 }
 _FONT_OBJ = {}
 
 
 def font(name):
     if name not in _FONT_OBJ:
-        _FONT_OBJ[name] = pymupdf.Font(fontfile=str(FONTS[name]))
+        _FONT_OBJ[name] = pymupdf.Font(fontfile=str(fonts[name]))
     return _FONT_OBJ[name]
 
 
@@ -26,7 +26,7 @@ def tlen(text, name, size):
     return font(name).text_length(text, fontsize=size)
 
 
-NUM_RE = re.compile(r"[−\-–]?\d+(?:\.\d+)?(?:[eE][−\-]?\d+)?")
+num_re = re.compile(r"[−\-–]?\d+(?:\.\d+)?(?:[eE][−\-]?\d+)?")
 
 
 def parse_number(text):
@@ -61,7 +61,7 @@ class Doc:
     def new_page(self):
         self.page = self.pdf.new_page(width=self.W, height=self.H)
         self.pno += 1
-        for k, f in FONTS.items():
+        for k, f in fonts.items():
             self.page.insert_font(fontname=k.replace("-", ""), fontfile=str(f))
         self.y = self.mt
         if self.footer:
