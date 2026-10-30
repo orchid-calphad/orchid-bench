@@ -54,6 +54,9 @@ class TestInvariantSentences:
         assert vals.items[ti]["printed"] == "1000 K"
         assert vals.items[ti]["quantity"] == "invariant_temperature"
         assert vals.items[xi]["quantity"] == "invariant_composition:L"
+        assert vals.items[ti]["exact_SI"] == pytest.approx(1000.0)
+        assert vals.items[xi]["exact_SI"] == pytest.approx(0.5)
+        assert vals.items[xi]["value"] == pytest.approx(50.0)
         assert vals.items[ti]["printed"] in sentence
         assert vals.items[xi]["printed"] in sentence
         assert "L = α + β" in sentence
