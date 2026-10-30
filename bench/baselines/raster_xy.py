@@ -20,9 +20,9 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
+from common import BENCH, DOCS, ORCHID_PIPELINE, TRUTH, load_json, sha256_file, write_json  # noqa: E402
 
-sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
+sys.path.insert(0, str(ORCHID_PIPELINE / "src"))
 from thermo_extractor.proposals.multipanel_markers import propose_multipanel_markers  # noqa: E402
 
 OUT = BENCH / "outputs" / "raster_markers"

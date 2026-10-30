@@ -16,7 +16,6 @@ property_records (formation / mixing tables); running-text rows -> text_values a
 phase-diagram fields on top of the assessed_pd_auto annotation (single reader: its answer must be one of the choices
 and pass the rule gate). Run with ~/orchid-py313/bin/python."""
 import json
-import os
 import pickle
 import re
 import sys
@@ -24,14 +23,13 @@ from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
-from common import TRUTH, load_json, write_json  # noqa: E402
+from common import ASSESSED_PD, ORCHID_PIPELINE, TRUTH, load_json, write_json  # noqa: E402
 
-FIX = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus/release-fixup-20261022/bin-context"
+FIX = ORCHID_PIPELINE / "pipelines/sgte-corpus/release-fixup-20261022/bin-context"
 sys.path.insert(0, str(FIX))
 import text_reader_v6 as R6  # noqa: E402
 
-APD = os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
-                     "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src")
+APD = str(ASSESSED_PD)
 sys.path.insert(0, APD)
 
 AI = BENCH / "work" / "ai"

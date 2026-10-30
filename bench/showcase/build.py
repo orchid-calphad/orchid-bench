@@ -2,7 +2,6 @@
 """Self-contained showcase: three example documents with page image, phase-diagram overlay (truth vs extracted, SVG)
 and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs."""
 import base64
-import os
 import io
 import json
 import sys
@@ -10,7 +9,7 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
-from common import DOCS, TRUTH, load_json  # noqa: E402
+from common import ASSESSED_PD, DOCS, TRUTH, load_json  # noqa: E402
 from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
@@ -192,8 +191,7 @@ def naming_payload(doc, r):
     import re as _re
     import numpy as np
     from score import _canon, _label_sets
-    sys.path.insert(0, os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
-                                       "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src"))
+    sys.path.insert(0, str(ASSESSED_PD))
     from assessed_pd.pipeline import annotate
     from PIL import Image
     t = load_json(TRUTH / f"{doc}.json")
