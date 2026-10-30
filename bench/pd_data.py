@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import cache, p_atm, pd_dir, r_gas, tdb_dir, el, load_json, sha256_file, write_json  # noqa: E402
+from common import cache, p_atm, pd_dir, tdb_dir, el, load_json, sha256_file, write_json  # noqa: E402
 from systems import Labeller, base  # noqa: E402
 from pd_regions import (
     _match,  # noqa: F401 (facade re-export)
