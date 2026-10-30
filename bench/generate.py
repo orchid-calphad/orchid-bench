@@ -27,22 +27,22 @@ from pd_data import prepare  # noqa: E402
 from systems import system_specs, base  # noqa: E402
 from gen_text import (
     invariant_sentences,
-    invariant_table,
+    invariant_table,  # noqa: F401 (facade re-export)
     liquidus_table,
     thermo_table,
     tm_sentences,
-    type_article,
-)  # noqa: F401 (facade re-export)
+    type_article,  # noqa: F401 (facade re-export)
+)
 from gen_render import (
-    apply,
-    page_affine,
+    apply,  # noqa: F401 (facade re-export)
+    page_affine,  # noqa: F401 (facade re-export)
     rect_in_renderings,
     render_all,
-)  # noqa: F401 (facade re-export)
+)
 from gen_style import (
     choose_style,
     choose_style_v2,
-)  # noqa: F401 (facade re-export)
+)
 
 truth_schema = "orchid-synthetic-paper-truth/v2"
 license_text = (
