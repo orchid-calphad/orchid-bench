@@ -21,79 +21,8 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import truth_dir, load_json, write_json  # noqa: E402
-
-renderings = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
-hit_tol = 0.01  # normalised axis distance counted as a hit
-series_tol = 0.02  # median distance for a predicted series to match a truth series
-min_field_cells = 6
-inv_t_tol = 15.0  # K
-
-
-# ------------------------------------------------------------------------------------------------ helpers
-def norm_text(s):
-    """Normalise a text string for comparison: case and whitespace folded."""
-    s = (s or "").replace("−", "-").replace("–", "-").replace(" ", " ")
-    return re.sub(r"\s+", " ", s).strip()
-
-
-def num_of(s):
-    """Parse a number from a string, or return None when there is none."""
-    m = re.search(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", norm_text(s).replace(" ", ""))
-    return float(m.group(0)) if m else None
-
-
-def aabb(corners):
-    """Return the axis-aligned bounding box (x0, y0, x1, y1) of a set of corners."""
-    xs = [p[0] for p in corners]
-    ys = [p[1] for p in corners]
-    return [min(xs), min(ys), max(xs), max(ys)]
-
-
-def iou(a, b):
-    """Return the intersection over union of two axis-aligned boxes."""
-    ix = max(0, min(a[2], b[2]) - max(a[0], b[0]))
-    iy = max(0, min(a[3], b[3]) - max(a[1], b[1]))
-    inter = ix * iy
-    u = (a[2] - a[0]) * (a[3] - a[1]) + (b[2] - b[0]) * (b[3] - b[1]) - inter
-    return inter / u if u > 0 else 0.0
-
-
-def densify(poly, step=0.002):
-    """Resample the edges of a polygon so that consecutive points are at most step apart."""
-    pts = []
-    for (x0, y0), (x1, y1) in zip(poly[:-1], poly[1:]):
-        n = max(1, int(math.hypot(x1 - x0, y1 - y0) / step))
-        for k in range(n):
-            pts.append((x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n))
-    if poly:
-        pts.append(tuple(poly[-1]))
-    return np.array(pts, float).reshape(-1, 2)
-
-
-def nn_dist(a, b):
-    """For every row of a, distance to the nearest row of b."""
-    if len(a) == 0:
-        return np.zeros(0)
-    if len(b) == 0:
-        return np.full(len(a), np.inf)
-    from scipy.spatial import cKDTree
-
-    d, _ = cKDTree(b).query(a)
-    return d
-
-
-def stats(vals):
-    """Return summary statistics (median and count) of a list of values."""
-    v = [x for x in vals if x is not None and np.isfinite(x)]
-    return {"n": len(v), "mean": float(np.mean(v)) if v else None, "median": float(np.median(v)) if v else None}
-
-
-def prf(tp_pred, n_pred, tp_true, n_true):
-    """Return precision, recall and F1 from matched and total counts."""
-    p = tp_pred / n_pred if n_pred else None
-    r = tp_true / n_true if n_true else None
-    f = 2 * p * r / (p + r) if p and r else (0.0 if (p is not None and r is not None) else None)
-    return {"precision": p, "recall": r, "f1": f, "n_pred": n_pred, "n_true": n_true}
+from score_config import basis_norm, e_factor, hit_tol, inv_t_row_tol, inv_t_tol, min_field_cells, renderings, series_tol, unit_aliases, unit_norm
+from score_core import _canon, _close, _loose, _toK, _tox, aabb, densify, iou, nn_dist, norm_text, num_of, prf, stats
 
 
 # ------------------------------------------------------------------------------------------------ tables
@@ -272,13 +201,6 @@ def score_xy(truth, rendering, pred_figs):
     return res
 
 
-# ------------------------------------------------------------------------------------------------ phase diagrams
-def _canon(lbl):
-    s = norm_text(lbl).replace(" ", "").upper()
-    s = re.sub(r"#\d+$", "", s)
-    return {"LIQUID": "L"}.get(s, s)
-
-
 def _label_sets(field):
     conv = sorted(_canon(x) for x in field["labels"])
     tdb = sorted(_canon(x.split("#")[0]) for x in field["assemblage"])
@@ -427,26 +349,6 @@ def score_pd(truth, rendering, pred_pds):
     return out
 
 
-# ------------------------------------------------------------------------------------------------ text values
-unit_aliases = {
-    "k": "K",
-    "°c": "°C",
-    "c": "°C",
-    "degc": "°C",
-    "at.%": "at.%",
-    "at%": "at.%",
-    "mole_fraction": "mole_fraction",
-    "x": "mole_fraction",
-    "kj/mol": "kJ/mol",
-    "j/mol": "J/mol",
-    "atm": "atm",
-    "cal/mol": "cal/mol",
-    "j/(mol k)": "J/(mol K)",
-    "j/mol/k": "J/(mol K)",
-    "j": "J",
-}
-
-
 def score_text(truth, pred_vals):
     """Score predicted text values against the truth values."""
     tv = [(v["value"], v["unit"]) for v in truth["text"]["values"]]
@@ -482,58 +384,6 @@ def score_text(truth, pred_vals):
     h = mm(tv, pv)
     hv = mm(tv, pv, with_unit=False)
     return {**prf(h, len(pv), h, len(tv)), "value_only_recall": hv / len(tv) if tv else None}
-
-
-# ------------------------------------------------------------------------------------------------ semantic tables (v2)
-inv_t_row_tol = 15.0
-e_factor = {
-    "J/mol": 1.0,
-    "kJ/mol": 1000.0,
-    "cal/mol": 4.184,
-    "kcal/mol": 4184.0,
-    "J/(mol K)": 1.0,
-    "cal/(mol K)": 4.184,
-    "1": 1.0,
-}
-unit_norm = {
-    "j/mol": "J/mol",
-    "kj/mol": "kJ/mol",
-    "cal/mol": "cal/mol",
-    "kcal/mol": "kcal/mol",
-    "j/(mol k)": "J/(mol K)",
-    "j/mol/k": "J/(mol K)",
-    "cal/(mol k)": "cal/(mol K)",
-    "1": "1",
-    "": "1",
-    "none": "1",
-}
-basis_norm = {
-    "mol_atoms": "mol_atoms",
-    "atom": "mol_atoms",
-    "mol-atom": "mol_atoms",
-    "per mole of atoms": "mol_atoms",
-    "formula_unit": "formula_unit",
-    "f.u.": "formula_unit",
-    "per formula unit": "formula_unit",
-}
-
-
-def _loose(lbl):
-    c = _canon(lbl)
-    c = re.sub(r"^L\d$", "L", c)
-    return re.sub(r"\)\d$", ")", c)
-
-
-def _toK(v, unit):
-    return None if v is None else (float(v) + 273.15 if unit in ("°C", "degC", "C") else float(v))
-
-
-def _tox(v, unit):
-    return None if v is None else (float(v) / 100.0 if unit in ("at.%", "atomic_percent") else float(v))
-
-
-def _close(a, b, tol=1e-6):
-    return a is not None and b is not None and abs(float(a) - float(b)) <= tol * max(1.0, abs(float(b)))
 
 
 def score_invariant_rows(truth, pred):
