@@ -35,12 +35,12 @@ SYSTEM_INDEX = {s[0]: s for s in SYSTEMS}
 
 
 def base(phase: str) -> str:
-    return phase.split("#")[0]
+    return phase.split("#", maxsplit=1)[0]
 
 
 def pretty_formula(name: str, elements: list[str]) -> str | None:
     """'AL3NI2_D513' -> 'Al3Ni2' when the prefix is a formula in the system's elements."""
-    head = name.split("_")[0]
+    head = name.split("_", maxsplit=1)[0]
     syms = sorted({e.upper() for e in elements}, key=len, reverse=True)
     pat = re.compile("(" + "|".join(syms) + r")(\d*)")
     pos, out = 0, []

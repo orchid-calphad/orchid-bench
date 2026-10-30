@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Run Tesseract (local binary, deterministic) on every raster page and cache word-level TSV.
 work/ocr/<doc>/<rendering>/page-N.tsv ; rendering in clean_raster, degraded_raster, image_only_pdf
-(image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder)."""
+(image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder).
+"""
 import subprocess
 import sys
 from multiprocessing import Pool

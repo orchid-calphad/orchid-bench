@@ -6,7 +6,8 @@ Raster renderings: not run (thermo_extractor.tables.ocr needs OpenCV).
 
 Glue written for this benchmark (no truth used): each extracted table is classified by its header words and parsed into
 the semantic records scored by score.py (invariant_rows, phase_rows, property_records): units and basis from the header
-text, reaction phases split on '→' and '+', experimental column and citation from 'exp.' / 'Ref.' / '[n]'."""
+text, reaction phases split on '→' and '+', experimental column and citation from 'exp.' / 'Ref.' / '[n]'.
+"""
 import re
 import sys
 from pathlib import Path

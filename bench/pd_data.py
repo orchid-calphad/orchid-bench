@@ -1,8 +1,8 @@
 """Per-system data preparation: reuse ORCHID calculated diagrams, add field assemblages, invariant types and
-property curves computed with pycalphad. Results are cached in bench/cache/<stem>.json (deterministic)."""
+property curves computed with pycalphad. Results are cached in bench/cache/<stem>.json (deterministic).
+"""
 from __future__ import annotations
 
-import json
 import sys
 import warnings
 from pathlib import Path
@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import CACHE, PD_DIR, P_ATM, R_GAS, TDB_DIR, el, load_json, sha256_file, write_json  # noqa: E402
+from common import CACHE, P_ATM, PD_DIR, R_GAS, TDB_DIR, el, load_json, sha256_file, write_json  # noqa: E402
 from systems import Labeller, base  # noqa: E402
 
 warnings.filterwarnings("ignore")
@@ -33,7 +33,8 @@ def _layout(dbf, comps, phase):
 
 def disorder_name(dbf, comps, phases, name, y):
     """A phase modelled with equivalent sublattices (e.g. L12_FCC with an A1_FCC disordered part) that pycalphad
-    reports in its disordered state is renamed to the disordered lattice phase (FCC_A1, ...) when that phase exists."""
+    reports in its disordered state is renamed to the disordered lattice phase (FCC_A1, ...) when that phase exists.
+    """
     cons = _layout(dbf, comps, name)
     groups, off = {}, 0
     for sub in cons:
@@ -54,7 +55,8 @@ def disorder_name(dbf, comps, phases, name, y):
 
 # ----------------------------------------------------------------------------------------------- pycalphad helpers
 def _pyc():
-    from pycalphad import Database, equilibrium, calculate, variables as v
+    from pycalphad import Database, calculate, equilibrium
+    from pycalphad import variables as v
     return Database, equilibrium, calculate, v
 
 
@@ -136,15 +138,13 @@ def _match(pts, probe):
 
 
 def classify_invariant(pts, above, below):
-    """pts sorted by x (3 composition sets); above/below: probe composition sets near x_mid at T +/- dT."""
+    """Pts sorted by x (3 composition sets); above/below: probe composition sets near x_mid at T +/- dT."""
     left, mid, right = (p["phase"] for p in pts)
     ia, ib = _match(pts, above), _match(pts, below)
     is_liq = lambda p: base(p) == "LIQUID"  # noqa: E731
     if ia == {0, 2} and ib != {0, 2}:
         kind = "formation"
-    elif ib == {0, 2} and ia != {0, 2}:
-        kind = "decomposition"
-    elif 1 in ia and 1 not in ib:
+    elif ib == {0, 2} and ia != {0, 2} or 1 in ia and 1 not in ib:
         kind = "decomposition"
     elif 1 in ib and 1 not in ia:
         kind = "formation"
@@ -172,7 +172,8 @@ def classify_invariant(pts, above, below):
 # ----------------------------------------------------------------------------------------------- property curves
 def liquid_mixing(dbf, comps, A, B, T, xs):
     """Integral mixing enthalpy/Gibbs energy of the liquid relative to pure liquid A and B (J/mol of atoms),
-    from LIQUID-only equilibria (works for substitutional and associate liquids)."""
+    from LIQUID-only equilibria (works for substitutional and associate liquids).
+    """
     _, equilibrium, _, v = _pyc()
     xs = np.asarray(xs, float)
     xc = np.clip(xs, 1e-7, 1 - 1e-7)
@@ -229,7 +230,6 @@ def compound_at(dbf, comps, phase, B, x0, T, prop):
 def rk_parameters(dbf, phase, A, B):
     """Liquid Redlich-Kister L parameters printed as a + b*T (+ c*T*ln T); None if not of that form."""
     import sympy
-    from pycalphad import variables as v
     from tinydb import where
     rows = []
     q = dbf._parameters.search((where("phase_name") == phase) & (where("parameter_type").one_of(["G", "L"])))
@@ -283,7 +283,7 @@ def prepare(stem: str, force: bool = False) -> dict:
     tdb = TDB_DIR / pdj["tdb"]
     dbf = Database(str(tdb))
     A, B = [c.upper() for c in pdj["components"]]
-    assert B == pdj["x_component"].upper()
+    assert pdj["x_component"].upper() == B
     comps = [A, B, "VA"]
     phases = list(pdj["phases"])
     Ael, Bel = el(A), el(B)

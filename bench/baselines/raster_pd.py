@@ -19,7 +19,8 @@ so boundary metrics are not applicable to this route.
 
 Second output `assessed_pd_auto`: the assessed_pd annotator as in assessed_pd_raster.py but with the figure crop from
 step 1 instead of the truth bbox, and calibration: assessed_pd automatic -> thermo_extractor axis detector (ticks and
-frame passed as ManualCalibration) -> truth axes (oracle). The phase table is still truth (oracle)."""
+frame passed as ManualCalibration) -> truth axes (oracle). The phase table is still truth (oracle).
+"""
 import json
 import re
 import subprocess
@@ -29,9 +30,10 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import ASSESSED_PD, BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
-from baselines.ocr_cache import WORK as OCR, read_tsv  # noqa: E402
 from baselines.assessed_pd_raster import merge_words, phase_table, text_layer_words  # noqa: E402
+from baselines.ocr_cache import WORK as OCR  # noqa: E402
+from baselines.ocr_cache import read_tsv
+from common import ASSESSED_PD, BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
 from score import aabb  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
@@ -40,6 +42,7 @@ OUT = BENCH / "outputs" / "raster_topology"
 OUT2 = BENCH / "outputs" / "assessed_pd_auto"
 WORK = BENCH / "work" / "raster_pd"
 import os
+
 ENV = {**{k: v for k, v in os.environ.items() if "KEY" not in k.upper()}, "PYTHONPATH": str(PIPE / "src"), "OMP_THREAD_LIMIT": "1"}
 RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
@@ -147,7 +150,7 @@ def oracle_calibration(t, panel, rendering, png):
 
 
 def page_scale(t, rendering, panel):
-    """rendering pixels -> panel-render pixels (vector: clean-raster pixels)."""
+    """Rendering pixels -> panel-render pixels (vector: clean-raster pixels)."""
     rkey = {"vector": "clean_raster"}.get(rendering, rendering)
     if rkey == "image_only_pdf":
         rkey = "degraded_raster"
@@ -249,7 +252,7 @@ def run_assessed(t, rendering, panel, auto_cal):
     from assessed_pd.calibration import CalibrationError
     from assessed_pd.config import AnnotatorConfig
     from assessed_pd.export import build_document
-    from assessed_pd.model import (ContainerSource, DiagramInput, ManualCalibration, PrintedSource, TextLabel, TickPair)
+    from assessed_pd.model import ContainerSource, DiagramInput, ManualCalibration, PrintedSource, TextLabel, TickPair
     from assessed_pd.pipeline import annotate
     doc = t["doc_id"]
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")

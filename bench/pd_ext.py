@@ -6,7 +6,8 @@
 * phase fractions vs temperature (equilibrium step) for three candidate alloys;
 * formation properties of the intermediate phases at 298.15 K (enthalpy, entropy of formation, Cp);
 * liquid mixing properties at one temperature (integral H and G, activities, partial molar enthalpies);
-* crystal-structure labels derivable from the TDB phase name (small explicit mapping)."""
+* crystal-structure labels derivable from the TDB phase name (small explicit mapping).
+"""
 from __future__ import annotations
 
 import re
@@ -18,7 +19,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import CACHE, P_ATM, TDB_DIR, load_json, write_json  # noqa: E402
-from systems import Labeller, base, pretty_formula  # noqa: E402
+from systems import Labeller, base  # noqa: E402
 
 warnings.filterwarnings("ignore")
 EXT_VERSION = 6
@@ -40,7 +41,8 @@ LATTICE_WORD = {"FCC": "A1", "BCC": "A2", "HCP": "A3", "DIAMOND": "A4", "BCT": "
 
 def structure_of(phase: str) -> dict:
     """Structure labels derivable from the TDB phase name: an explicit Strukturbericht token (e.g. *_D513, L12_FCC,
-    C15_LAVES) wins; otherwise a lattice word (FCC/BCC/HCP/...) when it is the only token besides an element tag."""
+    C15_LAVES) wins; otherwise a lattice word (FCC/BCC/HCP/...) when it is the only token besides an element tag.
+    """
     toks = base(phase).upper().split("_")
     for t in toks:
         if t in SB:
@@ -75,7 +77,8 @@ def formula_atoms(label: str, elements) -> tuple[int, float] | None:
 
 
 def _pyc():
-    from pycalphad import Database, equilibrium, variables as v
+    from pycalphad import Database, equilibrium
+    from pycalphad import variables as v
     return Database, equilibrium, v
 
 
@@ -177,7 +180,8 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
 
         def limit(i_edge, upward):
             """Extremum over composition of the temperature at which the phase disappears (bisection to 0.01 K,
-            golden-section in x), snapped to an invariant / element melting point within 0.05 K."""
+            golden-section in x), snapped to an invariant / element melting point within 0.05 K.
+            """
             Tg = float(Tgrid[i_edge])
             if upward and i_edge == len(Tgrid) - 1:
                 return None, "above_calculated_range", None, None
@@ -210,7 +214,7 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
                     d = lo_ + g * (hi_ - lo_)
                     fd = sgn * Tx(d)
             for F_, x_ in ((fc, c), (fd, d)):
-                if F_ > Fb:
+                if Fb < F_:
                     Fb, xb = F_, x_
             Tb = sgn * Fb
             near = [(abs(T - Tb), T, src, how) for T, src, how in cand if abs(T - Tb) <= 0.05]
@@ -383,6 +387,7 @@ def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
 
 if __name__ == "__main__":
     import time
+
     from pd_data import prepare
     for s in sys.argv[1:]:
         t = time.time()

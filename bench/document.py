@@ -1,11 +1,11 @@
 """Born-digital document composition with PyMuPDF: real text objects, vector figures, ruled tables.
-Every placed element's page coordinates (PDF points, origin top-left, y down) are recorded for the truth key."""
+Every placed element's page coordinates (PDF points, origin top-left, y down) are recorded for the truth key.
+"""
 from __future__ import annotations
 
 import re
 
 import pymupdf
-
 from common import FONT_DIR
 
 FONTS = {
@@ -193,7 +193,8 @@ class Doc:
     def table(self, spec, style, size=8.5, cap_pieces=None, cont_pieces=None, split_at=None):
         """spec: {'header': [[{text, colspan}]], 'rows': [[text]], 'align': ['l','r',...], 'footnotes': [str]}.
         split_at: body-row index at which the table is continued on a new page under cont_pieces
-        ("Table N (continued)") with the header repeated."""
+        ("Table N (continued)") with the header repeated.
+        """
         ncol = len(spec["rows"][0]) if spec["rows"] else sum(c.get("colspan", 1) for c in spec["header"][-1])
         fn, fnb = "sans", "sans-b"
         pad = 5.0

@@ -1,14 +1,14 @@
 """Matplotlib figure generators. Each returns the truth for the figure (axes in figure fractions, data series,
-boundaries, labels) and writes a vector PDF; layout is explicit (fig.add_axes) so truth geometry is exact."""
+boundaries, labels) and writes a vector PDF; layout is explicit (fig.add_axes) so truth geometry is exact.
+"""
 from __future__ import annotations
 
-import numpy as np
 import matplotlib
+import numpy as np
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 from matplotlib.lines import Line2D  # noqa: E402
-
 from systems import base  # noqa: E402
 
 plt.rcParams.update({
@@ -361,7 +361,8 @@ def property_figure(data, kind, style, path):
 # --------------------------------------------------------------------------------------------- phase fractions
 def phase_fraction_figure(data, alloys, style, path):
     """Equilibrium phase fractions vs temperature for one or two alloys (one panel each, stacked).
-    Each phase is drawn only where it is present (NP > 0); segments are recorded in the truth."""
+    Each phase is drawn only where it is present (NP > 0); segments are recorded in the truth.
+    """
     A, B = data["elements"]
     tunit = style["T_unit"]
     tof = (lambda T: T - 273.15) if tunit == "°C" else (lambda T: T)

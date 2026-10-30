@@ -13,7 +13,8 @@ Prices (US$ per million tokens), gemini-3.8-flash: list $0.75 input / $3.75 outp
 as quoted by third-party price trackers (Oct 2026; not confirmed on Google's page). Conservative estimate used for
 the guard: 2x list ($1.50 / $7.50), the rate reported to apply from Jan 2027.
 
-  ~/orchid-py313/bin/python bench/ai/run_gemini.py --cap-usd 20 [--match <substring>] [--docs d1,d2] [--workers 8]"""
+  ~/orchid-py313/bin/python bench/ai/run_gemini.py --cap-usd 20 [--match <substring>] [--docs d1,d2] [--workers 8]
+"""
 import argparse
 import concurrent.futures as cf
 import json

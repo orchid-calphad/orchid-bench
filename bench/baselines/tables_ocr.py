@@ -7,16 +7,15 @@ from the truth key (oracle, recorded): region = the aabb of the segment's cells 
 column boundaries = midpoints between the x-extents of adjacent single-span columns. So this measures what
 Tesseract reads in a perfectly declared layout, not table finding. Rendering inputs: vector.pdf (rendered),
 the Tesseract searchable PDFs of clean / degraded (work/ocrpdf), image_only.pdf. dpi 400, psm 6 (tool defaults
-for a table block). Semantic records: tables_pdfplumber.semantic. Continued tables are separate segments."""
-import json
+for a table block). Semantic records: tables_pdfplumber.semantic. Continued tables are separate segments.
+"""
 import subprocess
 import sys
-import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
 from baselines.tables_pdfplumber import semantic  # noqa: E402
+from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
 PY = sys.executable

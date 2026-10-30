@@ -17,16 +17,24 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from baselines.ocr_cache import WORK as OCR  # noqa: E402
+from baselines.ocr_cache import read_tsv
 from common import ASSESSED_PD, BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
-from baselines.ocr_cache import WORK as OCR, read_tsv  # noqa: E402
 from score import aabb  # noqa: E402
 
 sys.path.insert(0, str(ASSESSED_PD))
 from assessed_pd.calibration import CalibrationError  # noqa: E402
 from assessed_pd.config import AnnotatorConfig  # noqa: E402
 from assessed_pd.export import build_document  # noqa: E402
-from assessed_pd.model import (ContainerSource, DiagramInput, ManualCalibration, PhaseRow, PrintedSource,  # noqa: E402
-                               TextLabel, TickPair)
+from assessed_pd.model import (  # noqa: E402
+    ContainerSource,
+    DiagramInput,
+    ManualCalibration,
+    PhaseRow,
+    PrintedSource,
+    TextLabel,
+    TickPair,
+)
 from assessed_pd.pipeline import annotate  # noqa: E402
 
 OUT = BENCH / "outputs" / "assessed_pd"
