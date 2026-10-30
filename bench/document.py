@@ -17,12 +17,14 @@ _FONT_OBJ = {}
 
 
 def font(name):
+    """Return the cached pymupdf Font for a registered font name."""
     if name not in _FONT_OBJ:
         _FONT_OBJ[name] = pymupdf.Font(fontfile=str(fonts[name]))
     return _FONT_OBJ[name]
 
 
 def tlen(text, name, size):
+    """Return the rendered width in points of text set in font name at size pt."""
     return font(name).text_length(text, fontsize=size)
 
 
@@ -43,7 +45,9 @@ def parse_number(text):
 
 
 class Doc:
+    """Incremental PDF writer that keeps a vertical cursor and flows text and figures."""
     def __init__(self, page_size, margins, body_font="serif", body_size=10.0, leading=1.32, footer=""):
+        """Open an empty PDF with a page size, margins, body font, body size and leading factor."""
         self.pdf = pymupdf.open()
         self.W, self.H = page_size
         self.ml, self.mt, self.mr, self.mb = margins
@@ -56,9 +60,11 @@ class Doc:
 
     @property
     def text_width(self):
+        """Return the text block width in points between the left and right margins."""
         return self.W - self.ml - self.mr
 
     def new_page(self):
+        """Append a new page of the document size and reset the cursor."""
         self.page = self.pdf.new_page(width=self.W, height=self.H)
         self.pno += 1
         for k, f in fonts.items():
@@ -71,10 +77,12 @@ class Doc:
                                   color=(0.35, 0.35, 0.35))
 
     def ensure(self, h):
+        """Start a new page when h points do not fit above the bottom margin."""
         if self.y + h > self.H - self.mb:
             self.new_page()
 
     def space(self, h):
+        """Advance the vertical cursor by h points."""
         self.y += h
 
     def _put(self, x, baseline, text, fname, size, color=(0, 0, 0)):
@@ -169,12 +177,14 @@ class Doc:
         return out
 
     def heading(self, text, size=11.5):
+        """Set a bold heading of the given size in points and return its anchor."""
         self.ensure(size * 3)
         self.y += size * 0.6
         r = self.paragraph([(text, "h")], fname="serif-b", size=size, align="left", gap_after=3)
         return r["h"]
 
     def figure(self, fig_pdf, fig_size_in, width_frac, caption_pieces, cap_size=8.5):
+        """Place a figure at width_frac of the text width together with its caption pieces."""
         w = self.text_width * width_frac
         h = w * fig_size_in[1] / fig_size_in[0]
         cap_h = cap_size * 1.3 * 3
@@ -307,6 +317,7 @@ class Doc:
                 "caption": caps[0], "continued_captions": caps[1:], "footnotes": notes}
 
     def save(self, path):
+        """Write the PDF to path."""
         self.pdf.set_metadata({"title": "", "author": "ORCHID synthetic benchmark", "producer": "PyMuPDF",
                                "creator": "orchid-pipeline-bench", "creationDate": "", "modDate": ""})
         try:

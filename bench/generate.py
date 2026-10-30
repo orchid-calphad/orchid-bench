@@ -36,16 +36,19 @@ class Values:
     """Collects every number stated in running text (or captions) together with its printed string."""
 
     def __init__(self, B):
+        """Bind the formatter to the element symbol B of the binary system."""
         self.B = B
         self.items = []
 
     def T(self, T_K, unit, nd, quantity, ref=None):
+        """Format a temperature given in K as printed text in unit with nd decimals."""
         v = T_K - 273.15 if unit == "°C" else T_K
         s = fmt(v, nd)
         printed = f"{s} {unit}" if unit == "K" else f"{s} °C"
         return self._add(printed, float(s), unit, quantity, T_K, ref)
 
     def X(self, x, unit, quantity, ref=None, style=0):
+        """Format a composition x in the given unit as printed text."""
         if unit == "at.%":
             s = fmt(100 * x, 1)
             printed = f"{s} at.% {self.B}" if style == 0 else f"{s} at.%"
@@ -55,6 +58,7 @@ class Values:
         return self._add(printed, float(s), "mole_fraction", quantity, x, ref)
 
     def E(self, J, unit, nd, quantity, ref=None):
+        """Format an energy given in J/mol as printed text in unit with nd decimals."""
         v = J / 1000 if unit == "kJ/mol" else J
         s = fmt(v, nd)
         printed = f"{s.replace('-', '−')} {unit}"
@@ -71,6 +75,7 @@ type_article = {"eutectic": "a", "eutectoid": "a", "peritectic": "a", "peritecto
 
 
 def invariant_sentences(rng, data, vals, tunit, xunit, ndT):
+    """Build running-text sentences that describe the invariant reactions."""
     out = []
     for i, inv in enumerate(data["invariants"]):
         T, ref = inv["T"], f"invariant:{i}"
@@ -98,6 +103,7 @@ def invariant_sentences(rng, data, vals, tunit, xunit, ndT):
 
 
 def tm_sentences(rng, data, vals, tunit, ndT):
+    """Build running-text sentences that give the melting temperatures of the pure components."""
     out = []
     for side, Tm in (("A", data["Tm_A"]), ("B", data["Tm_B"])):
         if Tm is None:
@@ -112,6 +118,7 @@ def tm_sentences(rng, data, vals, tunit, ndT):
 
 # ------------------------------------------------------------------------------------------------ tables
 def invariant_table(data, style, xunit, tunit):
+    """Build the invariant-reaction table for a synthetic document."""
     B = data["elements"][1]
     rows = []
     cvals = []
@@ -170,6 +177,7 @@ def liquidus_table(data, style, xunit, tunit):
 
 
 def thermo_table(data, style, rng, minus):
+    """Build the thermodynamic-property table for a synthetic document."""
     P = data["properties"]
     B = data["elements"][1]
     if P.get("formation"):
@@ -221,6 +229,7 @@ def page_affine(scale_x, scale_y, angle_deg=0.0, size=(0, 0)):
 
 
 def render_all(vector_pdf, outdir, rng):
+    """Render the page images of every rendering of a document into outdir."""
     import pymupdf
     from PIL import Image, ImageEnhance, ImageFilter
     doc = pymupdf.open(vector_pdf)
@@ -288,10 +297,12 @@ def render_all(vector_pdf, outdir, rng):
 
 
 def apply(M, x, y):
+    """Map the point (x, y) through the transform M."""
     return [round(M[0][0] * x + M[0][1] * y + M[0][2], 3), round(M[1][0] * x + M[1][1] * y + M[1][2], 3)]
 
 
 def rect_in_renderings(page, bbox, rend):
+    """Express a page bounding box in the coordinate frame of a rendering."""
     out = {}
     for key, rr in rend.items():
         M = rr["transforms"][page]
@@ -302,6 +313,7 @@ def rect_in_renderings(page, bbox, rend):
 
 # ------------------------------------------------------------------------------------------------ document
 def choose_style(rng, data):
+    """Draw a random presentation style for a document from rng."""
     ch = lambda seq: seq[int(rng.integers(len(seq)))]  # noqa: E731
     pd = {"T_unit": ch(["K", "°C"]), "x_unit": ch(["at.%", "mole_fraction"]),
           "linewidth": float(ch([0.6, 0.8, 1.0, 1.3, 1.6])), "color": bool(rng.random() < 0.45),
@@ -346,6 +358,7 @@ def choose_style(rng, data):
 
 
 def choose_style_v2(rng, data, ext, style):
+    """Draw a presentation style for a v2 document, extending the style with ext."""
     ch = lambda seq: seq[int(rng.integers(len(seq)))]  # noqa: E731
     tb = style["table"]
 
@@ -387,6 +400,7 @@ fictitious = [
 
 
 def build_document(stem, variant, seed, out_root=docs_dir, truth_root=truth_dir):
+    """Generate one synthetic document and its truth record under out_root and truth_root."""
     import re as _re
 
     from figures import phase_fraction_figure
@@ -727,6 +741,7 @@ def build_document(stem, variant, seed, out_root=docs_dir, truth_root=truth_dir)
 
 
 def main(argv=None):
+    """Command-line entry point: generate the synthetic benchmark documents."""
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--seed", type=int, default=20261022)
     ap.add_argument("--systems", nargs="*", help="TDB stems (default: all benchmark systems)")

@@ -115,6 +115,7 @@ def clean_regions(regions):
 
 
 def decode_grid(grid):
+    """Decode a stored grid encoding into a list of values."""
     labels = grid["labels"]
     rows = []
     for row in grid["rows"]:
@@ -222,6 +223,7 @@ def phase_min_curve(dbf, comps, phase, B, T, nbins=101):
 
 
 def compound_at(dbf, comps, phase, B, x0, T, prop):
+    """Return the stable compound data of phase at composition x0 and temperature T in K."""
     _, equilibrium, _, v = _pyc()
     res = equilibrium(dbf, comps, [phase], {v.X(B): float(x0), v.T: T, v.P: p_atm, v.N: 1}, output=prop)
     return np.asarray(getattr(res, prop).values).squeeze(), res
@@ -271,6 +273,7 @@ def rk_parameters(dbf, phase, A, B):
 
 # ----------------------------------------------------------------------------------------------- main preparation
 def prepare(stem: str, force: bool = False) -> dict:
+    """Prepare, and cache, the phase-diagram data for a TDB system stem."""
     out_path = cache / f"{stem}.json"
     if out_path.exists() and not force:
         d = load_json(out_path)
