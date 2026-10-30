@@ -3,6 +3,7 @@
 headline comparison (previous no-OpenCV baselines vs OpenCV/Camelot routes vs AI readers vs dual-reader agreement),
 AI spend from the Gemini ledger, then the full per-extractor tables and tool status notes.
 """
+
 import json
 import sys
 from pathlib import Path
@@ -12,69 +13,201 @@ sys.path.insert(0, str(B))
 from common import load_json, write_json  # noqa: E402
 
 R = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
-RN = {"vector": "vector PDF", "clean_raster": "clean raster 300 dpi", "degraded_raster": "degraded raster 150 dpi",
-      "image_only_pdf": "image-only PDF"}
-PD = ["diagrams_with_output", "boundary_precision@0.01", "boundary_recall@0.01", "boundary_hausdorff95", "boundary_median_dx",
-      "boundary_median_dT_K", "field_pred", "field_precision", "field_recall", "invariant_recall", "invariant_precision",
-      "invariant_T_err_K", "invariant_type_accuracy"]
+RN = {
+    "vector": "vector PDF",
+    "clean_raster": "clean raster 300 dpi",
+    "degraded_raster": "degraded raster 150 dpi",
+    "image_only_pdf": "image-only PDF",
+}
+PD = [
+    "diagrams_with_output",
+    "boundary_precision@0.01",
+    "boundary_recall@0.01",
+    "boundary_hausdorff95",
+    "boundary_median_dx",
+    "boundary_median_dT_K",
+    "field_pred",
+    "field_precision",
+    "field_recall",
+    "invariant_recall",
+    "invariant_precision",
+    "invariant_T_err_K",
+    "invariant_type_accuracy",
+]
 TAB = ["tables_true", "tables_pred", "cells", "cell_exact", "cell_exact_normalised", "numeric_exact"]
-INV = ["rows_true", "rows_pred", "row_recall", "row_precision", "T_err_K_median", "T_printed_exact", "x_err_median",
-       "x_printed_exact", "type_accuracy", "evidence_accuracy", "citation_accuracy"]
-PHS = ["rows_true", "rows_pred", "row_recall", "row_precision", "structure_accuracy", "pearson_accuracy", "strukturbericht_accuracy",
-       "prototype_accuracy", "T_low_err_K_median", "T_high_err_K_median", "homogeneity_x_err_median", "homogeneity_T_err_K_median"]
-THT = ["records_true", "records_pred", "record_recall", "record_precision", "value_exact", "rel_err_median", "within_1pct",
-       "unit_accuracy", "basis_accuracy"]
-XY = ["panels_true", "panels_found", "point_recall@0.01", "marker_recall@0.01", "point_err_median", "series_recall", "series_precision"]
+INV = [
+    "rows_true",
+    "rows_pred",
+    "row_recall",
+    "row_precision",
+    "T_err_K_median",
+    "T_printed_exact",
+    "x_err_median",
+    "x_printed_exact",
+    "type_accuracy",
+    "evidence_accuracy",
+    "citation_accuracy",
+]
+PHS = [
+    "rows_true",
+    "rows_pred",
+    "row_recall",
+    "row_precision",
+    "structure_accuracy",
+    "pearson_accuracy",
+    "strukturbericht_accuracy",
+    "prototype_accuracy",
+    "T_low_err_K_median",
+    "T_high_err_K_median",
+    "homogeneity_x_err_median",
+    "homogeneity_T_err_K_median",
+]
+THT = [
+    "records_true",
+    "records_pred",
+    "record_recall",
+    "record_precision",
+    "value_exact",
+    "rel_err_median",
+    "within_1pct",
+    "unit_accuracy",
+    "basis_accuracy",
+]
+XY = [
+    "panels_true",
+    "panels_found",
+    "point_recall@0.01",
+    "marker_recall@0.01",
+    "point_err_median",
+    "series_recall",
+    "series_precision",
+]
 TXT = ["values_true", "values_pred", "precision", "recall", "value_only_recall"]
-PF = ["phase_fraction_panels", "phase_fraction_panels_found", "phase_fraction_point_recall@0.01", "phase_fraction_point_err_median"]
+PF = [
+    "phase_fraction_panels",
+    "phase_fraction_panels_found",
+    "phase_fraction_point_recall@0.01",
+    "phase_fraction_point_err_median",
+]
 
 # (task, extractor, family, metric keys); family: prev = no-OpenCV baselines (earlier run), det = OpenCV/Camelot routes
 # (this run), ai = single AI reader
 DETAIL = [
-    ("tables", "tables_pdfplumber", "prev", TAB), ("tables", "camelot_stream", "det", TAB),
-    ("tables", "camelot_lattice", "det", TAB), ("tables", "ocr_table_cells", "det", TAB),
+    ("tables", "tables_pdfplumber", "prev", TAB),
+    ("tables", "camelot_stream", "det", TAB),
+    ("tables", "camelot_lattice", "det", TAB),
+    ("tables", "ocr_table_cells", "det", TAB),
     ("invariant_table", "tables_pdfplumber", "prev", ["cells", "cell_exact", "numeric_exact"] + INV),
-    ("invariant_table", "camelot_stream", "det", INV), ("invariant_table", "camelot_lattice", "det", INV),
-    ("invariant_table", "ocr_table_cells", "det", INV), ("invariant_table", "ai_gemini", "ai", INV),
-    ("phase_stability", "tables_pdfplumber", "prev", PHS), ("phase_stability", "camelot_stream", "det", PHS),
-    ("phase_stability", "camelot_lattice", "det", PHS), ("phase_stability", "ocr_table_cells", "det", PHS),
-    ("phase_stability", "ai_gemini", "ai", PHS), ("phase_stability", "vector_route", "prev", PF),
-    ("thermo_tables", "tables_pdfplumber", "prev", THT), ("thermo_tables", "camelot_stream", "det", THT),
-    ("thermo_tables", "camelot_lattice", "det", THT), ("thermo_tables", "ocr_table_cells", "det", THT),
+    ("invariant_table", "camelot_stream", "det", INV),
+    ("invariant_table", "camelot_lattice", "det", INV),
+    ("invariant_table", "ocr_table_cells", "det", INV),
+    ("invariant_table", "ai_gemini", "ai", INV),
+    ("phase_stability", "tables_pdfplumber", "prev", PHS),
+    ("phase_stability", "camelot_stream", "det", PHS),
+    ("phase_stability", "camelot_lattice", "det", PHS),
+    ("phase_stability", "ocr_table_cells", "det", PHS),
+    ("phase_stability", "ai_gemini", "ai", PHS),
+    ("phase_stability", "vector_route", "prev", PF),
+    ("thermo_tables", "tables_pdfplumber", "prev", THT),
+    ("thermo_tables", "camelot_stream", "det", THT),
+    ("thermo_tables", "camelot_lattice", "det", THT),
+    ("thermo_tables", "ocr_table_cells", "det", THT),
     ("thermo_tables", "ai_gemini", "ai", THT),
-    ("xy", "vector_route", "prev", XY), ("xy", "vector_markers_tool", "prev", XY), ("xy", "raster_markers", "det", XY),
-    ("phase_diagram", "vector_route", "prev", PD), ("phase_diagram", "assessed_pd", "prev", PD),
-    ("phase_diagram", "assessed_pd_auto", "det", PD), ("phase_diagram", "raster_topology", "det", PD),
+    ("xy", "vector_route", "prev", XY),
+    ("xy", "vector_markers_tool", "prev", XY),
+    ("xy", "raster_markers", "det", XY),
+    ("phase_diagram", "vector_route", "prev", PD),
+    ("phase_diagram", "assessed_pd", "prev", PD),
+    ("phase_diagram", "assessed_pd_auto", "det", PD),
+    ("phase_diagram", "raster_topology", "det", PD),
     ("phase_diagram", "ai_gemini", "ai", PD),
-    ("text", "text_regex", "prev", TXT), ("text", "ai_gemini", "ai", TXT),
+    ("text", "text_regex", "prev", TXT),
+    ("text", "ai_gemini", "ai", TXT),
 ]
 SUBSET = ["ai_gemini_subset", "ai_claude", "ai_dual"]
-SUB_TASKS = [("invariant_table", ["row_recall", "row_precision", "T_printed_exact", "x_printed_exact", "type_accuracy", "evidence_accuracy"]),
-             ("phase_stability", ["row_recall", "row_precision", "structure_accuracy"]),
-             ("thermo_tables", ["record_recall", "record_precision", "value_exact", "unit_accuracy"]),
-             ("phase_diagram", ["field_pred", "field_precision", "field_recall"]),
-             ("text", ["values_pred", "precision", "recall"])]
+SUB_TASKS = [
+    (
+        "invariant_table",
+        ["row_recall", "row_precision", "T_printed_exact", "x_printed_exact", "type_accuracy", "evidence_accuracy"],
+    ),
+    ("phase_stability", ["row_recall", "row_precision", "structure_accuracy"]),
+    ("thermo_tables", ["record_recall", "record_precision", "value_exact", "unit_accuracy"]),
+    ("phase_diagram", ["field_pred", "field_precision", "field_recall"]),
+    ("text", ["values_pred", "precision", "recall"]),
+]
 HEAD = [
-    ("tables", "table cells exact", "cell_exact",
-     [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "camelot_lattice"), ("det", "ocr_table_cells")]),
-    ("invariant_table", "invariant rows recall", "row_recall",
-     [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")]),
-    ("phase_stability", "phase rows recall", "row_recall",
-     [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")]),
-    ("phase_stability", "structure labels correct", "structure_accuracy",
-     [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")]),
-    ("thermo_tables", "property records recall", "record_recall",
-     [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")]),
-    ("xy", "marker recall@0.01", "marker_recall@0.01",
-     [("prev", "vector_route"), ("prev", "vector_markers_tool"), ("det", "raster_markers")]),
-    ("phase_diagram", "boundary recall@0.01", "boundary_recall@0.01",
-     [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto")]),
-    ("phase_diagram", "field precision", "field_precision",
-     [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto"), ("det", "raster_topology"), ("ai", "ai_gemini")]),
-    ("phase_diagram", "field recall", "field_recall",
-     [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto"), ("det", "raster_topology"), ("ai", "ai_gemini")]),
-    ("phase_diagram", "invariant recall", "invariant_recall",
-     [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto"), ("det", "raster_topology")]),
+    (
+        "tables",
+        "table cells exact",
+        "cell_exact",
+        [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "camelot_lattice"), ("det", "ocr_table_cells")],
+    ),
+    (
+        "invariant_table",
+        "invariant rows recall",
+        "row_recall",
+        [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")],
+    ),
+    (
+        "phase_stability",
+        "phase rows recall",
+        "row_recall",
+        [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")],
+    ),
+    (
+        "phase_stability",
+        "structure labels correct",
+        "structure_accuracy",
+        [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")],
+    ),
+    (
+        "thermo_tables",
+        "property records recall",
+        "record_recall",
+        [("prev", "tables_pdfplumber"), ("det", "camelot_stream"), ("det", "ocr_table_cells"), ("ai", "ai_gemini")],
+    ),
+    (
+        "xy",
+        "marker recall@0.01",
+        "marker_recall@0.01",
+        [("prev", "vector_route"), ("prev", "vector_markers_tool"), ("det", "raster_markers")],
+    ),
+    (
+        "phase_diagram",
+        "boundary recall@0.01",
+        "boundary_recall@0.01",
+        [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto")],
+    ),
+    (
+        "phase_diagram",
+        "field precision",
+        "field_precision",
+        [
+            ("prev", "vector_route"),
+            ("prev", "assessed_pd"),
+            ("det", "assessed_pd_auto"),
+            ("det", "raster_topology"),
+            ("ai", "ai_gemini"),
+        ],
+    ),
+    (
+        "phase_diagram",
+        "field recall",
+        "field_recall",
+        [
+            ("prev", "vector_route"),
+            ("prev", "assessed_pd"),
+            ("det", "assessed_pd_auto"),
+            ("det", "raster_topology"),
+            ("ai", "ai_gemini"),
+        ],
+    ),
+    (
+        "phase_diagram",
+        "invariant recall",
+        "invariant_recall",
+        [("prev", "vector_route"), ("prev", "assessed_pd"), ("det", "assessed_pd_auto"), ("det", "raster_topology")],
+    ),
     ("text", "text values recall", "recall", [("prev", "text_regex"), ("ai", "ai_gemini")]),
     ("text", "text values precision", "precision", [("prev", "text_regex"), ("ai", "ai_gemini")]),
 ]
@@ -158,38 +291,62 @@ def spend():
 
 def main():
     res = {"headline": [], "tasks": [], "ai_subset": [], "ai_spend": {}, "extractor_status": {}}
-    md = ["# Benchmark results", "",
-          "Generated by `bench/results/build_results.py` from `bench/outputs/*/scores.json` (truth schema v2). Distances are "
-          "in axis-normalised units (axis range = 1); `@0.01` = within 1 % of the axis range; `–` = not applicable or nothing "
-          "to score; `n/r` = not run for that rendering (reasons below). Semantic table errors are measured against the printed "
-          "value. Families: **prev** = the earlier no-OpenCV baselines; **det** = thermo_extractor routes that needed "
-          "OpenCV / Camelot, run in `.venv-vision` (this run); **ai** = production AI readers (prompts and schemas imported "
-          "from the sgte-corpus release), gemini-3.8-flash, single reader; dual-reader results are on a 5-document subset "
-          "(next section). Findings and failures: next section.", ""]
+    md = [
+        "# Benchmark results",
+        "",
+        "Generated by `bench/results/build_results.py` from `bench/outputs/*/scores.json` (truth schema v2). Distances are "
+        "in axis-normalised units (axis range = 1); `@0.01` = within 1 % of the axis range; `–` = not applicable or nothing "
+        "to score; `n/r` = not run for that rendering (reasons below). Semantic table errors are measured against the printed "
+        "value. Families: **prev** = the earlier no-OpenCV baselines; **det** = thermo_extractor routes that needed "
+        "OpenCV / Camelot, run in `.venv-vision` (this run); **ai** = production AI readers (prompts and schemas imported "
+        "from the sgte-corpus release), gemini-3.8-flash, single reader; dual-reader results are on a 5-document subset "
+        "(next section). Findings and failures: next section.",
+        "",
+    ]
     md += FINDINGS
-    md += ["## Headline: task × rendering", "",
-           "| task / metric | extractor | family | " + " | ".join(RN[r] for r in R) + " |", "|---|---|---|" + "---|" * len(R)]
+    md += [
+        "## Headline: task × rendering",
+        "",
+        "| task / metric | extractor | family | " + " | ".join(RN[r] for r in R) + " |",
+        "|---|---|---|" + "---|" * len(R),
+    ]
     for task, label, metric, exts in HEAD:
         for fam, ext in exts:
             a = agg(ext)
             vals = [(a.get(r) or {}).get(task, {}).get(metric) if (a.get(r) or {}).get(task) else None for r in R]
             present = [bool((a.get(r) or {}).get(task)) for r in R]
             md.append(f"| {label} | `{ext}` | {fam} | " + " | ".join(f(v) if p else "n/r" for v, p in zip(vals, present)) + " |")
-            res["headline"].append({"task": task, "metric": metric, "extractor": ext, "family": fam,
-                                    "by_rendering": {r: (v if p else "n/r") for r, v, p in zip(R, vals, present)}})
-    md += ["", "Oracle inputs still used by the det routes (recorded per document in each output's `status`): "
-           "`ocr_table_cells` region and column boundaries (the tool requires them declared); `raster_markers` manifests "
-           "(calibration, legend marker) from the vector twin, mapped into degraded pages with the truth page transform; "
-           "`assessed_pd_auto` phase table; truth-frame calibration in `raster_topology` / `assessed_pd_auto` only where every "
-           "detector failed (counts under Tool status notes). Their figure crop comes from `extract_pdf_figure_panels` "
-           "(truth bbox only where no panel was found).", ""]
-    md += ["## AI readers: single reader vs dual-reader agreement (subset)", "",
-           "Subset: syn-AgCu-06He, syn-AlNi-14Zhu, syn-CuZn-08Gie, syn-PbZn-98Jan, syn-BiSn-08Li; vector PDF and degraded "
-           "raster. `ai_gemini_subset` = the Gemini answers on the subset; `ai_claude` = Claude (claude-opus-5.5) blind reader "
-           "answering the same request files (prompt, schema, crop) through a file broker (2 sub-agents); `ai_dual` = "
-           "production consensus (a record is accepted only when both readers give it; phase-diagram fields through the "
-           "assessed_pd ladder pair tier and its rule gate).", "",
-           "| task | metric | reader | vector PDF | degraded raster 150 dpi |", "|---|---|---|---|---|"]
+            res["headline"].append(
+                {
+                    "task": task,
+                    "metric": metric,
+                    "extractor": ext,
+                    "family": fam,
+                    "by_rendering": {r: (v if p else "n/r") for r, v, p in zip(R, vals, present)},
+                }
+            )
+    md += [
+        "",
+        "Oracle inputs still used by the det routes (recorded per document in each output's `status`): "
+        "`ocr_table_cells` region and column boundaries (the tool requires them declared); `raster_markers` manifests "
+        "(calibration, legend marker) from the vector twin, mapped into degraded pages with the truth page transform; "
+        "`assessed_pd_auto` phase table; truth-frame calibration in `raster_topology` / `assessed_pd_auto` only where every "
+        "detector failed (counts under Tool status notes). Their figure crop comes from `extract_pdf_figure_panels` "
+        "(truth bbox only where no panel was found).",
+        "",
+    ]
+    md += [
+        "## AI readers: single reader vs dual-reader agreement (subset)",
+        "",
+        "Subset: syn-AgCu-06He, syn-AlNi-14Zhu, syn-CuZn-08Gie, syn-PbZn-98Jan, syn-BiSn-08Li; vector PDF and degraded "
+        "raster. `ai_gemini_subset` = the Gemini answers on the subset; `ai_claude` = Claude (claude-opus-5.5) blind reader "
+        "answering the same request files (prompt, schema, crop) through a file broker (2 sub-agents); `ai_dual` = "
+        "production consensus (a record is accepted only when both readers give it; phase-diagram fields through the "
+        "assessed_pd ladder pair tier and its rule gate).",
+        "",
+        "| task | metric | reader | vector PDF | degraded raster 150 dpi |",
+        "|---|---|---|---|---|",
+    ]
     for task, keys in SUB_TASKS:
         for k in keys:
             for ext in SUBSET:
@@ -198,54 +355,81 @@ def main():
                 md.append(f"| {task} | {k} | `{ext}` | " + " | ".join(f(v) for v in vals) + " |")
                 res["ai_subset"].append({"task": task, "metric": k, "reader": ext, "vector": vals[0], "degraded_raster": vals[1]})
     by, tot = spend()
-    res["ai_spend"] = {"model": "gemini-3.8-flash", "by_kind": by, "total": tot,
-                       "price_usd_per_million": {"list": {"input": 0.75, "output_incl_thinking": 3.75},
-                                                 "conservative": {"input": 1.50, "output_incl_thinking": 7.50}},
-                       "price_source": "third-party price trackers, Oct 2026 (list); conservative = 2x list. Not confirmed on Google's page.",
-                       "claude_subset": "answered by Claude Code sub-agents; no separate API billing recorded"}
-    md += ["", "## AI spend (Gemini 3.8 Flash)", "",
-           "Token counts from each response's `usage_metadata` (`work/ai/gemini_ledger.jsonl`, copied to "
-           "`results/gemini_ledger.jsonl`). Prices per million tokens: list $0.75 input / $3.75 output incl. thinking "
-           "(third-party price trackers, Oct 2026; not confirmed on Google's page); conservative = 2× list. Hard cap US$25; "
-           "the runner's guard stops new calls at a conservative $22.", "",
-           "| reader request | calls | errors | input tok | output tok | thinking tok | US$ list | US$ conservative |",
-           "|---|---|---|---|---|---|---|---|"]
+    res["ai_spend"] = {
+        "model": "gemini-3.8-flash",
+        "by_kind": by,
+        "total": tot,
+        "price_usd_per_million": {
+            "list": {"input": 0.75, "output_incl_thinking": 3.75},
+            "conservative": {"input": 1.50, "output_incl_thinking": 7.50},
+        },
+        "price_source": "third-party price trackers, Oct 2026 (list); conservative = 2x list. Not confirmed on Google's page.",
+        "claude_subset": "answered by Claude Code sub-agents; no separate API billing recorded",
+    }
+    md += [
+        "",
+        "## AI spend (Gemini 3.8 Flash)",
+        "",
+        "Token counts from each response's `usage_metadata` (`work/ai/gemini_ledger.jsonl`, copied to "
+        "`results/gemini_ledger.jsonl`). Prices per million tokens: list $0.75 input / $3.75 output incl. thinking "
+        "(third-party price trackers, Oct 2026; not confirmed on Google's page); conservative = 2× list. Hard cap US$25; "
+        "the runner's guard stops new calls at a conservative $22.",
+        "",
+        "| reader request | calls | errors | input tok | output tok | thinking tok | US$ list | US$ conservative |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
     for k, v in sorted(by.items()):
-        md.append(f"| {k} | {v['calls']} | {v['errors']} | {v['input']:,} | {v['output']:,} | {v['thinking']:,} | {v['usd_list']:.2f} | {v['usd_conservative']:.2f} |")
-    md.append(f"| **total** | {tot['calls']} | {tot['errors']} | {tot['input']:,} | {tot['output']:,} | {tot['thinking']:,} | "
-              f"**{tot['usd_list']:.2f}** | {tot['usd_conservative']:.2f} |")
+        md.append(
+            f"| {k} | {v['calls']} | {v['errors']} | {v['input']:,} | {v['output']:,} | {v['thinking']:,} | {v['usd_list']:.2f} | {v['usd_conservative']:.2f} |"
+        )
+    md.append(
+        f"| **total** | {tot['calls']} | {tot['errors']} | {tot['input']:,} | {tot['output']:,} | {tot['thinking']:,} | "
+        f"**{tot['usd_list']:.2f}** | {tot['usd_conservative']:.2f} |"
+    )
     md.append("")
     md += ["## Per-extractor detail", ""]
     for task, ext, fam, keys in DETAIL:
         a = agg(ext)
         row = {"task": task, "extractor": ext, "family": fam, "by_rendering": {}}
-        md += [f"### {task} — `{ext}` ({fam})", "", "| metric | " + " | ".join(RN[r] for r in R) + " |", "|---|" + "---|" * len(R)]
+        md += [
+            f"### {task} — `{ext}` ({fam})",
+            "",
+            "| metric | " + " | ".join(RN[r] for r in R) + " |",
+            "|---|" + "---|" * len(R),
+        ]
         for r in R:
             v = (a.get(r) or {}).get(task)
             row["by_rendering"][r] = v if v else "n/r"
         for k in keys:
-            md.append(f"| {k} | " + " | ".join(f(row["by_rendering"][r].get(k)) if isinstance(row["by_rendering"][r], dict)
-                                               else "n/r" for r in R) + " |")
+            md.append(
+                f"| {k} | "
+                + " | ".join(f(row["by_rendering"][r].get(k)) if isinstance(row["by_rendering"][r], dict) else "n/r" for r in R)
+                + " |"
+            )
         md.append("")
         res["tasks"].append(row)
-    md += ["### n/r reasons", "",
-           "- `camelot_*`: Camelot reads PDF text objects; the raster renderings have none. The tool contract "
-           "(`thermo_extractor.tables.extraction`) allows `stream` and `network`; camelot-py 0.11.0 has no `network` flavor "
-           "(NotImplementedError on every page, so no `camelot_network` result); `lattice` was called directly with a "
-           "pdftoppm conversion backend (Ghostscript and the pdftopng wheel are not installed).",
-           "- `tables_pdfplumber`, `text_regex`, `vector_route`, `vector_markers_tool`: as in the earlier run (text layer / "
-           "PDF vector objects).",
-           "- `raster_markers` vector: covered by the vector route. `raster_topology` emits no boundary geometry (faces and "
-           "invariant horizontals only).",
-           "- phase-fraction curves on rasters: thermo_extractor has no raster curve tracer.",
-           "- `ai_*` cell metrics: the readers return records, not cell grids.", ""]
+    md += [
+        "### n/r reasons",
+        "",
+        "- `camelot_*`: Camelot reads PDF text objects; the raster renderings have none. The tool contract "
+        "(`thermo_extractor.tables.extraction`) allows `stream` and `network`; camelot-py 0.11.0 has no `network` flavor "
+        "(NotImplementedError on every page, so no `camelot_network` result); `lattice` was called directly with a "
+        "pdftoppm conversion backend (Ghostscript and the pdftopng wheel are not installed).",
+        "- `tables_pdfplumber`, `text_regex`, `vector_route`, `vector_markers_tool`: as in the earlier run (text layer / "
+        "PDF vector objects).",
+        "- `raster_markers` vector: covered by the vector route. `raster_topology` emits no boundary geometry (faces and "
+        "invariant horizontals only).",
+        "- phase-fraction curves on rasters: thermo_extractor has no raster curve tracer.",
+        "- `ai_*` cell metrics: the readers return records, not cell grids.",
+        "",
+    ]
     md += ["## Tool status notes", ""]
     for ext in ("vector_route", "assessed_pd", "assessed_pd_auto", "raster_topology", "raster_markers"):
         counts = {}
         for fp in sorted((B / "outputs" / ext).glob("*/*.json")):
             st = load_json(fp).get("status", {})
             for k, v in st.items():
-                for it in (v if isinstance(v, list) else [v]):
+                for it in v if isinstance(v, list) else [v]:
                     if not isinstance(it, dict):
                         continue
                     for key in ("calibration", "crop", "manifest", "vector_markers", "markers", "compare", "error"):
@@ -253,18 +437,31 @@ def main():
                             msg = str(it[key])
                             msg = msg.split(" (", maxsplit=1)[0] if key in ("vector_markers", "markers") else msg[:110]
                             counts[(fp.parent.name, k, key, msg)] = counts.get((fp.parent.name, k, key, msg), 0) + 1
-        res["extractor_status"][ext] = [{"rendering": a_, "task": b_, "stage": c_, "outcome": d_, "count": n}
-                                        for (a_, b_, c_, d_), n in sorted(counts.items())]
+        res["extractor_status"][ext] = [
+            {"rendering": a_, "task": b_, "stage": c_, "outcome": d_, "count": n}
+            for (a_, b_, c_, d_), n in sorted(counts.items())
+        ]
         if counts:
-            md += [f"### {ext}", ""] + [f"- {RN.get(a_, a_)} / {b_} / {c_}: {d_} — {n}" for (a_, b_, c_, d_), n in sorted(counts.items())] + [""]
+            md += (
+                [f"### {ext}", ""]
+                + [f"- {RN.get(a_, a_)} / {b_} / {c_}: {d_} — {n}" for (a_, b_, c_, d_), n in sorted(counts.items())]
+                + [""]
+            )
     oracle = agg("oracle")
-    md += ["## Oracle self-test", "", "The truth written back in extractor format scores 1.0 on every precision/recall metric:", ""]
+    md += [
+        "## Oracle self-test",
+        "",
+        "The truth written back in extractor format scores 1.0 on every precision/recall metric:",
+        "",
+    ]
     for r in R:
         o = oracle.get(r, {})
-        md.append(f"- {RN[r]}: tables {f(o.get('tables', {}).get('cell_exact'))}, xy {f(o.get('xy', {}).get('point_recall@0.01'))}, "
-                  f"boundaries {f(o.get('phase_diagram', {}).get('boundary_recall@0.01'))}, fields {f(o.get('phase_diagram', {}).get('field_recall'))}, "
-                  f"text {f(o.get('text', {}).get('recall'))}, invariant rows {f(o.get('invariant_table', {}).get('row_recall'))}, "
-                  f"phase rows {f(o.get('phase_stability', {}).get('row_recall'))}, property records {f(o.get('thermo_tables', {}).get('record_recall'))}")
+        md.append(
+            f"- {RN[r]}: tables {f(o.get('tables', {}).get('cell_exact'))}, xy {f(o.get('xy', {}).get('point_recall@0.01'))}, "
+            f"boundaries {f(o.get('phase_diagram', {}).get('boundary_recall@0.01'))}, fields {f(o.get('phase_diagram', {}).get('field_recall'))}, "
+            f"text {f(o.get('text', {}).get('recall'))}, invariant rows {f(o.get('invariant_table', {}).get('row_recall'))}, "
+            f"phase rows {f(o.get('phase_stability', {}).get('row_recall'))}, property records {f(o.get('thermo_tables', {}).get('record_recall'))}"
+        )
     write_json(B / "results" / "results.json", res, pretty=True)
     (B / "results" / "RESULTS.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     print("\n".join(md[:70]))
