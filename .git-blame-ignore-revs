@@ -1,0 +1,35 @@
+# Mechanical refactor commits (moves, renames, formatting, autofixes). Use: git config blame.ignoreRevsFile .git-blame-ignore-revs
+# AUTOFIX: ruff safe fixes only (import sorting, unused imports, docstring layout, simple SIM/PL rewrites)
+efbb3ffa11544f5639c7998d1ee8d24a33892603
+# RENAME: module-level constants in quick-path modules to lowercase snake_case (values untouched), importers updated
+1bb666053ebad74b15881516be0975359052d90b
+# AUTOFIX: ruff format with the repo config (quote style, layout only; build_results.py excluded as protected)
+2aa0dab4c09f2a0a280be6643b1205d4e06a2d28
+# MOVE: extract running-text sentences and table builders from generate.py into gen_text.py (generate.py re-exports them)
+486fe28b215426e08246744e58392391b1a2d42a
+# MOVE: extract page geometry and rendering functions from generate.py into gen_render.py (generate.py re-exports them)
+b603c6f8eb42f7c0d2320370356f9531fa1924dd
+# MOVE: extract style selection from generate.py into gen_style.py (generate.py re-exports it)
+216a2973564a81b4590423e7141b5cd6f892200b
+# MOVE: extract grid decoding and invariant classification from pd_data.py into pd_regions.py (pd_data.py re-exports them)
+a42accc1890071259b48d2b16d3f47b4567fbb4c
+# MOVE: extract pycalphad property helpers from pd_data.py into pd_models.py (pd_data.py re-exports them)
+371a438d71e13b1249f670b0eccc58426750eb57
+# AUTOFIX: ruff F401 (unused import r_gas removed from pd_data.py)
+6b14238654696651e3e9d978c05522e39f3c78f2
+# AUTOFIX: ruff I001 import sort in pd_models.py (import block only)
+2b509c2df5143f769e3186d98fee4cf85ccb1426
+# MOVE: split score.py into score_config.py (tolerances, renderings, unit tables) and score_core.py (helpers); score.py re-exports them
+b07d9ba9d4356d5336624856d8a1a3d8c81f97a4
+# AUTOFIX: ruff I001 import sort in score.py and score_core.py (import blocks only)
+13f91498882ba4080866ad5aba1a5b1e8f39962d
+# AUTOFIX: ruff F401 on the new modules gen_render.py, gen_text.py and pd_regions.py (copied unused imports removed)
+6d3795d5daefc6b90adf7a5c04b3bf97b93e15f7
+# AUTOFIX: ruff safe fixes on build_results.py and the full-path modules (ai, baselines, showcase/build.py)
+044d25f4e6ad44717667fc2e5835bb4c855d29c6
+# AUTOFIX: ruff format on build_results.py and the full-path modules (layout only)
+373c3f094a6b1b8c3988c245bd32f7d3e7e8945c
+# AUTOFIX: ruff format on map_outputs.py after the docstring edit (layout only)
+77ed3d6f45c7374f642601a27aff405572208c5d
+# AUTOFIX: ruff format bench/pd_data.py (two blank lines removed, layout only)
+cf9966540976d6da8824df02ba8ee4924c49882d
