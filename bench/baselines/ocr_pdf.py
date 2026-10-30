@@ -5,6 +5,7 @@ scans. work/ocrpdf/<doc>/<rendering>.pdf, rendering in clean_raster (300 dpi PNG
 image_only_pdf (the page images embedded in image_only.pdf, 150 dpi). Deterministic (single thread).
 """
 
+import os
 import subprocess
 import sys
 import tempfile
@@ -43,7 +44,11 @@ def one(doc, rendering, n):
                 ["tesseract", str(img), str(base), "--dpi", str(dpi), "--psm", "3", "pdf"],
                 check=True,
                 capture_output=True,
-                env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"},
+                env={
+                    **os.environ,
+                    "OMP_THREAD_LIMIT": "1",
+                    "PATH": os.pathsep.join(["/opt/homebrew/bin", os.environ.get("PATH", "")]),
+                },
             )
             merged.insert_pdf(pymupdf.open(str(base) + ".pdf"))
     merged.save(out, deflate=True)
