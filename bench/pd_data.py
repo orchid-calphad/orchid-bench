@@ -14,12 +14,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common import cache, p_atm, pd_dir, r_gas, tdb_dir, el, load_json, sha256_file, write_json  # noqa: E402
 from systems import Labeller, base  # noqa: E402
 from pd_regions import (
-    _match,
+    _match,  # noqa: F401 (facade re-export)
     classify_invariant,
     clean_regions,
-    decode_grid,
-)  # noqa: F401 (facade re-export)
-from pd_models import (  # noqa: F401 (facade re-export)
+    decode_grid,  # noqa: F401 (facade re-export)
+)
+from pd_models import (
     _pyc,
     compound_at,
     liquid_activity,
