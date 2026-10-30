@@ -43,7 +43,7 @@ def clean_regions(regions):
 
 
 def decode_grid(grid):
-    """Decode a stored grid encoding into a list of values."""
+    """Expand a run-length encoded grid into rows of phase labels."""
     labels = grid["labels"]
     rows = []
     for row in grid["rows"]:

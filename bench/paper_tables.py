@@ -27,7 +27,7 @@ inv_order = [
 
 
 def tval(T_K, unit):
-    """Format a temperature in K for a table cell."""
+    """Convert a temperature in K to the table unit (K or degrees C)."""
     return T_K - 273.15 if unit == "°C" else T_K
 
 

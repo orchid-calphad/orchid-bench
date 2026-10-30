@@ -63,7 +63,7 @@ def phase_min_curve(dbf, comps, phase, B, T, nbins=101):
 
 
 def compound_at(dbf, comps, phase, B, x0, T, prop):
-    """Return the stable compound data of phase at composition x0 and temperature T in K."""
+    """Return the property prop of phase at composition x0 and temperature T in K, with the equilibrium result."""
     _, equilibrium, _, v = _pyc()
     res = equilibrium(dbf, comps, [phase], {v.X(B): float(x0), v.T: T, v.P: p_atm, v.N: 1}, output=prop)
     return np.asarray(getattr(res, prop).values).squeeze(), res

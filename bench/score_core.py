@@ -62,7 +62,7 @@ def nn_dist(a, b):
 
 
 def stats(vals):
-    """Return summary statistics (median and count) of a list of values."""
+    """Return summary statistics (count, mean and median) of a list of values."""
     v = [x for x in vals if x is not None and np.isfinite(x)]
     return {"n": len(v), "mean": float(np.mean(v)) if v else None, "median": float(np.median(v)) if v else None}
 
