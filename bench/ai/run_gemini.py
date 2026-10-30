@@ -47,7 +47,7 @@ def spent():
     """Return the USD spend recorded in the ledger so far."""
     tot_list = tot_cons = 0.0
     if LEDGER.exists():
-        for ln in LEDGER.read_text().splitlines():
+        for ln in LEDGER.read_text(encoding="utf-8").splitlines():
             r = json.loads(ln)
             tot_list += cost(r.get("usage"), LIST_IN, LIST_OUT)
             tot_cons += cost(r.get("usage"), CONS_IN, CONS_OUT)
@@ -131,7 +131,7 @@ def main():
     kinds = set(filter(None, a.kinds.split(",")))
     jobs = []
     for f in sorted(Path(a.jobs_dir).glob("*.json")):
-        j = json.loads(f.read_text())
+        j = json.loads(f.read_text(encoding="utf-8"))
         if (docs and j["doc"] not in docs) or (rends and j["rendering"] not in rends) or (kinds and j["kind"] not in kinds):
             continue
         if (CACHE / f"{j['key']}.json").exists():
@@ -147,7 +147,7 @@ def main():
                 return j["key"], "skipped (budget guard)"
         res = call(j)
         with LOCK:
-            with LEDGER.open("a") as fh:
+            with LEDGER.open("a", encoding="utf-8") as fh:
                 fh.write(
                     json.dumps(
                         {
@@ -166,7 +166,8 @@ def main():
                 )
             if "result" in res:
                 (CACHE / f"{j['key']}.json").write_text(
-                    json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1)
+                    json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1),
+                    encoding="utf-8",
                 )
         return j["key"], res.get("error") or f"ok {cost(res.get('usage'), LIST_IN, LIST_OUT):.4f}"
 
