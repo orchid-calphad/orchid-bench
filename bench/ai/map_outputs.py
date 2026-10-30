@@ -328,6 +328,7 @@ def text_values(res, job):
 # ------------------------------------------------------------------------------------------------ phase-diagram fields
 class FileReader:
     """Serve recorded per-field answers from one file-based reader."""
+
     def __init__(self, name, answers, markers):
         """Index the recorded answers by field id."""
         self.name = name
