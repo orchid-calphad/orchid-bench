@@ -4,6 +4,7 @@ work/ocr/<doc>/<rendering>/page-N.tsv ; rendering in clean_raster, degraded_rast
 (image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder).
 """
 
+import os
 import subprocess
 import sys
 from multiprocessing import Pool
@@ -25,7 +26,7 @@ def ocr(img, out):
         capture_output=True,
         text=True,
         encoding="utf-8",
-        env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"},
+        env={**os.environ, "OMP_THREAD_LIMIT": "1", "PATH": os.pathsep.join(["/opt/homebrew/bin", os.environ.get("PATH", "")])},
     )
     out.write_text(r.stdout, encoding="utf-8")
 
