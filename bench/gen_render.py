@@ -3,7 +3,7 @@
 import io
 import math
 import numpy as np
-from common import docs_dir, truth_dir, fmt, sha256_file, write_json  # noqa: E402
+from common import sha256_file  # noqa: E402
 
 
 def page_affine(scale_x, scale_y, angle_deg=0.0, size=(0, 0)):

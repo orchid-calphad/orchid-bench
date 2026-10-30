@@ -1,8 +1,8 @@
 """Running-text sentences and table rows for the synthetic documents, split from generate.py."""
 
 import numpy as np
-from common import docs_dir, truth_dir, fmt, sha256_file, write_json  # noqa: E402
-from systems import system_specs, base  # noqa: E402
+from common import fmt  # noqa: E402
+from systems import base  # noqa: E402
 
 
 type_article = {

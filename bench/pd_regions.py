@@ -1,7 +1,7 @@
 """Region and invariant classification of phase-diagram grids, split from pd_data.py."""
 
 import numpy as np
-from systems import Labeller, base  # noqa: E402
+from systems import base  # noqa: E402
 
 
 def clean_regions(regions):
