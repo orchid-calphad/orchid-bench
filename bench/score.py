@@ -20,9 +20,34 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import truth_dir, load_json, write_json  # noqa: E402
-from score_config import basis_norm, e_factor, hit_tol, inv_t_row_tol, inv_t_tol, min_field_cells, renderings, series_tol, unit_aliases, unit_norm  # noqa: E402
-from score_core import _canon, _close, _loose, _toK, _tox, aabb, densify, iou, nn_dist, norm_text, num_of, prf, stats  # noqa: E402
+from common import load_json, truth_dir, write_json  # noqa: E402
+from score_config import (  # noqa: E402
+    basis_norm,
+    e_factor,
+    hit_tol,
+    inv_t_row_tol,
+    inv_t_tol,
+    min_field_cells,
+    renderings,
+    series_tol,
+    unit_aliases,
+    unit_norm,
+)
+from score_core import (  # noqa: E402
+    _canon,
+    _close,
+    _loose,
+    _toK,
+    _tox,
+    aabb,
+    densify,
+    iou,
+    nn_dist,
+    norm_text,
+    num_of,
+    prf,
+    stats,
+)
 
 # Names imported by showcase/ and baselines/ from this module (re-exports included).
 __all__ = ["_canon", "_label_sets", "_segments", "align_segment", "aabb", "norm_text", "renderings"]
