@@ -17,12 +17,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.tables_pdfplumber import semantic  # noqa: E402
-from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json, sha256_file, write_json  # noqa: E402
 
 sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
 from thermo_extractor.tables import extraction as TX  # noqa: E402
 
-WORK = BENCH / "work" / "camelot"
+WORK = bench / "work" / "camelot"
 
 
 def matrix_cells(m):
@@ -65,10 +65,10 @@ def lattice_tables(pdf, page):
 
 def main():
     import camelot
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
-        pdf = DOCS / doc / "vector.pdf"
+        pdf = docs_dir / doc / "vector.pdf"
         n = t["renderings"]["vector"]["pages"]
         for flavor in ("stream", "network", "lattice"):
             tabs, errs = [], []
@@ -84,7 +84,7 @@ def main():
             inv, ph, recs = semantic(tabs)
             how = ("thermo_extractor.tables.extraction.build_report (whole-page profile)" if flavor != "lattice"
                    else "camelot.read_pdf flavor=lattice with a pdftoppm backend (outside the tool contract)")
-            write_json(BENCH / "outputs" / f"camelot_{flavor}" / "vector" / f"{doc}.json",
+            write_json(bench / "outputs" / f"camelot_{flavor}" / "vector" / f"{doc}.json",
                        {"doc_id": doc, "rendering": "vector", "extractor": f"camelot_{flavor}",
                         "status": {"tables": f"ran: camelot-py {camelot.__version__} {flavor} via {how}" + (f"; errors: {errs}" if errs else ""),
                                    "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)"},

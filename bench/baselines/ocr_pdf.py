@@ -11,17 +11,17 @@ from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json  # noqa: E402
 
-OUT = BENCH / "work" / "ocrpdf"
-OCR = BENCH / "work" / "ocr"
+OUT = bench / "work" / "ocrpdf"
+OCR = bench / "work" / "ocr"
 
 
 def pages(doc, rendering, n):
     if rendering == "clean_raster":
-        return [(DOCS / doc / "clean" / f"page-{i}.png", 300) for i in range(1, n + 1)]
+        return [(docs_dir / doc / "clean" / f"page-{i}.png", 300) for i in range(1, n + 1)]
     if rendering == "degraded_raster":
-        return [(DOCS / doc / "degraded" / f"page-{i}.jpg", 150) for i in range(1, n + 1)]
+        return [(docs_dir / doc / "degraded" / f"page-{i}.jpg", 150) for i in range(1, n + 1)]
     return [(next((OCR / doc / "image_only_pdf").glob(f"page-{i}.*[gG]")), 150) for i in range(1, n + 1)]
 
 
@@ -43,7 +43,7 @@ def one(doc, rendering, n):
 
 if __name__ == "__main__":
     jobs = []
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         for r in ("clean_raster", "degraded_raster", "image_only_pdf"):
             jobs.append((t["doc_id"], r, t["renderings"]["vector"]["pages"]))

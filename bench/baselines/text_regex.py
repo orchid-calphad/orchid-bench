@@ -8,9 +8,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.ocr_cache import WORK, tsv_text  # noqa: E402
-from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json, write_json  # noqa: E402
 
-OUT = BENCH / "outputs" / "text_regex"
+OUT = bench / "outputs" / "text_regex"
 NUM = r"([-−–]?\d+(?:\.\d+)?)"
 PATTERNS = [
     (re.compile(NUM + r"\s?°\s?C\b"), "°C"),
@@ -41,14 +41,14 @@ def extract(text):
 
 def main():
     import pdfplumber
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
         n = t["renderings"]["vector"]["pages"]
         texts = {}
-        with pdfplumber.open(DOCS / doc / "vector.pdf") as pdf:
+        with pdfplumber.open(docs_dir / doc / "vector.pdf") as pdf:
             texts["vector"] = ("pdf_text_layer", "\n".join(p.extract_text() or "" for p in pdf.pages))
-        with pdfplumber.open(DOCS / doc / "image_only.pdf") as pdf:
+        with pdfplumber.open(docs_dir / doc / "image_only.pdf") as pdf:
             layer = "\n".join(p.extract_text() or "" for p in pdf.pages)
         if layer.strip():
             texts["image_only_pdf"] = ("pdf_text_layer", layer)

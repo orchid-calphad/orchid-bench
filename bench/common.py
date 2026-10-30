@@ -7,27 +7,27 @@ import math
 import os
 from pathlib import Path
 
-BENCH = Path(__file__).resolve().parent
-ROOT = BENCH.parent
-TDB_DIR = Path(os.environ.get("ORCHID_TDB_DIR", Path.home() / "projects/open-tdb/databases/sgte-binary"))
-PD_DIR = Path(os.environ.get("ORCHID_PD_DIR", Path.home() / "projects/orchid-data/phase-diagrams/sgte"))
-CACHE = BENCH / "cache"
-DOCS = BENCH / "docs"
-TRUTH = BENCH / "truth"
-RESULTS = BENCH / "results"
-OPEN_TDB = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
+bench = Path(__file__).resolve().parent
+root = bench.parent
+tdb_dir = Path(os.environ.get("ORCHID_TDB_DIR", Path.home() / "projects/open-tdb/databases/sgte-binary"))
+pd_dir = Path(os.environ.get("ORCHID_PD_DIR", Path.home() / "projects/orchid-data/phase-diagrams/sgte"))
+cache = bench / "cache"
+docs_dir = bench / "docs"
+truth_dir = bench / "truth"
+results = bench / "results"
+open_tdb = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
 ASSESSED_PD = Path(os.environ.get(
     "ASSESSED_PD_SRC",
     "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src"))
-FONT_DIR = None
+font_dir = None
 try:
     import matplotlib
-    FONT_DIR = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
+    font_dir = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
 except Exception:  # pragma: no cover
     pass
 
-R_GAS = 8.314462618
-P_ATM = 101325.0
+r_gas = 8.314462618
+p_atm = 101325.0
 
 
 def _clean(o):

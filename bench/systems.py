@@ -6,7 +6,7 @@ import re
 from common import el
 
 # (tdb stem, diagram type tags, display-label overrides {TDB phase: label or [(x_lo, x_hi, label), ...]})
-SYSTEMS = [
+system_specs = [
     ("AgCu-06He", ["simple_eutectic"], {}),
     ("BiSn-08Li", ["simple_eutectic"], {}),
     ("PbSn-17Gie", ["simple_eutectic"], {}),
@@ -31,7 +31,7 @@ SYSTEMS = [
     ("AlMg-12Tan", ["intermetallic_rich", "peritectic"], {"AL12MG17_A12": "Al12Mg17", "ALMG_BETA": "β", "ALMG_EPS": "ε"}),
     ("CrFe-11Xio", ["intermetallic", "gamma_loop", "solid_miscibility_gap"], {"SIGMA_D8B": "σ", "FCC_A1": "(γFe)"}),
 ]
-SYSTEM_INDEX = {s[0]: s for s in SYSTEMS}
+system_index = {s[0]: s for s in system_specs}
 
 
 def base(phase: str) -> str:
@@ -60,7 +60,7 @@ class Labeller:
         self.elements = elements                  # display symbols, e.g. ['Ag', 'Cu']
         self.stable_A, self.stable_B = stable_A, stable_B
         self.continuous = continuous              # phases forming a single-phase band across all x
-        self.overrides = SYSTEM_INDEX[stem][2] if stem in SYSTEM_INDEX else {}
+        self.overrides = system_index[stem][2] if stem in system_index else {}
 
     def label(self, phase: str, x: float) -> str:
         b = base(phase)

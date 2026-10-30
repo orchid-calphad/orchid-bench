@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
 from baselines.ocr_cache import read_tsv
-from common import ASSESSED_PD, BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
+from common import ASSESSED_PD, bench, docs_dir, truth_dir, load_json, write_json  # noqa: E402
 from score import aabb  # noqa: E402
 
 sys.path.insert(0, str(ASSESSED_PD))
@@ -37,8 +37,8 @@ from assessed_pd.model import (  # noqa: E402
 )
 from assessed_pd.pipeline import annotate  # noqa: E402
 
-OUT = BENCH / "outputs" / "assessed_pd"
-WORK = BENCH / "work" / "assessed_pd"
+OUT = bench / "outputs" / "assessed_pd"
+WORK = bench / "work" / "assessed_pd"
 
 
 def merge_words(words):
@@ -58,7 +58,7 @@ def merge_words(words):
 
 def text_layer_words(doc, page, scale):
     import pdfplumber
-    with pdfplumber.open(DOCS / doc / "vector.pdf") as pdf:
+    with pdfplumber.open(docs_dir / doc / "vector.pdf") as pdf:
         ws = pdf.pages[page].extract_words(keep_blank_chars=False, use_text_flow=True)
     return [{"text": w["text"], "bbox": [w["x0"] * scale, w["top"] * scale, w["x1"] * scale, w["bottom"] * scale],
              "line": (round(w["top"], 0),)} for w in ws]
@@ -75,9 +75,9 @@ def phase_table(t, xs_):
 
 def page_image(doc, rendering, page):
     if rendering in ("vector", "clean_raster"):
-        return DOCS / doc / "clean" / f"page-{page + 1}.png"
+        return docs_dir / doc / "clean" / f"page-{page + 1}.png"
     if rendering == "degraded_raster":
-        return DOCS / doc / "degraded" / f"page-{page + 1}.jpg"
+        return docs_dir / doc / "degraded" / f"page-{page + 1}.jpg"
     return next((OCR / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
 
 
@@ -178,7 +178,7 @@ def main(argv=None):
     from multiprocessing import Pool
     rends = (argv or sys.argv[1:]) or ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
     with Pool(8) as pool:
-        pool.starmap(one, [(tf, r) for tf in sorted(TRUTH.glob("*.json")) for r in rends])
+        pool.starmap(one, [(tf, r) for tf in sorted(truth_dir.glob("*.json")) for r in rends])
 
 
 if __name__ == "__main__":

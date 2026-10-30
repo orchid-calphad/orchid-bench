@@ -15,13 +15,13 @@ plt.rcParams.update({
     "pdf.fonttype": 42, "font.family": "DejaVu Sans", "font.size": 8, "axes.linewidth": 0.8,
     "svg.hashsalt": "orchid-bench", "path.simplify": False,
 })
-PDF_META = {"CreationDate": None, "Producer": "ORCHID synthetic benchmark (matplotlib)", "Creator": None}
-COLORS = ["#1f4e9c", "#c0392b", "#1e8449", "#7d3c98", "#b9770e", "#117a65", "#566573"]
-MARKERS = ["o", "s", "^", "v", "D", "x", "+"]
+pdf_meta = {"CreationDate": None, "Producer": "ORCHID synthetic benchmark (matplotlib)", "Creator": None}
+colors = ["#1f4e9c", "#c0392b", "#1e8449", "#7d3c98", "#b9770e", "#117a65", "#566573"]
+markers = ["o", "s", "^", "v", "D", "x", "+"]
 
 
 def _save(fig, path):
-    fig.savefig(path, format="pdf", metadata=PDF_META)
+    fig.savefig(path, format="pdf", metadata=pdf_meta)
     plt.close(fig)
 
 
@@ -50,7 +50,7 @@ def phase_diagram(data, style, path, rng):
     ax = fig.add_axes([0.13, 0.12, 0.83, 0.80] if not style["legend"] else [0.13, 0.12, 0.83, 0.80])
     lw = style["linewidth"]
     colored = style["color"]
-    color_of = {"LIQUID": COLORS[0]}
+    color_of = {"LIQUID": colors[0]}
     truth_bounds = []
     for k, rg in enumerate(data["boundaries"]):
         for c in rg["curves"]:
@@ -59,7 +59,7 @@ def phase_diagram(data, style, path, rng):
             on_frame = bool(np.all(np.asarray(c["x"]) < 1e-3) or np.all(np.asarray(c["x"]) > 1 - 1e-3))
             col = "black"
             if colored:
-                col = color_of.setdefault(base(c["phase"]), COLORS[len(color_of) % len(COLORS)])
+                col = color_of.setdefault(base(c["phase"]), colors[len(color_of) % len(colors)])
             ax.plot(x, T, color=col, lw=lw, solid_capstyle="round", zorder=3)
             truth_bounds.append({"region": k, "phase": c["phase"], "two_phase": rg["phases"], "on_frame": on_frame,
                                  "x": [float(v) for v in c["x"]], "T_K": [float(v) for v in c["T"]],
@@ -120,7 +120,7 @@ def phase_diagram(data, style, path, rng):
                 TT = float(b["T_K"][j] + rng.normal(0, 6.0))
                 if ylim[0] < tof(TT) < ylim[1]:
                     pts.append([round(xx, 5), round(TT, 2)])
-            mk = MARKERS[si]
+            mk = markers[si]
             ax.scatter([p[0] * xs_ for p in pts], [tof(p[1]) for p in pts], marker=mk, s=16,
                        facecolors="none" if si == 0 else "black", edgecolors="black", linewidths=0.7, zorder=6, label=nm)
             marker_series.append({"name": nm, "marker": mk, "points": [{"x": p[0], "T_K": p[1]} for p in pts]})
@@ -198,9 +198,9 @@ def phase_diagram(data, style, path, rng):
 def _series_plot(ax, series, style):
     out = []
     for i, s in enumerate(series):
-        col = COLORS[i % len(COLORS)] if style["color"] else "black"
+        col = colors[i % len(colors)] if style["color"] else "black"
         ls = ["-", "--", "-.", ":"][i % 4] if not style["color"] else "-"
-        mk = MARKERS[i % len(MARKERS)]
+        mk = markers[i % len(markers)]
         x, y = np.asarray(s["x"], float), np.asarray(s["y"], float)
         ok = np.isfinite(x) & np.isfinite(y)
         x, y = x[ok], y[ok]
@@ -384,7 +384,7 @@ def phase_fraction_figure(data, alloys, style, path):
         for i, (lab, s) in enumerate(al["series"].items()):
             y = np.asarray(s["NP"], float)
             on = y > 0
-            col = COLORS[i % len(COLORS)] if style["color"] else "black"
+            col = colors[i % len(colors)] if style["color"] else "black"
             ls = "-" if style["color"] else ["-", "--", "-.", ":", (0, (5, 1)), (0, (3, 1, 1, 1, 1, 1))][i % 6]
             segs, line = [], []
             j = 0

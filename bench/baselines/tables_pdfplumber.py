@@ -13,9 +13,9 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json, write_json  # noqa: E402
 
-OUT = BENCH / "outputs" / "tables_pdfplumber"
+OUT = bench / "outputs" / "tables_pdfplumber"
 MARKS = "ᵃᵇᶜᵈ"
 TYPES = ["congruent melting", "congruent transformation", "melting (pure component)", "eutectic", "eutectoid",
          "peritectic", "peritectoid", "monotectic", "monotectoid", "syntectic", "metatectic"]
@@ -271,10 +271,10 @@ def semantic(tables):
 
 def main():
     import pdfplumber
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
-        with pdfplumber.open(DOCS / doc / "vector.pdf") as pdf:
+        with pdfplumber.open(docs_dir / doc / "vector.pdf") as pdf:
             tabs = [x for p in pdf.pages for x in tables_of(p)]
         inv, ph, recs = semantic(tabs)
         write_json(OUT / "vector" / f"{doc}.json", {"doc_id": doc, "rendering": "vector", "extractor": "tables_pdfplumber",

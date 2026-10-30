@@ -4,13 +4,13 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, TRUTH, load_json, write_json  # noqa: E402
-from score import RENDERINGS, aabb  # noqa: E402
+from common import bench, truth_dir, load_json, write_json  # noqa: E402
+from score import renderings, aabb  # noqa: E402
 
-OUT = BENCH / "outputs" / "oracle"
-for tf in sorted(TRUTH.glob("*.json")):
+OUT = bench / "outputs" / "oracle"
+for tf in sorted(truth_dir.glob("*.json")):
     t = load_json(tf)
-    for r in RENDERINGS:
+    for r in renderings:
         xy = []
         for f in t["figures"]:
             if not f["kind"].startswith("property"):

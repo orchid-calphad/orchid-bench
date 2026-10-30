@@ -15,18 +15,18 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.tables_pdfplumber import semantic  # noqa: E402
-from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json, write_json  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
 PY = sys.executable
-OUT = BENCH / "outputs" / "ocr_table_cells"
-WORK = BENCH / "work" / "ocr_table_cells"
+OUT = bench / "outputs" / "ocr_table_cells"
+WORK = bench / "work" / "ocr_table_cells"
 RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def pdf_for(doc, r):
-    return {"vector": DOCS / doc / "vector.pdf", "image_only_pdf": DOCS / doc / "image_only.pdf"}.get(
-        r, BENCH / "work" / "ocrpdf" / doc / f"{r}.pdf")
+    return {"vector": docs_dir / doc / "vector.pdf", "image_only_pdf": docs_dir / doc / "image_only.pdf"}.get(
+        r, bench / "work" / "ocrpdf" / doc / f"{r}.pdf")
 
 
 def page_size(t, r, pdf):
@@ -64,7 +64,7 @@ def layout(segment_cells, r, W, H):
 def main():
     from multiprocessing import Pool
     jobs = []
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         for r in RENDS:
             jobs.append((str(tf), r))
     with Pool(8) as p:

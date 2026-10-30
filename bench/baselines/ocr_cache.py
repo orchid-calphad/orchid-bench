@@ -9,9 +9,9 @@ from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json  # noqa: E402
+from common import bench, docs_dir, truth_dir, load_json  # noqa: E402
 
-WORK = BENCH / "work" / "ocr"
+WORK = bench / "work" / "ocr"
 
 
 def ocr(img, out):
@@ -25,9 +25,9 @@ def ocr(img, out):
 
 def jobs():
     import pymupdf
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
-        d = DOCS / t["doc_id"]
+        d = docs_dir / t["doc_id"]
         n = t["renderings"]["vector"]["pages"]
         for i in range(1, n + 1):
             yield d / "clean" / f"page-{i}.png", WORK / t["doc_id"] / "clean_raster" / f"page-{i}.tsv"

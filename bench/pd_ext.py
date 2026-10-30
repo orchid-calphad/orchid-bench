@@ -18,15 +18,15 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import CACHE, P_ATM, TDB_DIR, load_json, write_json  # noqa: E402
+from common import cache, p_atm, tdb_dir, load_json, write_json  # noqa: E402
 from systems import Labeller, base  # noqa: E402
 
 warnings.filterwarnings("ignore")
-EXT_VERSION = 6
-CAL = 4.184  # J per thermochemical calorie
+ext_version = 6
+cal = 4.184  # J per thermochemical calorie
 
 # Strukturbericht token -> (Pearson symbol, Strukturbericht as printed, ascii form, prototype)
-SB = {
+sb_table = {
     "A1": ("cF4", "A1", "A1", "Cu"), "A2": ("cI2", "A2", "A2", "W"), "A3": ("hP2", "A3", "A3", "Mg"),
     "A4": ("cF8", "A4", "A4", "C (diamond)"), "A5": ("tI4", "A5", "A5", "β-Sn"), "A7": ("hR2", "A7", "A7", "α-As"),
     "A12": ("cI58", "A12", "A12", "α-Mn"), "B2": ("cP2", "B2", "B2", "CsCl"), "L12": ("cP4", "L1₂", "L1_2", "Cu3Au"),
@@ -36,7 +36,7 @@ SB = {
     "D024": ("hP16", "D0₂₄", "D0_24", "Ni3Ti"), "D513": ("hP5", "D5₁₃", "D5_13", "Ni2Al3"),
     "D82": ("cI52", "D8₂", "D8_2", "Cu5Zn8"), "D8B": ("tP30", "D8b", "D8_b", "σ-CrFe"),
 }
-LATTICE_WORD = {"FCC": "A1", "BCC": "A2", "HCP": "A3", "DIAMOND": "A4", "BCT": "A5", "RHOMBOHEDRAL": "A7"}
+lattice_word = {"FCC": "A1", "BCC": "A2", "HCP": "A3", "DIAMOND": "A4", "BCT": "A5", "RHOMBOHEDRAL": "A7"}
 
 
 def structure_of(phase: str) -> dict:
@@ -45,13 +45,13 @@ def structure_of(phase: str) -> dict:
     """
     toks = base(phase).upper().split("_")
     for t in toks:
-        if t in SB:
-            p, sb, sba, proto = SB[t]
+        if t in sb_table:
+            p, sb, sba, proto = sb_table[t]
             return {"pearson": p, "strukturbericht": sb, "strukturbericht_ascii": sba, "prototype": proto,
                     "derivation": f"Strukturbericht token '{t}' in the TDB phase name"}
     for t in toks:
-        if t in LATTICE_WORD:
-            p, sb, sba, proto = SB[LATTICE_WORD[t]]
+        if t in lattice_word:
+            p, sb, sba, proto = sb_table[lattice_word[t]]
             return {"pearson": p, "strukturbericht": sb, "strukturbericht_ascii": sba, "prototype": proto,
                     "derivation": f"lattice word '{t}' in the TDB phase name"}
     return {"pearson": None, "strukturbericht": None, "strukturbericht_ascii": None, "prototype": None,
@@ -107,7 +107,7 @@ def grid_sets(dbf, comps, phases, B, fm):
     out = [[None] * fm["nx"] for _ in range(fm["nT"])]
     for i0 in range(0, fm["nT"], 40):
         Ts = Tgrid[i0:i0 + 40]
-        res = equilibrium(dbf, comps, phases, {v.X(B): xcalc.tolist(), v.T: Ts.tolist(), v.P: P_ATM, v.N: 1})
+        res = equilibrium(dbf, comps, phases, {v.X(B): xcalc.tolist(), v.T: Ts.tolist(), v.P: p_atm, v.N: 1})
         ph = res.Phase.values[0, 0]
         xb = res.X.sel(component=B).values[0, 0]
         npf = res.NP.values[0, 0]
@@ -120,7 +120,7 @@ def grid_sets(dbf, comps, phases, B, fm):
 
 def _sets_at(dbf, comps, phases, B, x, T):
     _, equilibrium, v = _pyc()
-    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: P_ATM, v.N: 1})
+    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     ph = np.atleast_1d(res.Phase.values.squeeze())
     return _sets(ph, np.atleast_1d(res.X.sel(component=B).values.squeeze()), np.atleast_1d(res.NP.values.squeeze()),
                  res.Y.values.reshape(len(ph), -1), (dbf, comps, phases))
@@ -128,7 +128,7 @@ def _sets_at(dbf, comps, phases, B, x, T):
 
 def present(dbf, comps, phases, B, x, T, lab, labeller):
     _, equilibrium, v = _pyc()
-    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: P_ATM, v.N: 1})
+    res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     ph = np.atleast_1d(res.Phase.values.squeeze())
     cs = _sets(ph, np.atleast_1d(res.X.sel(component=B).values.squeeze()), np.atleast_1d(res.NP.values.squeeze()),
                res.Y.values.reshape(len(ph), -1), (dbf, comps, phases))
@@ -294,7 +294,7 @@ def phase_fraction(data, dbf, comps, phases, labeller, fm):
     Ts = np.arange(300.0, data["T_axis_max"] + 1e-9, 5.0)
     for _, _, j in cands[:3]:
         x = round(j * fm["dx"], 2)
-        res = equilibrium(dbf, comps, phases, {v.X(B): x, v.T: Ts.tolist(), v.P: P_ATM, v.N: 1})
+        res = equilibrium(dbf, comps, phases, {v.X(B): x, v.T: Ts.tolist(), v.P: p_atm, v.N: 1})
         ph = res.Phase.values[0, 0, :, 0]
         xb = res.X.sel(component=B).values[0, 0, :, 0]
         npf = res.NP.values[0, 0, :, 0]
@@ -314,13 +314,13 @@ def formation_ext(data, dbf, comps, phases, stab_labels):
     A, B = data["components"]
     sref = {}
     for el_ in (A, B):
-        res = equilibrium(dbf, [el_, "VA"], phases, {v.T: 298.15, v.P: P_ATM, v.N: 1}, output="SM")
+        res = equilibrium(dbf, [el_, "VA"], phases, {v.T: 298.15, v.P: p_atm, v.N: 1}, output="SM")
         sref[el_] = float(np.asarray(res.SM.values).squeeze())
-        res2 = equilibrium(dbf, [el_, "VA"], phases, {v.T: 298.15, v.P: P_ATM, v.N: 1}, output="HM")
+        res2 = equilibrium(dbf, [el_, "VA"], phases, {v.T: 298.15, v.P: p_atm, v.N: 1}, output="HM")
         sref[el_ + "_H"] = float(np.asarray(res2.HM.values).squeeze())
     rows = []
     for c in data["properties"].get("formation") or []:
-        res = equilibrium(dbf, comps, [c["phase"]], {v.X(B): float(c["x"]), v.T: 298.15, v.P: P_ATM, v.N: 1}, output="CPM")
+        res = equilibrium(dbf, comps, [c["phase"]], {v.X(B): float(c["x"]), v.T: 298.15, v.P: p_atm, v.N: 1}, output="CPM")
         cp = float(np.asarray(res.CPM.values).squeeze())
         dS = c["SM_298"] - (1 - c["x"]) * sref[A] - c["x"] * sref[B]
         fa = formula_atoms(c["label"], data["elements"])
@@ -358,13 +358,13 @@ def mixing_table(data, dbf, comps):
 
 
 def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
-    path = CACHE / f"{stem}.ext.json"
+    path = cache / f"{stem}.ext.json"
     if path.exists() and not force:
         d = load_json(path)
-        if d.get("ext_version") == EXT_VERSION:
+        if d.get("ext_version") == ext_version:
             return d
     Database, _, _ = _pyc()
-    dbf = Database(str(TDB_DIR / data["tdb"]["file"]))
+    dbf = Database(str(tdb_dir / data["tdb"]["file"]))
     A, B = data["components"]
     comps = [A, B, "VA"]
     phases = data["phases"]
@@ -372,7 +372,7 @@ def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
     xcalc, Tgrid, sets = grid_sets(dbf, comps, phases, B, data["field_map"])
     stab = stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets)
     labs300 = {s["label"] for s in stab if s["stable_at_300K"]}
-    out = {"ext_version": EXT_VERSION, "stem": stem, "phase_stability": stab,
+    out = {"ext_version": ext_version, "stem": stem, "phase_stability": stab,
            "phase_fraction": phase_fraction(data, dbf, comps, phases, labeller, data["field_map"]),
            "formation": formation_ext(data, dbf, comps, phases, labs300),
            "mixing_table": mixing_table(data, dbf, comps),

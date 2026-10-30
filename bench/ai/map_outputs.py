@@ -25,7 +25,7 @@ from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
-from common import TRUTH, load_json, write_json  # noqa: E402
+from common import truth_dir, load_json, write_json  # noqa: E402
 
 FIX = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus/release-fixup-20261022/bin-context"
 sys.path.insert(0, str(FIX))
@@ -269,7 +269,7 @@ def pd_output(doc, r, job, ans_a, ans_b):
 
 # ------------------------------------------------------------------------------------------------ assemble
 def build(doc, r, js, reader):
-    t = load_json(TRUTH / f"{doc}.json")
+    t = load_json(truth_dir / f"{doc}.json")
     inv, ph, recs, tv = [], [], [], []
     st = {"answered": 0, "missing": 0, "text_refused": 0}
     pdjob = None
@@ -365,7 +365,7 @@ def ablation():
     for (doc, r), js in sorted(J.items()):
         if doc not in ("syn-AgCu-06He-v0", "syn-AlNi-14Zhu-v0") or r not in SUB_R:
             continue
-        t = load_json(TRUTH / f"{doc}.json")
+        t = load_json(truth_dir / f"{doc}.json")
         for ver in ("v71", "v5", "v6"):
             ph, recs = [], []
             for j in js:
