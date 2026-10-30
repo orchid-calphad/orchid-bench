@@ -40,6 +40,22 @@ bench/
 
 ## How to run
 
+### Development with uv
+
+Run from the repository root. `uv.lock` pins every package; the quick path needs Python 3.11 or newer.
+
+```
+uv sync                        # creates .venv from uv.lock: runtime and dev dependencies
+uv run pytest -q               # test suite
+uv run ruff check .            # lint (ruff.toml)
+uv run ruff format --check .   # format check
+uv run python bench/generate.py --jobs 8
+```
+
+Without uv, the same pins install with `python -m pip install -r requirements-dev.txt`; then drop `uv run`.
+
+### Using a separate interpreter
+
 ```
 PY=~/orchid-py313/bin/python      # pycalphad 0.11.2, matplotlib, numpy, scipy, Pillow, PyMuPDF, pdfplumber
 $PY bench/generate.py --jobs 8                     # ~10 s once bench/cache is filled (cache: ~3 min + ~1.5 min v2)
