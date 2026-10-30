@@ -19,6 +19,7 @@ OUT = bench / "work" / "tdb_topology"
 
 
 def one(tf):
+    """Compute the phase-diagram topology for one truth document."""
     t = load_json(tf)
     doc = t["doc_id"]
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")

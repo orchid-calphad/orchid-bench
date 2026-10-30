@@ -56,6 +56,7 @@ def _overlap(a, b):
 
 
 def tables_of(page):
+    """Return the tables found on a pdfplumber page as lists of rows."""
     out = []
     for tb in page.find_tables():
         rows = tb.extract()
@@ -85,6 +86,7 @@ def tables_of(page):
 
 # ------------------------------------------------------------------------------------------------ semantic glue
 def num(s):
+    """Parse a number from a table cell, or return None when there is none."""
     if s is None:
         return None
     t = s.replace("−", "-").replace("–", "-").replace(" ", "")
@@ -94,6 +96,7 @@ def num(s):
 
 
 def grid(tb):
+    """Convert the cell records of a table into a grid of rows."""
     rows = {}
     for c in tb["cells"]:
         rows.setdefault(c["row"], {})[c["col"]] = c["text"] or ""
@@ -110,18 +113,22 @@ def split_header(g):
 
 
 def col_headers(head, n):
+    """Combine the header rows into one label per column."""
     return [" ".join(r[j] for r in head if j < len(r) and r[j]).strip() for j in range(n)]
 
 
 def units_T(text):
+    """Return the temperature unit named in a header text (°C or K)."""
     return "°C" if "°C" in text else "K"
 
 
 def units_x(text):
+    """Return the composition unit named in a header text."""
     return "at.%" if "at.%" in text else "mole_fraction"
 
 
 def classify(head_text, body):
+    """Classify a table as invariants, phases, formation, mixing or property data from its header and body."""
     h = head_text
     if "Reaction" in h or any("→" in c for r in body for c in r):
         return "invariants"
@@ -135,6 +142,7 @@ def classify(head_text, body):
 
 
 def parse_invariants(head, body, H):
+    """Parse the invariant-reaction rows of a table into records."""
     allh = " ".join(H)
     tu, xu = units_T(allh), units_x(allh)
     n = len(H)
@@ -193,6 +201,7 @@ def parse_invariants(head, body, H):
 
 
 def parse_phases(head, body, H):
+    """Parse the phase rows of a table into records."""
     allh = " ".join(H)
     tu = units_T(allh)
     n = len(H)
@@ -235,6 +244,7 @@ def parse_phases(head, body, H):
 
 
 def eunit(h):
+    """Return the energy unit named in a column header."""
     if "kJ" in h:
         return "kJ/mol"
     if "cal" in h:
@@ -247,6 +257,7 @@ def eunit(h):
 
 
 def parse_formation(head, body, H):
+    """Parse the formation-energy rows of a table into records."""
     allh = " ".join(H) + " " + " ".join(c for r in head for c in r)
     basis = "formula_unit" if ("f.u." in allh or "formula unit" in allh) else "mol_atoms"
     n = len(H)
@@ -263,6 +274,7 @@ def parse_formation(head, body, H):
 
 
 def parse_mixing(head, body, H):
+    """Parse the mixing-property rows of a table into records."""
     n = len(H)
     jx = next((j for j in range(n) if "x(" in H[j] or "at.%" in H[j]), 0)
     xu = units_x(H[jx])
@@ -303,6 +315,7 @@ def parse_mixing(head, body, H):
 
 
 def semantic(tables):
+    """Convert all extracted tables of a document into semantic records."""
     inv, ph, recs = [], [], []
     for tb in tables:
         g = grid(tb)
@@ -328,6 +341,7 @@ def semantic(tables):
 
 
 def main():
+    """Run the pdfplumber table baseline over all documents (command-line entry point)."""
     import pdfplumber
 
     for tf in sorted(truth_dir.glob("*.json")):

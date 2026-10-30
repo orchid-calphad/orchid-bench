@@ -53,11 +53,13 @@ RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def sh(args):
+    """Run a subprocess command and return its exit code and combined output."""
     r = subprocess.run([str(a) for a in args], capture_output=True, env=ENV)
     return r.returncode, (r.stdout + r.stderr).decode("utf-8", "replace")
 
 
 def pdf_for(doc, rendering):
+    """Return the (name, path) PDF files for a document and rendering."""
     if rendering == "vector":
         return [("vector.pdf", docs_dir / doc / "vector.pdf")]
     if rendering == "image_only_pdf":
@@ -69,6 +71,7 @@ def pdf_for(doc, rendering):
 
 
 def page_image(doc, rendering, page):
+    """Return the page image path for a document, rendering and page index."""
     if rendering in ("vector", "clean_raster"):
         return docs_dir / doc / "clean" / f"page-{page + 1}.png"
     if rendering == "degraded_raster":
@@ -85,6 +88,7 @@ def words_for(t, rendering, page):
 
 
 def find_panel(t, rendering, w):
+    """Locate the phase-diagram panel of a figure in one rendering."""
     doc = t["doc_id"]
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")
     tried = []
@@ -167,6 +171,7 @@ def declared_axes(t, panel, rendering, png):
 
 
 def oracle_calibration(t, panel, rendering, png):
+    """Calibrate the panel axes from the truth coordinates (oracle calibration)."""
     d = declared_axes(t, panel, rendering, png)
     (ty0, ty1), (tx0, tx1) = [q["pixel_y"] for q in d["temperature"]["ticks"]], [q["pixel_x"] for q in d["composition"]["ticks"]]
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")
@@ -221,10 +226,12 @@ def page_scale(t, rendering, panel):
 
 
 def fit(axis):
+    """Fit a linear axis mapping for one axis."""
     return lambda p: axis["intercept_value"] + axis["slope_value_per_pixel"] * p
 
 
 def run(t, rendering):
+    """Run the raster phase-diagram baseline on one document and rendering."""
     doc = t["doc_id"]
     w = WORK / doc / rendering
     w.mkdir(parents=True, exist_ok=True)
@@ -335,6 +342,7 @@ def run(t, rendering):
 
 # ------------------------------------------------------------------------------------------------ assessed_pd, auto crop
 def run_assessed(t, rendering, panel, auto_cal):
+    """Run the assessed_pd extraction on one panel, optionally with automatic calibration."""
     from PIL import Image
 
     sys.path.insert(0, str(ASSESSED_PD))
@@ -474,6 +482,7 @@ def run_assessed(t, rendering, panel, auto_cal):
 
 
 def one(tf, r):
+    """Process one truth document for one rendering."""
     t = load_json(tf)
     doc = t["doc_id"]
     panel = auto_cal = None
@@ -502,6 +511,7 @@ def one(tf, r):
 
 
 def main(argv=None):
+    """Run the raster phase-diagram baseline over all documents (command-line entry point)."""
     from multiprocessing import Pool
 
     args = argv or sys.argv[1:]

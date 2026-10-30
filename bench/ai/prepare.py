@@ -152,6 +152,7 @@ def ocr_pages_text(doc, r, n):
 
 
 def vector_lines(pdf, page):
+    """Group the words of one PDF page into text lines."""
     with G.pdfplumber.open(str(pdf)) as d:
         pg = d.pages[page - 1]
         ws = pg.extract_words(keep_blank_chars=False, use_text_flow=True)
@@ -172,6 +173,7 @@ def vector_lines(pdf, page):
 
 
 def captions(lines):
+    """Find the caption lines (figure and table headings) in a list of text lines."""
     out = []
     for i, L in enumerate(lines):
         m = CAP.match(L["text"].strip())
@@ -189,12 +191,14 @@ def captions(lines):
 
 # ------------------------------------------------------------------------------------------------ crops
 def png_bytes(im):
+    """Encode a PIL image as PNG bytes."""
     buf = io.BytesIO()
     im.save(buf, format="PNG", optimize=False)
     return buf.getvalue()
 
 
 def page_image(doc, r, page):
+    """Return the page image of one document, rendering and page as a PIL image."""
     from PIL import Image
 
     if r == "clean_raster":
@@ -225,6 +229,7 @@ def raster_crop(doc, r, page, cap, lines):
 
 
 def stack(images):
+    """Stack PIL images vertically on a white background."""
     from PIL import Image
 
     w = max(i.width for i in images)
@@ -237,6 +242,7 @@ def stack(images):
 
 
 def save_img(im_bytes):
+    """Store image bytes under their content hash and return the file path."""
     h = hashlib.sha256(im_bytes).hexdigest()
     p = IMG / f"{h[:24]}.png"
     if not p.exists():
@@ -245,6 +251,7 @@ def save_img(im_bytes):
 
 
 def write_job(kind, doc, r, prompt, schema, images, meta):
+    """Write one AI job file named by a hash of its inputs."""
     hs = [h for _, h in images]
     key = hashlib.sha256(json.dumps([kind, doc, r, prompt, schema, hs], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[
         :24
@@ -268,6 +275,7 @@ def write_job(kind, doc, r, prompt, schema, images, meta):
 
 # ------------------------------------------------------------------------------------------------ jobs
 def table_jobs(t, r):
+    """Create the table-extraction jobs for one document and rendering."""
     doc = t["doc_id"]
     n = t["renderings"]["vector"]["pages"]
     pdf = docs_dir / doc / "vector.pdf"
@@ -350,6 +358,7 @@ def table_jobs(t, r):
 
 
 def text_jobs(t, r, pages):
+    """Create the text-value jobs for one document and rendering from the selected paragraphs."""
     doc = t["doc_id"]
     passages = R6.selected_paragraphs(pages, TX.UNIT, TX.TERMS)
     sch = R6.schema(T)
@@ -462,6 +471,7 @@ def pd_job(t, r):
 
 
 def main():
+    """Prepare the AI jobs for the given documents (default: every truth document)."""
     JOBS.mkdir(parents=True, exist_ok=True)
     IMG.mkdir(parents=True, exist_ok=True)
     docs = sys.argv[1:] or [tf.stem for tf in sorted(truth_dir.glob("*.json"))]

@@ -46,6 +46,7 @@ RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def jobs():
+    """Load all AI job files, grouped by (document, rendering)."""
     out = {}
     for f in sorted((AI / "jobs").glob("*.json")):
         j = json.loads(f.read_text())
@@ -54,11 +55,13 @@ def jobs():
 
 
 def gemini_answer(key):
+    """Return the parsed Gemini answer for a job key, or None when it is missing."""
     p = AI / "gemini" / f"{key}.json"
     return json.loads(p.read_text())["result"] if p.exists() else None
 
 
 def claude_answer(key):
+    """Return the parsed Claude answer for a job key, or None when it is missing or unreadable."""
     p = AI / "claude" / "answers" / f"{key}.json"
     if not p.exists():
         return None
@@ -69,14 +72,17 @@ def claude_answer(key):
 
 
 def tunit(u):
+    """Map a temperature unit label to the canonical unit (default K)."""
     return {"C": "°C", "°C": "°C", "K": "K"}.get(u or "", "K")
 
 
 def xunit(b):
+    """Map a composition basis label to the canonical composition unit."""
     return "at.%" if b in ("atomic_percent", "atom_percent") else "mole_fraction"
 
 
 def cit(c):
+    """Extract the numeric citation markers from a citation list."""
     for x in c or []:
         m = re.search(r"\d+", str(x))
         if m:
@@ -86,6 +92,7 @@ def cit(c):
 
 # ------------------------------------------------------------------------------------------------ tables
 def inv_rows(res):
+    """Convert the invariant reactions in a reader answer into scored rows."""
     if not res:
         return []
     by = {}
@@ -127,19 +134,23 @@ def inv_rows(res):
 
 
 def is_phase_table(res, job):
+    """Return True when a reader answer describes a phase (structure) table."""
     cap = job["prompt"]
     return res.get("table_kind") == "crystallographic" or re.search(r"Caption: [^\n]*(Solid phases|structure)", cap)
 
 
 def is_mixing(job):
+    """Return True when the job caption refers to a mixing quantity."""
     return bool(re.search(r"Caption: [^\n]*mixing", job["prompt"], re.I))
 
 
 def basis_of(text):
+    """Return the composition basis (formula unit or mol of atoms) named in a text."""
     return "formula_unit" if re.search(r"(?i)f\.?\s?u\.?|formula unit", text or "") else "mol_atoms"
 
 
 def phase_rows(res):
+    """Convert the phase rows in a reader answer into scored rows."""
     out = []
     xu = xunit(res.get("composition_basis"))
     for r in res.get("rows", []):
@@ -186,6 +197,7 @@ QK = {
 
 
 def prop_records(res, job, elements):
+    """Convert the property columns of a reader answer into scored records."""
     out = []
     A, B = elements
     cu = " ".join(f"{c.get('column_header', '')} {c.get('unit', '')}" for c in res.get("column_units") or [])
@@ -266,6 +278,7 @@ def prop_records(res, job, elements):
 
 # ------------------------------------------------------------------------------------------------ text
 def text_values(res, job):
+    """Extract the scored values from a reader answer, returning them with the refused count."""
     if not res:
         return [], 0
     passages = " ".join(R6.norm(q["text"]) for q in job["meta"]["passages"])
@@ -314,7 +327,9 @@ def text_values(res, job):
 
 # ------------------------------------------------------------------------------------------------ phase-diagram fields
 class FileReader:
+    """Serve recorded per-field answers from one file-based reader."""
     def __init__(self, name, answers, markers):
+        """Index the recorded answers by field id."""
         self.name = name
         self.by_field = {}
         for a in (answers or {}).get("answers", []):
@@ -323,6 +338,7 @@ class FileReader:
                 self.by_field[m["field_id"]] = a.get("assemblage")
 
     def read(self, questions):
+        """Return the recorded answers for the given questions."""
         from assessed_pd.readers import ReaderAnswer
 
         return [
@@ -331,6 +347,7 @@ class FileReader:
 
 
 def pd_output(doc, r, job, ans_a, ans_b):
+    """Build the phase-diagram output for one job from two reader answers."""
     from assessed_pd.export import build_document
     from assessed_pd.pipeline import annotate
     from assessed_pd.readers import Ladder, Tier
@@ -359,6 +376,7 @@ def pd_output(doc, r, job, ans_a, ans_b):
 
 # ------------------------------------------------------------------------------------------------ assemble
 def build(doc, r, js, reader):
+    """Assemble the scored output for one document and rendering from its jobs and a reader."""
     t = load_json(truth_dir / f"{doc}.json")
     inv, ph, recs, tv = [], [], [], []
     st = {"answered": 0, "missing": 0, "text_refused": 0}
@@ -508,6 +526,7 @@ def ablation():
 
 
 def main():
+    """Map all recorded AI answers to extractor outputs, after the ablation step."""
     ablation()
     J = jobs()
     for (doc, r), js in sorted(J.items()):

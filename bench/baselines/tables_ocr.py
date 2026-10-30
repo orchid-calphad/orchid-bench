@@ -26,12 +26,14 @@ RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def pdf_for(doc, r):
+    """Return the PDF used for OCR of a document and rendering."""
     return {"vector": docs_dir / doc / "vector.pdf", "image_only_pdf": docs_dir / doc / "image_only.pdf"}.get(
         r, bench / "work" / "ocrpdf" / doc / f"{r}.pdf"
     )
 
 
 def page_size(t, r, pdf):
+    """Return the page size in pixels (raster) or points (PDF) for a rendering."""
     if r in ("clean_raster", "degraded_raster"):
         return t["renderings"][r]["files"][0]["size_px"]
     import pymupdf
@@ -41,6 +43,7 @@ def page_size(t, r, pdf):
 
 
 def layout(segment_cells, r, W, H):
+    """Convert a table segment's cell corners into a grid layout for one rendering."""
     xs0 = [min(p[0] for p in c["corners"][r]) for c in segment_cells]
     xs1 = [max(p[0] for p in c["corners"][r]) for c in segment_cells]
     ys0 = [min(p[1] for p in c["corners"][r]) for c in segment_cells]
@@ -65,6 +68,7 @@ def layout(segment_cells, r, W, H):
 
 
 def main():
+    """Run the OCR table baseline over all documents (command-line entry point)."""
     from multiprocessing import Pool
 
     jobs = []
@@ -77,6 +81,7 @@ def main():
 
 
 def one(tf, r):
+    """Process one truth document for one rendering."""
     t = load_json(tf)
     doc = t["doc_id"]
     pdf = pdf_for(doc, r)

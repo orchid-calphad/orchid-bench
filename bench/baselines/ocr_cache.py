@@ -16,6 +16,7 @@ WORK = bench / "work" / "ocr"
 
 
 def ocr(img, out):
+    """Run tesseract on one image and cache its TSV output at the given path."""
     out.parent.mkdir(parents=True, exist_ok=True)
     if out.exists():
         return
@@ -29,6 +30,7 @@ def ocr(img, out):
 
 
 def jobs():
+    """List the OCR jobs needed for all documents and renderings."""
     import pymupdf
 
     for tf in sorted(truth_dir.glob("*.json")):
@@ -71,6 +73,7 @@ def read_tsv(path):
 
 
 def tsv_text(path):
+    """Rebuild plain text lines from a cached tesseract TSV file."""
     words = read_tsv(path)
     out, cur, key = [], [], None
     for w in words:

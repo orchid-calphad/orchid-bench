@@ -36,6 +36,7 @@ LOCK = threading.Lock()
 
 
 def cost(u, pin, pout):
+    """Return the USD cost of one Gemini call from its token usage and per-million token prices."""
     if not u:
         return 0.0
     out = (u.get("candidates_token_count") or 0) + (u.get("thoughts_token_count") or 0)
@@ -43,6 +44,7 @@ def cost(u, pin, pout):
 
 
 def spent():
+    """Return the USD spend recorded in the ledger so far."""
     tot_list = tot_cons = 0.0
     if LEDGER.exists():
         for ln in LEDGER.read_text().splitlines():
@@ -56,6 +58,7 @@ _CLIENT = None
 
 
 def client():
+    """Return the shared Gemini API client, creating it on first use."""
     global _CLIENT
     if _CLIENT is None:
         from google import genai
@@ -66,6 +69,7 @@ def client():
 
 
 def call(job):
+    """Send one AI job with its images to Gemini."""
     from google.genai import types
 
     parts = [types.Part.from_bytes(data=(BENCH / p).read_bytes(), mime_type="image/png") for p in job["images"]]
@@ -109,6 +113,7 @@ def call(job):
 
 
 def main():
+    """Run the budgeted Gemini jobs (command-line entry point)."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--cap-usd", type=float, required=True, help="conservative-estimate budget across all runs")
     ap.add_argument("--docs", default="")
