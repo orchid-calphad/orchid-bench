@@ -30,22 +30,26 @@ inv_t_tol = 15.0    # K
 
 # ------------------------------------------------------------------------------------------------ helpers
 def norm_text(s):
+    """Normalise a text string for comparison: case and whitespace folded."""
     s = (s or "").replace("−", "-").replace("–", "-").replace(" ", " ")
     return re.sub(r"\s+", " ", s).strip()
 
 
 def num_of(s):
+    """Parse a number from a string, or return None when there is none."""
     m = re.search(r"[-+]?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", norm_text(s).replace(" ", ""))
     return float(m.group(0)) if m else None
 
 
 def aabb(corners):
+    """Return the axis-aligned bounding box (x0, y0, x1, y1) of a set of corners."""
     xs = [p[0] for p in corners]
     ys = [p[1] for p in corners]
     return [min(xs), min(ys), max(xs), max(ys)]
 
 
 def iou(a, b):
+    """Return the intersection over union of two axis-aligned boxes."""
     ix = max(0, min(a[2], b[2]) - max(a[0], b[0]))
     iy = max(0, min(a[3], b[3]) - max(a[1], b[1]))
     inter = ix * iy
@@ -54,6 +58,7 @@ def iou(a, b):
 
 
 def densify(poly, step=0.002):
+    """Resample the edges of a polygon so that consecutive points are at most step apart."""
     pts = []
     for (x0, y0), (x1, y1) in zip(poly[:-1], poly[1:]):
         n = max(1, int(math.hypot(x1 - x0, y1 - y0) / step))
@@ -76,11 +81,13 @@ def nn_dist(a, b):
 
 
 def stats(vals):
+    """Return summary statistics (median and count) of a list of values."""
     v = [x for x in vals if x is not None and np.isfinite(x)]
     return {"n": len(v), "mean": float(np.mean(v)) if v else None, "median": float(np.median(v)) if v else None}
 
 
 def prf(tp_pred, n_pred, tp_true, n_true):
+    """Return precision, recall and F1 from matched and total counts."""
     p = tp_pred / n_pred if n_pred else None
     r = tp_true / n_true if n_true else None
     f = 2 * p * r / (p + r) if p and r else (0.0 if (p is not None and r is not None) else None)
@@ -113,6 +120,7 @@ def align_segment(tc, pred):
 
 
 def score_tables(truth, pred):
+    """Score predicted tables against the truth tables of a document."""
     out = {"tables_true": len(truth["tables"]), "tables_pred": len(pred), "per_table": []}
     tot = {"cells": 0, "exact": 0, "exact_norm": 0, "num_cells": 0, "num_exact": 0, "num_abs_err": [], "num_rel_err": []}
     by_id = {}
@@ -167,6 +175,7 @@ def _norm(ax, pts):
 
 
 def match_panel(ax, rendering, pred_panels):
+    """Find the predicted panel that best matches a truth panel on one rendering."""
     tb = aabb(ax["corners"][rendering])
     best, bi = None, 0.3
     for p in pred_panels:
@@ -184,6 +193,7 @@ def match_panel(ax, rendering, pred_panels):
 
 
 def score_xy(truth, rendering, pred_figs):
+    """Score predicted x-y figure data against the truth figures."""
     panels = [p for f in pred_figs for p in f.get("panels", [])]
     for f in pred_figs:
         for p in f.get("panels", []):
@@ -255,6 +265,7 @@ def _label_sets(field):
 
 
 def score_pd(truth, rendering, pred_pds):
+    """Score predicted phase diagrams against the truth boundaries."""
     pdt = truth["phase_diagram"]
     fig = next(f for f in truth["figures"] if f["kind"] == "phase_diagram")
     main = next(a for a in fig["axes"] if a["role"] == "main")
@@ -388,6 +399,7 @@ unit_aliases = {"k": "K", "°c": "°C", "c": "°C", "degc": "°C", "at.%": "at.%
 
 
 def score_text(truth, pred_vals):
+    """Score predicted text values against the truth values."""
     tv = [(v["value"], v["unit"]) for v in truth["text"]["values"]]
     for f in truth["figures"]:
         for t in f.get("text_in_figure", []):
@@ -447,6 +459,7 @@ def _close(a, b, tol=1e-6):
 
 
 def score_invariant_rows(truth, pred):
+    """Score predicted invariant-reaction rows against the truth rows."""
     rows = (truth.get("semantic") or {}).get("invariant_rows", [])
     P = []
     for r in pred:
@@ -515,6 +528,7 @@ def _norm_struct(v):
 
 
 def score_phase_rows(truth, pred):
+    """Score predicted phase rows against the truth phase rows."""
     rows = (truth.get("semantic") or {}).get("phase_rows", [])
     res = {"rows_true": len(rows), "rows_pred": len(pred), "matched": 0, "struct_n": 0, "struct_ok": 0,
            "pearson_ok": 0, "sb_ok": 0, "proto_ok": 0, "T_low_err": [], "T_high_err": [], "hom_err": [], "hom_T_err": []}
@@ -548,6 +562,7 @@ def score_phase_rows(truth, pred):
 
 
 def score_property_records(truth, pred):
+    """Score predicted property records against the truth records."""
     recs = (truth.get("semantic") or {}).get("property_records", [])
     res = {"records_true": len(recs), "records_pred": len(pred), "matched": 0, "value_exact": 0, "rel_err": [],
            "within_1pct": 0, "unit_ok": 0, "basis_ok": 0}
@@ -588,6 +603,7 @@ def score_property_records(truth, pred):
 
 # ------------------------------------------------------------------------------------------------ driver
 def score_doc(truth, rendering, pred):
+    """Score the predictions of one document for one rendering."""
     st = pred.get("status", {})
     out = {"status": st}
     if "tables" in pred:
@@ -608,6 +624,7 @@ def score_doc(truth, rendering, pred):
 
 
 def aggregate(per_doc):
+    """Aggregate per-document scores into one summary per rendering."""
     agg = {}
     for rendering in renderings:
         docs = [d[rendering] for d in per_doc.values() if rendering in d]
@@ -750,6 +767,7 @@ def aggregate(per_doc):
 
 
 def main(argv=None):
+    """Command-line entry point: score one extractor's outputs against the truth keys."""
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--outputs", required=True)
     ap.add_argument("--out")

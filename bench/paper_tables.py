@@ -15,14 +15,17 @@ inv_order = ["eutectic", "peritectic", "monotectic", "syntectic", "metatectic", 
 
 
 def tval(T_K, unit):
+    """Format a temperature in K for a table cell."""
     return T_K - 273.15 if unit == "°C" else T_K
 
 
 def xprint(x, xunit):
+    """Format a composition value for a table cell in the given unit."""
     return fmt(100 * x, 1) if xunit == "at.%" else fmt(x, 3)
 
 
 def xu_label(xunit, B):
+    """Return the column label for the composition unit of binary system B."""
     return f"at.% {B}" if xunit == "at.%" else f"x({B})"
 
 
@@ -68,6 +71,7 @@ def invariant_rows(data, ext, labeller):
 
 
 def invariant_table(data, ext, labeller, st, rng, refs):
+    """Build the invariant-reaction table of the paper."""
     B = data["elements"][1]
     tunit, xunit = st["T_unit"], st["x_unit"]
     exp = st["exp_column"]
@@ -157,6 +161,7 @@ def invariant_table(data, ext, labeller, st, rng, refs):
 
 # ------------------------------------------------------------------------------------------------ phase table
 def phase_table(data, ext, st):
+    """Build the phase-composition table of one diagram."""
     B = data["elements"][1]
     tunit, xunit = st["T_unit"], st["x_unit"]
     marks = st["markers"]
@@ -219,10 +224,12 @@ def phase_table(data, ext, st):
 
 # ------------------------------------------------------------------------------------------------ formation table
 def e_conv(J, unit):
+    """Convert an energy given in J/mol to the table unit."""
     return {"J/mol": J, "kJ/mol": J / 1000.0, "cal/mol": J / cal, "kcal/mol": J / cal / 1000.0}[unit]
 
 
 def formation_table(data, ext, st, rng, minus):
+    """Build the formation-property table of one document."""
     B = data["elements"][1]
     eu, basis = st["energy_unit"], st["basis"]
     su = "cal/(mol K)" if eu.startswith("cal") or eu.startswith("kcal") else "J/(mol K)"
@@ -293,6 +300,7 @@ def formation_table(data, ext, st, rng, minus):
 
 # ------------------------------------------------------------------------------------------------ mixing table
 def mixing_table(data, ext, st, minus):
+    """Build the mixing-property table of one document."""
     A, B = data["elements"]
     M = ext["mixing_table"]
     eu = st["energy_unit"]

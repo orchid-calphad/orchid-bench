@@ -99,6 +99,7 @@ def _sets(ph, xb, npf, Y, ctx):
 
 
 def grid_sets(dbf, comps, phases, B, fm):
+    """Return the composition grid sets of the phases of a binary system."""
     _, equilibrium, v = _pyc()
     xgrid = np.round(np.arange(fm["nx"]) * fm["dx"], 6)
     xcalc = xgrid.copy()
@@ -127,6 +128,7 @@ def _sets_at(dbf, comps, phases, B, x, T):
 
 
 def present(dbf, comps, phases, B, x, T, lab, labeller):
+    """Report which phases are present at a composition and temperature."""
     _, equilibrium, v = _pyc()
     res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     ph = np.atleast_1d(res.Phase.values.squeeze())
@@ -148,6 +150,7 @@ def bisect_T(dbf, comps, phases, B, x, T_in, T_out, lab, labeller, tol=0.01):
 
 
 def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
+    """Return the stability labels of the phases over the temperature grid."""
     A, B = data["components"]
     Ael, Bel = data["elements"]
     dT = float(Tgrid[1] - Tgrid[0])
@@ -310,6 +313,7 @@ def phase_fraction(data, dbf, comps, phases, labeller, fm):
 
 
 def formation_ext(data, dbf, comps, phases, stab_labels):
+    """Build the extended formation-property records of a system."""
     _, equilibrium, v = _pyc()
     A, B = data["components"]
     sref = {}
@@ -336,6 +340,7 @@ def formation_ext(data, dbf, comps, phases, stab_labels):
 
 
 def mixing_table(data, dbf, comps):
+    """Build the extended mixing-property table of a system."""
     from pd_data import liquid_activity, liquid_mixing
     A, B = data["components"]
     T = data["properties"]["T_liquid"]
@@ -358,6 +363,7 @@ def mixing_table(data, dbf, comps):
 
 
 def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
+    """Prepare, and cache, the extended phase-diagram data for a system stem."""
     path = cache / f"{stem}.ext.json"
     if path.exists() and not force:
         d = load_json(path)

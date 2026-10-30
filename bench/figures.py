@@ -35,6 +35,7 @@ def _axes_record(ax, fig, name, xlim, ylim, xunit, yunit, xlabel, ylabel, xscale
 
 # --------------------------------------------------------------------------------------------- phase diagram
 def phase_diagram(data, style, path, rng):
+    """Draw a phase diagram from data and style and save it to path as a vector PDF."""
     A, B = data["elements"]
     tunit, xunit = style["T_unit"], style["x_unit"]
     xs_ = 100.0 if xunit == "at.%" else 1.0
@@ -237,6 +238,7 @@ def _limits(series, pad=0.06, log=False):
 
 
 def property_figure(data, kind, style, path):
+    """Draw a property figure of the given kind and save it to path as a vector PDF."""
     A, B = data["elements"]
     P = data["properties"]
     W, H = style["fig_size"]

@@ -45,10 +45,12 @@ def _clean(o):
 
 
 def canonical_json(obj) -> str:
+    """Serialise obj to canonical JSON text: sorted keys, compact separators, trailing newline."""
     return json.dumps(_clean(obj), sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
 
 
 def write_json(path, obj, pretty=False):
+    """Write obj as UTF-8 JSON, creating parent directories; indented when pretty is True."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if pretty:
@@ -58,10 +60,12 @@ def write_json(path, obj, pretty=False):
 
 
 def load_json(path):
+    """Read and parse a UTF-8 JSON file."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def sha256_file(path) -> str:
+    """Return the hex SHA-256 digest of a file, read in 1 MiB chunks."""
     h = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(1 << 20), b""):
@@ -75,10 +79,12 @@ def el(sym: str) -> str:
 
 
 def r(v, nd):
+    """Round v to nd decimal places and return a float."""
     return float(round(float(v), nd))
 
 
 def fmt(v, nd):
+    """Format v with exactly nd decimals, dropping the sign of negative zero."""
     s = f"{float(v):.{nd}f}"
     if s.startswith("-") and float(s) == 0.0:
         s = s[1:]

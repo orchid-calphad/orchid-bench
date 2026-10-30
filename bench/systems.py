@@ -35,6 +35,7 @@ system_index = {s[0]: s for s in system_specs}
 
 
 def base(phase: str) -> str:
+    """Return the phase name without its sublattice suffix (the text before the hash sign)."""
     return phase.split("#", maxsplit=1)[0]
 
 
@@ -57,12 +58,14 @@ class Labeller:
     """Map (TDB phase, composition) to the conventional label printed in the synthetic paper."""
 
     def __init__(self, stem, elements, stable_A, stable_B, continuous):
+        """Store the system description: stem, display elements, stable phases A and B, and continuous phases."""
         self.elements = elements                  # display symbols, e.g. ['Ag', 'Cu']
         self.stable_A, self.stable_B = stable_A, stable_B
         self.continuous = continuous              # phases forming a single-phase band across all x
         self.overrides = system_index[stem][2] if stem in system_index else {}
 
     def label(self, phase: str, x: float) -> str:
+        """Return the display label of phase at composition x."""
         b = base(phase)
         A, B = self.elements
         if b == "LIQUID":
