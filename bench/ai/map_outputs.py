@@ -49,7 +49,7 @@ def jobs():
     """Load all AI job files, grouped by (document, rendering)."""
     out = {}
     for f in sorted((AI / "jobs").glob("*.json")):
-        j = json.loads(f.read_text())
+        j = json.loads(f.read_text(encoding="utf-8"))
         out.setdefault((j["doc"], j["rendering"]), []).append(j)
     return out
 
@@ -57,7 +57,7 @@ def jobs():
 def gemini_answer(key):
     """Return the parsed Gemini answer for a job key, or None when it is missing."""
     p = AI / "gemini" / f"{key}.json"
-    return json.loads(p.read_text())["result"] if p.exists() else None
+    return json.loads(p.read_text(encoding="utf-8"))["result"] if p.exists() else None
 
 
 def claude_answer(key):
@@ -66,7 +66,7 @@ def claude_answer(key):
     if not p.exists():
         return None
     try:
-        return json.loads(p.read_text())
+        return json.loads(p.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return None
 
@@ -493,7 +493,7 @@ def ablation():
     """Pilot documents x (vector, degraded): thermo tables re-read with prompts v5 / v6 (same crops) vs v7.1."""
     abl = {}
     for f in sorted((AI / "jobs_ablation").glob("*.json")):
-        j = json.loads(f.read_text())
+        j = json.loads(f.read_text(encoding="utf-8"))
         abl[(j["meta"]["ablation_of"], j["kind"][-2:])] = j
     J = jobs()
     for (doc, r), js in sorted(J.items()):

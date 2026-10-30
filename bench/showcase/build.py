@@ -498,7 +498,8 @@ def main():
     nj = json.dumps([x for x in (naming_payload(d, r) for d, r in NAMING) if x], ensure_ascii=False).replace("</", "<\\/")
     out = B / "showcase" / "index.html"
     out.write_text(
-        HTML.replace("__DATA__", js).replace("__TDATA__", tj).replace("__CDATA__", cj).replace("__NDATA__", nj), encoding="utf-8"
+        HTML.replace("__DATA__", js).replace("__TDATA__", tj).replace("__CDATA__", cj).replace("__NDATA__", nj),
+        encoding="utf-8",
     )
     print(out, out.stat().st_size // 1024, "KB")
 

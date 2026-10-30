@@ -275,7 +275,7 @@ def agg(ext):
 def spend():
     """Summarise the AI spend recorded in the Gemini ledger."""
     led = B / "work" / "ai" / "gemini_ledger.jsonl"
-    rows = [json.loads(x) for x in led.read_text().splitlines()] if led.exists() else []
+    rows = [json.loads(x) for x in led.read_text(encoding="utf-8").splitlines()] if led.exists() else []
     by = {}
     for r in rows:
         u = r.get("usage") or {}

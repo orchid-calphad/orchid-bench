@@ -94,7 +94,7 @@ HANDBOOK = Path.home() / "projects/open-tdb/build/okamoto-pilot/tools/gemini_rea
 HB_PROMPT = ast.literal_eval(
     next(
         n.value
-        for n in ast.parse(HANDBOOK.read_text()).body
+        for n in ast.parse(HANDBOOK.read_text(encoding="utf-8")).body
         if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "PROMPT"
     )
 )

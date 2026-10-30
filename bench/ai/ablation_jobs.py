@@ -18,7 +18,7 @@ AI = BENCH / "work" / "ai"
 OUT = AI / "jobs_ablation"
 OUT.mkdir(parents=True, exist_ok=True)
 for f in sorted((AI / "jobs").glob("*__thermo_table__*.json")):
-    j = json.loads(f.read_text())
+    j = json.loads(f.read_text(encoding="utf-8"))
     if j["doc"] not in ("syn-AgCu-06He-v0", "syn-AlNi-14Zhu-v0") or j["rendering"] not in ("vector", "degraded_raster"):
         continue
     head = j["prompt"].split("Classify the table")[0]
@@ -37,5 +37,5 @@ for f in sorted((AI / "jobs").glob("*__thermo_table__*.json")):
                 "ablation_of": j["key"],
             },
         }
-        (OUT / f"{f.stem}__{ver}.json").write_text(json.dumps(k, ensure_ascii=False, indent=1))
+        (OUT / f"{f.stem}__{ver}.json").write_text(json.dumps(k, ensure_ascii=False, indent=1), encoding="utf-8")
 print(len(list(OUT.glob("*.json"))), "ablation jobs")
