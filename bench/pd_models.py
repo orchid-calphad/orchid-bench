@@ -1,7 +1,6 @@
 """Pycalphad-backed property helpers for phase-diagram data, split from pd_data.py."""
 
 import numpy as np
-
 from common import p_atm, r_gas
 
 
