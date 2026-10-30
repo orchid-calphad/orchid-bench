@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Self-contained showcase: three example documents with page image, phase-diagram overlay (truth vs extracted, SVG)
-and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs."""
+and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs.
+"""
 import base64
-import os
 import io
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -189,7 +190,7 @@ def comparison_payload():
 def naming_payload(doc, r):
     """AI naming of the open phase fields of one diagram vs the truth field at each marker."""
     import pickle
-    import re as _re
+
     import numpy as np
     from score import _canon, _label_sets
     sys.path.insert(0, os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"

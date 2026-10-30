@@ -4,7 +4,8 @@
 Run with the vision venv and the orchid-pipeline package on PYTHONPATH:
     PYTHONPATH=~/projects/orchid-pipeline/src .venv-vision/bin/python bench/baselines/run_all.py
 The AI-reader stages (bench/ai/prepare.py, run_gemini.py, map_outputs.py) spend money and are run separately with
-~/orchid-py313/bin/python; their outputs are scored here when present."""
+~/orchid-py313/bin/python; their outputs are scored here when present.
+"""
 import subprocess
 import sys
 from pathlib import Path

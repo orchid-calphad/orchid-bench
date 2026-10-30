@@ -8,15 +8,16 @@
   * `camelot_lattice`: Camelot lattice called directly (the tool does not allow lattice; glue, recorded).
 
 Raster renderings: Camelot reads PDF text objects only; image-only PDFs have none (not run, see tables_ocr.py).
-Semantic glue: the same header-keyword parser as tables_pdfplumber.py (no truth used)."""
+Semantic glue: the same header-keyword parser as tables_pdfplumber.py (no truth used).
+"""
 import json
 import sys
 import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
 from baselines.tables_pdfplumber import semantic  # noqa: E402
+from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
 
 sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
 from thermo_extractor.tables import extraction as TX  # noqa: E402
@@ -47,7 +48,8 @@ def tool_tables(doc, pdf, page, flavor):
 
 class PdftoppmBackend:
     """Camelot lattice needs a PDF->PNG converter (Ghostscript or the pdftopng wheel, neither installed); this glue
-    backend calls Poppler's pdftoppm at Camelot's default 300 dpi."""
+    backend calls Poppler's pdftoppm at Camelot's default 300 dpi.
+    """
 
     def convert(self, pdf_path, png_path, resolution=300):
         import subprocess

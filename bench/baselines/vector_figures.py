@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
 """Vector-figure baseline on the born-digital PDF, built from the open-tdb thermo_extractor PDF route:
 
-  1. `inspect-pdf` object inventory (pdfplumber) and `propose-pdf-graphics` geometric role proposals;
-  2. axis calibration from the page geometry with the frame/tick/label stage of
-     `propose_multipanel_manifest` (thermo_extractor.proposals.vector_manifest), given the figure region and axis
-     quantity/unit as hints (the tool's contract: a human supplies them; here they come from the truth key);
-  3. the full `propose_multipanel_manifest` + `propose_vector_markers` route, attempted for every xy panel;
-  4. glue written for this benchmark: paths whose top role is `data_curve` -> calibrated polylines; paths whose top
-     role is `marker` -> calibrated points grouped by paint style; for phase diagrams, curve/line paths ->
-     boundaries, horizontal lines -> invariant temperatures, text-layer words inside the frame -> field labels.
+1. `inspect-pdf` object inventory (pdfplumber) and `propose-pdf-graphics` geometric role proposals;
+2. axis calibration from the page geometry with the frame/tick/label stage of
+`propose_multipanel_manifest` (thermo_extractor.proposals.vector_manifest), given the figure region and axis
+quantity/unit as hints (the tool's contract: a human supplies them; here they come from the truth key);
+3. the full `propose_multipanel_manifest` + `propose_vector_markers` route, attempted for every xy panel;
+4. glue written for this benchmark: paths whose top role is `data_curve` -> calibrated polylines; paths whose top
+role is `marker` -> calibrated points grouped by paint style; for phase diagrams, curve/line paths ->
+boundaries, horizontal lines -> invariant temperatures, text-layer words inside the frame -> field labels.
 """
 import json
 import re
 import subprocess
 import sys
-import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

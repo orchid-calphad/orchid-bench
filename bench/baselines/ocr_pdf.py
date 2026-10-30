@@ -2,12 +2,17 @@
 """Searchable-PDF wrappers for the raster renderings (Tesseract `pdf` output: page image + invisible OCR text layer),
 so the PDF-native thermo_extractor tools (extract_pdf_figure_panels needs captions from a text layer) can run on
 scans. work/ocrpdf/<doc>/<rendering>.pdf, rendering in clean_raster (300 dpi PNG), degraded_raster (150 dpi JPEG),
-image_only_pdf (the page images embedded in image_only.pdf, 150 dpi). Deterministic (single thread)."""
-import subprocess, sys, tempfile
+image_only_pdf (the page images embedded in image_only.pdf, 150 dpi). Deterministic (single thread).
+"""
+import subprocess
+import sys
+import tempfile
 from multiprocessing import Pool
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import BENCH, DOCS, TRUTH, load_json  # noqa: E402
+
 OUT = BENCH / "work" / "ocrpdf"
 OCR = BENCH / "work" / "ocr"
 

@@ -4,7 +4,8 @@
     python bench/generate.py --seed 20261022            # all systems, one document each
     python bench/generate.py --systems AgCu-06He --n 2   # two style variants of one system
 
-Deterministic for a given seed and inputs (TDB bytes, ORCHID diagram JSON, library versions)."""
+Deterministic for a given seed and inputs (TDB bytes, ORCHID diagram JSON, library versions).
+"""
 from __future__ import annotations
 
 import argparse
@@ -18,7 +19,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import DOCS, TRUTH, canonical_json, fmt, sha256_file, write_json  # noqa: E402
+from common import DOCS, TRUTH, fmt, sha256_file, write_json  # noqa: E402
 from document import Doc, parse_number  # noqa: E402
 from figures import phase_diagram, property_figure  # noqa: E402
 from pd_data import prepare  # noqa: E402
@@ -387,10 +388,12 @@ FICTITIOUS = [
 
 def build_document(stem, variant, seed, out_root=DOCS, truth_root=TRUTH):
     import re as _re
-    from paper_tables import formation_table, invariant_table as invariant_table_v2, mixing_table, phase_table, CAL
+
+    from figures import phase_fraction_figure
+    from paper_tables import CAL, formation_table, mixing_table, phase_table
+    from paper_tables import invariant_table as invariant_table_v2
     from pd_ext import prepare_ext
     from systems import Labeller
-    from figures import phase_fraction_figure
     data = prepare(stem)
     ext = prepare_ext(stem, data)
     rng = np.random.default_rng([seed, zlib.crc32(stem.encode()), variant])

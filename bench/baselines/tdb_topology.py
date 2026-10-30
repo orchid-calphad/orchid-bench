@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 """Database side of the raster comparison: thermo_extractor/ORCHID `build_binary_topology.py` on each document's
 source TDB over the figure's axis window (60 x 60 cells). Output work/tdb_topology/<doc>.json (input of
-compare_binary_topology). Model-side reference only; never scored as an extractor."""
-import json, subprocess, sys
+compare_binary_topology). Model-side reference only; never scored as an extractor.
+"""
+import json
+import subprocess
+import sys
 from multiprocessing import Pool
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import BENCH, TRUTH, load_json  # noqa: E402
+
 PIPE = Path.home() / "projects/orchid-pipeline"
 PY = sys.executable
 OUT = BENCH / "work" / "tdb_topology"

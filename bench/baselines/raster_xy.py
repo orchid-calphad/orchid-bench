@@ -10,10 +10,10 @@ geometry), so the manifests are those vector_figures.py proposed from the born-d
   * degraded_raster / image_only_pdf: the same manifest mapped into the degraded page with the truth page transform
     (oracle: the rotation / scale of the scan simulation), rebound to the degraded image and image_only.pdf.
 Only legend entries the manifest proposer classed as points are detected; curves are out of scope for this tool.
-Panels without a vector manifest (calibration or legend failure on the vector route) are not attempted."""
+Panels without a vector manifest (calibration or legend failure on the vector route) are not attempted.
+"""
 import json
 import sys
-import traceback
 from multiprocessing import Pool
 from pathlib import Path
 

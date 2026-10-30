@@ -5,7 +5,8 @@
 
 Output layout: <outputs>/<rendering>/<doc_id>.json with rendering in
 {vector, clean_raster, degraded_raster, image_only_pdf}; the format is documented in bench/README.md.
-Coordinates in "bbox" fields use the rendering's own units (pt for PDFs, px for rasters, origin top-left)."""
+Coordinates in "bbox" fields use the rendering's own units (pt for PDFs, px for rasters, origin top-left).
+"""
 from __future__ import annotations
 
 import argparse
@@ -681,7 +682,7 @@ def aggregate(per_doc):
         def cells(ids):
             if not tabs:
                 return {}
-            t_ = {k: 0 for k in ("cells", "exact", "exact_norm", "num_cells", "num_exact")}
+            t_ = dict.fromkeys(("cells", "exact", "exact_norm", "num_cells", "num_exact"), 0)
             rel = []
             for tb in tabs:
                 for i_, v_ in tb["_by_id"].items():

@@ -14,7 +14,8 @@ cited become that reaction's evidence); thermo-table v7.1 rows -> phase_rows (cr
 property_records (formation / mixing tables); running-text rows -> text_values after the production linker rule
 (quote verbatim in the supplied passages and the printed number inside the quote; others refused); pd_fields answers ->
 phase-diagram fields on top of the assessed_pd_auto annotation (single reader: its answer must be one of the choices
-and pass the rule gate). Run with ~/orchid-py313/bin/python."""
+and pass the rule gate). Run with ~/orchid-py313/bin/python.
+"""
 import json
 import os
 import pickle

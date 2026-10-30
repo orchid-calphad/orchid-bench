@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Diagnostic ablation (small spend): the same table crops of the two pilot documents (vector, degraded) re-asked with
 the earlier production thermo-table prompts v5 (thermo-table-v5) and v6 (thermo-table-v6-units), to test whether the
-near-empty v7.1 answers of gemini-3.8-flash come from the v7.1 schema. Writes work/ai/jobs_ablation/."""
+near-empty v7.1 answers of gemini-3.8-flash come from the v7.1 schema. Writes work/ai/jobs_ablation/.
+"""
 import json
 import sys
 from pathlib import Path
@@ -9,6 +10,7 @@ from pathlib import Path
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus/tools-release-v2.1.18"))
 import hashlib  # noqa: E402
+
 import thermo_table_reader as T  # noqa: E402
 
 AI = BENCH / "work" / "ai"

@@ -1,7 +1,8 @@
 """Truth-schema v2 tables: invariant reactions (with optional cited 'experimental' columns), phase stability and
 structure, formation properties at 298.15 K, liquid mixing properties. Every builder returns a table spec for
 document.Doc.table (header, rows, align, footnotes, column_units) plus `meta` (per body cell: semantic field, exact
-SI value, printed unit and basis, evidence class, citation, footnote marker) and the semantic records of the table."""
+SI value, printed unit and basis, evidence class, citation, footnote marker) and the semantic records of the table.
+"""
 from __future__ import annotations
 
 from common import fmt
@@ -32,7 +33,8 @@ def _m(field, **kw):
 # ------------------------------------------------------------------------------------------------ invariant table
 def invariant_rows(data, ext, labeller):
     """Logical invariant rows: three-phase invariants, congruent points of intermediate phases, and (systems without
-    either) the melting of the pure components."""
+    either) the melting of the pure components.
+    """
     rows = []
     for k, inv in enumerate(data["invariants"]):
         pmap = {p["phase"]: p for p in inv["points"]}

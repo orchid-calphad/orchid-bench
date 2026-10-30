@@ -16,7 +16,8 @@ Inputs per rendering (no truth used, except where the assessed_pd stage already 
              running text = Tesseract paragraphs.
   Continued tables ('Table N (continued).') are sent as a two-page stack, as table_continuation does.
 Run with ~/orchid-py313/bin/python (google-genai present; nothing is installed). Writes work/ai/jobs/*.json and
-work/ai/img/*.png."""
+work/ai/img/*.png.
+"""
 import ast
 import hashlib
 import io
@@ -28,8 +29,8 @@ from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
-from common import DOCS, TRUTH, load_json  # noqa: E402
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
+from common import DOCS, TRUTH, load_json  # noqa: E402
 
 SGTE = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus"
 REL = SGTE / "tools-release-v2.1.18"
@@ -37,9 +38,9 @@ FIX = SGTE / "release-fixup-20261022/bin-context"
 sys.path.insert(0, str(REL))
 sys.path.insert(0, str(FIX))
 import gemini_table_reader as G  # noqa: E402
-import thermo_table_reader as T  # noqa: E402
 import text_reader as TX  # noqa: E402
 import text_reader_v6 as R6  # noqa: E402
+import thermo_table_reader as T  # noqa: E402
 
 APD = os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
                      "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src")
@@ -54,7 +55,8 @@ NEXT = re.compile(r"^(Table|TABLE|Fig\.?|Figure)\s*\d+")
 
 def context_reader_objects():
     """PROMPT_VERSION / PROMPT / SCHEMA / methods_passages / cue_passages of context_reader_v2, without importing it
-    (its imports open the production database)."""
+    (its imports open the production database).
+    """
     src = (FIX / "context_reader_v2.py").read_text(encoding="utf-8")
     tree = ast.parse(src)
     keep = {"PROMPT_VERSION", "HEAD", "NOT_HEAD", "INLINE_HEAD", "END", "ITEM_Q", "SCHEMA", "PROMPT", "METHOD_CUE",
@@ -158,7 +160,8 @@ def page_image(doc, r, page):
 
 def raster_crop(doc, r, page, cap, lines):
     """table_extent rule on a raster (caption boxes in the rendering's own pixels): from the caption top - 6 pt to the
-    next Table/Fig caption at least 40 pt below it on the same side of the page, else the page bottom; full width."""
+    next Table/Fig caption at least 40 pt below it on the same side of the page, else the page bottom; full width.
+    """
     im, s = page_image(doc, r, page)
     native = 300 if r == "clean_raster" else 150
     pt = native / 72.0
@@ -300,9 +303,10 @@ def text_jobs(t, r, pages):
 def pd_job(t, r):
     """Open fields of the assessed_pd_auto annotation -> one handbook-reader packet (red numbered markers)."""
     import pickle
-    from PIL import Image, ImageDraw, ImageFont
+
     from assessed_pd.pipeline import annotate
     from assessed_pd.readers import Ladder
+    from PIL import Image, ImageDraw, ImageFont
     doc = t["doc_id"]
     pk = BENCH / "work" / "raster_pd" / doc / r / "assessed_input.pkl"
     if not pk.exists():

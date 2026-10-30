@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Running-text baseline: regular expressions for value + unit over the PDF text layer (vector, image-only PDF)
-or Tesseract OCR text (rasters; image-only PDF falls back to OCR when the text layer is empty)."""
+or Tesseract OCR text (rasters; image-only PDF falls back to OCR when the text layer is empty).
+"""
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, TRUTH, DOCS, load_json, write_json  # noqa: E402
 from baselines.ocr_cache import WORK, tsv_text  # noqa: E402
+from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
 
 OUT = BENCH / "outputs" / "text_regex"
 NUM = r"([-−–]?\d+(?:\.\d+)?)"
