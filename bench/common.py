@@ -7,6 +7,7 @@ import json
 import math
 import os
 from pathlib import Path
+from typing import Any
 
 bench = Path(__file__).resolve().parent
 root = bench.parent
@@ -49,12 +50,12 @@ def _clean(o):
     return o
 
 
-def canonical_json(obj) -> str:
+def canonical_json(obj: Any) -> str:
     """Serialise obj to canonical JSON text: sorted keys, compact separators, trailing newline."""
     return json.dumps(_clean(obj), sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
 
 
-def write_json(path, obj, pretty=False):
+def write_json(path: str | Path, obj: Any, pretty: bool = False) -> None:
     """Write obj as UTF-8 JSON, creating parent directories; indented when pretty is True."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -64,7 +65,7 @@ def write_json(path, obj, pretty=False):
         path.write_text(canonical_json(obj), encoding="utf-8")
 
 
-def load_json(path):
+def load_json(path: str | Path) -> Any:
     """Read and parse a UTF-8 JSON file."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
@@ -83,12 +84,12 @@ def el(sym: str) -> str:
     return sym[:1].upper() + sym[1:].lower()
 
 
-def r(v, nd):
+def r(v: float, nd: int) -> float:
     """Round v to nd decimal places and return a float."""
     return float(round(float(v), nd))
 
 
-def fmt(v, nd):
+def fmt(v: float, nd: int) -> str:
     """Format v with exactly nd decimals, dropping the sign of negative zero."""
     s = f"{float(v):.{nd}f}"
     if s.startswith("-") and float(s) == 0.0:
