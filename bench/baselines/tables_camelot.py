@@ -27,10 +27,12 @@ WORK = bench / "work" / "camelot"
 
 
 def matrix_cells(m):
+    """Convert a Camelot table matrix into a list of cell records."""
     return [{"row": i, "col": j, "text": (c or "").replace("\n", " ").strip()} for i, r in enumerate(m) for j, c in enumerate(r)]
 
 
 def tool_tables(doc, pdf, page, flavor):
+    """Extract the tables of one PDF page with Camelot in the given flavor."""
     import camelot
 
     w = WORK / doc
@@ -66,6 +68,7 @@ class PdftoppmBackend:
     """
 
     def convert(self, pdf_path, png_path, resolution=300):
+        """Render one PDF page to PNG with pdftoppm at the given resolution."""
         import subprocess
 
         stem = str(png_path)[:-4] if str(png_path).endswith(".png") else str(png_path)
@@ -75,6 +78,7 @@ class PdftoppmBackend:
 
 
 def lattice_tables(pdf, page):
+    """Extract the ruled (lattice-mode) tables of one PDF page with Camelot."""
     import camelot
 
     return [
@@ -84,6 +88,7 @@ def lattice_tables(pdf, page):
 
 
 def main():
+    """Run the Camelot table baseline over all documents (command-line entry point)."""
     import camelot
 
     for tf in sorted(truth_dir.glob("*.json")):

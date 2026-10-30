@@ -28,6 +28,7 @@ PATTERNS = [
 
 
 def extract(text):
+    """Extract scored values from a text passage with regular expressions."""
     text = text.replace("\n", " ")
     vals = []
     for rx, unit in PATTERNS:
@@ -41,6 +42,7 @@ def extract(text):
 
 
 def main():
+    """Run the regex text baseline over all documents (command-line entry point)."""
     import pdfplumber
 
     for tf in sorted(truth_dir.glob("*.json")):

@@ -21,12 +21,14 @@ R = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def img_uri(im, fmt="JPEG", q=80):
+    """Encode a PIL image as a data URI."""
     buf = io.BytesIO()
     im.convert("RGB").save(buf, format=fmt, quality=q)
     return f"data:image/jpeg;base64,{base64.b64encode(buf.getvalue()).decode()}"
 
 
 def doc_payload(doc):
+    """Build the showcase payload for one document."""
     from PIL import Image
 
     t = load_json(truth_dir / f"{doc}.json")
@@ -232,6 +234,7 @@ FAMS = {
 
 
 def comparison_payload():
+    """Build the extractor comparison payload for the showcase."""
     aggs = {
         e: load_json(B / "outputs" / e / "scores.json")["aggregate"]
         for es in FAMS.values()
@@ -331,6 +334,7 @@ def naming_payload(doc, r):
 
 
 def pick_tables():
+    """Pick the showcase tables from the truth documents."""
     out = []
     for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
@@ -486,6 +490,7 @@ for(const T of tdata){
 
 
 def main():
+    """Write the showcase page (command-line entry point)."""
     data = [doc_payload(d) for d in EXAMPLES]
     js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     tj = json.dumps([table_payload(d, tid) for d, tid in pick_tables()], ensure_ascii=False).replace("</", "<\\/")

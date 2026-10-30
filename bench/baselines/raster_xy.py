@@ -32,6 +32,7 @@ RENDS = ["clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def affine(m):
+    """Convert a mapping description into an affine matrix."""
     return np.array([[m[0][0], m[0][1], m[0][2]], [m[1][0], m[1][1], m[1][2]], [0, 0, 1.0]])
 
 
@@ -46,6 +47,7 @@ def mapper(t, page, r):
 
 
 def remap(man, f, img, pdf):
+    """Map manifest coordinates of one figure onto the given rendering."""
     m = json.loads(json.dumps(man))
     for p in m["panels"]:
         b = p["bounds"]
@@ -83,6 +85,7 @@ def remap(man, f, img, pdf):
 
 
 def one(tf, r):
+    """Process one truth document for one rendering."""
     t = load_json(tf)
     doc = t["doc_id"]
     panels, status = [], []

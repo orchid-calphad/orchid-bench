@@ -30,6 +30,7 @@ PY = sys.executable
 
 
 def run_inventory(doc):
+    """Inventory the vector graphics of one document's PDF pages."""
     w = WORK / doc
     w.mkdir(parents=True, exist_ok=True)
     inv, gr = w / "inventory.json", w / "graphics.json"
@@ -52,6 +53,7 @@ def run_inventory(doc):
 
 
 def vertices(path):
+    """Return the vertices of a vector drawing path."""
     pts = []
     for c in path.get("commands", []):
         for op in c.get("operands", []):
@@ -61,6 +63,7 @@ def vertices(path):
 
 
 def calibrate(page, region, hx, hy, img_w, img_h):
+    """Fit the mapping from PDF coordinates to axis values for one figure region."""
     tr = page_transform(page, img_w, img_h)
     frame = VM._select_frame(VM._frame_candidates(page, region), region)
     ax_x, rep_x = VM._calibrate_axis(page, frame["bbox"], "x", hx, tr)
@@ -69,12 +72,14 @@ def calibrate(page, region, hx, hy, img_w, img_h):
 
 
 def mapper(fit):
+    """Return a function that maps PDF points with the fitted calibration."""
     if fit["scale"] == "log10":
         return lambda p: 10 ** (fit["intercept"] + fit["slope"] * p)
     return lambda p: fit["intercept"] + fit["slope"] * p
 
 
 def roles(graphics, pno):
+    """Assign each graphic on a page a plot role."""
     out = {}
     for pg in graphics["pages"]:
         if pg.get("page_number") != pno:
@@ -86,10 +91,12 @@ def roles(graphics, pno):
 
 
 def style_key(p):
+    """Return the style key (stroke and fill) of a drawing path."""
     return json.dumps([p.get("stroke_color"), p.get("fill"), p.get("fill_color"), round(p.get("line_width") or 0, 2)])
 
 
 def figure_objects(page, frame_bb, H, role_of):
+    """Collect the figure objects inside a frame bounding box."""
     fx0, fy0, fx1, fy1 = frame_bb  # user space (y up)
     curves, markers, lines = [], [], []
     for p in page["paths"]:
@@ -113,10 +120,12 @@ def figure_objects(page, frame_bb, H, role_of):
 
 
 def to_data(pts_tl, H, mx, my):
+    """Convert top-left page points into data coordinates."""
     return [[mx(x), my(H - y)] for x, y in pts_tl]
 
 
 def main():
+    """Run the vector figure baseline over all documents (command-line entry point)."""
     for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]

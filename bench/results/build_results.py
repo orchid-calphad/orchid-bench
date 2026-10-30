@@ -256,6 +256,7 @@ FINDINGS = FINDINGS.splitlines()
 
 
 def f(v):
+    """Format one metric value for a Markdown table cell."""
     if v is None:
         return "–"
     if isinstance(v, float) and 0 < abs(v) < 0.001:
@@ -266,11 +267,13 @@ def f(v):
 
 
 def agg(ext):
+    """Return the aggregate scores of one extractor, or an empty dict when it has none."""
     p = B / "outputs" / ext / "scores.json"
     return load_json(p)["aggregate"] if p.exists() else {}
 
 
 def spend():
+    """Summarise the AI spend recorded in the Gemini ledger."""
     led = B / "work" / "ai" / "gemini_ledger.jsonl"
     rows = [json.loads(x) for x in led.read_text().splitlines()] if led.exists() else []
     by = {}
@@ -290,6 +293,7 @@ def spend():
 
 
 def main():
+    """Write results/results.json and results/RESULTS.md from the per-extractor scores."""
     res = {"headline": [], "tasks": [], "ai_subset": [], "ai_spend": {}, "extractor_status": {}}
     md = [
         "# Benchmark results",

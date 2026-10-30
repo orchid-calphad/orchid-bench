@@ -43,6 +43,7 @@ WORK = bench / "work" / "assessed_pd"
 
 
 def merge_words(words):
+    """Merge word boxes on the same line into larger spans."""
     out = []
     for w in sorted(words, key=lambda w: (w["line"], w["bbox"][0])):
         if out and out[-1]["line"] == w["line"]:
@@ -62,6 +63,7 @@ def merge_words(words):
 
 
 def text_layer_words(doc, page, scale):
+    """Return the words of a vector PDF text layer, scaled to the raster size."""
     import pdfplumber
 
     with pdfplumber.open(docs_dir / doc / "vector.pdf") as pdf:
@@ -77,6 +79,7 @@ def text_layer_words(doc, page, scale):
 
 
 def phase_table(t, xs_):
+    """Compute the composition range of each field label in a truth phase diagram."""
     rng = {}
     for f in t["phase_diagram"]["fields"]:
         for lab, x in zip(f["labels"], f["compositions"]):
@@ -86,6 +89,7 @@ def phase_table(t, xs_):
 
 
 def page_image(doc, rendering, page):
+    """Return the page image path for a document, rendering and page index."""
     if rendering in ("vector", "clean_raster"):
         return docs_dir / doc / "clean" / f"page-{page + 1}.png"
     if rendering == "degraded_raster":
@@ -94,6 +98,7 @@ def page_image(doc, rendering, page):
 
 
 def run(t, rendering):
+    """Run the assessed_pd raster pipeline on one document and rendering."""
     from PIL import Image
 
     doc = t["doc_id"]
@@ -205,6 +210,7 @@ def run(t, rendering):
 
 
 def one(tf, r):
+    """Process one truth document for one rendering."""
     t = load_json(tf)
     if True:
         if True:
@@ -225,6 +231,7 @@ def one(tf, r):
 
 
 def main(argv=None):
+    """Run the assessed_pd raster baseline over the renderings in parallel (command-line entry point)."""
     from multiprocessing import Pool
 
     rends = (argv or sys.argv[1:]) or ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]

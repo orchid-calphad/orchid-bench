@@ -19,6 +19,7 @@ OCR = bench / "work" / "ocr"
 
 
 def pages(doc, rendering, n):
+    """List the (image path, dpi) pairs of the pages of a raster rendering."""
     if rendering == "clean_raster":
         return [(docs_dir / doc / "clean" / f"page-{i}.png", 300) for i in range(1, n + 1)]
     if rendering == "degraded_raster":
@@ -27,6 +28,7 @@ def pages(doc, rendering, n):
 
 
 def one(doc, rendering, n):
+    """Build the image-only PDF for one document and rendering, skipping existing outputs."""
     import pymupdf
 
     out = OUT / doc / f"{rendering}.pdf"
