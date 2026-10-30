@@ -97,8 +97,6 @@ def eq_point(dbf, comps, phases, B, x, T):
 # ----------------------------------------------------------------------------------------------- invariant typing
 
 
-
-
 # ----------------------------------------------------------------------------------------------- main preparation
 def prepare(stem: str, force: bool = False) -> dict:
     """Prepare, and cache, the phase-diagram data for a TDB system stem."""
