@@ -26,7 +26,7 @@ from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
-from common import truth_dir, load_json, write_json  # noqa: E402
+from common import load_json, truth_dir, write_json  # noqa: E402
 
 FIX = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus/release-fixup-20261022/bin-context"
 sys.path.insert(0, str(FIX))

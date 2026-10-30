@@ -31,7 +31,7 @@ from pathlib import Path
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
-from common import docs_dir, truth_dir, load_json  # noqa: E402
+from common import docs_dir, load_json, truth_dir  # noqa: E402
 
 SGTE = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus"
 REL = SGTE / "tools-release-v2.1.18"

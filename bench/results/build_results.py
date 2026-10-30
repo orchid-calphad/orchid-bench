@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Collect outputs/<extractor>/scores.json into results/results.json and results/RESULTS.md (task x rendering):
 headline comparison (previous no-OpenCV baselines vs OpenCV/Camelot routes vs AI readers vs dual-reader agreement),
-AI spend from the Gemini ledger, then the full per-extractor tables and tool status notes."""
+AI spend from the Gemini ledger, then the full per-extractor tables and tool status notes.
+"""
 import json
 import sys
 from pathlib import Path
@@ -223,7 +224,7 @@ def main():
             v = (a.get(r) or {}).get(task)
             row["by_rendering"][r] = v if v else "n/r"
         for k in keys:
-            md.append(f"| {k} | " + " | ".join(f(row['by_rendering'][r].get(k)) if isinstance(row["by_rendering"][r], dict)
+            md.append(f"| {k} | " + " | ".join(f(row["by_rendering"][r].get(k)) if isinstance(row["by_rendering"][r], dict)
                                                else "n/r" for r in R) + " |")
         md.append("")
         res["tasks"].append(row)
@@ -250,7 +251,7 @@ def main():
                     for key in ("calibration", "crop", "manifest", "vector_markers", "markers", "compare", "error"):
                         if key in it:
                             msg = str(it[key])
-                            msg = msg.split(" (")[0] if key in ("vector_markers", "markers") else msg[:110]
+                            msg = msg.split(" (", maxsplit=1)[0] if key in ("vector_markers", "markers") else msg[:110]
                             counts[(fp.parent.name, k, key, msg)] = counts.get((fp.parent.name, k, key, msg), 0) + 1
         res["extractor_status"][ext] = [{"rendering": a_, "task": b_, "stage": c_, "outcome": d_, "count": n}
                                         for (a_, b_, c_, d_), n in sorted(counts.items())]
