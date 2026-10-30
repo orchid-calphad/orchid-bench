@@ -21,17 +21,16 @@ import ast
 import hashlib
 import io
 import json
-import os
 import re
 import sys
 from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(BENCH))
-from common import DOCS, TRUTH, load_json  # noqa: E402
+from common import ASSESSED_PD, DOCS, ORCHID_PIPELINE, TRUTH, load_json  # noqa: E402
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
 
-SGTE = Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus"
+SGTE = ORCHID_PIPELINE / "pipelines/sgte-corpus"
 REL = SGTE / "tools-release-v2.1.18"
 FIX = SGTE / "release-fixup-20261022/bin-context"
 sys.path.insert(0, str(REL))
@@ -41,8 +40,7 @@ import thermo_table_reader as T  # noqa: E402
 import text_reader as TX  # noqa: E402
 import text_reader_v6 as R6  # noqa: E402
 
-APD = os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
-                     "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src")
+APD = str(ASSESSED_PD)
 sys.path.insert(0, APD)
 
 AI = BENCH / "work" / "ai"

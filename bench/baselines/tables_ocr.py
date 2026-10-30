@@ -15,10 +15,10 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, write_json  # noqa: E402
+from common import BENCH, DOCS, ORCHID_PIPELINE, TRUTH, load_json, write_json  # noqa: E402
 from baselines.tables_pdfplumber import semantic  # noqa: E402
 
-PIPE = Path.home() / "projects/orchid-pipeline"
+PIPE = ORCHID_PIPELINE
 PY = sys.executable
 OUT = BENCH / "outputs" / "ocr_table_cells"
 WORK = BENCH / "work" / "ocr_table_cells"

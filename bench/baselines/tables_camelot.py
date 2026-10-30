@@ -15,10 +15,10 @@ import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json, sha256_file, write_json  # noqa: E402
+from common import BENCH, DOCS, ORCHID_PIPELINE, TRUTH, load_json, sha256_file, write_json  # noqa: E402
 from baselines.tables_pdfplumber import semantic  # noqa: E402
 
-sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
+sys.path.insert(0, str(ORCHID_PIPELINE / "src"))
 from thermo_extractor.tables import extraction as TX  # noqa: E402
 
 WORK = BENCH / "work" / "camelot"

@@ -7,7 +7,9 @@ import sys
 from pathlib import Path
 
 BENCH = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/pipelines/sgte-corpus/tools-release-v2.1.18"))
+sys.path.insert(0, str(BENCH))
+from common import ORCHID_PIPELINE  # noqa: E402
+sys.path.insert(0, str(ORCHID_PIPELINE / "pipelines/sgte-corpus/tools-release-v2.1.18"))
 import hashlib  # noqa: E402
 import thermo_table_reader as T  # noqa: E402
 

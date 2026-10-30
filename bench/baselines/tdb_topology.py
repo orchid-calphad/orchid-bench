@@ -6,8 +6,8 @@ import json, subprocess, sys
 from multiprocessing import Pool
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, TRUTH, load_json  # noqa: E402
-PIPE = Path.home() / "projects/orchid-pipeline"
+from common import BENCH, ORCHID_PIPELINE, TRUTH, load_json  # noqa: E402
+PIPE = ORCHID_PIPELINE
 PY = sys.executable
 OUT = BENCH / "work" / "tdb_topology"
 
