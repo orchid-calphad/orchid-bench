@@ -137,6 +137,18 @@ class TestLiquidusTable:
             ["80", "1160.0", "1060.0"],
         ]
 
+    def test_takes_the_highest_liquidus_when_several_liquid_curves_cross(self):
+        """With two liquid curves crossing the same composition, the reported liquidus is the higher one."""
+        boundary = {
+            "curves": [
+                {"phase": "LIQUID", "x": [0.0, 1.0], "T": [1000.0, 1200.0]},
+                {"phase": "LIQUID", "x": [0.0, 1.0], "T": [1050.0, 1250.0]},
+                {"phase": "FCC_A1", "x": [0.0, 1.0], "T": [900.0, 1100.0]},
+            ]
+        }
+        rows = gen_text.liquidus_table({"elements": ["Ag", "Cu"], "boundaries": [boundary]}, PLAIN, "at.%", "K")["rows"]
+        assert rows[0] == ["20", "1090.0", "940.0"]
+
     def test_no_liquid_boundary_gives_no_rows(self):
         """A boundary without a liquid phase gives an empty table."""
         boundary = {"curves": [{"phase": "FCC_A1", "x": [0.0, 1.0], "T": [900.0, 1100.0]}]}
