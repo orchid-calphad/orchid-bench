@@ -18,7 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.tables_pdfplumber import semantic  # noqa: E402
-from common import bench, docs_dir, truth_dir, load_json, sha256_file, write_json  # noqa: E402
+from common import bench, docs_dir, load_json, sha256_file, truth_dir, write_json  # noqa: E402
 
 sys.path.insert(0, str(Path.home() / "projects/orchid-pipeline/src"))
 from thermo_extractor.tables import extraction as TX  # noqa: E402

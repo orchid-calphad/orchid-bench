@@ -12,7 +12,7 @@ from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import bench, docs_dir, truth_dir, load_json  # noqa: E402
+from common import bench, docs_dir, load_json, truth_dir  # noqa: E402
 
 OUT = bench / "work" / "ocrpdf"
 OCR = bench / "work" / "ocr"

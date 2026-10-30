@@ -12,7 +12,7 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
-from common import docs_dir, truth_dir, load_json  # noqa: E402
+from common import docs_dir, load_json, truth_dir  # noqa: E402
 from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]

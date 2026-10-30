@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.ocr_cache import WORK, tsv_text  # noqa: E402
-from common import bench, docs_dir, truth_dir, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, load_json, truth_dir, write_json  # noqa: E402
 
 OUT = bench / "outputs" / "text_regex"
 NUM = r"([-−–]?\d+(?:\.\d+)?)"

@@ -34,7 +34,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from baselines.assessed_pd_raster import merge_words, phase_table, text_layer_words  # noqa: E402
 from baselines.ocr_cache import WORK as OCR  # noqa: E402
 from baselines.ocr_cache import read_tsv
-from common import ASSESSED_PD, bench, docs_dir, truth_dir, load_json, sha256_file, write_json  # noqa: E402
+from common import ASSESSED_PD, bench, docs_dir, load_json, sha256_file, truth_dir, write_json  # noqa: E402
 from score import aabb  # noqa: E402
 
 PIPE = Path.home() / "projects/orchid-pipeline"
