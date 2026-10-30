@@ -12,6 +12,7 @@ geometry), so the manifests are those vector_figures.py proposed from the born-d
 Only legend entries the manifest proposer classed as points are detected; curves are out of scope for this tool.
 Panels without a vector manifest (calibration or legend failure on the vector route) are not attempted.
 """
+
 import json
 import sys
 from multiprocessing import Pool
@@ -55,14 +56,22 @@ def remap(man, f, img, pdf):
             c["pixel"] = round(f(b["left"], c["pixel"])[1], 3)
         for key in ("bounds",):
             pts = [f(b["left"], b["top"]), f(b["right"], b["top"]), f(b["right"], b["bottom"]), f(b["left"], b["bottom"])]
-            p[key] = {"left": round(min(q[0] for q in pts), 3), "right": round(max(q[0] for q in pts), 3),
-                      "top": round(min(q[1] for q in pts), 3), "bottom": round(max(q[1] for q in pts), 3)}
+            p[key] = {
+                "left": round(min(q[0] for q in pts), 3),
+                "right": round(max(q[0] for q in pts), 3),
+                "top": round(min(q[1] for q in pts), 3),
+                "bottom": round(max(q[1] for q in pts), 3),
+            }
         lg = p["legend"]
         if lg.get("bounds"):
             lb = lg["bounds"]
             pts = [f(lb["left"], lb["top"]), f(lb["right"], lb["bottom"])]
-            lg["bounds"] = {"left": round(min(q[0] for q in pts), 3), "right": round(max(q[0] for q in pts), 3),
-                            "top": round(min(q[1] for q in pts), 3), "bottom": round(max(q[1] for q in pts), 3)}
+            lg["bounds"] = {
+                "left": round(min(q[0] for q in pts), 3),
+                "right": round(max(q[0] for q in pts), 3),
+                "top": round(min(q[1] for q in pts), 3),
+                "bottom": round(max(q[1] for q in pts), 3),
+            }
         for e in lg.get("entries", []):
             mp = e["source"]["marker_pixel"]
             x, y = f(mp["x"], mp["y"])
@@ -84,12 +93,16 @@ def one(tf, r):
             if r == "clean_raster":
                 img, pdf, use = docs_dir / doc / "clean" / f"page-{page + 1}.png", docs_dir / doc / "vector.pdf", mp
             else:
-                img = docs_dir / doc / "degraded" / f"page-{page + 1}.jpg" if r == "degraded_raster" else \
-                    next((bench / "work" / "ocr" / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
+                img = (
+                    docs_dir / doc / "degraded" / f"page-{page + 1}.jpg"
+                    if r == "degraded_raster"
+                    else next((bench / "work" / "ocr" / doc / "image_only_pdf").glob(f"page-{page + 1}.*[gG]"))
+                )
                 pdf = docs_dir / doc / "image_only.pdf"
-                png = WORK / doc / r / f"page-{page + 1}.png"   # the tool accepts PNG only: decoded JPEG pixels, lossless
+                png = WORK / doc / r / f"page-{page + 1}.png"  # the tool accepts PNG only: decoded JPEG pixels, lossless
                 if not png.exists():
                     from PIL import Image
+
                     png.parent.mkdir(parents=True, exist_ok=True)
                     Image.open(img).save(png)
                 img = png
@@ -105,20 +118,31 @@ def one(tf, r):
             if q.get("status") == "rejected":
                 continue
             grp.setdefault(str(q.get("legend_entry_id") or q.get("series_id") or "all"), []).append(
-                [q["coordinates"]["x"], q["coordinates"]["y"]])
+                [q["coordinates"]["x"], q["coordinates"]["y"]]
+            )
         pm = load_json(use)["panels"][0]["bounds"]
         bbox = [pm["left"], pm["top"], pm["right"], pm["bottom"]]
-        if r == "image_only_pdf":   # image_only coordinates are PDF points: 150 dpi image on the page
+        if r == "image_only_pdf":  # image_only coordinates are PDF points: 150 dpi image on the page
             s = 72.0 / 150.0
             bbox = [v * s for v in bbox]
         panels.append({"page": page, "bbox": bbox, "series": [{"name": k, "points": v} for k, v in grp.items()]})
         auto = sum(1 for q in data.get("points", []) if q.get("status") == "accepted")
         status.append({"panel": mp.parent.name, "markers": f"ok ({len(data.get('points', []))} proposals, {auto} auto-accepted)"})
-    src = "manifests from the vector twin (clean-raster pixel frame)" if r == "clean_raster" else \
-        "vector-twin manifests mapped with the truth page transform (oracle)"
-    write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "raster_markers",
-                                         "status": {"xy": status, "manifest": src},
-                                         "xy_figures": [{"panels": panels}] if panels else []})
+    src = (
+        "manifests from the vector twin (clean-raster pixel frame)"
+        if r == "clean_raster"
+        else "vector-twin manifests mapped with the truth page transform (oracle)"
+    )
+    write_json(
+        OUT / r / f"{doc}.json",
+        {
+            "doc_id": doc,
+            "rendering": r,
+            "extractor": "raster_markers",
+            "status": {"xy": status, "manifest": src},
+            "xy_figures": [{"panels": panels}] if panels else [],
+        },
+    )
     return doc, r, len(panels), sum(1 for s in status if s["markers"].startswith("failed"))
 
 

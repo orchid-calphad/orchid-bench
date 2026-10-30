@@ -1,4 +1,5 @@
 """The benchmark's system list: one SGTE assessment per binary, chosen to span diagram types."""
+
 from __future__ import annotations
 
 import re
@@ -16,13 +17,22 @@ system_specs = [
     ("AlBi-06Kim", ["miscibility_gap", "monotectic"], {}),
     ("PbZn-98Jan", ["miscibility_gap", "monotectic"], {}),
     ("AgNi-04Din", ["miscibility_gap", "monotectic"], {}),
-    ("CuZn-08Gie", ["peritectic", "intermetallic_rich", "order_disorder"],
-     {"BCC_A2": [(0.0, 0.65, "β"), (0.65, 1.0, "δ")], "CUZN_B2": "β′", "CU5ZN8_D82": "γ", "HCP_IM_A3": "ε"}),
+    (
+        "CuZn-08Gie",
+        ["peritectic", "intermetallic_rich", "order_disorder"],
+        {"BCC_A2": [(0.0, 0.65, "β"), (0.65, 1.0, "δ")], "CUZN_B2": "β′", "CU5ZN8_D82": "γ", "HCP_IM_A3": "ε"},
+    ),
     ("AgSn-12Gie", ["peritectic"], {"HCP_A3": "ζ", "AG3SN_D0A": "Ag3Sn"}),
-    ("AlNi-14Zhu", ["intermetallic_rich", "order_disorder", "congruent_compound"],
-     {"AL3NI_D011": "Al3Ni", "AL3NI2_D513": "Al3Ni2", "AL3NI5": "Al3Ni5", "B2_BCC": "NiAl", "L12_FCC": "Ni3Al"}),
-    ("NiTi-04Tok", ["intermetallic_rich", "congruent_compound"],
-     {"NI3TI_D024": "Ni3Ti", "NITI2": "NiTi2", "NITI_B2": "NiTi", "HCP_A3": "(αTi)", "BCC_A2": "(βTi)"}),
+    (
+        "AlNi-14Zhu",
+        ["intermetallic_rich", "order_disorder", "congruent_compound"],
+        {"AL3NI_D011": "Al3Ni", "AL3NI2_D513": "Al3Ni2", "AL3NI5": "Al3Ni5", "B2_BCC": "NiAl", "L12_FCC": "Ni3Al"},
+    ),
+    (
+        "NiTi-04Tok",
+        ["intermetallic_rich", "congruent_compound"],
+        {"NI3TI_D024": "Ni3Ti", "NITI2": "NiTi2", "NITI_B2": "NiTi", "HCP_A3": "(αTi)", "BCC_A2": "(βTi)"},
+    ),
     ("AlCu-02Mie", ["intermetallic_rich", "peritectic"], {"AL4CU9_GAMMA": "γ", "BCC_A2": "β", "HCP_A3": "ζ"}),
     ("MgSi-12Sch", ["congruent_compound", "simple_eutectic"], {"MG2SI_C1": "Mg2Si"}),
     ("MgSn-04Fri", ["congruent_compound"], {"MG2SN_C1": "Mg2Sn"}),
@@ -59,9 +69,9 @@ class Labeller:
 
     def __init__(self, stem, elements, stable_A, stable_B, continuous):
         """Store the system description: stem, display elements, stable phases A and B, and continuous phases."""
-        self.elements = elements                  # display symbols, e.g. ['Ag', 'Cu']
+        self.elements = elements  # display symbols, e.g. ['Ag', 'Cu']
         self.stable_A, self.stable_B = stable_A, stable_B
-        self.continuous = continuous              # phases forming a single-phase band across all x
+        self.continuous = continuous  # phases forming a single-phase band across all x
         self.overrides = system_index[stem][2] if stem in system_index else {}
 
     def label(self, phase: str, x: float) -> str:

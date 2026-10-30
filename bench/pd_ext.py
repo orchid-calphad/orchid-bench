@@ -8,6 +8,7 @@
 * liquid mixing properties at one temperature (integral H and G, activities, partial molar enthalpies);
 * crystal-structure labels derivable from the TDB phase name (small explicit mapping).
 """
+
 from __future__ import annotations
 
 import re
@@ -27,14 +28,27 @@ cal = 4.184  # J per thermochemical calorie
 
 # Strukturbericht token -> (Pearson symbol, Strukturbericht as printed, ascii form, prototype)
 sb_table = {
-    "A1": ("cF4", "A1", "A1", "Cu"), "A2": ("cI2", "A2", "A2", "W"), "A3": ("hP2", "A3", "A3", "Mg"),
-    "A4": ("cF8", "A4", "A4", "C (diamond)"), "A5": ("tI4", "A5", "A5", "β-Sn"), "A7": ("hR2", "A7", "A7", "α-As"),
-    "A12": ("cI58", "A12", "A12", "α-Mn"), "B2": ("cP2", "B2", "B2", "CsCl"), "L12": ("cP4", "L1₂", "L1_2", "Cu3Au"),
-    "C1": ("cF12", "C1", "C1", "CaF2"), "C14": ("hP12", "C14", "C14", "MgZn2"), "C15": ("cF24", "C15", "C15", "MgCu2"),
-    "C36": ("hP24", "C36", "C36", "MgNi2"), "CB": ("oF48", "Cb", "Cb", "Mg2Cu"), "D0A": ("oP8", "D0a", "D0_a", "β-Cu3Ti"),
-    "D011": ("oP16", "D0₁₁", "D0_11", "Fe3C"), "D019": ("hP8", "D0₁₉", "D0_19", "Ni3Sn"),
-    "D024": ("hP16", "D0₂₄", "D0_24", "Ni3Ti"), "D513": ("hP5", "D5₁₃", "D5_13", "Ni2Al3"),
-    "D82": ("cI52", "D8₂", "D8_2", "Cu5Zn8"), "D8B": ("tP30", "D8b", "D8_b", "σ-CrFe"),
+    "A1": ("cF4", "A1", "A1", "Cu"),
+    "A2": ("cI2", "A2", "A2", "W"),
+    "A3": ("hP2", "A3", "A3", "Mg"),
+    "A4": ("cF8", "A4", "A4", "C (diamond)"),
+    "A5": ("tI4", "A5", "A5", "β-Sn"),
+    "A7": ("hR2", "A7", "A7", "α-As"),
+    "A12": ("cI58", "A12", "A12", "α-Mn"),
+    "B2": ("cP2", "B2", "B2", "CsCl"),
+    "L12": ("cP4", "L1₂", "L1_2", "Cu3Au"),
+    "C1": ("cF12", "C1", "C1", "CaF2"),
+    "C14": ("hP12", "C14", "C14", "MgZn2"),
+    "C15": ("cF24", "C15", "C15", "MgCu2"),
+    "C36": ("hP24", "C36", "C36", "MgNi2"),
+    "CB": ("oF48", "Cb", "Cb", "Mg2Cu"),
+    "D0A": ("oP8", "D0a", "D0_a", "β-Cu3Ti"),
+    "D011": ("oP16", "D0₁₁", "D0_11", "Fe3C"),
+    "D019": ("hP8", "D0₁₉", "D0_19", "Ni3Sn"),
+    "D024": ("hP16", "D0₂₄", "D0_24", "Ni3Ti"),
+    "D513": ("hP5", "D5₁₃", "D5_13", "Ni2Al3"),
+    "D82": ("cI52", "D8₂", "D8_2", "Cu5Zn8"),
+    "D8B": ("tP30", "D8b", "D8_b", "σ-CrFe"),
 }
 lattice_word = {"FCC": "A1", "BCC": "A2", "HCP": "A3", "DIAMOND": "A4", "BCT": "A5", "RHOMBOHEDRAL": "A7"}
 
@@ -47,15 +61,30 @@ def structure_of(phase: str) -> dict:
     for t in toks:
         if t in sb_table:
             p, sb, sba, proto = sb_table[t]
-            return {"pearson": p, "strukturbericht": sb, "strukturbericht_ascii": sba, "prototype": proto,
-                    "derivation": f"Strukturbericht token '{t}' in the TDB phase name"}
+            return {
+                "pearson": p,
+                "strukturbericht": sb,
+                "strukturbericht_ascii": sba,
+                "prototype": proto,
+                "derivation": f"Strukturbericht token '{t}' in the TDB phase name",
+            }
     for t in toks:
         if t in lattice_word:
             p, sb, sba, proto = sb_table[lattice_word[t]]
-            return {"pearson": p, "strukturbericht": sb, "strukturbericht_ascii": sba, "prototype": proto,
-                    "derivation": f"lattice word '{t}' in the TDB phase name"}
-    return {"pearson": None, "strukturbericht": None, "strukturbericht_ascii": None, "prototype": None,
-            "derivation": "not derivable from the TDB phase name (left blank in the document)"}
+            return {
+                "pearson": p,
+                "strukturbericht": sb,
+                "strukturbericht_ascii": sba,
+                "prototype": proto,
+                "derivation": f"lattice word '{t}' in the TDB phase name",
+            }
+    return {
+        "pearson": None,
+        "strukturbericht": None,
+        "strukturbericht_ascii": None,
+        "prototype": None,
+        "derivation": "not derivable from the TDB phase name (left blank in the document)",
+    }
 
 
 def formula_atoms(label: str, elements) -> tuple[int, float] | None:
@@ -79,11 +108,13 @@ def formula_atoms(label: str, elements) -> tuple[int, float] | None:
 def _pyc():
     from pycalphad import Database, equilibrium
     from pycalphad import variables as v
+
     return Database, equilibrium, v
 
 
 def _sets(ph, xb, npf, Y, ctx):
     from pd_data import disorder_name
+
     cs = []
     for k in range(len(ph)):
         n = str(ph[k])
@@ -107,7 +138,7 @@ def grid_sets(dbf, comps, phases, B, fm):
     Tgrid = fm["T0"] + fm["dT"] * np.arange(fm["nT"])
     out = [[None] * fm["nx"] for _ in range(fm["nT"])]
     for i0 in range(0, fm["nT"], 40):
-        Ts = Tgrid[i0:i0 + 40]
+        Ts = Tgrid[i0 : i0 + 40]
         res = equilibrium(dbf, comps, phases, {v.X(B): xcalc.tolist(), v.T: Ts.tolist(), v.P: p_atm, v.N: 1})
         ph = res.Phase.values[0, 0]
         xb = res.X.sel(component=B).values[0, 0]
@@ -123,8 +154,13 @@ def _sets_at(dbf, comps, phases, B, x, T):
     _, equilibrium, v = _pyc()
     res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     ph = np.atleast_1d(res.Phase.values.squeeze())
-    return _sets(ph, np.atleast_1d(res.X.sel(component=B).values.squeeze()), np.atleast_1d(res.NP.values.squeeze()),
-                 res.Y.values.reshape(len(ph), -1), (dbf, comps, phases))
+    return _sets(
+        ph,
+        np.atleast_1d(res.X.sel(component=B).values.squeeze()),
+        np.atleast_1d(res.NP.values.squeeze()),
+        res.Y.values.reshape(len(ph), -1),
+        (dbf, comps, phases),
+    )
 
 
 def present(dbf, comps, phases, B, x, T, lab, labeller):
@@ -132,8 +168,13 @@ def present(dbf, comps, phases, B, x, T, lab, labeller):
     _, equilibrium, v = _pyc()
     res = equilibrium(dbf, comps, phases, {v.X(B): float(x), v.T: float(T), v.P: p_atm, v.N: 1})
     ph = np.atleast_1d(res.Phase.values.squeeze())
-    cs = _sets(ph, np.atleast_1d(res.X.sel(component=B).values.squeeze()), np.atleast_1d(res.NP.values.squeeze()),
-               res.Y.values.reshape(len(ph), -1), (dbf, comps, phases))
+    cs = _sets(
+        ph,
+        np.atleast_1d(res.X.sel(component=B).values.squeeze()),
+        np.atleast_1d(res.NP.values.squeeze()),
+        res.Y.values.reshape(len(ph), -1),
+        (dbf, comps, phases),
+    )
     return any(base(c["phase"]) != "LIQUID" and labeller.label(c["phase"], c["x"]) == lab for c in cs)
 
 
@@ -198,13 +239,14 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
                 if not present(dbf, comps, phases, B, x, Tg, lab, labeller):
                     return Tg
                 return bisect_T(dbf, comps, phases, B, x, Tg, Tn, lab, labeller)
+
             probe = xs_at if len(xs_at) <= 7 else [xs_at[int(round(k * (len(xs_at) - 1) / 6))] for k in range(7)]
             vals = [(sgn * Tx(x), x) for x in probe]
             Fb, xb = max(vals)
             k = probe.index(xb)
             lo_ = probe[k - 1] if k > 0 else max(xb - 0.01, 1e-5)
             hi_ = probe[k + 1] if k < len(probe) - 1 else min(xb + 0.01, 1 - 1e-5)
-            g = (5 ** 0.5 - 1) / 2
+            g = (5**0.5 - 1) / 2
             c, d = hi_ - g * (hi_ - lo_), lo_ + g * (hi_ - lo_)
             fc, fd = sgn * Tx(c), sgn * Tx(d)
             while hi_ - lo_ > 5e-4:
@@ -238,8 +280,14 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
                     return float(T), f"{src} (composition search gave {Tb} K)", how, None
                 how = "maximum of the stability range" if upward else "minimum of the stability range"
             cp = {"x": round(xb, 5), "T_K": Tb, "kind": how, "neighbour_state": [[q["phase"], round(q["x"], 5)] for q in nb]}
-            return Tb, f"{'maximum' if upward else 'minimum'} over composition at x({Bel}) = {round(xb, 5)} " \
-                       f"(golden-section in x, bisection 0.01 K)", how, cp
+            return (
+                Tb,
+                f"{'maximum' if upward else 'minimum'} over composition at x({Bel}) = {round(xb, 5)} "
+                f"(golden-section in x, bisection 0.01 K)",
+                how,
+                cp,
+            )
+
         T_hi, src_hi, how_hi, cp_hi = limit(i_hi, True)
         T_lo, src_lo, how_lo, cp_lo = limit(i_lo, False)
         if cp_hi and cp_hi["kind"] in ("congruent melting", "congruent transformation"):
@@ -249,7 +297,11 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
         ih = -mi
         x_lo, x_hi = r_["rows"][ih][0], r_["rows"][ih][1]
         tdb = sorted(r_["tdb"])
-        st = structure_of(tdb[0]) if len(tdb) == 1 else {**structure_of(tdb[0]), "derivation": "several TDB phases share this label; first used"}
+        st = (
+            structure_of(tdb[0])
+            if len(tdb) == 1
+            else {**structure_of(tdb[0]), "derivation": "several TDB phases share this label; first used"}
+        )
         # maximum solubility (terminal phases): largest (A) x or smallest (B) x over all rows
         if lab == f"({Ael})":
             im = max(idx, key=lambda i: (r_["rows"][i][1], -i))
@@ -262,17 +314,38 @@ def stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets):
         if sol:  # snap to an invariant point of this phase when the maximum lies at an invariant
             for k, inv in enumerate(data["invariants"]):
                 for p in inv["points"]:
-                    if labeller.label(p["phase"], p["x"]) == lab and abs(inv["T"] - sol["T_K"]) <= dT + 0.5 and \
-                            ((sol["side"] == "B in A" and p["x"] >= sol["x"] - 1e-9) or (sol["side"] == "A in B" and p["x"] <= sol["x"] + 1e-9)):
+                    if (
+                        labeller.label(p["phase"], p["x"]) == lab
+                        and abs(inv["T"] - sol["T_K"]) <= dT + 0.5
+                        and (
+                            (sol["side"] == "B in A" and p["x"] >= sol["x"] - 1e-9)
+                            or (sol["side"] == "A in B" and p["x"] <= sol["x"] + 1e-9)
+                        )
+                    ):
                         sol = {**sol, "x": p["x"], "T_K": inv["T"], "source": f"invariant:{k}"}
-        out.append({"label": lab, "tdb_phases": tdb, **{k: st[k] for k in st},
-                    "T_low_K": T_lo, "T_low_source": src_lo, "T_low_kind": how_lo,
-                    "T_high_K": T_hi, "T_high_source": src_hi, "T_high_kind": how_hi,
-                    "grid_rows": [float(Tgrid[i_lo]), float(Tgrid[i_hi])],
-                    "homogeneity": {"T_K": float(Tgrid[ih]), "x_min": x_lo, "x_max": x_hi,
-                                    "note": "min/max equilibrium composition of this phase over the grid row (two-phase cells give exact boundary compositions)"},
-                    "max_solubility": sol, "stable_at_300K": i_lo == 0,
-                    "congruent_point": r_.get("congruent_point")})
+        out.append(
+            {
+                "label": lab,
+                "tdb_phases": tdb,
+                **{k: st[k] for k in st},
+                "T_low_K": T_lo,
+                "T_low_source": src_lo,
+                "T_low_kind": how_lo,
+                "T_high_K": T_hi,
+                "T_high_source": src_hi,
+                "T_high_kind": how_hi,
+                "grid_rows": [float(Tgrid[i_lo]), float(Tgrid[i_hi])],
+                "homogeneity": {
+                    "T_K": float(Tgrid[ih]),
+                    "x_min": x_lo,
+                    "x_max": x_hi,
+                    "note": "min/max equilibrium composition of this phase over the grid row (two-phase cells give exact boundary compositions)",
+                },
+                "max_solubility": sol,
+                "stable_at_300K": i_lo == 0,
+                "congruent_point": r_.get("congruent_point"),
+            }
+        )
     return out
 
 
@@ -328,20 +401,34 @@ def formation_ext(data, dbf, comps, phases, stab_labels):
         cp = float(np.asarray(res.CPM.values).squeeze())
         dS = c["SM_298"] - (1 - c["x"]) * sref[A] - c["x"] * sref[B]
         fa = formula_atoms(c["label"], data["elements"])
-        rows.append({"phase": c["phase"], "label": c["label"], "x": c["x"], "dfH_J_per_mol_atoms": c["HM_298"],
-                     "S_J_per_mol_atoms_K": c["SM_298"], "dfS_J_per_mol_atoms_K": dS,
-                     "Cp_J_per_mol_atoms_K": cp if np.isfinite(cp) else None,
-                     "Cp_note": None if np.isfinite(cp) else "CPM not finite from pycalphad at 298.15 K",
-                     "formula_atoms": fa[0] if fa else None, "formula_x": fa[1] if fa else None,
-                     "stable_at_298K": c["label"] in stab_labels})
-    return {"S_ref_298": {A: sref[A], B: sref[B]}, "H_ref_298": {A: sref[A + "_H"], B: sref[B + "_H"]}, "rows": rows,
-            "method": "single-phase equilibrium at the phase's low-T composition, 298.15 K; dfS = S - sum x_i S_i(SER); "
-                      "SER entropies from unary equilibria at 298.15 K"}
+        rows.append(
+            {
+                "phase": c["phase"],
+                "label": c["label"],
+                "x": c["x"],
+                "dfH_J_per_mol_atoms": c["HM_298"],
+                "S_J_per_mol_atoms_K": c["SM_298"],
+                "dfS_J_per_mol_atoms_K": dS,
+                "Cp_J_per_mol_atoms_K": cp if np.isfinite(cp) else None,
+                "Cp_note": None if np.isfinite(cp) else "CPM not finite from pycalphad at 298.15 K",
+                "formula_atoms": fa[0] if fa else None,
+                "formula_x": fa[1] if fa else None,
+                "stable_at_298K": c["label"] in stab_labels,
+            }
+        )
+    return {
+        "S_ref_298": {A: sref[A], B: sref[B]},
+        "H_ref_298": {A: sref[A + "_H"], B: sref[B + "_H"]},
+        "rows": rows,
+        "method": "single-phase equilibrium at the phase's low-T composition, 298.15 K; dfS = S - sum x_i S_i(SER); "
+        "SER entropies from unary equilibria at 298.15 K",
+    }
 
 
 def mixing_table(data, dbf, comps):
     """Build the extended mixing-property table of a system."""
     from pd_data import liquid_activity, liquid_mixing
+
     A, B = data["components"]
     T = data["properties"]["T_liquid"]
     xs = [round(0.1 * k, 1) for k in range(1, 10)]
@@ -356,10 +443,23 @@ def mixing_table(data, dbf, comps):
     for k, x in enumerate(xs):
         i = 1 + 3 * k
         Hx, dH = H[i + 1], (H[i + 2] - H[i]) / (2 * h)
-        rows.append({"x": x, "HM_MIX": float(Hx), "GM_MIX": float(G[i + 1]), "a_A": float(aA[k]), "a_B": float(aB[k]),
-                     "HM_PART_A": float(Hx - x * dH), "HM_PART_B": float(Hx + (1 - x) * dH)})
-    return {"T": T, "rows": rows, "reference": "pure liquid A and B at T",
-            "partials": "H_i - H_i(pure liquid) from central differences of the integral HM_MIX (h = 1e-4)"}
+        rows.append(
+            {
+                "x": x,
+                "HM_MIX": float(Hx),
+                "GM_MIX": float(G[i + 1]),
+                "a_A": float(aA[k]),
+                "a_B": float(aB[k]),
+                "HM_PART_A": float(Hx - x * dH),
+                "HM_PART_B": float(Hx + (1 - x) * dH),
+            }
+        )
+    return {
+        "T": T,
+        "rows": rows,
+        "reference": "pure liquid A and B at T",
+        "partials": "H_i - H_i(pure liquid) from central differences of the integral HM_MIX (h = 1e-4)",
+    }
 
 
 def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
@@ -378,14 +478,22 @@ def prepare_ext(stem: str, data: dict, force: bool = False) -> dict:
     xcalc, Tgrid, sets = grid_sets(dbf, comps, phases, B, data["field_map"])
     stab = stability(data, dbf, comps, phases, labeller, xcalc, Tgrid, sets)
     labs300 = {s["label"] for s in stab if s["stable_at_300K"]}
-    out = {"ext_version": ext_version, "stem": stem, "phase_stability": stab,
-           "phase_fraction": phase_fraction(data, dbf, comps, phases, labeller, data["field_map"]),
-           "formation": formation_ext(data, dbf, comps, phases, labs300),
-           "mixing_table": mixing_table(data, dbf, comps),
-           "method": {"grid": "same composition-set-aware grid as the field map", "phase_fraction": "equilibrium step, dT 5 K",
-                      "stability_limits": "grid limit snapped to an invariant/congruent/melting T within one grid step, "
-                                          "otherwise bisection to 0.01 K at a fixed composition"}}
+    out = {
+        "ext_version": ext_version,
+        "stem": stem,
+        "phase_stability": stab,
+        "phase_fraction": phase_fraction(data, dbf, comps, phases, labeller, data["field_map"]),
+        "formation": formation_ext(data, dbf, comps, phases, labs300),
+        "mixing_table": mixing_table(data, dbf, comps),
+        "method": {
+            "grid": "same composition-set-aware grid as the field map",
+            "phase_fraction": "equilibrium step, dT 5 K",
+            "stability_limits": "grid limit snapped to an invariant/congruent/melting T within one grid step, "
+            "otherwise bisection to 0.01 K at a fixed composition",
+        },
+    }
     from pd_data import _finite
+
     out = _finite(out)
     write_json(path, out)
     return out
@@ -395,8 +503,15 @@ if __name__ == "__main__":
     import time
 
     from pd_data import prepare
+
     for s in sys.argv[1:]:
         t = time.time()
         d = prepare_ext(s, prepare(s), force=True)
-        print(s, f"{time.time()-t:.1f}s", [(p["label"], p["T_low_K"], p["T_high_K"], p["strukturbericht"]) for p in d["phase_stability"]],
-              [f["x"] for f in d["phase_fraction"]], [(r["label"], r["Cp_J_per_mol_atoms_K"]) for r in d["formation"]["rows"]], flush=True)
+        print(
+            s,
+            f"{time.time() - t:.1f}s",
+            [(p["label"], p["T_low_K"], p["T_high_K"], p["strukturbericht"]) for p in d["phase_stability"]],
+            [f["x"] for f in d["phase_fraction"]],
+            [(r["label"], r["Cp_J_per_mol_atoms_K"]) for r in d["formation"]["rows"]],
+            flush=True,
+        )

@@ -2,6 +2,7 @@
 """Running-text baseline: regular expressions for value + unit over the PDF text layer (vector, image-only PDF)
 or Tesseract OCR text (rasters; image-only PDF falls back to OCR when the text layer is empty).
 """
+
 import re
 import sys
 from pathlib import Path
@@ -41,6 +42,7 @@ def extract(text):
 
 def main():
     import pdfplumber
+
     for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
@@ -53,13 +55,23 @@ def main():
         if layer.strip():
             texts["image_only_pdf"] = ("pdf_text_layer", layer)
         else:
-            texts["image_only_pdf"] = ("text layer empty -> tesseract OCR of embedded page images",
-                                       "\n".join(tsv_text(WORK / doc / "image_only_pdf" / f"page-{i}.tsv") for i in range(1, n + 1)))
+            texts["image_only_pdf"] = (
+                "text layer empty -> tesseract OCR of embedded page images",
+                "\n".join(tsv_text(WORK / doc / "image_only_pdf" / f"page-{i}.tsv") for i in range(1, n + 1)),
+            )
         for r in ("clean_raster", "degraded_raster"):
             texts[r] = ("tesseract OCR", "\n".join(tsv_text(WORK / doc / r / f"page-{i}.tsv") for i in range(1, n + 1)))
         for r, (route, txt) in texts.items():
-            write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "text_regex",
-                                                  "status": {"text": f"ran: {route}"}, "text_values": extract(txt)})
+            write_json(
+                OUT / r / f"{doc}.json",
+                {
+                    "doc_id": doc,
+                    "rendering": r,
+                    "extractor": "text_regex",
+                    "status": {"text": f"ran: {route}"},
+                    "text_values": extract(txt),
+                },
+            )
 
 
 if __name__ == "__main__":

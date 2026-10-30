@@ -1,4 +1,5 @@
 """Shared helpers: paths, canonical JSON, hashing, element/phase label rules."""
+
 from __future__ import annotations
 
 import hashlib
@@ -16,12 +17,16 @@ docs_dir = bench / "docs"
 truth_dir = bench / "truth"
 results = bench / "results"
 open_tdb = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
-ASSESSED_PD = Path(os.environ.get(
-    "ASSESSED_PD_SRC",
-    "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src"))
+ASSESSED_PD = Path(
+    os.environ.get(
+        "ASSESSED_PD_SRC",
+        "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src",
+    )
+)
 font_dir = None
 try:
     import matplotlib
+
     font_dir = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
 except Exception:  # pragma: no cover
     pass

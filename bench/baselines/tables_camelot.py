@@ -10,6 +10,7 @@
 Raster renderings: Camelot reads PDF text objects only; image-only PDFs have none (not run, see tables_ocr.py).
 Semantic glue: the same header-keyword parser as tables_pdfplumber.py (no truth used).
 """
+
 import json
 import sys
 import traceback
@@ -31,14 +32,27 @@ def matrix_cells(m):
 
 def tool_tables(doc, pdf, page, flavor):
     import camelot
+
     w = WORK / doc
     w.mkdir(parents=True, exist_ok=True)
-    man = {"schema_version": 1, "id": f"{doc}-p{page}-{flavor}",
-           "source": {"locator": f"page {page}", "page": page, "pdf_sha256": sha256_file(pdf), "table_label": f"all tables on page {page}"},
-           "tool": {"package": "camelot-py", "version": camelot.__version__},
-           "review": {"notes": "ORCHID synthetic benchmark; whole-page profile, no table areas", "origin": "calculated",
-                      "selected_profile": None, "status": "needs_human_review"},
-           "profiles": [{"id": flavor, "flavor": flavor}]}
+    man = {
+        "schema_version": 1,
+        "id": f"{doc}-p{page}-{flavor}",
+        "source": {
+            "locator": f"page {page}",
+            "page": page,
+            "pdf_sha256": sha256_file(pdf),
+            "table_label": f"all tables on page {page}",
+        },
+        "tool": {"package": "camelot-py", "version": camelot.__version__},
+        "review": {
+            "notes": "ORCHID synthetic benchmark; whole-page profile, no table areas",
+            "origin": "calculated",
+            "selected_profile": None,
+            "status": "needs_human_review",
+        },
+        "profiles": [{"id": flavor, "flavor": flavor}],
+    }
     mp = w / f"p{page}-{flavor}.manifest.json"
     mp.write_text(json.dumps(man), encoding="utf-8")
     rep = TX.build_report(mp, pdf)
@@ -53,18 +67,25 @@ class PdftoppmBackend:
 
     def convert(self, pdf_path, png_path, resolution=300):
         import subprocess
+
         stem = str(png_path)[:-4] if str(png_path).endswith(".png") else str(png_path)
-        subprocess.run(["pdftoppm", "-r", str(resolution), "-png", "-singlefile", str(pdf_path), stem], check=True,
-                       capture_output=True)
+        subprocess.run(
+            ["pdftoppm", "-r", str(resolution), "-png", "-singlefile", str(pdf_path), stem], check=True, capture_output=True
+        )
 
 
 def lattice_tables(pdf, page):
     import camelot
-    return [TX.dataframe_matrix(t.df) for t in camelot.read_pdf(str(pdf), pages=str(page), flavor="lattice", backend=PdftoppmBackend())]
+
+    return [
+        TX.dataframe_matrix(t.df)
+        for t in camelot.read_pdf(str(pdf), pages=str(page), flavor="lattice", backend=PdftoppmBackend())
+    ]
 
 
 def main():
     import camelot
+
     for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
@@ -82,13 +103,28 @@ def main():
                     if len(m) >= 2:
                         tabs.append({"page": page - 1, "route": f"camelot {flavor}", "cells": matrix_cells(m)})
             inv, ph, recs = semantic(tabs)
-            how = ("thermo_extractor.tables.extraction.build_report (whole-page profile)" if flavor != "lattice"
-                   else "camelot.read_pdf flavor=lattice with a pdftoppm backend (outside the tool contract)")
-            write_json(bench / "outputs" / f"camelot_{flavor}" / "vector" / f"{doc}.json",
-                       {"doc_id": doc, "rendering": "vector", "extractor": f"camelot_{flavor}",
-                        "status": {"tables": f"ran: camelot-py {camelot.__version__} {flavor} via {how}" + (f"; errors: {errs}" if errs else ""),
-                                   "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)"},
-                        "tables": tabs, "invariant_rows": inv, "phase_rows": ph, "property_records": recs})
+            how = (
+                "thermo_extractor.tables.extraction.build_report (whole-page profile)"
+                if flavor != "lattice"
+                else "camelot.read_pdf flavor=lattice with a pdftoppm backend (outside the tool contract)"
+            )
+            write_json(
+                bench / "outputs" / f"camelot_{flavor}" / "vector" / f"{doc}.json",
+                {
+                    "doc_id": doc,
+                    "rendering": "vector",
+                    "extractor": f"camelot_{flavor}",
+                    "status": {
+                        "tables": f"ran: camelot-py {camelot.__version__} {flavor} via {how}"
+                        + (f"; errors: {errs}" if errs else ""),
+                        "semantic": "ran: header-keyword glue (tables_pdfplumber.semantic)",
+                    },
+                    "tables": tabs,
+                    "invariant_rows": inv,
+                    "phase_rows": ph,
+                    "property_records": recs,
+                },
+            )
         print(doc, flush=True)
 
 

@@ -18,6 +18,7 @@ Inputs per rendering (no truth used, except where the assessed_pd stage already 
 Run with ~/orchid-py313/bin/python (google-genai present; nothing is installed). Writes work/ai/jobs/*.json and
 work/ai/img/*.png.
 """
+
 import ast
 import hashlib
 import io
@@ -42,8 +43,11 @@ import text_reader as TX  # noqa: E402
 import text_reader_v6 as R6  # noqa: E402
 import thermo_table_reader as T  # noqa: E402
 
-APD = os.environ.get("ASSESSED_PD_SRC", "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
-                     "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src")
+APD = os.environ.get(
+    "ASSESSED_PD_SRC",
+    "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
+    "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src",
+)
 sys.path.insert(0, APD)
 
 AI = BENCH / "work" / "ai"
@@ -59,10 +63,27 @@ def context_reader_objects():
     """
     src = (FIX / "context_reader_v2.py").read_text(encoding="utf-8")
     tree = ast.parse(src)
-    keep = {"PROMPT_VERSION", "HEAD", "NOT_HEAD", "INLINE_HEAD", "END", "ITEM_Q", "SCHEMA", "PROMPT", "METHOD_CUE",
-            "OWN_CUE", "NOT_OWN", "methods_passages", "cue_passages"}
-    body = [n for n in tree.body if (isinstance(n, ast.Assign) and any(getattr(t_, "id", None) in keep for t_ in n.targets))
-            or (isinstance(n, ast.FunctionDef) and n.name in keep)]
+    keep = {
+        "PROMPT_VERSION",
+        "HEAD",
+        "NOT_HEAD",
+        "INLINE_HEAD",
+        "END",
+        "ITEM_Q",
+        "SCHEMA",
+        "PROMPT",
+        "METHOD_CUE",
+        "OWN_CUE",
+        "NOT_OWN",
+        "methods_passages",
+        "cue_passages",
+    }
+    body = [
+        n
+        for n in tree.body
+        if (isinstance(n, ast.Assign) and any(getattr(t_, "id", None) in keep for t_ in n.targets))
+        or (isinstance(n, ast.FunctionDef) and n.name in keep)
+    ]
     ns = {"re": re}
     exec(compile(ast.Module(body=body, type_ignores=[]), "context_reader_v2", "exec"), ns)  # noqa: S102
     return ns
@@ -70,11 +91,27 @@ def context_reader_objects():
 
 CTX = context_reader_objects()
 HANDBOOK = Path.home() / "projects/open-tdb/build/okamoto-pilot/tools/gemini_reader.py"
-HB_PROMPT = ast.literal_eval(next(n.value for n in ast.parse(HANDBOOK.read_text()).body
-                                  if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "PROMPT"))
-HB_SCHEMA = {"type": "OBJECT", "required": ["answers"], "properties": {"answers": {"type": "ARRAY", "items": {"type": "OBJECT",
-             "required": ["marker", "assemblage", "reason"], "properties": {"marker": {"type": "INTEGER"},
-             "assemblage": {"type": "STRING"}, "reason": {"type": "STRING"}}}}}}
+HB_PROMPT = ast.literal_eval(
+    next(
+        n.value
+        for n in ast.parse(HANDBOOK.read_text()).body
+        if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "PROMPT"
+    )
+)
+HB_SCHEMA = {
+    "type": "OBJECT",
+    "required": ["answers"],
+    "properties": {
+        "answers": {
+            "type": "ARRAY",
+            "items": {
+                "type": "OBJECT",
+                "required": ["marker", "assemblage", "reason"],
+                "properties": {"marker": {"type": "INTEGER"}, "assemblage": {"type": "STRING"}, "reason": {"type": "STRING"}},
+            },
+        }
+    },
+}
 
 
 # ------------------------------------------------------------------------------------------------ page text
@@ -123,7 +160,12 @@ def vector_lines(pdf, page):
         if lines and abs(lines[-1]["top"] - w["top"]) < 2.5:
             L = lines[-1]
             L["text"] += " " + w["text"]
-            L["box"] = [min(L["box"][0], w["x0"]), min(L["box"][1], w["top"]), max(L["box"][2], w["x1"]), max(L["box"][3], w["bottom"])]
+            L["box"] = [
+                min(L["box"][0], w["x0"]),
+                min(L["box"][1], w["top"]),
+                max(L["box"][2], w["x1"]),
+                max(L["box"][3], w["bottom"]),
+            ]
         else:
             lines.append({"text": w["text"], "top": w["top"], "box": [w["x0"], w["top"], w["x1"], w["bottom"]]})
     return lines
@@ -135,7 +177,11 @@ def captions(lines):
         m = CAP.match(L["text"].strip())
         if m:
             cap = L["text"].strip()
-            if i + 1 < len(lines) and not cap.endswith(".") and lines[i + 1]["box"][1] - L["box"][3] < 0.8 * (L["box"][3] - L["box"][1]) + 2:
+            if (
+                i + 1 < len(lines)
+                and not cap.endswith(".")
+                and lines[i + 1]["box"][1] - L["box"][3] < 0.8 * (L["box"][3] - L["box"][1]) + 2
+            ):
                 cap += " " + lines[i + 1]["text"].strip()
             out.append({"number": int(m.group(2)), "continued": bool(m.group(3)), "caption": cap, "box": L["box"], "index": i})
     return out
@@ -150,6 +196,7 @@ def png_bytes(im):
 
 def page_image(doc, r, page):
     from PIL import Image
+
     if r == "clean_raster":
         im = Image.open(docs_dir / doc / "clean" / f"page-{page}.png").convert("RGB")
         return im.resize((int(round(im.width * 160 / 300)), int(round(im.height * 160 / 300))), Image.LANCZOS), 160 / 300
@@ -168,14 +215,18 @@ def raster_crop(doc, r, page, cap, lines):
     W = im.width / s
     left = cap["box"][0] < 0.5 * W
     y0 = max(0.0, cap["box"][1] - 6 * pt)
-    below = [L["box"][1] for L in lines if L["box"][1] > cap["box"][3] + 40 * pt
-             and NEXT.match(L["text"].strip()) and (L["box"][0] < 0.5 * W) == left]
+    below = [
+        L["box"][1]
+        for L in lines
+        if L["box"][1] > cap["box"][3] + 40 * pt and NEXT.match(L["text"].strip()) and (L["box"][0] < 0.5 * W) == left
+    ]
     y1 = (min(below) - 2 * pt) if below else (im.height / s - 4 * pt)
     return im.crop((0, int(y0 * s), im.width, int(min(y1 * s, im.height))))
 
 
 def stack(images):
     from PIL import Image
+
     w = max(i.width for i in images)
     out = Image.new("RGB", (w, sum(i.height for i in images)), "white")
     y = 0
@@ -195,11 +246,23 @@ def save_img(im_bytes):
 
 def write_job(kind, doc, r, prompt, schema, images, meta):
     hs = [h for _, h in images]
-    key = hashlib.sha256(json.dumps([kind, doc, r, prompt, schema, hs], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:24]
-    job = {"key": key, "kind": kind, "doc": doc, "rendering": r, "prompt": prompt, "schema": schema,
-           "images": [p for p, _ in images], "image_sha256": hs, "meta": meta}
+    key = hashlib.sha256(json.dumps([kind, doc, r, prompt, schema, hs], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[
+        :24
+    ]
+    job = {
+        "key": key,
+        "kind": kind,
+        "doc": doc,
+        "rendering": r,
+        "prompt": prompt,
+        "schema": schema,
+        "images": [p for p, _ in images],
+        "image_sha256": hs,
+        "meta": meta,
+    }
     (JOBS / f"{doc}__{r}__{kind}__{meta.get('label', '')}.json".replace(" ", "_")).write_text(
-        json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8")
+        json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
     return job
 
 
@@ -231,6 +294,7 @@ def table_jobs(t, r):
                 tl = [L["text"] for L in lines if ext[1] <= L["box"][1] <= ext[3]]
             else:
                 from PIL import Image  # noqa: F401
+
                 imgs.append(png_bytes(raster_crop(doc, r, p, c, lines)))
                 tl = []
             cont = None
@@ -239,24 +303,49 @@ def table_jobs(t, r):
                 cont = next((x for x in nc if x["continued"] and x["number"] == c["number"]), None)
                 if cont is not None:
                     if r == "vector":
-                        box2 = {"x_min": cont["box"][0], "y_min": cont["box"][1], "x_max": cont["box"][2], "y_max": cont["box"][3]}
+                        box2 = {
+                            "x_min": cont["box"][0],
+                            "y_min": cont["box"][1],
+                            "x_max": cont["box"][2],
+                            "y_max": cont["box"][3],
+                        }
                         imgs.append(G.crop_png(str(pdf), p + 1, box2))
                         ext2, _ = G.table_extent(G.pdfplumber.open(str(pdf)).pages[p], box2)
                         tl += [L["text"] for L in nl if ext2[1] <= L["box"][1] <= ext2[3]]
                     else:
                         imgs.append(png_bytes(raster_crop(doc, r, p + 1, cont, nl)))
             from PIL import Image
+
             im = png_bytes(stack([Image.open(io.BytesIO(b)).convert("RGB") for b in imgs])) if len(imgs) > 1 else imgs[0]
-            ctx = [{"pdf_page": pg, "snippet": s[:300]} for pg, s in sentences
-                   if re.search(rf"\bTable\s+{c['number']}\b", s) and not CAP.match(s)][:8]
+            ctx = [
+                {"pdf_page": pg, "snippet": s[:300]}
+                for pg, s in sentences
+                if re.search(rf"\bTable\s+{c['number']}\b", s) and not CAP.match(s)
+            ][:8]
             ctxs = "\n".join(f"- (p{m['pdf_page']}) {m['snippet']}" for m in ctx) or "(none found)"
             inv = bool(re.search(r"(?i)invariant|reaction", c["caption"]))
-            tmpl, sch, ver = (G.PROMPT, G.SCHEMA, G.PROMPT_VERSION) if inv else (T.PROMPT_V7_1, T.SCHEMA_V7_1, T.PROMPT_VERSION_V7_1)
+            tmpl, sch, ver = (
+                (G.PROMPT, G.SCHEMA, G.PROMPT_VERSION) if inv else (T.PROMPT_V7_1, T.SCHEMA_V7_1, T.PROMPT_VERSION_V7_1)
+            )
             prompt = tmpl.format(caption=c["caption"], text="\n".join(tl[:80]) or "(none)", context=ctxs)
-            jobs.append(write_job("inv_table" if inv else "thermo_table", doc, r, prompt, sch, [save_img(im)],
-                                  {"label": f"table{c['number']}", "table_number": c["number"], "page": p,
-                                   "continued_page": p + 1 if cont else None, "prompt_version": ver,
-                                   "crop": recipe or {"rule": "caption-to-next-caption, full width", "rendering": r}}))
+            jobs.append(
+                write_job(
+                    "inv_table" if inv else "thermo_table",
+                    doc,
+                    r,
+                    prompt,
+                    sch,
+                    [save_img(im)],
+                    {
+                        "label": f"table{c['number']}",
+                        "table_number": c["number"],
+                        "page": p,
+                        "continued_page": p + 1 if cont else None,
+                        "prompt_version": ver,
+                        "crop": recipe or {"rule": "caption-to-next-caption, full width", "rendering": r},
+                    },
+                )
+            )
     return jobs, full
 
 
@@ -274,9 +363,23 @@ def text_jobs(t, r, pages):
                 last = q["page"]
             blocks.append(q["text"])
         text = "\n\n".join(blocks)
-        jobs.append(write_job("text", doc, r, R6.PROMPT.format(text=text), sch, [],
-                              {"label": f"chunk{i}", "prompt_version": R6.PROMPT_VERSION, "passages": list(chunk),
-                               "text_layer": R6.TEXT_LAYER if r == "vector" else "Tesseract paragraphs (no text layer)"}))
+        jobs.append(
+            write_job(
+                "text",
+                doc,
+                r,
+                R6.PROMPT.format(text=text),
+                sch,
+                [],
+                {
+                    "label": f"chunk{i}",
+                    "prompt_version": R6.PROMPT_VERSION,
+                    "passages": list(chunk),
+                    "text_layer": R6.TEXT_LAYER if r == "vector" else "Tesseract paragraphs (no text layer)",
+                },
+            )
+        )
+
     for q in passages:
         if size + len(q["text"]) > 6000 and chunk:
             flush(len(jobs))
@@ -295,8 +398,17 @@ def text_jobs(t, r, pages):
                 blocks.append(f"[page {pg}]")
                 last = pg
             blocks.append(txt)
-        ctx_jobs.append(write_job("context", doc, r, CTX["PROMPT"].format(text="\n\n".join(blocks)), CTX["SCHEMA"], [],
-                                  {"label": "methods", "prompt_version": CTX["PROMPT_VERSION"]}))
+        ctx_jobs.append(
+            write_job(
+                "context",
+                doc,
+                r,
+                CTX["PROMPT"].format(text="\n\n".join(blocks)),
+                CTX["SCHEMA"],
+                [],
+                {"label": "methods", "prompt_version": CTX["PROMPT_VERSION"]},
+            )
+        )
     return jobs, ctx_jobs, len(passages)
 
 
@@ -307,6 +419,7 @@ def pd_job(t, r):
     from assessed_pd.pipeline import annotate
     from assessed_pd.readers import Ladder
     from PIL import Image, ImageDraw, ImageFont
+
     doc = t["doc_id"]
     pk = BENCH / "work" / "raster_pd" / doc / r / "assessed_input.pkl"
     if not pk.exists():
@@ -335,9 +448,16 @@ def pd_job(t, r):
         dr.ellipse((x - rad, y - rad, x + rad, y + rad), fill=(220, 20, 20))
         dr.text((x, y), str(i), fill="white", font=font, anchor="mm")
         markers.append({"marker": i, "field_id": q.field_id, "choices": q.choices})
-    lines = "\n".join(f'- marker {m["marker"]}: choices {m["choices"]}' for m in markers)
-    job = write_job("pd_fields", doc, r, HB_PROMPT + lines, HB_SCHEMA, [save_img(png_bytes(im))],
-                    {"label": "fig1", "markers": markers, "prompt_version": "handbook-open-field-reader (gemini_reader.py)"})
+    lines = "\n".join(f"- marker {m['marker']}: choices {m['choices']}" for m in markers)
+    job = write_job(
+        "pd_fields",
+        doc,
+        r,
+        HB_PROMPT + lines,
+        HB_SCHEMA,
+        [save_img(png_bytes(im))],
+        {"label": "fig1", "markers": markers, "prompt_version": "handbook-open-field-reader (gemini_reader.py)"},
+    )
     return job, len(qs)
 
 
@@ -352,8 +472,17 @@ def main():
             tj, pages = table_jobs(t, r)
             xj, cj, npass = text_jobs(t, r, pages)
             pj, nq = pd_job(t, r)
-            summary.append({"doc": doc, "rendering": r, "tables": [j["meta"]["label"] for j in tj], "text_chunks": len(xj),
-                            "passages": npass, "context_jobs": len(cj), "pd_questions": nq})
+            summary.append(
+                {
+                    "doc": doc,
+                    "rendering": r,
+                    "tables": [j["meta"]["label"] for j in tj],
+                    "text_chunks": len(xj),
+                    "passages": npass,
+                    "context_jobs": len(cj),
+                    "pd_questions": nq,
+                }
+            )
             print(json.dumps(summary[-1]), flush=True)
     (AI / "prepare_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
 

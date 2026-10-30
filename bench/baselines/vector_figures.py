@@ -10,6 +10,7 @@ quantity/unit as hints (the tool's contract: a human supplies them; here they co
 role is `marker` -> calibrated points grouped by paint style; for phase diagrams, curve/line paths ->
 boundaries, horizontal lines -> invariant temperatures, text-layer words inside the frame -> field labels.
 """
+
 import json
 import re
 import subprocess
@@ -34,11 +35,19 @@ def run_inventory(doc):
     inv, gr = w / "inventory.json", w / "graphics.json"
     env = {"PYTHONPATH": str(open_tdb / "src"), "PATH": "/usr/bin:/bin"}
     if not inv.exists():
-        subprocess.run([PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(docs_dir / doc / "vector.pdf"), "--output", str(inv)],
-                       check=True, capture_output=True, env=env)
+        subprocess.run(
+            [PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(docs_dir / doc / "vector.pdf"), "--output", str(inv)],
+            check=True,
+            capture_output=True,
+            env=env,
+        )
     if not gr.exists():
-        subprocess.run([PY, "-m", "thermo_extractor.cli", "propose-pdf-graphics", str(inv), "--output", str(gr)],
-                       check=True, capture_output=True, env=env)
+        subprocess.run(
+            [PY, "-m", "thermo_extractor.cli", "propose-pdf-graphics", str(inv), "--output", str(gr)],
+            check=True,
+            capture_output=True,
+            env=env,
+        )
     return inv, gr
 
 
@@ -81,7 +90,7 @@ def style_key(p):
 
 
 def figure_objects(page, frame_bb, H, role_of):
-    fx0, fy0, fx1, fy1 = frame_bb               # user space (y up)
+    fx0, fy0, fx1, fy1 = frame_bb  # user space (y up)
     curves, markers, lines = [], [], []
     for p in page["paths"]:
         x0, y0, x1, y1 = p["bbox"]
@@ -95,7 +104,9 @@ def figure_objects(page, frame_bb, H, role_of):
             markers.append(p)
         elif role in ("data_curve", "axis_or_gridline", "unknown") and max(w, h) > 0.02 * (fx1 - fx0):
             # exclude the frame edges themselves
-            if (h < 0.5 and (abs(y0 - fy0) < 0.6 or abs(y0 - fy1) < 0.6)) or (w < 0.5 and (abs(x0 - fx0) < 0.6 or abs(x0 - fx1) < 0.6)):
+            if (h < 0.5 and (abs(y0 - fy0) < 0.6 or abs(y0 - fy1) < 0.6)) or (
+                w < 0.5 and (abs(x0 - fx0) < 0.6 or abs(x0 - fx1) < 0.6)
+            ):
                 continue
             (lines if (h < 0.5 or w < 0.5) else curves).append(p)
     return curves, markers, lines
@@ -132,25 +143,40 @@ def main():
                     frame, fx, fy = calibrate(page, region, hx, hy, iw, ih)
                 except Exception as e:  # noqa: BLE001
                     status["phase_diagram" if f["kind"] == "phase_diagram" else "xy"].append(
-                        {"figure": f["id"], "axes": ax["id"], "calibration": f"failed: {e}"})
+                        {"figure": f["id"], "axes": ax["id"], "calibration": f"failed: {e}"}
+                    )
                     continue
                 mx, my = mapper(fx), mapper(fy)
                 fb = frame["bbox"]
                 bbox_tl = [fb[0], H - fb[3], fb[2], H - fb[1]]
                 curves, markers, lines = figure_objects(page, fb, H, role_of)
-                rec = {"figure": f["id"], "axes": ax["id"], "calibration": "ok",
-                       "frame_bbox_pt": bbox_tl, "curves": len(curves), "markers": len(markers), "lines": len(lines)}
+                rec = {
+                    "figure": f["id"],
+                    "axes": ax["id"],
+                    "calibration": "ok",
+                    "frame_bbox_pt": bbox_tl,
+                    "curves": len(curves),
+                    "markers": len(markers),
+                    "lines": len(lines),
+                }
                 if f["kind"] == "phase_diagram":
                     xs_ = 100.0 if ax["x"]["unit"] == "at.%" else 1.0
-                    bnds = [{"polyline": True, "points": [[x / xs_, T] for x, T in to_data(vertices(p), H, mx, my)]}
-                            for p in curves + lines]
+                    bnds = [
+                        {"polyline": True, "points": [[x / xs_, T] for x, T in to_data(vertices(p), H, mx, my)]}
+                        for p in curves + lines
+                    ]
                     invs = []
                     for p in lines:
                         v = vertices(p)
                         if len(v) >= 2 and abs(v[0][1] - v[-1][1]) < 0.3 and abs(v[0][0] - v[-1][0]) > 0.02 * (fb[2] - fb[0]):
                             T = my(H - v[0][1])
-                            invs.append({"T": T, "type": None, "points": [{"x": mx(min(q[0] for q in v)) / xs_},
-                                                                          {"x": mx(max(q[0] for q in v)) / xs_}]})
+                            invs.append(
+                                {
+                                    "T": T,
+                                    "type": None,
+                                    "points": [{"x": mx(min(q[0] for q in v)) / xs_}, {"x": mx(max(q[0] for q in v)) / xs_}],
+                                }
+                            )
                     fields = []
                     for tx in page["text"]:
                         bx0, by0, bx1, by1 = tx["bbox"]
@@ -160,11 +186,24 @@ def main():
                         if re.fullmatch(r"[\d.\s°CK]+", s) or not re.search(r"[A-Za-zα-ωΑ-Ω()]", s):
                             continue
                         cxp, cyp = (bx0 + bx1) / 2, (by0 + by1) / 2
-                        fields.append({"point": [mx(cxp) / xs_, my(cyp)], "phases": [q.strip() for q in s.split("+") if q.strip()],
-                                       "text": s})
-                    pd_out.append({"page": f["page"], "bbox": bbox_tl, "x_unit": "mole_fraction",
-                                   "T_unit": "°C" if ax["y"]["unit"] == "°C" else "K",
-                                   "fields": fields, "boundaries": bnds, "invariants": invs})
+                        fields.append(
+                            {
+                                "point": [mx(cxp) / xs_, my(cyp)],
+                                "phases": [q.strip() for q in s.split("+") if q.strip()],
+                                "text": s,
+                            }
+                        )
+                    pd_out.append(
+                        {
+                            "page": f["page"],
+                            "bbox": bbox_tl,
+                            "x_unit": "mole_fraction",
+                            "T_unit": "°C" if ax["y"]["unit"] == "°C" else "K",
+                            "fields": fields,
+                            "boundaries": bnds,
+                            "invariants": invs,
+                        }
+                    )
                     status["phase_diagram"].append(rec)
                     continue
                 series = []
@@ -178,11 +217,20 @@ def main():
                     series.append({"name": f"markers-{len(series)}", "points": pts})
                 panels.append({"page": f["page"], "bbox": bbox_tl, "series": series})
                 # the full tool route: manifest proposal + vector marker proposals
-                hints = {"axes": {"x": {"quantity": "x", "unit": ax["x"]["unit"]}, "y": {"quantity": "y", "unit": ax["y"]["unit"]}},
-                         "license": {"status": "CC BY 4.0", "redistribution_allowed": True, "notes": "synthetic"},
-                         "reference": {"id": doc, "title": "synthetic", "authors": ["ORCHID synthetic benchmark"], "year": 2026,
-                                       "doi": "10.0000/orchid-synthetic-benchmark", "url": "https://orchid-project.org/synthetic-benchmark"},
-                         "source": {"figure_label": f"{f['id']}-{ax['id']}", "locator": f"page {pno}"}, "figure_region": region}
+                hints = {
+                    "axes": {"x": {"quantity": "x", "unit": ax["x"]["unit"]}, "y": {"quantity": "y", "unit": ax["y"]["unit"]}},
+                    "license": {"status": "CC BY 4.0", "redistribution_allowed": True, "notes": "synthetic"},
+                    "reference": {
+                        "id": doc,
+                        "title": "synthetic",
+                        "authors": ["ORCHID synthetic benchmark"],
+                        "year": 2026,
+                        "doi": "10.0000/orchid-synthetic-benchmark",
+                        "url": "https://orchid-project.org/synthetic-benchmark",
+                    },
+                    "source": {"figure_label": f"{f['id']}-{ax['id']}", "locator": f"page {pno}"},
+                    "figure_region": region,
+                }
                 if ax["y"]["scale"] == "log":
                     hints["axes"]["y"]["scale"] = "log10"
                 w = WORK / doc / f"{f['id']}-{ax['id']}"
@@ -193,14 +241,18 @@ def main():
                     (w / "manifest.json").write_text(json.dumps(man), encoding="utf-8")
                     rec["manifest"] = f"ok ({len(man['panels'][0]['legend'].get('entries', []))} legend entries)"
                     try:
-                        data = propose_vector_markers(w / "manifest.json", docs_dir / doc / "vector.pdf", img, inv_p, page_number=pno)
+                        data = propose_vector_markers(
+                            w / "manifest.json", docs_dir / doc / "vector.pdf", img, inv_p, page_number=pno
+                        )
                         rec["vector_markers"] = f"ok ({len(data['points'])} points)"
                         grp = {}
                         for q in data["points"]:
                             grp.setdefault(str(q.get("legend_entry_id") or q.get("series_id") or "all"), []).append(
-                                [q["coordinates"]["x"], q["coordinates"]["y"]])
-                        tool_panels.append({"page": f["page"], "bbox": bbox_tl,
-                                            "series": [{"name": k, "points": v} for k, v in grp.items()]})
+                                [q["coordinates"]["x"], q["coordinates"]["y"]]
+                            )
+                        tool_panels.append(
+                            {"page": f["page"], "bbox": bbox_tl, "series": [{"name": k, "points": v} for k, v in grp.items()]}
+                        )
                         (w / "markers.json").write_text(json.dumps(data), encoding="utf-8")
                     except Exception as e:  # noqa: BLE001
                         rec["vector_markers"] = f"failed: {str(e)[:160]}"
@@ -210,13 +262,32 @@ def main():
             if panels:
                 xy_out.append({"page": f["page"], "panels": panels})
         for r in ("vector",):
-            write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "vector_route",
-                                                  "status": status, "xy_figures": xy_out, "phase_diagrams": pd_out})
-        write_json(bench / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
-                   {"doc_id": doc, "rendering": "vector", "extractor": "propose_vector_markers (official route only)",
-                    "status": {"xy": [{k: v for k, v in r_.items() if k in ("figure", "axes", "calibration", "manifest", "vector_markers")}
-                                      for r_ in status["xy"]]},
-                    "xy_figures": [{"panels": tool_panels}] if tool_panels else []})
+            write_json(
+                OUT / r / f"{doc}.json",
+                {
+                    "doc_id": doc,
+                    "rendering": r,
+                    "extractor": "vector_route",
+                    "status": status,
+                    "xy_figures": xy_out,
+                    "phase_diagrams": pd_out,
+                },
+            )
+        write_json(
+            bench / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
+            {
+                "doc_id": doc,
+                "rendering": "vector",
+                "extractor": "propose_vector_markers (official route only)",
+                "status": {
+                    "xy": [
+                        {k: v for k, v in r_.items() if k in ("figure", "axes", "calibration", "manifest", "vector_markers")}
+                        for r_ in status["xy"]
+                    ]
+                },
+                "xy_figures": [{"panels": tool_panels}] if tool_panels else [],
+            },
+        )
         print(doc, "xy panels", sum(len(x["panels"]) for x in xy_out), "pd", len(pd_out), flush=True)
 
 
