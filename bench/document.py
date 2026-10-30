@@ -93,10 +93,6 @@ class Doc:
     def _put(self, x, baseline, text, fname, size, color=(0, 0, 0)):
         self.page.insert_text((x, baseline), text, fontname=fname.replace("-", ""), fontsize=size, color=color)
 
-    def _bbox(self, x, baseline, text, fname, size):
-        f = font(fname)
-        return [x, baseline - f.ascender * size, x + tlen(text, fname, size), baseline - f.descender * size]
-
     def paragraph(self, pieces, fname=None, size=None, indent=0.0, align="justify", gap_after=4.0, x0=None, width=None):
         """pieces: list of (text, tag). Lays out wrapped lines; returns {tag: [ {page, bbox}, ... ]} and span lookups."""
         fname = fname or self.body_font
