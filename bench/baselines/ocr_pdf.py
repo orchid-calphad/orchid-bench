@@ -4,6 +4,7 @@ so the PDF-native thermo_extractor tools (extract_pdf_figure_panels needs captio
 scans. work/ocrpdf/<doc>/<rendering>.pdf, rendering in clean_raster (300 dpi PNG), degraded_raster (150 dpi JPEG),
 image_only_pdf (the page images embedded in image_only.pdf, 150 dpi). Deterministic (single thread).
 """
+
 import subprocess
 import sys
 import tempfile
@@ -27,6 +28,7 @@ def pages(doc, rendering, n):
 
 def one(doc, rendering, n):
     import pymupdf
+
     out = OUT / doc / f"{rendering}.pdf"
     if out.exists():
         return
@@ -35,8 +37,12 @@ def one(doc, rendering, n):
     with tempfile.TemporaryDirectory() as tmp:
         for k, (img, dpi) in enumerate(pages(doc, rendering, n)):
             base = Path(tmp) / f"p{k}"
-            subprocess.run(["tesseract", str(img), str(base), "--dpi", str(dpi), "--psm", "3", "pdf"], check=True,
-                           capture_output=True, env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"})
+            subprocess.run(
+                ["tesseract", str(img), str(base), "--dpi", str(dpi), "--psm", "3", "pdf"],
+                check=True,
+                capture_output=True,
+                env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"},
+            )
             merged.insert_pdf(pymupdf.open(str(base) + ".pdf"))
     merged.save(out, deflate=True)
 

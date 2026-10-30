@@ -3,6 +3,7 @@
 work/ocr/<doc>/<rendering>/page-N.tsv ; rendering in clean_raster, degraded_raster, image_only_pdf
 (image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder).
 """
+
 import subprocess
 import sys
 from multiprocessing import Pool
@@ -18,13 +19,18 @@ def ocr(img, out):
     out.parent.mkdir(parents=True, exist_ok=True)
     if out.exists():
         return
-    r = subprocess.run(["tesseract", str(img), "stdout", "--psm", "3", "tsv"], capture_output=True, text=True,
-                       env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"})
+    r = subprocess.run(
+        ["tesseract", str(img), "stdout", "--psm", "3", "tsv"],
+        capture_output=True,
+        text=True,
+        env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"},
+    )
     out.write_text(r.stdout, encoding="utf-8")
 
 
 def jobs():
     import pymupdf
+
     for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         d = docs_dir / t["doc_id"]
@@ -53,8 +59,14 @@ def read_tsv(path):
         f = ln.split("\t")
         if len(f) < 12 or f[0] != "5" or not f[11].strip():
             continue
-        words.append({"text": f[11], "conf": float(f[10]), "bbox": [int(f[6]), int(f[7]), int(f[6]) + int(f[8]), int(f[7]) + int(f[9])],
-                      "line": (int(f[2]), int(f[3]), int(f[4]))})
+        words.append(
+            {
+                "text": f[11],
+                "conf": float(f[10]),
+                "bbox": [int(f[6]), int(f[7]), int(f[6]) + int(f[8]), int(f[7]) + int(f[9])],
+                "line": (int(f[2]), int(f[3]), int(f[4])),
+            }
+        )
     return words
 
 

@@ -9,6 +9,7 @@ Tesseract reads in a perfectly declared layout, not table finding. Rendering inp
 the Tesseract searchable PDFs of clean / degraded (work/ocrpdf), image_only.pdf. dpi 400, psm 6 (tool defaults
 for a table block). Semantic records: tables_pdfplumber.semantic. Continued tables are separate segments.
 """
+
 import subprocess
 import sys
 from pathlib import Path
@@ -26,13 +27,15 @@ RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 def pdf_for(doc, r):
     return {"vector": docs_dir / doc / "vector.pdf", "image_only_pdf": docs_dir / doc / "image_only.pdf"}.get(
-        r, bench / "work" / "ocrpdf" / doc / f"{r}.pdf")
+        r, bench / "work" / "ocrpdf" / doc / f"{r}.pdf"
+    )
 
 
 def page_size(t, r, pdf):
     if r in ("clean_raster", "degraded_raster"):
         return t["renderings"][r]["files"][0]["size_px"]
     import pymupdf
+
     rect = pymupdf.open(pdf)[0].rect
     return [rect.width, rect.height]
 
@@ -63,6 +66,7 @@ def layout(segment_cells, r, W, H):
 
 def main():
     from multiprocessing import Pool
+
     jobs = []
     for tf in sorted(truth_dir.glob("*.json")):
         for r in RENDS:
@@ -88,21 +92,51 @@ def one(tf, r):
             w = WORK / doc / r
             w.mkdir(parents=True, exist_ok=True)
             out = w / f"{tb['id']}-{si}.json"
-            cmd = [PY, str(PIPE / "scripts/ocr_table_cells.py"), str(pdf), "--page", str(page + 1),
-                   "--region", ",".join(str(v) for v in region), "--columns", ",".join(str(v) for v in bounds),
-                   "--dpi", "400", "--psm", "6", "--output", str(out)]
+            cmd = [
+                PY,
+                str(PIPE / "scripts/ocr_table_cells.py"),
+                str(pdf),
+                "--page",
+                str(page + 1),
+                "--region",
+                ",".join(str(v) for v in region),
+                "--columns",
+                ",".join(str(v) for v in bounds),
+                "--dpi",
+                "400",
+                "--psm",
+                "6",
+                "--output",
+                str(out),
+            ]
             rr = subprocess.run(cmd, capture_output=True)
             if rr.returncode != 0 or not out.exists():
                 status.append(f"{tb['id']}[{si}]: failed {rr.stderr.decode('utf-8', 'replace')[-160:]}")
                 continue
             rep = load_json(out)
-            tabs.append({"page": page, "route": "ocr_table_cells (declared region/columns from truth)", "table_id": tb["id"],
-                         "cells": [{"row": i, "col": j, "text": v} for i, row in enumerate(rep["cells"]) for j, v in enumerate(row)]})
+            tabs.append(
+                {
+                    "page": page,
+                    "route": "ocr_table_cells (declared region/columns from truth)",
+                    "table_id": tb["id"],
+                    "cells": [{"row": i, "col": j, "text": v} for i, row in enumerate(rep["cells"]) for j, v in enumerate(row)],
+                }
+            )
             status.append(f"{tb['id']}[{si}]: {len(rep['cells'])} rows, median conf {rep.get('median_confidence')}")
     inv, ph, recs = semantic(tabs)
-    write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "ocr_table_cells",
-                                         "status": {"tables": "; ".join(status), "region_columns": "truth (oracle)"},
-                                         "tables": tabs, "invariant_rows": inv, "phase_rows": ph, "property_records": recs})
+    write_json(
+        OUT / r / f"{doc}.json",
+        {
+            "doc_id": doc,
+            "rendering": r,
+            "extractor": "ocr_table_cells",
+            "status": {"tables": "; ".join(status), "region_columns": "truth (oracle)"},
+            "tables": tabs,
+            "invariant_rows": inv,
+            "phase_rows": ph,
+            "property_records": recs,
+        },
+    )
     return f"{doc} {r} {len(tabs)} tables"
 
 
