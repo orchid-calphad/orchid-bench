@@ -6,13 +6,12 @@ and per-rendering metrics. Images are embedded as data URIs; all dynamic content
 import base64
 import io
 import json
-import os
 import sys
 from pathlib import Path
 
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
-from common import docs_dir, load_json, truth_dir  # noqa: E402
+from common import ASSESSED_PD, docs_dir, load_json, truth_dir  # noqa: E402
 from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
@@ -263,14 +262,7 @@ def naming_payload(doc, r):
     import numpy as np
     from score import _canon, _label_sets
 
-    sys.path.insert(
-        0,
-        os.environ.get(
-            "ASSESSED_PD_SRC",
-            "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/"
-            "5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src",
-        ),
-    )
+    sys.path.insert(0, str(ASSESSED_PD))
     from assessed_pd.pipeline import annotate
     from PIL import Image
 

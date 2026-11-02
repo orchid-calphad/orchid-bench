@@ -11,9 +11,9 @@ from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import bench, load_json, truth_dir  # noqa: E402
+from common import ORCHID_PIPELINE, bench, load_json, truth_dir  # noqa: E402
 
-PIPE = Path.home() / "projects/orchid-pipeline"
+PIPE = ORCHID_PIPELINE
 PY = sys.executable
 OUT = bench / "work" / "tdb_topology"
 

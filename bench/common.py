@@ -18,12 +18,9 @@ docs_dir = bench / "docs"
 truth_dir = bench / "truth"
 results = bench / "results"
 open_tdb = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
-ASSESSED_PD = Path(
-    os.environ.get(
-        "ASSESSED_PD_SRC",
-        "/private/tmp/claude-504/-Users-raymundo-arroyave-projects-open-tdb/5d97acc6-0c9e-4398-87a5-e3422e273f18/scratchpad/assessed-pd-annotator/src",
-    )
-)
+# The private orchid-pipeline checkout: set ORCHID_PIPELINE, or keep it next to this repository.
+ORCHID_PIPELINE = Path(os.environ.get("ORCHID_PIPELINE", root.parent / "orchid-pipeline"))
+ASSESSED_PD = Path(os.environ.get("ASSESSED_PD_SRC", ORCHID_PIPELINE / "pipelines/assessed-phase-diagrams/src"))
 font_dir = None
 try:
     import matplotlib
