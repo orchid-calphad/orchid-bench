@@ -27,7 +27,7 @@ def one(tf):
                         "pressure_pa": "101325"}}
     OUT.mkdir(parents=True, exist_ok=True)
     mp, op = OUT / f"{doc}.manifest.json", OUT / f"{doc}.json"
-    mp.write_text(json.dumps(m, indent=1), encoding="utf-8")
+    mp.write_text(json.dumps(m, indent=1), encoding="utf-8", newline="\n")
     if op.exists():
         return doc, "cached"
     r = subprocess.run([PY, str(PIPE / "scripts/build_binary_topology.py"), str(mp), "--calculation-python", PY,

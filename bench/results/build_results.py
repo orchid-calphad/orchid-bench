@@ -265,7 +265,7 @@ def main():
                   f"text {f(o.get('text', {}).get('recall'))}, invariant rows {f(o.get('invariant_table', {}).get('row_recall'))}, "
                   f"phase rows {f(o.get('phase_stability', {}).get('row_recall'))}, property records {f(o.get('thermo_tables', {}).get('record_recall'))}")
     write_json(B / "results" / "results.json", res, pretty=True)
-    (B / "results" / "RESULTS.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (B / "results" / "RESULTS.md").write_text("\n".join(md) + "\n", encoding="utf-8", newline="\n")
     print("\n".join(md[:70]))
 
 

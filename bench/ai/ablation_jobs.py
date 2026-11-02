@@ -26,5 +26,5 @@ for f in sorted((AI / "jobs").glob("*__thermo_table__*.json")):
         key = hashlib.sha256(json.dumps([ver, j["key"], prompt], sort_keys=True).encode()).hexdigest()[:24]
         k = {**j, "key": key, "kind": f"thermo_table_{ver}", "prompt": prompt, "schema": sch,
              "meta": {**j["meta"], "prompt_version": {"v5": T.PROMPT_VERSION, "v6": T.PROMPT_VERSION_V6}[ver], "ablation_of": j["key"]}}
-        (OUT / f"{f.stem}__{ver}.json").write_text(json.dumps(k, ensure_ascii=False, indent=1))
+        (OUT / f"{f.stem}__{ver}.json").write_text(json.dumps(k, ensure_ascii=False, indent=1), newline="\n")
 print(len(list(OUT.glob("*.json"))), "ablation jobs")

@@ -188,10 +188,10 @@ def main():
                     hints["axes"]["y"]["scale"] = "log10"
                 w = WORK / doc / f"{f['id']}-{ax['id']}"
                 w.mkdir(parents=True, exist_ok=True)
-                (w / "hints.json").write_text(json.dumps(hints), encoding="utf-8")
+                (w / "hints.json").write_text(json.dumps(hints), encoding="utf-8", newline="\n")
                 try:
                     man, rep = VM.propose_multipanel_manifest(inv_p, img, w / "hints.json", page_number=pno)
-                    (w / "manifest.json").write_text(json.dumps(man), encoding="utf-8")
+                    (w / "manifest.json").write_text(json.dumps(man), encoding="utf-8", newline="\n")
                     rec["manifest"] = f"ok ({len(man['panels'][0]['legend'].get('entries', []))} legend entries)"
                     try:
                         data = propose_vector_markers(w / "manifest.json", DOCS / doc / "vector.pdf", img, inv_p, page_number=pno)
@@ -202,7 +202,7 @@ def main():
                                 [q["coordinates"]["x"], q["coordinates"]["y"]])
                         tool_panels.append({"page": f["page"], "bbox": bbox_tl,
                                             "series": [{"name": k, "points": v} for k, v in grp.items()]})
-                        (w / "markers.json").write_text(json.dumps(data), encoding="utf-8")
+                        (w / "markers.json").write_text(json.dumps(data), encoding="utf-8", newline="\n")
                     except Exception as e:  # noqa: BLE001
                         rec["vector_markers"] = f"failed: {str(e)[:160]}"
                 except Exception as e:  # noqa: BLE001

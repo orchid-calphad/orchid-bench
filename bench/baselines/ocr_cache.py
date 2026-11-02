@@ -19,7 +19,7 @@ def ocr(img, out):
         return
     r = subprocess.run(["tesseract", str(img), "stdout", "--psm", "3", "tsv"], capture_output=True, text=True,
                        env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"})
-    out.write_text(r.stdout, encoding="utf-8")
+    out.write_text(r.stdout, encoding="utf-8", newline="\n")
 
 
 def jobs():

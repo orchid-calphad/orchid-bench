@@ -194,7 +194,7 @@ def write_job(kind, doc, r, prompt, schema, images, meta):
     job = {"key": key, "kind": kind, "doc": doc, "rendering": r, "prompt": prompt, "schema": schema,
            "images": [p for p, _ in images], "image_sha256": hs, "meta": meta}
     (JOBS / f"{doc}__{r}__{kind}__{meta.get('label', '')}.json".replace(" ", "_")).write_text(
-        json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8")
+        json.dumps(job, ensure_ascii=False, indent=1), encoding="utf-8", newline="\n")
     return job
 
 
@@ -349,7 +349,7 @@ def main():
             summary.append({"doc": doc, "rendering": r, "tables": [j["meta"]["label"] for j in tj], "text_chunks": len(xj),
                             "passages": npass, "context_jobs": len(cj), "pd_questions": nq})
             print(json.dumps(summary[-1]), flush=True)
-    (AI / "prepare_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8")
+    (AI / "prepare_summary.json").write_text(json.dumps(summary, indent=1), encoding="utf-8", newline="\n")
 
 
 if __name__ == "__main__":

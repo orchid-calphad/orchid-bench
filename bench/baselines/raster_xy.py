@@ -95,7 +95,7 @@ def one(tf, r):
                 img = png
                 use = WORK / doc / r / mp.parent.name / "manifest.json"
                 use.parent.mkdir(parents=True, exist_ok=True)
-                use.write_text(json.dumps(remap(man, mapper(t, page, r), img, pdf)), encoding="utf-8")
+                use.write_text(json.dumps(remap(man, mapper(t, page, r), img, pdf)), encoding="utf-8", newline="\n")
             data = propose_multipanel_markers(use, pdf, img)
         except Exception as e:  # noqa: BLE001
             status.append({"panel": mp.parent.name, "markers": f"failed: {type(e).__name__}: {str(e)[:160]}"})

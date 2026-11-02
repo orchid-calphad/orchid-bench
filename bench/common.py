@@ -52,9 +52,9 @@ def write_json(path, obj, pretty=False):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if pretty:
-        path.write_text(json.dumps(_clean(obj), sort_keys=True, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        path.write_text(json.dumps(_clean(obj), sort_keys=True, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     else:
-        path.write_text(canonical_json(obj), encoding="utf-8")
+        path.write_text(canonical_json(obj), encoding="utf-8", newline="\n")
 
 
 def load_json(path):
