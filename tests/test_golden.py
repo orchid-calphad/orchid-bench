@@ -1,4 +1,11 @@
-"""Golden-hash regression: generate.py output for two systems at the fixed seed, as recorded on this tree."""
+"""Golden-hash regression: generate.py output for two systems at the fixed seed, as recorded on this tree.
+
+The digests are taken in the uv-pinned environment (``uv sync --frozen``). Checked on Linux with CPython 3.12, numpy 2.2.6,
+matplotlib 3.11.2, scipy 1.13.0, PyMuPDF 1.28.2 and Pillow 12.3.0: ``generate.py`` from the original ``main`` (584d34a) and from
+this branch write the same truth JSON and manifest for both systems, byte for byte and with the PDF and raster digests
+included, and both equal the committed ``bench/truth`` and ``bench/docs/MANIFEST.json``. Outside the pinned environment the
+digests of PDFs and rasters change (library-dependent bytes), so the test hashes the JSON with those digests removed.
+"""
 
 from __future__ import annotations
 

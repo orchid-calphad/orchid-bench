@@ -42,7 +42,10 @@ bench/
 
 ### Development with uv
 
-Run from the repository root. `uv.lock` pins every package; the quick path needs Python 3.11 or newer.
+**Requires Python 3.11 or newer** (`requires-python = ">=3.11"` in `pyproject.toml`). The floor comes from the pinned
+`matplotlib==3.11.2`, which needs 3.11 (PyPI metadata); the CI and the checks below ran on CPython 3.12.
+
+Run from the repository root. `uv.lock` pins every package.
 
 ```
 uv sync                        # creates .venv from uv.lock: runtime and dev dependencies
@@ -53,6 +56,12 @@ uv run python bench/generate.py --jobs 8
 ```
 
 Without uv, the same pins install with `python -m pip install -r requirements-dev.txt`; then drop `uv run`.
+
+**Outputs unchanged, checked in the pinned environment.** `tests/test_golden.py` regenerates two systems at seed 20261022 and compares
+the hash of each text output with the recorded value. In the pinned environment (Linux, CPython 3.12, numpy 2.2.6, matplotlib 3.11.2,
+scipy 1.13.0, PyMuPDF 1.28.2, Pillow 12.3.0), `generate.py` from the original `main` and from this tree write the same truth JSON and
+manifest for those systems, byte for byte, and both equal the files committed under `bench/truth` and `bench/docs`. PDF and raster
+bytes depend on library versions, so outside the pinned environment only the text outputs are compared.
 
 ### Using a separate interpreter
 

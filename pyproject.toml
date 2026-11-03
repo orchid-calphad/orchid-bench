@@ -2,7 +2,7 @@
 name = "orchid-bench"
 version = "0"
 description = "ORCHID synthetic-papers benchmark: generator, deterministic baselines and scorer"
-requires-python = ">=3.11"
+requires-python = ">=3.11"  # floor set by the pinned matplotlib==3.11.2 (needs 3.11); CI runs 3.12
 dependencies = [
     "numpy==2.2.6",
     "matplotlib==3.11.2",
