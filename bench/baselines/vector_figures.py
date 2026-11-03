@@ -1,49 +1,59 @@
 #!/usr/bin/env python3
 """Vector-figure baseline on the born-digital PDF, built from the open-tdb thermo_extractor PDF route:
 
-  1. `inspect-pdf` object inventory (pdfplumber) and `propose-pdf-graphics` geometric role proposals;
-  2. axis calibration from the page geometry with the frame/tick/label stage of
-     `propose_multipanel_manifest` (thermo_extractor.proposals.vector_manifest), given the figure region and axis
-     quantity/unit as hints (the tool's contract: a human supplies them; here they come from the truth key);
-  3. the full `propose_multipanel_manifest` + `propose_vector_markers` route, attempted for every xy panel;
-  4. glue written for this benchmark: paths whose top role is `data_curve` -> calibrated polylines; paths whose top
-     role is `marker` -> calibrated points grouped by paint style; for phase diagrams, curve/line paths ->
-     boundaries, horizontal lines -> invariant temperatures, text-layer words inside the frame -> field labels.
+1. `inspect-pdf` object inventory (pdfplumber) and `propose-pdf-graphics` geometric role proposals;
+2. axis calibration from the page geometry with the frame/tick/label stage of
+`propose_multipanel_manifest` (thermo_extractor.proposals.vector_manifest), given the figure region and axis
+quantity/unit as hints (the tool's contract: a human supplies them; here they come from the truth key);
+3. the full `propose_multipanel_manifest` + `propose_vector_markers` route, attempted for every xy panel;
+4. glue written for this benchmark: paths whose top role is `data_curve` -> calibrated polylines; paths whose top
+role is `marker` -> calibrated points grouped by paint style; for phase diagrams, curve/line paths ->
+boundaries, horizontal lines -> invariant temperatures, text-layer words inside the frame -> field labels.
 """
+
 import json
 import re
 import subprocess
 import sys
-import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, OPEN_TDB, TRUTH, load_json, write_json  # noqa: E402
+from common import bench, docs_dir, load_json, open_tdb, truth_dir, write_json  # noqa: E402
 
-sys.path.insert(0, str(OPEN_TDB / "src"))
+sys.path.insert(0, str(open_tdb / "src"))
 from thermo_extractor.proposals import vector_manifest as VM  # noqa: E402
 from thermo_extractor.proposals.vector_markers import page_transform, propose_vector_markers  # noqa: E402
 
-OUT = BENCH / "outputs" / "vector_route"
-WORK = BENCH / "work" / "vector"
+OUT = bench / "outputs" / "vector_route"
+WORK = bench / "work" / "vector"
 PY = sys.executable
 
 
 def run_inventory(doc):
+    """Inventory the vector graphics of one document's PDF pages."""
     w = WORK / doc
     w.mkdir(parents=True, exist_ok=True)
     inv, gr = w / "inventory.json", w / "graphics.json"
-    env = {"PYTHONPATH": str(OPEN_TDB / "src"), "PATH": "/usr/bin:/bin"}
+    env = {"PYTHONPATH": str(open_tdb / "src"), "PATH": "/usr/bin:/bin"}
     if not inv.exists():
-        subprocess.run([PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(DOCS / doc / "vector.pdf"), "--output", str(inv)],
-                       check=True, capture_output=True, env=env)
+        subprocess.run(
+            [PY, "-m", "thermo_extractor.cli", "inspect-pdf", str(docs_dir / doc / "vector.pdf"), "--output", str(inv)],
+            check=True,
+            capture_output=True,
+            env=env,
+        )
     if not gr.exists():
-        subprocess.run([PY, "-m", "thermo_extractor.cli", "propose-pdf-graphics", str(inv), "--output", str(gr)],
-                       check=True, capture_output=True, env=env)
+        subprocess.run(
+            [PY, "-m", "thermo_extractor.cli", "propose-pdf-graphics", str(inv), "--output", str(gr)],
+            check=True,
+            capture_output=True,
+            env=env,
+        )
     return inv, gr
 
 
 def vertices(path):
+    """Return the vertices of a vector drawing path."""
     pts = []
     for c in path.get("commands", []):
         for op in c.get("operands", []):
@@ -53,6 +63,7 @@ def vertices(path):
 
 
 def calibrate(page, region, hx, hy, img_w, img_h):
+    """Fit the mapping from PDF coordinates to axis values for one figure region."""
     tr = page_transform(page, img_w, img_h)
     frame = VM._select_frame(VM._frame_candidates(page, region), region)
     ax_x, rep_x = VM._calibrate_axis(page, frame["bbox"], "x", hx, tr)
@@ -61,12 +72,14 @@ def calibrate(page, region, hx, hy, img_w, img_h):
 
 
 def mapper(fit):
+    """Return a function that maps PDF points with the fitted calibration."""
     if fit["scale"] == "log10":
         return lambda p: 10 ** (fit["intercept"] + fit["slope"] * p)
     return lambda p: fit["intercept"] + fit["slope"] * p
 
 
 def roles(graphics, pno):
+    """Assign each graphic on a page a plot role."""
     out = {}
     for pg in graphics["pages"]:
         if pg.get("page_number") != pno:
@@ -78,11 +91,13 @@ def roles(graphics, pno):
 
 
 def style_key(p):
+    """Return the style key (stroke and fill) of a drawing path."""
     return json.dumps([p.get("stroke_color"), p.get("fill"), p.get("fill_color"), round(p.get("line_width") or 0, 2)])
 
 
 def figure_objects(page, frame_bb, H, role_of):
-    fx0, fy0, fx1, fy1 = frame_bb               # user space (y up)
+    """Collect the figure objects inside a frame bounding box."""
+    fx0, fy0, fx1, fy1 = frame_bb  # user space (y up)
     curves, markers, lines = [], [], []
     for p in page["paths"]:
         x0, y0, x1, y1 = p["bbox"]
@@ -96,18 +111,22 @@ def figure_objects(page, frame_bb, H, role_of):
             markers.append(p)
         elif role in ("data_curve", "axis_or_gridline", "unknown") and max(w, h) > 0.02 * (fx1 - fx0):
             # exclude the frame edges themselves
-            if (h < 0.5 and (abs(y0 - fy0) < 0.6 or abs(y0 - fy1) < 0.6)) or (w < 0.5 and (abs(x0 - fx0) < 0.6 or abs(x0 - fx1) < 0.6)):
+            if (h < 0.5 and (abs(y0 - fy0) < 0.6 or abs(y0 - fy1) < 0.6)) or (
+                w < 0.5 and (abs(x0 - fx0) < 0.6 or abs(x0 - fx1) < 0.6)
+            ):
                 continue
             (lines if (h < 0.5 or w < 0.5) else curves).append(p)
     return curves, markers, lines
 
 
 def to_data(pts_tl, H, mx, my):
+    """Convert top-left page points into data coordinates."""
     return [[mx(x), my(H - y)] for x, y in pts_tl]
 
 
 def main():
-    for tf in sorted(TRUTH.glob("*.json")):
+    """Run the vector figure baseline over all documents (command-line entry point)."""
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
         inv_p, gr_p = run_inventory(doc)
@@ -119,7 +138,7 @@ def main():
             pno = f["page"] + 1
             page = next(p for p in inv["pages"] if p["page_number"] == pno)
             role_of = roles(gr, pno)
-            img = DOCS / doc / "clean" / f"page-{pno}.png"
+            img = docs_dir / doc / "clean" / f"page-{pno}.png"
             iw, ih = t["renderings"]["clean_raster"]["files"][f["page"]]["size_px"]
             panels = []
             for ax in f["axes"]:
@@ -133,25 +152,40 @@ def main():
                     frame, fx, fy = calibrate(page, region, hx, hy, iw, ih)
                 except Exception as e:  # noqa: BLE001
                     status["phase_diagram" if f["kind"] == "phase_diagram" else "xy"].append(
-                        {"figure": f["id"], "axes": ax["id"], "calibration": f"failed: {e}"})
+                        {"figure": f["id"], "axes": ax["id"], "calibration": f"failed: {e}"}
+                    )
                     continue
                 mx, my = mapper(fx), mapper(fy)
                 fb = frame["bbox"]
                 bbox_tl = [fb[0], H - fb[3], fb[2], H - fb[1]]
                 curves, markers, lines = figure_objects(page, fb, H, role_of)
-                rec = {"figure": f["id"], "axes": ax["id"], "calibration": "ok",
-                       "frame_bbox_pt": bbox_tl, "curves": len(curves), "markers": len(markers), "lines": len(lines)}
+                rec = {
+                    "figure": f["id"],
+                    "axes": ax["id"],
+                    "calibration": "ok",
+                    "frame_bbox_pt": bbox_tl,
+                    "curves": len(curves),
+                    "markers": len(markers),
+                    "lines": len(lines),
+                }
                 if f["kind"] == "phase_diagram":
                     xs_ = 100.0 if ax["x"]["unit"] == "at.%" else 1.0
-                    bnds = [{"polyline": True, "points": [[x / xs_, T] for x, T in to_data(vertices(p), H, mx, my)]}
-                            for p in curves + lines]
+                    bnds = [
+                        {"polyline": True, "points": [[x / xs_, T] for x, T in to_data(vertices(p), H, mx, my)]}
+                        for p in curves + lines
+                    ]
                     invs = []
                     for p in lines:
                         v = vertices(p)
                         if len(v) >= 2 and abs(v[0][1] - v[-1][1]) < 0.3 and abs(v[0][0] - v[-1][0]) > 0.02 * (fb[2] - fb[0]):
                             T = my(H - v[0][1])
-                            invs.append({"T": T, "type": None, "points": [{"x": mx(min(q[0] for q in v)) / xs_},
-                                                                          {"x": mx(max(q[0] for q in v)) / xs_}]})
+                            invs.append(
+                                {
+                                    "T": T,
+                                    "type": None,
+                                    "points": [{"x": mx(min(q[0] for q in v)) / xs_}, {"x": mx(max(q[0] for q in v)) / xs_}],
+                                }
+                            )
                     fields = []
                     for tx in page["text"]:
                         bx0, by0, bx1, by1 = tx["bbox"]
@@ -161,11 +195,24 @@ def main():
                         if re.fullmatch(r"[\d.\s°CK]+", s) or not re.search(r"[A-Za-zα-ωΑ-Ω()]", s):
                             continue
                         cxp, cyp = (bx0 + bx1) / 2, (by0 + by1) / 2
-                        fields.append({"point": [mx(cxp) / xs_, my(cyp)], "phases": [q.strip() for q in s.split("+") if q.strip()],
-                                       "text": s})
-                    pd_out.append({"page": f["page"], "bbox": bbox_tl, "x_unit": "mole_fraction",
-                                   "T_unit": "°C" if ax["y"]["unit"] == "°C" else "K",
-                                   "fields": fields, "boundaries": bnds, "invariants": invs})
+                        fields.append(
+                            {
+                                "point": [mx(cxp) / xs_, my(cyp)],
+                                "phases": [q.strip() for q in s.split("+") if q.strip()],
+                                "text": s,
+                            }
+                        )
+                    pd_out.append(
+                        {
+                            "page": f["page"],
+                            "bbox": bbox_tl,
+                            "x_unit": "mole_fraction",
+                            "T_unit": "°C" if ax["y"]["unit"] == "°C" else "K",
+                            "fields": fields,
+                            "boundaries": bnds,
+                            "invariants": invs,
+                        }
+                    )
                     status["phase_diagram"].append(rec)
                     continue
                 series = []
@@ -179,11 +226,20 @@ def main():
                     series.append({"name": f"markers-{len(series)}", "points": pts})
                 panels.append({"page": f["page"], "bbox": bbox_tl, "series": series})
                 # the full tool route: manifest proposal + vector marker proposals
-                hints = {"axes": {"x": {"quantity": "x", "unit": ax["x"]["unit"]}, "y": {"quantity": "y", "unit": ax["y"]["unit"]}},
-                         "license": {"status": "CC BY 4.0", "redistribution_allowed": True, "notes": "synthetic"},
-                         "reference": {"id": doc, "title": "synthetic", "authors": ["ORCHID synthetic benchmark"], "year": 2026,
-                                       "doi": "10.0000/orchid-synthetic-benchmark", "url": "https://orchid-project.org/synthetic-benchmark"},
-                         "source": {"figure_label": f"{f['id']}-{ax['id']}", "locator": f"page {pno}"}, "figure_region": region}
+                hints = {
+                    "axes": {"x": {"quantity": "x", "unit": ax["x"]["unit"]}, "y": {"quantity": "y", "unit": ax["y"]["unit"]}},
+                    "license": {"status": "CC BY 4.0", "redistribution_allowed": True, "notes": "synthetic"},
+                    "reference": {
+                        "id": doc,
+                        "title": "synthetic",
+                        "authors": ["ORCHID synthetic benchmark"],
+                        "year": 2026,
+                        "doi": "10.0000/orchid-synthetic-benchmark",
+                        "url": "https://orchid-project.org/synthetic-benchmark",
+                    },
+                    "source": {"figure_label": f"{f['id']}-{ax['id']}", "locator": f"page {pno}"},
+                    "figure_region": region,
+                }
                 if ax["y"]["scale"] == "log":
                     hints["axes"]["y"]["scale"] = "log10"
                 w = WORK / doc / f"{f['id']}-{ax['id']}"
@@ -194,14 +250,18 @@ def main():
                     (w / "manifest.json").write_text(json.dumps(man), encoding="utf-8")
                     rec["manifest"] = f"ok ({len(man['panels'][0]['legend'].get('entries', []))} legend entries)"
                     try:
-                        data = propose_vector_markers(w / "manifest.json", DOCS / doc / "vector.pdf", img, inv_p, page_number=pno)
+                        data = propose_vector_markers(
+                            w / "manifest.json", docs_dir / doc / "vector.pdf", img, inv_p, page_number=pno
+                        )
                         rec["vector_markers"] = f"ok ({len(data['points'])} points)"
                         grp = {}
                         for q in data["points"]:
                             grp.setdefault(str(q.get("legend_entry_id") or q.get("series_id") or "all"), []).append(
-                                [q["coordinates"]["x"], q["coordinates"]["y"]])
-                        tool_panels.append({"page": f["page"], "bbox": bbox_tl,
-                                            "series": [{"name": k, "points": v} for k, v in grp.items()]})
+                                [q["coordinates"]["x"], q["coordinates"]["y"]]
+                            )
+                        tool_panels.append(
+                            {"page": f["page"], "bbox": bbox_tl, "series": [{"name": k, "points": v} for k, v in grp.items()]}
+                        )
                         (w / "markers.json").write_text(json.dumps(data), encoding="utf-8")
                     except Exception as e:  # noqa: BLE001
                         rec["vector_markers"] = f"failed: {str(e)[:160]}"
@@ -211,13 +271,32 @@ def main():
             if panels:
                 xy_out.append({"page": f["page"], "panels": panels})
         for r in ("vector",):
-            write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "vector_route",
-                                                  "status": status, "xy_figures": xy_out, "phase_diagrams": pd_out})
-        write_json(BENCH / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
-                   {"doc_id": doc, "rendering": "vector", "extractor": "propose_vector_markers (official route only)",
-                    "status": {"xy": [{k: v for k, v in r_.items() if k in ("figure", "axes", "calibration", "manifest", "vector_markers")}
-                                      for r_ in status["xy"]]},
-                    "xy_figures": [{"panels": tool_panels}] if tool_panels else []})
+            write_json(
+                OUT / r / f"{doc}.json",
+                {
+                    "doc_id": doc,
+                    "rendering": r,
+                    "extractor": "vector_route",
+                    "status": status,
+                    "xy_figures": xy_out,
+                    "phase_diagrams": pd_out,
+                },
+            )
+        write_json(
+            bench / "outputs" / "vector_markers_tool" / "vector" / f"{doc}.json",
+            {
+                "doc_id": doc,
+                "rendering": "vector",
+                "extractor": "propose_vector_markers (official route only)",
+                "status": {
+                    "xy": [
+                        {k: v for k, v in r_.items() if k in ("figure", "axes", "calibration", "manifest", "vector_markers")}
+                        for r_ in status["xy"]
+                    ]
+                },
+                "xy_figures": [{"panels": tool_panels}] if tool_panels else [],
+            },
+        )
         print(doc, "xy panels", sum(len(x["panels"]) for x in xy_out), "pd", len(pd_out), flush=True)
 
 

@@ -13,7 +13,9 @@ Prices (US$ per million tokens), gemini-3.8-flash: list $0.75 input / $3.75 outp
 as quoted by third-party price trackers (Oct 2026; not confirmed on Google's page). Conservative estimate used for
 the guard: 2x list ($1.50 / $7.50), the rate reported to apply from Jan 2027.
 
-  ~/orchid-py313/bin/python bench/ai/run_gemini.py --cap-usd 20 [--match <substring>] [--docs d1,d2] [--workers 8]"""
+  ~/orchid-py313/bin/python bench/ai/run_gemini.py --cap-usd 20 [--match <substring>] [--docs d1,d2] [--workers 8]
+"""
+
 import argparse
 import concurrent.futures as cf
 import json
@@ -34,6 +36,7 @@ LOCK = threading.Lock()
 
 
 def cost(u, pin, pout):
+    """Return the USD cost of one Gemini call from its token usage and per-million token prices."""
     if not u:
         return 0.0
     out = (u.get("candidates_token_count") or 0) + (u.get("thoughts_token_count") or 0)
@@ -41,9 +44,10 @@ def cost(u, pin, pout):
 
 
 def spent():
+    """Return the USD spend recorded in the ledger so far."""
     tot_list = tot_cons = 0.0
     if LEDGER.exists():
-        for ln in LEDGER.read_text().splitlines():
+        for ln in LEDGER.read_text(encoding="utf-8").splitlines():
             r = json.loads(ln)
             tot_list += cost(r.get("usage"), LIST_IN, LIST_OUT)
             tot_cons += cost(r.get("usage"), CONS_IN, CONS_OUT)
@@ -54,28 +58,47 @@ _CLIENT = None
 
 
 def client():
+    """Return the shared Gemini API client, creating it on first use."""
     global _CLIENT
     if _CLIENT is None:
         from google import genai
         from google.genai import types
+
         _CLIENT = genai.Client(http_options=types.HttpOptions(timeout=300_000))
     return _CLIENT
 
 
 def call(job):
+    """Send one AI job with its images to Gemini."""
     from google.genai import types
+
     parts = [types.Part.from_bytes(data=(BENCH / p).read_bytes(), mime_type="image/png") for p in job["images"]]
     t0 = time.time()
     last = None
     for attempt in range(4):
         try:
             r = client().models.generate_content(
-                model=MODEL, contents=parts + [job["prompt"]],
-                config=types.GenerateContentConfig(response_mime_type="application/json", response_schema=job["schema"],
-                                                   temperature=0))
+                model=MODEL,
+                contents=parts + [job["prompt"]],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json", response_schema=job["schema"], temperature=0
+                ),
+            )
             um = r.usage_metadata
-            usage = {k: getattr(um, k, None) for k in ("prompt_token_count", "cached_content_token_count",
-                                                      "candidates_token_count", "thoughts_token_count", "total_token_count")} if um else None
+            usage = (
+                {
+                    k: getattr(um, k, None)
+                    for k in (
+                        "prompt_token_count",
+                        "cached_content_token_count",
+                        "candidates_token_count",
+                        "thoughts_token_count",
+                        "total_token_count",
+                    )
+                }
+                if um
+                else None
+            )
             try:
                 result = json.loads(r.text)
             except Exception as exc:  # noqa: BLE001  - billed but unusable: recorded, not cached as an answer
@@ -90,6 +113,7 @@ def call(job):
 
 
 def main():
+    """Run the budgeted Gemini jobs (command-line entry point)."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--cap-usd", type=float, required=True, help="conservative-estimate budget across all runs")
     ap.add_argument("--docs", default="")
@@ -107,7 +131,7 @@ def main():
     kinds = set(filter(None, a.kinds.split(",")))
     jobs = []
     for f in sorted(Path(a.jobs_dir).glob("*.json")):
-        j = json.loads(f.read_text())
+        j = json.loads(f.read_text(encoding="utf-8"))
         if (docs and j["doc"] not in docs) or (rends and j["rendering"] not in rends) or (kinds and j["kind"] not in kinds):
             continue
         if (CACHE / f"{j['key']}.json").exists():
@@ -123,12 +147,28 @@ def main():
                 return j["key"], "skipped (budget guard)"
         res = call(j)
         with LOCK:
-            with LEDGER.open("a") as fh:
-                fh.write(json.dumps({"time": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "key": j["key"], "kind": j["kind"], "doc": j["doc"],
-                                     "rendering": j["rendering"], "model": MODEL, "usage": res.get("usage"),
-                                     "seconds": res.get("seconds"), "error": res.get("error")}) + "\n")
+            with LEDGER.open("a", encoding="utf-8") as fh:
+                fh.write(
+                    json.dumps(
+                        {
+                            "time": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                            "key": j["key"],
+                            "kind": j["kind"],
+                            "doc": j["doc"],
+                            "rendering": j["rendering"],
+                            "model": MODEL,
+                            "usage": res.get("usage"),
+                            "seconds": res.get("seconds"),
+                            "error": res.get("error"),
+                        }
+                    )
+                    + "\n"
+                )
             if "result" in res:
-                (CACHE / f"{j['key']}.json").write_text(json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1))
+                (CACHE / f"{j['key']}.json").write_text(
+                    json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1),
+                    encoding="utf-8",
+                )
         return j["key"], res.get("error") or f"ok {cost(res.get('usage'), LIST_IN, LIST_OUT):.4f}"
 
     with cf.ThreadPoolExecutor(a.workers) as ex:

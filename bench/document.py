@@ -1,32 +1,37 @@
 """Born-digital document composition with PyMuPDF: real text objects, vector figures, ruled tables.
-Every placed element's page coordinates (PDF points, origin top-left, y down) are recorded for the truth key."""
+Every placed element's page coordinates (PDF points, origin top-left, y down) are recorded for the truth key.
+"""
+
 from __future__ import annotations
 
 import re
 
 import pymupdf
+from common import font_dir
 
-from common import FONT_DIR
-
-FONTS = {
-    "serif": FONT_DIR / "DejaVuSerif.ttf", "serif-b": FONT_DIR / "DejaVuSerif-Bold.ttf",
-    "serif-i": FONT_DIR / "DejaVuSerif-Italic.ttf", "sans": FONT_DIR / "DejaVuSans.ttf",
-    "sans-b": FONT_DIR / "DejaVuSans-Bold.ttf",
+fonts = {
+    "serif": font_dir / "DejaVuSerif.ttf",
+    "serif-b": font_dir / "DejaVuSerif-Bold.ttf",
+    "serif-i": font_dir / "DejaVuSerif-Italic.ttf",
+    "sans": font_dir / "DejaVuSans.ttf",
+    "sans-b": font_dir / "DejaVuSans-Bold.ttf",
 }
 _FONT_OBJ = {}
 
 
 def font(name):
+    """Return the cached pymupdf Font for a registered font name."""
     if name not in _FONT_OBJ:
-        _FONT_OBJ[name] = pymupdf.Font(fontfile=str(FONTS[name]))
+        _FONT_OBJ[name] = pymupdf.Font(fontfile=str(fonts[name]))
     return _FONT_OBJ[name]
 
 
 def tlen(text, name, size):
+    """Return the rendered width in points of text set in font name at size pt."""
     return font(name).text_length(text, fontsize=size)
 
 
-NUM_RE = re.compile(r"[−\-–]?\d+(?:\.\d+)?(?:[eE][−\-]?\d+)?")
+num_re = re.compile(r"[−\-–]?\d+(?:\.\d+)?(?:[eE][−\-]?\d+)?")
 
 
 def parse_number(text):
@@ -43,7 +48,10 @@ def parse_number(text):
 
 
 class Doc:
+    """Incremental PDF writer that keeps a vertical cursor and flows text and figures."""
+
     def __init__(self, page_size, margins, body_font="serif", body_size=10.0, leading=1.32, footer=""):
+        """Open an empty PDF with a page size, margins, body font, body size and leading factor."""
         self.pdf = pymupdf.open()
         self.W, self.H = page_size
         self.ml, self.mt, self.mr, self.mb = margins
@@ -56,33 +64,34 @@ class Doc:
 
     @property
     def text_width(self):
+        """Return the text block width in points between the left and right margins."""
         return self.W - self.ml - self.mr
 
     def new_page(self):
+        """Append a new page of the document size and reset the cursor."""
         self.page = self.pdf.new_page(width=self.W, height=self.H)
         self.pno += 1
-        for k, f in FONTS.items():
+        for k, f in fonts.items():
             self.page.insert_font(fontname=k.replace("-", ""), fontfile=str(f))
         self.y = self.mt
         if self.footer:
             s = f"{self.footer} — page {self.pno + 1}"
             w = tlen(s, "sans", 7)
-            self.page.insert_text(((self.W - w) / 2, self.H - self.mb / 2), s, fontname="sans", fontsize=7,
-                                  color=(0.35, 0.35, 0.35))
+            self.page.insert_text(
+                ((self.W - w) / 2, self.H - self.mb / 2), s, fontname="sans", fontsize=7, color=(0.35, 0.35, 0.35)
+            )
 
     def ensure(self, h):
+        """Start a new page when h points do not fit above the bottom margin."""
         if self.y + h > self.H - self.mb:
             self.new_page()
 
     def space(self, h):
+        """Advance the vertical cursor by h points."""
         self.y += h
 
     def _put(self, x, baseline, text, fname, size, color=(0, 0, 0)):
         self.page.insert_text((x, baseline), text, fontname=fname.replace("-", ""), fontsize=size, color=color)
-
-    def _bbox(self, x, baseline, text, fname, size):
-        f = font(fname)
-        return [x, baseline - f.ascender * size, x + tlen(text, fname, size), baseline - f.descender * size]
 
     def paragraph(self, pieces, fname=None, size=None, indent=0.0, align="justify", gap_after=4.0, x0=None, width=None):
         """pieces: list of (text, tag). Lays out wrapped lines; returns {tag: [ {page, bbox}, ... ]} and span lookups."""
@@ -102,7 +111,7 @@ class Doc:
         lines, cur = [], []
         for w in words:
             cand = cur + [w]
-            s = text[cand[0][0]:cand[-1][1]]
+            s = text[cand[0][0] : cand[-1][1]]
             ind = indent if not lines else 0.0
             if cur and tlen(s, fname, size) > width - ind:
                 lines.append(cur)
@@ -151,16 +160,26 @@ class Doc:
                 for s_, e_, wx in pl["words"]:
                     if e_ <= lo or s_ >= hi:
                         continue
-                    w_lo = wx + tlen(text[s_:max(s_, lo)], fname, size)
-                    w_hi = wx + tlen(text[s_:min(e_, hi)], fname, size)
+                    w_lo = wx + tlen(text[s_ : max(s_, lo)], fname, size)
+                    w_hi = wx + tlen(text[s_ : min(e_, hi)], fname, size)
                     x_lo = w_lo if x_lo is None else min(x_lo, w_lo)
                     x_hi = w_hi if x_hi is None else max(x_hi, w_hi)
                 if x_lo is None:
                     continue
                 bl = pl["baseline"]
-                rects.append({"page": pl["page"], "bbox": [round(x_lo, 2), round(bl - f.ascender * size, 2),
-                                                           round(x_hi, 2), round(bl - f.descender * size, 2)]})
+                rects.append(
+                    {
+                        "page": pl["page"],
+                        "bbox": [
+                            round(x_lo, 2),
+                            round(bl - f.ascender * size, 2),
+                            round(x_hi, 2),
+                            round(bl - f.descender * size, 2),
+                        ],
+                    }
+                )
             return rects
+
         out = {}
         for sa, sb, tag in spans:
             out[tag] = {"text": text[sa:sb], "rects": locate(sa, sb), "start": sa}
@@ -169,12 +188,14 @@ class Doc:
         return out
 
     def heading(self, text, size=11.5):
+        """Set a bold heading of the given size in points and return its anchor."""
         self.ensure(size * 3)
         self.y += size * 0.6
         r = self.paragraph([(text, "h")], fname="serif-b", size=size, align="left", gap_after=3)
         return r["h"]
 
     def figure(self, fig_pdf, fig_size_in, width_frac, caption_pieces, cap_size=8.5):
+        """Place a figure at width_frac of the text width together with its caption pieces."""
         w = self.text_width * width_frac
         h = w * fig_size_in[1] / fig_size_in[0]
         cap_h = cap_size * 1.3 * 3
@@ -186,14 +207,22 @@ class Doc:
         src.close()
         page = self.pno
         self.y += h + 4
-        cap = self.paragraph(caption_pieces, fname="sans", size=cap_size, align="left", gap_after=10,
-                             x0=self.ml + 0.04 * self.text_width, width=0.92 * self.text_width)
+        cap = self.paragraph(
+            caption_pieces,
+            fname="sans",
+            size=cap_size,
+            align="left",
+            gap_after=10,
+            x0=self.ml + 0.04 * self.text_width,
+            width=0.92 * self.text_width,
+        )
         return {"page": page, "rect": [rect.x0, rect.y0, rect.x1, rect.y1], "caption": cap}
 
     def table(self, spec, style, size=8.5, cap_pieces=None, cont_pieces=None, split_at=None):
         """spec: {'header': [[{text, colspan}]], 'rows': [[text]], 'align': ['l','r',...], 'footnotes': [str]}.
         split_at: body-row index at which the table is continued on a new page under cont_pieces
-        ("Table N (continued)") with the header repeated."""
+        ("Table N (continued)") with the header repeated.
+        """
         ncol = len(spec["rows"][0]) if spec["rows"] else sum(c.get("colspan", 1) for c in spec["header"][-1])
         fn, fnb = "sans", "sans-b"
         pad = 5.0
@@ -207,7 +236,7 @@ class Doc:
                 for c in hrow:
                     span = c.get("colspan", 1)
                     need = tlen(c["text"], fnb, size) + 2 * pad
-                    have = sum(colw[j:j + span])
+                    have = sum(colw[j : j + span])
                     if need > have:
                         for k in range(j, j + span):
                             colw[k] += (need - have) / span
@@ -256,9 +285,21 @@ class Doc:
                     bl = y + (rh + f.ascender * size + f.descender * size) / 2
                     if c["text"]:
                         self._put(tx, bl, c["text"], fnb, size)
-                    seg_cells.append({"row": hi, "col": j, "colspan": span, "rowspan": 1, "header": True, "text": c["text"],
-                                      "page": self.pno, "segment": si, "seg_row": hi, "repeated_header": si > 0,
-                                      "bbox": [round(cx0, 2), round(y, 2), round(cx1, 2), round(y + rh, 2)]})
+                    seg_cells.append(
+                        {
+                            "row": hi,
+                            "col": j,
+                            "colspan": span,
+                            "rowspan": 1,
+                            "header": True,
+                            "text": c["text"],
+                            "page": self.pno,
+                            "segment": si,
+                            "seg_row": hi,
+                            "repeated_header": si > 0,
+                            "bbox": [round(cx0, 2), round(y, 2), round(cx1, 2), round(y + rh, 2)],
+                        }
+                    )
                     if span > 1 and style["rules"] == "booktabs":
                         page.draw_line((cx0 + 3, y + rh - 1), (cx1 - 3, y + rh - 1), color=black, width=lw_light)
                     j += span
@@ -278,9 +319,21 @@ class Doc:
                     tx = xs[j] + pad if al == "l" else (xs[j + 1] - pad - tw if al == "r" else (xs[j] + xs[j + 1] - tw) / 2)
                     bl = y + (rh + f.ascender * size + f.descender * size) / 2
                     self._put(tx, bl, t, fn, size)
-                    seg_cells.append({"row": nh + bi, "col": j, "colspan": 1, "rowspan": 1, "header": False, "text": t,
-                                      "page": self.pno, "segment": si, "seg_row": nh + bi - r0, "repeated_header": False,
-                                      "bbox": [round(xs[j], 2), round(y, 2), round(xs[j + 1], 2), round(y + rh, 2)]})
+                    seg_cells.append(
+                        {
+                            "row": nh + bi,
+                            "col": j,
+                            "colspan": 1,
+                            "rowspan": 1,
+                            "header": False,
+                            "text": t,
+                            "page": self.pno,
+                            "segment": si,
+                            "seg_row": nh + bi - r0,
+                            "repeated_header": False,
+                            "bbox": [round(xs[j], 2), round(y, 2), round(xs[j + 1], 2), round(y + rh, 2)],
+                        }
+                    )
                 y += rh
             if style["rules"] in ("booktabs", "plain"):
                 page.draw_line((xs[0], y), (xs[-1], y), color=black, width=lw_heavy if style["rules"] == "booktabs" else lw_light)
@@ -298,16 +351,40 @@ class Doc:
             self.y = y + 3
         notes = []
         for k, note in enumerate(spec.get("footnotes", [])):
-            r = self.paragraph([(note, f"fn{k}")], fname="sans", size=size - 1, align="left", gap_after=0,
-                               x0=xs[0], width=max(total, 0.6 * self.text_width))
+            r = self.paragraph(
+                [(note, f"fn{k}")],
+                fname="sans",
+                size=size - 1,
+                align="left",
+                gap_after=0,
+                x0=xs[0],
+                width=max(total, 0.6 * self.text_width),
+            )
             notes.append(r[f"fn{k}"])
         self.y += 10
-        return {"page": pages[0], "bbox": bboxes[0]["bbox"], "segments": bboxes, "font_size": size, "cells": cells,
-                "caption": caps[0], "continued_captions": caps[1:], "footnotes": notes}
+        return {
+            "page": pages[0],
+            "bbox": bboxes[0]["bbox"],
+            "segments": bboxes,
+            "font_size": size,
+            "cells": cells,
+            "caption": caps[0],
+            "continued_captions": caps[1:],
+            "footnotes": notes,
+        }
 
     def save(self, path):
-        self.pdf.set_metadata({"title": "", "author": "ORCHID synthetic benchmark", "producer": "PyMuPDF",
-                               "creator": "orchid-pipeline-bench", "creationDate": "", "modDate": ""})
+        """Write the PDF to path."""
+        self.pdf.set_metadata(
+            {
+                "title": "",
+                "author": "ORCHID synthetic benchmark",
+                "producer": "PyMuPDF",
+                "creator": "orchid-pipeline-bench",
+                "creationDate": "",
+                "modDate": "",
+            }
+        )
         try:
             self.pdf.subset_fonts()
         except Exception:  # noqa: BLE001

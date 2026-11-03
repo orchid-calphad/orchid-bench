@@ -7,38 +7,43 @@ from the truth key (oracle, recorded): region = the aabb of the segment's cells 
 column boundaries = midpoints between the x-extents of adjacent single-span columns. So this measures what
 Tesseract reads in a perfectly declared layout, not table finding. Rendering inputs: vector.pdf (rendered),
 the Tesseract searchable PDFs of clean / degraded (work/ocrpdf), image_only.pdf. dpi 400, psm 6 (tool defaults
-for a table block). Semantic records: tables_pdfplumber.semantic. Continued tables are separate segments."""
-import json
+for a table block). Semantic records: tables_pdfplumber.semantic. Continued tables are separate segments.
+"""
+
 import subprocess
 import sys
-import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, ORCHID_PIPELINE, TRUTH, load_json, write_json  # noqa: E402
 from baselines.tables_pdfplumber import semantic  # noqa: E402
+from common import ORCHID_PIPELINE, bench, docs_dir, load_json, truth_dir, write_json  # noqa: E402
 
 PIPE = ORCHID_PIPELINE
 PY = sys.executable
-OUT = BENCH / "outputs" / "ocr_table_cells"
-WORK = BENCH / "work" / "ocr_table_cells"
+OUT = bench / "outputs" / "ocr_table_cells"
+WORK = bench / "work" / "ocr_table_cells"
 RENDS = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def pdf_for(doc, r):
-    return {"vector": DOCS / doc / "vector.pdf", "image_only_pdf": DOCS / doc / "image_only.pdf"}.get(
-        r, BENCH / "work" / "ocrpdf" / doc / f"{r}.pdf")
+    """Return the PDF used for OCR of a document and rendering."""
+    return {"vector": docs_dir / doc / "vector.pdf", "image_only_pdf": docs_dir / doc / "image_only.pdf"}.get(
+        r, bench / "work" / "ocrpdf" / doc / f"{r}.pdf"
+    )
 
 
 def page_size(t, r, pdf):
+    """Return the page size in pixels (raster) or points (PDF) for a rendering."""
     if r in ("clean_raster", "degraded_raster"):
         return t["renderings"][r]["files"][0]["size_px"]
     import pymupdf
+
     rect = pymupdf.open(pdf)[0].rect
     return [rect.width, rect.height]
 
 
 def layout(segment_cells, r, W, H):
+    """Convert a table segment's cell corners into a grid layout for one rendering."""
     xs0 = [min(p[0] for p in c["corners"][r]) for c in segment_cells]
     xs1 = [max(p[0] for p in c["corners"][r]) for c in segment_cells]
     ys0 = [min(p[1] for p in c["corners"][r]) for c in segment_cells]
@@ -63,9 +68,11 @@ def layout(segment_cells, r, W, H):
 
 
 def main():
+    """Run the OCR table baseline over all documents (command-line entry point)."""
     from multiprocessing import Pool
+
     jobs = []
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         for r in RENDS:
             jobs.append((str(tf), r))
     with Pool(8) as p:
@@ -74,6 +81,7 @@ def main():
 
 
 def one(tf, r):
+    """Process one truth document for one rendering."""
     t = load_json(tf)
     doc = t["doc_id"]
     pdf = pdf_for(doc, r)
@@ -89,21 +97,51 @@ def one(tf, r):
             w = WORK / doc / r
             w.mkdir(parents=True, exist_ok=True)
             out = w / f"{tb['id']}-{si}.json"
-            cmd = [PY, str(PIPE / "scripts/ocr_table_cells.py"), str(pdf), "--page", str(page + 1),
-                   "--region", ",".join(str(v) for v in region), "--columns", ",".join(str(v) for v in bounds),
-                   "--dpi", "400", "--psm", "6", "--output", str(out)]
+            cmd = [
+                PY,
+                str(PIPE / "scripts/ocr_table_cells.py"),
+                str(pdf),
+                "--page",
+                str(page + 1),
+                "--region",
+                ",".join(str(v) for v in region),
+                "--columns",
+                ",".join(str(v) for v in bounds),
+                "--dpi",
+                "400",
+                "--psm",
+                "6",
+                "--output",
+                str(out),
+            ]
             rr = subprocess.run(cmd, capture_output=True)
             if rr.returncode != 0 or not out.exists():
                 status.append(f"{tb['id']}[{si}]: failed {rr.stderr.decode('utf-8', 'replace')[-160:]}")
                 continue
             rep = load_json(out)
-            tabs.append({"page": page, "route": "ocr_table_cells (declared region/columns from truth)", "table_id": tb["id"],
-                         "cells": [{"row": i, "col": j, "text": v} for i, row in enumerate(rep["cells"]) for j, v in enumerate(row)]})
+            tabs.append(
+                {
+                    "page": page,
+                    "route": "ocr_table_cells (declared region/columns from truth)",
+                    "table_id": tb["id"],
+                    "cells": [{"row": i, "col": j, "text": v} for i, row in enumerate(rep["cells"]) for j, v in enumerate(row)],
+                }
+            )
             status.append(f"{tb['id']}[{si}]: {len(rep['cells'])} rows, median conf {rep.get('median_confidence')}")
     inv, ph, recs = semantic(tabs)
-    write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "ocr_table_cells",
-                                         "status": {"tables": "; ".join(status), "region_columns": "truth (oracle)"},
-                                         "tables": tabs, "invariant_rows": inv, "phase_rows": ph, "property_records": recs})
+    write_json(
+        OUT / r / f"{doc}.json",
+        {
+            "doc_id": doc,
+            "rendering": r,
+            "extractor": "ocr_table_cells",
+            "status": {"tables": "; ".join(status), "region_columns": "truth (oracle)"},
+            "tables": tabs,
+            "invariant_rows": inv,
+            "phase_rows": ph,
+            "property_records": recs,
+        },
+    )
     return f"{doc} {r} {len(tabs)} tables"
 
 

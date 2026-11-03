@@ -1,0 +1,8 @@
+# Quick path (bench/generate.py, bench/baselines/oracle.py, bench/score.py, bench/results/build_results.py).
+# Figure bytes (figs/*.pdf, rasters, image-only PDFs) depend on these exact library versions:
+# a different matplotlib, PyMuPDF or Pillow writes different bytes. Text outputs are version-independent.
+numpy==2.2.6
+matplotlib==3.11.2
+PyMuPDF==1.28.2
+pillow==12.3.0
+scipy==1.13.0

@@ -1,32 +1,43 @@
 #!/usr/bin/env python3
 """Run Tesseract (local binary, deterministic) on every raster page and cache word-level TSV.
 work/ocr/<doc>/<rendering>/page-N.tsv ; rendering in clean_raster, degraded_raster, image_only_pdf
-(image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder)."""
+(image_only_pdf: the page images are extracted from the PDF itself, not taken from the degraded folder).
+"""
+
+import os
 import subprocess
 import sys
 from multiprocessing import Pool
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, DOCS, TRUTH, load_json  # noqa: E402
+from common import bench, docs_dir, load_json, truth_dir  # noqa: E402
 
-WORK = BENCH / "work" / "ocr"
+WORK = bench / "work" / "ocr"
 
 
 def ocr(img, out):
+    """Run tesseract on one image and cache its TSV output at the given path."""
     out.parent.mkdir(parents=True, exist_ok=True)
     if out.exists():
         return
-    r = subprocess.run(["tesseract", str(img), "stdout", "--psm", "3", "tsv"], capture_output=True, text=True,
-                       env={"OMP_THREAD_LIMIT": "1", "PATH": "/opt/homebrew/bin:/usr/bin:/bin"})
+    r = subprocess.run(
+        ["tesseract", str(img), "stdout", "--psm", "3", "tsv"],
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        env={**os.environ, "OMP_THREAD_LIMIT": "1", "PATH": os.pathsep.join(["/opt/homebrew/bin", os.environ.get("PATH", "")])},
+    )
     out.write_text(r.stdout, encoding="utf-8")
 
 
 def jobs():
+    """List the OCR jobs needed for all documents and renderings."""
     import pymupdf
-    for tf in sorted(TRUTH.glob("*.json")):
+
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
-        d = DOCS / t["doc_id"]
+        d = docs_dir / t["doc_id"]
         n = t["renderings"]["vector"]["pages"]
         for i in range(1, n + 1):
             yield d / "clean" / f"page-{i}.png", WORK / t["doc_id"] / "clean_raster" / f"page-{i}.tsv"
@@ -52,12 +63,19 @@ def read_tsv(path):
         f = ln.split("\t")
         if len(f) < 12 or f[0] != "5" or not f[11].strip():
             continue
-        words.append({"text": f[11], "conf": float(f[10]), "bbox": [int(f[6]), int(f[7]), int(f[6]) + int(f[8]), int(f[7]) + int(f[9])],
-                      "line": (int(f[2]), int(f[3]), int(f[4]))})
+        words.append(
+            {
+                "text": f[11],
+                "conf": float(f[10]),
+                "bbox": [int(f[6]), int(f[7]), int(f[6]) + int(f[8]), int(f[7]) + int(f[9])],
+                "line": (int(f[2]), int(f[3]), int(f[4])),
+            }
+        )
     return words
 
 
 def tsv_text(path):
+    """Rebuild plain text lines from a cached tesseract TSV file."""
     words = read_tsv(path)
     out, cur, key = [], [], None
     for w in words:

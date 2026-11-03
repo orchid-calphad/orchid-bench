@@ -1,4 +1,5 @@
 """Shared helpers: paths, canonical JSON, hashing, element/phase label rules."""
+
 from __future__ import annotations
 
 import hashlib
@@ -6,28 +7,30 @@ import json
 import math
 import os
 from pathlib import Path
+from typing import Any
 
-BENCH = Path(__file__).resolve().parent
-ROOT = BENCH.parent
-TDB_DIR = Path(os.environ.get("ORCHID_TDB_DIR", Path.home() / "projects/open-tdb/databases/sgte-binary"))
-PD_DIR = Path(os.environ.get("ORCHID_PD_DIR", Path.home() / "projects/orchid-data/phase-diagrams/sgte"))
-CACHE = BENCH / "cache"
-DOCS = BENCH / "docs"
-TRUTH = BENCH / "truth"
-RESULTS = BENCH / "results"
-OPEN_TDB = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
+bench = Path(__file__).resolve().parent
+root = bench.parent
+tdb_dir = Path(os.environ.get("ORCHID_TDB_DIR", Path.home() / "projects/open-tdb/databases/sgte-binary"))
+pd_dir = Path(os.environ.get("ORCHID_PD_DIR", Path.home() / "projects/orchid-data/phase-diagrams/sgte"))
+cache = bench / "cache"
+docs_dir = bench / "docs"
+truth_dir = bench / "truth"
+results = bench / "results"
+open_tdb = Path(os.environ.get("OPEN_TDB", Path.home() / "projects/open-tdb"))
 # The private orchid-pipeline checkout: set ORCHID_PIPELINE, or keep it next to this repository.
-ORCHID_PIPELINE = Path(os.environ.get("ORCHID_PIPELINE", ROOT.parent / "orchid-pipeline"))
+ORCHID_PIPELINE = Path(os.environ.get("ORCHID_PIPELINE", root.parent / "orchid-pipeline"))
 ASSESSED_PD = Path(os.environ.get("ASSESSED_PD_SRC", ORCHID_PIPELINE / "pipelines/assessed-phase-diagrams/src"))
-FONT_DIR = None
+font_dir = None
 try:
     import matplotlib
-    FONT_DIR = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
+
+    font_dir = Path(matplotlib.get_data_path()) / "fonts" / "ttf"
 except Exception:  # pragma: no cover
     pass
 
-R_GAS = 8.314462618
-P_ATM = 101325.0
+r_gas = 8.314462618
+p_atm = 101325.0
 
 
 def _clean(o):
@@ -44,11 +47,13 @@ def _clean(o):
     return o
 
 
-def canonical_json(obj) -> str:
+def canonical_json(obj: Any) -> str:
+    """Serialise obj to canonical JSON text: sorted keys, compact separators, trailing newline."""
     return json.dumps(_clean(obj), sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n"
 
 
-def write_json(path, obj, pretty=False):
+def write_json(path: str | Path, obj: Any, pretty: bool = False) -> None:
+    """Write obj as UTF-8 JSON, creating parent directories; indented when pretty is True."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if pretty:
@@ -57,11 +62,13 @@ def write_json(path, obj, pretty=False):
         path.write_text(canonical_json(obj), encoding="utf-8")
 
 
-def load_json(path):
+def load_json(path: str | Path) -> Any:
+    """Read and parse a UTF-8 JSON file."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
 def sha256_file(path) -> str:
+    """Return the hex SHA-256 digest of a file, read in 1 MiB chunks."""
     h = hashlib.sha256()
     with open(path, "rb") as f:
         for chunk in iter(lambda: f.read(1 << 20), b""):
@@ -74,11 +81,13 @@ def el(sym: str) -> str:
     return sym[:1].upper() + sym[1:].lower()
 
 
-def r(v, nd):
+def r(v: float, nd: int) -> float:
+    """Round v to nd decimal places and return a float."""
     return float(round(float(v), nd))
 
 
-def fmt(v, nd):
+def fmt(v: float, nd: int) -> str:
+    """Format v with exactly nd decimals, dropping the sign of negative zero."""
     s = f"{float(v):.{nd}f}"
     if s.startswith("-") and float(s) == 0.0:
         s = s[1:]

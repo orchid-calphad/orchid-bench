@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Running-text baseline: regular expressions for value + unit over the PDF text layer (vector, image-only PDF)
-or Tesseract OCR text (rasters; image-only PDF falls back to OCR when the text layer is empty)."""
+or Tesseract OCR text (rasters; image-only PDF falls back to OCR when the text layer is empty).
+"""
+
 import re
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BENCH, TRUTH, DOCS, load_json, write_json  # noqa: E402
 from baselines.ocr_cache import WORK, tsv_text  # noqa: E402
+from common import bench, docs_dir, load_json, truth_dir, write_json  # noqa: E402
 
-OUT = BENCH / "outputs" / "text_regex"
+OUT = bench / "outputs" / "text_regex"
 NUM = r"([-−–]?\d+(?:\.\d+)?)"
 PATTERNS = [
     (re.compile(NUM + r"\s?°\s?C\b"), "°C"),
@@ -26,6 +28,7 @@ PATTERNS = [
 
 
 def extract(text):
+    """Extract scored values from a text passage with regular expressions."""
     text = text.replace("\n", " ")
     vals = []
     for rx, unit in PATTERNS:
@@ -39,26 +42,38 @@ def extract(text):
 
 
 def main():
+    """Run the regex text baseline over all documents (command-line entry point)."""
     import pdfplumber
-    for tf in sorted(TRUTH.glob("*.json")):
+
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         doc = t["doc_id"]
         n = t["renderings"]["vector"]["pages"]
         texts = {}
-        with pdfplumber.open(DOCS / doc / "vector.pdf") as pdf:
+        with pdfplumber.open(docs_dir / doc / "vector.pdf") as pdf:
             texts["vector"] = ("pdf_text_layer", "\n".join(p.extract_text() or "" for p in pdf.pages))
-        with pdfplumber.open(DOCS / doc / "image_only.pdf") as pdf:
+        with pdfplumber.open(docs_dir / doc / "image_only.pdf") as pdf:
             layer = "\n".join(p.extract_text() or "" for p in pdf.pages)
         if layer.strip():
             texts["image_only_pdf"] = ("pdf_text_layer", layer)
         else:
-            texts["image_only_pdf"] = ("text layer empty -> tesseract OCR of embedded page images",
-                                       "\n".join(tsv_text(WORK / doc / "image_only_pdf" / f"page-{i}.tsv") for i in range(1, n + 1)))
+            texts["image_only_pdf"] = (
+                "text layer empty -> tesseract OCR of embedded page images",
+                "\n".join(tsv_text(WORK / doc / "image_only_pdf" / f"page-{i}.tsv") for i in range(1, n + 1)),
+            )
         for r in ("clean_raster", "degraded_raster"):
             texts[r] = ("tesseract OCR", "\n".join(tsv_text(WORK / doc / r / f"page-{i}.tsv") for i in range(1, n + 1)))
         for r, (route, txt) in texts.items():
-            write_json(OUT / r / f"{doc}.json", {"doc_id": doc, "rendering": r, "extractor": "text_regex",
-                                                  "status": {"text": f"ran: {route}"}, "text_values": extract(txt)})
+            write_json(
+                OUT / r / f"{doc}.json",
+                {
+                    "doc_id": doc,
+                    "rendering": r,
+                    "extractor": "text_regex",
+                    "status": {"text": f"ran: {route}"},
+                    "text_values": extract(txt),
+                },
+            )
 
 
 if __name__ == "__main__":

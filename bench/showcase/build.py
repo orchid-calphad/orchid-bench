@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Self-contained showcase: three example documents with page image, phase-diagram overlay (truth vs extracted, SVG)
-and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs."""
+and per-rendering metrics. Images are embedded as data URIs; all dynamic content is built with DOM APIs.
+"""
+
 import base64
 import io
 import json
@@ -9,7 +11,7 @@ from pathlib import Path
 
 B = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(B))
-from common import ASSESSED_PD, DOCS, TRUTH, load_json  # noqa: E402
+from common import ASSESSED_PD, docs_dir, load_json, truth_dir  # noqa: E402
 from score import _segments, aabb, align_segment, norm_text  # noqa: E402
 
 EXAMPLES = ["syn-PbSn-17Gie-v0", "syn-AlCu-02Mie-v0", "syn-AgNi-04Din-v0"]
@@ -18,25 +20,28 @@ R = ["vector", "clean_raster", "degraded_raster", "image_only_pdf"]
 
 
 def img_uri(im, fmt="JPEG", q=80):
+    """Encode a PIL image as a data URI."""
     buf = io.BytesIO()
     im.convert("RGB").save(buf, format=fmt, quality=q)
     return f"data:image/jpeg;base64,{base64.b64encode(buf.getvalue()).decode()}"
 
 
 def doc_payload(doc):
+    """Build the showcase payload for one document."""
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+
+    t = load_json(truth_dir / f"{doc}.json")
     fig = next(f for f in t["figures"] if f["kind"] == "phase_diagram")
     main = next(a for a in fig["axes"] if a["role"] == "main")
     page = fig["page"]
-    full = Image.open(DOCS / doc / "clean" / f"page-{page + 1}.png")
+    full = Image.open(docs_dir / doc / "clean" / f"page-{page + 1}.png")
     fb = aabb(fig["corners"]["clean_raster"])
     crop = full.crop(tuple(int(v) for v in fb))
     scale = 900 / crop.width
     crop = crop.resize((900, int(crop.height * scale)))
     thumb = full.copy()
     thumb.thumbnail((620, 800))
-    deg = Image.open(DOCS / doc / "degraded" / f"page-{page + 1}.jpg")
+    deg = Image.open(docs_dir / doc / "degraded" / f"page-{page + 1}.jpg")
     deg.thumbnail((620, 800))
     ab = aabb(main["corners"]["clean_raster"])
     X0, Y0, X1, Y1 = [(ab[0] - fb[0]) * scale, (ab[1] - fb[1]) * scale, (ab[2] - fb[0]) * scale, (ab[3] - fb[1]) * scale]
@@ -50,16 +55,20 @@ def doc_payload(doc):
 
     def clip(pts):
         return [p for p in pts if X0 - 2 <= p[0] <= X1 + 2 and Y0 - 2 <= p[1] <= Y1 + 2]
+
     truth_lines = [clip([to_px(x, T) for x, T in zip(b["x"], b["T_K"])]) for b in fig["boundaries"] if not b["on_frame"]]
     truth_lines += [clip([to_px(il["x_min"], il["T_K"]), to_px(il["x_max"], il["T_K"])]) for il in fig["invariant_lines"]]
-    truth_fields = [{"p": to_px(*f["point"]), "label": " + ".join(f["labels"])} for f in t["phase_diagram"]["fields"]
-                    if f["n_cells"] >= 6]
+    truth_fields = [
+        {"p": to_px(*f["point"]), "label": " + ".join(f["labels"])} for f in t["phase_diagram"]["fields"] if f["n_cells"] >= 6
+    ]
     ext = {}
-    for name, rend in (("assessed_pd · clean raster", ("assessed_pd", "clean_raster")),
-                       ("assessed_pd · degraded raster", ("assessed_pd", "degraded_raster")),
-                       ("vector route · vector PDF", ("vector_route", "vector")),
-                       ("assessed_pd_auto (OpenCV crop/axes) · degraded", ("assessed_pd_auto", "degraded_raster")),
-                       ("AI reader (Gemini) fields · degraded", ("ai_gemini", "degraded_raster"))):
+    for name, rend in (
+        ("assessed_pd · clean raster", ("assessed_pd", "clean_raster")),
+        ("assessed_pd · degraded raster", ("assessed_pd", "degraded_raster")),
+        ("vector route · vector PDF", ("vector_route", "vector")),
+        ("assessed_pd_auto (OpenCV crop/axes) · degraded", ("assessed_pd_auto", "degraded_raster")),
+        ("AI reader (Gemini) fields · degraded", ("ai_gemini", "degraded_raster")),
+    ):
         p = B / "outputs" / rend[0] / rend[1] / f"{doc}.json"
         if not p.exists():
             continue
@@ -74,14 +83,29 @@ def doc_payload(doc):
         for b in pd["boundaries"]:
             q = [to_px(cx(x), cT(T)) for x, T in b["points"]]
             pts.append(clip(q) if b.get("polyline") else clip(q))
-        ext[name] = {"polyline": any(b.get("polyline") for b in pd["boundaries"]),
-                     "boundaries": pts,
-                     "fields": [{"p": to_px(cx(f["point"][0]), cT(f["point"][1])), "label": " + ".join(f["phases"])}
-                                for f in pd["fields"] if f.get("phases")],
-                     "status": o.get("status", {}).get("phase_diagram")}
+        ext[name] = {
+            "polyline": any(b.get("polyline") for b in pd["boundaries"]),
+            "boundaries": pts,
+            "fields": [
+                {"p": to_px(cx(f["point"][0]), cT(f["point"][1])), "label": " + ".join(f["phases"])}
+                for f in pd["fields"]
+                if f.get("phases")
+            ],
+            "status": o.get("status", {}).get("phase_diagram"),
+        }
     metrics = {}
-    for e in ("assessed_pd", "assessed_pd_auto", "raster_topology", "vector_route", "text_regex", "tables_pdfplumber",
-              "camelot_stream", "ocr_table_cells", "raster_markers", "ai_gemini"):
+    for e in (
+        "assessed_pd",
+        "assessed_pd_auto",
+        "raster_topology",
+        "vector_route",
+        "text_regex",
+        "tables_pdfplumber",
+        "camelot_stream",
+        "ocr_table_cells",
+        "raster_markers",
+        "ai_gemini",
+    ):
         sp = B / "outputs" / e / "scores.json"
         if not sp.exists():
             continue
@@ -97,9 +121,14 @@ def doc_payload(doc):
                 row[f"{e}: boundary precision@0.01"] = (pdm.get("boundary") or {}).get("precision@0.01")
                 row[f"{e}: field precision"] = (pdm.get("fields") or {}).get("precision")
                 row[f"{e}: invariant recall"] = (pdm.get("invariants") or {}).get("recall")
-            for key, lab in (("invariant_table", "invariant rows recall"), ("phase_stability", "phase rows recall"),
-                             ("thermo_tables", "property records recall")):
-                sub = {"invariant_table": "invariant_rows", "phase_stability": "phase_rows", "thermo_tables": "property_records"}[key]
+            for key, lab in (
+                ("invariant_table", "invariant rows recall"),
+                ("phase_stability", "phase rows recall"),
+                ("thermo_tables", "property records recall"),
+            ):
+                sub = {"invariant_table": "invariant_rows", "phase_stability": "phase_rows", "thermo_tables": "property_records"}[
+                    key
+                ]
                 if sub in m and m[sub].get("rows_true", m[sub].get("records_true")):
                     n_t = m[sub].get("rows_true", m[sub].get("records_true"))
                     row[f"{e}: {lab}"] = m[sub]["matched"] / n_t if n_t else None
@@ -111,19 +140,30 @@ def doc_payload(doc):
             if "xy" in m:
                 row[f"{e}: xy panels found"] = f"{m['xy']['panels_found']}/{m['xy']['panels_true']}"
     st = t["style"]["phase_diagram"]
-    return {"doc": doc, "system": t["system"], "tdb": t["source_tdb"]["file"], "tdb_sha256": t["source_tdb"]["sha256"],
-            "types": t["diagram_types"], "pages": t["renderings"]["vector"]["pages"],
-            "style": {k: st[k] for k in ("T_unit", "x_unit", "color", "field_labels", "markers", "overlay", "inset", "linewidth")},
-            "page_img": img_uri(thumb), "deg_img": img_uri(deg, q=70), "fig_img": img_uri(crop, q=85),
-            "fig_size": [crop.width, crop.height], "truth": {"lines": truth_lines, "fields": truth_fields},
-            "extracted": ext, "metrics": metrics,
-            "invariants": [{"T": i["T"], "type": i["type"], "reaction": i["reaction"]} for i in t["phase_diagram"]["invariants"]]}
+    return {
+        "doc": doc,
+        "system": t["system"],
+        "tdb": t["source_tdb"]["file"],
+        "tdb_sha256": t["source_tdb"]["sha256"],
+        "types": t["diagram_types"],
+        "pages": t["renderings"]["vector"]["pages"],
+        "style": {k: st[k] for k in ("T_unit", "x_unit", "color", "field_labels", "markers", "overlay", "inset", "linewidth")},
+        "page_img": img_uri(thumb),
+        "deg_img": img_uri(deg, q=70),
+        "fig_img": img_uri(crop, q=85),
+        "fig_size": [crop.width, crop.height],
+        "truth": {"lines": truth_lines, "fields": truth_fields},
+        "extracted": ext,
+        "metrics": metrics,
+        "invariants": [{"T": i["T"], "type": i["type"], "reaction": i["reaction"]} for i in t["phase_diagram"]["invariants"]],
+    }
 
 
 def table_payload(doc, table_id):
     """Truth cells vs pdfplumber cells (best-aligned per segment) for one table of one document."""
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+
+    t = load_json(truth_dir / f"{doc}.json")
     tb = next(x for x in t["tables"] if x["id"] == table_id)
     o = load_json(B / "outputs" / "tables_pdfplumber" / "vector" / f"{doc}.json")
     segs = []
@@ -140,12 +180,19 @@ def table_payload(doc, table_id):
                 span = (cell or {}).get("colspan", 1)
                 got = best[1].get((r + best[2], c + best[3])) if best else None
                 txt = cell["text"] if cell else ""
-                row.append({"truth": txt, "got": got, "span": span, "header": bool(cell and cell["header"]),
-                            "ok": (norm_text(got) == norm_text(txt)) if txt else None})
+                row.append(
+                    {
+                        "truth": txt,
+                        "got": got,
+                        "span": span,
+                        "header": bool(cell and cell["header"]),
+                        "ok": (norm_text(got) == norm_text(txt)) if txt else None,
+                    }
+                )
                 c += span
             grid.append(row)
         sg = tb["segments"][si]
-        page = Image.open(DOCS / doc / "clean" / f"page-{sg['page'] + 1}.png")
+        page = Image.open(docs_dir / doc / "clean" / f"page-{sg['page'] + 1}.png")
         bb = aabb(sg["corners"]["clean_raster"])
         crop = page.crop((int(bb[0]) - 20, int(bb[1]) - 60, int(bb[2]) + 20, int(bb[3]) + 20))
         crop.thumbnail((1100, 900))
@@ -153,23 +200,46 @@ def table_payload(doc, table_id):
         segs.append({"grid": grid, "img": img_uri(crop, q=85), "route": route, "page": sg["page"] + 1})
     n_ok = sum(1 for sgm in segs for r in sgm["grid"] for c in r if c["ok"])
     n = sum(1 for sgm in segs for r in sgm["grid"] for c in r if c["ok"] is not None)
-    return {"doc": doc, "system": t["system"], "table": table_id, "caption": tb["caption"], "style": tb["style"],
-            "footnotes": tb["footnotes"], "segments": segs, "cell_exact": n_ok / n if n else None}
+    return {
+        "doc": doc,
+        "system": t["system"],
+        "table": table_id,
+        "caption": tb["caption"],
+        "style": tb["style"],
+        "footnotes": tb["footnotes"],
+        "segments": segs,
+        "cell_exact": n_ok / n if n else None,
+    }
 
 
-HEADLINE = [("invariant_table", "row_recall", "invariant-table rows recall"), ("phase_stability", "row_recall", "phase-table rows recall"),
-            ("phase_stability", "structure_accuracy", "structure labels correct"), ("thermo_tables", "record_recall", "property records recall"),
-            ("phase_diagram", "field_precision", "phase-field names precision"), ("phase_diagram", "field_recall", "phase-field names recall"),
-            ("phase_diagram", "invariant_recall", "invariant lines recall"), ("xy", "marker_recall@0.01", "XY markers recall@0.01"),
-            ("text", "recall", "running-text values recall"), ("tables", "cell_exact", "table cells exact")]
-FAMS = {"prev": ["tables_pdfplumber", "vector_route", "vector_markers_tool", "assessed_pd", "text_regex"],
-        "det": ["camelot_stream", "camelot_lattice", "ocr_table_cells", "assessed_pd_auto", "raster_topology", "raster_markers"],
-        "ai": ["ai_gemini"], "dual": ["ai_dual"]}
+HEADLINE = [
+    ("invariant_table", "row_recall", "invariant-table rows recall"),
+    ("phase_stability", "row_recall", "phase-table rows recall"),
+    ("phase_stability", "structure_accuracy", "structure labels correct"),
+    ("thermo_tables", "record_recall", "property records recall"),
+    ("phase_diagram", "field_precision", "phase-field names precision"),
+    ("phase_diagram", "field_recall", "phase-field names recall"),
+    ("phase_diagram", "invariant_recall", "invariant lines recall"),
+    ("xy", "marker_recall@0.01", "XY markers recall@0.01"),
+    ("text", "recall", "running-text values recall"),
+    ("tables", "cell_exact", "table cells exact"),
+]
+FAMS = {
+    "prev": ["tables_pdfplumber", "vector_route", "vector_markers_tool", "assessed_pd", "text_regex"],
+    "det": ["camelot_stream", "camelot_lattice", "ocr_table_cells", "assessed_pd_auto", "raster_topology", "raster_markers"],
+    "ai": ["ai_gemini"],
+    "dual": ["ai_dual"],
+}
 
 
 def comparison_payload():
-    aggs = {e: load_json(B / "outputs" / e / "scores.json")["aggregate"] for es in FAMS.values() for e in es
-            if (B / "outputs" / e / "scores.json").exists()}
+    """Build the extractor comparison payload for the showcase."""
+    aggs = {
+        e: load_json(B / "outputs" / e / "scores.json")["aggregate"]
+        for es in FAMS.values()
+        for e in es
+        if (B / "outputs" / e / "scores.json").exists()
+    }
     rows = []
     for task, metric, label in HEADLINE:
         for r in R:
@@ -188,13 +258,15 @@ def comparison_payload():
 def naming_payload(doc, r):
     """AI naming of the open phase fields of one diagram vs the truth field at each marker."""
     import pickle
-    import re as _re
+
     import numpy as np
     from score import _canon, _label_sets
+
     sys.path.insert(0, str(ASSESSED_PD))
     from assessed_pd.pipeline import annotate
     from PIL import Image
-    t = load_json(TRUTH / f"{doc}.json")
+
+    t = load_json(truth_dir / f"{doc}.json")
     job = next((load_json(p) for p in (B / "work" / "ai" / "jobs").glob(f"{doc}__{r}__pd_fields__*.json")), None)
     if job is None:
         return None
@@ -225,25 +297,43 @@ def naming_payload(doc, r):
             p = sorted(_canon(q) for q in ans.split("+"))
             conv, tdb, _ = _label_sets(tf)
             return p == conv or p == tdb
+
         ga_, ca_ = (g.get(m["marker"]) or {}).get("assemblage"), (c.get(m["marker"]) or {}).get("assemblage")
-        rows.append({"marker": m["marker"], "choices": [q for q in m["choices"] if q not in ("none of these", "cannot tell")],
-                     "gemini": ga_, "gemini_reason": (g.get(m["marker"]) or {}).get("reason"), "claude": ca_,
-                     "agree": bool(ga_ and ga_ == ca_ and ga_ not in ("none of these", "cannot tell")),
-                     "truth": truth, "ok_gemini": ok(ga_), "ok_claude": ok(ca_)})
+        rows.append(
+            {
+                "marker": m["marker"],
+                "choices": [q for q in m["choices"] if q not in ("none of these", "cannot tell")],
+                "gemini": ga_,
+                "gemini_reason": (g.get(m["marker"]) or {}).get("reason"),
+                "claude": ca_,
+                "agree": bool(ga_ and ga_ == ca_ and ga_ not in ("none of these", "cannot tell")),
+                "truth": truth,
+                "ok_gemini": ok(ga_),
+                "ok_claude": ok(ca_),
+            }
+        )
     im = Image.open(B / job["images"][0])
     im.thumbnail((1000, 900))
-    return {"doc": doc, "system": t["system"], "rendering": r, "img": img_uri(im, q=85), "rows": rows,
-            "printed_labels": t["style"]["phase_diagram"]["field_labels"], "has_claude": ca.exists()}
+    return {
+        "doc": doc,
+        "system": t["system"],
+        "rendering": r,
+        "img": img_uri(im, q=85),
+        "rows": rows,
+        "printed_labels": t["style"]["phase_diagram"]["field_labels"],
+        "has_claude": ca.exists(),
+    }
 
 
 def pick_tables():
+    """Pick the showcase tables from the truth documents."""
     out = []
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         inv = next((x for x in t["tables"] if x["id"] == "invariants"), None)
         if inv and t["style"]["invariant_table"]["exp_column"] and inv["n_body_rows"] >= 4 and not out:
             out.append((t["doc_id"], "invariants"))
-    for tf in sorted(TRUTH.glob("*.json")):
+    for tf in sorted(truth_dir.glob("*.json")):
         t = load_json(tf)
         sp = [x for x in t["tables"] if len(x.get("segments") or []) > 1]
         if sp and t["doc_id"] != out[0][0]:
@@ -392,13 +482,17 @@ for(const T of tdata){
 
 
 def main():
+    """Write the showcase page (command-line entry point)."""
     data = [doc_payload(d) for d in EXAMPLES]
     js = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     tj = json.dumps([table_payload(d, tid) for d, tid in pick_tables()], ensure_ascii=False).replace("</", "<\\/")
     cj = json.dumps(comparison_payload(), ensure_ascii=False).replace("</", "<\\/")
     nj = json.dumps([x for x in (naming_payload(d, r) for d, r in NAMING) if x], ensure_ascii=False).replace("</", "<\\/")
     out = B / "showcase" / "index.html"
-    out.write_text(HTML.replace("__DATA__", js).replace("__TDATA__", tj).replace("__CDATA__", cj).replace("__NDATA__", nj), encoding="utf-8")
+    out.write_text(
+        HTML.replace("__DATA__", js).replace("__TDATA__", tj).replace("__CDATA__", cj).replace("__NDATA__", nj),
+        encoding="utf-8",
+    )
     print(out, out.stat().st_size // 1024, "KB")
 
 
