@@ -171,7 +171,7 @@ def run(t, rendering):
     png = panel["png"]
     cal_p = w / "axes.json"
     cap = w / "caption.txt"
-    cap.write_text(panel["caption"], encoding="utf-8")
+    cap.write_text(panel["caption"], encoding="utf-8", newline="\n")
     rc, log = sh([PY, "-m", "thermo_extractor.raster.axes", png, "--output", cal_p, "--caption-file", cap])
     cal = load_json(cal_p) if cal_p.exists() else {}
     auto_ok = cal.get("status") == "calibrated"
@@ -180,7 +180,7 @@ def run(t, rendering):
     auto_cal = cal if auto_ok else None
     if not auto_ok:
         dp = w / "declared_axes.json"
-        dp.write_text(json.dumps(declared_axes(t, panel, rendering, png)), encoding="utf-8")
+        dp.write_text(json.dumps(declared_axes(t, panel, rendering, png)), encoding="utf-8", newline="\n")
         rc, log = sh([PY, "-m", "thermo_extractor.raster.axes", png, "--output", cal_p, "--caption-file", cap, "--declared-axes", dp])
         cal = load_json(cal_p) if cal_p.exists() else {}
         st["calibration"] += f"; then declared axes from truth (oracle): {cal.get('status', 'error')}"
@@ -188,7 +188,7 @@ def run(t, rendering):
             # the detector refuses before using declared ticks (frame not found): write the truth frame as the
             # calibration itself (oracle; same fields the detector emits) so the topology stage can still be measured
             cal = oracle_calibration(t, panel, rendering, png)
-            cal_p.write_text(json.dumps(cal), encoding="utf-8")
+            cal_p.write_text(json.dumps(cal), encoding="utf-8", newline="\n")
             st["calibration"] += f" ({log.strip().splitlines()[-1][:100] if log.strip() else ''}); calibration written from truth frame (oracle)"
     topo_p = w / "topology.json"
     rc, log = sh([PY, PIPE / "scripts/extract_binary_topology.py", png, cal_p, "--output", topo_p])
@@ -326,7 +326,7 @@ def run_assessed(t, rendering, panel, auto_cal):
         pickle.dump({"inp": inp, "cfg": cfg}, fh)
     d = build_document(ann)
     st["seconds"] = round(time.time() - t0, 1)
-    (w / "assessed_pd.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+    (w / "assessed_pd.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8", newline="\n")
     full = d["diagram"]["composition_full_scale"]
     bbox = [cx0, cy0, cx1, cy1]
     if rendering == "vector":

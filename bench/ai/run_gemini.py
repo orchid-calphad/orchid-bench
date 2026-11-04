@@ -123,12 +123,12 @@ def main():
                 return j["key"], "skipped (budget guard)"
         res = call(j)
         with LOCK:
-            with LEDGER.open("a") as fh:
+            with LEDGER.open("a", newline="\n") as fh:
                 fh.write(json.dumps({"time": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "key": j["key"], "kind": j["kind"], "doc": j["doc"],
                                      "rendering": j["rendering"], "model": MODEL, "usage": res.get("usage"),
                                      "seconds": res.get("seconds"), "error": res.get("error")}) + "\n")
             if "result" in res:
-                (CACHE / f"{j['key']}.json").write_text(json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1))
+                (CACHE / f"{j['key']}.json").write_text(json.dumps({"model": MODEL, "key": j["key"], **res}, ensure_ascii=False, indent=1), newline="\n")
         return j["key"], res.get("error") or f"ok {cost(res.get('usage'), LIST_IN, LIST_OUT):.4f}"
 
     with cf.ThreadPoolExecutor(a.workers) as ex:

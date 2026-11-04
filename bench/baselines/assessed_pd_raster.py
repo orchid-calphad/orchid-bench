@@ -138,7 +138,7 @@ def run(t, rendering):
         status["calibration"] = f"manual from truth axes (oracle) after automatic failure: {str(e)[:120]}"
     d = build_document(ann)
     status["seconds"] = round(time.time() - t0, 1)
-    (w / "assessed_pd.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+    (w / "assessed_pd.json").write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8", newline="\n")
     full = d["diagram"]["composition_full_scale"]
     pdo = {"page": page, "bbox": [cx0, cy0, cx1, cy1] if rendering != "vector" else None,
            "x_unit": "mole_fraction", "T_unit": "°C" if tunit == "degC" else "K",

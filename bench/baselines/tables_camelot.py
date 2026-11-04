@@ -39,9 +39,9 @@ def tool_tables(doc, pdf, page, flavor):
                       "selected_profile": None, "status": "needs_human_review"},
            "profiles": [{"id": flavor, "flavor": flavor}]}
     mp = w / f"p{page}-{flavor}.manifest.json"
-    mp.write_text(json.dumps(man), encoding="utf-8")
+    mp.write_text(json.dumps(man), encoding="utf-8", newline="\n")
     rep = TX.build_report(mp, pdf)
-    (w / f"p{page}-{flavor}.report.json").write_text(TX.canonical_json(rep), encoding="utf-8")
+    (w / f"p{page}-{flavor}.report.json").write_text(TX.canonical_json(rep), encoding="utf-8", newline="\n")
     return [t["matrix"] for t in rep["profiles"][0]["tables"]]
 
 
