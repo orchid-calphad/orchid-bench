@@ -1,0 +1,32 @@
+name: line-endings
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Text files are LF in the checkout
+        run: |
+          bad=$(git ls-files --eol | grep 'attr/text=auto eol=lf' | grep -E 'w/(crlf|mixed)' || true)
+          if [ -n "$bad" ]; then echo "::error::files with CRLF in the working tree:"; echo "$bad"; exit 1; fi
+          echo "no CRLF text files"
+      - name: Byte-compile bench
+        run: python -m compileall -q bench
